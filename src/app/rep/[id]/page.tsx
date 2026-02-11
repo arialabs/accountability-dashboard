@@ -1,4 +1,4 @@
-import { getMember, getMembers, getMemberFinance, getMemberTrades, getMemberDisclosures } from "@/lib/data";
+import { getMember, getMembers, getMemberFinance, getMemberTrades, getMemberDisclosures, getMemberAlignment, getAlignmentRanking } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import DonorAnalysisSection from "@/components/DonorAnalysisSection";
@@ -8,6 +8,7 @@ import CommitteeMemberships from "@/components/CommitteeMemberships";
 import StockTradesSection from "@/components/StockTradesSection";
 import FinancialDisclosuresSection from "@/components/FinancialDisclosuresSection";
 import CampaignPositions from "@/components/CampaignPositions";
+import AlignmentScoreCard from "@/components/AlignmentScoreCard";
 import keyVotesData from "@/data/key-votes.json";
 import positionsData from "@/data/positions.json";
 
@@ -59,6 +60,10 @@ export default function RepPage({ params }: { params: { id: string } }) {
 
   // Financial disclosures from House Clerk
   const financialDisclosures = getMemberDisclosures(params.id);
+
+  // Position-to-vote alignment data
+  const alignment = getMemberAlignment(params.id);
+  const alignmentRanking = getAlignmentRanking(params.id);
 
   const getPartyBadgeClass = (party: string) => {
     switch (party) {
@@ -246,6 +251,12 @@ export default function RepPage({ params }: { params: { id: string } }) {
 
           {/* Sidebar (1/3 width) */}
           <aside className="space-y-8">
+            {/* Position-to-Vote Alignment */}
+            <AlignmentScoreCard 
+              alignment={alignment} 
+              ranking={alignmentRanking}
+            />
+
             {/* Committee Memberships */}
             <CommitteeMemberships committees={committees} />
 
