@@ -57,7 +57,7 @@ export function getLeaderboard(limit: number = 10): LeaderboardData {
     // Find member details
     const member = (membersData as Array<{
       bioguide_id: string;
-      name: string;
+      full_name: string;
       party: string;
       state: string;
       chamber: string;
@@ -67,7 +67,7 @@ export function getLeaderboard(limit: number = 10): LeaderboardData {
     
     const memberPositions: MemberPositions = {
       bioguide_id: memberPos.bioguide_id,
-      name: memberPos.name,
+      name: member.full_name,
       source: 'ontheissues',
       source_url: memberPos.source_url,
       last_updated: memberPos.last_updated,
@@ -83,7 +83,7 @@ export function getLeaderboard(limit: number = 10): LeaderboardData {
     if (alignment.overallAlignmentScore !== null && alignment.positionsWithVotes >= 3) {
       entries.push({
         bioguideId: member.bioguide_id,
-        name: member.name,
+        name: member.full_name,
         party: member.party,
         state: member.state,
         chamber: member.chamber === 'senate' ? 'Senate' : 'House',
@@ -120,9 +120,4 @@ export function getMemberRank(bioguideId: string): { rank: number; total: number
   
   if (idx === -1) return null;
   
-  return {
-    rank: idx + 1,
-    total: allSorted.length,
-    percentile: Math.round(((allSorted.length - idx) / allSorted.length) * 100)
-  };
-}
+  return {\n    rank: idx + 1,\n    total: allSorted.length,\n    percentile: Math.round(((allSorted.length - idx) / allSorted.length) * 100)\n  };\n}\n
