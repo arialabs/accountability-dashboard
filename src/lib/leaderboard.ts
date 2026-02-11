@@ -120,4 +120,9 @@ export function getMemberRank(bioguideId: string): { rank: number; total: number
   
   if (idx === -1) return null;
   
-  return {\n    rank: idx + 1,\n    total: allSorted.length,\n    percentile: Math.round(((allSorted.length - idx) / allSorted.length) * 100)\n  };\n}\n
+  return {
+    rank: idx + 1,
+    total: allSorted.length,
+    percentile: Math.round(((allSorted.length - idx) / allSorted.length) * 100)
+  };
+}
