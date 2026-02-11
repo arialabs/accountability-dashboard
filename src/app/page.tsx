@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AlignmentLeaderboard from "@/components/AlignmentLeaderboard";
 
 export default function Home() {
   return (
@@ -30,6 +31,9 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* Alignment Leaderboard */}
+      <AlignmentLeaderboard />
 
       {/* Three Branches Section */}
       <section className="py-20 md:py-32 bg-slate-50">
