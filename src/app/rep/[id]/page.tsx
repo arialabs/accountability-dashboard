@@ -32,13 +32,12 @@ export default async function RepPage({ params }: { params: { id: string } }) {
   // Get real finance data from OpenFEC API
   const finance = await getMemberFinance(params.id);
 
-  // Placeholder committee data (will be replaced with real data)
-  const committees = [
-    {
-      name: "Committee data coming soon",
-      role: "Member" as const,
-    },
-  ];
+  // Committee data will be integrated from Congress.gov API in a future update
+  const committees: Array<{
+    name: string;
+    role: "Chair" | "Ranking Member" | "Member" | "Vice Chair";
+    subcommittees?: string[];
+  }> = [];
 
   // Key votes are now handled by MemberVotingRecord component using real VoteView data
   // This empty array is just to satisfy VotingRecordSection's interface

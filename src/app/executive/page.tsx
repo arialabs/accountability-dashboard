@@ -159,27 +159,27 @@ export default function ExecutiveBranch() {
               </div>
             </div>
             
-            <div className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <div className="text-2xl">📜</div>
-              <div>
-                <h3 className="font-bold text-slate-700">Executive Orders</h3>
-                <p className="text-sm text-slate-500">Coming soon — Federal Register integration</p>
-              </div>
-            </div>
-            
-            <div className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <div className="text-2xl">💰</div>
-              <div>
-                <h3 className="font-bold text-slate-700">Emoluments & Conflicts</h3>
-                <p className="text-sm text-slate-500">Coming soon — Business interests tracking</p>
-              </div>
-            </div>
-            
             <div className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
               <div className="text-2xl">👥</div>
               <div>
                 <h3 className="font-bold text-green-900">Cabinet Appointments</h3>
                 <p className="text-sm text-green-700">Track all cabinet members and their departments</p>
+              </div>
+            </div>
+            
+            <div className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
+              <div className="text-2xl">📜</div>
+              <div>
+                <h3 className="font-bold text-green-900">Executive Actions</h3>
+                <p className="text-sm text-green-700">View presidential orders, proclamations, and memoranda</p>
+              </div>
+            </div>
+            
+            <div className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
+              <div className="text-2xl">💼</div>
+              <div>
+                <h3 className="font-bold text-green-900">Transparency & Ethics</h3>
+                <p className="text-sm text-green-700">Financial disclosures and conflict of interest monitoring</p>
               </div>
             </div>
           </div>
