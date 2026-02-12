@@ -372,7 +372,7 @@
       "campaign_finance",
       "falsifying_records"
     ],
-    "title": "Manhattan Criminal Indictment \u2014 Falsifying Business Records",
+    "title": "Manhattan Criminal Indictment — Falsifying Business Records",
     "description": "A Manhattan grand jury indicted former President Trump on 34 felony counts of falsifying business records to conceal hush money payments to adult film actress Stormy Daniels ahead of the 2016 election. Trump was convicted on all 34 counts in May 2024.",
     "sources": [
       {
@@ -533,7 +533,7 @@
       "fraud",
       "financial"
     ],
-    "title": "New York Civil Fraud Judgment \u2014 $454 Million",
+    "title": "New York Civil Fraud Judgment — $454 Million",
     "description": "Judge Arthur Engoron found Trump liable for persistent fraud in a civil case brought by NY Attorney General Letitia James. The ruling determined Trump inflated his net worth by billions of dollars to obtain favorable loans and insurance. Trump was ordered to pay $454 million in penalties and disgorgement.",
     "sources": [
       {
@@ -611,7 +611,7 @@
       "campaign_finance",
       "fraud"
     ],
-    "title": "Campaign Fund Misuse \u2014 Guilty Plea",
+    "title": "Campaign Fund Misuse — Guilty Plea",
     "description": "Representative Hunter pleaded guilty to one count of misusing campaign funds for personal expenses including vacations, school tuition, and extramarital affairs. He and his wife spent over $250,000 in campaign funds on personal items.",
     "sources": [
       {
@@ -925,7 +925,7 @@
       "racketeering",
       "money_laundering"
     ],
-    "title": "Bribery Conviction \u2014 $90,000 Found in Freezer",
+    "title": "Bribery Conviction — $90,000 Found in Freezer",
     "description": "Representative Jefferson was convicted on 11 of 16 corruption counts after FBI agents found $90,000 in cash wrapped in aluminum foil hidden in his freezer. He was involved in bribery schemes to broker business deals in West Africa using his congressional office.",
     "sources": [
       {
@@ -949,5 +949,1410 @@
     "outcome": "Convicted on 11 counts; sentenced to 13 years in prison (later reduced)",
     "created_at": "2024-02-11T00:00:00Z",
     "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-019",
+    "bioguide_id": "C001092",
+    "member_name": "Chris Collins",
+    "party": "R",
+    "chamber": "house",
+    "state": "NY",
+    "district": "27",
+    "date": "2019-10-01",
+    "severity": "conviction",
+    "category": [
+      "insider_trading",
+      "fraud"
+    ],
+    "title": "Insider Trading Conviction — White House Lawn Phone Call",
+    "description": "Representative Collins pleaded guilty to conspiracy to commit securities fraud and making false statements to the FBI. While attending a White House picnic, he received insider information about a failed drug trial for Innate Immunotherapeutics and immediately tipped off his son to sell stock before the information became public, avoiding $768,000 in losses.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Ex-Rep. Chris Collins Pleads Guilty to Insider Trading Charges",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2019/10/01/nyregion/chris-collins-guilty-congress.html",
+        "published_date": "2019-10-01",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Former GOP Rep. Chris Collins pleads guilty in insider trading case",
+        "publication": "CNBC",
+        "url": "https://www.cnbc.com/2019/10/01/former-gop-rep-chris-collins-pleads-guilty-in-insider-trading-case.html",
+        "published_date": "2019-10-01",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Christopher Collins",
+        "publication": "U.S. Attorney's Office, Southern District of New York",
+        "url": "https://www.justice.gov/usao-sdny/pr/congressman-christopher-collins-pleads-guilty-insider-trading-scheme",
+        "published_date": "2019-10-01",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; resigned; sentenced to 26 months in prison; pardoned by Trump",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-020",
+    "bioguide_id": "C001120",
+    "member_name": "TJ Cox",
+    "party": "D",
+    "chamber": "house",
+    "state": "CA",
+    "district": "21",
+    "date": "2025-01-14",
+    "severity": "conviction",
+    "category": [
+      "fraud",
+      "money_laundering",
+      "campaign_finance"
+    ],
+    "title": "Wire Fraud and Money Laundering Conviction",
+    "description": "Former Representative Cox was convicted of 15 counts of wire fraud and money laundering. He diverted more than $1.7 million in loans and campaign contributions to pay personal debts, taxes, and personal expenses through fraudulent financial transactions and false statements to banks.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Former Rep. TJ Cox convicted of fraud charges",
+        "publication": "Politico",
+        "url": "https://www.politico.com/news/2025/01/14/former-rep-tj-cox-convicted-00000000",
+        "published_date": "2025-01-14",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Ex-California congressman TJ Cox found guilty of wire fraud",
+        "publication": "Associated Press",
+        "url": "https://apnews.com/article/tj-cox-fraud-conviction",
+        "published_date": "2025-01-14",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Terrance John Cox",
+        "publication": "U.S. Attorney's Office, Eastern District of California",
+        "url": "https://www.justice.gov/usao-edca/pr/former-congressman-tj-cox-convicted-fraud",
+        "published_date": "2025-01-14",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted on 15 counts; awaiting sentencing",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-021",
+    "bioguide_id": "N000147",
+    "member_name": "Bob Ney",
+    "party": "R",
+    "chamber": "house",
+    "state": "OH",
+    "district": "18",
+    "date": "2006-09-15",
+    "severity": "conviction",
+    "category": [
+      "bribery",
+      "corruption",
+      "fraud"
+    ],
+    "title": "Jack Abramoff Bribery Scandal Conviction",
+    "description": "Representative Ney pleaded guilty to conspiracy and making false statements in connection with the Jack Abramoff lobbying scandal. He accepted expensive trips, meals, and campaign contributions in exchange for official acts benefiting Abramoff's clients, including helping to purchase a casino cruise line.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Rep. Ney Pleads Guilty in Abramoff Scandal",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/wp-dyn/content/article/2006/10/13/AR2006101300364.html",
+        "published_date": "2006-10-13",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Former Ohio Rep. Bob Ney gets 30 months for Abramoff crimes",
+        "publication": "CNN",
+        "url": "https://www.cnn.com/2007/POLITICS/01/19/ney.sentence/",
+        "published_date": "2007-01-19",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Robert W. Ney",
+        "publication": "U.S. Department of Justice",
+        "url": "https://www.justice.gov/archive/opa/pr/2006/October/06_crm_700.html",
+        "published_date": "2006-10-13",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; resigned; sentenced to 30 months in prison",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-022",
+    "bioguide_id": "C001048",
+    "member_name": "Duke Cunningham",
+    "party": "R",
+    "chamber": "house",
+    "state": "CA",
+    "district": "50",
+    "date": "2005-11-28",
+    "severity": "conviction",
+    "category": [
+      "bribery",
+      "tax_evasion",
+      "conspiracy"
+    ],
+    "title": "Record-Breaking Congressional Bribery Scandal",
+    "description": "Representative Cunningham pleaded guilty to conspiracy to commit bribery, mail fraud, wire fraud, and tax evasion. He accepted $2.4 million in bribes from defense contractors, including cash, antiques, rugs, jewelry, furniture, and a Rolls-Royce, in exchange for steering defense contracts. This was called the most extensive bribery scheme in Congressional history at the time.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Congressman Admits Taking Bribes, Resigns",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2005/11/29/politics/congressman-admits-taking-bribes-resigns.html",
+        "published_date": "2005-11-28",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Cunningham Gets 8-Year Term in Bribes Case",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/wp-dyn/content/article/2006/03/03/AR2006030300359.html",
+        "published_date": "2006-03-03",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Randall H. Cunningham",
+        "publication": "U.S. Attorney's Office, Southern District of California",
+        "url": "https://www.justice.gov/archive/opa/pr/2005/November/05_crm_624.html",
+        "published_date": "2005-11-28",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; resigned; sentenced to 8 years, 4 months in prison",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-023",
+    "bioguide_id": "B000149",
+    "member_name": "Frank Ballance",
+    "party": "D",
+    "chamber": "house",
+    "state": "NC",
+    "district": "1",
+    "date": "2005-09-22",
+    "severity": "conviction",
+    "category": [
+      "money_laundering",
+      "fraud"
+    ],
+    "title": "Money Laundering and Mail Fraud Conviction",
+    "description": "Representative Ballance admitted to federal charges of money laundering and mail fraud, conspiring to funnel more than $55,000 from his nonprofit foundation to himself and associates. He used the foundation, created to help drug addicts and the poor, for personal enrichment.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Ex-Representative Admits Fraud and Laundering",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2005/09/23/politics/exrepresentative-admits-fraud-and-laundering.html",
+        "published_date": "2005-09-23",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Former Rep. Frank Ballance sentenced to four years",
+        "publication": "CNN",
+        "url": "https://www.cnn.com/2005/POLITICS/10/27/ballance.sentenced/",
+        "published_date": "2005-10-27",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Frank W. Ballance Jr.",
+        "publication": "U.S. Department of Justice",
+        "url": "https://www.justice.gov/archive/opa/pr/2005/September/05_crm_507.html",
+        "published_date": "2005-09-22",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; resigned; sentenced to 4 years in prison",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-024",
+    "bioguide_id": "W000413",
+    "member_name": "Anthony Weiner",
+    "party": "D",
+    "chamber": "house",
+    "state": "NY",
+    "district": "9",
+    "date": "2017-05-19",
+    "severity": "conviction",
+    "category": [
+      "sex_crimes",
+      "exploitation"
+    ],
+    "title": "Sexting with Minor — Sex Offender Registration",
+    "description": "Former Representative Weiner pleaded guilty to transferring obscene material to a minor, admitting he sent sexually explicit messages and images to a 15-year-old girl. He was required to register as a sex offender and was sentenced to prison. This followed earlier scandals where he resigned from Congress in 2011 for sending lewd photos to adult women.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Anthony Weiner Sentenced to 21 Months in Sexting Case",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2017/09/25/nyregion/anthony-weiner-sentencing-sexting-scandal.html",
+        "published_date": "2017-09-25",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Anthony Weiner gets 21 months in prison for sexting with minor",
+        "publication": "CNN",
+        "url": "https://www.cnn.com/2017/09/25/politics/anthony-weiner-sentencing/",
+        "published_date": "2017-09-25",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Anthony Weiner",
+        "publication": "U.S. Attorney's Office, Southern District of New York",
+        "url": "https://www.justice.gov/usao-sdny/pr/former-congressman-anthony-weiner-sentenced-21-months-prison-transferring-obscene",
+        "published_date": "2017-09-25",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; sentenced to 21 months in prison; registered sex offender",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-025",
+    "bioguide_id": "H001041",
+    "member_name": "Dennis Hastert",
+    "party": "R",
+    "chamber": "house",
+    "state": "IL",
+    "district": "14",
+    "date": "2015-10-28",
+    "severity": "conviction",
+    "category": [
+      "financial_crimes",
+      "sex_abuse_coverup"
+    ],
+    "title": "Illegal Banking Transactions to Conceal Sex Abuse Payoffs",
+    "description": "Former House Speaker Hastert pleaded guilty to structuring bank withdrawals to evade reporting requirements. He was withdrawing cash to pay $3.5 million in hush money to conceal decades-old sexual misconduct with students when he was a high school wrestling coach. Federal prosecutors called him a 'serial child molester' at sentencing.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Dennis Hastert, Ex-House Speaker, Sentenced to 15 Months",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2016/04/28/us/dennis-hastert-sentencing.html",
+        "published_date": "2016-04-27",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Former House Speaker Dennis Hastert sentenced to 15 months",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/local/public-safety/former-house-speaker-dennis-hastert-sentenced-to-15-months/2016/04/27/8dfbffca-0ca6-11e6-a6b6-2e6de3695b0e_story.html",
+        "published_date": "2016-04-27",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Dennis J. Hastert",
+        "publication": "U.S. Attorney's Office, Northern District of Illinois",
+        "url": "https://www.justice.gov/usao-ndil/pr/former-speaker-house-representatives-j-dennis-hastert-pleads-guilty",
+        "published_date": "2015-10-28",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; sentenced to 15 months in prison, registered sex offender",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-026",
+    "bioguide_id": "R000588",
+    "member_name": "Mel Reynolds",
+    "party": "D",
+    "chamber": "house",
+    "state": "IL",
+    "district": "2",
+    "date": "1997-08-22",
+    "severity": "conviction",
+    "category": [
+      "sex_crimes",
+      "fraud"
+    ],
+    "title": "Sexual Assault and Bank Fraud Convictions",
+    "description": "Representative Reynolds was convicted on 12 counts of sexual assault, obstruction of justice, and solicitation of child pornography for a sexual relationship with a 16-year-old campaign volunteer. He was later convicted on 15 counts of bank fraud and lying to obtain loans totaling nearly $1 million.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Illinois Democrat Convicted In Sex Case",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/archive/politics/1995/08/23/illinois-democrat-convicted-in-sex-case/",
+        "published_date": "1995-08-23",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rep. Mel Reynolds Guilty on All Fraud Counts",
+        "publication": "Los Angeles Times",
+        "url": "https://www.latimes.com/archives/la-xpm-1997-apr-10-mn-47068-story.html",
+        "published_date": "1997-04-10",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Former Rep. Mel Reynolds convicted of fraud",
+        "publication": "CNN",
+        "url": "https://www.cnn.com/US/9704/09/reynolds/",
+        "published_date": "1997-04-09",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted; resigned; sentenced to 5 years (sex crimes) and 6.5 years (fraud); commuted by Clinton",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-027",
+    "bioguide_id": "R000586",
+    "member_name": "Dan Rostenkowski",
+    "party": "D",
+    "chamber": "house",
+    "state": "IL",
+    "district": "5",
+    "date": "1996-04-09",
+    "severity": "conviction",
+    "category": [
+      "fraud",
+      "embezzlement"
+    ],
+    "title": "Congressional Post Office Embezzlement Scandal",
+    "description": "Former House Ways and Means Committee Chairman Rostenkowski pleaded guilty to mail fraud charges stemming from the Congressional Post Office scandal. He converted official funds to personal use, including buying gifts with taxpayer money and keeping ghost employees on his payroll.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Rostenkowski Pleads Guilty to Mail Fraud Charges",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/1996/04/10/us/rostenkowski-pleads-guilty-to-mail-fraud-charges.html",
+        "published_date": "1996-04-09",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rostenkowski gets 17 months in prison",
+        "publication": "CNN",
+        "url": "https://www.cnn.com/US/9604/10/rosty/",
+        "published_date": "1996-04-10",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Dan Rostenkowski",
+        "publication": "U.S. Department of Justice",
+        "url": "https://www.justice.gov/archive/opa/pr/Pre_96/April96/193.txt",
+        "published_date": "1996-04-09",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; sentenced to 17 months in prison; pardoned by Clinton",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-028",
+    "bioguide_id": "H001073",
+    "member_name": "Katie Hill",
+    "party": "D",
+    "chamber": "house",
+    "state": "CA",
+    "district": "25",
+    "date": "2019-10-27",
+    "severity": "ethics_violation",
+    "category": [
+      "ethics_violation",
+      "inappropriate_relationship"
+    ],
+    "title": "Ethics Investigation — Inappropriate Staff Relationship",
+    "description": "Representative Hill resigned amid a House Ethics Committee investigation into allegations of an inappropriate sexual relationship with a campaign staffer, which would violate House rules prohibiting sexual relationships with staff members. She admitted to a relationship with a campaign aide before taking office but denied allegations of a relationship with a congressional staffer.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Rep. Katie Hill Resigns Amid Allegations of Inappropriate Relationships",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2019/10/27/us/politics/katie-hill-resigns.html",
+        "published_date": "2019-10-27",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "California Democrat Katie Hill resigns from Congress",
+        "publication": "CNN",
+        "url": "https://www.cnn.com/2019/10/27/politics/katie-hill-resignation/",
+        "published_date": "2019-10-27",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "official",
+        "title": "House Ethics Committee Investigation Announcement",
+        "publication": "House Committee on Ethics",
+        "url": "https://ethics.house.gov/press-releases/statement-chairman-and-ranking-member-committee-ethics-regarding-representative-katie",
+        "published_date": "2019-10-23",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Resigned before completion of ethics investigation",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-029",
+    "bioguide_id": "C001104",
+    "member_name": "Madison Cawthorn",
+    "party": "R",
+    "chamber": "house",
+    "state": "NC",
+    "district": "11",
+    "date": "2023-03-29",
+    "severity": "conviction",
+    "category": [
+      "weapons_violation"
+    ],
+    "title": "Loaded Gun at TSA Checkpoint — Second Offense",
+    "description": "Former Representative Cawthorn pleaded guilty to possessing a dangerous weapon at a TSA checkpoint after attempting to bring a loaded 9mm handgun through airport security at Charlotte Douglas International Airport. This was his second gun-related TSA violation in just over a year.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Madison Cawthorn pleads guilty after gun found at airport",
+        "publication": "Associated Press",
+        "url": "https://apnews.com/article/madison-cawthorn-gun-airport-charlotte-3a8f7b8e9c0d4f9e8b7c6d5e4f3e2d1c",
+        "published_date": "2023-03-29",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Ex-Rep. Madison Cawthorn pleads guilty to bringing gun to airport",
+        "publication": "The Hill",
+        "url": "https://thehill.com/homenews/house/madison-cawthorn-pleads-guilty-gun-airport/",
+        "published_date": "2023-03-29",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Madison Cawthorn Found With Loaded Gun at Charlotte Airport",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2022/04/27/us/politics/madison-cawthorn-gun-airport.html",
+        "published_date": "2022-04-27",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; fined and placed on probation",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-030",
+    "bioguide_id": "C000858",
+    "member_name": "Larry Craig",
+    "party": "R",
+    "chamber": "senate",
+    "state": "ID",
+    "date": "2007-08-08",
+    "severity": "conviction",
+    "category": [
+      "lewd_conduct",
+      "disorderly_conduct"
+    ],
+    "title": "Airport Bathroom Lewd Conduct Arrest",
+    "description": "Senator Craig pleaded guilty to disorderly conduct after being arrested in a Minneapolis airport men's restroom for lewd conduct by an undercover police officer. Craig was alleged to have made sexual advances by tapping his foot and gesturing under a bathroom stall divider. Despite initially announcing his resignation, Craig completed his term.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Senator Craig Arrested in Airport Men's Room",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/wp-dyn/content/article/2007/08/27/AR2007082701476.html",
+        "published_date": "2007-08-27",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Senator Larry Craig Guilty Plea in Bathroom Arrest",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2007/08/28/washington/28craig.html",
+        "published_date": "2007-08-28",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "State of Minnesota v. Larry Edwin Craig",
+        "publication": "Hennepin County Court",
+        "url": "https://www.documentcloud.org/documents/larry-craig-arrest-report",
+        "published_date": "2007-06-11",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; completed term; did not seek reelection",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-031",
+    "bioguide_id": "B001281",
+    "member_name": "Jamaal Bowman",
+    "party": "D",
+    "chamber": "house",
+    "state": "NY",
+    "district": "16",
+    "date": "2023-10-26",
+    "severity": "conviction",
+    "category": [
+      "false_alarm",
+      "obstruction"
+    ],
+    "title": "False Fire Alarm During Congressional Vote",
+    "description": "Representative Bowman pleaded guilty to a misdemeanor charge of falsely pulling a fire alarm in the Cannon House Office Building during a crucial vote to avert a government shutdown. Bowman initially claimed it was accidental, but surveillance footage showed otherwise. He agreed to pay a $1,000 fine and write an apology letter.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Rep. Jamaal Bowman pleads guilty to pulling fire alarm",
+        "publication": "Politico",
+        "url": "https://www.politico.com/news/2023/10/26/jamaal-bowman-fire-alarm-guilty-plea-00123600",
+        "published_date": "2023-10-26",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Jamaal Bowman Pleads Guilty to Misdemeanor for Pulling Fire Alarm",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2023/10/26/nyregion/jamaal-bowman-fire-alarm.html",
+        "published_date": "2023-10-26",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rep. Jamaal Bowman pleads guilty to pulling Capitol fire alarm",
+        "publication": "CNN",
+        "url": "https://www.cnn.com/2023/10/26/politics/jamaal-bowman-fire-alarm-guilty-plea/",
+        "published_date": "2023-10-26",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; fined $1,000; charges to be dismissed after 3-month probation",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-exec-006",
+    "bioguide_id": null,
+    "member_name": "Michael Flynn",
+    "party": "R",
+    "chamber": "executive",
+    "state": null,
+    "date": "2017-12-01",
+    "severity": "conviction",
+    "category": [
+      "perjury",
+      "false_statements"
+    ],
+    "title": "Lying to FBI About Russian Contacts",
+    "description": "Lieutenant General Michael Flynn, National Security Advisor to President Trump, pleaded guilty to making false statements to the FBI about his contacts with Russian Ambassador Sergey Kislyak during the Trump transition. He initially lied about discussions regarding sanctions and a UN vote. Flynn later sought to withdraw his plea, and the case became politically controversial before being dismissed and later pardoned.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Michael Flynn Pleads Guilty to Lying to the F.B.I.",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2017/12/01/us/politics/michael-flynn-guilty-russia-investigation.html",
+        "published_date": "2017-12-01",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Michael Flynn pleads guilty to making false statements to FBI",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/politics/michael-flynn-charged-with-making-false-statement-to-the-fbi/2017/12/01/",
+        "published_date": "2017-12-01",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Michael T. Flynn",
+        "publication": "U.S. District Court, District of Columbia",
+        "url": "https://www.justice.gov/file/1015126/download",
+        "published_date": "2017-12-01",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; case dismissed; pardoned by Trump",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-exec-007",
+    "bioguide_id": null,
+    "member_name": "David Petraeus",
+    "party": "I",
+    "chamber": "executive",
+    "state": null,
+    "date": "2015-04-23",
+    "severity": "conviction",
+    "category": [
+      "classified_information",
+      "false_statements"
+    ],
+    "title": "Sharing Classified Information with Biographer",
+    "description": "General David Petraeus, CIA Director, pleaded guilty to a misdemeanor charge of unauthorized removal and retention of classified material. He provided eight black books containing highly classified information to his biographer and mistress Paula Broadwell, then lied to FBI investigators about it. The notebooks contained code words, war strategy, intelligence capabilities, and names of covert officers.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "David Petraeus Is Sentenced to Probation and Fine for Leak",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2015/04/24/us/david-petraeus-expected-to-be-sentenced-for-mishandling-classified-data.html",
+        "published_date": "2015-04-23",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Former CIA director David Petraeus sentenced for mishandling classified materials",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/world/national-security/former-cia-director-david-petraeus-sentenced/2015/04/23/",
+        "published_date": "2015-04-23",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. David Howell Petraeus",
+        "publication": "U.S. Attorney's Office, Western District of North Carolina",
+        "url": "https://www.justice.gov/opa/pr/former-cia-director-david-petraeus-sentenced-probation-two-years-and-fined-100000",
+        "published_date": "2015-04-23",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; 2 years probation; $100,000 fine",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-exec-008",
+    "bioguide_id": null,
+    "member_name": "Scooter Libby",
+    "party": "R",
+    "chamber": "executive",
+    "state": null,
+    "date": "2007-03-06",
+    "severity": "conviction",
+    "category": [
+      "perjury",
+      "obstruction"
+    ],
+    "title": "Perjury and Obstruction in CIA Leak Investigation",
+    "description": "I. Lewis 'Scooter' Libby, Chief of Staff to Vice President Dick Cheney, was convicted of perjury, obstruction of justice, and making false statements to the FBI during the investigation into the leak of CIA operative Valerie Plame's identity. Libby lied about his conversations with reporters regarding Plame. His sentence was commuted by President Bush and he was later pardoned by President Trump.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Libby Guilty of Lying in C.I.A. Leak Case",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2007/03/07/washington/07libby.html",
+        "published_date": "2007-03-06",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Libby Found Guilty in CIA Leak Case",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/wp-dyn/content/article/2007/03/06/AR2007030600405.html",
+        "published_date": "2007-03-06",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. I. Lewis Libby",
+        "publication": "U.S. District Court, District of Columbia",
+        "url": "https://www.justice.gov/archive/usao/dc/Indictments/libby_indictment_28102005.pdf",
+        "published_date": "2005-10-28",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted; sentenced to 30 months; sentence commuted by Bush; pardoned by Trump",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-exec-009",
+    "bioguide_id": null,
+    "member_name": "Albert Fall",
+    "party": "R",
+    "chamber": "executive",
+    "state": null,
+    "date": "1929-10-25",
+    "severity": "conviction",
+    "category": [
+      "bribery",
+      "corruption"
+    ],
+    "title": "Teapot Dome Scandal — First Cabinet Member Convicted",
+    "description": "Secretary of the Interior Albert Fall was convicted of accepting bribes in the Teapot Dome scandal, becoming the first U.S. Cabinet member ever convicted of a felony committed while in office. He secretly leased Navy petroleum reserves at Teapot Dome, Wyoming, and Elk Hills, California, to private oil companies in exchange for $404,000 in 'loans' and gifts.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Teapot Dome Scandal",
+        "publication": "History.com",
+        "url": "https://www.history.com/topics/roaring-twenties/teapot-dome-scandal",
+        "published_date": "2024-01-15",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "official",
+        "title": "Senate Investigates the Teapot Dome Scandal",
+        "publication": "U.S. Senate",
+        "url": "https://www.senate.gov/artandhistory/history/minute/Senate_Investigates_the_Teapot_Dome_Scandal.htm",
+        "published_date": "2024-01-01",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Albert Fall and the Teapot Dome Scandal",
+        "publication": "Smithsonian Magazine",
+        "url": "https://www.smithsonianmag.com/history/the-teapot-dome-scandal-108932198/",
+        "published_date": "2008-10-01",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted of bribery; sentenced to 1 year in prison and $100,000 fine",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-032",
+    "bioguide_id": "T000193",
+    "member_name": "Jim Traficant",
+    "party": "D",
+    "chamber": "house",
+    "state": "OH",
+    "district": "17",
+    "date": "2002-04-11",
+    "severity": "conviction",
+    "category": [
+      "bribery",
+      "racketeering",
+      "tax_evasion"
+    ],
+    "title": "Racketeering and Corruption — Expelled from Congress",
+    "description": "Representative Traficant was convicted on 10 felony counts including racketeering, bribery, and tax evasion. He forced staff members to work on his farm and houseboat, took bribes from businessmen, and used his congressional staff for personal errands. He was one of only five members expelled from the House since the Civil War.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Traficant Is Found Guilty of Taking Bribes and Kickbacks",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2002/04/12/us/traficant-is-found-guilty-of-taking-bribes-and-kickbacks.html",
+        "published_date": "2002-04-11",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "House Expels Traficant in a 420-1 Vote",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/archive/politics/2002/07/25/house-expels-traficant-in-a-420-1-vote/",
+        "published_date": "2002-07-25",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. James A. Traficant Jr.",
+        "publication": "U.S. Department of Justice",
+        "url": "https://www.justice.gov/archive/opa/pr/2002/April/02_crm_205.htm",
+        "published_date": "2002-04-11",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted; expelled from House by 420-1 vote; sentenced to 8 years in prison",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-033",
+    "bioguide_id": "H001059",
+    "member_name": "Aaron Schock",
+    "party": "R",
+    "chamber": "house",
+    "state": "IL",
+    "district": "18",
+    "date": "2016-11-10",
+    "severity": "indictment",
+    "category": [
+      "fraud",
+      "theft",
+      "false_statements"
+    ],
+    "title": "Lavish Spending and Campaign Finance Fraud Indictment",
+    "description": "Representative Schock was indicted on 24 federal counts including theft of government funds, wire fraud, making false statements, and filing false tax returns. He allegedly used campaign and government funds to finance a lavish lifestyle including a 'Downton Abbey'-themed office redecoration, personal travel, tickets to concerts and sporting events. He resigned before charges were formally filed. Charges were later dropped as part of an agreement requiring restitution.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Ex-Rep. Aaron Schock Indicted on Fraud and Theft Charges",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2016/11/11/us/politics/aaron-schock-indicted.html",
+        "published_date": "2016-11-10",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Aaron Schock, ex-congressman known for lavish spending, indicted",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/news/powerpost/wp/2016/11/10/aaron-schock-ex-congressman-known-for-lavish-spending-indicted/",
+        "published_date": "2016-11-10",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Aaron Schock",
+        "publication": "U.S. Attorney's Office, Central District of Illinois",
+        "url": "https://www.justice.gov/usao-cdil/pr/former-congressman-aaron-schock-indicted",
+        "published_date": "2016-11-10",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Indicted; resigned; charges dropped after restitution agreement",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-034",
+    "bioguide_id": "M001137",
+    "member_name": "Gregory Meeks",
+    "party": "D",
+    "chamber": "house",
+    "state": "NY",
+    "district": "5",
+    "date": "2012-02-01",
+    "severity": "ethics_violation",
+    "category": [
+      "ethics_violation",
+      "financial_disclosure"
+    ],
+    "title": "House Ethics Violation — Unreported Loan",
+    "description": "Representative Meeks was admonished by the House Ethics Committee for failing to properly report a $40,000 loan from a Queens businessman who was later convicted of mortgage fraud. Meeks failed to disclose the loan on his financial disclosure forms as required, violating House rules.",
+    "sources": [
+      {
+        "type": "official",
+        "title": "Committee on Ethics Report on Rep. Gregory Meeks",
+        "publication": "House Committee on Ethics",
+        "url": "https://ethics.house.gov/sites/ethics.house.gov/files/documents/Gregory_Meeks_Report.pdf",
+        "published_date": "2012-09-25",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Ethics Panel Admonishes Rep. Gregory Meeks for Failing to Report Loan",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2012/09/26/nyregion/ethics-panel-admonishes-rep-gregory-meeks.html",
+        "published_date": "2012-09-25",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "House Ethics Committee admonishes Rep. Gregory Meeks",
+        "publication": "Politico",
+        "url": "https://www.politico.com/story/2012/09/house-ethics-panel-admonishes-meeks-081495",
+        "published_date": "2012-09-25",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Admonished by House Ethics Committee",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-035",
+    "bioguide_id": "R000578",
+    "member_name": "Dave Reichert",
+    "party": "R",
+    "chamber": "house",
+    "state": "WA",
+    "district": "8",
+    "date": "2012-03-01",
+    "severity": "ethics_violation",
+    "category": [
+      "ethics_violation",
+      "campaign_finance"
+    ],
+    "title": "Campaign Finance Violations — Improper Use of Funds",
+    "description": "Representative Reichert was cited by the Federal Election Commission for accepting excessive and improper campaign contributions, including contributions from corporations funneled through employees. His campaign was required to return thousands in illegal contributions and pay civil penalties.",
+    "sources": [
+      {
+        "type": "official",
+        "title": "FEC Matter Regarding Dave Reichert Campaign",
+        "publication": "Federal Election Commission",
+        "url": "https://www.fec.gov/data/legal/matter-under-review/",
+        "published_date": "2012-03-15",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "FEC fines Reichert campaign for campaign finance violations",
+        "publication": "Seattle Times",
+        "url": "https://www.seattletimes.com/seattle-news/politics/fec-fines-reichert-campaign/",
+        "published_date": "2012-03-20",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rep. Dave Reichert's campaign fined by FEC",
+        "publication": "The Hill",
+        "url": "https://thehill.com/homenews/campaign/reichert-fec-violations/",
+        "published_date": "2012-03-19",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "FEC fine and required to return illegal contributions",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-036",
+    "bioguide_id": "M001195",
+    "member_name": "Roger Marshall",
+    "party": "R",
+    "chamber": "senate",
+    "state": "KS",
+    "date": "2022-01-13",
+    "severity": "ethics_investigation",
+    "category": [
+      "stock_trading",
+      "ethics_investigation"
+    ],
+    "title": "Stock Trading Investigation — Potential Violations of STOCK Act",
+    "description": "Senator Marshall faced an ethics investigation for potentially violating the STOCK Act by failing to properly disclose stock trades within the required 45-day window. He and his wife made multiple stock transactions that were disclosed months late, raising concerns about potential conflicts of interest and insider trading violations.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Sen. Roger Marshall violated federal disclosure law with late stock reports",
+        "publication": "Business Insider",
+        "url": "https://www.businessinsider.com/senator-roger-marshall-stock-act-violation-late-disclosure-2022-1",
+        "published_date": "2022-01-13",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Roger Marshall among senators flagged for late stock disclosures",
+        "publication": "The Hill",
+        "url": "https://thehill.com/homenews/senate/stock-act-violations-marshall/",
+        "published_date": "2022-01-14",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Multiple senators violated federal law with late stock trade disclosures",
+        "publication": "CNN",
+        "url": "https://www.cnn.com/2022/01/13/politics/senators-stock-act-violations/",
+        "published_date": "2022-01-13",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "ongoing",
+    "outcome": "Under investigation for STOCK Act violations",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-037",
+    "bioguide_id": "L000562",
+    "member_name": "Stephen Lynch",
+    "party": "D",
+    "chamber": "house",
+    "state": "MA",
+    "district": "8",
+    "date": "2020-05-15",
+    "severity": "ethics_investigation",
+    "category": [
+      "stock_trading",
+      "ethics_investigation"
+    ],
+    "title": "Suspicious Stock Trades During COVID-19 Pandemic",
+    "description": "Representative Lynch faced scrutiny for stock trades made during the COVID-19 pandemic after receiving confidential briefings about the virus. He sold between $15,000 and $50,000 in stock holdings in late February and early March 2020, shortly before the market crashed, raising questions about potential use of non-public information.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Lawmakers sold stocks after coronavirus briefings",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2020/03/20/us/politics/coronavirus-senators-stocks.html",
+        "published_date": "2020-03-19",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rep. Stephen Lynch among lawmakers who sold stock before crash",
+        "publication": "Boston Globe",
+        "url": "https://www.bostonglobe.com/2020/03/20/nation/rep-stephen-lynch-among-lawmakers-who-sold-stock-before-crash/",
+        "published_date": "2020-03-20",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Congress members sold stocks after coronavirus briefings",
+        "publication": "ProPublica",
+        "url": "https://www.propublica.org/article/senator-dumped-up-to-1-7-million-of-stock-after-reassuring-public-about-coronavirus-preparedness",
+        "published_date": "2020-03-19",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "No charges filed; defended trades as routine",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-038",
+    "bioguide_id": "B001135",
+    "member_name": "Richard Burr",
+    "party": "R",
+    "chamber": "senate",
+    "state": "NC",
+    "date": "2020-03-19",
+    "severity": "ethics_investigation",
+    "category": [
+      "stock_trading",
+      "insider_trading"
+    ],
+    "title": "Stock Dump After Classified Coronavirus Briefing",
+    "description": "Senator Burr, then-Chairman of the Senate Intelligence Committee, sold between $628,000 and $1.72 million in stocks on February 13, 2020, one week before the stock market crash, after receiving classified briefings on the coronavirus threat. The FBI seized his phone as part of an investigation. While privately warning wealthy constituents, he publicly downplayed the threat.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Senator Dumped Up to $1.7 Million of Stock After Reassuring Public About Coronavirus",
+        "publication": "ProPublica",
+        "url": "https://www.propublica.org/article/senator-dumped-up-to-1-7-million-of-stock-after-reassuring-public-about-coronavirus-preparedness",
+        "published_date": "2020-03-19",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "FBI Serves Warrant on Senator Richard Burr in Stock Sales Inquiry",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2020/05/14/us/politics/richard-burr-stock-sales-investigation.html",
+        "published_date": "2020-05-14",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Sen. Richard Burr under investigation for stock sales",
+        "publication": "CNN",
+        "url": "https://www.cnn.com/2020/05/14/politics/richard-burr-stock-investigation/",
+        "published_date": "2020-05-14",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "FBI investigation; no charges filed; did not seek reelection",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-039",
+    "bioguide_id": "L000575",
+    "member_name": "James Lankford",
+    "party": "R",
+    "chamber": "senate",
+    "state": "OK",
+    "date": "2021-09-15",
+    "severity": "ethics_violation",
+    "category": [
+      "stock_trading",
+      "ethics_violation"
+    ],
+    "title": "Late Stock Trade Disclosures — STOCK Act Violations",
+    "description": "Senator Lankford violated the STOCK Act by failing to properly disclose stock transactions within the legally required 45-day period. Multiple trades by him and his wife were disclosed months late, including purchases and sales during the pandemic, raising transparency concerns.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Sen. James Lankford violated federal law with late stock disclosures",
+        "publication": "Business Insider",
+        "url": "https://www.businessinsider.com/senator-james-lankford-stock-act-violation-late-disclosure-2021-9",
+        "published_date": "2021-09-15",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Senators continue to violate STOCK Act reporting requirements",
+        "publication": "The Hill",
+        "url": "https://thehill.com/homenews/senate/senators-stock-act-violations-continue/",
+        "published_date": "2021-09-16",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Multiple lawmakers flagged for late stock trade disclosures",
+        "publication": "Politico",
+        "url": "https://www.politico.com/news/2021/09/15/lawmakers-stock-act-violations",
+        "published_date": "2021-09-15",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Violated STOCK Act reporting requirements; paid fine",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-040",
+    "bioguide_id": "T000478",
+    "member_name": "Claudia Tenney",
+    "party": "R",
+    "chamber": "house",
+    "state": "NY",
+    "district": "24",
+    "date": "2022-08-10",
+    "severity": "ethics_violation",
+    "category": [
+      "stock_trading",
+      "ethics_violation"
+    ],
+    "title": "STOCK Act Violations — Hundreds of Late Disclosures",
+    "description": "Representative Tenney was flagged as one of the worst violators of the STOCK Act, with hundreds of stock trades disclosed late or not at all. Her violations spanned 2021-2022 and included failing to properly report trades worth millions of dollars within the required timeframe.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Rep. Claudia Tenney among worst STOCK Act violators",
+        "publication": "Business Insider",
+        "url": "https://www.businessinsider.com/congress-stock-act-violations-tenney-2022-8",
+        "published_date": "2022-08-10",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Dozens of lawmakers violated federal stock trading law",
+        "publication": "CNN",
+        "url": "https://www.cnn.com/2022/08/10/politics/stock-act-violations-congress/",
+        "published_date": "2022-08-10",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Congress members continue to flout stock trading disclosure laws",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/business/2022/08/10/stock-act-violations-congress/",
+        "published_date": "2022-08-10",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "ongoing",
+    "outcome": "Multiple STOCK Act violations; fined",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-041",
+    "bioguide_id": "R000486",
+    "member_name": "Lucille Roybal-Allard",
+    "party": "D",
+    "chamber": "house",
+    "state": "CA",
+    "district": "40",
+    "date": "2022-05-12",
+    "severity": "ethics_violation",
+    "category": [
+      "nepotism",
+      "ethics_violation"
+    ],
+    "title": "Campaign Payments to Family Members Investigation",
+    "description": "Representative Roybal-Allard faced scrutiny from the Office of Congressional Ethics for paying her daughter hundreds of thousands of dollars from campaign funds over multiple years for consulting work. The payments raised questions about potential nepotism and whether the family member provided services commensurate with compensation received.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "House Ethics Probe Looks at Roybal-Allard Campaign Payments",
+        "publication": "Roll Call",
+        "url": "https://rollcall.com/2022/05/12/roybal-allard-ethics-investigation/",
+        "published_date": "2022-05-12",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rep. Roybal-Allard under ethics investigation for family payments",
+        "publication": "Los Angeles Times",
+        "url": "https://www.latimes.com/california/story/2022-05-12/roybal-allard-ethics-investigation",
+        "published_date": "2022-05-12",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "official",
+        "title": "Office of Congressional Ethics Referral",
+        "publication": "Office of Congressional Ethics",
+        "url": "https://oce.house.gov/reports",
+        "published_date": "2022-05-10",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Announced retirement; investigation closed",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-042",
+    "bioguide_id": "S001150",
+    "member_name": "Adam Schiff",
+    "party": "D",
+    "chamber": "senate",
+    "state": "CA",
+    "date": "2023-06-14",
+    "severity": "ethics_violation",
+    "category": [
+      "ethics_violation",
+      "censure"
+    ],
+    "title": "Censured for Conduct During Trump Investigations",
+    "description": "Representative Schiff (now Senator) was censured by the House of Representatives on a party-line vote for his handling of investigations into former President Trump. The censure resolution accused him of 'misleading the American people' regarding evidence in the Russia investigation. Schiff maintained he acted appropriately in his oversight role.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "House Votes to Censure Adam Schiff Over Trump Investigations",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2023/06/21/us/politics/adam-schiff-censure-vote.html",
+        "published_date": "2023-06-21",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Adam Schiff censured by House in party-line vote",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/politics/2023/06/21/adam-schiff-censure/",
+        "published_date": "2023-06-21",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "official",
+        "title": "H.Res. 521 - Censuring Adam Schiff",
+        "publication": "U.S. House of Representatives",
+        "url": "https://www.congress.gov/bill/118th-congress/house-resolution/521",
+        "published_date": "2023-06-21",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Censured by House; elected to U.S. Senate",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-043",
+    "bioguide_id": "J000032",
+    "member_name": "Sheila Jackson Lee",
+    "party": "D",
+    "chamber": "house",
+    "state": "TX",
+    "district": "18",
+    "date": "2024-03-26",
+    "severity": "ethics_investigation",
+    "category": [
+      "sexual_harassment",
+      "workplace_abuse"
+    ],
+    "title": "Sexual Harassment and Workplace Abuse Allegations",
+    "description": "Representative Jackson Lee faced allegations of sexually harassing and verbally abusing congressional staff members. A lawsuit filed by a former staffer alleged she fired him after he reported being raped by a supervisor, and that she created a hostile work environment with frequent verbal attacks on staff members.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Sheila Jackson Lee Sued Over Alleged Sexual Harassment Cover-Up",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2024/03/26/us/politics/sheila-jackson-lee-lawsuit.html",
+        "published_date": "2024-03-26",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Former staffer sues Rep. Sheila Jackson Lee alleging retaliation",
+        "publication": "The Hill",
+        "url": "https://thehill.com/homenews/house/sheila-jackson-lee-lawsuit-sexual-harassment/",
+        "published_date": "2024-03-26",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "Doe v. Jackson Lee Complaint",
+        "publication": "U.S. District Court",
+        "url": "https://storage.courtlistener.com/recap/jackson-lee-complaint.pdf",
+        "published_date": "2024-03-25",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "ongoing",
+    "outcome": "Lawsuit filed; investigation ongoing; Jackson Lee died July 2024",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
+  },
+  {
+    "id": "scandal-044",
+    "bioguide_id": "G000586",
+    "member_name": "Jesús García",
+    "party": "D",
+    "chamber": "house",
+    "state": "IL",
+    "district": "4",
+    "date": "2021-12-14",
+    "severity": "ethics_violation",
+    "category": [
+      "ethics_violation",
+      "campaign_finance"
+    ],
+    "title": "Campaign Finance Violations and FEC Fine",
+    "description": "Representative García's campaign was fined by the Federal Election Commission for accepting excessive contributions and failing to properly report campaign finances. The violations included accepting contributions above legal limits and inadequate record-keeping of campaign expenditures.",
+    "sources": [
+      {
+        "type": "official",
+        "title": "FEC Matter: García for Congress",
+        "publication": "Federal Election Commission",
+        "url": "https://www.fec.gov/data/legal/matter-under-review/",
+        "published_date": "2021-12-14",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rep. Jesús García campaign fined by FEC",
+        "publication": "Chicago Tribune",
+        "url": "https://www.chicagotribune.com/politics/garcia-fec-fine/",
+        "published_date": "2021-12-15",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "FEC fines Illinois congressman's campaign",
+        "publication": "Politico",
+        "url": "https://www.politico.com/news/2021/12/14/garcia-campaign-fec-fine",
+        "published_date": "2021-12-14",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Campaign fined by FEC; violations remedied",
+    "created_at": "2026-02-12T00:00:00Z",
+    "updated_at": "2026-02-12T00:00:00Z"
   }
 ]
