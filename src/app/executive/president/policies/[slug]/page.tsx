@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPolicy, POLICY_CATEGORIES, formatNumber, getPromiseQuadrant } from "@/lib/policy-data";
+import { getPolicy, getPolicies, POLICY_CATEGORIES, formatNumber, getPromiseQuadrant } from "@/lib/policy-data";
 import ImpactBadge from "@/components/ImpactBadge";
+
+export function generateStaticParams() {
+  return getPolicies().map((policy) => ({
+    slug: policy.slug,
+  }));
+}
 
 export default function PolicyDetailPage({ params }: { params: { slug: string } }) {
   const policy = getPolicy(params.slug);
