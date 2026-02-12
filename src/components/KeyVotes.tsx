@@ -68,7 +68,24 @@ export function KeyVotes({ votes, chamber, limit = 10, showFilters = true }: Key
   const [selectedVote, setSelectedVote] = useState<KeyVote | null>(null);
   const [summaries, setSummaries] = useState<Record<string, BillSummary>>({});
   const [expandedDescriptions, setExpandedDescriptions] = useState<Record<string, boolean>>({});
+
+  // Get unique categories
+  const categories = ["All", ...new Set(votes.map(v => v.category))];
   
+  // Filter votes
+  let filteredVotes = votes;
+  
+  if (selectedCategory !== "All") {
+    filteredVotes = filteredVotes.filter(v => v.category === selectedCategory);
+  }
+  
+  if (selectedChamber !== "All") {
+    filteredVotes = filteredVotes.filter(v => v.chamber === selectedChamber);
+  }
+  
+  // Apply limit unless expanded
+  const displayVotes = expanded ? filteredVotes : filteredVotes.slice(0, limit);
+
   // Load summaries for visible votes
   useEffect(() => {
     const loadSummaries = async () => {
@@ -116,23 +133,6 @@ export function KeyVotes({ votes, chamber, limit = 10, showFilters = true }: Key
     }));
   };
 
-  // Get unique categories
-  const categories = ["All", ...new Set(votes.map(v => v.category))];
-  
-  // Filter votes
-  let filteredVotes = votes;
-  
-  if (selectedCategory !== "All") {
-    filteredVotes = filteredVotes.filter(v => v.category === selectedCategory);
-  }
-  
-  if (selectedChamber !== "All") {
-    filteredVotes = filteredVotes.filter(v => v.chamber === selectedChamber);
-  }
-  
-  // Apply limit unless expanded
-  const displayVotes = expanded ? filteredVotes : filteredVotes.slice(0, limit);
-  
   return (
     <div className="space-y-4">
       {showFilters && (
