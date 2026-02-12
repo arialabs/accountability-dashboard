@@ -115,7 +115,7 @@ function CongressContent() {
           {isFiltered && (
             <button 
               onClick={clearFilters}
-              className="text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors"
+              className="text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors px-4 py-2 min-h-[44px]"
             >
               Clear filters ✕
             </button>
@@ -161,7 +161,7 @@ function CongressContent() {
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => setParty("")}
-                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[40px] ${
+                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px] ${
                     party === "" 
                       ? "bg-slate-900 text-white" 
                       : "bg-slate-100 text-slate-700 hover:bg-slate-200"
@@ -171,7 +171,7 @@ function CongressContent() {
                 </button>
                 <button
                   onClick={() => setParty("D")}
-                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[40px] ${
+                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px] ${
                     party === "D" 
                       ? "bg-blue-600 text-white" 
                       : "bg-blue-100 text-blue-700 hover:bg-blue-200"
@@ -181,7 +181,7 @@ function CongressContent() {
                 </button>
                 <button
                   onClick={() => setParty("R")}
-                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[40px] ${
+                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px] ${
                     party === "R" 
                       ? "bg-red-600 text-white" 
                       : "bg-red-100 text-red-700 hover:bg-red-200"
@@ -191,7 +191,7 @@ function CongressContent() {
                 </button>
                 <button
                   onClick={() => setParty("I")}
-                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[40px] ${
+                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px] ${
                     party === "I" 
                       ? "bg-purple-600 text-white" 
                       : "bg-purple-100 text-purple-700 hover:bg-purple-200"
