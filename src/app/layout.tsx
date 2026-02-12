@@ -40,7 +40,7 @@ export default function RootLayout({
         <footer className="bg-white border-t border-slate-200 py-12 mt-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 leading-relaxed space-y-3">
             <p className="font-semibold text-slate-700 text-sm sm:text-base">Built by Aria Labs</p>
-            <p className="text-sm sm:text-base">Data from Congress.gov, ProPublica, and OpenSecrets</p>
+            <p className="text-sm sm:text-base">Data from Congress.gov, Voteview, and OpenFEC</p>
             <p className="text-sm sm:text-base">Democracy shouldn't be paywalled. This is open source.</p>
           </div>
         </footer>
