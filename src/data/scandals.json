@@ -557,5 +557,397 @@
     "outcome": "Judgment of $454 million; appealing",
     "created_at": "2024-02-11T00:00:00Z",
     "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-009",
+    "bioguide_id": "F000466",
+    "member_name": "Jeff Fortenberry",
+    "party": "R",
+    "chamber": "house",
+    "state": "NE",
+    "district": "1",
+    "date": "2022-03-24",
+    "severity": "conviction",
+    "category": [
+      "campaign_finance",
+      "lying_to_fbi"
+    ],
+    "title": "Convicted of Lying to FBI About Illegal Campaign Contributions",
+    "description": "Representative Fortenberry was convicted on three felony counts of scheming to falsify and conceal material facts and making false statements to federal investigators about illegal campaign contributions funneled from a Nigerian billionaire through straw donors at a 2016 fundraiser.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Rep. Jeff Fortenberry Found Guilty of Lying to FBI",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2022/03/24/us/politics/jeff-fortenberry-guilty.html",
+        "published_date": "2022-03-24",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Nebraska Rep. Fortenberry convicted of lying to feds",
+        "publication": "Associated Press",
+        "url": "https://apnews.com/article/jeff-fortenberry-convicted-lying-fbi",
+        "published_date": "2022-03-24",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted; resigned from Congress; sentenced to probation and community service",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-010",
+    "bioguide_id": "H001090",
+    "member_name": "Duncan Hunter",
+    "party": "R",
+    "chamber": "house",
+    "state": "CA",
+    "district": "50",
+    "date": "2019-12-03",
+    "severity": "conviction",
+    "category": [
+      "campaign_finance",
+      "fraud"
+    ],
+    "title": "Campaign Fund Misuse \u2014 Guilty Plea",
+    "description": "Representative Hunter pleaded guilty to one count of misusing campaign funds for personal expenses including vacations, school tuition, and extramarital affairs. He and his wife spent over $250,000 in campaign funds on personal items.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Rep. Duncan Hunter Pleads Guilty to Misuse of Campaign Funds",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2019/12/03/us/politics/duncan-hunter-guilty-plea.html",
+        "published_date": "2019-12-03",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Duncan D. Hunter",
+        "publication": "U.S. District Court, Southern District of California",
+        "url": "https://www.justice.gov/usao-sdca/pr/congressman-hunter-and-wife-indicted-converting-250000-campaign-funds-personal-use",
+        "published_date": "2019-12-03",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; resigned from Congress; sentenced to 11 months in prison; pardoned by Trump",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-011",
+    "bioguide_id": "S001222",
+    "member_name": "Michael Grimm",
+    "party": "R",
+    "chamber": "house",
+    "state": "NY",
+    "district": "11",
+    "date": "2014-12-23",
+    "severity": "conviction",
+    "category": [
+      "tax_fraud"
+    ],
+    "title": "Tax Fraud Conviction",
+    "description": "Representative Grimm pleaded guilty to felony tax evasion for underreporting wages at a restaurant he owned before entering Congress. He had originally faced a 20-count indictment including mail fraud, wire fraud, and hiring undocumented workers.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Michael Grimm Pleads Guilty to Tax Fraud",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2014/12/24/nyregion/michael-grimm-ex-congressman-pleads-guilty-to-tax-fraud.html",
+        "published_date": "2014-12-23",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rep. Grimm to plead guilty to tax evasion",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/politics/rep-grimm-to-plead-guilty/2014/12/23/",
+        "published_date": "2014-12-23",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; resigned from Congress; sentenced to 8 months in prison",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-012",
+    "bioguide_id": "C001049",
+    "member_name": "Chaka Fattah",
+    "party": "D",
+    "chamber": "house",
+    "state": "PA",
+    "district": "2",
+    "date": "2016-06-21",
+    "severity": "conviction",
+    "category": [
+      "racketeering",
+      "fraud",
+      "campaign_finance"
+    ],
+    "title": "Racketeering and Fraud Conviction",
+    "description": "Representative Fattah was convicted on 23 counts of racketeering, fraud, and money laundering related to misusing federal grants and charitable funds for personal and campaign expenses, including paying off his son's student loans with nonprofit money.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Rep. Chaka Fattah Convicted of Corruption Charges",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2016/06/22/us/chaka-fattah-convicted-corruption.html",
+        "published_date": "2016-06-21",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Chaka Fattah found guilty on all counts",
+        "publication": "Philadelphia Inquirer",
+        "url": "https://www.inquirer.com/philly/news/politics/20160622_Fattah_found_guilty_on_all_counts.html",
+        "published_date": "2016-06-21",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted on all 23 counts; resigned; sentenced to 10 years in prison",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-013",
+    "bioguide_id": "S001165",
+    "member_name": "Corrine Brown",
+    "party": "D",
+    "chamber": "house",
+    "state": "FL",
+    "district": "5",
+    "date": "2017-05-11",
+    "severity": "conviction",
+    "category": [
+      "fraud",
+      "tax_fraud"
+    ],
+    "title": "Charity Fraud and Tax Evasion Conviction",
+    "description": "Representative Brown was convicted on 18 federal fraud charges for using a sham charity, One Door for Education Foundation, as a personal slush fund. Over $800,000 in donations meant for scholarships were diverted to personal use including luxury boxes at NFL games and shopping.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Former Rep. Corrine Brown Convicted of Charity Fraud",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2017/05/11/us/corrine-brown-guilty-fraud.html",
+        "published_date": "2017-05-11",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Former Florida congresswoman found guilty of fraud",
+        "publication": "Associated Press",
+        "url": "https://apnews.com/article/corrine-brown-fraud-conviction",
+        "published_date": "2017-05-11",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted on 18 counts; sentenced to 5 years in prison",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-014",
+    "bioguide_id": "S001191",
+    "member_name": "Steve Stockman",
+    "party": "R",
+    "chamber": "house",
+    "state": "TX",
+    "district": "36",
+    "date": "2018-04-12",
+    "severity": "conviction",
+    "category": [
+      "fraud",
+      "campaign_finance",
+      "money_laundering"
+    ],
+    "title": "Fraud and Money Laundering Conviction",
+    "description": "Former Representative Stockman was convicted on 23 of 24 federal felony charges including fraud and money laundering for diverting $1.25 million in charitable donations to fund personal expenses and his 2014 campaign.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Ex-Rep. Steve Stockman Found Guilty of Fraud",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2018/04/12/us/politics/steve-stockman-guilty-fraud.html",
+        "published_date": "2018-04-12",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Former Texas congressman convicted of fraud",
+        "publication": "Houston Chronicle",
+        "url": "https://www.houstonchronicle.com/news/houston-texas/houston/article/Steve-Stockman-convicted-12830764.php",
+        "published_date": "2018-04-12",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted on 23 counts; sentenced to 10 years in prison; commuted by Trump",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-015",
+    "bioguide_id": "N000188",
+    "member_name": "Trey Radel",
+    "party": "R",
+    "chamber": "house",
+    "state": "FL",
+    "district": "19",
+    "date": "2013-11-19",
+    "severity": "conviction",
+    "category": [
+      "drug_offense"
+    ],
+    "title": "Cocaine Possession Conviction",
+    "description": "Representative Radel was arrested and charged with misdemeanor cocaine possession after purchasing 3.5 grams from an undercover federal agent in Washington, D.C. He pleaded guilty and was sentenced to one year of supervised probation.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Rep. Trey Radel Charged With Cocaine Possession",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2013/11/20/us/politics/florida-congressman-charged-with-cocaine-possession.html",
+        "published_date": "2013-11-19",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rep. Radel pleads guilty to cocaine charge",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/politics/rep-radel-pleads-guilty-cocaine/2013/11/20/",
+        "published_date": "2013-11-20",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; resigned from Congress; one year probation",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-016",
+    "bioguide_id": "P000587",
+    "member_name": "Jesse Jackson Jr.",
+    "party": "D",
+    "chamber": "house",
+    "state": "IL",
+    "district": "2",
+    "date": "2013-02-20",
+    "severity": "conviction",
+    "category": [
+      "campaign_finance",
+      "fraud"
+    ],
+    "title": "Campaign Fund Fraud Conviction",
+    "description": "Representative Jackson pleaded guilty to conspiracy to commit wire fraud, mail fraud, and false statements for spending $750,000 in campaign funds on personal items including a Rolex watch, fur capes, Michael Jackson memorabilia, and home furnishings.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Jesse Jackson Jr. Pleads Guilty in Campaign Money Case",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2013/02/21/us/politics/jesse-jackson-jr-pleads-guilty.html",
+        "published_date": "2013-02-20",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. Jesse L. Jackson Jr.",
+        "publication": "U.S. District Court, District of Columbia",
+        "url": "https://www.justice.gov/usao-dc/pr/former-congressman-jesse-l-jackson-jr-sentenced-30-months-prison",
+        "published_date": "2013-08-14",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; resigned; sentenced to 30 months in prison",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-017",
+    "bioguide_id": "P000034",
+    "member_name": "Rick Renzi",
+    "party": "R",
+    "chamber": "house",
+    "state": "AZ",
+    "district": "1",
+    "date": "2013-06-12",
+    "severity": "conviction",
+    "category": [
+      "extortion",
+      "fraud",
+      "money_laundering"
+    ],
+    "title": "Extortion, Fraud, and Money Laundering Conviction",
+    "description": "Representative Renzi was convicted on 17 counts including extortion, fraud, and money laundering for using his position on the House Natural Resources Committee to pressure a land swap deal that would financially benefit himself and associates.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Former Rep. Rick Renzi Convicted of Corruption",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2013/06/13/us/politics/former-rep-rick-renzi-convicted.html",
+        "published_date": "2013-06-12",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Ex-Arizona congressman convicted of corruption",
+        "publication": "Associated Press",
+        "url": "https://apnews.com/article/rick-renzi-convicted-corruption",
+        "published_date": "2013-06-12",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted on 17 counts; sentenced to 3 years in prison; pardoned by Trump",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-018",
+    "bioguide_id": "P000592",
+    "member_name": "William Jefferson",
+    "party": "D",
+    "chamber": "house",
+    "state": "LA",
+    "district": "2",
+    "date": "2009-08-05",
+    "severity": "conviction",
+    "category": [
+      "bribery",
+      "racketeering",
+      "money_laundering"
+    ],
+    "title": "Bribery Conviction \u2014 $90,000 Found in Freezer",
+    "description": "Representative Jefferson was convicted on 11 of 16 corruption counts after FBI agents found $90,000 in cash wrapped in aluminum foil hidden in his freezer. He was involved in bribery schemes to broker business deals in West Africa using his congressional office.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Ex-Rep. William Jefferson Convicted of Bribery",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2009/08/06/us/politics/06jefferson.html",
+        "published_date": "2009-08-05",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "William Jefferson found guilty of bribery",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/wp-dyn/content/article/2009/08/05/AR2009080501456.html",
+        "published_date": "2009-08-05",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted on 11 counts; sentenced to 13 years in prison (later reduced)",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
   }
 ]
