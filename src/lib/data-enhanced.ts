@@ -32,7 +32,7 @@ export async function getAllAlignmentScoresEnhanced(): Promise<EnhancedAlignment
   const { getAllAlignmentScores } = await import('./data');
   const baseScores = getAllAlignmentScores();
   
-  return baseScores.map(score => {
+  return baseScores.map((score: AlignmentScore) => {
     const member = getMember(score.bioguide_id);
     const finance = getMemberFinanceStatic(score.bioguide_id);
     
@@ -42,7 +42,7 @@ export async function getAllAlignmentScoresEnhanced(): Promise<EnhancedAlignment
       member?.party_alignment_pct,
       member?.votes_cast
     );
-  });
+  }).filter((s: EnhancedAlignmentScore | null): s is EnhancedAlignmentScore => s !== null);
 }
 
 /**
@@ -65,11 +65,12 @@ export function getAlignmentRankingEnhanced(bioguideId: string): { rank: number;
     );
   });
   
-  // Sort by weighted score
-  enhancedScores.sort((a, b) => b.weighted_score - a.weighted_score);
+  // Sort by weighted score (filter nulls)
+  const validScores = enhancedScores.filter((s: EnhancedAlignmentScore | null): s is EnhancedAlignmentScore => s !== null);
+  validScores.sort((a: EnhancedAlignmentScore, b: EnhancedAlignmentScore) => b.weighted_score - a.weighted_score);
   
-  const index = enhancedScores.findIndex(s => s.bioguide_id === bioguideId);
+  const index = validScores.findIndex((s: EnhancedAlignmentScore) => s.bioguide_id === bioguideId);
   if (index === -1) return null;
   
-  return { rank: index + 1, total: enhancedScores.length };
+  return { rank: index + 1, total: validScores.length };
 }
