@@ -7,6 +7,7 @@ import ScandalCard from "@/components/ScandalCard";
 import ScandalFilters, { type FilterState, type FilterStats } from "@/components/ScandalFilters";
 import Link from "next/link";
 import type { ScandalEntry, SeverityLevel } from "@/lib/types";
+import EpsteinFilesCard from "@/components/EpsteinFilesCard";
 
 export default function ScandalsPage() {
   return (
@@ -140,6 +141,19 @@ function ScandalsPageContent() {
             Verified incidents with sources. Every entry includes citations from credible news outlets, 
             court documents, or official reports. Non-partisan accountability tracking.
           </p>
+        </div>
+      </div>
+      
+      {/* Featured Investigation */}
+      <div className="bg-gradient-to-b from-purple-50 to-slate-50 border-b border-purple-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
+          <div className="mb-4">
+            <h2 className="text-2xl font-black text-slate-900 mb-2">Featured Deep Dive</h2>
+            <p className="text-slate-600">Comprehensive investigations into major cases</p>
+          </div>
+          <div className="max-w-2xl">
+            <EpsteinFilesCard variant="compact" />
+          </div>
         </div>
       </div>
       

@@ -48,4 +48,23 @@ describe("Home Page", () => {
     expect(screen.getByText("535")).toBeDefined();
     expect(screen.getByText("Members")).toBeDefined();
   });
+
+  it("renders the Deep Dives section", () => {
+    render(<Home />);
+    expect(screen.getByText("Deep Dives")).toBeDefined();
+    expect(screen.getByText(/In-depth investigations into major scandals/)).toBeDefined();
+  });
+
+  it("renders the Epstein Files Explorer card", () => {
+    render(<Home />);
+    expect(screen.getByText("Epstein Files Explorer")).toBeDefined();
+  });
+
+  it("Epstein Files card links to external site", () => {
+    const { container } = render(<Home />);
+    const epsteinLink = container.querySelector('a[href="https://epstein.arialabs.ai"]');
+    expect(epsteinLink).toBeDefined();
+    expect(epsteinLink?.getAttribute('target')).toBe('_blank');
+    expect(epsteinLink?.getAttribute('rel')).toBe('noopener noreferrer');
+  });
 });

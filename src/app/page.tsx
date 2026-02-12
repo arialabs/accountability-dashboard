@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AlignmentLeaderboard from "@/components/AlignmentLeaderboard";
+import EpsteinFilesCard from "@/components/EpsteinFilesCard";
 
 export default function Home() {
   return (
@@ -143,6 +144,24 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Deep Dives Section */}
+      <section className="py-20 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
+              Deep Dives
+            </h2>
+            <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              In-depth investigations into major scandals and corruption cases.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <EpsteinFilesCard variant="full" />
           </div>
         </div>
       </section>
