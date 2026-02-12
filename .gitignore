@@ -15,6 +15,9 @@ dist/
 # Pipeline output
 pipeline/output/
 
+# Data cache
+data/bill-summaries/
+
 # Database
 *.db
 *.sqlite

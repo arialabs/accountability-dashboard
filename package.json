@@ -18,6 +18,7 @@
     "db:studio": "turso db shell accountability-dashboard"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.74.0",
     "@libsql/client": "^0.5.0",
     "next": "14.1.0",
     "pdf-parse": "^2.4.5",
