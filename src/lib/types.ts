@@ -144,6 +144,52 @@ export interface FlaggedTrade extends StockTrade {
   related_legislation?: string;
 }
 
+// ==================== Scandals & Controversies ====================
+
+export type SeverityLevel = 
+  | "conviction" 
+  | "indictment" 
+  | "criminal_investigation" 
+  | "ethics_violation" 
+  | "ethics_investigation" 
+  | "allegation";
+
+export interface Source {
+  type: "news" | "court_doc" | "official_report" | "congressional_record" | "filing";
+  title: string;
+  publication: string;
+  url: string;
+  published_date: string;
+  archived_url?: string;
+  credibility_rating?: "high" | "medium";
+}
+
+export interface ScandalEntry {
+  id: string;
+  bioguide_id: string;
+  member_name: string;
+  party: "D" | "R" | "I";
+  chamber: "house" | "senate";
+  state: string;
+  district?: string;
+  
+  // Incident details
+  date: string; // ISO 8601
+  severity: SeverityLevel;
+  category: string[];
+  title: string;
+  description: string;
+  
+  // Sources (REQUIRED)
+  sources: Source[];
+  
+  // Metadata
+  status: "ongoing" | "resolved" | "dismissed";
+  outcome?: string;
+  created_at: string;
+  updated_at: string;
+}
+
 // ==================== Wealth Tracking ====================
 
 export interface WealthSnapshot {
@@ -322,4 +368,122 @@ export interface PositionData {
   generated_at: string;
   total_members: number;
   total_positions: number;
+}
+
+// ==================== Presidential Policy Impact Tracking ====================
+
+export type PolicyCategory = 
+  | 'economy' 
+  | 'healthcare' 
+  | 'immigration' 
+  | 'environment' 
+  | 'education' 
+  | 'foreign-policy' 
+  | 'civil-rights' 
+  | 'infrastructure';
+
+export type ImpactGrade = 'A' | 'B' | 'C+' | 'C' | 'C-' | 'D' | 'F' | 'F-';
+
+export interface ImpactFactors {
+  economic: number;    // -50 to +50
+  social: number;      // -50 to +50
+  polling: number;     // -25 to +25
+  expert: number;      // -25 to +25
+}
+
+export interface PolicyImpact {
+  id: string;
+  slug: string;
+  title: string;
+  category: PolicyCategory;
+  subcategory?: string;
+  
+  // Impact scoring (0-100)
+  impact_score: number;
+  impact_grade: ImpactGrade;
+  impact_factors: ImpactFactors;
+  
+  // Promise tracking
+  promise_text?: string;
+  promise_alignment: number;  // 0-100: how closely it matched the promise
+  promise_source?: string;
+  
+  // Key metrics
+  americans_affected: number;
+  date_implemented: string;
+  last_updated: string;
+  
+  // Summary
+  summary: string;
+  what_was_promised: string;
+  what_actually_happened: string[];
+  
+  // Data sources
+  economic_data?: EconomicMetric[];
+  polling_data?: PollingData[];
+  expert_analyses?: ExpertAnalysis[];
+  
+  // Timeline
+  timeline?: TimelineEvent[];
+  
+  // Related policies
+  related_policy_ids?: string[];
+}
+
+export interface EconomicMetric {
+  metric: string;
+  value: string;
+  change: string;
+  source: string;
+  source_url: string;
+  date: string;
+}
+
+export interface PollingData {
+  pollster: string;
+  date: string;
+  sample_size: number;
+  approve: number;
+  disapprove: number;
+  no_opinion: number;
+  url: string;
+}
+
+export interface ExpertAnalysis {
+  organization: string;
+  bias: 'Non-partisan' | 'Center-Left' | 'Center-Right' | 'Conservative' | 'Progressive';
+  type: 'Government' | 'Think Tank' | 'Research' | 'Academic';
+  summary: string;
+  methodology?: string[];
+  url: string;
+  date: string;
+}
+
+export interface TimelineEvent {
+  date: string;
+  title: string;
+  description: string;
+  source?: string;
+}
+
+export interface PolicyCategoryInfo {
+  slug: PolicyCategory;
+  name: string;
+  icon: string;
+  description: string;
+  subcategories: string[];
+}
+
+export interface PolicySummary {
+  total_policies: number;
+  overall_impact_score: number;
+  overall_grade: ImpactGrade;
+  americans_affected: number;
+  categories: {
+    [key in PolicyCategory]?: {
+      count: number;
+      avg_impact_score: number;
+      grade: ImpactGrade;
+    };
+  };
 }

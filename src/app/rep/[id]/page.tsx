@@ -8,6 +8,7 @@ import MemberVotingRecord from "@/components/MemberVotingRecord";
 import CommitteeMemberships from "@/components/CommitteeMemberships";
 import StockTradesSection from "@/components/StockTradesSection";
 import FinancialDisclosuresSection from "@/components/FinancialDisclosuresSection";
+import ScandalsSection from "@/components/ScandalsSection";
 import VoteBasedPositions from "@/components/VoteBasedPositions";
 import AlignmentScoreCard from "@/components/AlignmentScoreCard";
 import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced";
@@ -255,6 +256,13 @@ export default async function RepPage({ params }: { params: { id: string } }) {
             <FinancialDisclosuresSection 
               disclosures={financialDisclosures} 
               memberName={member.full_name} 
+            />
+
+            {/* Scandals & Controversies */}
+            <ScandalsSection
+              bioguideId={member.bioguide_id}
+              memberName={member.full_name}
+              maxVisible={3}
             />
           </div>
 

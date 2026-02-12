@@ -408,3 +408,25 @@ export function getAlignmentRanking(bioguideId: string): { rank: number; total: 
   if (index === -1) return null;
   return { rank: index + 1, total: scores.length };
 }
+
+// ==================== Scandals & Controversies Data ====================
+
+import scandalsData from "../data/scandals.json";
+import type { ScandalEntry } from "./types";
+
+// Get all scandals
+export function getAllScandals(): ScandalEntry[] {
+  return scandalsData as ScandalEntry[];
+}
+
+// Get scandals for a specific member
+export function getMemberScandals(bioguideId: string): ScandalEntry[] {
+  return (scandalsData as ScandalEntry[]).filter(
+    s => s.bioguide_id === bioguideId
+  );
+}
+
+// Get scandal by ID
+export function getScandalById(id: string): ScandalEntry | null {
+  return (scandalsData as ScandalEntry[]).find(s => s.id === id) || null;
+}

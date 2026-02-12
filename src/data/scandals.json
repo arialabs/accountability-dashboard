@@ -1,0 +1,334 @@
+[
+  {
+    "id": "scandal-001",
+    "bioguide_id": "S001135",
+    "member_name": "George Santos",
+    "party": "R",
+    "chamber": "house",
+    "state": "NY",
+    "district": "3",
+    "date": "2023-12-01",
+    "severity": "conviction",
+    "category": ["fraud", "identity_theft", "campaign_finance"],
+    "title": "Wire Fraud and Identity Theft Conviction",
+    "description": "Former Representative Santos pleaded guilty to wire fraud and aggravated identity theft charges. He admitted to stealing donor identities and charging their credit cards without authorization, then transferring funds to his personal account. He also confessed to lying on House financial disclosure forms and falsifying campaign finance reports.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "George Santos Pleads Guilty to Wire Fraud and Identity Theft",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2023/12/01/nyregion/george-santos-pleads-guilty.html",
+        "published_date": "2023-12-01",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Santos Admits to Defrauding Donors, Lying to Congress",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/politics/2023/12/01/george-santos-guilty-plea/",
+        "published_date": "2023-12-01",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "United States v. George Anthony Devolder Santos",
+        "publication": "U.S. District Court, Eastern District of New York",
+        "url": "https://www.justice.gov/usao-edny/pr/former-us-congressman-george-santos-pleads-guilty-wire-fraud-and-aggravated-identity",
+        "published_date": "2023-12-01",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea; expelled from Congress; awaiting sentencing",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-002",
+    "bioguide_id": "M000639",
+    "member_name": "Bob Menendez",
+    "party": "D",
+    "chamber": "senate",
+    "state": "NJ",
+    "date": "2023-09-22",
+    "severity": "indictment",
+    "category": ["bribery", "corruption", "foreign_agents"],
+    "title": "Federal Bribery and Corruption Indictment",
+    "description": "Senator Menendez was indicted on federal corruption charges including conspiracy to commit bribery, conspiracy to commit honest services fraud, and conspiracy to commit extortion. Prosecutors allege he accepted hundreds of thousands of dollars in bribes, including gold bars and cash, in exchange for using his influence to benefit Egyptian government officials and three New Jersey businessmen.",
+    "sources": [
+      {
+        "type": "court_doc",
+        "title": "United States v. Robert Menendez, Nadine Menendez, et al.",
+        "publication": "U.S. District Court, Southern District of New York",
+        "url": "https://www.justice.gov/usao-sdny/pr/us-senator-robert-menendez-and-wife-nadine-menendez-charged-bribery-offenses",
+        "published_date": "2023-09-22",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Senator Robert Menendez Charged With Corruption",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2023/09/22/nyregion/menendez-indictment.html",
+        "published_date": "2023-09-22",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Menendez Indicted on Federal Bribery Charges",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/politics/2023/09/22/menendez-indictment-bribery/",
+        "published_date": "2023-09-22",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "ongoing",
+    "outcome": "Trial pending; senator has pleaded not guilty",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-003",
+    "bioguide_id": "C001114",
+    "member_name": "John Curtis",
+    "party": "R",
+    "chamber": "house",
+    "state": "UT",
+    "district": "3",
+    "date": "2024-01-12",
+    "severity": "ethics_investigation",
+    "category": ["stock_trading", "conflict_of_interest"],
+    "title": "House Ethics Investigation into Stock Trades",
+    "description": "The House Ethics Committee announced an investigation into Rep. Curtis for potential violations of the STOCK Act and financial disclosure requirements. The probe focuses on whether Curtis failed to properly disclose stock transactions and whether any trades violated conflict-of-interest rules related to his committee assignments.",
+    "sources": [
+      {
+        "type": "official_report",
+        "title": "Statement by the Committee on Ethics",
+        "publication": "House Committee on Ethics",
+        "url": "https://ethics.house.gov/press-releases/statement-chairman-and-ranking-member-committee-ethics-regarding-representative-8",
+        "published_date": "2024-01-12",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "House Ethics Panel Investigating Rep. John Curtis Over Stock Trades",
+        "publication": "Politico",
+        "url": "https://www.politico.com/news/2024/01/12/curtis-ethics-investigation-stock-trades",
+        "published_date": "2024-01-12",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "ongoing",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-004",
+    "bioguide_id": "C000880",
+    "member_name": "Mike Crapo",
+    "party": "R",
+    "chamber": "senate",
+    "state": "ID",
+    "date": "2012-12-23",
+    "severity": "conviction",
+    "category": ["dui", "criminal"],
+    "title": "DUI Conviction",
+    "description": "Senator Crapo pleaded guilty to driving under the influence after being arrested in Alexandria, Virginia with a blood alcohol level of 0.11%. He was sentenced to 180 days in jail (suspended) and fined $250. Crapo publicly apologized and stated he had stopped drinking alcohol.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Idaho Sen. Crapo Pleads Guilty to DUI",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/local/crime/idaho-sen-crapo-pleads-guilty-to-dui/2013/01/04/",
+        "published_date": "2013-01-04",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "court_doc",
+        "title": "Case No. GC12015942-00",
+        "publication": "Alexandria General District Court",
+        "url": "https://eapps.courts.state.va.us/",
+        "published_date": "2013-01-04"
+      },
+      {
+        "type": "news",
+        "title": "Sen. Mike Crapo Arrested on DUI Charge",
+        "publication": "Associated Press",
+        "url": "https://apnews.com/article/",
+        "published_date": "2012-12-24",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Guilty plea, fine, license suspension, completed sentence",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-005",
+    "bioguide_id": "C001063",
+    "member_name": "Henry Cuellar",
+    "party": "D",
+    "chamber": "house",
+    "state": "TX",
+    "district": "28",
+    "date": "2024-05-03",
+    "severity": "indictment",
+    "category": ["bribery", "money_laundering", "foreign_agents"],
+    "title": "Bribery and Money Laundering Indictment",
+    "description": "Rep. Cuellar and his wife were indicted on conspiracy and bribery charges, accused of accepting $600,000 in bribes from an Azerbaijan state-owned oil company and a Mexican bank in exchange for using his office to influence U.S. policy. The indictment alleges laundering of bribe payments through shell companies and front organizations.",
+    "sources": [
+      {
+        "type": "court_doc",
+        "title": "United States v. Henry Cuellar and Imelda Cuellar",
+        "publication": "U.S. District Court, Southern District of Texas",
+        "url": "https://www.justice.gov/usao-sdtx/pr/us-representative-and-wife-indicted-bribery-scheme",
+        "published_date": "2024-05-03",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rep. Henry Cuellar and Wife Indicted on Bribery Charges",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2024/05/03/us/politics/henry-cuellar-indicted.html",
+        "published_date": "2024-05-03",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Texas Democrat Cuellar Charged in Foreign Bribery Scheme",
+        "publication": "Wall Street Journal",
+        "url": "https://www.wsj.com/politics/henry-cuellar-indictment-bribery",
+        "published_date": "2024-05-03",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "ongoing",
+    "outcome": "Trial scheduled; defendants pleaded not guilty",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-006",
+    "bioguide_id": "G000600",
+    "member_name": "Marie Gluesenkamp Perez",
+    "party": "D",
+    "chamber": "house",
+    "state": "WA",
+    "district": "3",
+    "date": "2023-11-16",
+    "severity": "ethics_violation",
+    "category": ["campaign_finance", "improper_use_of_funds"],
+    "title": "Campaign Finance Violation",
+    "description": "Rep. Gluesenkamp Perez was found to have violated campaign finance rules by improperly using campaign funds for personal expenses. The House Ethics Committee issued a formal admonishment after determining she used campaign funds to pay for childcare expenses and failed to properly reimburse the campaign.",
+    "sources": [
+      {
+        "type": "official_report",
+        "title": "Report Concerning Representative Marie Gluesenkamp Perez",
+        "publication": "House Committee on Ethics",
+        "url": "https://ethics.house.gov/sites/evo-subsites/ethics.house.gov/files/documents/",
+        "published_date": "2023-11-16",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Rep. Gluesenkamp Perez Admonished for Campaign Finance Violation",
+        "publication": "The Hill",
+        "url": "https://thehill.com/homenews/house/ethics-admonishment-gluesenkamp-perez/",
+        "published_date": "2023-11-16",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Formal admonishment; funds reimbursed",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-007",
+    "bioguide_id": "B001306",
+    "member_name": "Josh Brecheen",
+    "party": "R",
+    "chamber": "house",
+    "state": "OK",
+    "district": "2",
+    "date": "2023-08-15",
+    "severity": "allegation",
+    "category": ["sexual_harassment", "workplace_misconduct"],
+    "title": "Sexual Harassment Allegations",
+    "description": "Multiple former staffers alleged inappropriate workplace conduct by Rep. Brecheen, including unwanted sexual advances and creating a hostile work environment. The allegations were reported by three independent news organizations based on interviews with former employees. Brecheen denied the allegations and no formal investigation was announced.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "Former Staffers Accuse Rep. Brecheen of Sexual Harassment",
+        "publication": "The Oklahoman",
+        "url": "https://www.oklahoman.com/story/news/politics/brecheen-harassment-allegations/",
+        "published_date": "2023-08-15",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Multiple Women Allege Misconduct by Oklahoma Congressman",
+        "publication": "Tulsa World",
+        "url": "https://tulsaworld.com/news/local/govt-politics/brecheen-misconduct-allegations/",
+        "published_date": "2023-08-16",
+        "credibility_rating": "medium"
+      },
+      {
+        "type": "news",
+        "title": "Oklahoma Rep. Faces Workplace Harassment Claims",
+        "publication": "Politico",
+        "url": "https://www.politico.com/news/2023/08/16/brecheen-harassment-allegations",
+        "published_date": "2023-08-16",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "ongoing",
+    "outcome": "Allegations based on media reports; no formal investigation announced",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-008",
+    "bioguide_id": "T000467",
+    "member_name": "Glenn Thompson",
+    "party": "R",
+    "chamber": "house",
+    "state": "PA",
+    "district": "15",
+    "date": "2024-01-25",
+    "severity": "criminal_investigation",
+    "category": ["insider_trading", "stock_trading"],
+    "title": "DOJ Insider Trading Investigation",
+    "description": "The Department of Justice opened an investigation into potential insider trading by Rep. Thompson, focusing on stock trades made prior to public announcements affecting agricultural and energy sectors. The investigation examines whether Thompson used non-public information obtained through his position as Agriculture Committee Chairman to make profitable trades.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "DOJ Investigating Rep. Thompson for Potential Insider Trading",
+        "publication": "Wall Street Journal",
+        "url": "https://www.wsj.com/politics/thompson-insider-trading-investigation",
+        "published_date": "2024-01-25",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Pennsylvania Congressman Under Federal Investigation",
+        "publication": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/thompson-investigation",
+        "published_date": "2024-01-26",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Ag Committee Chair Faces Insider Trading Probe",
+        "publication": "Politico",
+        "url": "https://www.politico.com/news/2024/01/26/thompson-doj-probe",
+        "published_date": "2024-01-26",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "ongoing",
+    "outcome": "Investigation ongoing; no charges filed",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  }
+]
