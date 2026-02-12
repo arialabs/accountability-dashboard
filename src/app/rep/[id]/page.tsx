@@ -8,7 +8,6 @@ import MemberVotingRecord from "@/components/MemberVotingRecord";
 import CommitteeMemberships from "@/components/CommitteeMemberships";
 import StockTradesSection from "@/components/StockTradesSection";
 import FinancialDisclosuresSection from "@/components/FinancialDisclosuresSection";
-import CampaignPositions from "@/components/CampaignPositions";
 import VoteBasedPositions from "@/components/VoteBasedPositions";
 import AlignmentScoreCard from "@/components/AlignmentScoreCard";
 import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced";
