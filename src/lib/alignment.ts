@@ -2,10 +2,39 @@
  * Position-to-Vote Alignment Calculator
  * 
  * Maps politician's stated positions (from OnTheIssues) to their actual votes
- * and calculates alignment scores.
+ * and calculates alignment scores with time-decay weighting for recent votes.
  */
 
 import type { Position, MemberPositions } from './types';
+
+/**
+ * Calculate time-decay weight for a vote
+ * Recent votes get higher weight than older votes
+ * @param voteDate ISO date string (YYYY-MM-DD)
+ * @returns weight between 0.5 and 1.0
+ */
+function calculateTimeWeight(voteDate?: string): number {
+  if (!voteDate) return 0.8; // Default weight if date unknown
+  
+  const now = new Date();
+  const vote = new Date(voteDate);
+  const daysSince = (now.getTime() - vote.getTime()) / (1000 * 60 * 60 * 24);
+  
+  // Votes in last 30 days: full weight (1.0)
+  if (daysSince <= 30) return 1.0;
+  
+  // Votes 30-180 days: linear decay to 0.9
+  if (daysSince <= 180) return 1.0 - ((daysSince - 30) / 150) * 0.1;
+  
+  // Votes 180-365 days: linear decay to 0.7
+  if (daysSince <= 365) return 0.9 - ((daysSince - 180) / 185) * 0.2;
+  
+  // Votes 1-2 years: 0.6
+  if (daysSince <= 730) return 0.6;
+  
+  // Votes older than 2 years: 0.5 (minimum weight)
+  return 0.5;
+}
 
 // Map position topics to vote categories
 const TOPIC_TO_CATEGORY: Record<string, string[]> = {
@@ -103,12 +132,24 @@ export function getRelevantCategories(topic: string): string[] {
   return ['Other'];
 }
 
+export interface VoteWithWeight {
+  vote: {
+    category: string;
+    publicBenefit: string;
+    votes: Record<string, string>;
+    date?: string; // ISO date string
+  };
+  alignment: boolean | null;
+  weight: number; // Time-decay weight (0-1)
+}
+
 export interface AlignmentResult {
   position: Position;
   relevantVotes: number;
   alignedVotes: number;
   opposedVotes: number;
   alignmentScore: number | null; // 0-100 or null if no relevant votes
+  weightedScore: number | null; // Score with time-decay weighting
 }
 
 export interface MemberAlignmentSummary {
@@ -127,11 +168,13 @@ export function calculateMemberAlignment(
     category: string;
     publicBenefit: string;
     votes: Record<string, string>;
+    date?: string; // ISO date
   }>
 ): MemberAlignmentSummary {
   const bioguideId = memberPositions.bioguide_id;
   const results: AlignmentResult[] = [];
   const categoryAligned: Record<string, number[]> = {};
+  const categoryWeightedAligned: Record<string, { weightedSum: number; totalWeight: number }> = {};
   
   for (const position of memberPositions.positions) {
     const relevantCategories = getRelevantCategories(position.topic);
@@ -144,17 +187,29 @@ export function calculateMemberAlignment(
     
     let aligned = 0;
     let opposed = 0;
+    let weightedAlignedSum = 0;
+    let totalWeight = 0;
     
     for (const vote of relevantVotesList) {
       const memberVote = vote.votes[bioguideId];
       const alignment = isVoteAligned(position.stance, memberVote, vote.publicBenefit);
+      const weight = calculateTimeWeight(vote.date);
       
-      if (alignment === true) aligned++;
-      else if (alignment === false) opposed++;
+      if (alignment === true) {
+        aligned++;
+        weightedAlignedSum += weight;
+      } else if (alignment === false) {
+        opposed++;
+      }
+      
+      if (alignment !== null) {
+        totalWeight += weight;
+      }
     }
     
     const totalRelevant = aligned + opposed;
     const score = totalRelevant > 0 ? Math.round((aligned / totalRelevant) * 100) : null;
+    const weightedScore = totalWeight > 0 ? Math.round((weightedAlignedSum / totalWeight) * 100) : null;
     
     results.push({
       position,
@@ -162,19 +217,41 @@ export function calculateMemberAlignment(
       alignedVotes: aligned,
       opposedVotes: opposed,
       alignmentScore: score,
+      weightedScore,
     });
     
     // Track by category
     for (const cat of relevantCategories) {
-      if (!categoryAligned[cat]) categoryAligned[cat] = [];
+      if (!categoryAligned[cat]) {
+        categoryAligned[cat] = [];
+        categoryWeightedAligned[cat] = { weightedSum: 0, totalWeight: 0 };
+      }
       if (score !== null) categoryAligned[cat].push(score);
+      if (weightedScore !== null) {
+        categoryWeightedAligned[cat].weightedSum += weightedAlignedSum;
+        categoryWeightedAligned[cat].totalWeight += totalWeight;
+      }
     }
   }
   
-  // Calculate overall score
+  // Calculate overall score (use weighted score if available)
   const scoresWithData = results.filter(r => r.alignmentScore !== null);
   const overallScore = scoresWithData.length > 0
     ? Math.round(scoresWithData.reduce((sum, r) => sum + (r.alignmentScore || 0), 0) / scoresWithData.length)
+    : null;
+  
+  // Calculate overall weighted score
+  const totalWeightedSum = results.reduce((sum, r) => {
+    if (r.weightedScore !== null && r.opposedVotes + r.alignedVotes > 0) {
+      return sum + (r.weightedScore * (r.opposedVotes + r.alignedVotes));
+    }
+    return sum;
+  }, 0);
+  const totalVotesWithScores = results.reduce((sum, r) => {
+    return sum + (r.alignedVotes + r.opposedVotes);
+  }, 0);
+  const overallWeightedScore = totalVotesWithScores > 0 
+    ? Math.round(totalWeightedSum / totalVotesWithScores)
     : null;
   
   // Calculate category scores
@@ -189,7 +266,7 @@ export function calculateMemberAlignment(
     bioguideId,
     totalPositions: memberPositions.positions.length,
     positionsWithVotes: scoresWithData.length,
-    overallAlignmentScore: overallScore,
+    overallAlignmentScore: overallWeightedScore ?? overallScore, // Prefer weighted
     categoryScores,
     results,
   };

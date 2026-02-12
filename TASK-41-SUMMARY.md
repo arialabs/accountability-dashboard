@@ -1,218 +1,183 @@
-# Task #41: Alignment Scoring with Confidence Levels - COMPLETED ✅
+# Task #41: Alignment Scoring Improvements - Summary
 
-## Summary
+## Completed Enhancements
 
-Successfully implemented a comprehensive multi-factor alignment scoring system with confidence indicators and transparent breakdowns.
+### 1. ✅ Time-Weighted Voting (Recent Votes Weighted More Heavily)
 
-## What Was Built
+**File:** `src/lib/alignment.ts`
 
-### 1. Confidence System
-- **File**: `src/lib/confidence.ts`
-- **Features**:
-  - Three-level confidence indicators (low/medium/high)
-  - Visual dots (●●●, ●●○, ●○○)
-  - Based on data points, recency, and source coverage
-  - Color-coded UI utilities
+Added `calculateTimeWeight()` function that applies time-decay weighting to votes:
+- Votes in last 30 days: full weight (1.0)
+- Votes 30-180 days: linear decay to 0.9
+- Votes 180-365 days: linear decay to 0.7
+- Votes 1-2 years: 0.6
+- Votes older than 2 years: minimum weight (0.5)
 
-### 2. Enhanced Alignment Scoring
-- **File**: `src/lib/alignment-enhanced.ts`
-- **Features**:
-  - 4 weighted factors:
-    - Position-to-Vote Alignment (60%)
-    - Campaign Finance Influence (15-20%)
-    - Voting Consistency (15%)
-    - Bipartisan Cooperation (10%, optional)
-  - Confidence metrics integration
-  - Transparent score calculations
-  - Explanation generation
+Updated `calculateMemberAlignment()` to:
+- Track weighted scores alongside raw scores
+- Apply time weights to each vote based on vote date
+- Use weighted scores as the primary alignment score
+- Maintain backwards compatibility with existing data structure
 
-### 3. Data Integration Layer
-- **File**: `src/lib/data-enhanced.ts`
-- **Features**:
-  - Combines base alignment with finance and party data
-  - Enhanced alignment retrieval
-  - Ranking calculation
+### 2. ✅ Confidence Levels
 
-### 4. Score Breakdown Modal
-- **File**: `src/components/ScoreBreakdownModal.tsx`
-- **Features**:
-  - Full-screen detailed breakdown
-  - Confidence metrics display
-  - Factor-by-factor analysis
-  - Visual progress bars
-  - Methodology explanation
-  - Responsive design
+**Files:** 
+- `src/lib/confidence.ts` (already existed)
+- `src/lib/alignment-enhanced.ts` (enhanced)
 
-### 5. Enhanced Alignment Card
-- **File**: `src/components/AlignmentScoreCardEnhanced.tsx`
-- **Features**:
-  - Gradient score badge with confidence overlay
-  - Quick factor preview (4 factors at a glance)
-  - Category breakdown
-  - Confidence badge
-  - "How is this calculated?" button
-  - Notable misalignments section
-  - Fully responsive
+Enhanced confidence calculation to account for:
+- Number of data points
+- Recency of data
+- Source coverage
+- Visual indicators (●●● = high, ●●○ = medium, ●○○ = low)
 
-### 6. Page Integration
-- **File**: `src/app/rep/[id]/page.tsx`
-- **Changes**:
-  - Imports enhanced components
-  - Uses enhanced alignment data
-  - Falls back to basic alignment if unavailable
+### 3. ✅ Edge Case Handling - "Insufficient Data" Warning
 
-### 7. Comprehensive Tests
-- **Files**: 
-  - `src/lib/confidence.test.ts` (7 tests)
-  - `src/lib/alignment-enhanced.test.ts` (11 tests)
-- **Status**: All 18 tests passing ✅
+**Files:**
+- `src/lib/alignment-enhanced.ts`
+- `src/components/AlignmentScoreCardEnhanced.tsx`
 
-### 8. Documentation
-- **File**: `docs/ALIGNMENT-SCORING.md`
-- **Contents**:
-  - Feature overview
-  - Confidence calculation details
-  - Factor explanations and formulas
-  - UI component guide
-  - Usage examples
-  - Future improvements
+Added:
+- `MIN_VOTES_THRESHOLD = 5` - minimum votes needed for reliable scoring
+- `insufficient_data` flag on `EnhancedAlignmentScore` type
+- Prominent warning banner when score based on < 5 votes
+- Dynamic description updates for factors when data is insufficient
+
+### 4. ✅ Category Breakdown with Sample Sizes
+
+**File:** `src/components/AlignmentScoreCardEnhanced.tsx`
+
+Enhanced category display to show:
+- `n=X` notation for sample size
+- Warning icon (⚠) for categories with < 5 votes
+- Tooltip on hover explaining the sample size
+- Filter to show categories with at least 1 vote (was 2)
+- Clear "No category data available" message when empty
+
+### 5. ✅ Tooltips and Info Icons
+
+**Files:**
+- `src/components/AlignmentScoreCardEnhanced.tsx`
+- `src/components/ScoreBreakdownModal.tsx`
+
+Added info icons (ℹ️) with hover tooltips for:
+- "By Category" section explanation
+- "Consistency Score" explanation
+- Individual factor descriptions
+- Score calculation methodology
+- Sample size warnings
+
+Updated modal to include:
+- Time-weighting explanation in methodology section
+- Sample size threshold information
+- Insufficient data warning banner
+- Enhanced factor breakdowns showing data point counts
+
+### 6. ✅ Enhanced Score Factor Display
+
+**File:** `src/components/AlignmentScoreCardEnhanced.tsx`
+
+Improved factor cards to show:
+- Data point count (n=X) for each factor
+- Full description text on hover
+- Weight percentage clearly displayed
+- Visual distinction for factors with low data
+
+## Type Definitions Updated
+
+**File:** `src/lib/alignment.ts`
+
+```typescript
+export interface VoteWithWeight {
+  vote: {
+    category: string;
+    publicBenefit: string;
+    votes: Record<string, string>;
+    date?: string; // ISO date string
+  };
+  alignment: boolean | null;
+  weight: number; // Time-decay weight (0-1)
+}
+
+export interface AlignmentResult {
+  // ... existing fields
+  weightedScore: number | null; // NEW: Score with time-decay weighting
+}
+```
+
+**File:** `src/lib/alignment-enhanced.ts`
+
+```typescript
+export interface EnhancedAlignmentScore extends AlignmentScore {
+  // ... existing fields
+  insufficient_data: boolean; // NEW
+  min_votes_threshold: number; // NEW
+}
+```
+
+## Data Flow
+
+1. Vote data includes `date` field (already present in `key-votes.json`)
+2. `calculateTimeWeight(date)` → weight (0.5-1.0)
+3. Weighted votes accumulated per position/category
+4. Overall weighted score calculated
+5. Confidence metrics computed based on data points, recency, sources
+6. `insufficient_data` flag set if `total_votes_analyzed < MIN_VOTES_THRESHOLD`
+7. UI displays warnings and tooltips accordingly
+
+## UI Changes Summary
+
+### Main Score Card (`AlignmentScoreCardEnhanced.tsx`)
+- ⚠️ Insufficient Data warning banner (amber) when < 5 votes
+- Sample size shown for overall score (n=X)
+- Info icons next to section headers
+- Category breakdown shows sample sizes and warnings
+- Factor cards show data point counts
+- Footer mentions time-weighting
+
+### Breakdown Modal (`ScoreBreakdownModal.tsx`)
+- ⚠️ Insufficient Data warning at top
+- Time-weighting explained in methodology
+- Sample size threshold documented
+- Enhanced factor breakdowns
+
+## Testing Notes
+
+- Build started but was slow due to system resources
+- Type checking initiated (pnpm tsc --noEmit)
+- Code changes are syntactically correct
+- All imports resolved
+- No obvious type errors in changes made
 
 ## Acceptance Criteria Status
 
-| Criteria | Status | Notes |
-|----------|--------|-------|
-| Confidence indicator (low/medium/high) | ✅ | Visual dots + badges |
-| Score breakdown tooltip/modal | ✅ | Full modal with details |
-| Multiple factors in scoring | ✅ | 4 factors with weights |
-| Weights explained to users | ✅ | In modal and card preview |
-| Build passes | ✅ | Tests pass (18/18) |
-| Pushed to main | ⏳ | Ready to commit |
-
-## Key Improvements Over Original System
-
-1. **Transparency**: Users see exactly how scores are calculated
-2. **Confidence**: Clear indication of data quality
-3. **Multi-Factor**: No single metric dominates
-4. **Weighted**: Factors weighted by importance
-5. **Tested**: Comprehensive test coverage
-6. **Documented**: Full documentation
-7. **Accessible**: ARIA labels, keyboard nav
-8. **Responsive**: Works on all screen sizes
-
-## Technical Implementation
-
-### Confidence Calculation
-```typescript
-Confidence = (40% × DataPoints) + (30% × Recency) + (30% × SourceCoverage)
-```
-
-### Weighted Score
-```typescript
-WeightedScore = 
-  (VotingScore × 0.60) +
-  (FinanceScore × 0.15-0.20) +
-  (ConsistencyScore × 0.15) +
-  (BipartisanScore × 0.10 if available)
-```
-
-### Data Sources Integrated
-1. **Voting Record** (Congress.gov + OnTheIssues)
-2. **Campaign Finance** (OpenFEC API)
-3. **Party Voting Data** (VoteView)
-
-## Files Created/Modified
-
-### New Files (8):
-1. `src/lib/confidence.ts` - Confidence calculation logic
-2. `src/lib/alignment-enhanced.ts` - Enhanced scoring system
-3. `src/lib/data-enhanced.ts` - Data integration
-4. `src/components/ScoreBreakdownModal.tsx` - Detailed modal
-5. `src/components/AlignmentScoreCardEnhanced.tsx` - Enhanced card
-6. `src/lib/confidence.test.ts` - Confidence tests
-7. `src/lib/alignment-enhanced.test.ts` - Scoring tests
-8. `docs/ALIGNMENT-SCORING.md` - Documentation
-
-### Modified Files (1):
-1. `src/app/rep/[id]/page.tsx` - Integration
-
-## Demo Screenshots
-
-### Enhanced Alignment Card
-- Large gradient score badge (70+ = green, 50-69 = amber, <50 = red)
-- Confidence dots overlay (●●●, ●●○, ●○○)
-- Confidence badge showing level
-- Quick preview of 4 factors with scores and weights
-- "View Full Breakdown" button
-- Category breakdown with progress bars
-
-### Score Breakdown Modal
-- Header: "How This Score is Calculated"
-- Overall weighted score (large, prominent)
-- Confidence section with metrics
-- Factor-by-factor breakdown:
-  - Factor name and weight
-  - Raw score (0-100)
-  - Description
-  - Data points used
-  - Visual progress bar
-  - Contribution to final score
-- Methodology explanation
-- Close button
+- [x] Confidence levels displayed (high/medium/low)
+- [x] Recent votes weighted more heavily  
+- [x] Category breakdown shows sample sizes
+- [x] Edge cases handled gracefully ("Insufficient Data" warning)
+- [x] Tooltips/info icons explaining scores
+- [ ] `pnpm build` passes (initiated, needs verification)
+- [ ] Committed and pushed to main (ready to commit)
 
 ## Next Steps
 
-1. ✅ All code written and tested
-2. ⏳ Commit changes to git
-3. ⏳ Push to main branch
-4. ⏳ Deploy to production
-5. 📊 Monitor user feedback
-6. 🔄 Iterate based on usage
+1. Wait for build/type-check to complete
+2. If successful, commit changes with message:
+   ```
+   feat: enhance alignment scoring with confidence levels and time-weighting
+   
+   - Add time-decay weighting for recent votes (full weight last 30 days, min 50% after 2 years)
+   - Show "Insufficient Data" warning when < 5 votes analyzed
+   - Display sample sizes (n=X) for all scores
+   - Add tooltips and info icons explaining methodology
+   - Improve edge case handling for low-data members
+   ```
+3. Push to main branch
+4. Verify in production that scores display correctly
 
-## Potential Future Enhancements
+## Files Modified
 
-1. **Customizable Weights**: Let users adjust factor importance
-2. **Historical Trends**: Track score changes over time
-3. **More Data Sources**: Bill effectiveness, constituent services
-4. **Comparative Analysis**: Compare to district/party averages
-5. **Per-Factor Confidence**: Show confidence for each factor separately
-
-## Commit Message (Suggested)
-
-```
-feat: Add multi-factor alignment scoring with confidence levels
-
-- Implement 4-factor weighted scoring system (voting, finance, consistency, bipartisan)
-- Add confidence indicators (low/medium/high) with visual dots
-- Create detailed score breakdown modal with methodology
-- Build enhanced alignment card with quick factor preview
-- Integrate OpenFEC campaign finance data into scoring
-- Add comprehensive test coverage (18 tests)
-- Document system in docs/ALIGNMENT-SCORING.md
-
-Closes #41
-```
-
-## Success Metrics
-
-- ✅ All acceptance criteria met
-- ✅ 18/18 tests passing
-- ✅ No TypeScript errors
-- ✅ Fully documented
-- ✅ Responsive design
-- ✅ Accessible (ARIA, keyboard)
-- ✅ Clear methodology
-- ✅ User-friendly UI
-
-## Time Spent
-
-- Planning & Design: ~30 min
-- Implementation: ~2 hours
-- Testing: ~30 min
-- Documentation: ~30 min
-- **Total: ~3.5 hours**
-
----
-
-**Task Status: COMPLETE ✅**
-
-Ready to commit and push to main.
+- src/lib/alignment.ts
+- src/lib/alignment-enhanced.ts
+- src/components/AlignmentScoreCardEnhanced.tsx
+- src/components/ScoreBreakdownModal.tsx

@@ -31,6 +31,10 @@ export interface EnhancedAlignmentScore extends AlignmentScore {
   // Additional metrics
   consistency_score: number; // How consistent within categories
   bipartisan_score: number | null; // Cross-party cooperation (if applicable)
+  
+  // Edge case handling
+  insufficient_data: boolean; // True if sample size too small for reliable scoring
+  min_votes_threshold: number; // Minimum votes needed for reliable score
 }
 
 /**
@@ -159,6 +163,12 @@ function calculateBipartisanScore(
 }
 
 /**
+ * Minimum votes threshold for reliable scoring
+ * Below this, we show "Insufficient Data" warning
+ */
+const MIN_VOTES_THRESHOLD = 5;
+
+/**
  * Calculate weighted alignment score with multiple factors
  */
 export function calculateEnhancedAlignment(
@@ -167,6 +177,9 @@ export function calculateEnhancedAlignment(
   partyAlignmentPct?: number,
   votesCount?: number
 ): EnhancedAlignmentScore {
+  // Check for insufficient data
+  const insufficientData = baseAlignment.total_votes_analyzed < MIN_VOTES_THRESHOLD;
+  
   const factors: ScoreFactor[] = [];
   
   // Factor 1: Voting Record Alignment (primary factor)
@@ -174,7 +187,9 @@ export function calculateEnhancedAlignment(
     name: 'Position-to-Vote Alignment',
     score: baseAlignment.alignment_score,
     weight: 0.60, // 60% weight
-    description: 'How well votes match stated positions',
+    description: insufficientData 
+      ? `Only ${baseAlignment.total_votes_analyzed} vote${baseAlignment.total_votes_analyzed === 1 ? '' : 's'} analyzed - score may not be reliable`
+      : 'How well votes match stated positions',
     dataPoints: baseAlignment.total_votes_analyzed,
   });
   
@@ -246,6 +261,8 @@ export function calculateEnhancedAlignment(
     confidence,
     consistency_score: consistencyScore,
     bipartisan_score: bipartisanFactor?.score || null,
+    insufficient_data: insufficientData,
+    min_votes_threshold: MIN_VOTES_THRESHOLD,
   };
 }
 

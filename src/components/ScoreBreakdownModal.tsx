@@ -50,8 +50,21 @@ export default function ScoreBreakdownModal({ score, onClose }: ScoreBreakdownMo
               </h3>
               <p className="text-slate-600">
                 Based on {score.factors.length} weighted factors analyzing voting patterns, 
-                campaign finance, and consistency.
+                campaign finance, and consistency. Recent votes are weighted more heavily.
               </p>
+              {score.insufficient_data && (
+                <div className="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                  <div className="flex items-start gap-2">
+                    <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                    <div className="text-sm text-amber-800">
+                      <strong>⚠ Insufficient Data:</strong> This score is based on only {score.total_votes_analyzed} vote{score.total_votes_analyzed === 1 ? '' : 's'}.
+                      At least {score.min_votes_threshold} votes are needed for a reliable assessment.
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -176,7 +189,8 @@ export default function ScoreBreakdownModal({ score, onClose }: ScoreBreakdownMo
             <p>
               <strong>Position-to-Vote Alignment:</strong> We compare stated policy positions 
               (from campaign materials and OnTheIssues.org) with actual congressional votes 
-              on related legislation.
+              on related legislation. Recent votes (last 30 days) receive full weight, with 
+              older votes gradually weighted less (minimum 50% for votes over 2 years old).
             </p>
             <p>
               <strong>Campaign Finance Influence:</strong> Representatives with higher percentages 
@@ -193,6 +207,10 @@ export default function ScoreBreakdownModal({ score, onClose }: ScoreBreakdownMo
                 party alignment) suggests independence while maintaining core principles.
               </p>
             )}
+            <p>
+              <strong>Sample Size:</strong> Scores based on fewer than {score.min_votes_threshold} votes 
+              are flagged as having insufficient data. More data points lead to higher confidence scores.
+            </p>
             <p className="pt-3 border-t border-slate-200 text-xs text-slate-500">
               <strong>Note:</strong> This scoring system is designed for transparency and 
               accountability. No scoring system is perfect, but we believe combining multiple 
