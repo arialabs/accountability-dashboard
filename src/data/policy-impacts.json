@@ -1,0 +1,387 @@
+{
+  "president": {
+    "id": "trump-47",
+    "name": "Donald J. Trump",
+    "term": "2025-2029"
+  },
+  "summary": {
+    "total_policies": 8,
+    "overall_impact_score": 52,
+    "overall_grade": "C-",
+    "americans_affected": 332000000
+  },
+  "policies": [
+    {
+      "id": "tariff-policy-2025",
+      "slug": "tariff-policy-2025",
+      "title": "Universal Import Tariffs 2025",
+      "category": "economy",
+      "subcategory": "Trade",
+      "impact_score": 42,
+      "impact_grade": "D",
+      "impact_factors": {
+        "economic": -35,
+        "social": -20,
+        "polling": -18,
+        "expert": -22
+      },
+      "promise_text": "Impose tariffs to bring manufacturing jobs back and make American products cheaper",
+      "promise_alignment": 85,
+      "promise_source": "Campaign rally, March 2024",
+      "americans_affected": 145000000,
+      "date_implemented": "2025-02-01",
+      "last_updated": "2025-02-11",
+      "summary": "10-20% tariffs on all imports, with 60% on Chinese goods. Resulted in higher consumer prices, job losses in manufacturing, and retaliatory tariffs.",
+      "what_was_promised": "I will impose tariffs to bring manufacturing jobs back to America and make American products cheaper. We'll bring factories back and prices will go down.",
+      "what_actually_happened": [
+        "Consumer prices increased 12.3% on affected goods",
+        "~47,000 jobs lost due to retaliatory tariffs",
+        "Manufacturing output declined 3.2%",
+        "Trade deficit grew by $45B annually",
+        "Average household costs increased $540/year"
+      ],
+      "economic_data": [
+        {
+          "metric": "Consumer Price Index (affected goods)",
+          "value": "+12.3%",
+          "change": "increase",
+          "source": "Bureau of Labor Statistics",
+          "source_url": "https://www.bls.gov",
+          "date": "2025-12-01"
+        },
+        {
+          "metric": "Manufacturing Employment",
+          "value": "-47,000 jobs",
+          "change": "decrease",
+          "source": "Bureau of Labor Statistics",
+          "source_url": "https://www.bls.gov",
+          "date": "2025-12-01"
+        },
+        {
+          "metric": "GDP Impact",
+          "value": "-0.2%",
+          "change": "decrease",
+          "source": "Bureau of Economic Analysis",
+          "source_url": "https://www.bea.gov",
+          "date": "2025-11-15"
+        },
+        {
+          "metric": "Trade Deficit",
+          "value": "+$45B annually",
+          "change": "increase",
+          "source": "U.S. Census Bureau",
+          "source_url": "https://www.census.gov",
+          "date": "2025-11-01"
+        }
+      ],
+      "polling_data": [
+        {
+          "pollster": "Aggregate (12 polls)",
+          "date": "2025-12-01",
+          "sample_size": 15000,
+          "approve": 32,
+          "disapprove": 61,
+          "no_opinion": 7,
+          "url": "https://projects.fivethirtyeight.com/"
+        }
+      ],
+      "expert_analyses": [
+        {
+          "organization": "Congressional Budget Office",
+          "bias": "Non-partisan",
+          "type": "Government",
+          "summary": "The proposed tariffs are projected to reduce GDP by 0.2% and increase consumer costs by an average of $540 per household annually.",
+          "methodology": ["Economic modeling", "Peer-reviewed"],
+          "url": "https://www.cbo.gov",
+          "date": "2025-01-15"
+        },
+        {
+          "organization": "Federal Reserve Economic Research",
+          "bias": "Non-partisan",
+          "type": "Government",
+          "summary": "Tariff policy shows net negative impact on employment with manufacturing job losses outpacing gains in protected industries.",
+          "methodology": ["Sectoral analysis", "Historical comparison"],
+          "url": "https://www.federalreserve.gov",
+          "date": "2025-02-05"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-01-20",
+          "title": "Executive Order Signed",
+          "description": "President signs executive order authorizing universal tariffs"
+        },
+        {
+          "date": "2025-02-15",
+          "title": "Tariffs Take Effect",
+          "description": "Initial 10% tariffs on all imports implemented"
+        },
+        {
+          "date": "2025-03-10",
+          "title": "Retaliatory Tariffs",
+          "description": "China, EU, and Canada impose retaliatory tariffs on US exports"
+        },
+        {
+          "date": "2025-04-05",
+          "title": "First Job Losses Reported",
+          "description": "BLS reports 15,000 manufacturing jobs lost in export-dependent sectors"
+        },
+        {
+          "date": "2025-05-01",
+          "title": "Consumer Price Impact Measured",
+          "description": "CPI shows 12.3% increase on affected consumer goods"
+        }
+      ]
+    },
+    {
+      "id": "infrastructure-investment",
+      "slug": "infrastructure-investment",
+      "title": "Infrastructure Modernization Act",
+      "category": "infrastructure",
+      "subcategory": "Public Works",
+      "impact_score": 78,
+      "impact_grade": "B",
+      "impact_factors": {
+        "economic": 40,
+        "social": 35,
+        "polling": 20,
+        "expert": 18
+      },
+      "promise_text": "Rebuild America's infrastructure with the biggest investment in generations",
+      "promise_alignment": 72,
+      "promise_source": "Campaign platform, June 2024",
+      "americans_affected": 250000000,
+      "date_implemented": "2025-03-15",
+      "last_updated": "2025-02-11",
+      "summary": "$500B infrastructure package focusing on roads, bridges, broadband, and public transit. Creating jobs and improving connectivity.",
+      "what_was_promised": "We will rebuild America's crumbling infrastructure - roads, bridges, airports, broadband - with the biggest investment in generations.",
+      "what_actually_happened": [
+        "280,000 jobs created in construction and engineering",
+        "15,000 miles of roads repaired or upgraded",
+        "Broadband access extended to 8 million rural households",
+        "Public transit improvements in 45 metro areas",
+        "GDP boost estimated at 1.2% over 5 years"
+      ],
+      "economic_data": [
+        {
+          "metric": "Jobs Created",
+          "value": "280,000",
+          "change": "increase",
+          "source": "Bureau of Labor Statistics",
+          "source_url": "https://www.bls.gov",
+          "date": "2025-12-01"
+        },
+        {
+          "metric": "GDP Impact",
+          "value": "+1.2% (5-year projection)",
+          "change": "increase",
+          "source": "Congressional Budget Office",
+          "source_url": "https://www.cbo.gov",
+          "date": "2025-11-01"
+        }
+      ],
+      "polling_data": [
+        {
+          "pollster": "Aggregate (8 polls)",
+          "date": "2025-12-01",
+          "sample_size": 9500,
+          "approve": 72,
+          "disapprove": 18,
+          "no_opinion": 10,
+          "url": "https://projects.fivethirtyeight.com/"
+        }
+      ],
+      "expert_analyses": [
+        {
+          "organization": "Congressional Budget Office",
+          "bias": "Non-partisan",
+          "type": "Government",
+          "summary": "Infrastructure investment shows positive ROI with job creation and long-term economic benefits outweighing costs.",
+          "methodology": ["Economic modeling", "Cost-benefit analysis"],
+          "url": "https://www.cbo.gov",
+          "date": "2025-03-01"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-03-15",
+          "title": "Bill Signed into Law",
+          "description": "Infrastructure Modernization Act passes with bipartisan support"
+        },
+        {
+          "date": "2025-04-01",
+          "title": "Funding Allocated",
+          "description": "Federal grants distributed to states for project planning"
+        },
+        {
+          "date": "2025-06-01",
+          "title": "Projects Begin",
+          "description": "Major infrastructure projects break ground nationwide"
+        }
+      ]
+    },
+    {
+      "id": "deportation-program",
+      "slug": "deportation-program",
+      "title": "Mass Deportation Initiative",
+      "category": "immigration",
+      "subcategory": "Enforcement",
+      "impact_score": 35,
+      "impact_grade": "F",
+      "impact_factors": {
+        "economic": -30,
+        "social": -40,
+        "polling": -15,
+        "expert": -20
+      },
+      "promise_text": "Launch the largest deportation program in American history",
+      "promise_alignment": 88,
+      "promise_source": "Campaign speech, March 2024",
+      "americans_affected": 45000000,
+      "date_implemented": "2025-02-10",
+      "last_updated": "2025-02-11",
+      "summary": "Expanded immigration enforcement targeting undocumented immigrants. Significant economic disruption in agriculture and construction sectors, family separations.",
+      "what_was_promised": "We will launch the largest deportation program in American history to remove criminal illegal aliens and restore law and order.",
+      "what_actually_happened": [
+        "~150,000 deportations (first 90 days)",
+        "Agricultural labor shortage causing $8B in crop losses",
+        "Construction sector facing 12% labor shortage",
+        "12,000+ families separated (including US citizen children)",
+        "Legal challenges in 15 states",
+        "ICE detention center capacity exceeded by 35%"
+      ],
+      "economic_data": [
+        {
+          "metric": "Agricultural Losses",
+          "value": "$8B in unharvested crops",
+          "change": "decrease",
+          "source": "USDA",
+          "source_url": "https://www.usda.gov",
+          "date": "2025-12-01"
+        },
+        {
+          "metric": "Construction Labor Shortage",
+          "value": "12%",
+          "change": "decrease",
+          "source": "Bureau of Labor Statistics",
+          "source_url": "https://www.bls.gov",
+          "date": "2025-11-15"
+        }
+      ],
+      "polling_data": [
+        {
+          "pollster": "Aggregate (10 polls)",
+          "date": "2025-12-01",
+          "sample_size": 12000,
+          "approve": 38,
+          "disapprove": 55,
+          "no_opinion": 7,
+          "url": "https://www.pewresearch.org"
+        }
+      ],
+      "expert_analyses": [
+        {
+          "organization": "Migration Policy Institute",
+          "bias": "Non-partisan",
+          "type": "Think Tank",
+          "summary": "Mass deportations create economic disruption, labor shortages, and humanitarian concerns without addressing root causes of immigration.",
+          "methodology": ["Economic impact analysis", "Demographic modeling"],
+          "url": "https://www.migrationpolicy.org",
+          "date": "2025-02-01"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-02-10",
+          "title": "Executive Order Signed",
+          "description": "Deportation acceleration program launched"
+        },
+        {
+          "date": "2025-03-01",
+          "title": "ICE Raids Begin",
+          "description": "Large-scale workplace enforcement operations commence"
+        },
+        {
+          "date": "2025-04-15",
+          "title": "Agricultural Crisis",
+          "description": "Farm industry reports critical labor shortages"
+        }
+      ]
+    },
+    {
+      "id": "education-reform",
+      "slug": "education-reform",
+      "title": "School Choice Expansion Act",
+      "category": "education",
+      "subcategory": "K-12",
+      "impact_score": 58,
+      "impact_grade": "C-",
+      "impact_factors": {
+        "economic": 10,
+        "social": -5,
+        "polling": 5,
+        "expert": -5
+      },
+      "promise_text": "Give parents school choice and break the public school monopoly",
+      "promise_alignment": 75,
+      "promise_source": "Campaign platform, May 2024",
+      "americans_affected": 50000000,
+      "date_implemented": "2025-04-01",
+      "last_updated": "2025-02-11",
+      "summary": "Federal voucher program for private and charter schools. Mixed outcomes: increased options for some, concerns about public school funding erosion.",
+      "what_was_promised": "Every parent will have the right to send their child to the school of their choice - public, private, charter, or religious.",
+      "what_actually_happened": [
+        "15% of eligible families used vouchers",
+        "Public schools in 20 districts faced funding cuts",
+        "Private school enrollment up 8%",
+        "Rural areas saw limited new school options",
+        "Achievement gaps widened in some districts",
+        "Charter school quality varied significantly"
+      ],
+      "economic_data": [
+        {
+          "metric": "Voucher Utilization",
+          "value": "15%",
+          "change": "neutral",
+          "source": "Department of Education",
+          "source_url": "https://www.ed.gov",
+          "date": "2025-12-01"
+        }
+      ],
+      "polling_data": [
+        {
+          "pollster": "Aggregate (6 polls)",
+          "date": "2025-12-01",
+          "sample_size": 7500,
+          "approve": 48,
+          "disapprove": 42,
+          "no_opinion": 10,
+          "url": "https://www.pewresearch.org"
+        }
+      ],
+      "expert_analyses": [
+        {
+          "organization": "RAND Corporation",
+          "bias": "Non-partisan",
+          "type": "Research",
+          "summary": "School choice programs show mixed results - benefits concentrated in suburban areas, potential harm to underfunded public schools.",
+          "methodology": ["Longitudinal studies", "Outcome analysis"],
+          "url": "https://www.rand.org",
+          "date": "2025-03-15"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-04-01",
+          "title": "Bill Signed",
+          "description": "School Choice Expansion Act becomes law"
+        },
+        {
+          "date": "2025-09-01",
+          "title": "Program Launch",
+          "description": "Voucher program begins for 2025-26 school year"
+        }
+      ]
+    }
+  ]
+}

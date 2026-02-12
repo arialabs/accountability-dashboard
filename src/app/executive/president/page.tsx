@@ -144,10 +144,91 @@ export default function PresidentPage() {
         </div>
       </section>
 
+      {/* Policy Impact Tracker - Featured */}
+      <section className="py-12 bg-gradient-to-b from-blue-50 to-slate-50 border-y border-slate-200">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-bold mb-4">
+              ✨ NEW: Impact-Based Tracking
+            </div>
+            <h2 className="text-3xl font-black text-slate-900 mb-3">
+              Presidential Policy Impact Tracker
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Track policies by their real-world impact on Americans, not just whether promises were kept.
+            </p>
+          </div>
+          
+          <Link href="/executive/president/policies" className="group block">
+            <div className="bg-white rounded-3xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-2xl hover:border-blue-400 transition-all">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <div className="text-5xl mb-4">📊</div>
+                  <h3 className="text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors">
+                    Impact Scores & Real Outcomes
+                  </h3>
+                  <p className="text-slate-600">
+                    See how policies affect Americans based on economic data, expert analysis, 
+                    and measurable outcomes—not campaign rhetoric.
+                  </p>
+                  
+                  <div className="flex items-center gap-4 pt-4">
+                    <div className="text-center">
+                      <div className="text-2xl font-black text-blue-600">8</div>
+                      <div className="text-xs text-slate-500">Policies</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-black text-blue-600">52</div>
+                      <div className="text-xs text-slate-500">Avg Score</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-black text-blue-600">332M</div>
+                      <div className="text-xs text-slate-500">Affected</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h4 className="font-bold text-slate-900 mb-4">Key Features:</h4>
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span className="text-slate-700">Impact scores (0-100) based on measurable data</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span className="text-slate-700">Promise vs Reality comparisons</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span className="text-slate-700">Economic data from BLS, BEA, CBO</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span className="text-slate-700">Public polling and expert analysis</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span className="text-slate-700">Transparent methodology & citations</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-6 text-center">
+                <span className="text-blue-600 font-bold text-lg group-hover:underline">
+                  View Policy Impact Tracker →
+                </span>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Executive Orders Section */}
       <section className="py-12 bg-slate-50">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <h2 className="text-2xl font-black text-slate-900 mb-8 text-center">Presidential Actions</h2>
+          <h2 className="text-2xl font-black text-slate-900 mb-8 text-center">More Presidential Tracking</h2>
           
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/executive/president/orders" className="group">
@@ -159,19 +240,23 @@ export default function PresidentPage() {
               </div>
             </Link>
             
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm text-center opacity-60">
-              <div className="text-4xl mb-3">💰</div>
-              <h3 className="font-bold text-slate-900 mb-2">Emoluments Watch</h3>
-              <p className="text-sm text-slate-600">Foreign payments, business conflicts, and financial transparency</p>
-              <span className="text-slate-400 text-xs font-semibold uppercase tracking-wider">Coming Soon</span>
-            </div>
+            <Link href="/executive/president/conflicts" className="group">
+              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-lg transition-all text-center h-full">
+                <div className="text-4xl mb-3">💰</div>
+                <h3 className="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Conflicts of Interest</h3>
+                <p className="text-sm text-slate-600 mb-3">Business dealings and potential conflicts</p>
+                <span className="text-blue-600 font-semibold text-sm group-hover:underline">View Conflicts →</span>
+              </div>
+            </Link>
             
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm text-center opacity-60">
-              <div className="text-4xl mb-3">👥</div>
-              <h3 className="font-bold text-slate-900 mb-2">Cabinet & Appointments</h3>
-              <p className="text-sm text-slate-600">Track who's running federal agencies</p>
-              <span className="text-slate-400 text-xs font-semibold uppercase tracking-wider">Coming Soon</span>
-            </div>
+            <Link href="/executive/cabinet" className="group">
+              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-lg transition-all text-center h-full">
+                <div className="text-4xl mb-3">👥</div>
+                <h3 className="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Cabinet & Appointments</h3>
+                <p className="text-sm text-slate-600 mb-3">Track who's running federal agencies</p>
+                <span className="text-blue-600 font-semibold text-sm group-hover:underline">View Cabinet →</span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
