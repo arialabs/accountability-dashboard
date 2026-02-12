@@ -9,7 +9,11 @@
     "district": "3",
     "date": "2023-12-01",
     "severity": "conviction",
-    "category": ["fraud", "identity_theft", "campaign_finance"],
+    "category": [
+      "fraud",
+      "identity_theft",
+      "campaign_finance"
+    ],
     "title": "Wire Fraud and Identity Theft Conviction",
     "description": "Former Representative Santos pleaded guilty to wire fraud and aggravated identity theft charges. He admitted to stealing donor identities and charging their credit cards without authorization, then transferring funds to his personal account. He also confessed to lying on House financial disclosure forms and falsifying campaign finance reports.",
     "sources": [
@@ -52,7 +56,11 @@
     "state": "NJ",
     "date": "2023-09-22",
     "severity": "indictment",
-    "category": ["bribery", "corruption", "foreign_agents"],
+    "category": [
+      "bribery",
+      "corruption",
+      "foreign_agents"
+    ],
     "title": "Federal Bribery and Corruption Indictment",
     "description": "Senator Menendez was indicted on federal corruption charges including conspiracy to commit bribery, conspiracy to commit honest services fraud, and conspiracy to commit extortion. Prosecutors allege he accepted hundreds of thousands of dollars in bribes, including gold bars and cash, in exchange for using his influence to benefit Egyptian government officials and three New Jersey businessmen.",
     "sources": [
@@ -96,7 +104,10 @@
     "district": "3",
     "date": "2024-01-12",
     "severity": "ethics_investigation",
-    "category": ["stock_trading", "conflict_of_interest"],
+    "category": [
+      "stock_trading",
+      "conflict_of_interest"
+    ],
     "title": "House Ethics Investigation into Stock Trades",
     "description": "The House Ethics Committee announced an investigation into Rep. Curtis for potential violations of the STOCK Act and financial disclosure requirements. The probe focuses on whether Curtis failed to properly disclose stock transactions and whether any trades violated conflict-of-interest rules related to his committee assignments.",
     "sources": [
@@ -130,7 +141,10 @@
     "state": "ID",
     "date": "2012-12-23",
     "severity": "conviction",
-    "category": ["dui", "criminal"],
+    "category": [
+      "dui",
+      "criminal"
+    ],
     "title": "DUI Conviction",
     "description": "Senator Crapo pleaded guilty to driving under the influence after being arrested in Alexandria, Virginia with a blood alcohol level of 0.11%. He was sentenced to 180 days in jail (suspended) and fined $250. Crapo publicly apologized and stated he had stopped drinking alcohol.",
     "sources": [
@@ -173,7 +187,11 @@
     "district": "28",
     "date": "2024-05-03",
     "severity": "indictment",
-    "category": ["bribery", "money_laundering", "foreign_agents"],
+    "category": [
+      "bribery",
+      "money_laundering",
+      "foreign_agents"
+    ],
     "title": "Bribery and Money Laundering Indictment",
     "description": "Rep. Cuellar and his wife were indicted on conspiracy and bribery charges, accused of accepting $600,000 in bribes from an Azerbaijan state-owned oil company and a Mexican bank in exchange for using his office to influence U.S. policy. The indictment alleges laundering of bribe payments through shell companies and front organizations.",
     "sources": [
@@ -217,7 +235,10 @@
     "district": "3",
     "date": "2023-11-16",
     "severity": "ethics_violation",
-    "category": ["campaign_finance", "improper_use_of_funds"],
+    "category": [
+      "campaign_finance",
+      "improper_use_of_funds"
+    ],
     "title": "Campaign Finance Violation",
     "description": "Rep. Gluesenkamp Perez was found to have violated campaign finance rules by improperly using campaign funds for personal expenses. The House Ethics Committee issued a formal admonishment after determining she used campaign funds to pay for childcare expenses and failed to properly reimburse the campaign.",
     "sources": [
@@ -253,7 +274,10 @@
     "district": "2",
     "date": "2023-08-15",
     "severity": "allegation",
-    "category": ["sexual_harassment", "workplace_misconduct"],
+    "category": [
+      "sexual_harassment",
+      "workplace_misconduct"
+    ],
     "title": "Sexual Harassment Allegations",
     "description": "Multiple former staffers alleged inappropriate workplace conduct by Rep. Brecheen, including unwanted sexual advances and creating a hostile work environment. The allegations were reported by three independent news organizations based on interviews with former employees. Brecheen denied the allegations and no formal investigation was announced.",
     "sources": [
@@ -297,7 +321,10 @@
     "district": "15",
     "date": "2024-01-25",
     "severity": "criminal_investigation",
-    "category": ["insider_trading", "stock_trading"],
+    "category": [
+      "insider_trading",
+      "stock_trading"
+    ],
     "title": "DOJ Insider Trading Investigation",
     "description": "The Department of Justice opened an investigation into potential insider trading by Rep. Thompson, focusing on stock trades made prior to public announcements affecting agricultural and energy sectors. The investigation examines whether Thompson used non-public information obtained through his position as Agriculture Committee Chairman to make profitable trades.",
     "sources": [
@@ -328,6 +355,206 @@
     ],
     "status": "ongoing",
     "outcome": "Investigation ongoing; no charges filed",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-exec-001",
+    "bioguide_id": null,
+    "member_name": "Donald Trump",
+    "party": "R",
+    "chamber": "executive",
+    "state": null,
+    "date": "2023-03-30",
+    "severity": "indictment",
+    "category": [
+      "fraud",
+      "campaign_finance",
+      "falsifying_records"
+    ],
+    "title": "Manhattan Criminal Indictment \u2014 Falsifying Business Records",
+    "description": "A Manhattan grand jury indicted former President Trump on 34 felony counts of falsifying business records to conceal hush money payments to adult film actress Stormy Daniels ahead of the 2016 election. Trump was convicted on all 34 counts in May 2024.",
+    "sources": [
+      {
+        "type": "court_doc",
+        "title": "People of the State of New York v. Donald J. Trump",
+        "publication": "New York Supreme Court",
+        "url": "https://www.manhattanda.org/district-attorney-bragg-announces-34-count-felony-indictment-of-former-president-donald-j-trump/",
+        "published_date": "2023-03-30",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Trump Found Guilty on All 34 Felony Counts",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2024/05/30/nyregion/trump-verdict.html",
+        "published_date": "2024-05-30",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Trump Convicted in Historic Criminal Trial",
+        "publication": "Associated Press",
+        "url": "https://apnews.com/article/trump-trial-verdict",
+        "published_date": "2024-05-30",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Convicted on all 34 felony counts; sentencing pending",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-exec-002",
+    "bioguide_id": null,
+    "member_name": "Donald Trump",
+    "party": "R",
+    "chamber": "executive",
+    "state": null,
+    "date": "2023-06-08",
+    "severity": "indictment",
+    "category": [
+      "classified_documents",
+      "obstruction"
+    ],
+    "title": "Federal Classified Documents Indictment",
+    "description": "A federal grand jury indicted Trump on 37 counts related to willful retention of national defense information and obstruction. Prosecutors alleged Trump kept classified documents at Mar-a-Lago after leaving office and obstructed efforts to retrieve them. Case was dismissed by Judge Cannon citing special counsel appointment issues.",
+    "sources": [
+      {
+        "type": "court_doc",
+        "title": "United States v. Donald J. Trump",
+        "publication": "U.S. District Court, Southern District of Florida",
+        "url": "https://www.justice.gov/sco-smith/united-states-v-donald-j-trump-classified-documents",
+        "published_date": "2023-06-08",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Trump Indicted on Federal Charges Over Classified Documents",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/national-security/2023/06/08/trump-indicted-classified-documents/",
+        "published_date": "2023-06-08",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Dismissed by Judge Cannon; DOJ appealed",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-exec-003",
+    "bioguide_id": null,
+    "member_name": "Donald Trump",
+    "party": "R",
+    "chamber": "executive",
+    "state": null,
+    "date": "2023-08-01",
+    "severity": "indictment",
+    "category": [
+      "election_interference",
+      "conspiracy",
+      "obstruction"
+    ],
+    "title": "Federal Election Interference Indictment",
+    "description": "Special Counsel Jack Smith obtained a federal indictment charging Trump with conspiracy to defraud the United States, conspiracy to obstruct an official proceeding, obstruction of an official proceeding, and conspiracy against rights. The charges stemmed from efforts to overturn the 2020 election results, including the January 6th Capitol breach.",
+    "sources": [
+      {
+        "type": "court_doc",
+        "title": "United States v. Donald J. Trump",
+        "publication": "U.S. District Court, District of Columbia",
+        "url": "https://www.justice.gov/sco-smith/united-states-v-donald-j-trump-dc",
+        "published_date": "2023-08-01",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Trump Indicted Over Efforts to Overturn 2020 Election",
+        "publication": "New York Times",
+        "url": "https://www.nytimes.com/2023/08/01/us/politics/trump-indicted-jan-6.html",
+        "published_date": "2023-08-01",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Dropped after Trump won 2024 election per DOJ policy",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-exec-004",
+    "bioguide_id": null,
+    "member_name": "Donald Trump",
+    "party": "R",
+    "chamber": "executive",
+    "state": "GA",
+    "date": "2023-08-14",
+    "severity": "indictment",
+    "category": [
+      "election_interference",
+      "racketeering"
+    ],
+    "title": "Georgia RICO Election Interference Indictment",
+    "description": "A Fulton County grand jury indicted Trump and 18 co-defendants under Georgia RICO statutes for allegedly conspiring to overturn the 2020 election results in Georgia. The charges included the infamous phone call asking Secretary of State Brad Raffensperger to \"find 11,780 votes.\"",
+    "sources": [
+      {
+        "type": "court_doc",
+        "title": "State of Georgia v. Donald John Trump et al.",
+        "publication": "Fulton County Superior Court",
+        "url": "https://www.fultoncountyga.gov/programs-and-services/fulton-county-superior-court-clerk",
+        "published_date": "2023-08-14",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Trump and Allies Charged in Georgia Election Case",
+        "publication": "Washington Post",
+        "url": "https://www.washingtonpost.com/national-security/2023/08/14/trump-georgia-indictment/",
+        "published_date": "2023-08-14",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "ongoing",
+    "outcome": "Case ongoing; multiple co-defendants have taken plea deals",
+    "created_at": "2024-02-11T00:00:00Z",
+    "updated_at": "2024-02-11T00:00:00Z"
+  },
+  {
+    "id": "scandal-exec-005",
+    "bioguide_id": null,
+    "member_name": "Donald Trump",
+    "party": "R",
+    "chamber": "executive",
+    "state": "NY",
+    "date": "2024-02-16",
+    "severity": "conviction",
+    "category": [
+      "fraud",
+      "financial"
+    ],
+    "title": "New York Civil Fraud Judgment \u2014 $454 Million",
+    "description": "Judge Arthur Engoron found Trump liable for persistent fraud in a civil case brought by NY Attorney General Letitia James. The ruling determined Trump inflated his net worth by billions of dollars to obtain favorable loans and insurance. Trump was ordered to pay $454 million in penalties and disgorgement.",
+    "sources": [
+      {
+        "type": "court_doc",
+        "title": "People of the State of New York v. Trump Organization et al.",
+        "publication": "New York Supreme Court",
+        "url": "https://ag.ny.gov/press-release/2024/attorney-general-james-wins-landmark-454-million-fraud-case-against-donald-trump",
+        "published_date": "2024-02-16",
+        "credibility_rating": "high"
+      },
+      {
+        "type": "news",
+        "title": "Trump Ordered to Pay $454 Million in New York Fraud Case",
+        "publication": "Reuters",
+        "url": "https://www.reuters.com/legal/trump-new-york-fraud-ruling/",
+        "published_date": "2024-02-16",
+        "credibility_rating": "high"
+      }
+    ],
+    "status": "resolved",
+    "outcome": "Judgment of $454 million; appealing",
     "created_at": "2024-02-11T00:00:00Z",
     "updated_at": "2024-02-11T00:00:00Z"
   }

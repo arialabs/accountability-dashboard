@@ -67,12 +67,18 @@ export default function ScandalCard({
         {/* Right: Member Info */}
         {showMember && (
           <div className="flex flex-col items-start md:items-end gap-1">
-            <Link 
-              href={`/rep/${scandal.bioguide_id}`}
-              className="font-bold text-slate-900 hover:text-blue-600 transition-colors text-lg"
-            >
-              {scandal.member_name}
-            </Link>
+            {scandal.bioguide_id ? (
+              <Link 
+                href={`/rep/${scandal.bioguide_id}`}
+                className="font-bold text-slate-900 hover:text-blue-600 transition-colors text-lg"
+              >
+                {scandal.member_name}
+              </Link>
+            ) : (
+              <span className="font-bold text-slate-900 text-lg">
+                {scandal.member_name}
+              </span>
+            )}
             <div className="flex items-center gap-2">
               <span className={`
                 px-2 py-0.5 rounded-full text-xs font-semibold
@@ -81,7 +87,7 @@ export default function ScandalCard({
                 {scandal.party}
               </span>
               <span className="text-sm text-slate-600">
-                {scandal.chamber === "house" ? "Rep" : "Sen"}, {scandal.state}
+                {scandal.chamber === "executive" ? "President" : scandal.chamber === "house" ? "Rep" : "Sen"}{scandal.state ? `, ${scandal.state}` : ''}
                 {scandal.district ? `-${scandal.district}` : ''}
               </span>
             </div>

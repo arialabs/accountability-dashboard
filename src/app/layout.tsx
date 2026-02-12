@@ -27,8 +27,8 @@ export default function RootLayout({
               </a>
               <div className="flex gap-3 sm:gap-6 text-sm font-medium">
                 <a href="/" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Home</a>
-                <a href="/congress" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Legislative</a>
                 <a href="/executive" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Executive</a>
+                <a href="/congress" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Legislative</a>
                 <a href="/judicial" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Judicial</a>
                 <a href="/bills" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Bills</a>
                 <a href="/scandals" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Scandals</a>

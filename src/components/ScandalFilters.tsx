@@ -203,7 +203,7 @@ export default function ScandalFilters({
           Chamber
         </label>
         <div className="flex gap-2">
-          {["", "house", "senate"].map((chamber) => (
+          {["", "executive", "house", "senate"].map((chamber) => (
             <button
               key={chamber || "all"}
               onClick={() => updateFilter("chamber", chamber)}
@@ -215,7 +215,7 @@ export default function ScandalFilters({
                 }
               `}
             >
-              {chamber === "" ? "All" : chamber === "house" ? "House" : "Senate"}
+              {chamber === "" ? "All" : chamber === "executive" ? "Executive" : chamber === "house" ? "House" : "Senate"}
               {chamber && stats.byChamber[chamber] ? ` (${stats.byChamber[chamber]})` : ""}
             </button>
           ))}

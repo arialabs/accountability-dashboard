@@ -1,8 +1,6 @@
 import Link from "next/link";
-import promiseData from "@/data/trump-promises.json";
 
 export default function ExecutiveBranch() {
-  const { president, summary } = promiseData;
   
   return (
     <div className="min-h-screen bg-white">
@@ -16,7 +14,7 @@ export default function ExecutiveBranch() {
             Executive Branch
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Track presidential accountability: campaign promises, executive orders, 
+            Track presidential accountability: policy impact, executive orders, 
             appointments, and financial transparency.
           </p>
         </div>
@@ -34,8 +32,8 @@ export default function ExecutiveBranch() {
             <div className="flex flex-col md:flex-row items-center gap-6">
               {/* Photo */}
               <img 
-                src={president.photo_url}
-                alt={president.name}
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Donald_Trump_official_portrait_%282024%29.jpg/440px-Donald_Trump_official_portrait_%282024%29.jpg"
+                alt="Donald Trump"
                 className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white flex-shrink-0"
               />
               
@@ -47,25 +45,9 @@ export default function ExecutiveBranch() {
                   <span className="text-slate-500 text-sm">47th President</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-black text-slate-900 group-hover:text-red-600 transition-colors">
-                  {president.name}
+                  Donald Trump
                 </h3>
                 <p className="text-slate-600 mt-1">Inaugurated January 20, 2025</p>
-              </div>
-              
-              {/* Promise Summary */}
-              <div className="flex gap-4 flex-shrink-0">
-                <div className="text-center">
-                  <div className="text-2xl font-black text-green-600">{summary.kept}</div>
-                  <div className="text-xs text-slate-500 font-medium">Kept</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-black text-red-600">{summary.broken}</div>
-                  <div className="text-xs text-slate-500 font-medium">Broken</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-black text-amber-600">{summary.in_progress}</div>
-                  <div className="text-xs text-slate-500 font-medium">In Progress</div>
-                </div>
               </div>
               
               <div className="text-blue-600 font-semibold group-hover:translate-x-1 transition-transform">
@@ -170,10 +152,10 @@ export default function ExecutiveBranch() {
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
-              <div className="text-2xl">✅</div>
+              <div className="text-2xl">📊</div>
               <div>
-                <h3 className="font-bold text-green-900">Campaign Promises</h3>
-                <p className="text-sm text-green-700">Tracking what was promised vs. what's delivered</p>
+                <h3 className="font-bold text-green-900">Policy Impact</h3>
+                <p className="text-sm text-green-700">Measuring real-world outcomes of executive actions</p>
               </div>
             </div>
             
