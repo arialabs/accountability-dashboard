@@ -1,0 +1,226 @@
+{
+  "president": "Donald Trump",
+  "term": "2025-2029",
+  "promises": [
+    {
+      "id": 1,
+      "promise_text": "Launch the largest deportation program in American history",
+      "category": "Immigration",
+      "subcategory": "Enforcement",
+      "date_made": "2024-03-15",
+      "source_url": "https://example.com/campaign-speech",
+      "source_type": "campaign_speech",
+      "status": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": 2,
+      "promise_text": "End birthright citizenship via executive order",
+      "category": "Immigration",
+      "subcategory": "Policy",
+      "date_made": "2024-05-20",
+      "source_url": "https://example.com/interview",
+      "source_type": "interview",
+      "status": "pending",
+      "priority": "high"
+    },
+    {
+      "id": 3,
+      "promise_text": "Complete the border wall with Mexico",
+      "category": "Immigration",
+      "subcategory": "Border Security",
+      "date_made": "2024-01-10",
+      "source_url": "https://example.com/rally",
+      "source_type": "rally",
+      "status": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": 4,
+      "promise_text": "Restore and expand Schedule F to make it easier to fire federal workers",
+      "category": "Government Reform",
+      "subcategory": "Federal Workforce",
+      "date_made": "2024-06-12",
+      "source_url": "https://example.com/policy-paper",
+      "source_type": "platform",
+      "status": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": 5,
+      "promise_text": "Eliminate the Department of Education",
+      "category": "Education",
+      "subcategory": "Federal Reform",
+      "date_made": "2024-04-08",
+      "source_url": "https://example.com/debate",
+      "source_type": "debate",
+      "status": "pending",
+      "priority": "medium"
+    },
+    {
+      "id": 6,
+      "promise_text": "Drill, baby, drill - expand oil and gas production",
+      "category": "Energy",
+      "subcategory": "Fossil Fuels",
+      "date_made": "2024-02-14",
+      "source_url": "https://example.com/energy-speech",
+      "source_type": "campaign_speech",
+      "status": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": 7,
+      "promise_text": "Exit the Paris Climate Accord",
+      "category": "Environment",
+      "subcategory": "International Agreements",
+      "date_made": "2024-03-22",
+      "source_url": "https://example.com/policy-statement",
+      "source_type": "platform",
+      "status": "achieved",
+      "priority": "high"
+    },
+    {
+      "id": 8,
+      "promise_text": "Roll back EPA regulations on power plants and emissions",
+      "category": "Environment",
+      "subcategory": "Deregulation",
+      "date_made": "2024-05-05",
+      "source_url": "https://example.com/industry-event",
+      "source_type": "campaign_speech",
+      "status": "in_progress",
+      "priority": "medium"
+    },
+    {
+      "id": 9,
+      "promise_text": "Implement 10% universal tariff on all imports",
+      "category": "Trade",
+      "subcategory": "Tariffs",
+      "date_made": "2024-01-30",
+      "source_url": "https://example.com/economic-plan",
+      "source_type": "platform",
+      "status": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": 10,
+      "promise_text": "Impose 60% tariff on all Chinese imports",
+      "category": "Trade",
+      "subcategory": "China",
+      "date_made": "2024-02-18",
+      "source_url": "https://example.com/china-policy",
+      "source_type": "platform",
+      "status": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": 11,
+      "promise_text": "Pardon January 6 defendants",
+      "category": "Justice",
+      "subcategory": "Pardons",
+      "date_made": "2024-04-15",
+      "source_url": "https://example.com/rally",
+      "source_type": "rally",
+      "status": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": 12,
+      "promise_text": "Investigate and prosecute political enemies",
+      "category": "Justice",
+      "subcategory": "DOJ",
+      "date_made": "2024-06-20",
+      "source_url": "https://example.com/interview",
+      "source_type": "interview",
+      "status": "pending",
+      "priority": "high"
+    },
+    {
+      "id": 13,
+      "promise_text": "Make the Trump tax cuts permanent",
+      "category": "Economy",
+      "subcategory": "Taxes",
+      "date_made": "2024-01-22",
+      "source_url": "https://example.com/tax-plan",
+      "source_type": "platform",
+      "status": "pending",
+      "priority": "high"
+    },
+    {
+      "id": 14,
+      "promise_text": "End taxes on tips and overtime",
+      "category": "Economy",
+      "subcategory": "Taxes",
+      "date_made": "2024-05-18",
+      "source_url": "https://example.com/worker-rally",
+      "source_type": "rally",
+      "status": "pending",
+      "priority": "medium"
+    },
+    {
+      "id": 15,
+      "promise_text": "Gut the FDA and health agencies",
+      "category": "Health",
+      "subcategory": "Deregulation",
+      "date_made": "2024-07-10",
+      "source_url": "https://example.com/rfk-endorsement",
+      "source_type": "campaign_speech",
+      "status": "in_progress",
+      "priority": "medium"
+    },
+    {
+      "id": 16,
+      "promise_text": "End support for Ukraine and negotiate peace with Russia",
+      "category": "Foreign Policy",
+      "subcategory": "Ukraine",
+      "date_made": "2024-03-28",
+      "source_url": "https://example.com/foreign-policy",
+      "source_type": "interview",
+      "status": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": 17,
+      "promise_text": "Recognize only two genders, male and female",
+      "category": "Social Policy",
+      "subcategory": "LGBTQ",
+      "date_made": "2024-06-01",
+      "source_url": "https://example.com/values-speech",
+      "source_type": "campaign_speech",
+      "status": "in_progress",
+      "priority": "medium"
+    },
+    {
+      "id": 18,
+      "promise_text": "Ban transgender athletes from women's sports",
+      "category": "Social Policy",
+      "subcategory": "Sports",
+      "date_made": "2024-04-20",
+      "source_url": "https://example.com/sports-policy",
+      "source_type": "platform",
+      "status": "pending",
+      "priority": "medium"
+    },
+    {
+      "id": 19,
+      "promise_text": "End diversity, equity, and inclusion programs in federal government",
+      "category": "Government Reform",
+      "subcategory": "DEI",
+      "date_made": "2024-02-25",
+      "source_url": "https://example.com/governance",
+      "source_type": "platform",
+      "status": "in_progress",
+      "priority": "high"
+    },
+    {
+      "id": 20,
+      "promise_text": "Defend Medicare and Social Security without cuts",
+      "category": "Social Programs",
+      "subcategory": "Entitlements",
+      "date_made": "2024-03-10",
+      "source_url": "https://example.com/senior-town-hall",
+      "source_type": "campaign_speech",
+      "status": "pending",
+      "priority": "high"
+    }
+  ]
+}

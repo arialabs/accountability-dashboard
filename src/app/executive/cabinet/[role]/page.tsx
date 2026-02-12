@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import cabinetData from "@/data/cabinet.json";
+import AlignmentSection from "./alignment-section";
 
 interface CabinetMemberPageProps {
   params: Promise<{ role: string }>;
@@ -87,7 +88,7 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
           </div>
 
           {/* Department Info */}
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8">
+          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 mb-12">
             <h2 className="text-2xl font-black text-slate-900 mb-4">
               About {member.department}
             </h2>
@@ -134,6 +135,9 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
                 "Information about this department's responsibilities."}
             </p>
           </div>
+
+          {/* Policy Alignment Section */}
+          <AlignmentSection memberId={member.id} />
         </div>
       </section>
 
