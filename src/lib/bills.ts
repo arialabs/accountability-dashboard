@@ -49,7 +49,7 @@ function determineBillStatus(
  * Process raw vote data into bill records
  */
 function processBills(): Bill[] {
-  const votesData = keyVotesData as Array<{
+  const votesData = (keyVotesData as unknown) as Array<{
     id: string;
     congress: number;
     chamber: "House" | "Senate";
