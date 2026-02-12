@@ -220,10 +220,22 @@ export default async function RepPage({ params }: { params: { id: string } }) {
               }>}
             />
 
-            {/* Policy Positions from OnTheIssues */}
-            <CampaignPositions 
+            {/* Policy Positions: Says vs Does (Vote-Based) */}
+            <VoteBasedPositions 
               bioguideId={member.bioguide_id} 
-              positionsData={positionsData as { members: Array<{ bioguide_id: string; name: string; source: string; source_url: string; last_updated: string; positions: Array<{ topic: string; stance: string; intensity: number; quotes: string[]; votes: string[] }> }> }}
+              positionsData={positionsData as { members: Array<{ bioguide_id: string; name: string; source: string; source_url: string; last_updated: string; positions: Array<{ topic: string; stance: string; intensity: number; quotes: string[]; votes?: unknown[] }> }> }}
+              keyVotesData={keyVotesData as unknown as Array<{
+                id: string;
+                bill: string;
+                title: string;
+                category: string;
+                date: string;
+                description: string;
+                votes: Record<string, string>;
+                yea_count: number;
+                nay_count: number;
+              }>}
+              allMembers={getMembers().map(m => ({ bioguide_id: m.bioguide_id, party: m.party }))}
             />
             
             {/* Voting Record (Party Loyalty & Ideology) */}
