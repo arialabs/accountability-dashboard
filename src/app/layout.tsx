@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DevelopmentBanner from "@/components/DevelopmentBanner";
+import HamburgerMenu from "@/components/HamburgerMenu";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -25,14 +26,7 @@ export default function RootLayout({
               <a href="/" className="text-lg sm:text-xl font-bold text-slate-900 hover:text-blue-600 transition truncate">
                 🏛️ <span className="hidden xs:inline">Accountability Dashboard</span><span className="inline xs:hidden">Dashboard</span>
               </a>
-              <div className="flex gap-3 sm:gap-6 text-sm font-medium">
-                <a href="/" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Home</a>
-                <a href="/executive" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Executive</a>
-                <a href="/congress" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Legislative</a>
-                <a href="/judicial" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Judicial</a>
-                <a href="/bills" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Bills</a>
-                <a href="/scandals" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Scandals</a>
-              </div>
+              <HamburgerMenu />
             </div>
           </div>
         </nav>
