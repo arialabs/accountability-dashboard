@@ -133,7 +133,7 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
       ) : (
         <>
           {/* Summary Stats */}
-          <div className="grid grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             <div className="bg-slate-50 rounded-xl p-4 text-center">
               <div className="text-3xl font-mono font-black text-slate-900">{trades.length}</div>
               <div className="text-sm font-medium text-slate-600">Total Trades</div>
@@ -166,20 +166,20 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
               {trades.slice((currentPage - 1) * tradesPerPage, currentPage * tradesPerPage).map((trade, idx) => (
                 <div 
                   key={idx}
-                  className={`flex items-center justify-between p-4 rounded-xl border-2 transition-all ${
+                  className={`flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-xl border-2 transition-all ${
                     trade.transaction === "Purchase"
                       ? "bg-emerald-50 border-emerald-200 hover:border-emerald-300"
                       : "bg-red-50 border-red-200 hover:border-red-300"
                   }`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white ${
+                    <div className={`w-12 h-12 min-w-[48px] rounded-lg flex items-center justify-center font-bold text-white ${
                       trade.transaction === "Purchase" ? "bg-emerald-500" : "bg-red-500"
                     }`}>
                       {trade.transaction === "Purchase" ? "↑" : "↓"}
                     </div>
-                    <div>
-                      <div className="font-bold text-slate-900">
+                    <div className="flex-1 min-w-0">
+                      <div className="font-bold text-slate-900 truncate">
                         {trade.ticker}
                         {trade.company && (
                           <span className="font-normal text-slate-500 ml-2">
@@ -194,7 +194,7 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
                       </div>
                     </div>
                   </div>
-                  <div className="text-right">
+                  <div className="flex items-center justify-between sm:flex-col sm:items-end sm:justify-center sm:text-right">
                     <div className="font-mono font-bold text-lg text-slate-900">
                       {formatCurrency(trade.tradeSizeUsd)}
                     </div>
@@ -217,7 +217,7 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
               <button
                 onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
-                className="px-4 py-2 rounded-lg font-medium text-sm transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-slate-100 text-slate-700 hover:bg-slate-200 disabled:hover:bg-slate-100"
+                className="px-6 py-3 min-h-[44px] rounded-lg font-medium text-sm transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-slate-100 text-slate-700 hover:bg-slate-200 disabled:hover:bg-slate-100"
               >
                 ← Previous
               </button>
@@ -227,7 +227,7 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
               <button
                 onClick={() => setCurrentPage(p => Math.min(Math.ceil(trades.length / tradesPerPage), p + 1))}
                 disabled={currentPage === Math.ceil(trades.length / tradesPerPage)}
-                className="px-4 py-2 rounded-lg font-medium text-sm transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-slate-100 text-slate-700 hover:bg-slate-200 disabled:hover:bg-slate-100"
+                className="px-6 py-3 min-h-[44px] rounded-lg font-medium text-sm transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-slate-100 text-slate-700 hover:bg-slate-200 disabled:hover:bg-slate-100"
               >
                 Next →
               </button>

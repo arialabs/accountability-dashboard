@@ -214,28 +214,28 @@ export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionPr
           
           {/* Percentage breakdown */}
           <div className="mt-6 space-y-3">
-            <div className="flex justify-between items-center">
-              <span className="text-slate-600 flex items-center">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
+              <span className="text-slate-600 flex items-center text-sm sm:text-base">
                 PAC Contributions
                 <InfoTooltip text="Political Action Committees pool money from corporations, unions, or interest groups to donate to campaigns. High PAC funding may indicate special interest influence." />
               </span>
               <div className="flex items-center gap-2">
                 <span className="font-mono font-bold text-red-600">{formatPercent(finance.pac_percentage)}</span>
-                <span className="text-slate-400">({formatCurrency(finance.pac_contributions)})</span>
+                <span className="text-slate-400 text-sm">({formatCurrency(finance.pac_contributions)})</span>
               </div>
             </div>
-            <div className="flex justify-between items-center">
-              <span className="text-slate-600">Large Individual Donors (&gt;$200)</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
+              <span className="text-slate-600 text-sm sm:text-base">Large Individual Donors (&gt;$200)</span>
               <div className="flex items-center gap-2">
                 <span className="font-mono font-bold text-orange-600">{formatPercent(finance.large_donor_percentage)}</span>
-                <span className="text-slate-400">({formatCurrency(finance.large_donors)})</span>
+                <span className="text-slate-400 text-sm">({formatCurrency(finance.large_donors)})</span>
               </div>
             </div>
-            <div className="flex justify-between items-center">
-              <span className="text-slate-600">Small Individual Donors (≤$200)</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
+              <span className="text-slate-600 text-sm sm:text-base">Small Individual Donors (≤$200)</span>
               <div className="flex items-center gap-2">
                 <span className="font-mono font-bold text-green-600">{formatPercent(finance.small_donor_percentage)}</span>
-                <span className="text-slate-400">({formatCurrency(finance.small_donors)})</span>
+                <span className="text-slate-400 text-sm">({formatCurrency(finance.small_donors)})</span>
               </div>
             </div>
           </div>
@@ -284,7 +284,7 @@ export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionPr
       {finance.top_industries && finance.top_industries.length > 0 && (
         <div className="mt-10 pt-8 border-t border-slate-200">
           <h4 className="text-lg font-bold text-slate-900 mb-6">Top Industries</h4>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {finance.top_industries.slice(0, 5).map((industry, i) => (
               <div key={i} className="bg-slate-50 rounded-xl p-4 text-center">
                 <p className="font-semibold text-slate-900 text-sm mb-1">{industry.industry}</p>

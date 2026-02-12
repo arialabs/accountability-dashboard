@@ -152,7 +152,7 @@ export function MemberVotingRecord({
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+              className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition-colors ${
                 selectedCategory === cat
                   ? "bg-blue-600 text-white"
                   : "bg-slate-100 text-slate-600 hover:bg-slate-200"
@@ -228,7 +228,7 @@ export function MemberVotingRecord({
         {filteredVotes.length > 5 && (
           <button
             onClick={() => setExpanded(!expanded)}
-            className="w-full mt-4 py-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
+            className="w-full mt-4 py-3 min-h-[44px] text-sm text-blue-600 hover:text-blue-700 font-medium"
           >
             {expanded 
               ? "Show Less ↑" 

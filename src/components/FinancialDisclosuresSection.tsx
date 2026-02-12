@@ -73,15 +73,15 @@ export default function FinancialDisclosuresSection({
                 href={filing.pdfUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between p-5 rounded-xl border-2 border-slate-200 bg-slate-50 hover:border-blue-400 hover:bg-blue-50 transition-all group"
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-5 min-h-[60px] rounded-xl border-2 border-slate-200 bg-slate-50 hover:border-blue-400 hover:bg-blue-50 transition-all group"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center font-bold text-blue-700 group-hover:bg-blue-200 transition-colors">
+                  <div className="w-12 h-12 min-w-[48px] rounded-lg bg-blue-100 flex items-center justify-center font-bold text-blue-700 group-hover:bg-blue-200 transition-colors">
                     📄
                   </div>
-                  <div>
-                    <div className="font-bold text-slate-900 flex items-center gap-2">
-                      {filing.year} Annual Financial Disclosure
+                  <div className="flex-1 min-w-0">
+                    <div className="font-bold text-slate-900 flex flex-wrap items-center gap-2">
+                      <span>{filing.year} Annual Financial Disclosure</span>
                       <span className="text-xs px-2 py-1 bg-slate-200 text-slate-700 rounded-md font-medium">
                         {getFilingTypeLabel(filing.filingType)}
                       </span>
@@ -93,7 +93,7 @@ export default function FinancialDisclosuresSection({
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-blue-600 font-bold group-hover:gap-3 transition-all">
+                <div className="flex items-center gap-2 text-blue-600 font-bold group-hover:gap-3 transition-all sm:flex-shrink-0">
                   View PDF
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
