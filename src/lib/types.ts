@@ -515,6 +515,7 @@ export interface BillVote {
   date: string;
   title: string;
   description: string;
+  category: string;
   yea_count: number;
   nay_count: number;
   result: "Passed" | "Failed" | "Unknown";
