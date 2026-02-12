@@ -3,7 +3,7 @@
  */
 
 import { calculateEnhancedAlignment, type EnhancedAlignmentScore } from './alignment-enhanced';
-import { getMember, getMemberAlignment, getMemberFinance } from './data';
+import { getMember, getMemberAlignment, getMemberFinanceStatic } from './data';
 import type { AlignmentScore } from './data';
 
 /**
@@ -15,7 +15,7 @@ export function getMemberAlignmentEnhanced(bioguideId: string): EnhancedAlignmen
   if (!baseAlignment) return null;
   
   const member = getMember(bioguideId);
-  const finance = getMemberFinance(bioguideId);
+  const finance = getMemberFinanceStatic(bioguideId);
   
   return calculateEnhancedAlignment(
     baseAlignment,
@@ -34,7 +34,7 @@ export async function getAllAlignmentScoresEnhanced(): Promise<EnhancedAlignment
   
   return baseScores.map(score => {
     const member = getMember(score.bioguide_id);
-    const finance = getMemberFinance(score.bioguide_id);
+    const finance = getMemberFinanceStatic(score.bioguide_id);
     
     return calculateEnhancedAlignment(
       score,
@@ -55,7 +55,7 @@ export function getAlignmentRankingEnhanced(bioguideId: string): { rank: number;
   // Calculate enhanced scores for all members
   const enhancedScores = baseScores.map((score: AlignmentScore) => {
     const member = getMember(score.bioguide_id);
-    const finance = getMemberFinance(score.bioguide_id);
+    const finance = getMemberFinanceStatic(score.bioguide_id);
     
     return calculateEnhancedAlignment(
       score,
