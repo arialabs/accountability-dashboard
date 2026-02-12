@@ -169,7 +169,7 @@ export interface ScandalEntry {
   bioguide_id: string;
   member_name: string;
   party: "D" | "R" | "I";
-  chamber: "house" | "senate";
+  chamber: "house" | "senate" | "executive";
   state: string;
   district?: string;
   
