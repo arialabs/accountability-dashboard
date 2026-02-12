@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { getAllScandals, getMember } from "@/lib/data";
 import ScandalCard from "@/components/ScandalCard";
@@ -9,6 +9,14 @@ import Link from "next/link";
 import type { ScandalEntry, SeverityLevel } from "@/lib/types";
 
 export default function ScandalsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><p className="text-slate-500">Loading...</p></div>}>
+      <ScandalsPageContent />
+    </Suspense>
+  );
+}
+
+function ScandalsPageContent() {
   const allScandals = getAllScandals();
   const searchParams = useSearchParams();
   const memberParam = searchParams.get("member");
