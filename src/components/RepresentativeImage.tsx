@@ -16,10 +16,11 @@ interface RepresentativeImageProps {
  * RepresentativeImage Component
  * 
  * Displays representative photos with:
+ * - Multiple fallback sources (Congress.gov → theunitedstates.io → initials)
  * - Lazy loading via Next.js Image
  * - Fallback to initials avatar (colored by party)
  * - Error handling (no broken image icons)
- * - Support for Congress bioguide URLs
+ * - Loading states
  */
 export default function RepresentativeImage({
   bioguideId,
@@ -29,7 +30,8 @@ export default function RepresentativeImage({
   size = "md",
   className = "",
 }: RepresentativeImageProps) {
-  const [imageError, setImageError] = useState(false);
+  const [currentFallbackIndex, setCurrentFallbackIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Generate fallback initials from full name
   const getInitials = (name: string): string => {
@@ -72,14 +74,41 @@ export default function RepresentativeImage({
   const colors = getPartyColor(party);
   const initials = getInitials(fullName);
 
-  // Construct image URL (prefer photoUrl, fallback to bioguide pattern)
-  // Only construct bioguide URL if photoUrl is explicitly provided (even if empty string)
-  const imageUrl = photoUrl !== undefined && photoUrl !== null
-    ? photoUrl || `https://bioguide.congress.gov/bioguide/photo/${bioguideId[0]}/${bioguideId}.jpg`
-    : `https://bioguide.congress.gov/bioguide/photo/${bioguideId[0]}/${bioguideId}.jpg`;
+  // Build fallback URL chain
+  const fallbackUrls: string[] = [];
+  
+  // 1. Use provided photoUrl if available and non-empty
+  if (photoUrl && photoUrl.trim() !== "") {
+    fallbackUrls.push(photoUrl);
+  }
+  
+  // 2. Congress.gov bioguide photo
+  fallbackUrls.push(
+    `https://bioguide.congress.gov/bioguide/photo/${bioguideId[0]}/${bioguideId}.jpg`
+  );
+  
+  // 3. TheUnitedStates.io mirror
+  fallbackUrls.push(
+    `https://theunitedstates.io/images/congress/225x275/${bioguideId}.jpg`
+  );
 
-  // If image failed to load, show initials avatar
-  if (imageError) {
+  // Handle image load error - try next fallback
+  const handleImageError = () => {
+    if (currentFallbackIndex < fallbackUrls.length - 1) {
+      setCurrentFallbackIndex(currentFallbackIndex + 1);
+    } else {
+      // All fallbacks exhausted, will show initials
+      setIsLoading(false);
+    }
+  };
+
+  // Handle successful image load
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+
+  // If all fallbacks exhausted, show initials avatar
+  if (currentFallbackIndex >= fallbackUrls.length) {
     return (
       <div
         className={`${sizeClasses[size]} ${colors.bg} ${colors.text} ${borderClasses[size]} border-white shadow-xl rounded-full flex items-center justify-center font-bold ${className}`}
@@ -91,18 +120,28 @@ export default function RepresentativeImage({
     );
   }
 
-  // Show image with error fallback
+  const currentImageUrl = fallbackUrls[currentFallbackIndex];
+
+  // Show image with loading state and error fallback
   return (
     <div className={`relative ${sizeClasses[size]} ${className}`}>
+      {isLoading && (
+        <div
+          className={`absolute inset-0 ${colors.bg} ${colors.text} ${borderClasses[size]} border-white shadow-xl rounded-full flex items-center justify-center font-bold animate-pulse`}
+        >
+          {initials}
+        </div>
+      )}
       <Image
-        src={imageUrl}
+        src={currentImageUrl}
         alt={fullName}
         fill
         sizes={size === "sm" ? "48px" : size === "md" ? "64px" : size === "lg" ? "176px" : "192px"}
-        className={`rounded-full object-cover ${borderClasses[size]} border-white shadow-xl`}
-        onError={() => setImageError(true)}
+        className={`rounded-full object-cover ${borderClasses[size]} border-white shadow-xl ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-200`}
+        onError={handleImageError}
+        onLoad={handleImageLoad}
         loading="lazy"
-        unoptimized // bioguide.congress.gov doesn't support Next.js image optimization
+        unoptimized // External URLs don't support Next.js image optimization
       />
     </div>
   );

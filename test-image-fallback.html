@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Representative Image Fallback Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .test-case {
+      margin: 20px;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .test-case h3 {
+      margin-top: 0;
+    }
+    img {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background: #e0e0e0;
+    }
+    .initials {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: bold;
+      color: white;
+    }
+    .democrat { background: #3b82f6; }
+    .republican { background: #ef4444; }
+    .status {
+      margin-top: 10px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      font-size: 12px;
+    }
+    .success { background: #10b981; color: white; }
+    .fallback { background: #f59e0b; color: white; }
+    .error { background: #ef4444; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Representative Image Fallback Test</h1>
+  <p>Testing multiple fallback sources for representative images</p>
+
+  <div class="test-case">
+    <h3>Test 1: Valid Bioguide ID (Eleanor Norton - N000147)</h3>
+    <img id="test1" src="https://bioguide.congress.gov/bioguide/photo/N/N000147.jpg" onerror="handleError(this, 1)" onload="handleSuccess(this, 1)">
+    <div id="status1" class="status">Loading...</div>
+  </div>
+
+  <div class="test-case">
+    <h3>Test 2: Fallback to theunitedstates.io (N000147)</h3>
+    <img id="test2" src="https://bioguide.congress.gov/bioguide/photo/INVALID/X999999.jpg" onerror="handleError(this, 2)" onload="handleSuccess(this, 2)">
+    <div id="status2" class="status">Testing fallback...</div>
+  </div>
+
+  <div class="test-case">
+    <h3>Test 3: Final fallback to initials (John Doe - Democrat)</h3>
+    <div class="initials democrat">JD</div>
+    <div class="status success">Fallback successful</div>
+  </div>
+
+  <div class="test-case">
+    <h3>Test 4: Final fallback to initials (Jane Smith - Republican)</h3>
+    <div class="initials republican">JS</div>
+    <div class="status success">Fallback successful</div>
+  </div>
+
+  <script>
+    const fallbackUrls = {
+      2: [
+        'https://bioguide.congress.gov/bioguide/photo/INVALID/X999999.jpg',
+        'https://theunitedstates.io/images/congress/225x275/N000147.jpg'
+      ]
+    };
+
+    let fallbackIndex = { 2: 0 };
+
+    function handleSuccess(img, testNum) {
+      const status = document.getElementById(`status${testNum}`);
+      status.textContent = `✓ Loaded: ${img.src}`;
+      status.className = 'status success';
+    }
+
+    function handleError(img, testNum) {
+      const status = document.getElementById(`status${testNum}`);
+      
+      if (fallbackUrls[testNum] && fallbackIndex[testNum] < fallbackUrls[testNum].length - 1) {
+        fallbackIndex[testNum]++;
+        img.src = fallbackUrls[testNum][fallbackIndex[testNum]];
+        status.textContent = `↻ Trying fallback ${fallbackIndex[testNum]}...`;
+        status.className = 'status fallback';
+      } else {
+        status.textContent = `✗ All sources failed - would show initials`;
+        status.className = 'status error';
+        img.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
