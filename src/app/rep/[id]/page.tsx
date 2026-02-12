@@ -1,4 +1,5 @@
 import { getMember, getMembers, getMemberFinance, getMemberTrades, getMemberDisclosures, getMemberAlignment, getAlignmentRanking } from "@/lib/data";
+import { getMemberAlignmentEnhanced, getAlignmentRankingEnhanced } from "@/lib/data-enhanced";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import DonorAnalysisSection from "@/components/DonorAnalysisSection";
@@ -9,6 +10,8 @@ import StockTradesSection from "@/components/StockTradesSection";
 import FinancialDisclosuresSection from "@/components/FinancialDisclosuresSection";
 import CampaignPositions from "@/components/CampaignPositions";
 import AlignmentScoreCard from "@/components/AlignmentScoreCard";
+import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced";
+import RepresentativeImage from "@/components/RepresentativeImage";
 import keyVotesData from "@/data/key-votes.json";
 import positionsData from "@/data/positions.json";
 
@@ -61,7 +64,11 @@ export default async function RepPage({ params }: { params: { id: string } }) {
   // Financial disclosures from House Clerk
   const financialDisclosures = getMemberDisclosures(params.id);
 
-  // Position-to-vote alignment data
+  // Position-to-vote alignment data (enhanced with confidence and multi-factor scoring)
+  const alignmentEnhanced = getMemberAlignmentEnhanced(params.id);
+  const alignmentRankingEnhanced = getAlignmentRankingEnhanced(params.id);
+  
+  // Keep basic alignment as fallback
   const alignment = getMemberAlignment(params.id);
   const alignmentRanking = getAlignmentRanking(params.id);
 
@@ -108,23 +115,13 @@ export default async function RepPage({ params }: { params: { id: string } }) {
 
           <div className="flex flex-col md:flex-row items-start gap-8">
             {/* Photo */}
-            <div className="flex-shrink-0">
-              {member.photo_url ? (
-                <img
-                  src={member.photo_url}
-                  alt={member.full_name}
-                  className="w-32 h-32 md:w-44 md:h-44 rounded-2xl object-cover border-4 border-white shadow-xl"
-                />
-              ) : (
-                <div className="w-32 h-32 md:w-44 md:h-44 rounded-2xl bg-slate-200 flex items-center justify-center text-5xl border-4 border-white shadow-xl">
-                  {member.party === "D"
-                    ? "🔵"
-                    : member.party === "R"
-                    ? "🔴"
-                    : "🟣"}
-                </div>
-              )}
-            </div>
+            <RepresentativeImage
+              bioguideId={member.bioguide_id}
+              fullName={member.full_name}
+              party={member.party}
+              photoUrl={member.photo_url}
+              size="lg"
+            />
 
             <div className="flex-1">
               {/* Name */}
@@ -251,11 +248,18 @@ export default async function RepPage({ params }: { params: { id: string } }) {
 
           {/* Sidebar (1/3 width) */}
           <aside className="space-y-8">
-            {/* Position-to-Vote Alignment */}
-            <AlignmentScoreCard 
-              alignment={alignment} 
-              ranking={alignmentRanking}
-            />
+            {/* Position-to-Vote Alignment (Enhanced) */}
+            {alignmentEnhanced ? (
+              <AlignmentScoreCardEnhanced 
+                alignment={alignmentEnhanced} 
+                ranking={alignmentRankingEnhanced}
+              />
+            ) : (
+              <AlignmentScoreCard 
+                alignment={alignment} 
+                ranking={alignmentRanking}
+              />
+            )}
 
             {/* Committee Memberships */}
             <CommitteeMemberships committees={committees} />

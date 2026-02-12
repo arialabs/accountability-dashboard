@@ -5,6 +5,7 @@ import { useState, useMemo, useEffect, Suspense, useCallback } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { getMembers, getPartyBreakdown, getStates, getMemberFinance } from "@/lib/data";
 import { calculateGrade } from "@/lib/grading";
+import RepresentativeImage from "@/components/RepresentativeImage";
 import type { Member } from "@/lib/types";
 
 function CongressContent() {
@@ -291,17 +292,14 @@ function CongressContent() {
               {/* Header: Photo + Name + Party + Grade */}
               <div className="flex items-start gap-4 mb-6">
                 {/* Photo */}
-                {member.photo_url ? (
-                  <img 
-                    src={member.photo_url} 
-                    alt={member.full_name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-slate-200 flex-shrink-0"
-                  />
-                ) : (
-                  <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center text-2xl flex-shrink-0 border-2 border-slate-200">
-                    {member.party === "D" ? "🔵" : member.party === "R" ? "🔴" : "🟣"}
-                  </div>
-                )}
+                <RepresentativeImage
+                  bioguideId={member.bioguide_id}
+                  fullName={member.full_name}
+                  party={member.party}
+                  photoUrl={member.photo_url}
+                  size="md"
+                  className="flex-shrink-0"
+                />
                 
                 {/* Name & Info */}
                 <div className="flex-1 min-w-0">
