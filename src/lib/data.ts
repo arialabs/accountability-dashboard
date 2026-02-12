@@ -139,8 +139,71 @@ function getFinanceMap(): Map<string, CampaignFinance> {
   return _financeMap;
 }
 
-export function getMemberFinance(bioguideId: string): CampaignFinance | null {
+// Static finance data (from pre-built JSON)
+export function getMemberFinanceStatic(bioguideId: string): CampaignFinance | null {
   return getFinanceMap().get(bioguideId) || null;
+}
+
+/**
+ * Get member finance data - fetches from OpenFEC API in real-time
+ * Falls back to static data if API fails
+ */
+export async function getMemberFinance(bioguideId: string): Promise<CampaignFinance | null> {
+  const member = getMember(bioguideId);
+  if (!member) return null;
+
+  // Try to fetch from FEC API
+  try {
+    const { getDonorBreakdown, searchCandidateByName, getCandidateFinancials } = await import('./fec');
+    
+    const office = member.chamber === 'house' ? 'H' : 'S';
+    const candidate = await searchCandidateByName(
+      member.first_name,
+      member.last_name,
+      office
+    );
+
+    if (!candidate) {
+      console.warn(`No FEC candidate found for ${member.full_name}`);
+      return getMemberFinanceStatic(bioguideId);
+    }
+
+    const [breakdown, financials] = await Promise.all([
+      getDonorBreakdown(candidate.candidate_id),
+      getCandidateFinancials(candidate.candidate_id),
+    ]);
+
+    if (!breakdown) {
+      console.warn(`No finance data found for ${member.full_name}`);
+      return getMemberFinanceStatic(bioguideId);
+    }
+
+    // Transform to our CampaignFinance format
+    const finance: CampaignFinance = {
+      candidate_id: candidate.candidate_id,
+      cycle: breakdown.cycle,
+      total_raised: breakdown.total_raised,
+      total_spent: financials?.total_disbursements || 0,
+      cash_on_hand: financials?.cash_on_hand || 0,
+      individual_contributions: breakdown.individual_total,
+      pac_contributions: breakdown.pac_total,
+      party_contributions: financials?.party_contributions || 0,
+      candidate_self_funding: financials?.candidate_contributions || 0,
+      small_donors: breakdown.small_donor_total,
+      large_donors: breakdown.large_donor_total,
+      pac_percentage: breakdown.pac_percentage,
+      small_donor_percentage: breakdown.small_donor_percentage,
+      large_donor_percentage: breakdown.large_donor_percentage,
+      top_contributors: breakdown.top_contributors,
+      top_industries: [], // Would need OpenSecrets API
+    };
+
+    return finance;
+  } catch (error) {
+    console.error(`Error fetching FEC data for ${bioguideId}:`, error);
+    // Fall back to static data
+    return getMemberFinanceStatic(bioguideId);
+  }
 }
 
 export function getMembersByState(stateAbbrev: string): Member[] {

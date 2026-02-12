@@ -18,15 +18,15 @@ export function generateStaticParams() {
   }));
 }
 
-export default function RepPage({ params }: { params: { id: string } }) {
+export default async function RepPage({ params }: { params: { id: string } }) {
   const member = getMember(params.id);
 
   if (!member) {
     notFound();
   }
 
-  // Get real finance data
-  const finance = getMemberFinance(params.id);
+  // Get real finance data from OpenFEC API
+  const finance = await getMemberFinance(params.id);
 
   // Placeholder committee data (will be replaced with real data)
   const committees = [
