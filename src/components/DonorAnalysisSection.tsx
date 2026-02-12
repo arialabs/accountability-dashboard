@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { CampaignFinance, Contributor } from "@/lib/types";
+import DonorBreakdownBarChart from "./DonorBreakdownBarChart";
 
 interface DonorAnalysisSectionProps {
   finance: CampaignFinance | null;
@@ -150,6 +151,7 @@ function ContributorRow({ contributor, rank }: { contributor: Contributor; rank:
 
 export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionProps) {
   const [showPacTooltip, setShowPacTooltip] = useState(false);
+  const [chartView, setChartView] = useState<"pie" | "bar">("pie");
   
   if (!finance) {
     return (
@@ -203,14 +205,44 @@ export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionPr
       <div className="grid md:grid-cols-2 gap-10">
         {/* Pie Chart & Breakdown */}
         <div>
-          <h4 className="text-lg font-bold text-slate-900 mb-6">Funding Sources</h4>
+          <div className="flex items-center justify-between mb-6">
+            <h4 className="text-lg font-bold text-slate-900">Funding Sources</h4>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setChartView("pie")}
+                className={`px-3 py-1 text-xs font-medium rounded-lg transition-colors ${
+                  chartView === "pie"
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                }`}
+                aria-label="Pie chart view"
+              >
+                Pie
+              </button>
+              <button
+                onClick={() => setChartView("bar")}
+                className={`px-3 py-1 text-xs font-medium rounded-lg transition-colors ${
+                  chartView === "bar"
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                }`}
+                aria-label="Bar chart view"
+              >
+                Bar
+              </button>
+            </div>
+          </div>
           
-          <DonorPieChart 
-            pacPct={finance.pac_percentage}
-            largeDonorPct={finance.large_donor_percentage}
-            smallDonorPct={finance.small_donor_percentage}
-            otherPct={otherPct}
-          />
+          {chartView === "pie" ? (
+            <DonorPieChart 
+              pacPct={finance.pac_percentage}
+              largeDonorPct={finance.large_donor_percentage}
+              smallDonorPct={finance.small_donor_percentage}
+              otherPct={otherPct}
+            />
+          ) : (
+            <DonorBreakdownBarChart finance={finance} />
+          )}
           
           {/* Percentage breakdown */}
           <div className="mt-6 space-y-3">

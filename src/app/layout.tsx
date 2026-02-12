@@ -30,7 +30,8 @@ export default function RootLayout({
                 <a href="/congress" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Legislative</a>
                 <a href="/executive" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Executive</a>
                 <a href="/judicial" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Judicial</a>
-                <a href="/votes" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Key Votes</a>
+                <a href="/bills" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Bills</a>
+                <a href="/votes" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">Votes</a>
                 <a href="/about" className="text-slate-600 hover:text-slate-900 transition min-w-[44px] min-h-[44px] flex items-center justify-center">About</a>
               </div>
             </div>

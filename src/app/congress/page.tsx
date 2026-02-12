@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { useState, useMemo, useEffect, Suspense, useCallback } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
-import { getMembers, getPartyBreakdown, getStates, getMemberFinance } from "@/lib/data";
+import { getMembers, getPartyBreakdown, getStates, getMemberFinanceStatic } from "@/lib/data";
 import { calculateGrade } from "@/lib/grading";
 import RepresentativeImage from "@/components/RepresentativeImage";
+import PartyLoyaltyChart from "@/components/PartyLoyaltyChart";
+import IdeologySpectrumChart from "@/components/IdeologySpectrumChart";
 import type { Member } from "@/lib/types";
 
 function CongressContent() {
@@ -259,6 +261,18 @@ function CongressContent() {
         </div>
       </div>
 
+      {/* Data Visualizations */}
+      <div className="grid lg:grid-cols-2 gap-8">
+        <PartyLoyaltyChart 
+          members={filteredMembers} 
+          selectedParty={party as "D" | "R" | "I" | ""}
+        />
+        <IdeologySpectrumChart 
+          members={filteredMembers}
+          chamber={chamber as "house" | "senate" | ""}
+        />
+      </div>
+
       {/* Members Grid */}
       {filteredMembers.length === 0 ? (
         <div className="text-center py-20 text-lg text-slate-500 leading-relaxed">
@@ -268,7 +282,7 @@ function CongressContent() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredMembers.map((member) => {
             // Get finance data and calculate grade
-            const finance = getMemberFinance(member.bioguide_id);
+            const finance = getMemberFinanceStatic(member.bioguide_id);
             const grade = calculateGrade({
               pac_percentage: finance?.pac_percentage,
               large_donor_percentage: finance?.large_donor_percentage,

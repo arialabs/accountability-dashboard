@@ -331,6 +331,14 @@ export interface ApiError {
 
 // ==================== Supreme Court ====================
 
+export interface KeyRuling {
+  case: string;
+  year: number;
+  vote: "Majority" | "Dissent" | "Concurrence";
+  description: string;
+  url?: string;
+}
+
 export interface SupremeCourtJustice {
   id: string;
   name: string;
@@ -341,6 +349,7 @@ export interface SupremeCourtJustice {
   ideology_score: number;  // Martin-Quinn score: negative = liberal, positive = conservative
   ideology_label: "Very Liberal" | "Liberal" | "Moderate" | "Conservative" | "Very Conservative";
   bio: string;
+  key_rulings?: KeyRuling[];
 }
 
 // ==================== Political Positions (OnTheIssues.org) ====================
@@ -486,4 +495,54 @@ export interface PolicySummary {
       grade: ImpactGrade;
     };
   };
+}
+
+// ==================== Bill Tracking ====================
+
+export type BillStatus = 
+  | "introduced" 
+  | "committee" 
+  | "floor_vote" 
+  | "passed_chamber" 
+  | "passed_both" 
+  | "failed";
+
+export interface BillVote {
+  id: string;
+  congress: number;
+  chamber: "House" | "Senate";
+  rollnumber: number;
+  date: string;
+  title: string;
+  description: string;
+  yea_count: number;
+  nay_count: number;
+  result: "Passed" | "Failed" | "Unknown";
+  votes: Record<string, "Yea" | "Nay" | "Not Voting" | "Present">;
+}
+
+export interface Bill {
+  bill_id: string;
+  title: string;
+  description: string;
+  category: string;
+  status: BillStatus;
+  
+  // Progression
+  introduced_date?: string;
+  latest_action_date: string;
+  
+  // Vote history
+  votes: BillVote[];
+  house_votes: BillVote[];
+  senate_votes: BillVote[];
+  
+  // Results
+  passed_house: boolean;
+  passed_senate: boolean;
+  final_result: "Passed" | "Failed" | "Pending";
+  
+  // Sponsors & supporters (from vote data)
+  top_supporters: Array<{ bioguide_id: string; vote: string }>;
+  top_opponents: Array<{ bioguide_id: string; vote: string }>;
 }
