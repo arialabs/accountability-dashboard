@@ -1,14 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useMemo, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState, useMemo, useEffect, Suspense, useCallback } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { getMembers, getPartyBreakdown, getStates, getMemberFinance } from "@/lib/data";
 import { calculateGrade } from "@/lib/grading";
 import type { Member } from "@/lib/types";
 
 function CongressContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
   const allMembers = getMembers();
   const stats = getPartyBreakdown();
   const states = getStates();
@@ -18,6 +20,7 @@ function CongressContent() {
   const [party, setParty] = useState<string>("");
   const [state, setState] = useState<string>("");
   const [search, setSearch] = useState<string>("");
+  const [debouncedSearch, setDebouncedSearch] = useState<string>("");
   
   // Read URL params on mount
   useEffect(() => {
@@ -27,25 +30,55 @@ function CongressContent() {
     const urlChamber = searchParams.get("chamber");
     
     if (urlState) setState(urlState.toUpperCase());
-    if (urlSearch) setSearch(urlSearch);
+    if (urlSearch) {
+      setSearch(urlSearch);
+      setDebouncedSearch(urlSearch);
+    }
     if (urlParty) setParty(urlParty);
     if (urlChamber) setChamber(urlChamber);
   }, [searchParams]);
   
-  // Filter members
+  // Debounce search input
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(search);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [search]);
+  
+  // Update URL params when filters change
+  const updateURL = useCallback((filters: Record<string, string>) => {
+    const params = new URLSearchParams();
+    Object.entries(filters).forEach(([key, value]) => {
+      if (value) params.set(key, value);
+    });
+    const queryString = params.toString();
+    router.replace(`${pathname}${queryString ? `?${queryString}` : ''}`, { scroll: false });
+  }, [router, pathname]);
+  
+  useEffect(() => {
+    updateURL({ 
+      search: debouncedSearch, 
+      state, 
+      party, 
+      chamber 
+    });
+  }, [debouncedSearch, state, party, chamber, updateURL]);
+  
+  // Filter members (using debounced search)
   const filteredMembers = useMemo(() => {
     return allMembers.filter(m => {
       if (chamber && m.chamber !== chamber) return false;
       if (party && m.party !== party) return false;
       if (state && m.state !== state) return false;
-      if (search) {
-        const q = search.toLowerCase();
+      if (debouncedSearch) {
+        const q = debouncedSearch.toLowerCase();
         if (!m.full_name.toLowerCase().includes(q) && 
             !m.state.toLowerCase().includes(q)) return false;
       }
       return true;
     });
-  }, [allMembers, chamber, party, state, search]);
+  }, [allMembers, chamber, party, state, debouncedSearch]);
   
   // Dynamic stats for filtered view
   const filteredStats = useMemo(() => ({
@@ -55,7 +88,16 @@ function CongressContent() {
     independents: filteredMembers.filter(m => m.party === "I").length,
   }), [filteredMembers]);
   
-  const isFiltered = chamber || party || state || search;
+  const isFiltered = chamber || party || state || debouncedSearch;
+  
+  const clearFilters = () => {
+    setChamber("");
+    setParty("");
+    setState("");
+    setSearch("");
+    setDebouncedSearch("");
+    updateURL({});
+  };
   
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 space-y-8">
@@ -72,8 +114,8 @@ function CongressContent() {
           
           {isFiltered && (
             <button 
-              onClick={() => { setChamber(""); setParty(""); setState(""); setSearch(""); }}
-              className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+              onClick={clearFilters}
+              className="text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors"
             >
               Clear filters ✕
             </button>
@@ -82,45 +124,114 @@ function CongressContent() {
         
         {/* Search + Filters */}
         <div className="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 shadow-sm">
-          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
-            <input
-              type="text"
-              placeholder="Search by name..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full sm:flex-1 sm:min-w-[200px] px-4 py-3 border border-slate-300 rounded-lg text-base leading-relaxed focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition min-h-[44px]"
-            />
-            <select 
-              value={chamber}
-              onChange={(e) => setChamber(e.target.value)}
-              className="w-full sm:w-auto px-4 py-3 border border-slate-300 rounded-lg bg-white text-slate-700 font-medium text-base leading-relaxed focus:ring-2 focus:ring-blue-500 transition min-h-[44px]"
-            >
-              <option value="">All Chambers</option>
-              <option value="house">House ({stats.house})</option>
-              <option value="senate">Senate ({stats.senate})</option>
-            </select>
-            <select 
-              value={party}
-              onChange={(e) => setParty(e.target.value)}
-              className="w-full sm:w-auto px-4 py-3 border border-slate-300 rounded-lg bg-white text-slate-700 font-medium text-base leading-relaxed focus:ring-2 focus:ring-blue-500 transition min-h-[44px]"
-            >
-              <option value="">All Parties</option>
-              <option value="D">Democrat ({stats.democrats})</option>
-              <option value="R">Republican ({stats.republicans})</option>
-              <option value="I">Independent ({stats.independents})</option>
-            </select>
-            <select 
-              value={state}
-              onChange={(e) => setState(e.target.value)}
-              className="w-full sm:w-auto px-4 py-3 border border-slate-300 rounded-lg bg-white text-slate-700 font-medium text-base leading-relaxed focus:ring-2 focus:ring-blue-500 transition min-h-[44px]"
-            >
-              <option value="">All States</option>
-              {states.map(s => (
-                <option key={s.abbrev} value={s.abbrev}>
-                  {s.abbrev} - {s.name} ({s.count})
-                </option>
-              ))}
-            </select>
+          <div className="space-y-4">
+            {/* Search Input */}
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search by name or state..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="w-full px-4 py-3 pl-10 border border-slate-300 rounded-lg text-base leading-relaxed focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition min-h-[44px]"
+              />
+              <svg 
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              {search && (
+                <button
+                  onClick={() => setSearch("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition"
+                  aria-label="Clear search"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              )}
+            </div>
+
+            {/* Party Filter Buttons */}
+            <div>
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Party</label>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => setParty("")}
+                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[40px] ${
+                    party === "" 
+                      ? "bg-slate-900 text-white" 
+                      : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                  }`}
+                >
+                  All ({stats.total})
+                </button>
+                <button
+                  onClick={() => setParty("D")}
+                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[40px] ${
+                    party === "D" 
+                      ? "bg-blue-600 text-white" 
+                      : "bg-blue-100 text-blue-700 hover:bg-blue-200"
+                  }`}
+                >
+                  Democrat ({stats.democrats})
+                </button>
+                <button
+                  onClick={() => setParty("R")}
+                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[40px] ${
+                    party === "R" 
+                      ? "bg-red-600 text-white" 
+                      : "bg-red-100 text-red-700 hover:bg-red-200"
+                  }`}
+                >
+                  Republican ({stats.republicans})
+                </button>
+                <button
+                  onClick={() => setParty("I")}
+                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[40px] ${
+                    party === "I" 
+                      ? "bg-purple-600 text-white" 
+                      : "bg-purple-100 text-purple-700 hover:bg-purple-200"
+                  }`}
+                >
+                  Independent ({stats.independents})
+                </button>
+              </div>
+            </div>
+
+            {/* Dropdowns Row */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex-1">
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Chamber</label>
+                <select 
+                  value={chamber}
+                  onChange={(e) => setChamber(e.target.value)}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white text-slate-700 font-medium text-base leading-relaxed focus:ring-2 focus:ring-blue-500 transition min-h-[44px]"
+                >
+                  <option value="">All Chambers</option>
+                  <option value="house">House ({stats.house})</option>
+                  <option value="senate">Senate ({stats.senate})</option>
+                </select>
+              </div>
+              <div className="flex-1">
+                <label className="block text-sm font-semibold text-slate-700 mb-2">State</label>
+                <select 
+                  value={state}
+                  onChange={(e) => setState(e.target.value)}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white text-slate-700 font-medium text-base leading-relaxed focus:ring-2 focus:ring-blue-500 transition min-h-[44px]"
+                >
+                  <option value="">All States</option>
+                  {states.map(s => (
+                    <option key={s.abbrev} value={s.abbrev}>
+                      {s.abbrev} - {s.name} ({s.count})
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
           </div>
         </div>
       </div>
