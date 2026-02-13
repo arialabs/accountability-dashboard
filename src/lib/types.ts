@@ -569,7 +569,7 @@ export interface DeepDiveInvestigation {
   individuals?: DeepDiveIndividual[];
   financialData?: DeepDiveFinancialData[];
   sources: DeepDiveSource[];
-  relatedMembers?: DeepDiveRelatedMember[];
+  relatedMembers?: (string | DeepDiveRelatedMember)[];
 }
 
 export interface DeepDiveSection {
