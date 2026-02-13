@@ -55,6 +55,7 @@ export interface StaffMember {
   name: string;
   role: string;
   age?: number;
+  photoUrl?: string;
   background: string;
   previousEmployer?: string[];
   tenure: {
@@ -664,6 +665,7 @@ export const dogeData: DogeProfile = {
       name: "Vivek Ramaswamy",
       role: "Co-Leader (departed)",
       age: 39,
+      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Vivek_Ramaswamy_by_Gage_Skidmore_2.jpg/440px-Vivek_Ramaswamy_by_Gage_Skidmore_2.jpg",
       background: "Entrepreneur, former 2024 Republican presidential candidate, biotech entrepreneur",
       previousEmployer: ["Roivant Sciences (founder)", "Strive Asset Management (founder)"],
       tenure: {

@@ -61,10 +61,7 @@ export default function ExecutiveBranch() {
       {/* DOGE Section - Featured */}
       <section className="py-12 bg-amber-50 border-b-2 border-amber-200">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-xs font-bold bg-red-100 text-red-700 px-3 py-1 rounded-full">NEW</span>
-            <h2 className="text-2xl font-black text-slate-900">Department of Government Efficiency</h2>
-          </div>
+          <h2 className="text-2xl font-black text-slate-900 mb-4">Department of Government Efficiency</h2>
 
           <Link
             href="/executive/doge"
