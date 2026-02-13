@@ -346,7 +346,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
             <SocialShare
               title={`${member.full_name} - Accountability Dashboard`}
               text={`Check out ${member.full_name}'s voting record, campaign finance, and Say vs. Do Score${alignmentEnhanced ? ` of ${alignmentEnhanced.alignment_score}%` : ""} on the Accountability Dashboard.`}
-              url={`${siteUrl}/rep/${member.bioguide_id}`}
+              url={`https://reps.arialabs.ai/rep/${member.bioguide_id}`}
             />
 
             {/* External Links */}
