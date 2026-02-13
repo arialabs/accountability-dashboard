@@ -29,7 +29,7 @@ export const FEATURE_FLAGS: Record<FeatureFlagName, FeatureFlagConfig> = {
   judicial: {
     name: 'judicial',
     description: 'Judicial branch section',
-    defaultEnabled: false,
+    defaultEnabled: true,
     category: 'branches',
   },
   executive: {
@@ -43,7 +43,7 @@ export const FEATURE_FLAGS: Record<FeatureFlagName, FeatureFlagConfig> = {
   keyVoteRecord: {
     name: 'keyVoteRecord',
     description: 'Key vote record scoring',
-    defaultEnabled: false,
+    defaultEnabled: true,
     category: 'features',
   },
   stockTrades: {
@@ -75,19 +75,19 @@ export const FEATURE_FLAGS: Record<FeatureFlagName, FeatureFlagConfig> = {
   alignmentScore: {
     name: 'alignmentScore',
     description: 'Alignment scores',
-    defaultEnabled: false,
+    defaultEnabled: true,
     category: 'components',
   },
   billSummaries: {
     name: 'billSummaries',
     description: 'Bill detail pages',
-    defaultEnabled: false,
+    defaultEnabled: true,
     category: 'components',
   },
   searchByZip: {
     name: 'searchByZip',
     description: 'ZIP code search',
-    defaultEnabled: false,
+    defaultEnabled: true,
     category: 'components',
   },
   leaderboard: {

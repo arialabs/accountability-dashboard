@@ -43,7 +43,7 @@ const getDropdowns = (showJudicial: boolean): NavDropdown[] => {
       href: '/judicial',
       items: [
         { href: '/judicial/supreme-court', label: 'Supreme Court' },
-        { href: '/judicial/federal-courts', label: 'Federal Courts', badge: 'Coming Soon' },
+        { href: '/judicial/federal-courts', label: 'Federal Courts' },
       ],
     });
   }
