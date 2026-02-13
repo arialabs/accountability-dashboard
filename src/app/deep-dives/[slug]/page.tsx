@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAllDeepDives, getDeepDiveBySlug } from "@/data/deep-dives";
 import type { Metadata } from "next";
-import ReactMarkdown from "react-markdown";
+// Content rendered as paragraphs (no markdown dependency needed)
 
 type Props = {
   params: { slug: string };
@@ -151,30 +151,11 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
               {section.title}
             </h2>
             <div className="prose prose-invert prose-slate max-w-none">
-              <ReactMarkdown
-                components={{
-                  h2: ({ children }) => (
-                    <h3 className="text-2xl font-bold text-white mt-8 mb-4">{children}</h3>
-                  ),
-                  h3: ({ children }) => (
-                    <h4 className="text-xl font-semibold text-slate-200 mt-6 mb-3">{children}</h4>
-                  ),
-                  p: ({ children }) => (
-                    <p className="text-slate-200 mb-4 leading-relaxed">{children}</p>
-                  ),
-                  ul: ({ children }) => (
-                    <ul className="list-disc list-inside space-y-2 mb-4 text-slate-200">{children}</ul>
-                  ),
-                  li: ({ children }) => (
-                    <li className="text-slate-200">{children}</li>
-                  ),
-                  strong: ({ children }) => (
-                    <strong className="text-white font-bold">{children}</strong>
-                  ),
-                }}
-              >
-                {section.content}
-              </ReactMarkdown>
+              {section.content.split('\n\n').map((paragraph, pIdx) => (
+                <p key={pIdx} className="text-slate-200 mb-4 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </section>
         ))}

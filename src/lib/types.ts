@@ -600,13 +600,17 @@ export interface DeepDiveFinancialData {
   value: string | number;
   category?: string;
   type?: string;
+  party?: string;
 }
 
 export interface DeepDiveSource {
-  name: string;
+  title: string;
+  name?: string;
   url: string;
   publication?: string;
+  published_date?: string;
   date?: string;
+  type?: string;
   credibility_rating?: string;
 }
 
