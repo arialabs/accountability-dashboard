@@ -10,6 +10,32 @@ import PartyLoyaltyChart from "@/components/PartyLoyaltyChart";
 import IdeologySpectrumChart from "@/components/IdeologySpectrumChart";
 import type { Member } from "@/lib/types";
 
+// Helper to get user's state from IP geolocation
+async function getUserStateFromIP(): Promise<string | null> {
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    if (!response.ok) return null;
+    const data = await response.json();
+    return data.region_code || null; // Returns 2-letter state code
+  } catch (error) {
+    console.error('Failed to get user location:', error);
+    return null;
+  }
+}
+
+// Helper to normalize search for district matching
+function normalizeDistrict(input: string): { state: string; district: number } | null {
+  // Match patterns like "CA-12", "CA12", "CA 12"
+  const match = input.match(/^([A-Z]{2})[-\s]?(\d+)$/i);
+  if (match) {
+    return {
+      state: match[1].toUpperCase(),
+      district: parseInt(match[2], 10)
+    };
+  }
+  return null;
+}
+
 function CongressContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -24,6 +50,16 @@ function CongressContent() {
   const [state, setState] = useState<string>("");
   const [search, setSearch] = useState<string>("");
   const [debouncedSearch, setDebouncedSearch] = useState<string>("");
+  const [userState, setUserState] = useState<string | null>(null); // User's home state
+  const [isLoadingLocation, setIsLoadingLocation] = useState(false);
+  
+  // Load user's preferred state from localStorage on mount
+  useEffect(() => {
+    const savedState = localStorage.getItem('userHomeState');
+    if (savedState) {
+      setUserState(savedState);
+    }
+  }, []);
   
   // Read URL params on mount
   useEffect(() => {
@@ -76,12 +112,26 @@ function CongressContent() {
       if (state && m.state !== state) return false;
       if (debouncedSearch) {
         const q = debouncedSearch.toLowerCase();
+        
+        // Check for district search (e.g., "CA-12")
+        const districtMatch = normalizeDistrict(debouncedSearch);
+        if (districtMatch) {
+          return m.state === districtMatch.state && m.district === districtMatch.district;
+        }
+        
+        // Regular name/state search
         if (!m.full_name.toLowerCase().includes(q) && 
             !m.state.toLowerCase().includes(q)) return false;
       }
       return true;
     });
   }, [allMembers, chamber, party, state, debouncedSearch]);
+  
+  // Get user's representatives (senators + house member)
+  const userRepresentatives = useMemo(() => {
+    if (!userState) return [];
+    return allMembers.filter(m => m.state === userState);
+  }, [allMembers, userState]);
   
   // Dynamic stats for filtered view
   const filteredStats = useMemo(() => ({
@@ -102,6 +152,36 @@ function CongressContent() {
     updateURL({});
   };
   
+  const removeFilter = (filterType: 'chamber' | 'party' | 'state' | 'search') => {
+    if (filterType === 'chamber') setChamber("");
+    if (filterType === 'party') setParty("");
+    if (filterType === 'state') setState("");
+    if (filterType === 'search') {
+      setSearch("");
+      setDebouncedSearch("");
+    }
+  };
+  
+  // Find My Representatives handler
+  const handleFindMyReps = async () => {
+    setIsLoadingLocation(true);
+    try {
+      const detectedState = await getUserStateFromIP();
+      if (detectedState) {
+        setUserState(detectedState);
+        localStorage.setItem('userHomeState', detectedState);
+        setState(detectedState); // Auto-filter to user's state
+      } else {
+        alert('Could not detect your location. Please select your state manually.');
+      }
+    } catch (error) {
+      console.error('Error detecting location:', error);
+      alert('Could not detect your location. Please select your state manually.');
+    } finally {
+      setIsLoadingLocation(false);
+    }
+  };
+  
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 space-y-8">
       <div className="flex flex-col gap-6 mb-12">
@@ -115,15 +195,109 @@ function CongressContent() {
             </p>
           </div>
           
-          {isFiltered && (
+          <button 
+            onClick={handleFindMyReps}
+            disabled={isLoadingLocation}
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-blue-400 disabled:cursor-not-allowed min-h-[44px]"
+          >
+            {isLoadingLocation ? (
+              <>
+                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>Detecting...</span>
+              </>
+            ) : (
+              <>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Find My Reps</span>
+              </>
+            )}
+          </button>
+        </div>
+        
+        {/* Active Filter Chips */}
+        {isFiltered && (
+          <div className="flex flex-wrap gap-2 items-center">
+            <span className="text-sm font-semibold text-slate-600">Active filters:</span>
+            {chamber && (
+              <button
+                onClick={() => removeFilter('chamber')}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-700 rounded-full text-sm font-medium hover:bg-slate-200 transition"
+              >
+                Chamber: {chamber === 'house' ? 'House' : 'Senate'}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+            {party && (
+              <button
+                onClick={() => removeFilter('party')}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition ${
+                  party === 'D' ? 'bg-blue-100 text-blue-700 hover:bg-blue-200' :
+                  party === 'R' ? 'bg-red-100 text-red-700 hover:bg-red-200' :
+                  'bg-purple-100 text-purple-700 hover:bg-purple-200'
+                }`}
+              >
+                Party: {party === 'D' ? 'Democrat' : party === 'R' ? 'Republican' : 'Independent'}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+            {state && (
+              <button
+                onClick={() => removeFilter('state')}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium hover:bg-emerald-200 transition"
+              >
+                State: {state}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+            {debouncedSearch && (
+              <button
+                onClick={() => removeFilter('search')}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-100 text-amber-700 rounded-full text-sm font-medium hover:bg-amber-200 transition"
+              >
+                Search: "{debouncedSearch}"
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
             <button 
               onClick={clearFilters}
-              className="text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors px-4 py-2 min-h-[44px]"
+              className="text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors px-2"
             >
-              Clear filters ✕
+              Clear all
             </button>
-          )}
-        </div>
+          </div>
+        )}
+        
+        {/* User's Representatives Alert (when "Find My Reps" is used) */}
+        {userState && state === userState && userRepresentatives.length > 0 && (
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div className="flex items-start gap-3">
+              <svg className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div className="flex-1">
+                <h3 className="font-semibold text-blue-900 mb-1">Your Representatives ({userState})</h3>
+                <p className="text-sm text-blue-700">
+                  Showing {userRepresentatives.length} representative{userRepresentatives.length !== 1 ? 's' : ''} from your state. 
+                  Your cards are highlighted below.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
         
         {/* Search + Filters */}
         <div className="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 shadow-sm">
@@ -132,7 +306,7 @@ function CongressContent() {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search by name or state..."
+                placeholder="Search by name, state, or district (e.g., CA-12)..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="w-full px-4 py-3 pl-10 border border-slate-300 rounded-lg text-base leading-relaxed focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition min-h-[44px]"
@@ -208,8 +382,9 @@ function CongressContent() {
             {/* Dropdowns Row */}
             <div className="flex flex-col sm:flex-row gap-3">
               <div className="flex-1">
-                <label className="block text-sm font-semibold text-slate-700 mb-2">Chamber</label>
+                <label htmlFor="chamber-select" className="block text-sm font-semibold text-slate-700 mb-2">Chamber</label>
                 <select 
+                  id="chamber-select"
                   value={chamber}
                   onChange={(e) => setChamber(e.target.value)}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white text-slate-700 font-medium text-base leading-relaxed focus:ring-2 focus:ring-blue-500 transition min-h-[44px]"
@@ -220,8 +395,9 @@ function CongressContent() {
                 </select>
               </div>
               <div className="flex-1">
-                <label className="block text-sm font-semibold text-slate-700 mb-2">State</label>
+                <label htmlFor="state-select" className="block text-sm font-semibold text-slate-700 mb-2">State</label>
                 <select 
+                  id="state-select"
                   value={state}
                   onChange={(e) => setState(e.target.value)}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white text-slate-700 font-medium text-base leading-relaxed focus:ring-2 focus:ring-blue-500 transition min-h-[44px]"
@@ -288,6 +464,9 @@ function CongressContent() {
               large_donor_percentage: finance?.large_donor_percentage,
             });
             
+            // Check if this is user's representative
+            const isUserRep = userState === member.state;
+            
             // Grade badge colors
             const gradeColors = {
               A: "bg-green-100 text-green-700 border-green-200",
@@ -301,8 +480,22 @@ function CongressContent() {
             <Link
               key={member.bioguide_id}
               href={`/rep/${member.bioguide_id}`}
-              className="bg-white border border-slate-200 rounded-xl p-6 transition-all duration-200 hover:shadow-lg hover:border-slate-300 cursor-pointer group"
+              className={`bg-white border rounded-xl p-6 transition-all duration-200 hover:shadow-lg cursor-pointer group ${
+                isUserRep && state === userState
+                  ? 'border-blue-400 ring-2 ring-blue-200 bg-blue-50/30'
+                  : 'border-slate-200 hover:border-slate-300'
+              }`}
             >
+              {/* User Rep Badge */}
+              {isUserRep && state === userState && (
+                <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-blue-700">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                  </svg>
+                  Your Representative
+                </div>
+              )}
+              
               {/* Header: Photo + Name + Party + Grade */}
               <div className="flex items-start gap-4 mb-6">
                 {/* Photo */}
