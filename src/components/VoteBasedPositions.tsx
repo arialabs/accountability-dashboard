@@ -100,6 +100,9 @@ function VotingScoreBar({ score, direction, showLabel = true }: {
   direction: 'progressive' | 'conservative' | 'mixed';
   showLabel?: boolean;
 }) {
+  // Invert display score for conservative direction
+  const displayScore = direction === 'conservative' ? 100 - score : score;
+  
   let barColor, bgColor, textColor, label;
   
   if (direction === 'progressive') {
@@ -122,13 +125,13 @@ function VotingScoreBar({ score, direction, showLabel = true }: {
   return (
     <div className="space-y-1">
       <div className="flex items-center justify-between text-xs">
-        <span className={`font-bold ${textColor}`}>{score}%</span>
+        <span className={`font-bold ${textColor}`}>{displayScore}%</span>
         {showLabel && <span className={`text-xs ${textColor}`}>{label}</span>}
       </div>
       <div className={`w-full h-3 ${bgColor} rounded-full overflow-hidden`}>
         <div 
           className={`h-full ${barColor} transition-all duration-500`}
-          style={{ width: `${score}%` }}
+          style={{ width: `${displayScore}%` }}
         />
       </div>
     </div>
