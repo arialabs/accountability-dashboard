@@ -1,79 +1,98 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { FeatureFlags, defaultFlags } from '@/config/feature-flags';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { FeatureFlagName, DEFAULT_FLAGS } from '@/config/feature-flags';
 
-type FeatureFlagContextType = {
-  flags: FeatureFlags;
-  setFlags: (flags: FeatureFlags) => void;
-  toggleFlag: (flag: keyof FeatureFlags) => void;
-  resetFlags: () => void;
-};
+interface FeatureFlagContextValue {
+  flags: Record<FeatureFlagName, boolean>;
+  setFlag: (name: FeatureFlagName, enabled: boolean) => void;
+  resetToDefaults: () => void;
+}
 
-const FeatureFlagContext = createContext<FeatureFlagContextType | undefined>(undefined);
+const FeatureFlagContext = createContext<FeatureFlagContextValue | undefined>(undefined);
+
+const STORAGE_KEY = 'feature-flags';
 
 export function FeatureFlagProvider({ children }: { children: ReactNode }) {
-  const [flags, setFlagsState] = useState<FeatureFlags>(defaultFlags);
-  const [mounted, setMounted] = useState(false);
+  const [flags, setFlags] = useState<Record<FeatureFlagName, boolean>>(DEFAULT_FLAGS);
 
+  // Load flags from localStorage on mount
   useEffect(() => {
-    setMounted(true);
-    // Load from localStorage
-    const stored = localStorage.getItem('feature-flags');
-    if (stored) {
-      try {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
         const parsed = JSON.parse(stored);
         // Merge with defaults to handle new flags
-        setFlagsState({ ...defaultFlags, ...parsed });
-      } catch (e) {
-        console.error('Failed to parse feature flags from localStorage', e);
+        setFlags({ ...DEFAULT_FLAGS, ...parsed });
       }
+    } catch (error) {
+      console.error('Failed to load feature flags:', error);
     }
   }, []);
 
-  const setFlags = (newFlags: FeatureFlags) => {
-    setFlagsState(newFlags);
-    if (mounted) {
-      localStorage.setItem('feature-flags', JSON.stringify(newFlags));
+  const setFlag = (name: FeatureFlagName, enabled: boolean) => {
+    setFlags((prev) => {
+      const updated = { ...prev, [name]: enabled };
+      // Persist to localStorage
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+      } catch (error) {
+        console.error('Failed to save feature flags:', error);
+      }
+      return updated;
+    });
+  };
+
+  const resetToDefaults = () => {
+    setFlags(DEFAULT_FLAGS);
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch (error) {
+      console.error('Failed to reset feature flags:', error);
     }
   };
 
-  const toggleFlag = (flag: keyof FeatureFlags) => {
-    const newFlags = { ...flags, [flag]: !flags[flag] };
-    setFlags(newFlags);
-  };
-
-  const resetFlags = () => {
-    setFlags(defaultFlags);
-  };
-
   return (
-    <FeatureFlagContext.Provider value={{ flags, setFlags, toggleFlag, resetFlags }}>
+    <FeatureFlagContext.Provider value={{ flags, setFlag, resetToDefaults }}>
       {children}
     </FeatureFlagContext.Provider>
   );
 }
 
+/**
+ * Hook to check if a feature flag is enabled
+ */
+export function useFeatureFlag(name: FeatureFlagName): boolean {
+  const context = useContext(FeatureFlagContext);
+  if (!context) {
+    throw new Error('useFeatureFlag must be used within a FeatureFlagProvider');
+  }
+  return context.flags[name] ?? DEFAULT_FLAGS[name];
+}
+
+/**
+ * Hook to access all feature flag operations
+ */
 export function useFeatureFlags() {
   const context = useContext(FeatureFlagContext);
   if (!context) {
-    throw new Error('useFeatureFlags must be used within FeatureFlagProvider');
+    throw new Error('useFeatureFlags must be used within a FeatureFlagProvider');
   }
   return context;
 }
 
-export function useFeatureFlag(flag: keyof FeatureFlags): boolean {
-  const { flags } = useFeatureFlags();
-  return flags[flag];
-}
-
-export function FeatureFlag({ 
-  name, 
-  children 
-}: { 
-  name: keyof FeatureFlags; 
+/**
+ * Component wrapper that conditionally renders children based on feature flag
+ */
+export function FeatureFlag({
+  name,
+  children,
+  fallback = null,
+}: {
+  name: FeatureFlagName;
   children: ReactNode;
+  fallback?: ReactNode;
 }) {
   const enabled = useFeatureFlag(name);
-  return enabled ? <>{children}</> : null;
+  return <>{enabled ? children : fallback}</>;
 }

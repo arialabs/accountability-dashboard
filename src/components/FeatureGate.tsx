@@ -2,13 +2,13 @@
 
 import { ReactNode } from 'react';
 import { useFeatureFlag } from '@/context/FeatureFlagContext';
-import { FeatureFlags } from '@/config/feature-flags';
+import { FeatureFlagName } from '@/config/feature-flags';
 
 export function FeatureGate({ 
   flag, 
   children 
 }: { 
-  flag: keyof FeatureFlags; 
+  flag: FeatureFlagName; 
   children: ReactNode;
 }) {
   const enabled = useFeatureFlag(flag);

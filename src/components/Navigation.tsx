@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useFeatureFlags } from '@/context/FeatureFlagContext';
+import { useFeatureFlag } from '@/context/FeatureFlagContext';
 
 interface NavDropdown {
   label: string;
@@ -12,37 +12,44 @@ interface NavDropdown {
   items: { href: string; label: string; badge?: string }[];
 }
 
-const dropdowns: NavDropdown[] = [
-  {
-    label: 'Legislative',
-    icon: '🏛️',
-    href: '/congress',
-    items: [
-      { href: '/house', label: 'House of Representatives' },
-      { href: '/senate', label: 'Senate' },
-      { href: '/bills', label: 'Bills & Votes' },
-    ],
-  },
-  {
-    label: 'Executive',
-    icon: '🏢',
-    href: '/executive',
-    items: [
-      { href: '/executive/president', label: 'President' },
-      { href: '/executive/cabinet', label: 'Cabinet' },
-      { href: '/executive/agencies/doge', label: '🐕 DOGE (Federal Agencies)' },
-    ],
-  },
-  {
-    label: 'Judicial',
-    icon: '⚖️',
-    href: '/judicial',
-    items: [
-      { href: '/judicial/supreme-court', label: 'Supreme Court' },
-      { href: '/judicial/federal-courts', label: 'Federal Courts', badge: 'Coming Soon' },
-    ],
-  },
-];
+const getDropdowns = (showJudicial: boolean): NavDropdown[] => {
+  const dropdowns: NavDropdown[] = [
+    {
+      label: 'Legislative',
+      icon: '🏛️',
+      href: '/congress',
+      items: [
+        { href: '/house', label: 'House of Representatives' },
+        { href: '/senate', label: 'Senate' },
+        { href: '/bills', label: 'Bills & Votes' },
+      ],
+    },
+    {
+      label: 'Executive',
+      icon: '🏢',
+      href: '/executive',
+      items: [
+        { href: '/executive/president', label: 'President' },
+        { href: '/executive/cabinet', label: 'Cabinet' },
+        { href: '/executive/agencies/doge', label: '🐕 DOGE (Federal Agencies)' },
+      ],
+    },
+  ];
+
+  if (showJudicial) {
+    dropdowns.push({
+      label: 'Judicial',
+      icon: '⚖️',
+      href: '/judicial',
+      items: [
+        { href: '/judicial/supreme-court', label: 'Supreme Court' },
+        { href: '/judicial/federal-courts', label: 'Federal Courts', badge: 'Coming Soon' },
+      ],
+    });
+  }
+
+  return dropdowns;
+};
 
 function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
   const [open, setOpen] = useState(false);
@@ -84,31 +91,23 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex items-center gap-0.5 min-h-[44px]">
-        <Link
-          href={dropdown.href}
-          className="text-slate-600 hover:text-slate-900 transition-colors duration-150 font-medium text-sm"
+      <Link
+        href={dropdown.href}
+        onKeyDown={handleKeyDown}
+        className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-1 font-medium text-sm"
+        aria-expanded={open}
+        aria-haspopup="true"
+      >
+        {dropdown.label}
+        <svg
+          className={`w-4 h-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
         >
-          {dropdown.label}
-        </Link>
-        <button
-          onClick={() => setOpen(!open)}
-          onKeyDown={handleKeyDown}
-          className="text-slate-400 hover:text-slate-600 transition-colors duration-150 p-1"
-          aria-expanded={open}
-          aria-haspopup="true"
-          aria-label={`${dropdown.label} submenu`}
-        >
-          <svg
-            className={`w-4 h-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-      </div>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </Link>
 
       {open && (
         <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl border border-slate-200 shadow-xl py-2 z-50">
@@ -152,14 +151,8 @@ export default function Navigation() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
   const pathname = usePathname();
-  const { flags } = useFeatureFlags();
-
-  // Filter dropdowns based on feature flags
-  const visibleDropdowns = dropdowns.filter((d) => {
-    if (d.label === 'Judicial' && !flags.judicial) return false;
-    if (d.label === 'Executive' && !flags.executive) return false;
-    return true;
-  });
+  const showJudicial = useFeatureFlag('judicial');
+  const dropdowns = getDropdowns(showJudicial);
 
   // Close menu on route change
   useEffect(() => {
@@ -222,17 +215,15 @@ export default function Navigation() {
         >
           Dashboard
         </Link>
-        {visibleDropdowns.map((d) => (
+        {dropdowns.map((d) => (
           <DesktopDropdown key={d.label} dropdown={d} />
         ))}
-        {flags.scandals && (
-          <Link
-            href="/scandals"
-            className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center font-medium text-sm"
-          >
-            Scandals
-          </Link>
-        )}
+        <Link
+          href="/scandals"
+          className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center font-medium text-sm"
+        >
+          Scandals
+        </Link>
         <SearchButton />
       </div>
 
@@ -284,31 +275,25 @@ export default function Navigation() {
               </Link>
 
               {/* Dropdowns */}
-              {visibleDropdowns.map((d) => (
+              {dropdowns.map((d) => (
                 <div key={d.label} className="border-b border-slate-100">
-                  <div className="flex items-center min-h-[44px]">
-                    <Link
-                      href={d.href}
-                      className="flex-1 px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 flex items-center gap-3 font-medium"
-                    >
+                  <button
+                    onClick={() => setExpandedMobile(expandedMobile === d.label ? null : d.label)}
+                    className="w-full px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center justify-between font-medium"
+                    aria-expanded={expandedMobile === d.label}
+                  >
+                    <span className="flex items-center gap-3">
                       {d.icon} {d.label}
-                    </Link>
-                    <button
-                      onClick={() => setExpandedMobile(expandedMobile === d.label ? null : d.label)}
-                      className="px-4 py-4 text-slate-400 hover:text-slate-600 transition-colors"
-                      aria-expanded={expandedMobile === d.label}
-                      aria-label={`Expand ${d.label} submenu`}
+                    </span>
+                    <svg
+                      className={`w-4 h-4 transition-transform duration-200 ${expandedMobile === d.label ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        className={`w-4 h-4 transition-transform duration-200 ${expandedMobile === d.label ? 'rotate-180' : ''}`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                  </div>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
                   {expandedMobile === d.label && (
                     <div className="bg-slate-50">
                       {d.items.map((item) => (
@@ -331,11 +316,16 @@ export default function Navigation() {
               ))}
 
               {/* Scandals */}
-              {flags.scandals && (
-                <Link
-                  href="/scandals"
-                  className="px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium"
-                >
-                  🚨 Scandals
-                </Link>
-           
+              <Link
+                href="/scandals"
+                className="px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium"
+              >
+                🚨 Scandals
+              </Link>
+            </nav>
+          </div>
+        </>
+      )}
+    </>
+  );
+}
