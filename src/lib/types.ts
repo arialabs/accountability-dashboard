@@ -551,3 +551,68 @@ export interface Bill {
   top_supporters: Array<{ bioguide_id: string; vote: string }>;
   top_opponents: Array<{ bioguide_id: string; vote: string }>;
 }
+
+// Deep Dive Investigations
+export interface DeepDiveInvestigation {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  publishedDate: string;
+  readTimeMinutes: number;
+  tags: string[];
+  summary: string;
+  keyFindings: string[];
+  sections: DeepDiveSection[];
+  timeline?: DeepDiveTimelineEvent[];
+  individuals?: DeepDiveIndividual[];
+  financialData?: DeepDiveFinancialData[];
+  sources: DeepDiveSource[];
+  relatedMembers?: DeepDiveRelatedMember[];
+}
+
+export interface DeepDiveSection {
+  id: string;
+  title: string;
+  content: string;
+}
+
+export interface DeepDiveTimelineEvent {
+  date: string;
+  title: string;
+  description: string;
+  importance?: "high" | "medium" | "low";
+  type?: string;
+}
+
+export interface DeepDiveIndividual {
+  name: string;
+  role: string;
+  party?: string;
+  bioguide_id?: string;
+  relevance: string;
+  financialData?: DeepDiveFinancialData[];
+}
+
+export interface DeepDiveFinancialData {
+  label: string;
+  value: string | number;
+  category?: string;
+  type?: string;
+}
+
+export interface DeepDiveSource {
+  name: string;
+  url: string;
+  publication?: string;
+  date?: string;
+  credibility_rating?: string;
+}
+
+export interface DeepDiveRelatedMember {
+  bioguide_id: string;
+  name: string;
+  party: string;
+  relevance: string;
+}
