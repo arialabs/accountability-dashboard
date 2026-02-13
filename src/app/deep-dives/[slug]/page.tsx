@@ -183,7 +183,7 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
                       ? `$${(data.value / 1000).toFixed(0)}K`
                       : typeof data.value === "number" && data.category?.toLowerCase().includes("percentage")
                       ? `${data.value}%`
-                      : data.value.toLocaleString()}
+                      : String(data.value)}
                   </div>
                   <div className="text-sm text-slate-300 font-semibold mb-1">
                     {data.label}
@@ -243,9 +243,11 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
                       {person.financialData.map((fin, finIdx) => (
                         <div key={finIdx} className="bg-slate-900/50 rounded-lg p-3">
                           <div className="text-lg font-bold text-white">
-                            ${(fin.value / 1000000 >= 1)
-                              ? `${(fin.value / 1000000).toFixed(1)}M`
-                              : `${(fin.value / 1000).toFixed(0)}K`}
+                            {typeof fin.value === 'number'
+                              ? (fin.value >= 1000000
+                                  ? `$${(fin.value / 1000000).toFixed(1)}M`
+                                  : `$${(fin.value / 1000).toFixed(0)}K`)
+                              : fin.value}
                           </div>
                           <div className="text-xs text-slate-400">{fin.label}</div>
                         </div>
