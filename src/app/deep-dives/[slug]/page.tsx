@@ -291,11 +291,11 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
                     {source.publication}
                   </div>
                   <div className="text-xs text-slate-500">
-                    {new Date(source.published_date).toLocaleDateString('en-US', {
+                    {source.published_date ? new Date(source.published_date).toLocaleDateString('en-US', {
                       month: 'long',
                       day: 'numeric',
                       year: 'numeric'
-                    })}
+                    }) : 'Date unavailable'}
                     {" • "}
                     {source.type === "news"
                       ? "News Article"
