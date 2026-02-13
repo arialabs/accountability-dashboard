@@ -79,7 +79,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Legislative Branch */}
             <Link 
-              href="/congress"
+              href="/house"
               className="group relative bg-white rounded-3xl p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 border-2 border-slate-200 hover:border-blue-400 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-500/20"
             >
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/0 via-cyan-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:via-cyan-500/5 group-hover:to-indigo-500/5 transition-all duration-500" />
@@ -221,17 +221,31 @@ export default function Home() {
       <section className="py-32 bg-slate-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-8 leading-tight tracking-tight">
-            Start With Congress
+            Start Exploring
           </h2>
           <p className="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed">
-            Browse all 535 members of Congress. See who funds them, how they vote, and who they really represent.
+            Browse all three branches of government. See who funds them, how they vote, and who they really represent.
           </p>
-          <Link 
-            href="/congress"
-            className="inline-flex items-center justify-center px-12 py-5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-lg"
-          >
-            Explore Congress →
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link 
+              href="/house"
+              className="inline-flex items-center justify-center px-10 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-lg"
+            >
+              🏛️ Congress →
+            </Link>
+            <Link 
+              href="/executive"
+              className="inline-flex items-center justify-center px-10 py-4 bg-white border-2 border-slate-900 hover:bg-slate-50 text-slate-900 font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-lg"
+            >
+              🏢 Executive →
+            </Link>
+            <Link 
+              href="/judicial"
+              className="inline-flex items-center justify-center px-10 py-4 bg-white border-2 border-slate-900 hover:bg-slate-50 text-slate-900 font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-lg"
+            >
+              ⚖️ Judicial →
+            </Link>
+          </div>
         </div>
       </section>
     </div>

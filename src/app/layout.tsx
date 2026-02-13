@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import DevelopmentBanner from "@/components/DevelopmentBanner";
-import HamburgerMenu from "@/components/HamburgerMenu";
+import Navigation from "@/components/Navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
@@ -125,10 +126,11 @@ export default function RootLayout({
               <a href="/" className="text-lg sm:text-xl font-bold text-slate-900 hover:text-blue-600 transition truncate">
                 🏛️ <span className="hidden xs:inline">Accountability Dashboard</span><span className="inline xs:hidden">Dashboard</span>
               </a>
-              <HamburgerMenu />
+              <Navigation />
             </div>
           </div>
         </nav>
+        <Breadcrumbs />
         <main className="bg-slate-50">{children}</main>
         <footer className="bg-white border-t border-slate-200 py-12 mt-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 leading-relaxed space-y-3">
