@@ -153,23 +153,31 @@ export default function ExecutiveBranch() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             {[
-              { role: "Secretary of State", name: "Marco Rubio", id: "secretary-of-state" },
-              { role: "Secretary of Defense", name: "Pete Hegseth", id: "secretary-of-defense" },
-              { role: "Attorney General", name: "Pam Bondi", id: "attorney-general" },
-              { role: "Secretary of Treasury", name: "Scott Bessent", id: "secretary-of-treasury" },
-              { role: "Secretary of HHS", name: "RFK Jr.", id: "secretary-of-hhs" },
-              { role: "Secretary of Homeland Security", name: "Kristi Noem", id: "secretary-of-homeland-security" },
-              { role: "EPA Administrator", name: "Lee Zeldin", id: "epa-administrator" },
-              { role: "Secretary of Interior", name: "Doug Burgum", id: "secretary-of-interior" },
+              { role: "Secretary of State", name: "Marco Rubio", id: "secretary-of-state", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Senator_Rubio_official_portrait%2C_118th_Congress.jpg/440px-Senator_Rubio_official_portrait%2C_118th_Congress.jpg" },
+              { role: "Secretary of Defense", name: "Pete Hegseth", id: "secretary-of-defense", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pete_Hegseth_official_photo.jpg/440px-Pete_Hegseth_official_photo.jpg" },
+              { role: "Attorney General", name: "Pam Bondi", id: "attorney-general", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pam_Bondi_official_photo.jpg/440px-Pam_Bondi_official_photo.jpg" },
+              { role: "Secretary of Treasury", name: "Scott Bessent", id: "secretary-of-treasury", photo: "" },
+              { role: "Secretary of HHS", name: "RFK Jr.", id: "secretary-of-hhs", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Robert_F._Kennedy_Jr._headshot.jpg/440px-Robert_F._Kennedy_Jr._headshot.jpg" },
+              { role: "Secretary of Homeland Security", name: "Kristi Noem", id: "secretary-of-homeland-security", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Kristi_Noem_by_Gage_Skidmore.jpg/440px-Kristi_Noem_by_Gage_Skidmore.jpg" },
+              { role: "EPA Administrator", name: "Lee Zeldin", id: "epa-administrator", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Lee_Zeldin_117th_Congress_portrait.jpg/440px-Lee_Zeldin_117th_Congress_portrait.jpg" },
+              { role: "Secretary of Interior", name: "Doug Burgum", id: "secretary-of-interior", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Doug_Burgum_official_photo.jpg/440px-Doug_Burgum_official_photo.jpg" },
             ].map((cabinet) => (
               <Link
                 key={cabinet.id}
                 href={`/executive/cabinet/${cabinet.id}`}
                 className="bg-white rounded-xl border border-slate-200 p-4 text-center hover:shadow-lg hover:border-blue-300 transition-all group"
               >
-                <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-xl mx-auto mb-2 group-hover:bg-blue-50">
-                  👤
-                </div>
+                {cabinet.photo ? (
+                  <img
+                    src={cabinet.photo}
+                    alt={cabinet.name}
+                    className="w-12 h-12 rounded-full object-cover mx-auto mb-2 border-2 border-slate-100 group-hover:border-blue-200"
+                  />
+                ) : (
+                  <div className="w-12 h-12 rounded-full bg-slate-200 flex items-center justify-center text-sm font-bold text-slate-500 mx-auto mb-2 group-hover:bg-blue-50">
+                    {cabinet.name.split(' ').map(n => n[0]).join('')}
+                  </div>
+                )}
                 <div className="text-xs text-slate-500 mb-1">{cabinet.role}</div>
                 <div className="text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">{cabinet.name}</div>
               </Link>

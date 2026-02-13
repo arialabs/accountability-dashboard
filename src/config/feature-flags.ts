@@ -14,7 +14,8 @@ export type FeatureFlagName =
   | 'dogeStaff'
   | 'alignmentScore'
   | 'billSummaries'
-  | 'searchByZip';
+  | 'searchByZip'
+  | 'leaderboard';
 
 export interface FeatureFlagConfig {
   name: FeatureFlagName;
@@ -86,6 +87,12 @@ export const FEATURE_FLAGS: Record<FeatureFlagName, FeatureFlagConfig> = {
   searchByZip: {
     name: 'searchByZip',
     description: 'ZIP code search',
+    defaultEnabled: false,
+    category: 'components',
+  },
+  leaderboard: {
+    name: 'leaderboard',
+    description: 'Alignment leaderboard on homepage',
     defaultEnabled: false,
     category: 'components',
   },
