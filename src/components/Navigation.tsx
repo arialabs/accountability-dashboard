@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useFeatureFlags } from '@/context/FeatureFlagContext';
 
 interface NavDropdown {
   label: string;
@@ -139,6 +140,14 @@ export default function Navigation() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
   const pathname = usePathname();
+  const { flags } = useFeatureFlags();
+
+  // Filter dropdowns based on feature flags
+  const visibleDropdowns = dropdowns.filter((d) => {
+    if (d.label === 'Judicial' && !flags.judicial) return false;
+    if (d.label === 'Executive' && !flags.executive) return false;
+    return true;
+  });
 
   // Close menu on route change
   useEffect(() => {
@@ -201,15 +210,17 @@ export default function Navigation() {
         >
           Dashboard
         </Link>
-        {dropdowns.map((d) => (
+        {visibleDropdowns.map((d) => (
           <DesktopDropdown key={d.label} dropdown={d} />
         ))}
-        <Link
-          href="/scandals"
-          className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center font-medium text-sm"
-        >
-          Scandals
-        </Link>
+        {flags.scandals && (
+          <Link
+            href="/scandals"
+            className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center font-medium text-sm"
+          >
+            Scandals
+          </Link>
+        )}
         <SearchButton />
       </div>
 
@@ -261,7 +272,7 @@ export default function Navigation() {
               </Link>
 
               {/* Dropdowns */}
-              {dropdowns.map((d) => (
+              {visibleDropdowns.map((d) => (
                 <div key={d.label} className="border-b border-slate-100">
                   <button
                     onClick={() => setExpandedMobile(expandedMobile === d.label ? null : d.label)}
@@ -302,12 +313,14 @@ export default function Navigation() {
               ))}
 
               {/* Scandals */}
-              <Link
-                href="/scandals"
-                className="px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium"
-              >
-                🚨 Scandals
-              </Link>
+              {flags.scandals && (
+                <Link
+                  href="/scandals"
+                  className="px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium"
+                >
+                  🚨 Scandals
+                </Link>
+              )}
             </nav>
           </div>
         </>

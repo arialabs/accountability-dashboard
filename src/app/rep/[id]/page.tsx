@@ -15,6 +15,7 @@ import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced"
 import RepresentativeImage from "@/components/RepresentativeImage";
 import SocialShare from "@/components/SocialShare";
 import ConflictOfInterestSection from "@/components/ConflictOfInterestSection";
+import { FeatureGate } from "@/components/FeatureGate";
 import keyVotesData from "@/data/key-votes.json";
 import positionsData from "@/data/positions.json";
 
@@ -258,26 +259,28 @@ export default async function RepPage({ params }: { params: { id: string } }) {
             <ConflictOfInterestSection conflicts={conflicts} memberName={member.full_name} />
 
             {/* Key Votes Record */}
-            <MemberVotingRecord
-              bioguideId={member.bioguide_id}
-              memberName={member.full_name}
-              chamber={member.chamber === "house" ? "House" : "Senate"}
-              keyVotes={keyVotesData as unknown as Array<{
-                id: string;
-                congress: number;
-                chamber: "House" | "Senate";
-                rollnumber: number;
-                date: string;
-                bill: string;
-                title: string;
-                description: string;
-                category: string;
-                yea_count: number;
-                nay_count: number;
-                result: "Passed" | "Failed" | "Unknown";
-                votes: Record<string, string>;
-              }>}
-            />
+            <FeatureGate flag="keyVoteRecord">
+              <MemberVotingRecord
+                bioguideId={member.bioguide_id}
+                memberName={member.full_name}
+                chamber={member.chamber === "house" ? "House" : "Senate"}
+                keyVotes={keyVotesData as unknown as Array<{
+                  id: string;
+                  congress: number;
+                  chamber: "House" | "Senate";
+                  rollnumber: number;
+                  date: string;
+                  bill: string;
+                  title: string;
+                  description: string;
+                  category: string;
+                  yea_count: number;
+                  nay_count: number;
+                  result: "Passed" | "Failed" | "Unknown";
+                  votes: Record<string, string>;
+                }>}
+              />
+            </FeatureGate>
 
             {/* Policy Positions: Says vs Does (Vote-Based) */}
             <VoteBasedPositions 
@@ -305,10 +308,12 @@ export default async function RepPage({ params }: { params: { id: string } }) {
             />
 
             {/* Stock Trades */}
-            <StockTradesSection 
-              trades={stockTrades} 
-              memberName={member.full_name} 
-            />
+            <FeatureGate flag="stockTrades">
+              <StockTradesSection 
+                trades={stockTrades} 
+                memberName={member.full_name} 
+              />
+            </FeatureGate>
 
             {/* Financial Disclosures */}
             <FinancialDisclosuresSection 
@@ -327,17 +332,19 @@ export default async function RepPage({ params }: { params: { id: string } }) {
           {/* Sidebar (1/3 width) */}
           <aside className="space-y-8">
             {/* Position-to-Vote Alignment (Enhanced) */}
-            {alignmentEnhanced ? (
-              <AlignmentScoreCardEnhanced 
-                alignment={alignmentEnhanced} 
-                ranking={alignmentRankingEnhanced}
-              />
-            ) : (
-              <AlignmentScoreCard 
-                alignment={alignment} 
-                ranking={alignmentRanking}
-              />
-            )}
+            <FeatureGate flag="alignmentScore">
+              {alignmentEnhanced ? (
+                <AlignmentScoreCardEnhanced 
+                  alignment={alignmentEnhanced} 
+                  ranking={alignmentRankingEnhanced}
+                />
+              ) : (
+                <AlignmentScoreCard 
+                  alignment={alignment} 
+                  ranking={alignmentRanking}
+                />
+              )}
+            </FeatureGate>
 
             {/* Committee Memberships */}
             <CommitteeMemberships committees={committees} />
