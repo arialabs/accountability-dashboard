@@ -27,6 +27,10 @@ export interface Member {
   party_alignment_pct: number;
   ideology_score: number | null;
   votes_cast: number;
+  
+  // Senate-specific fields
+  senate_class?: "I" | "II" | "III" | null;
+  next_election?: number | null;
 }
 
 // ==================== Committee Data ====================

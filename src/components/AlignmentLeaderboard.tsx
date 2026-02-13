@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
 import { getLeaderboard, type LeaderboardEntry } from '@/lib/leaderboard';
 
 function PartyBadge({ party }: { party: string }) {
@@ -13,6 +16,18 @@ function PartyBadge({ party }: { party: string }) {
   return (
     <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${colors[party as keyof typeof colors] || 'bg-slate-100 text-slate-700'}`}>
       {names[party as keyof typeof names] || party}
+    </span>
+  );
+}
+
+function ChamberBadge({ chamber }: { chamber: 'House' | 'Senate' }) {
+  return (
+    <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${
+      chamber === 'House' 
+        ? 'bg-slate-100 text-slate-700' 
+        : 'bg-indigo-100 text-indigo-700'
+    }`}>
+      {chamber === 'House' ? 'H' : 'S'}
     </span>
   );
 }
@@ -55,8 +70,9 @@ function LeaderboardRow({ entry, rank, type }: { entry: LeaderboardEntry; rank: 
         <p className="font-semibold text-slate-900 truncate group-hover:text-blue-600 transition-colors">
           {entry.name}
         </p>
-        <p className="text-xs text-slate-500">
-          {entry.chamber} • {entry.state}
+        <p className="text-xs text-slate-500 flex items-center gap-1.5">
+          <ChamberBadge chamber={entry.chamber} />
+          <span>{entry.state}</span>
         </p>
       </div>
       <PartyBadge party={entry.party} />
@@ -66,7 +82,21 @@ function LeaderboardRow({ entry, rank, type }: { entry: LeaderboardEntry; rank: 
 }
 
 export default function AlignmentLeaderboard() {
-  const leaderboard = getLeaderboard(5);
+  const [chamberFilter, setChamberFilter] = useState<'all' | 'house' | 'senate'>('all');
+  const allLeaderboard = getLeaderboard(100); // Get more to filter from
+  
+  // Filter by chamber
+  const leaderboard = {
+    topAligned: allLeaderboard.topAligned
+      .filter(entry => chamberFilter === 'all' || entry.chamber.toLowerCase() === chamberFilter)
+      .slice(0, 5),
+    bottomAligned: allLeaderboard.bottomAligned
+      .filter(entry => chamberFilter === 'all' || entry.chamber.toLowerCase() === chamberFilter)
+      .slice(0, 5),
+    averageScore: allLeaderboard.averageScore,
+    totalMembers: allLeaderboard.totalMembers,
+    membersWithData: allLeaderboard.membersWithData
+  };
   
   return (
     <section className="py-16 md:py-24 bg-white">
@@ -82,6 +112,40 @@ export default function AlignmentLeaderboard() {
             <span>📊 {leaderboard.membersWithData} members analyzed</span>
             <span>•</span>
             <span>📈 Average: {leaderboard.averageScore}% alignment</span>
+          </div>
+          
+          {/* Chamber Filter */}
+          <div className="mt-6 flex items-center justify-center gap-2">
+            <button
+              onClick={() => setChamberFilter('all')}
+              className={`px-4 py-2 rounded-lg font-medium text-sm transition ${
+                chamberFilter === 'all' 
+                  ? 'bg-slate-900 text-white' 
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              All
+            </button>
+            <button
+              onClick={() => setChamberFilter('house')}
+              className={`px-4 py-2 rounded-lg font-medium text-sm transition ${
+                chamberFilter === 'house' 
+                  ? 'bg-slate-900 text-white' 
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              House
+            </button>
+            <button
+              onClick={() => setChamberFilter('senate')}
+              className={`px-4 py-2 rounded-lg font-medium text-sm transition ${
+                chamberFilter === 'senate' 
+                  ? 'bg-indigo-600 text-white' 
+                  : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
+              }`}
+            >
+              Senate
+            </button>
           </div>
         </div>
         
