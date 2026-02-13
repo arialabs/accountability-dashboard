@@ -330,11 +330,16 @@ function CongressContent() {
                     }`}>
                       {member.party === "D" ? "D" : member.party === "R" ? "R" : "I"}
                     </span>
+                    <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${
+                      member.chamber === "house" 
+                        ? "bg-slate-100 text-slate-700" 
+                        : "bg-indigo-100 text-indigo-700"
+                    }`}>
+                      {member.chamber === "house" ? "H" : "S"}
+                    </span>
                     <span>
                       {member.state}{member.district ? `-${member.district}` : ""}
                     </span>
-                    <span className="text-slate-400">•</span>
-                    <span>{member.chamber === "house" ? "House" : "Senate"}</span>
                   </div>
                 </div>
                 
