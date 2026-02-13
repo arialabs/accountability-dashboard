@@ -14,6 +14,7 @@ import AlignmentScoreCard from "@/components/AlignmentScoreCard";
 import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced";
 import RepresentativeImage from "@/components/RepresentativeImage";
 import SocialShare from "@/components/SocialShare";
+import ConflictOfInterestSection from "@/components/ConflictOfInterestSection";
 import keyVotesData from "@/data/key-votes.json";
 import positionsData from "@/data/positions.json";
 
@@ -252,6 +253,9 @@ export default async function RepPage({ params }: { params: { id: string } }) {
           <div className="lg:col-span-2 space-y-8">
             {/* Campaign Finance - Now the main focus */}
             <DonorAnalysisSection finance={finance} />
+
+            {/* Potential Conflicts of Interest */}
+            <ConflictOfInterestSection conflicts={conflicts} memberName={member.full_name} />
 
             {/* Key Votes Record */}
             <MemberVotingRecord
