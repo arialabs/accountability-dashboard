@@ -58,6 +58,51 @@ export default function ExecutiveBranch() {
         </div>
       </section>
 
+      {/* DOGE Section - Featured */}
+      <section className="py-12 bg-amber-50 border-b-2 border-amber-200">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-xs font-bold bg-red-100 text-red-700 px-3 py-1 rounded-full">NEW</span>
+            <h2 className="text-2xl font-black text-slate-900">Department of Government Efficiency</h2>
+          </div>
+
+          <Link
+            href="/executive/doge"
+            className="block bg-white rounded-3xl border-2 border-amber-300 p-8 shadow-sm hover:shadow-xl hover:border-red-400 transition-all duration-300 group"
+          >
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/440px-Elon_Musk_Royal_Society_%28crop2%29.jpg"
+                alt="Elon Musk"
+                className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white flex-shrink-0"
+              />
+
+              <div className="flex-1 text-center md:text-left">
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-2">
+                  <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">
+                    🐕 DOGE
+                  </span>
+                  <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-red-100 text-red-700">
+                    DISBANDED
+                  </span>
+                  <span className="text-slate-500 text-sm">Jan — Nov 2025</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-black text-slate-900 group-hover:text-amber-600 transition-colors">
+                  Elon Musk
+                </h3>
+                <p className="text-slate-600 mt-1">
+                  352K workers affected · $206B claimed savings · 65+ lawsuits · Spending still rose $248B
+                </p>
+              </div>
+
+              <div className="text-amber-600 font-semibold group-hover:translate-x-1 transition-transform">
+                View Full Report →
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Vice President */}
       <section className="py-12 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
