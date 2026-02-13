@@ -1,17 +1,58 @@
 import Link from "next/link";
 import promiseData from "@/data/trump-promises.json";
 
-type PromiseStatus = "kept" | "broken" | "in_progress" | "compromised";
+type ImpactLevel = "positive" | "negative" | "mixed" | "in_progress";
 
-const statusConfig: Record<PromiseStatus, { label: string; color: string; bg: string; icon: string }> = {
-  kept: { label: "Kept", color: "text-green-700", bg: "bg-green-100", icon: "✅" },
-  broken: { label: "Broken", color: "text-red-700", bg: "bg-red-100", icon: "❌" },
-  in_progress: { label: "In Progress", color: "text-amber-700", bg: "bg-amber-100", icon: "🔄" },
-  compromised: { label: "Compromised", color: "text-orange-700", bg: "bg-orange-100", icon: "⚠️" },
+interface PolicyAction {
+  id: string;
+  text: string;
+  category: string;
+  status: string;
+  source_url?: string;
+  updates?: Array<{
+    date: string;
+    note: string;
+    source: string;
+  }>;
+  who_benefits?: string[];
+  who_harmed?: string[];
+  public_opinion?: string;
+  impact_analysis?: {
+    workers: string;
+    middle_class: string;
+    wealthy: string;
+    corporations: string;
+    environment: string;
+  };
+}
+
+function calculateImpactLevel(action: PolicyAction): ImpactLevel {
+  if (action.status === "in_progress") return "in_progress";
+  
+  const benefits = action.who_benefits?.length || 0;
+  const harms = action.who_harmed?.length || 0;
+  
+  if (benefits > harms * 1.5) return "positive";
+  if (harms > benefits * 1.5) return "negative";
+  return "mixed";
+}
+
+const impactConfig: Record<ImpactLevel, { label: string; color: string; bg: string; icon: string }> = {
+  positive: { label: "Net Benefit", color: "text-green-700", bg: "bg-green-100", icon: "✓" },
+  negative: { label: "Net Harm", color: "text-red-700", bg: "bg-red-100", icon: "⚠" },
+  mixed: { label: "Mixed Impact", color: "text-amber-700", bg: "bg-amber-100", icon: "±" },
+  in_progress: { label: "In Progress", color: "text-blue-700", bg: "bg-blue-100", icon: "🔄" },
 };
 
 export default function PresidentPage() {
   const { president, promises, summary } = promiseData;
+  
+  // Calculate impact-based stats
+  const impactStats = promises.reduce((acc, action) => {
+    const level = calculateImpactLevel(action as PolicyAction);
+    acc[level] = (acc[level] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
   
   return (
     <div className="min-h-screen bg-white">
@@ -44,42 +85,45 @@ export default function PresidentPage() {
         </div>
       </section>
 
-      {/* Promise Tracker Summary */}
+      {/* Impact Analysis Summary */}
       <section className="py-12 bg-slate-50 border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-8 text-center">
-            Campaign Promise Tracker
+          <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-2 text-center">
+            Policy Impact Analysis
           </h2>
+          <p className="text-center text-slate-600 mb-8 max-w-2xl mx-auto">
+            Tracking the real-world impact of presidential actions on Americans
+          </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm text-center">
-              <div className="text-4xl font-black text-green-600 mb-1">{summary.kept}</div>
-              <div className="text-sm font-semibold text-slate-600 uppercase tracking-wider">Kept</div>
+              <div className="text-4xl font-black text-green-600 mb-1">{impactStats.positive || 0}</div>
+              <div className="text-sm font-semibold text-slate-600 uppercase tracking-wider">Net Benefit</div>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm text-center">
-              <div className="text-4xl font-black text-red-600 mb-1">{summary.broken}</div>
-              <div className="text-sm font-semibold text-slate-600 uppercase tracking-wider">Broken</div>
+              <div className="text-4xl font-black text-red-600 mb-1">{impactStats.negative || 0}</div>
+              <div className="text-sm font-semibold text-slate-600 uppercase tracking-wider">Net Harm</div>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm text-center">
-              <div className="text-4xl font-black text-amber-600 mb-1">{summary.in_progress}</div>
-              <div className="text-sm font-semibold text-slate-600 uppercase tracking-wider">In Progress</div>
+              <div className="text-4xl font-black text-amber-600 mb-1">{impactStats.mixed || 0}</div>
+              <div className="text-sm font-semibold text-slate-600 uppercase tracking-wider">Mixed Impact</div>
             </div>
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm text-center">
               <div className="text-4xl font-black text-slate-400 mb-1">{summary.total}</div>
-              <div className="text-sm font-semibold text-slate-600 uppercase tracking-wider">Total</div>
+              <div className="text-sm font-semibold text-slate-600 uppercase tracking-wider">Total Actions</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Promise List */}
+      {/* Policy Actions List */}
       <section className="py-12">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-            <h2 className="text-2xl font-black text-slate-900">All Promises</h2>
+            <h2 className="text-2xl font-black text-slate-900">Policy Actions & Impact</h2>
             <div className="flex gap-2 flex-wrap">
-              {Object.entries(statusConfig).map(([status, config]) => (
-                <span key={status} className={`px-3 py-1 rounded-full text-xs font-semibold ${config.bg} ${config.color}`}>
+              {Object.entries(impactConfig).map(([level, config]) => (
+                <span key={level} className={`px-3 py-1 rounded-full text-xs font-semibold ${config.bg} ${config.color}`}>
                   {config.icon} {config.label}
                 </span>
               ))}
@@ -87,33 +131,36 @@ export default function PresidentPage() {
           </div>
           
           <div className="space-y-4">
-            {promises.map((promise) => {
-              const config = statusConfig[promise.status as PromiseStatus];
+            {promises.map((action) => {
+              const impactLevel = calculateImpactLevel(action as PolicyAction);
+              const config = impactConfig[impactLevel];
+              const typedAction = action as PolicyAction;
+              
               return (
                 <div 
-                  key={promise.id}
+                  key={action.id}
                   className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div className="flex flex-col md:flex-row md:items-start gap-4">
-                    {/* Status Badge */}
+                    {/* Impact Badge */}
                     <div className={`flex-shrink-0 px-4 py-2 rounded-xl ${config.bg} ${config.color} font-bold text-sm flex items-center gap-2`}>
                       <span>{config.icon}</span>
                       <span>{config.label}</span>
                     </div>
                     
-                    {/* Promise Content */}
+                    {/* Action Content */}
                     <div className="flex-1">
                       <h3 className="text-lg font-bold text-slate-900 mb-2">
-                        {promise.text}
+                        {action.text}
                       </h3>
                       
                       <div className="flex items-center gap-3 mb-3">
                         <span className="px-2 py-1 rounded bg-slate-100 text-slate-600 text-xs font-medium">
-                          {promise.category}
+                          {action.category}
                         </span>
-                        {promise.source_url && (
+                        {action.source_url && (
                           <a 
-                            href={promise.source_url}
+                            href={action.source_url}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-xs text-blue-600 hover:underline"
@@ -123,10 +170,45 @@ export default function PresidentPage() {
                         )}
                       </div>
                       
+                      {/* Impact Analysis */}
+                      {(typedAction.who_benefits || typedAction.who_harmed) && (
+                        <div className="grid md:grid-cols-2 gap-4 mb-3">
+                          {typedAction.who_benefits && typedAction.who_benefits.length > 0 && (
+                            <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                              <div className="text-xs font-bold text-green-700 uppercase mb-2">
+                                ✓ Who Benefits
+                              </div>
+                              <div className="flex flex-wrap gap-1">
+                                {typedAction.who_benefits.map((group, idx) => (
+                                  <span key={idx} className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs font-medium">
+                                    {group}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                          
+                          {typedAction.who_harmed && typedAction.who_harmed.length > 0 && (
+                            <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                              <div className="text-xs font-bold text-red-700 uppercase mb-2">
+                                ⚠ Who's Harmed
+                              </div>
+                              <div className="flex flex-wrap gap-1">
+                                {typedAction.who_harmed.map((group, idx) => (
+                                  <span key={idx} className="px-2 py-1 bg-red-100 text-red-700 rounded text-xs font-medium">
+                                    {group}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                      
                       {/* Updates */}
-                      {promise.updates && promise.updates.length > 0 && (
+                      {action.updates && action.updates.length > 0 && (
                         <div className="mt-4 pl-4 border-l-2 border-slate-200">
-                          {promise.updates.map((update, idx) => (
+                          {action.updates.map((update, idx) => (
                             <div key={idx} className="mb-2 last:mb-0">
                               <div className="text-xs text-slate-500 mb-1">{update.date}</div>
                               <p className="text-sm text-slate-700">{update.note}</p>

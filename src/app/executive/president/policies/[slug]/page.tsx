@@ -80,30 +80,30 @@ export default function PolicyDetailPage({ params }: { params: { slug: string } 
             
             <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
               <div className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">
-                Promise Alignment
+                Campaign Alignment
               </div>
               <div className="text-3xl font-black text-slate-900 mb-1">
                 {policy.promise_alignment}%
               </div>
               <div className="text-sm text-slate-600">
-                {policy.promise_alignment >= 80 ? 'Mostly kept' :
-                 policy.promise_alignment >= 60 ? 'Partially kept' : 'Broken'}
+                {policy.promise_alignment >= 80 ? 'High alignment' :
+                 policy.promise_alignment >= 60 ? 'Moderate alignment' : 'Low alignment'}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Promise vs Reality */}
+      {/* Policy vs Campaign Rhetoric */}
       <section className="py-12 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <h2 className="text-2xl font-black text-slate-900 mb-6">Promise vs Reality</h2>
+          <h2 className="text-2xl font-black text-slate-900 mb-6">Policy vs Campaign Rhetoric</h2>
           
           <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
-            {/* Promise Alignment Bar */}
+            {/* Campaign Alignment Bar */}
             <div className="mb-6">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-medium text-slate-700">Promise Alignment</span>
+                <span className="text-sm font-medium text-slate-700">Campaign Alignment</span>
                 <span className="text-sm font-bold text-slate-900">{policy.promise_alignment}%</span>
               </div>
               <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
@@ -113,7 +113,7 @@ export default function PolicyDetailPage({ params }: { params: { slug: string } 
                 />
               </div>
               <p className="text-xs text-slate-600 mt-1">
-                Policy {policy.promise_alignment >= 80 ? 'closely' : policy.promise_alignment >= 60 ? 'partially' : 'minimally'} matched campaign promise
+                Policy {policy.promise_alignment >= 80 ? 'closely' : policy.promise_alignment >= 60 ? 'partially' : 'minimally'} matched campaign rhetoric
               </p>
             </div>
             
@@ -154,7 +154,7 @@ export default function PolicyDetailPage({ params }: { params: { slug: string } 
             <div className="mt-6 space-y-4">
               <div>
                 <div className="text-xs font-semibold text-slate-500 uppercase mb-2">
-                  What Was Promised
+                  Campaign Rhetoric
                 </div>
                 <div className="text-sm text-slate-700 bg-slate-50 rounded p-3 border border-slate-200">
                   "{policy.what_was_promised}"
@@ -163,7 +163,7 @@ export default function PolicyDetailPage({ params }: { params: { slug: string } 
               
               <div>
                 <div className="text-xs font-semibold text-slate-500 uppercase mb-2">
-                  What Actually Happened
+                  Actual Policy Actions
                 </div>
                 <div className="text-sm text-slate-700 bg-slate-50 rounded p-3 border border-slate-200">
                   <ul className="space-y-1">
