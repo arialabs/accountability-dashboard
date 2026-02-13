@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/judicial', label: 'Judicial' },
   { href: '/bills', label: 'Bills' },
   { href: '/scandals', label: 'Scandals' },
+  { href: '/deep-dives', label: 'Deep Dives' },
 ];
 
 export default function HamburgerMenu() {
