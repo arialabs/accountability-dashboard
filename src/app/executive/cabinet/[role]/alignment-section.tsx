@@ -96,21 +96,21 @@ export default function AlignmentSection({ memberId }: AlignmentSectionProps) {
           
           <div className="bg-white rounded-xl p-4 shadow-sm">
             <div className="text-3xl font-black text-green-600 mb-1">
-              {stats.promises_aligned}
+              {stats.promises_aligned || stats.policies_aligned || 0}
             </div>
             <div className="text-sm text-slate-600">Aligned</div>
           </div>
           
           <div className="bg-white rounded-xl p-4 shadow-sm">
             <div className="text-3xl font-black text-orange-600 mb-1">
-              {stats.promises_neutral}
+              {stats.promises_neutral || stats.policies_neutral || 0}
             </div>
             <div className="text-sm text-slate-600">Neutral</div>
           </div>
           
           <div className="bg-white rounded-xl p-4 shadow-sm">
             <div className="text-3xl font-black text-red-600 mb-1">
-              {stats.promises_conflicted}
+              {stats.promises_conflicted || stats.policies_conflicted || 0}
             </div>
             <div className="text-sm text-slate-600">Conflicted</div>
           </div>
@@ -120,7 +120,7 @@ export default function AlignmentSection({ memberId }: AlignmentSectionProps) {
       {/* Detailed Alignment by Promise */}
       <div className="bg-white rounded-2xl border border-slate-200 p-8">
         <h2 className="text-2xl font-black text-slate-900 mb-6">
-          Alignment with Presidential Promises
+          Alignment with Presidential Policy Agenda
         </h2>
         
         <div className="space-y-4">
