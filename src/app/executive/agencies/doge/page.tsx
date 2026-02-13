@@ -85,7 +85,7 @@ export default function DogePage() {
   const { leader, overview, keyStats, timeline, conflictsOfInterest, lawsuits, affectedAgencies } = dogeData;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-amber-50 via-red-50 to-white border-b border-slate-200 py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -113,7 +113,7 @@ export default function DogePage() {
                   Jan — Nov 2025
                 </span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900 mb-2">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900 mb-2">
                 {leader.name}
               </h1>
               <p className="text-xl text-slate-700 font-semibold mb-1">

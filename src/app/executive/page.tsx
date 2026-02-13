@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function ExecutiveBranch() {
   
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-slate-50 to-white border-b border-slate-200 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
           <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-4xl mb-6 shadow-xl mx-auto">
             🏛️
           </div>
-          <h1 className="text-5xl md:text-6xl font-black leading-tight tracking-tight text-slate-900 mb-4">
+          <h1 className="text-3xl md:text-6xl font-black leading-tight tracking-tight text-slate-900 mb-4">
             Executive Branch
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -126,7 +126,7 @@ export default function ExecutiveBranch() {
                   Elon Musk
                 </h3>
                 <p className="text-slate-600 mt-1">
-                  352K workers affected · $206B claimed savings · 65+ lawsuits · Spending still rose $248B
+                  352K workers affected · 65+ lawsuits · $206B claimed savings
                 </p>
               </div>
 
