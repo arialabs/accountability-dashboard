@@ -1,6 +1,34 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import AlignmentLeaderboard from "@/components/AlignmentLeaderboard";
 import EpsteinFilesCard from "@/components/EpsteinFilesCard";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
+
+export const metadata: Metadata = {
+  title: "Accountability Dashboard | Track Congressional Say vs. Do",
+  description: "Tracking power. Protecting democracy. Monitor all three branches of government with transparent, publicly-sourced data. See who funds them, how they vote, and who they really represent.",
+  openGraph: {
+    title: "Accountability Dashboard | Track Congressional Say vs. Do",
+    description: "Monitor all three branches of government with transparent data. See who funds them, how they vote, and who they really represent.",
+    type: "website",
+    url: siteUrl,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Accountability Dashboard - Tracking power, protecting democracy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Accountability Dashboard | Track Congressional Say vs. Do",
+    description: "Monitor all three branches of government with transparent data.",
+    images: ["/og-image.png"],
+  },
+};
 
 export default function Home() {
   return (

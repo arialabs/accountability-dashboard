@@ -1,0 +1,16 @@
+{
+  "name": "Accountability Dashboard",
+  "short_name": "Accountability",
+  "description": "Track Congressional accountability, campaign finance, and voting records",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

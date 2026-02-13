@@ -13,6 +13,7 @@ import VoteBasedPositions from "@/components/VoteBasedPositions";
 import AlignmentScoreCard from "@/components/AlignmentScoreCard";
 import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced";
 import RepresentativeImage from "@/components/RepresentativeImage";
+import SocialShare from "@/components/SocialShare";
 import keyVotesData from "@/data/key-votes.json";
 import positionsData from "@/data/positions.json";
 
@@ -31,6 +32,60 @@ export default async function RepPage({ params }: { params: { id: string } }) {
 
   // Get real finance data from OpenFEC API
   const finance = await getMemberFinance(params.id);
+  
+  // Detect conflicts of interest between donors and votes
+  let conflicts: Array<{
+    industry: string;
+    industryDisplayName: string;
+    icon: string;
+    donationAmount: number;
+    voteCategory: string;
+    voteTitle: string;
+    voteBill: string;
+    voteDate: string;
+    votePosition: "Yea" | "Nay" | "Present";
+    expectedVote: "Yea" | "Nay";
+    benefitsIndustry: boolean;
+    conflictSeverity: "high" | "medium" | "low";
+    explanation: string;
+  }> = [];
+  
+  if (finance && finance.top_industries && finance.top_industries.length > 0) {
+    const { detectConflicts } = await import("@/lib/conflict-detector");
+    const { aggregateByIndustry } = await import("@/lib/industry-classifier");
+    const { getScheduleAContributions, searchCandidateByName } = await import("@/lib/fec");
+    
+    // Fetch detailed contribution data for industry classification
+    try {
+      const office = member.chamber === 'house' ? 'H' : 'S';
+      const candidate = await searchCandidateByName(
+        member.first_name,
+        member.last_name,
+        office
+      );
+      
+      if (candidate) {
+        const scheduleAData = await getScheduleAContributions(candidate.candidate_id, undefined, 500);
+        const industries = aggregateByIndustry(scheduleAData);
+        
+        // Get member's votes from keyVotesData
+        const memberVotes = (keyVotesData as any[])
+          .filter(vote => vote.votes && vote.votes[params.id])
+          .map(vote => ({
+            bill: vote.bill,
+            title: vote.title,
+            category: vote.category,
+            date: vote.date,
+            vote: vote.votes[params.id] as "Yea" | "Nay" | "Present" | "Not Voting",
+            description: vote.description,
+          }));
+        
+        conflicts = detectConflicts(industries, memberVotes);
+      }
+    } catch (error) {
+      console.error("Error detecting conflicts:", error);
+    }
+  }
 
   // Committee data will be integrated from Congress.gov API in a future update
   const committees: Array<{
@@ -282,6 +337,13 @@ export default async function RepPage({ params }: { params: { id: string } }) {
 
             {/* Committee Memberships */}
             <CommitteeMemberships committees={committees} />
+
+            {/* Social Share */}
+            <SocialShare
+              title={`${member.full_name} - Accountability Dashboard`}
+              text={`Check out ${member.full_name}'s voting record, campaign finance, and Say vs. Do Score${alignmentEnhanced ? ` of ${alignmentEnhanced.alignment_score}%` : ""} on the Accountability Dashboard.`}
+              url={`${siteUrl}/rep/${member.bioguide_id}`}
+            />
 
             {/* External Links */}
             <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-lg transition-all duration-300">

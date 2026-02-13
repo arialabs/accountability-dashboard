@@ -3,12 +3,68 @@ import DevelopmentBanner from "@/components/DevelopmentBanner";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
+
 export const metadata: Metadata = {
-  title: "Accountability Dashboard",
-  description: "Tracking power. Protecting democracy. Monitor all three branches of government with transparent data.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Accountability Dashboard | Track Congressional Say vs. Do",
+    template: "%s | Accountability Dashboard",
+  },
+  description: "Tracking power. Protecting democracy. Monitor all three branches of government with transparent, publicly-sourced data. See who funds them, how they vote, and who they really represent.",
+  keywords: [
+    "congressional accountability",
+    "campaign finance",
+    "voting records",
+    "political transparency",
+    "democracy",
+    "government oversight",
+    "representative tracking",
+    "PAC donations",
+    "political corruption",
+    "say vs do",
+  ],
+  authors: [{ name: "Aria Labs" }],
+  creator: "Aria Labs",
+  publisher: "Aria Labs",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    title: "Accountability Dashboard | Track Congressional Say vs. Do",
+    description: "Monitor all three branches of government with transparent data. See who funds them, how they vote, and who they really represent.",
+    siteName: "Accountability Dashboard",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Accountability Dashboard - Tracking power, protecting democracy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Accountability Dashboard | Track Congressional Say vs. Do",
+    description: "Monitor all three branches of government with transparent data. See who funds them, how they vote, and who they really represent.",
+    images: ["/og-image.png"],
+    creator: "@arialabs",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: "/favicon.svg",
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -16,8 +72,51 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Accountability Dashboard",
+    description: "Tracking power. Protecting democracy. Monitor all three branches of government with transparent data.",
+    url: siteUrl,
+    logo: `${siteUrl}/logo.png`,
+    sameAs: [
+      "https://twitter.com/arialabs",
+      "https://github.com/jeremyspofford/accountability-dashboard",
+    ],
+    foundingDate: "2026",
+    founder: {
+      "@type": "Organization",
+      name: "Aria Labs",
+    },
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Accountability Dashboard",
+    url: siteUrl,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteUrl}/congress?search={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className="min-h-screen">
         <DevelopmentBanner />
         <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
