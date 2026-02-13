@@ -154,7 +154,8 @@ export async function getMemberFinance(bioguideId: string): Promise<CampaignFina
 
   // Try to fetch from FEC API
   try {
-    const { getDonorBreakdown, searchCandidateByName, getCandidateFinancials } = await import('./fec');
+    const { getDonorBreakdown, searchCandidateByName, getCandidateFinancials, getScheduleAContributions } = await import('./fec');
+    const { aggregateByIndustry } = await import('./industry-classifier');
     
     const office = member.chamber === 'house' ? 'H' : 'S';
     const candidate = await searchCandidateByName(
@@ -168,15 +169,25 @@ export async function getMemberFinance(bioguideId: string): Promise<CampaignFina
       return getMemberFinanceStatic(bioguideId);
     }
 
-    const [breakdown, financials] = await Promise.all([
+    const [breakdown, financials, scheduleAData] = await Promise.all([
       getDonorBreakdown(candidate.candidate_id),
       getCandidateFinancials(candidate.candidate_id),
+      getScheduleAContributions(candidate.candidate_id, undefined, 500),
     ]);
 
     if (!breakdown) {
       console.warn(`No finance data found for ${member.full_name}`);
       return getMemberFinanceStatic(bioguideId);
     }
+
+    // Classify contributions by industry
+    const industries = aggregateByIndustry(scheduleAData);
+    const topIndustries = industries.slice(0, 10).map(ind => ({
+      industry: ind.displayName,
+      total: ind.total,
+      pac_amount: 0, // Not available from Schedule A directly
+      individual_amount: ind.total,
+    }));
 
     // Transform to our CampaignFinance format
     const finance: CampaignFinance = {
@@ -195,7 +206,7 @@ export async function getMemberFinance(bioguideId: string): Promise<CampaignFina
       small_donor_percentage: breakdown.small_donor_percentage,
       large_donor_percentage: breakdown.large_donor_percentage,
       top_contributors: breakdown.top_contributors,
-      top_industries: [], // Would need OpenSecrets API
+      top_industries: topIndustries,
     };
 
     return finance;

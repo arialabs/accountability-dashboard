@@ -207,6 +207,49 @@ export async function getTopContributors(
 }
 
 /**
+ * Get detailed Schedule A contributions for industry analysis
+ */
+export async function getScheduleAContributions(
+  candidateId: string,
+  cycle?: number,
+  limit = 100
+): Promise<Array<{
+  contributor_name: string;
+  contributor_employer: string | null;
+  contributor_occupation: string | null;
+  contribution_receipt_amount: number;
+  contribution_receipt_date: string;
+  committee_name: string;
+}>> {
+  const targetCycle = cycle || new Date().getFullYear();
+  
+  const response = await fetchFECData<FECApiResponse<any>>(
+    `/schedules/schedule_a/`,
+    {
+      two_year_transaction_period: targetCycle.toString(),
+      contributor_id: candidateId,
+      sort: '-contribution_receipt_amount',
+      per_page: limit.toString(),
+    },
+    30 * 60 * 1000 // Cache for 30 minutes
+  );
+
+  if (!response.success || !response.data?.results) {
+    console.error('Error fetching Schedule A contributions:', response.error);
+    return [];
+  }
+
+  return response.data.results.map((contrib: any) => ({
+    contributor_name: contrib.contributor_name || 'Unknown',
+    contributor_employer: contrib.contributor_employer || null,
+    contributor_occupation: contrib.contributor_occupation || null,
+    contribution_receipt_amount: contrib.contribution_receipt_amount || 0,
+    contribution_receipt_date: contrib.contribution_receipt_date || '',
+    committee_name: contrib.committee?.name || 'Unknown Committee',
+  }));
+}
+
+/**
  * Get comprehensive donor breakdown for a candidate
  */
 export async function getDonorBreakdown(
