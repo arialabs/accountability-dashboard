@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import AlignmentLeaderboard from "@/components/AlignmentLeaderboard";
 import EpsteinFilesCard from "@/components/EpsteinFilesCard";
-import { LeaderboardGate, JudicialGate } from "@/components/HomepageFeatureGates";
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
 
@@ -63,9 +63,9 @@ export default function Home() {
       </section>
 
       {/* Alignment Leaderboard */}
-      <LeaderboardGate>
+      
         <AlignmentLeaderboard />
-      </LeaderboardGate>
+      
 
       {/* Three Branches Section */}
       <section className="py-20 md:py-32 bg-slate-50">
@@ -145,7 +145,7 @@ export default function Home() {
             </Link>
 
             {/* Judicial Branch */}
-            <JudicialGate>
+            
             <Link 
               href="/judicial"
               className="group relative bg-white rounded-3xl p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 border-2 border-slate-200 hover:border-blue-400 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-500/20"
@@ -176,7 +176,7 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            </JudicialGate>
+            
           </div>
         </div>
       </section>
@@ -244,14 +244,14 @@ export default function Home() {
             >
               🏢 Executive →
             </Link>
-            <JudicialGate>
+            
               <Link 
                 href="/judicial"
                 className="inline-flex items-center justify-center px-10 py-4 bg-white border-2 border-slate-900 hover:bg-slate-50 text-slate-900 font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-lg"
               >
                 ⚖️ Judicial →
               </Link>
-            </JudicialGate>
+            
           </div>
         </div>
       </section>

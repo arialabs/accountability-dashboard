@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useFeatureFlag } from '@/context/FeatureFlagContext';
 
 interface NavDropdown {
   label: string;
@@ -12,44 +11,37 @@ interface NavDropdown {
   items: { href: string; label: string; badge?: string }[];
 }
 
-const getDropdowns = (showJudicial: boolean): NavDropdown[] => {
-  const dropdowns: NavDropdown[] = [
-    {
-      label: 'Legislative',
-      icon: '🏛️',
-      href: '/congress',
-      items: [
-        { href: '/house', label: 'House of Representatives' },
-        { href: '/senate', label: 'Senate' },
-        { href: '/bills', label: 'Bills & Votes' },
-      ],
-    },
-    {
-      label: 'Executive',
-      icon: '🏢',
-      href: '/executive',
-      items: [
-        { href: '/executive/president', label: 'President' },
-        { href: '/executive/cabinet', label: 'Cabinet' },
-        { href: '/executive/agencies/doge', label: '🐕 DOGE (Federal Agencies)' },
-      ],
-    },
-  ];
-
-  if (showJudicial) {
-    dropdowns.push({
-      label: 'Judicial',
-      icon: '⚖️',
-      href: '/judicial',
-      items: [
-        { href: '/judicial/supreme-court', label: 'Supreme Court' },
-        { href: '/judicial/federal-courts', label: 'Federal Courts' },
-      ],
-    });
-  }
-
-  return dropdowns;
-};
+const dropdowns: NavDropdown[] = [
+  {
+    label: 'Legislative',
+    icon: '🏛️',
+    href: '/congress',
+    items: [
+      { href: '/house', label: 'House of Representatives' },
+      { href: '/senate', label: 'Senate' },
+      { href: '/bills', label: 'Bills & Votes' },
+    ],
+  },
+  {
+    label: 'Executive',
+    icon: '🏢',
+    href: '/executive',
+    items: [
+      { href: '/executive/president', label: 'President' },
+      { href: '/executive/cabinet', label: 'Cabinet' },
+      { href: '/executive/agencies/doge', label: '🐕 DOGE (Federal Agencies)' },
+    ],
+  },
+  {
+    label: 'Judicial',
+    icon: '⚖️',
+    href: '/judicial',
+    items: [
+      { href: '/judicial/supreme-court', label: 'Supreme Court' },
+      { href: '/judicial/federal-courts', label: 'Federal Courts' },
+    ],
+  },
+];
 
 function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
   const [open, setOpen] = useState(false);
@@ -151,8 +143,6 @@ export default function Navigation() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
   const pathname = usePathname();
-  const showJudicial = useFeatureFlag('judicial');
-  const dropdowns = getDropdowns(showJudicial);
 
   // Close menu on route change
   useEffect(() => {

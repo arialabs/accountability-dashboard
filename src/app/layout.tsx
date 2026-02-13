@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import DevelopmentBanner from "@/components/DevelopmentBanner";
 import Navigation from "@/components/Navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { FeatureFlagProvider } from "@/context/FeatureFlagContext";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
@@ -120,7 +119,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen">
-        <FeatureFlagProvider>
+        
           <DevelopmentBanner />
           <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,7 +140,7 @@ export default function RootLayout({
               <p className="text-sm sm:text-base">Democracy shouldn't be paywalled. This is open source.</p>
             </div>
           </footer>
-        </FeatureFlagProvider>
+        
       </body>
     </html>
   );

@@ -15,7 +15,7 @@ import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced"
 import RepresentativeImage from "@/components/RepresentativeImage";
 import SocialShare from "@/components/SocialShare";
 import ConflictOfInterestSection from "@/components/ConflictOfInterestSection";
-import { FeatureGate } from "@/components/FeatureGate";
+
 import keyVotesData from "@/data/key-votes.json";
 import positionsData from "@/data/positions.json";
 
@@ -259,7 +259,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
             <ConflictOfInterestSection conflicts={conflicts} memberName={member.full_name} />
 
             {/* Key Votes Record */}
-            <FeatureGate flag="keyVoteRecord">
+            
               <MemberVotingRecord
                 bioguideId={member.bioguide_id}
                 memberName={member.full_name}
@@ -280,7 +280,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
                   votes: Record<string, string>;
                 }>}
               />
-            </FeatureGate>
+            
 
             {/* Policy Positions: Says vs Does (Vote-Based) */}
             <VoteBasedPositions 
@@ -308,12 +308,12 @@ export default async function RepPage({ params }: { params: { id: string } }) {
             />
 
             {/* Stock Trades */}
-            <FeatureGate flag="stockTrades">
+            
               <StockTradesSection 
                 trades={stockTrades} 
                 memberName={member.full_name} 
               />
-            </FeatureGate>
+            
 
             {/* Financial Disclosures */}
             <FinancialDisclosuresSection 
@@ -332,7 +332,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
           {/* Sidebar (1/3 width) */}
           <aside className="space-y-8">
             {/* Position-to-Vote Alignment (Enhanced) */}
-            <FeatureGate flag="alignmentScore">
+            
               {alignmentEnhanced ? (
                 <AlignmentScoreCardEnhanced 
                   alignment={alignmentEnhanced} 
@@ -344,7 +344,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
                   ranking={alignmentRanking}
                 />
               )}
-            </FeatureGate>
+            
 
             {/* Committee Memberships */}
             <CommitteeMemberships committees={committees} />
