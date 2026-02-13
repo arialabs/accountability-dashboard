@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { dogeData } from "@/data/doge";
 import type { Metadata } from "next";
+import ExpandableStaffRoster from "@/components/ExpandableStaffRoster";
 
 export const metadata: Metadata = {
   title: "DOGE Tracker — Department of Government Efficiency",
@@ -220,6 +221,13 @@ export default function DogePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Staff Roster */}
+      <section className="py-12 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <ExpandableStaffRoster staff={dogeData.staff} />
         </div>
       </section>
 

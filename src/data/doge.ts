@@ -50,6 +50,23 @@ export interface AffectedAgency {
   status: 'severely_cut' | 'partially_cut' | 'targeted' | 'partially_restored';
 }
 
+export interface StaffMember {
+  id: string;
+  name: string;
+  role: string;
+  age?: number;
+  background: string;
+  previousEmployer?: string[];
+  tenure: {
+    start: string;
+    end?: string;
+  };
+  notableActions?: string[];
+  controversies?: string[];
+  conflictOfInterest?: boolean;
+  sources: string[];
+}
+
 export interface DogeProfile {
   leader: {
     name: string;
@@ -78,6 +95,7 @@ export interface DogeProfile {
   conflictsOfInterest: ConflictOfInterest[];
   lawsuits: LawsuitInfo[];
   affectedAgencies: AffectedAgency[];
+  staff: StaffMember[];
   keyStats: {
     label: string;
     value: string;
@@ -638,6 +656,206 @@ export const dogeData: DogeProfile = {
         "Benefits processing delays",
       ],
       status: "partially_cut",
+    },
+  ],
+  staff: [
+    {
+      id: "staff-001",
+      name: "Vivek Ramaswamy",
+      role: "Co-Leader (departed)",
+      age: 39,
+      background: "Entrepreneur, former 2024 Republican presidential candidate, biotech entrepreneur",
+      previousEmployer: ["Roivant Sciences (founder)", "Strive Asset Management (founder)"],
+      tenure: {
+        start: "2025-01-20",
+        end: "2025-01-21",
+      },
+      notableActions: [
+        "Co-appointed with Musk to lead DOGE",
+        "Left within 24 hours of Trump's inauguration",
+        "Departed to run for Ohio governor",
+      ],
+      controversies: [
+        "Friction with Musk and other DOGE leadership over competing visions",
+        "Left after stating American work culture 'venerated mediocrity over excellence'",
+        "MAGA supporters' backlash contributed to departure",
+        "Conflicting focus between DOGE duties and political ambitions",
+      ],
+      sources: [
+        "https://www.axios.com/2025/01/20/vivek-ramaswamy-leaving-doge-ohio-governor",
+        "https://www.theguardian.com/us-news/2025/jan/21/vivek-ramaswamy-quits-doge-elon-musk",
+        "https://en.wikipedia.org/wiki/Vivek_Ramaswamy",
+      ],
+    },
+    {
+      id: "staff-002",
+      name: "Akash Bobba",
+      role: "Software Engineer",
+      age: 21,
+      background: "UC Berkeley student (Management, Entrepreneurship, and Technology program), former tech intern",
+      previousEmployer: ["Meta (intern)", "Palantir (intern)", "Bridgewater Associates (intern)"],
+      tenure: {
+        start: "2025-01-20",
+      },
+      notableActions: [
+        "Part of 6-person 'DOGE kids' team tasked with accessing government systems",
+        "Gained access to Treasury Department systems",
+      ],
+      controversies: [
+        "One of youngest DOGE members (21) given access to sensitive federal data",
+        "Fast-tracked into government role unvetted",
+      ],
+      sources: [
+        "https://www.ndtv.com/world-news/meet-akash-bobba-indian-origin-engineer-with-key-role-in-elon-musks-doge-7629644",
+        "https://www.newindianexpress.com/world/2025/Feb/04/young-engineers-in-elon-musks-doge-agency-spark-backlash",
+      ],
+    },
+    {
+      id: "staff-003",
+      name: "Edward Coristine",
+      role: "Software Engineer",
+      age: 19,
+      background: "Northeastern University student from New Canaan, Connecticut",
+      previousEmployer: ["Previous internships at tech companies"],
+      tenure: {
+        start: "2025-01-20",
+      },
+      notableActions: [
+        "Youngest member of the 'DOGE kids' team",
+        "Tasked with gaining access to government systems including Treasury",
+      ],
+      controversies: [
+        "At 19, youngest DOGE member given access to sensitive federal data",
+        "Fast-tracked into role without standard security clearance vetting",
+      ],
+      sources: [
+        "https://www.ctpost.com/connecticut/article/edward-coristine-doge-elon-musk-new-canaan-20149280.php",
+        "https://www.thedailybeast.com/the-doge-musketeers-the-secret-team-elon-wants-to-keep-in-the-shadows/",
+      ],
+    },
+    {
+      id: "staff-004",
+      name: "Luke Farritor",
+      role: "Software Engineer",
+      age: 23,
+      background: "University of Nebraska dropout, former SpaceX intern, Thiel Fellow",
+      previousEmployer: ["SpaceX (intern)", "Nat Friedman (worked for Silicon Valley entrepreneur)"],
+      tenure: {
+        start: "2025-01-20",
+      },
+      notableActions: [
+        "Part of 'DOGE kids' team accessing government systems",
+      ],
+      controversies: [
+        "Dropped out of college to work in tech",
+        "Fast-tracked into sensitive government role",
+      ],
+      conflictOfInterest: true,
+      sources: [
+        "https://www.moneycontrol.com/world/doge-squad-meet-the-six-young-engineers-in-elon-musk-s-secretive-unit-article-12975364.html",
+        "https://www.lemonde.fr/en/pixels/article/2025/02/07/who-are-the-doge-kids",
+      ],
+    },
+    {
+      id: "staff-005",
+      name: "Gautier Cole Killian",
+      role: "Software Engineer",
+      age: 24,
+      background: "Recent college graduate or young professional",
+      tenure: {
+        start: "2025-01-20",
+      },
+      notableActions: [
+        "Part of 'DOGE kids' team",
+      ],
+      sources: [
+        "https://www.foxnews.com/politics/meet-young-team-software-engineers-slashing-government-waste-doge-report",
+      ],
+    },
+    {
+      id: "staff-006",
+      name: "Gavin Kliger",
+      role: "Software Engineer",
+      age: 24,
+      background: "Young software engineer",
+      tenure: {
+        start: "2025-01-20",
+      },
+      notableActions: [
+        "Part of 'DOGE kids' team",
+      ],
+      controversies: [
+        "Reportedly coerced Consumer Financial Protection Bureau staff into a 36-hour shift (May 2025)",
+      ],
+      sources: [
+        "https://en.wikipedia.org/wiki/Network_of_the_Department_of_Government_Efficiency",
+        "https://www.foxnews.com/politics/meet-young-team-software-engineers-slashing-government-waste-doge-report",
+      ],
+    },
+    {
+      id: "staff-007",
+      name: "Ethan Shaotran",
+      role: "Software Engineer",
+      age: 22,
+      background: "Harvard University senior (as of September 2024)",
+      tenure: {
+        start: "2025-01-20",
+      },
+      notableActions: [
+        "Part of 'DOGE kids' team accessing government systems",
+      ],
+      controversies: [
+        "Still a college student when given access to sensitive federal data",
+      ],
+      sources: [
+        "https://www.thedailybeast.com/the-doge-musketeers-the-secret-team-elon-wants-to-keep-in-the-shadows/",
+      ],
+    },
+    {
+      id: "staff-008",
+      name: "Marko Elez",
+      role: "Software Engineer",
+      age: 25,
+      background: "Former SpaceX, X (Twitter), and xAI engineer",
+      previousEmployer: ["SpaceX", "X (Twitter)", "Starlink", "xAI"],
+      tenure: {
+        start: "2025-01-20",
+        end: "2025-02-07",
+      },
+      notableActions: [
+        "Assigned to Treasury Department and Department of Labor",
+        "Gained access to Treasury payment systems",
+      ],
+      controversies: [
+        "Violated Treasury policy by emailing unencrypted spreadsheet with personal information",
+        "Resigned after racist social media posts were exposed by Wall Street Journal",
+        "Court restricted his ability to share Treasury data",
+        "Elon Musk promised to rehire him after resignation",
+        "Later found working at xAI after DOGE resignation",
+      ],
+      conflictOfInterest: true,
+      sources: [
+        "https://apnews.com/article/trump-doge-marko-elez-musk-vance-racist-posts-959272aca0eece7385cdbc470930bf37",
+        "https://en.wikipedia.org/wiki/Marko_Elez",
+        "https://www.theguardian.com/us-news/2025/feb/07/musk-doge-staffer-quits",
+        "https://uk.pcmag.com/security/157136/doge-staffer-violated-treasury-department-data-sharing-policies",
+      ],
+    },
+    {
+      id: "staff-009",
+      name: "Tom Krause",
+      role: "Senior Advisor",
+      background: "CEO of Cloud Software Group Inc.",
+      previousEmployer: ["Cloud Software Group (CEO)"],
+      tenure: {
+        start: "2025-02-04",
+      },
+      notableActions: [
+        "Brought into Treasury Department via DOGE",
+      ],
+      sources: [
+        "https://www.bloomberg.com/news/articles/2025-02-04/us-treasury-brings-in-two-members-from-musk-s-doge-team",
+      ],
     },
   ],
 };
