@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen antialiased">
+    <div className="min-h-screen antialiased overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-24 md:py-32 lg:py-40">
         {/* Modern gradient mesh background */}
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-slate-900 mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-slate-900 mb-8">
             Accountability
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600">
               Dashboard
