@@ -74,6 +74,31 @@ describe('alignment', () => {
       const result = isVoteAligned('Favors', 'Yea', 'positive');
       expect(result).toBe(true);
     });
+
+    // Bug #37 regression tests: Voting Nay on harmful bills should align with progressive stance
+    it('returns true when progressive stance votes Nay to block negative bill', () => {
+      // Example: Rep supports healthcare, votes Nay on bill to rescind Medicaid funding
+      const result = isVoteAligned('Strongly Supports', 'Nay', 'negative');
+      expect(result).toBe(true);
+    });
+
+    it('returns false when progressive stance votes Yea for negative bill', () => {
+      // Example: Rep claims to support healthcare but votes Yea to cut Medicaid
+      const result = isVoteAligned('Strongly Supports', 'Yea', 'negative');
+      expect(result).toBe(false);
+    });
+
+    it('returns true when conservative stance votes Yea for negative bill', () => {
+      // Example: Rep opposes ObamaCare, votes Yea to rescind ACA funding
+      const result = isVoteAligned('Strongly Opposes', 'Yea', 'negative');
+      expect(result).toBe(true);
+    });
+
+    it('returns false when conservative stance votes Nay on negative bill', () => {
+      // Example: Rep opposes healthcare expansion but votes Nay to block cuts
+      const result = isVoteAligned('Strongly Opposes', 'Nay', 'negative');
+      expect(result).toBe(false);
+    });
   });
 
   describe('calculateMemberAlignment', () => {

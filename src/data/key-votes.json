@@ -117,7 +117,7 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "immigrants",
@@ -135,7 +135,7 @@
       "Immigrants",
       "Low Income Communities"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-678",
@@ -7759,31 +7759,31 @@
     "beneficiaries": [
       {
         "group": "workers",
-        "impact": "benefits"
-      },
-      {
-        "group": "immigrants",
         "impact": "harms"
       },
       {
-        "group": "military_defense",
+        "group": "immigrants",
         "impact": "benefits"
+      },
+      {
+        "group": "military_defense",
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "seniors",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "middle_class",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -7795,7 +7795,7 @@
       "Elderly",
       "Disabled"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-657",
@@ -9875,31 +9875,31 @@
     "beneficiaries": [
       {
         "group": "workers",
-        "impact": "benefits"
-      },
-      {
-        "group": "immigrants",
         "impact": "harms"
       },
       {
-        "group": "military_defense",
+        "group": "immigrants",
         "impact": "benefits"
+      },
+      {
+        "group": "military_defense",
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "seniors",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "middle_class",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -9911,7 +9911,7 @@
       "Elderly",
       "Disabled"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-643",
@@ -10031,11 +10031,11 @@
     "beneficiaries": [
       {
         "group": "general_public",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-644",
@@ -10155,11 +10155,11 @@
     "beneficiaries": [
       {
         "group": "general_public",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-House-307",
@@ -14513,7 +14513,7 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "general_public",
@@ -15139,7 +15139,7 @@
     "beneficiaries": [
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "general_public",
@@ -15149,7 +15149,7 @@
     "harmed": [
       "Domestic Programs"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-570",
@@ -15647,31 +15647,31 @@
     "beneficiaries": [
       {
         "group": "workers",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "environment",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "students",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "middle_class",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -15687,7 +15687,7 @@
       "Environment",
       "Renewable Energy"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-544",
@@ -16055,31 +16055,31 @@
     "beneficiaries": [
       {
         "group": "workers",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "environment",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "students",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "middle_class",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -16095,7 +16095,7 @@
       "Environment",
       "Renewable Energy"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-542",
@@ -21877,7 +21877,7 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
@@ -22333,7 +22333,7 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
@@ -22787,7 +22787,7 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
@@ -23242,7 +23242,7 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
@@ -25646,7 +25646,7 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
@@ -26150,7 +26150,7 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "general_public",
@@ -26158,7 +26158,7 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-480",
@@ -26278,11 +26278,11 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "general_public",
@@ -26292,7 +26292,7 @@
     "harmed": [
       "Domestic Programs"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-454",
@@ -26908,11 +26908,11 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "general_public",
@@ -26922,7 +26922,7 @@
     "harmed": [
       "Domestic Programs"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-431",
@@ -27294,11 +27294,11 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "general_public",
@@ -27308,7 +27308,7 @@
     "harmed": [
       "Domestic Programs"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-423",
@@ -27428,11 +27428,11 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "general_public",
@@ -27442,7 +27442,7 @@
     "harmed": [
       "Domestic Programs"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-425",
@@ -33357,11 +33357,11 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-362",
@@ -33481,11 +33481,11 @@
     "beneficiaries": [
       {
         "group": "seniors",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "consumers",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -33493,7 +33493,7 @@
       "Middle Class",
       "Healthcare Patients"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-365",
@@ -33613,11 +33613,11 @@
     "beneficiaries": [
       {
         "group": "environment",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-366",
@@ -33737,11 +33737,11 @@
     "beneficiaries": [
       {
         "group": "environment",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-368",
@@ -34112,14 +34112,14 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
       "Wealthy",
       "Insurance Companies"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-345",
@@ -34239,7 +34239,7 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "immigrants",
@@ -34247,7 +34247,7 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-352",
@@ -34367,7 +34367,7 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
@@ -42951,13 +42951,13 @@
     "beneficiaries": [
       {
         "group": "workers",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
       "Corporations"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-185",
@@ -43201,14 +43201,14 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
       "Wealthy",
       "Insurance Companies"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-188",
@@ -43328,11 +43328,11 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "general_public",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -43340,7 +43340,7 @@
       "Middle Class",
       "Healthcare Patients"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-189",
@@ -43460,7 +43460,7 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -43468,7 +43468,7 @@
       "Middle Class",
       "Healthcare Patients"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-190",
@@ -43588,15 +43588,15 @@
     "beneficiaries": [
       {
         "group": "wealthy",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "corporations",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "negative"
+    "publicBenefit": "positive"
   },
   {
     "id": "119-Senate-191",
@@ -43840,18 +43840,18 @@
     "beneficiaries": [
       {
         "group": "seniors",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
       "Wealthy",
       "Insurance Companies"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-172",
@@ -43971,22 +43971,22 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
       "Wealthy",
       "Insurance Companies"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-174",
@@ -44106,7 +44106,7 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
@@ -44482,7 +44482,7 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
@@ -44606,7 +44606,7 @@
     "beneficiaries": [
       {
         "group": "seniors",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -44614,7 +44614,7 @@
       "Elderly",
       "Disabled"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-164",
@@ -47804,11 +47804,11 @@
     "beneficiaries": [
       {
         "group": "immigrants",
-        "impact": "harms"
+        "impact": "benefits"
       },
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
@@ -48264,7 +48264,7 @@
     "beneficiaries": [
       {
         "group": "immigrants",
-        "impact": "harms"
+        "impact": "benefits"
       }
     ],
     "harmed": [],
@@ -50026,11 +50026,11 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "general_public",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -50038,7 +50038,7 @@
       "Middle Class",
       "Healthcare Patients"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-75",
@@ -50158,15 +50158,15 @@
     "beneficiaries": [
       {
         "group": "seniors",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-76",
@@ -50286,7 +50286,7 @@
     "beneficiaries": [
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
@@ -50658,18 +50658,18 @@
     "beneficiaries": [
       {
         "group": "middle_class",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "working_class",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
       "Wealthy",
       "Insurance Companies"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-81",
@@ -51040,11 +51040,11 @@
     "beneficiaries": [
       {
         "group": "general_public",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -51052,7 +51052,7 @@
       "Middle Class",
       "Healthcare Patients"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-85",
@@ -51296,15 +51296,15 @@
     "beneficiaries": [
       {
         "group": "seniors",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "consumers",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-87",
@@ -51548,15 +51548,15 @@
     "beneficiaries": [
       {
         "group": "wealthy",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "corporations",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "negative"
+    "publicBenefit": "positive"
   },
   {
     "id": "119-Senate-63",
@@ -51676,19 +51676,19 @@
     "beneficiaries": [
       {
         "group": "wealthy",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "corporations",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "negative"
+    "publicBenefit": "positive"
   },
   {
     "id": "119-Senate-64",
@@ -51932,23 +51932,23 @@
     "beneficiaries": [
       {
         "group": "immigrants",
-        "impact": "harms"
+        "impact": "benefits"
       },
       {
         "group": "military_defense",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "veterans",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-68",
@@ -52316,18 +52316,18 @@
     "beneficiaries": [
       {
         "group": "seniors",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
       "Wealthy",
       "Insurance Companies"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-71",
@@ -52447,15 +52447,15 @@
     "beneficiaries": [
       {
         "group": "wealthy",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "corporations",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
@@ -52463,7 +52463,7 @@
       "Middle Class",
       "Healthcare Patients"
     ],
-    "publicBenefit": "negative"
+    "publicBenefit": "positive"
   },
   {
     "id": "119-Senate-72",
@@ -52583,18 +52583,18 @@
     "beneficiaries": [
       {
         "group": "low_income",
-        "impact": "benefits"
+        "impact": "harms"
       },
       {
         "group": "general_public",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [
       "Wealthy",
       "Insurance Companies"
     ],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-58",
@@ -54415,11 +54415,11 @@
     "beneficiaries": [
       {
         "group": "general_public",
-        "impact": "benefits"
+        "impact": "harms"
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "negative"
   },
   {
     "id": "119-Senate-10",

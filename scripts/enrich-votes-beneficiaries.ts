@@ -33,6 +33,13 @@ interface BeneficiaryImpact {
   impact: "benefits" | "harms" | "mixed";
 }
 
+// Negative action keywords that reverse the impact of legislation
+const NEGATIVE_ACTIONS = [
+  "rescind", "repeal", "defund", "eliminate", "cut", "reduce", "block", 
+  "prevent", "prohibit", "restrict", "limit", "oppose", "reject", "deny",
+  "terminate", "end", "cancel", "revoke", "overturn", "strike down"
+];
+
 // Keywords and patterns for analyzing legislation
 const BENEFIT_PATTERNS: Record<string, { groups: BeneficiaryGroup[], impact: "benefits" | "harms" }[]> = {
   // Tax-related
@@ -114,6 +121,9 @@ const BENEFIT_PATTERNS: Record<string, { groups: BeneficiaryGroup[], impact: "be
 function analyzeVote(bill: string, title: string, description: string): BeneficiaryImpact[] {
   const searchText = `${bill} ${title} ${description}`.toLowerCase();
   
+  // Check for negative action keywords
+  const hasNegativeAction = NEGATIVE_ACTIONS.some(action => searchText.includes(action));
+  
   const impacts: BeneficiaryImpact[] = [];
   const seenGroups = new Set<string>();
   
@@ -121,12 +131,18 @@ function analyzeVote(bill: string, title: string, description: string): Benefici
     if (searchText.includes(pattern.toLowerCase())) {
       for (const effect of effects) {
         for (const group of effect.groups) {
-          const key = `${group}-${effect.impact}`;
+          // Reverse impact if there's a negative action word
+          let finalImpact = effect.impact;
+          if (hasNegativeAction && finalImpact !== "mixed") {
+            finalImpact = finalImpact === "benefits" ? "harms" : "benefits";
+          }
+          
+          const key = `${group}-${finalImpact}`;
           if (!seenGroups.has(key)) {
             seenGroups.add(key);
             impacts.push({
               group,
-              impact: effect.impact,
+              impact: finalImpact,
             });
           }
         }
@@ -157,20 +173,27 @@ async function main() {
     vote.beneficiaries = beneficiaries;
     
     // Determine overall sentiment
-    const proPublic = beneficiaries.filter(b => 
-      ["middle_class", "working_class", "low_income", "workers", "consumers", 
-       "environment", "seniors", "students", "veterans", "general_public"].includes(b.group) &&
-      b.impact === "benefits"
-    ).length;
+    // Count positive and negative indicators
+    let positiveCount = 0;
+    let negativeCount = 0;
     
-    const antiPublic = beneficiaries.filter(b =>
-      ["corporations", "wealthy", "wall_street", "fossil_fuel_industry"].includes(b.group) &&
-      b.impact === "benefits"
-    ).length;
+    const proPublicGroups = ["middle_class", "working_class", "low_income", "workers", "consumers", 
+                             "environment", "seniors", "students", "veterans", "general_public"];
+    const antiPublicGroups = ["corporations", "wealthy", "wall_street", "fossil_fuel_industry"];
     
-    if (proPublic > antiPublic) {
+    for (const b of beneficiaries) {
+      const isProPublic = proPublicGroups.includes(b.group);
+      const isAntiPublic = antiPublicGroups.includes(b.group);
+      
+      if (isProPublic && b.impact === "benefits") positiveCount++;
+      if (isProPublic && b.impact === "harms") negativeCount++;
+      if (isAntiPublic && b.impact === "benefits") negativeCount++;
+      if (isAntiPublic && b.impact === "harms") positiveCount++;
+    }
+    
+    if (positiveCount > negativeCount && positiveCount > 0) {
       vote.publicBenefit = "positive";
-    } else if (antiPublic > proPublic) {
+    } else if (negativeCount > positiveCount && negativeCount > 0) {
       vote.publicBenefit = "negative";
     } else {
       vote.publicBenefit = "mixed";
