@@ -22,14 +22,15 @@
         }
       ],
       "who_benefits": [
-        "Domestic Manufacturers",
-        "Protected Industries"
+        "Domestic steel/aluminum workers",
+        "US manufacturers competing with Chinese imports",
+        "Defense supply chain companies"
       ],
       "who_harmed": [
-        "Consumers",
-        "Importers",
-        "Exporters",
-        "Middle Class"
+        "American consumers (higher prices on electronics, clothing)",
+        "Farmers (retaliatory tariffs on soybeans, pork)",
+        "Small businesses (higher supply chain costs)",
+        "Retailers dependent on Chinese goods"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -54,14 +55,14 @@
         }
       ],
       "who_benefits": [
-        "Domestic Manufacturers",
-        "Protected Industries"
+        "Domestic manufacturers (reduced foreign competition)",
+        "Workers in protected industries"
       ],
       "who_harmed": [
-        "Consumers",
-        "Importers",
-        "Exporters",
-        "Middle Class"
+        "American consumers (estimated $1,200-2,600/year higher costs)",
+        "Import-dependent businesses",
+        "Low-income households (spend higher % on goods)",
+        "Export industries (retaliatory tariffs)"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -86,14 +87,14 @@
         }
       ],
       "who_benefits": [
-        "Domestic Manufacturers",
-        "Protected Industries"
+        "US auto parts manufacturers",
+        "Domestic agricultural producers competing with imports"
       ],
       "who_harmed": [
-        "Consumers",
-        "Importers",
-        "Exporters",
-        "Middle Class"
+        "Auto industry workers (integrated supply chains)",
+        "American consumers (higher car/food prices)",
+        "Border communities (reduced cross-border trade)",
+        "US exporters to Canada/Mexico"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -112,10 +113,13 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Domestic manufacturers in trade-deficit sectors",
+        "Workers in import-competing industries"
       ],
       "who_harmed": [
-        "Critics"
+        "Consumers (fewer affordable imported goods)",
+        "Export-dependent industries (trade partner retaliation)",
+        "Multinational corporations with global supply chains"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -134,10 +138,14 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Manufacturing workers in Rust Belt states",
+        "Communities with closed factories",
+        "Domestic producers"
       ],
       "who_harmed": [
-        "Critics"
+        "Consumers (higher prices from domestic production)",
+        "Companies reliant on global supply chains",
+        "Workers in export industries facing retaliation"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -162,13 +170,14 @@
         }
       ],
       "who_benefits": [
-        "Construction Contractors",
-        "Immigration Hardliners"
+        "Border Patrol agents (infrastructure support)",
+        "Border communities (reduced unauthorized crossings)"
       ],
       "who_harmed": [
-        "Border Communities",
-        "Environment",
-        "Taxpayers"
+        "US taxpayers ($25B+ estimated cost)",
+        "Private landowners (eminent domain seizures)",
+        "Wildlife and ecosystems (habitat fragmentation)",
+        "Immigrant families seeking asylum"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -193,14 +202,15 @@
         }
       ],
       "who_benefits": [
-        "Immigration Restrictionists",
-        "Private Detention Companies"
+        "Workers in low-wage industries (reduced labor competition)",
+        "Communities with strained public services"
       ],
       "who_harmed": [
-        "Immigrants",
-        "Immigrant Families",
-        "Agricultural Industry",
-        "Service Industry"
+        "Undocumented immigrants and their families (including US citizen children)",
+        "Agricultural industry (labor shortages)",
+        "Construction industry (workforce disruption)",
+        "Restaurant/hospitality sector",
+        "US taxpayers (enforcement costs estimated $100B+)"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -225,14 +235,13 @@
         }
       ],
       "who_benefits": [
-        "Immigration Restrictionists",
-        "Private Detention Companies"
+        "Immigration enforcement agencies (clearer legal framework)"
       ],
       "who_harmed": [
-        "Immigrants",
-        "Immigrant Families",
-        "Agricultural Industry",
-        "Service Industry"
+        "Children born in the US to non-citizen parents",
+        "Mixed-status families",
+        "Constitutional law precedent (14th Amendment)",
+        "State/local governments (administrative burden)"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -257,10 +266,14 @@
         }
       ],
       "who_benefits": [
-        "Supporters"
+        "Immigration courts (reduced backlog pressure)",
+        "Border communities (fewer asylum seekers waiting in US)"
       ],
       "who_harmed": [
-        "Critics"
+        "Asylum seekers (dangerous conditions in Mexican border cities)",
+        "Refugee families with children",
+        "Legal aid organizations",
+        "Mexico (burden of housing asylum seekers)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -279,10 +292,14 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Immigration enforcement agencies",
+        "Communities near processing centers"
       ],
       "who_harmed": [
-        "Critics"
+        "Asylum seekers awaiting hearings",
+        "US taxpayers (detention costs ~$150/day per person)",
+        "Private detention facility neighbors",
+        "Immigrant families separated during detention"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -301,10 +318,13 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Trafficking victims (deterrence effect if effective)",
+        "Border communities affected by cartel violence"
       ],
       "who_harmed": [
-        "Critics"
+        "Due process standards (expanded capital punishment)",
+        "Wrongly accused individuals",
+        "US taxpayers (death penalty cases cost 3x more than life sentences)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -323,10 +343,14 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "National security apparatus",
+        "Communities concerned about terrorism"
       ],
       "who_harmed": [
-        "Critics"
+        "Legal immigrants from targeted countries (delays, denials)",
+        "Refugee families fleeing persecution",
+        "US universities (reduced international enrollment)",
+        "Tech companies (restricted talent pipeline)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -345,10 +369,14 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Federal immigration enforcement (more cooperation)",
+        "ICE agents (expanded jurisdiction)"
       ],
       "who_harmed": [
-        "Critics"
+        "Undocumented crime victims (afraid to report)",
+        "Local police departments (reduced community trust)",
+        "City/state governments (loss of federal funding)",
+        "Public health systems (undocumented avoid hospitals)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -373,10 +401,15 @@
         }
       ],
       "who_benefits": [
-        "Supporters"
+        "Ukrainian civilians (if peace achieved)",
+        "US taxpayers (reduced military spending)",
+        "European energy markets (stability)"
       ],
       "who_harmed": [
-        "Critics"
+        "Ukrainian sovereignty (if territorial concessions required)",
+        "NATO allies (weakened alliance credibility)",
+        "Baltic states and Poland (emboldened Russia)",
+        "Global nonproliferation norms"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -395,13 +428,14 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Russia",
-        "Isolationists"
+        "US taxpayers (if allies increase spending)",
+        "European defense industries (more contracts)"
       ],
       "who_harmed": [
-        "NATO Allies",
-        "US Global Leadership",
-        "National Security"
+        "NATO allies (strained relationships)",
+        "Eastern European nations (security uncertainty)",
+        "US military bases in Europe (potential closures)",
+        "Global stability (weakened Western alliance)"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -420,10 +454,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "US national security interests",
+        "Domestic tech companies (reduced Chinese competition)",
+        "Taiwan (stronger deterrence)"
       ],
       "who_harmed": [
-        "Critics"
+        "US businesses operating in China",
+        "Consumers (higher prices on Chinese goods)",
+        "Global supply chains",
+        "Academic/research exchange programs"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -442,10 +481,14 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Israel (expanded diplomatic recognition)",
+        "Gulf Arab states (economic partnerships)",
+        "Regional trade networks"
       ],
       "who_harmed": [
-        "Critics"
+        "Palestinian civilians (sidelined from negotiations)",
+        "Palestinian statehood aspirations",
+        "Humanitarian organizations in Gaza/West Bank"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -464,10 +507,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Israeli security interests",
+        "Gulf state allies (Saudi Arabia, UAE)",
+        "US defense contractors"
       ],
       "who_harmed": [
-        "Critics"
+        "Iranian civilians (economic sanctions impact)",
+        "Nuclear nonproliferation framework",
+        "European allies invested in diplomacy",
+        "Global oil markets (supply disruption risk)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -486,10 +534,13 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "US defense industry (arms sales)",
+        "Allied nations meeting spending targets"
       ],
       "who_harmed": [
-        "Critics"
+        "Allies perceived as free-riding (strained relations)",
+        "Diplomatic corps (transactional approach undermines trust)",
+        "Long-term alliance stability"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -514,10 +565,14 @@
         }
       ],
       "who_benefits": [
-        "Supporters"
+        "American consumers (if successful)",
+        "Low-income households (most affected by inflation)",
+        "Fixed-income retirees"
       ],
       "who_harmed": [
-        "Critics"
+        "Federal Reserve independence (political pressure)",
+        "Businesses (if price controls imposed)",
+        "Workers (if achieved through recession/job losses)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -536,10 +591,14 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Tipped workers (servers, bartenders, valets)",
+        "Restaurant/hospitality employees",
+        "Gig workers who receive tips"
       ],
       "who_harmed": [
-        "Critics"
+        "Federal revenue ($100-250B over 10 years)",
+        "Non-tipped low-wage workers (no equivalent benefit)",
+        "Social Security/Medicare funding (reduced payroll taxes)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -558,10 +617,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Hourly workers who work overtime",
+        "First responders",
+        "Healthcare workers",
+        "Manufacturing shift workers"
       ],
       "who_harmed": [
-        "Critics"
+        "Federal revenue (estimated $680B over 10 years)",
+        "Salaried workers (no equivalent benefit)",
+        "Employers (incentive to overwork rather than hire)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -580,10 +644,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Retirees receiving Social Security",
+        "Fixed-income seniors",
+        "Disabled beneficiaries"
       ],
       "who_harmed": [
-        "Critics"
+        "Social Security Trust Fund (accelerated insolvency)",
+        "Future retirees (reduced benefits sooner)",
+        "Federal deficit (estimated $1.5T over 10 years)",
+        "Younger workers funding the system"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -602,11 +671,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Middle Class",
-        "Workers"
+        "Middle-class families (individual rate cuts preserved)",
+        "Small business owners (pass-through deductions)",
+        "Upper-income households (largest dollar benefit)"
       ],
       "who_harmed": [
-        "Government Revenue"
+        "Federal deficit (estimated $4.6T over 10 years)",
+        "Future taxpayers (debt burden)",
+        "Government services dependent on revenue",
+        "Low-income households (minimal benefit)"
       ],
       "public_opinion": "positive",
       "impact_analysis": {
@@ -625,15 +698,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Corporations",
-        "Wealthy",
-        "Top 1%"
+        "Large corporations",
+        "Shareholders and investors",
+        "Corporate executives (stock-based compensation)"
       ],
       "who_harmed": [
-        "Middle Class",
-        "Low Income",
-        "Government Services",
-        "National Debt"
+        "Federal revenue (hundreds of billions annually)",
+        "Public services (education, infrastructure)",
+        "Workers (wages haven't risen proportionally)",
+        "Small businesses (can't leverage same tax strategies)"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -652,14 +725,16 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Corporations",
-        "Business Owners"
+        "Large corporations (reduced compliance costs)",
+        "Financial industry",
+        "Energy companies",
+        "Real estate developers"
       ],
       "who_harmed": [
-        "Consumers",
-        "Workers",
-        "Public Safety",
-        "Environment"
+        "Consumers (fewer protections)",
+        "Workers (weakened safety/labor standards)",
+        "Environment (relaxed pollution controls)",
+        "Small investors (reduced financial oversight)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -678,10 +753,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Homebuyers (lower mortgage rates)",
+        "Businesses seeking loans",
+        "Existing borrowers refinancing debt"
       ],
       "who_harmed": [
-        "Critics"
+        "Federal Reserve independence (political interference)",
+        "Savers and retirees (lower returns)",
+        "Dollar stability (inflation risk)",
+        "Long-term economic planning (politicized monetary policy)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -706,10 +786,17 @@
         }
       ],
       "who_benefits": [
-        "Supporters"
+        "Oil and gas workers",
+        "Energy company shareholders",
+        "Petrochemical communities",
+        "Energy exporters"
       ],
       "who_harmed": [
-        "Critics"
+        "Communities near drilling sites (pollution, health)",
+        "Clean energy workers (reduced investment)",
+        "Public lands (habitat destruction)",
+        "Global climate goals",
+        "Coastal communities (long-term climate impact)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -734,14 +821,15 @@
         }
       ],
       "who_benefits": [
-        "Fossil Fuel Industry",
-        "Oil and Gas Companies"
+        "Fossil fuel companies (fewer emission restrictions)",
+        "Heavy industry (reduced compliance costs)"
       ],
       "who_harmed": [
-        "Environment",
-        "Future Generations",
-        "Public Health",
-        "Climate"
+        "Future generations (accelerated climate change)",
+        "Coastal communities (sea level rise)",
+        "Agricultural workers (extreme weather)",
+        "US clean energy industry (lost global leadership)",
+        "Public health (air quality decline)"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -760,14 +848,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Fossil Fuel Industry",
-        "Oil and Gas Companies"
+        "Oil companies (new drilling leases)",
+        "Alaska state revenue",
+        "Energy sector workers"
       ],
       "who_harmed": [
-        "Environment",
-        "Future Generations",
-        "Public Health",
-        "Climate"
+        "Gwich'in indigenous communities (sacred lands disrupted)",
+        "Arctic wildlife (caribou, polar bears)",
+        "Global climate (increased emissions)",
+        "Wilderness preservation advocates"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -792,10 +881,16 @@
         }
       ],
       "who_benefits": [
-        "Supporters"
+        "Traditional automakers (reduced transition pressure)",
+        "Gas station owners",
+        "Fossil fuel industry"
       ],
       "who_harmed": [
-        "Critics"
+        "EV manufacturers and workers",
+        "Clean energy jobs",
+        "Urban air quality (continued tailpipe emissions)",
+        "US auto competitiveness (China/Europe leading EV transition)",
+        "Consumers (fewer affordable EV options long-term)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -814,10 +909,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Domestic energy producers",
+        "Energy sector workers",
+        "National security (reduced foreign dependence)"
       ],
       "who_harmed": [
-        "Critics"
+        "Environmental regulations (rollbacks to boost production)",
+        "Communities near extraction sites",
+        "Renewable energy investment",
+        "Public lands and waterways"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -836,10 +936,16 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "State education agencies (more autonomy)",
+        "Private/charter school operators",
+        "Anti-federal-spending advocates"
       ],
       "who_harmed": [
-        "Critics"
+        "Students with disabilities (IDEA enforcement at risk)",
+        "Low-income students (Title I funding uncertainty)",
+        "Students relying on federal Pell Grants",
+        "Civil rights enforcement in schools",
+        "Rural school districts (federal support loss)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -858,10 +964,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Parents wanting traditional curriculum",
+        "Private schools (increased demand)"
       ],
       "who_harmed": [
-        "Critics"
+        "Teachers (restricted curriculum freedom)",
+        "LGBTQ+ students (reduced inclusion)",
+        "Students of color (limited discussion of systemic racism)",
+        "Academic freedom in universities",
+        "School librarians (book bans)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -880,10 +991,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Curriculum publishers (new materials contracts)",
+        "Parents preferring traditional narratives"
       ],
       "who_harmed": [
-        "Critics"
+        "Historical accuracy (sanitized narratives)",
+        "Students (incomplete understanding of history)",
+        "Teachers (mandated curriculum restrictions)",
+        "Indigenous communities (erased perspectives)",
+        "Academic historians"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -902,10 +1018,14 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "University administrators (more hiring flexibility)",
+        "Students (if poor teachers removed)"
       ],
       "who_harmed": [
-        "Critics"
+        "Professors (job insecurity, reduced academic freedom)",
+        "Controversial but valuable research (self-censorship)",
+        "University faculty recruitment (less attractive positions)",
+        "Academic whistleblowers (no protection)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -924,10 +1044,16 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Families with means to transport children",
+        "Private and religious schools (public funding)",
+        "Charter school operators"
       ],
       "who_harmed": [
-        "Critics"
+        "Public school systems (diverted funding)",
+        "Rural students (fewer alternatives available)",
+        "Low-income families (vouchers rarely cover full tuition)",
+        "Students with special needs (private schools can reject)",
+        "Separation of church and state"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -952,10 +1078,14 @@
         }
       ],
       "who_benefits": [
-        "Supporters"
+        "Employers (reduced compliance programs)",
+        "Applicants from non-targeted demographics"
       ],
       "who_harmed": [
-        "Critics"
+        "Women and minorities in workplace (reduced advancement programs)",
+        "Disabled workers (fewer accommodation initiatives)",
+        "Veterans (many DEI programs include veteran hiring)",
+        "Corporate diversity (reduced representation over time)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -974,14 +1104,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Wealthy",
-        "Insurance Companies"
+        "Healthy young adults (potentially lower premiums without mandate)",
+        "Health insurance companies (fewer coverage requirements)"
       ],
       "who_harmed": [
-        "Low Income",
-        "Middle Class",
-        "Pre-existing Conditions",
-        "20+ Million People"
+        "20+ million people losing health coverage",
+        "People with pre-existing conditions",
+        "Low-income families (Medicaid expansion loss)",
+        "Young adults on parents' insurance (under-26 provision)",
+        "Rural hospitals (uncompensated care increase)"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -1000,10 +1131,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Medicare beneficiaries (negotiated drug prices)",
+        "Seniors on expensive medications",
+        "Chronically ill patients",
+        "Uninsured Americans"
       ],
       "who_harmed": [
-        "Critics"
+        "Pharmaceutical companies (reduced revenue)",
+        "Pharmaceutical R&D investment (potentially reduced)",
+        "Pharma industry workers (possible layoffs)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1022,10 +1158,14 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Patients (informed healthcare decisions)",
+        "Self-pay patients (compare prices)",
+        "Employers (negotiate better insurance)"
       ],
       "who_harmed": [
-        "Critics"
+        "Hospitals with high markups (competitive pressure)",
+        "Health systems relying on price opacity",
+        "Administrative staff (compliance burden)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1044,14 +1184,14 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Wall Street",
-        "Investment Firms"
+        "Current Medicare beneficiaries",
+        "Seniors approaching retirement",
+        "Disabled individuals on Medicare"
       ],
       "who_harmed": [
-        "Elderly",
-        "Retirees",
-        "Disabled",
-        "Low Income"
+        "Younger workers (if funded through payroll tax increases)",
+        "Federal budget (growing Medicare costs)",
+        "Healthcare providers (if reimbursement rates cut)"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -1076,13 +1216,14 @@
         }
       ],
       "who_benefits": [
-        "Anti-Government Activists",
-        "Private Contractors"
+        "Taxpayers (if government efficiency increases)",
+        "Government accountability advocates"
       ],
       "who_harmed": [
-        "Federal Workers",
-        "Government Services",
-        "Public Sector"
+        "Career federal employees (job insecurity)",
+        "Government service recipients (disrupted programs)",
+        "Institutional knowledge (experienced staff departures)",
+        "Regulatory enforcement (weakened agencies)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1107,13 +1248,14 @@
         }
       ],
       "who_benefits": [
-        "Anti-Government Activists",
-        "Private Contractors"
+        "Political appointees (expanded authority)",
+        "Incoming administration (faster policy implementation)"
       ],
       "who_harmed": [
-        "Federal Workers",
-        "Government Services",
-        "Public Sector"
+        "Career civil servants (50,000+ reclassified, lose protections)",
+        "Government expertise (politicized hiring/firing)",
+        "Scientific agencies (political interference in research)",
+        "Whistleblowers (reduced job protections)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1132,10 +1274,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Political newcomers (more opportunities)",
+        "Voters (more choices, reduced entrenchment)",
+        "Anti-corruption advocates"
       ],
       "who_harmed": [
-        "Critics"
+        "Experienced legislators (forced retirement)",
+        "Institutional knowledge in Congress",
+        "Constituent services (less experienced representatives)",
+        "Lobbyists (gain influence over inexperienced members)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1154,10 +1301,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "General public (reduced corporate influence)",
+        "Small businesses (more level playing field)",
+        "Government transparency"
       ],
       "who_harmed": [
-        "Critics"
+        "K Street lobbying firms",
+        "Corporate political influence operations",
+        "Nonprofit advocacy groups (legitimate lobbying restricted)",
+        "Former government officials (career limitations)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1176,10 +1328,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Taxpayers (reduced government spending)",
+        "Private sector (less regulation)"
       ],
       "who_harmed": [
-        "Critics"
+        "Federal employees (job losses)",
+        "Veterans (VA service reductions)",
+        "Social Security recipients (longer wait times)",
+        "Rural communities (federal office closures)",
+        "Food/drug safety (fewer inspectors)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1198,10 +1355,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Communities receiving relocated offices (economic boost)",
+        "Taxpayers (lower real estate costs)",
+        "Federal workers in new locations (lower cost of living)"
       ],
       "who_harmed": [
-        "Critics"
+        "DC-area federal employees (forced relocation or resignation)",
+        "Agency effectiveness (transition disruption)",
+        "Experienced staff (many quit rather than relocate)",
+        "Interagency coordination (geographic separation)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1220,10 +1382,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Political figures under investigation (reduced scrutiny)",
+        "Executive branch (expanded authority over DOJ)"
       ],
       "who_harmed": [
-        "Critics"
+        "DOJ independence (political interference)",
+        "Rule of law (selective enforcement)",
+        "Career prosecutors (political pressure)",
+        "Ongoing investigations (premature termination)",
+        "Government accountability"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1248,13 +1415,15 @@
         }
       ],
       "who_benefits": [
-        "January 6 Defendants",
-        "Far Right"
+        "January 6 defendants and their families",
+        "Criminal justice reform advocates (if applied broadly)"
       ],
       "who_harmed": [
-        "Rule of Law",
-        "Police Officers",
-        "Democracy"
+        "Capitol Police officers injured on Jan 6",
+        "Congressional staff traumatized during attack",
+        "Rule of law (undermines consequences for political violence)",
+        "Future election security (reduces deterrence)",
+        "Families of those who died"
       ],
       "public_opinion": "negative",
       "impact_analysis": {
@@ -1273,10 +1442,16 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Border communities (reduced cartel violence)",
+        "Law enforcement agencies (increased resources)",
+        "Communities affected by fentanyl crisis"
       ],
       "who_harmed": [
-        "Critics"
+        "Mexican sovereignty (if military operations cross border)",
+        "US-Mexico diplomatic relations",
+        "Innocent civilians in conflict zones",
+        "US military personnel (new deployment risk)",
+        "Civil liberties (expanded surveillance powers)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1295,10 +1470,16 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Residents of high-crime neighborhoods",
+        "Police departments (increased funding)",
+        "Small business owners in affected areas"
       ],
       "who_harmed": [
-        "Critics"
+        "Communities of color (disproportionate policing)",
+        "Criminal justice reform efforts",
+        "Civil liberties (expanded police powers)",
+        "Nonviolent offenders (harsher sentencing)",
+        "Protest movements (chilling effect)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1317,10 +1498,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Urban residents in high-crime areas",
+        "Small business owners",
+        "Public transit users"
       ],
       "who_harmed": [
-        "Critics"
+        "Communities of color (over-policing risk)",
+        "Mental health services (punitive vs. treatment approach)",
+        "Juvenile offenders (harsher penalties)",
+        "Formerly incarcerated (reduced reentry programs)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1339,10 +1525,16 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Police officers (legal protection from lawsuits)",
+        "Police unions",
+        "Law enforcement recruitment"
       ],
       "who_harmed": [
-        "Critics"
+        "Victims of police misconduct (no legal recourse)",
+        "Communities of color (reduced accountability)",
+        "Police reform movement",
+        "Families of those killed by police",
+        "Civil rights organizations"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1361,14 +1553,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Military",
-        "Defense Contractors",
-        "Military Industrial Complex"
+        "Defense contractors (Lockheed Martin, Raytheon, Boeing)",
+        "Military personnel (pay increases, benefits)",
+        "Military base communities"
       ],
       "who_harmed": [
-        "Domestic Programs",
-        "Taxpayers",
-        "National Debt"
+        "Domestic programs (education, healthcare diverted)",
+        "US taxpayers (higher national debt)",
+        "Diplomacy-first advocates",
+        "Social safety net programs (budget competition)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1387,10 +1580,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Military traditionalists",
+        "Recruitment messaging (focus on combat readiness)"
       ],
       "who_harmed": [
-        "Critics"
+        "LGBTQ+ service members (hostile environment)",
+        "Women in military (reduced inclusion programs)",
+        "Minority service members (DEI programs eliminated)",
+        "Military recruitment (smaller talent pool)",
+        "Unit cohesion (exclusionary policies)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1409,10 +1607,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Defense contractors (missile defense systems)",
+        "US homeland security (if effective)",
+        "Allied nations under US missile shield"
       ],
       "who_harmed": [
-        "Critics"
+        "US taxpayers (multi-billion dollar systems)",
+        "Arms control frameworks (destabilizing)",
+        "Diplomatic relations with Russia/China (arms race)",
+        "Domestic spending priorities"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1431,10 +1634,16 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Space defense contractors",
+        "Satellite security infrastructure",
+        "Military personnel (new career paths)",
+        "National security (space asset protection)"
       ],
       "who_harmed": [
-        "Critics"
+        "US taxpayers (additional military branch costs)",
+        "International space cooperation",
+        "Peaceful space exploration priorities",
+        "Existing military branches (budget competition)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1453,10 +1662,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Military veterans (improved healthcare access)",
+        "Veterans in rural areas (expanded telehealth)",
+        "Disabled veterans",
+        "Veteran families"
       ],
       "who_harmed": [
-        "Critics"
+        "VA employees (if privatization reduces workforce)",
+        "Veterans preferring VA system (if pushed to private care)",
+        "Healthcare quality oversight (less centralized care)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1475,10 +1689,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Social media users (more content allowed)",
+        "Conservative content creators (perceived bias removal)",
+        "Political commentators"
       ],
       "who_harmed": [
-        "Critics"
+        "Targets of harassment/hate speech online",
+        "Marginalized communities (increased toxic content)",
+        "Social media platforms (government content mandates)",
+        "Private business autonomy (First Amendment applies to government, not companies)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1497,10 +1716,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Plaintiffs suing tech companies",
+        "Traditional media (competitive advantage)",
+        "Content moderation advocates (platform accountability)"
       ],
       "who_harmed": [
-        "Critics"
+        "Small tech companies and startups (litigation costs)",
+        "User-generated content platforms",
+        "Free expression online (platforms over-censor to avoid liability)",
+        "Internet innovation (chilling effect on new platforms)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1519,10 +1743,17 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Gun owners (preserved access)",
+        "Firearms industry (sales, manufacturing)",
+        "Rural communities (hunting, self-defense culture)",
+        "Gun rights organizations (NRA, GOA)"
       ],
       "who_harmed": [
-        "Critics"
+        "Gun violence victims and families",
+        "Communities with high gun violence rates",
+        "Schools (mass shooting risk)",
+        "Law enforcement (outgunned in some situations)",
+        "Public health (40,000+ annual gun deaths)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1547,10 +1778,13 @@
         }
       ],
       "who_benefits": [
-        "Supporters"
+        "Cisgender female athletes (perceived competitive fairness)"
       ],
       "who_harmed": [
-        "Critics"
+        "Transgender youth athletes (exclusion from sports)",
+        "Transgender students (stigmatization, mental health)",
+        "School athletic programs (enforcement burden)",
+        "LGBTQ+ community (discriminatory precedent)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1569,10 +1803,13 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Parents seeking to restrict access to gender-affirming care"
       ],
       "who_harmed": [
-        "Critics"
+        "Transgender youth (denied medical care recommended by major medical associations)",
+        "Families of transgender children (criminalized for seeking care)",
+        "Medical professionals (restricted from providing standard care)",
+        "Mental health outcomes for trans youth (increased depression/suicidality)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1591,10 +1828,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Religious organizations (exemptions from anti-discrimination laws)",
+        "Faith-based businesses (right to refuse services)",
+        "Religious schools (funding access)"
       ],
       "who_harmed": [
-        "Critics"
+        "LGBTQ+ individuals (legal discrimination)",
+        "Women seeking reproductive healthcare",
+        "Religious minorities (laws favor majority religion)",
+        "Secular government principles (church-state separation)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1613,10 +1855,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Parents uncomfortable with racial history curriculum",
+        "State legislatures (expanded education control)"
       ],
       "who_harmed": [
-        "Critics"
+        "Students (incomplete understanding of American history)",
+        "Teachers (restricted academic freedom, self-censorship)",
+        "Students of color (lived experiences invalidated in classroom)",
+        "University researchers (chilling effect on race-related scholarship)",
+        "School librarians (book challenges)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
@@ -1635,10 +1882,15 @@
       "source_url": "https://www.donaldjtrump.com/agenda47",
       "updates": [],
       "who_benefits": [
-        "Supporters"
+        "Families with newborns (direct financial support)",
+        "Low-income parents (if not means-tested)",
+        "Childcare industry (increased demand)"
       ],
       "who_harmed": [
-        "Critics"
+        "US taxpayers (program costs)",
+        "Childfree taxpayers (subsidizing others' choices)",
+        "Federal deficit (new spending program)",
+        "Women's workforce participation (if incentivizes leaving workforce)"
       ],
       "public_opinion": "mixed",
       "impact_analysis": {
