@@ -292,6 +292,39 @@ export interface FECDonorBreakdown {
   large_donor_total: number;
 }
 
+// FEC API raw response types
+export interface FECApiFinancialTotals {
+  cycle?: number;
+  receipts?: number;
+  disbursements?: number;
+  cash_on_hand_end_period?: number;
+  individual_contributions?: number;
+  other_political_committee_contributions?: number;
+  political_party_committee_contributions?: number;
+  candidate_contribution?: number;
+  other_receipts?: number;
+  individual_itemized_contributions?: number;
+  individual_unitemized_contributions?: number;
+}
+
+export interface FECApiContributor {
+  contributor_name?: string;
+  total?: number;
+  count?: number;
+  contributor_type?: string;
+}
+
+export interface FECApiScheduleAContribution {
+  contributor_name?: string;
+  contributor_employer?: string;
+  contributor_occupation?: string;
+  contribution_receipt_amount?: number;
+  contribution_receipt_date?: string;
+  committee?: {
+    name?: string;
+  };
+}
+
 // ==================== Cache & API Utilities ====================
 
 export interface CacheEntry<T> {

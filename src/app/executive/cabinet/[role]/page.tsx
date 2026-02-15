@@ -2,6 +2,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import cabinetData from "@/data/cabinet.json";
 import AlignmentSection from "./alignment-section";
+import ConflictBadge from "@/components/ConflictBadge";
+import { 
+  getOfficialById,
+  calculateConflictScore,
+  formatTenure,
+  getDepartmentDescription,
+  groupConflictsByCategory,
+  getConflictCategoryLabel,
+  getConflictSeverityLabel,
+} from "@/lib/executive-data";
+import type { ConflictSeverity } from "@/types/executive";
 
 interface CabinetMemberPageProps {
   params: Promise<{ role: string }>;
@@ -16,8 +27,9 @@ export function generateStaticParams() {
 export default async function CabinetMemberPage({ params }: CabinetMemberPageProps) {
   const { role } = await params;
   const member = cabinetData.members.find((m) => m.id === role);
+  const official = getOfficialById(role);
 
-  if (!member) {
+  if (!member || !official) {
     notFound();
   }
 
@@ -31,6 +43,11 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
       day: "numeric",
     });
   };
+  
+  const conflictScore = calculateConflictScore(official.conflicts_of_interest);
+  const conflictLabel = getConflictSeverityLabel(conflictScore);
+  const tenure = formatTenure(official.appointed_date);
+  const groupedConflicts = groupConflictsByCategory(official.conflicts_of_interest);
 
   return (
     <div className="min-h-screen bg-white">
@@ -63,7 +80,7 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
       {/* Details Section */}
       <section className="py-12">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {/* Appointment Info */}
             <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
               <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">
@@ -71,6 +88,9 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
               </h2>
               <p className="text-2xl font-bold text-slate-900">
                 {formatDate(member.appointed_date)}
+              </p>
+              <p className="text-sm text-slate-600 mt-1">
+                {tenure} in office
               </p>
             </div>
 
@@ -85,54 +105,113 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
                 </p>
               </div>
             )}
+            
+            {/* Conflict Score */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+              <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                Conflict Risk
+              </h2>
+              <div className="flex items-center gap-2">
+                <p className="text-2xl font-bold text-slate-900">
+                  {conflictLabel}
+                </p>
+                {conflictScore > 0 && (
+                  <span className="text-sm text-slate-500">
+                    ({conflictScore} pts)
+                  </span>
+                )}
+              </div>
+              <p className="text-sm text-slate-600 mt-1">
+                {official.conflicts_of_interest.length} conflict{official.conflicts_of_interest.length !== 1 ? 's' : ''} identified
+              </p>
+            </div>
           </div>
+          
+          {/* Net Worth */}
+          {official.net_worth && (
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 mb-12">
+              <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                Estimated Net Worth
+              </h2>
+              <p className="text-2xl font-bold text-slate-900">
+                {official.net_worth}
+              </p>
+            </div>
+          )}
 
+          {/* Conflicts of Interest */}
+          {official.conflicts_of_interest.length > 0 && (
+            <div className="bg-red-50 rounded-2xl border-2 border-red-200 p-8 mb-12">
+              <h2 className="text-2xl font-black text-red-900 mb-6">
+                ⚠️ Conflicts of Interest ({official.conflicts_of_interest.length})
+              </h2>
+              <div className="space-y-4">
+                {Object.entries(groupedConflicts).map(([category, conflicts]) => (
+                  <div key={category} className="bg-white rounded-xl border border-red-200 p-4">
+                    <h3 className="font-bold text-red-900 mb-2 flex items-center gap-2">
+                      {getConflictCategoryLabel(category)}
+                      <span className="text-sm font-normal text-red-600">
+                        ({conflicts.length})
+                      </span>
+                    </h3>
+                    <div className="space-y-3">
+                      {conflicts.map((conflict, idx) => (
+                        <div key={idx} className="flex gap-3">
+                          <ConflictBadge severity={conflict.severity as ConflictSeverity} />
+                          <p className="text-slate-700 text-sm flex-1">
+                            {conflict.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {/* Prior Positions */}
+          {official.prior_positions.length > 0 && (
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 mb-12">
+              <h2 className="text-2xl font-black text-slate-900 mb-6">
+                Prior Experience
+              </h2>
+              <div className="space-y-4">
+                {official.prior_positions.map((position, idx) => (
+                  <div key={idx} className="border-l-4 border-blue-200 pl-4 py-2">
+                    <h3 className="font-bold text-slate-900">{position.title}</h3>
+                    <p className="text-slate-700">{position.organization}</p>
+                    <p className="text-sm text-slate-500">{position.years}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {/* Policy Positions */}
+          {official.policy_positions.length > 0 && (
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 mb-12">
+              <h2 className="text-2xl font-black text-slate-900 mb-6">
+                Policy Positions
+              </h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {official.policy_positions.map((position, idx) => (
+                  <div key={idx} className="bg-white rounded-xl border border-slate-200 p-4">
+                    <h3 className="font-bold text-slate-900 mb-1">{position.topic}</h3>
+                    <p className="text-sm text-slate-700">{position.stance}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          
           {/* Department Info */}
           <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 mb-12">
             <h2 className="text-2xl font-black text-slate-900 mb-4">
               About {member.department}
             </h2>
             <p className="text-slate-700 leading-relaxed">
-              {member.department === "Department of State" && 
-                "The Department of State advises the President on foreign policy, conducts diplomatic relations, issues passports, and protects U.S. citizens abroad."}
-              {member.department === "Department of Defense" && 
-                "The Department of Defense provides military forces to deter war and protect national security, overseeing the Army, Navy, Air Force, Marine Corps, and Space Force."}
-              {member.department === "Department of Justice" && 
-                "The Department of Justice ensures public safety, enforces federal laws, defends U.S. interests, and administers the federal prison system."}
-              {member.department === "Department of the Treasury" && 
-                "The Department of the Treasury manages federal finances, collects taxes, produces currency, and enforces economic sanctions."}
-              {member.department === "Department of Health and Human Services" && 
-                "The Department of Health and Human Services protects public health, ensures food and drug safety, and administers Medicare and Medicaid."}
-              {member.department === "Department of Homeland Security" && 
-                "The Department of Homeland Security protects the nation from threats, secures borders, enforces immigration laws, and responds to disasters."}
-              {member.department === "Environmental Protection Agency" && 
-                "The EPA protects human health and the environment through regulations on air quality, water safety, and hazardous waste management."}
-              {member.department === "Department of the Interior" && 
-                "The Department of the Interior manages federal lands, protects natural resources, and oversees relations with Native American tribes."}
-              {member.department === "Department of Agriculture" && 
-                "The Department of Agriculture supports farmers, ensures food safety, manages national forests, and administers nutrition assistance programs."}
-              {member.department === "Department of Commerce" && 
-                "The Department of Commerce promotes economic growth, job creation, international trade, and technological innovation."}
-              {member.department === "Department of Labor" && 
-                "The Department of Labor protects workers' rights, enforces labor standards, and administers unemployment benefits and job training programs."}
-              {member.department === "Department of Transportation" && 
-                "The Department of Transportation ensures safe, efficient transportation systems including highways, railroads, aviation, and public transit."}
-              {member.department === "Department of Energy" && 
-                "The Department of Energy addresses energy security, nuclear safety, and scientific research related to energy and national security."}
-              {member.department === "Department of Education" && 
-                "The Department of Education promotes educational excellence, ensures equal access to education, and administers federal student aid."}
-              {member.department === "Department of Veterans Affairs" && 
-                "The Department of Veterans Affairs provides healthcare, benefits, and memorial services to military veterans and their families."}
-              {member.department === "Department of Housing and Urban Development" && 
-                "The Department of Housing and Urban Development promotes homeownership, supports community development, and ensures access to affordable housing."}
-              {!["Department of State", "Department of Defense", "Department of Justice", 
-                  "Department of the Treasury", "Department of Health and Human Services",
-                  "Department of Homeland Security", "Environmental Protection Agency",
-                  "Department of the Interior", "Department of Agriculture", "Department of Commerce",
-                  "Department of Labor", "Department of Transportation", "Department of Energy",
-                  "Department of Education", "Department of Veterans Affairs", 
-                  "Department of Housing and Urban Development"].includes(member.department) && 
-                "Information about this department's responsibilities."}
+              {getDepartmentDescription(member.department)}
             </p>
           </div>
 

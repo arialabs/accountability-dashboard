@@ -3,6 +3,7 @@
  * Fetches campaign finance data for congressional candidates
  */
 
+import { logger } from './logger';
 import type {
   FECCandidate,
   FECFinancialSummary,
@@ -12,13 +13,16 @@ import type {
   CacheEntry,
   ApiResponse,
   ApiError,
+  FECApiFinancialTotals,
+  FECApiContributor,
+  FECApiScheduleAContribution,
 } from './types';
 
 const FEC_API_BASE = 'https://api.open.fec.gov/v1';
 const FEC_API_KEY = process.env.FEC_API_KEY;
 
 if (!FEC_API_KEY && typeof window === 'undefined') {
-  console.warn('FEC_API_KEY is not set in server environment variables');
+  logger.warn('FEC_API_KEY is not set in server environment variables');
 }
 
 // In-memory cache (5 minutes default TTL)
@@ -142,7 +146,7 @@ export async function getCandidateFinancials(
 ): Promise<FECFinancialSummary | null> {
   const targetCycle = cycle || new Date().getFullYear();
   
-  const response = await fetchFECData<FECApiResponse<any>>(
+  const response = await fetchFECData<FECApiResponse<FECApiFinancialTotals>>(
     `/candidate/${candidateId}/totals/`,
     {
       cycle: targetCycle.toString(),
@@ -186,7 +190,7 @@ export async function getTopContributors(
 ): Promise<FECContributor[]> {
   const targetCycle = cycle || new Date().getFullYear();
   
-  const response = await fetchFECData<FECApiResponse<any>>(
+  const response = await fetchFECData<FECApiResponse<FECApiContributor>>(
     `/candidate/${candidateId}/schedules/schedule_a/by_contributor/`,
     {
       cycle: targetCycle.toString(),
@@ -199,7 +203,7 @@ export async function getTopContributors(
     return [];
   }
 
-  return response.data.results.map((contrib: any) => ({
+  return response.data.results.map((contrib) => ({
     name: contrib.contributor_name || 'Unknown',
     total: contrib.total || 0,
     count: contrib.count || 0,
@@ -224,7 +228,7 @@ export async function getScheduleAContributions(
 }>> {
   const targetCycle = cycle || new Date().getFullYear();
   
-  const response = await fetchFECData<FECApiResponse<any>>(
+  const response = await fetchFECData<FECApiResponse<FECApiScheduleAContribution>>(
     `/schedules/schedule_a/`,
     {
       two_year_transaction_period: targetCycle.toString(),
@@ -239,7 +243,7 @@ export async function getScheduleAContributions(
     return [];
   }
 
-  return response.data.results.map((contrib: any) => ({
+  return response.data.results.map((contrib) => ({
     contributor_name: contrib.contributor_name || 'Unknown',
     contributor_employer: contrib.contributor_employer || null,
     contributor_occupation: contrib.contributor_occupation || null,
