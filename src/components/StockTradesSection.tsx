@@ -28,16 +28,26 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
   const tradesPerPage = 10;
   
   // Calculate summary stats
-  // Normalize transaction types to handle inconsistent data (case-insensitive, trim whitespace)
-  const normalizedTrades = trades.map(t => ({
-    ...t,
-    transaction: (t.transaction?.trim().toLowerCase() === 'purchase' ? 'Purchase' : 
-                  t.transaction?.trim().toLowerCase() === 'sale' ? 'Sale' : 
-                  t.transaction) as "Purchase" | "Sale"
-  }));
+  // Normalize transaction types to handle inconsistent data
+  // Raw data contains: "Purchase", "PURCHASE", "Sale", "SALE", "Sale (Full)", "Sale (Partial)", "Exchange"
+  const normalizedTrades = trades.map(t => {
+    const raw = t.transaction?.trim().toLowerCase() || '';
+    let normalized: "Purchase" | "Sale" | "Exchange";
+    if (raw === 'purchase' || raw === 'buy') {
+      normalized = 'Purchase';
+    } else if (raw.startsWith('sale') || raw === 'sell') {
+      normalized = 'Sale';
+    } else if (raw === 'exchange') {
+      normalized = 'Exchange';
+    } else {
+      normalized = 'Purchase'; // Default fallback
+    }
+    return { ...t, transaction: normalized };
+  });
   
   const purchases = normalizedTrades.filter(t => t.transaction === "Purchase");
   const sales = normalizedTrades.filter(t => t.transaction === "Sale");
+  const exchanges = normalizedTrades.filter(t => t.transaction === "Exchange");
   const totalValue = normalizedTrades.reduce((sum, t) => sum + t.tradeSizeUsd, 0);
   
   // Get unique tickers
