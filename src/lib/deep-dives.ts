@@ -21,11 +21,41 @@ export interface DeepDive {
     title: string;
     content: string;
   }>;
+  timeline?: Array<{
+    date: string;
+    title: string;
+    description: string;
+    importance?: "high" | "medium" | "low";
+  }>;
+  individuals?: Array<{
+    name: string;
+    role: string;
+    party?: string;
+    bioguide_id?: string;
+    relevance: string;
+    financialData?: Array<{
+      label: string;
+      value: string | number;
+      category?: string;
+    }>;
+  }>;
+  financialData?: Array<{
+    label: string;
+    value: string | number;
+    category?: string;
+    party?: string;
+  }>;
   sources?: Array<{
     title: string;
     url: string;
     publication?: string;
     date?: string;
+  }>;
+  relatedMembers?: Array<{
+    bioguide_id: string;
+    name: string;
+    party: string;
+    relevance: string;
   }>;
 }
 
