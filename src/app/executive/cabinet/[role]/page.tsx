@@ -149,7 +149,7 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
                 ⚠️ Conflicts of Interest ({official.conflicts_of_interest.length})
               </h2>
               <div className="space-y-4">
-                {Object.entries(groupedConflicts).map(([category, conflicts]) => (
+                {Object.entries(groupedConflicts).map(([category, conflicts]: [string, any[]]) => (
                   <div key={category} className="bg-white rounded-xl border border-red-200 p-4">
                     <h3 className="font-bold text-red-900 mb-2 flex items-center gap-2">
                       {getConflictCategoryLabel(category)}
@@ -158,7 +158,7 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
                       </span>
                     </h3>
                     <div className="space-y-3">
-                      {conflicts.map((conflict, idx) => (
+                      {conflicts.map((conflict: any, idx: number) => (
                         <div key={idx} className="flex gap-3">
                           <ConflictBadge severity={conflict.severity as ConflictSeverity} />
                           <p className="text-slate-700 text-sm flex-1">
