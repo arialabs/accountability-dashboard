@@ -404,6 +404,17 @@ export default function VoteBasedPositions({
     .flatMap(c => c.contradictions)
     .filter(c => c.isContradiction).length;
   
+  // Determine member's party for score display
+  const member = allMembers.find(m => m.bioguide_id === bioguideId);
+  const memberParty = member?.party || 'Unknown';
+  
+  // For Republicans, show conservative score (inverted); for Democrats, show progressive score
+  const displayScore = memberParty === 'R' 
+    ? 100 - votingRecord.overallProgressiveScore 
+    : votingRecord.overallProgressiveScore;
+  const scoreLabel = memberParty === 'R' ? 'Conservative' : 'Progressive';
+  const scoreColor = memberParty === 'R' ? 'text-red-600' : 'text-blue-600';
+  
   return (
     <div className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm hover:shadow-xl transition-all duration-300">
       <div className="mb-6">
@@ -418,7 +429,7 @@ export default function VoteBasedPositions({
         <div className="flex flex-wrap gap-4 text-sm">
           <div className="flex items-center gap-2">
             <span className="text-slate-600">Voting Record Score:</span>
-            <span className="font-bold text-blue-600">{votingRecord.overallProgressiveScore}%</span>
+            <span className={`font-bold ${scoreColor}`}>{displayScore}% {scoreLabel}</span>
           </div>
           {totalContradictions > 0 && (
             <div className="flex items-center gap-2">

@@ -28,15 +28,23 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
   const tradesPerPage = 10;
   
   // Calculate summary stats
-  const purchases = trades.filter(t => t.transaction === "Purchase");
-  const sales = trades.filter(t => t.transaction === "Sale");
-  const totalValue = trades.reduce((sum, t) => sum + t.tradeSizeUsd, 0);
+  // Normalize transaction types to handle inconsistent data (case-insensitive, trim whitespace)
+  const normalizedTrades = trades.map(t => ({
+    ...t,
+    transaction: (t.transaction?.trim().toLowerCase() === 'purchase' ? 'Purchase' : 
+                  t.transaction?.trim().toLowerCase() === 'sale' ? 'Sale' : 
+                  t.transaction) as "Purchase" | "Sale"
+  }));
+  
+  const purchases = normalizedTrades.filter(t => t.transaction === "Purchase");
+  const sales = normalizedTrades.filter(t => t.transaction === "Sale");
+  const totalValue = normalizedTrades.reduce((sum, t) => sum + t.tradeSizeUsd, 0);
   
   // Get unique tickers
-  const uniqueTickers = [...new Set(trades.map(t => t.ticker))];
+  const uniqueTickers = [...new Set(normalizedTrades.map(t => t.ticker))];
   
   // Calculate average excess return (performance vs market)
-  const tradesWithReturn = trades.filter(t => t.excessReturn !== null);
+  const tradesWithReturn = normalizedTrades.filter(t => t.excessReturn !== null);
   const avgExcessReturn = tradesWithReturn.length > 0
     ? tradesWithReturn.reduce((sum, t) => sum + (t.excessReturn || 0), 0) / tradesWithReturn.length
     : null;
@@ -122,7 +130,7 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
         </div>
       )}
 
-      {trades.length === 0 ? (
+      {normalizedTrades.length === 0 ? (
         <div className="text-center py-12">
           <div className="text-6xl mb-4">📭</div>
           <div className="text-xl font-bold text-slate-700 mb-2">No Stock Trades Found</div>
@@ -135,7 +143,7 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
           {/* Summary Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             <div className="bg-slate-50 rounded-xl p-4 text-center">
-              <div className="text-3xl font-mono font-black text-slate-900">{trades.length}</div>
+              <div className="text-3xl font-mono font-black text-slate-900">{normalizedTrades.length}</div>
               <div className="text-sm font-medium text-slate-600">Total Trades</div>
             </div>
             <div className="bg-emerald-50 rounded-xl p-4 text-center">
@@ -159,11 +167,11 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
                 Recent Trades
               </div>
               <div className="text-sm text-slate-500">
-                Showing {((currentPage - 1) * tradesPerPage) + 1} to {Math.min(currentPage * tradesPerPage, trades.length)} of {trades.length} trades
+                Showing {((currentPage - 1) * tradesPerPage) + 1} to {Math.min(currentPage * tradesPerPage, normalizedTrades.length)} of {normalizedTrades.length} trades
               </div>
             </div>
             <div className="space-y-3">
-              {trades.slice((currentPage - 1) * tradesPerPage, currentPage * tradesPerPage).map((trade, idx) => (
+              {normalizedTrades.slice((currentPage - 1) * tradesPerPage, currentPage * tradesPerPage).map((trade, idx) => (
                 <div 
                   key={idx}
                   className={`flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-xl border-2 transition-all ${
@@ -212,7 +220,7 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
           </div>
 
           {/* Pagination */}
-          {trades.length > tradesPerPage && (
+          {normalizedTrades.length > tradesPerPage && (
             <div className="flex items-center justify-center gap-4">
               <button
                 onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
@@ -222,11 +230,11 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
                 ← Previous
               </button>
               <div className="text-sm text-slate-600">
-                Page {currentPage} of {Math.ceil(trades.length / tradesPerPage)}
+                Page {currentPage} of {Math.ceil(normalizedTrades.length / tradesPerPage)}
               </div>
               <button
-                onClick={() => setCurrentPage(p => Math.min(Math.ceil(trades.length / tradesPerPage), p + 1))}
-                disabled={currentPage === Math.ceil(trades.length / tradesPerPage)}
+                onClick={() => setCurrentPage(p => Math.min(Math.ceil(normalizedTrades.length / tradesPerPage), p + 1))}
+                disabled={currentPage === Math.ceil(normalizedTrades.length / tradesPerPage)}
                 className="px-6 py-3 min-h-[44px] rounded-lg font-medium text-sm transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-slate-100 text-slate-700 hover:bg-slate-200 disabled:hover:bg-slate-100"
               >
                 Next →

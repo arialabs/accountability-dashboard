@@ -21,6 +21,12 @@ export interface DeepDive {
     title: string;
     content: string;
   }>;
+  sources?: Array<{
+    title: string;
+    url: string;
+    publication?: string;
+    date?: string;
+  }>;
 }
 
 /**
