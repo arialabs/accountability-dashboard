@@ -67,7 +67,7 @@ export interface DeepDive {
  * Get all deep dive investigations
  */
 export function getAllDeepDives(): DeepDive[] {
-  return deepDivesData as DeepDive[];
+  return deepDivesData as unknown as DeepDive[];
 }
 
 /**
