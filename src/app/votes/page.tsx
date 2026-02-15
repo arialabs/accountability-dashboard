@@ -98,19 +98,19 @@ export default function VotesPage() {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setSelectedCategory("All")}
-              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+              className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition-colors ${
                 selectedCategory === "All"
                   ? "bg-blue-600 text-white"
                   : "bg-slate-100 text-slate-700 hover:bg-slate-200"
               }`}
             >
-              All <span className="text-slate-400 ml-1">({votes.length})</span>
+              All <span className={selectedCategory === "All" ? "text-blue-200" : "text-slate-400"}>({votes.length})</span>
             </button>
             {sortedCategories.map(([category, count]) => (
               <button 
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition-colors ${
                   selectedCategory === category
                     ? "bg-blue-600 text-white"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"

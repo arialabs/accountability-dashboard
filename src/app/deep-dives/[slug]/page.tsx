@@ -43,7 +43,7 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
         <div className="container mx-auto px-4 py-8 max-w-5xl">
           <Link
             href="/deep-dives"
-            className="text-blue-400 hover:text-blue-300 mb-4 inline-flex items-center gap-2 transition-colors"
+            className="text-blue-400 hover:text-blue-300 mb-4 inline-flex items-center gap-2 transition-colors min-h-[44px]"
           >
             ← Back to Investigations
           </Link>
@@ -60,10 +60,10 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
             ))}
           </div>
 
-          <h1 className="text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             {investigation.title}
           </h1>
-          <p className="text-2xl text-slate-300 mb-6">
+          <p className="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6">
             {investigation.subtitle}
           </p>
 
@@ -110,10 +110,10 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
             <h2 className="text-3xl font-bold text-white mb-6">Timeline</h2>
             <div className="space-y-6">
               {investigation.timeline.map((event, idx) => (
-                <div key={idx} className="flex gap-6">
-                  <div className="flex flex-col items-center">
+                <div key={idx} className="flex gap-3 sm:gap-6">
+                  <div className="flex flex-col items-center flex-shrink-0">
                     <div
-                      className={`w-4 h-4 rounded-full ${
+                      className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
                         event.importance === "high"
                           ? "bg-red-500"
                           : event.importance === "medium"
@@ -125,18 +125,18 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
                       <div className="w-0.5 h-full bg-slate-700 mt-2" />
                     )}
                   </div>
-                  <div className="flex-1 pb-6">
-                    <div className="text-sm text-slate-400 mb-1">
+                  <div className="flex-1 pb-6 min-w-0">
+                    <div className="text-xs sm:text-sm text-slate-400 mb-1">
                       {new Date(event.date).toLocaleDateString('en-US', {
                         month: 'long',
                         day: 'numeric',
                         year: 'numeric'
                       })}
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
+                    <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
                       {event.title}
                     </h3>
-                    <p className="text-slate-300">{event.description}</p>
+                    <p className="text-sm sm:text-base text-slate-300">{event.description}</p>
                   </div>
                 </div>
               ))}

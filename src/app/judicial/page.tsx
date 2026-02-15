@@ -69,7 +69,7 @@ export default function JudicialBranch() {
           <div className="text-center">
             <Link
               href="/judicial/scotus"
-              className="inline-flex items-center justify-center px-10 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+              className="inline-flex items-center justify-center px-6 sm:px-10 py-4 min-h-[44px] bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
             >
               View All Justices →
             </Link>
@@ -132,7 +132,7 @@ export default function JudicialBranch() {
           </p>
           <Link 
             href="/congress"
-            className="inline-flex items-center justify-center px-10 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+            className="inline-flex items-center justify-center px-6 sm:px-10 py-4 min-h-[44px] bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
           >
             View Congress →
           </Link>

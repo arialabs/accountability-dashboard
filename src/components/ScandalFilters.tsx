@@ -202,7 +202,7 @@ export default function ScandalFilters({
         <label className="block text-sm font-semibold text-slate-700 mb-2">
           Chamber
         </label>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {["", "executive", "house", "senate"].map((chamber) => (
             <button
               key={chamber || "all"}

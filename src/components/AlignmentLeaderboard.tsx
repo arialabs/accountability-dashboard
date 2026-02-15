@@ -115,10 +115,10 @@ export default function AlignmentLeaderboard() {
           </div>
           
           {/* Chamber Filter */}
-          <div className="mt-6 flex items-center justify-center gap-2">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
             <button
               onClick={() => setChamberFilter('all')}
-              className={`px-4 py-2 rounded-lg font-medium text-sm transition ${
+              className={`px-4 py-2 min-h-[44px] rounded-lg font-medium text-sm transition ${
                 chamberFilter === 'all' 
                   ? 'bg-slate-900 text-white' 
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -128,7 +128,7 @@ export default function AlignmentLeaderboard() {
             </button>
             <button
               onClick={() => setChamberFilter('house')}
-              className={`px-4 py-2 rounded-lg font-medium text-sm transition ${
+              className={`px-4 py-2 min-h-[44px] rounded-lg font-medium text-sm transition ${
                 chamberFilter === 'house' 
                   ? 'bg-slate-900 text-white' 
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -138,7 +138,7 @@ export default function AlignmentLeaderboard() {
             </button>
             <button
               onClick={() => setChamberFilter('senate')}
-              className={`px-4 py-2 rounded-lg font-medium text-sm transition ${
+              className={`px-4 py-2 min-h-[44px] rounded-lg font-medium text-sm transition ${
                 chamberFilter === 'senate' 
                   ? 'bg-indigo-600 text-white' 
                   : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'

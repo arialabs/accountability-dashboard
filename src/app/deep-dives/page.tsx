@@ -15,10 +15,10 @@ export default function DeepDivesPage() {
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Deep Dive Investigations
           </h1>
-          <p className="text-xl text-slate-300 max-w-3xl">
+          <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl">
             Comprehensive investigative reports exposing corruption, conflicts of interest, and broken promises. 
             Each investigation is thoroughly researched, fact-checked, and sourced from credible publications.
           </p>
@@ -138,16 +138,16 @@ export default function DeepDivesPage() {
             If you have credible information about government misconduct, conflicts of interest, 
             or broken promises, we want to hear from you.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <a
               href="mailto:tips@accountability-dashboard.com"
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold transition-colors"
+              className="px-6 py-3 min-h-[44px] bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold transition-colors"
             >
               Submit a Tip
             </a>
             <Link
               href="/about"
-              className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold transition-colors"
+              className="px-6 py-3 min-h-[44px] bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold transition-colors"
             >
               About Our Research
             </Link>

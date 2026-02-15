@@ -234,20 +234,20 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
               href="/house"
-              className="inline-flex items-center justify-center px-10 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-lg"
+              className="inline-flex items-center justify-center px-6 sm:px-10 py-4 min-h-[44px] bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-base sm:text-lg"
             >
               🏛️ Congress →
             </Link>
             <Link 
               href="/executive"
-              className="inline-flex items-center justify-center px-10 py-4 bg-white border-2 border-slate-900 hover:bg-slate-50 text-slate-900 font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-lg"
+              className="inline-flex items-center justify-center px-6 sm:px-10 py-4 min-h-[44px] bg-white border-2 border-slate-900 hover:bg-slate-50 text-slate-900 font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-base sm:text-lg"
             >
               🏢 Executive →
             </Link>
             
               <Link 
                 href="/judicial"
-                className="inline-flex items-center justify-center px-10 py-4 bg-white border-2 border-slate-900 hover:bg-slate-50 text-slate-900 font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-lg"
+                className="inline-flex items-center justify-center px-6 sm:px-10 py-4 min-h-[44px] bg-white border-2 border-slate-900 hover:bg-slate-50 text-slate-900 font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-base sm:text-lg"
               >
                 ⚖️ Judicial →
               </Link>

@@ -187,7 +187,7 @@ export default function ExecutiveBranch() {
           <div className="text-center">
             <Link 
               href="/executive/cabinet"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 min-h-[44px] rounded-xl transition-colors"
             >
               View Full Cabinet
             </Link>

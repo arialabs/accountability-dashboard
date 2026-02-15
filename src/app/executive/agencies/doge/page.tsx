@@ -291,14 +291,14 @@ export default function DogePage() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-4 md:left-6 top-0 bottom-0 w-0.5 bg-slate-200" />
+            <div className="absolute left-3 sm:left-4 md:left-6 top-0 bottom-0 w-0.5 bg-slate-200" />
 
             <div className="space-y-6">
               {timeline.map((action) => (
-                <div key={action.id} className="relative pl-12 md:pl-16">
+                <div key={action.id} className="relative pl-10 sm:pl-12 md:pl-16">
                   {/* Timeline dot */}
                   <div
-                    className={`absolute left-2.5 md:left-4.5 top-2 w-3 h-3 rounded-full border-2 border-white shadow ${
+                    className={`absolute left-2 sm:left-2.5 md:left-4.5 top-2 w-3 h-3 rounded-full border-2 border-white shadow ${
                       action.impact === "critical"
                         ? "bg-red-500"
                         : action.impact === "high"

@@ -22,20 +22,20 @@ function BillCard({ bill }: { bill: Bill }) {
   return (
     <div className="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg transition">
       {/* Header */}
-      <div className="flex items-start justify-between gap-4 mb-3">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3">
         <div className="flex-1 min-w-0">
           <h3 className="font-bold text-slate-900 text-lg mb-1 break-words">
             {bill.bill_id}
           </h3>
           <p className="text-sm text-slate-600 mb-2">{bill.title}</p>
         </div>
-        <span className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap ${statusConfig.color}`}>
+        <span className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap self-start ${statusConfig.color}`}>
           {statusConfig.icon} {statusConfig.label}
         </span>
       </div>
       
       {/* Description */}
-      <p className="text-sm text-slate-600 mb-4 line-clamp-2">{bill.description}</p>
+      <p className="text-sm text-slate-600 mb-4">{bill.description}</p>
       
       {/* Progress Pipeline */}
       <div className="mb-4">
@@ -103,7 +103,7 @@ function BillCard({ bill }: { bill: Bill }) {
       </div>
       
       {/* Key supporters/opponents */}
-      <div className="grid grid-cols-2 gap-3 text-xs">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
         <div>
           <div className="text-slate-500 font-medium mb-1">Top Supporters:</div>
           <div className="space-y-1">
@@ -113,7 +113,7 @@ function BillCard({ bill }: { bill: Bill }) {
                 <Link 
                   key={s.bioguide_id} 
                   href={`/rep/${s.bioguide_id}`}
-                  className="block text-blue-600 hover:underline truncate"
+                  className="block text-blue-600 hover:underline break-words"
                 >
                   {member.last_name} ({member.party}-{member.state})
                 </Link>
@@ -130,7 +130,7 @@ function BillCard({ bill }: { bill: Bill }) {
                 <Link 
                   key={o.bioguide_id} 
                   href={`/rep/${o.bioguide_id}`}
-                  className="block text-blue-600 hover:underline truncate"
+                  className="block text-blue-600 hover:underline break-words"
                 >
                   {member.last_name} ({member.party}-{member.state})
                 </Link>
@@ -236,7 +236,7 @@ export default function BillsPage() {
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setSelectedStatus("All")}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition ${
                   selectedStatus === "All"
                     ? "bg-purple-600 text-white"
                     : "bg-white border border-slate-300 text-slate-700 hover:border-purple-600"
@@ -251,7 +251,7 @@ export default function BillsPage() {
                   <button
                     key={status}
                     onClick={() => setSelectedStatus(status)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                    className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition ${
                       selectedStatus === status
                         ? "bg-purple-600 text-white"
                         : "bg-white border border-slate-300 text-slate-700 hover:border-purple-600"
@@ -270,7 +270,7 @@ export default function BillsPage() {
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setSelectedCategory("All")}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition ${
                   selectedCategory === "All"
                     ? "bg-blue-600 text-white"
                     : "bg-white border border-slate-300 text-slate-700 hover:border-blue-600"
@@ -282,7 +282,7 @@ export default function BillsPage() {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                  className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition ${
                     selectedCategory === category
                       ? "bg-blue-600 text-white"
                       : "bg-white border border-slate-300 text-slate-700 hover:border-blue-600"
