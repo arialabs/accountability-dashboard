@@ -438,3 +438,12 @@ export function getMemberScandals(bioguideId: string): ScandalEntry[] {
 export function getScandalById(id: string): ScandalEntry | null {
   return (scandalsData as ScandalEntry[]).find(s => s.id === id) || null;
 }
+
+// ==================== Deep Dives / Investigations Data ====================
+
+export {
+  getAllDeepDives,
+  getDeepDiveBySlug,
+  getDeepDivesByTag,
+  type DeepDive,
+} from './deep-dives';
