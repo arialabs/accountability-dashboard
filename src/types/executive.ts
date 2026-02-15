@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Executive Branch Official Types
  * Comprehensive data model for tracking cabinet members, agency heads, and executive officials

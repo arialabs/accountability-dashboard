@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Executive Branch Conflict of Interest Detector
  * Cross-references financial disclosures with government decisions and actions

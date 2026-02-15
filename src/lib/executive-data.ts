@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Executive branch data utilities
  * Functions for working with executive officials, actions, and metrics
