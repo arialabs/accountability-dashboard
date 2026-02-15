@@ -18,7 +18,6 @@ async function getUserStateFromIP(): Promise<string | null> {
     const data = await response.json();
     return data.region_code || null; // Returns 2-letter state code
   } catch (error) {
-    console.error('Failed to get user location:', error);
     return null;
   }
 }
@@ -175,7 +174,6 @@ function CongressContent() {
         alert('Could not detect your location. Please select your state manually.');
       }
     } catch (error) {
-      console.error('Error detecting location:', error);
       alert('Could not detect your location. Please select your state manually.');
     } finally {
       setIsLoadingLocation(false);
