@@ -204,6 +204,70 @@ export default function MethodologyPage() {
             </div>
           </section>
 
+          {/* Plain English Summaries */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-black text-slate-900 mb-6">📝 Plain English Bill Summaries</h2>
+
+            <p>
+              Legislative titles are intentionally confusing. Bills like "A joint resolution providing for
+              congressional disapproval under chapter 8 of title 5, United States Code, of the rule
+              submitted by the EPA..." are impossible for normal people to understand.
+            </p>
+
+            <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Our Solution</h3>
+
+            <p>
+              We translate every bill into plain English. Instead of the legal jargon above,
+              you'll see: <strong>"Voted to block EPA environmental regulations."</strong>
+            </p>
+
+            <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Guidelines</h3>
+
+            <ul className="space-y-3">
+              <li>
+                <strong>Short:</strong> One sentence, under 20 words
+              </li>
+              <li>
+                <strong>Neutral:</strong> Factual description without partisan spin
+              </li>
+              <li>
+                <strong>Actionable:</strong> Focuses on what the bill actually does, not political theater
+              </li>
+              <li>
+                <strong>Transparent:</strong> Legislative title is always available as expandable detail
+              </li>
+            </ul>
+
+            <div className="not-prose bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mt-6">
+              <h4 className="font-bold text-blue-900 mb-3">Example Translations</h4>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-xs text-blue-600 font-semibold uppercase mb-1">Legislative Title</p>
+                  <p className="text-sm text-slate-600 mb-2">
+                    "H.R. 1234: An Act to amend the Internal Revenue Code of 1986 to provide for
+                    tax-preferred savings accounts for education expenses..."
+                  </p>
+                  <p className="text-xs text-blue-600 font-semibold uppercase mb-1">Plain English</p>
+                  <p className="text-sm font-medium text-slate-900">
+                    "Created tax-free education savings accounts"
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-blue-200">
+                  <p className="text-xs text-blue-600 font-semibold uppercase mb-1">Legislative Title</p>
+                  <p className="text-sm text-slate-600 mb-2">
+                    "S. 567: A bill to provide for reconciliation pursuant to titles II and V of the
+                    concurrent resolution on the budget for fiscal year 2026..."
+                  </p>
+                  <p className="text-xs text-blue-600 font-semibold uppercase mb-1">Plain English</p>
+                  <p className="text-sm font-medium text-slate-900">
+                    "Raised the debt ceiling through 2026"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Limitations */}
           <section className="mb-16">
             <h2 className="text-3xl font-black text-slate-900 mb-6">⚠️ Known Limitations</h2>
@@ -223,6 +287,17 @@ export default function MethodologyPage() {
 
             <div className="not-prose space-y-4">
               <div className="border-l-4 border-blue-500 pl-4 py-2">
+                <div className="flex items-center gap-3 mb-1">
+                  <span className="text-sm font-bold text-slate-900">v1.3</span>
+                  <span className="text-xs text-slate-500">February 15, 2026</span>
+                </div>
+                <p className="text-sm text-slate-600">
+                  Added plain English bill summaries for all votes. Added "How is this scored?"
+                  tooltips and color legend to all alignment scores. Enhanced misalignment
+                  descriptions with plain English explanations.
+                </p>
+              </div>
+              <div className="border-l-4 border-slate-300 pl-4 py-2">
                 <div className="flex items-center gap-3 mb-1">
                   <span className="text-sm font-bold text-slate-900">v1.2</span>
                   <span className="text-xs text-slate-500">February 13, 2026</span>

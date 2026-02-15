@@ -16,6 +16,7 @@ interface KeyVote {
   date: string;
   bill: string;
   title: string;
+  plainEnglishSummary?: string;  // Plain English bill summary
   description: string;
   category: string;
   yea_count: number;
@@ -202,64 +203,99 @@ export function KeyVotes({ votes, chamber, limit = 10, showFilters = true }: Key
               </span>
             </div>
             
-            <h3 className="font-semibold text-slate-900 mb-1">
+            {/* Plain English Summary (if available) or fallback to title */}
+            <h3 className="font-semibold text-slate-900 mb-2">
               {vote.bill && (
-                <span className="text-blue-600 mr-2">{vote.bill}</span>
+                <span className="text-blue-600 mr-2">{vote.bill}:</span>
               )}
-              {vote.title || "Vote"}
+              {vote.plainEnglishSummary || vote.title || "Vote"}
             </h3>
             
-            {/* AI Summary or Description */}
-            <div className="mb-2">
-              {summaries[vote.id] ? (
-                <>
-                  <p className="text-sm text-slate-700 leading-relaxed mb-2">
-                    {summaries[vote.id].summary}
+            {/* Show legislative title as expandable detail if we have plain English summary */}
+            {vote.plainEnglishSummary && vote.title && (
+              <div className="mb-2">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleDescription(vote.id);
+                  }}
+                  className="text-xs text-slate-500 hover:text-slate-700 font-medium"
+                >
+                  {expandedDescriptions[vote.id] ? "Hide" : "Show"} legislative title →
+                </button>
+                
+                {expandedDescriptions[vote.id] && (
+                  <div className="mt-2 p-3 bg-slate-50 rounded border border-slate-200">
+                    <p className="text-xs text-slate-600 font-medium mb-1">Legislative Title:</p>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {vote.title}
+                    </p>
+                    {vote.description && (
+                      <>
+                        <p className="text-xs text-slate-600 font-medium mt-2 mb-1">Description:</p>
+                        <p className="text-xs text-slate-600 leading-relaxed">
+                          {vote.description}
+                        </p>
+                      </>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+            
+            {/* AI Summary or Description (only if no plain English summary) */}
+            {!vote.plainEnglishSummary && (
+              <div className="mb-2">
+                {summaries[vote.id] ? (
+                  <>
+                    <p className="text-sm text-slate-700 leading-relaxed mb-2">
+                      {summaries[vote.id].summary}
+                    </p>
+                    
+                    {/* Impact Tags */}
+                    {summaries[vote.id].impactTags.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mb-2">
+                        {summaries[vote.id].impactTags.map(tag => (
+                          <span
+                            key={tag}
+                            className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                              CATEGORY_COLORS[tag] || CATEGORY_COLORS.Other
+                            }`}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    
+                    {/* Expandable full text */}
+                    {vote.description && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleDescription(vote.id);
+                        }}
+                        className="text-xs text-blue-600 hover:text-blue-700 font-medium"
+                      >
+                        {expandedDescriptions[vote.id] ? "Hide" : "Show"} full legislative text →
+                      </button>
+                    )}
+                    
+                    {expandedDescriptions[vote.id] && vote.description && (
+                      <div className="mt-2 p-3 bg-slate-50 rounded border border-slate-200">
+                        <p className="text-xs text-slate-600 leading-relaxed">
+                          {vote.description}
+                        </p>
+                      </div>
+                    )}
+                  </>
+                ) : vote.description ? (
+                  <p className="text-sm text-slate-600 line-clamp-2">
+                    {vote.description}
                   </p>
-                  
-                  {/* Impact Tags */}
-                  {summaries[vote.id].impactTags.length > 0 && (
-                    <div className="flex flex-wrap gap-1.5 mb-2">
-                      {summaries[vote.id].impactTags.map(tag => (
-                        <span
-                          key={tag}
-                          className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                            CATEGORY_COLORS[tag] || CATEGORY_COLORS.Other
-                          }`}
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  
-                  {/* Expandable full text */}
-                  {vote.description && (
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleDescription(vote.id);
-                      }}
-                      className="text-xs text-blue-600 hover:text-blue-700 font-medium"
-                    >
-                      {expandedDescriptions[vote.id] ? "Hide" : "Show"} full legislative text →
-                    </button>
-                  )}
-                  
-                  {expandedDescriptions[vote.id] && vote.description && (
-                    <div className="mt-2 p-3 bg-slate-50 rounded border border-slate-200">
-                      <p className="text-xs text-slate-600 leading-relaxed">
-                        {vote.description}
-                      </p>
-                    </div>
-                  )}
-                </>
-              ) : (
-                <p className="text-sm text-slate-600 line-clamp-2">
-                  {vote.description}
-                </p>
-              )}
-            </div>
+                ) : null}
+              </div>
+            )}
             
             {/* Who Benefits indicator */}
             {vote.publicBenefit && vote.publicBenefit !== "mixed" && (

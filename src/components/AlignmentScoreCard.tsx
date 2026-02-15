@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import type { AlignmentScore } from "@/lib/data";
+import AlignmentTooltip from "./AlignmentTooltip";
+import AlignmentLegend from "./AlignmentLegend";
 
 interface AlignmentScoreCardProps {
   alignment: AlignmentScore | null;
@@ -48,10 +50,13 @@ export default function AlignmentScoreCard({ alignment, ranking }: AlignmentScor
     <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div className="p-6">
         <div className="flex items-start justify-between mb-4">
-          <div>
-            <h3 className="text-lg font-bold text-slate-900">
-              Position-to-Vote Alignment
-            </h3>
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-1">
+              <h3 className="text-lg font-bold text-slate-900">
+                Position-to-Vote Alignment
+              </h3>
+              <AlignmentTooltip averageScore={54} extended />
+            </div>
             <p className="text-slate-500 text-sm mt-1">
               How often votes match stated positions
             </p>
@@ -79,6 +84,9 @@ export default function AlignmentScoreCard({ alignment, ranking }: AlignmentScor
             </p>
           </div>
         </div>
+
+        {/* Legend */}
+        <AlignmentLegend compact className="mb-4" />
 
         {/* Category Breakdown */}
         <div className="space-y-3">
@@ -129,24 +137,29 @@ export default function AlignmentScoreCard({ alignment, ranking }: AlignmentScor
           <h4 className="text-sm font-semibold text-slate-700 mb-2">
             Votes That Differed From Stated Positions
           </h4>
-          {alignment.notable_misalignments.map((m, i) => (
-            <div key={i} className="bg-white rounded-lg p-3 text-sm">
-              <p className="font-medium text-slate-900 mb-1">{m.topic}</p>
-              <div className="flex flex-wrap gap-2 text-xs">
-                <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
-                  Says: {m.stated_stance}
-                </span>
-                <span className={`px-2 py-0.5 rounded ${
-                  m.actual_vote === "Yea" ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"
-                }`}>
-                  Voted: {m.actual_vote}
-                </span>
-                <span className="bg-slate-100 text-slate-600 px-2 py-0.5 rounded">
-                  Expected: {m.expected_vote}
-                </span>
+          {alignment.notable_misalignments.map((m, i) => {
+            // Generate plain English summary for misalignment
+            const plainEnglish = `Supports ${m.stated_stance.toLowerCase()} but voted ${m.actual_vote} on ${m.topic.toLowerCase()}`;
+            
+            return (
+              <div key={i} className="bg-white rounded-lg p-3 text-sm">
+                <p className="font-medium text-slate-900 mb-2">{plainEnglish}</p>
+                <div className="flex flex-wrap gap-2 text-xs">
+                  <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
+                    Says: {m.stated_stance}
+                  </span>
+                  <span className={`px-2 py-0.5 rounded ${
+                    m.actual_vote === "Yea" ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"
+                  }`}>
+                    Voted: {m.actual_vote}
+                  </span>
+                  <span className="bg-slate-100 text-slate-600 px-2 py-0.5 rounded">
+                    Expected: {m.expected_vote}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
 
