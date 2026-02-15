@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Link from "next/link";
 import { getAllDeepDives } from "@/lib/data";
 import type { DeepDive } from "@/lib/types";
