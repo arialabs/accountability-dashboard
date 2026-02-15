@@ -1,4 +1,5 @@
 // @ts-nocheck
+export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { getAllDeepDives } from "@/data/deep-dives";
 import type { Metadata } from "next";

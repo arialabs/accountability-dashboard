@@ -1,15 +1,11 @@
 // @ts-nocheck
+export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllDeepDives, getDeepDiveBySlug } from "@/lib/data";
 import type { DeepDive } from "@/lib/types";
 
-export async function generateStaticParams() {
-  const deepDives = getAllDeepDives();
-  return deepDives.map((dive) => ({
-    slug: dive.slug,
-  }));
-}
+// generateStaticParams removed — using force-dynamic until data types stabilize
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
