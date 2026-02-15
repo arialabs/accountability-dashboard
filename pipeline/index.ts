@@ -88,8 +88,8 @@ async function runPipeline() {
           chamber: m.chamber,
           district: m.district,
         })),
-        10,   // batch size (reduced to avoid rate limits)
-        3000 // delay between batches (ms) - 3 seconds
+        5,   // batch size (reduced to avoid rate limits)
+        4000 // delay between batches (ms) - 4 seconds
       );
       
       console.log(`✓ Got detailed finance data for ${Object.keys(financeData).length} members`);

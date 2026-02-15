@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ExecutiveBranch() {
   
@@ -31,9 +32,11 @@ export default function ExecutiveBranch() {
           >
             <div className="flex flex-col md:flex-row items-center gap-6">
               {/* Photo */}
-              <img 
+              <Image 
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Donald_Trump_official_portrait_%282024%29.jpg/440px-Donald_Trump_official_portrait_%282024%29.jpg"
                 alt="Donald Trump"
+                width={96}
+                height={96}
                 className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white flex-shrink-0"
               />
               
@@ -69,9 +72,11 @@ export default function ExecutiveBranch() {
           >
             <div className="flex flex-col md:flex-row items-center gap-6">
               {/* Photo */}
-              <img 
+              <Image 
                 src="https://upload.wikimedia.org/wikipedia/commons/4/49/Senator-Elect_James_David_Vance_official_portrait%2C_117th_Congress_%28cropped%29.jpg"
                 alt="J.D. Vance"
+                width={96}
+                height={96}
                 className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white flex-shrink-0"
               />
               
@@ -106,9 +111,11 @@ export default function ExecutiveBranch() {
             className="block bg-white rounded-3xl border-2 border-amber-300 p-8 shadow-sm hover:shadow-xl hover:border-red-400 transition-all duration-300 group"
           >
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <img
+              <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/440px-Elon_Musk_Royal_Society_%28crop2%29.jpg"
                 alt="Elon Musk"
+                width={96}
+                height={96}
                 className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white flex-shrink-0"
               />
 
@@ -168,9 +175,11 @@ export default function ExecutiveBranch() {
                 className="bg-white rounded-xl border border-slate-200 p-4 text-center hover:shadow-lg hover:border-blue-300 transition-all group"
               >
                 {cabinet.photo ? (
-                  <img
+                  <Image
                     src={cabinet.photo}
                     alt={cabinet.name}
+                    width={48}
+                    height={48}
                     className="w-12 h-12 rounded-full object-cover mx-auto mb-2 border-2 border-slate-100 group-hover:border-blue-200"
                   />
                 ) : (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import vpData from "@/data/vp.json";
 
 export default function VicePresidentPage() {
@@ -11,9 +12,11 @@ export default function VicePresidentPage() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Photo */}
-            <img 
+            <Image 
               src={vice_president.photo_url}
               alt={vice_president.name}
+              width={160}
+              height={160}
               className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-xl border-4 border-white"
             />
             
