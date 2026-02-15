@@ -33,7 +33,7 @@ export default function ExecutiveBranch() {
             <div className="flex flex-col md:flex-row items-center gap-6">
               {/* Photo */}
               <Image 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Donald_Trump_official_portrait_%282024%29.jpg/440px-Donald_Trump_official_portrait_%282024%29.jpg"
+                src="/images/officials/trump.jpg"
                 alt="Donald Trump"
                 width={96}
                 height={96}
@@ -73,7 +73,7 @@ export default function ExecutiveBranch() {
             <div className="flex flex-col md:flex-row items-center gap-6">
               {/* Photo */}
               <Image 
-                src="https://upload.wikimedia.org/wikipedia/commons/4/49/Senator-Elect_James_David_Vance_official_portrait%2C_117th_Congress_%28cropped%29.jpg"
+                src="/images/officials/vance-placeholder.svg"
                 alt="J.D. Vance"
                 width={96}
                 height={96}
@@ -112,7 +112,7 @@ export default function ExecutiveBranch() {
           >
             <div className="flex flex-col md:flex-row items-center gap-6">
               <Image
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/440px-Elon_Musk_Royal_Society_%28crop2%29.jpg"
+                src="/images/officials/musk.jpg"
                 alt="Elon Musk"
                 width={96}
                 height={96}
@@ -160,14 +160,14 @@ export default function ExecutiveBranch() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             {[
-              { role: "Secretary of State", name: "Marco Rubio", id: "secretary-of-state", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Senator_Rubio_official_portrait%2C_118th_Congress.jpg/440px-Senator_Rubio_official_portrait%2C_118th_Congress.jpg" },
-              { role: "Secretary of Defense", name: "Pete Hegseth", id: "secretary-of-defense", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pete_Hegseth_official_photo.jpg/440px-Pete_Hegseth_official_photo.jpg" },
-              { role: "Attorney General", name: "Pam Bondi", id: "attorney-general", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pam_Bondi_official_photo.jpg/440px-Pam_Bondi_official_photo.jpg" },
-              { role: "Secretary of Treasury", name: "Scott Bessent", id: "secretary-of-treasury", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Official_portrait_of_Treasury_Secretary_Scott_Bessent.jpg/440px-Official_portrait_of_Treasury_Secretary_Scott_Bessent.jpg" },
-              { role: "Secretary of HHS", name: "RFK Jr.", id: "secretary-of-hhs", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Robert_F._Kennedy_Jr._headshot.jpg/440px-Robert_F._Kennedy_Jr._headshot.jpg" },
-              { role: "Secretary of Homeland Security", name: "Kristi Noem", id: "secretary-of-homeland-security", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Kristi_Noem_by_Gage_Skidmore.jpg/440px-Kristi_Noem_by_Gage_Skidmore.jpg" },
-              { role: "EPA Administrator", name: "Lee Zeldin", id: "epa-administrator", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Lee_Zeldin_117th_Congress_portrait.jpg/440px-Lee_Zeldin_117th_Congress_portrait.jpg" },
-              { role: "Secretary of Interior", name: "Doug Burgum", id: "secretary-of-interior", photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Doug_Burgum_official_photo.jpg/440px-Doug_Burgum_official_photo.jpg" },
+              { role: "Secretary of State", name: "Marco Rubio", id: "secretary-of-state", photo: "/images/officials/rubio.jpg" },
+              { role: "Secretary of Defense", name: "Pete Hegseth", id: "secretary-of-defense", photo: "" },
+              { role: "Attorney General", name: "Pam Bondi", id: "attorney-general", photo: "" },
+              { role: "Secretary of Treasury", name: "Scott Bessent", id: "secretary-of-treasury", photo: "" },
+              { role: "Secretary of HHS", name: "RFK Jr.", id: "secretary-of-hhs", photo: "/images/officials/kennedy.jpg" },
+              { role: "Secretary of Homeland Security", name: "Kristi Noem", id: "secretary-of-homeland-security", photo: "/images/officials/noem.jpg" },
+              { role: "EPA Administrator", name: "Lee Zeldin", id: "epa-administrator", photo: "/images/officials/zeldin.jpg" },
+              { role: "Secretary of Interior", name: "Doug Burgum", id: "secretary-of-interior", photo: "/images/officials/burgum.jpg" },
             ].map((cabinet) => (
               <Link
                 key={cabinet.id}
