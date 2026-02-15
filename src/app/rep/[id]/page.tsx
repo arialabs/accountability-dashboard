@@ -85,7 +85,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
         conflicts = detectConflicts(industries, memberVotes);
       }
     } catch (error) {
-      console.error("Error detecting conflicts:", error);
+      // Conflicts remain empty array on error
     }
   }
 

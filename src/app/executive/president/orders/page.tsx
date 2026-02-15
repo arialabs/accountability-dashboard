@@ -24,14 +24,12 @@ async function fetchExecutiveOrders(): Promise<FederalRegisterResponse | null> {
     );
 
     if (!response.ok) {
-      console.error("Failed to fetch executive orders:", response.status);
       return null;
     }
 
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error fetching executive orders:", error);
     return null;
   }
 }

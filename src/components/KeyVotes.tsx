@@ -118,7 +118,7 @@ export function KeyVotes({ votes, chamber, limit = 10, showFilters = true }: Key
             }
           }
         } catch (error) {
-          console.error(`Failed to load summary for ${vote.id}:`, error);
+          // Silently fail - summaries are optional enhancement
         }
       }
     };

@@ -41,7 +41,7 @@ export default function AlignmentSection({ memberId }: AlignmentSectionProps) {
           setAlignmentData(data);
         }
       } catch (error) {
-        console.error('Error fetching alignment data:', error);
+        // Silently fail - alignment data is optional
       } finally {
         setLoading(false);
       }

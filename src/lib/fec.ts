@@ -15,7 +15,11 @@ import type {
 } from './types';
 
 const FEC_API_BASE = 'https://api.open.fec.gov/v1';
-const FEC_API_KEY = process.env.FEC_API_KEY || process.env.NEXT_PUBLIC_FEC_API_KEY;
+const FEC_API_KEY = process.env.FEC_API_KEY;
+
+if (!FEC_API_KEY && typeof window === 'undefined') {
+  console.warn('FEC_API_KEY is not set in server environment variables');
+}
 
 // In-memory cache (5 minutes default TTL)
 const cache = new Map<string, CacheEntry<unknown>>();
@@ -122,7 +126,6 @@ export async function searchCandidateByName(
   );
 
   if (!response.success || !response.data?.results) {
-    console.error('Error searching FEC candidate:', response.error);
     return null;
   }
 
@@ -148,7 +151,6 @@ export async function getCandidateFinancials(
   );
 
   if (!response.success || !response.data?.results) {
-    console.error('Error fetching FEC financials:', response.error);
     return null;
   }
 
@@ -194,7 +196,6 @@ export async function getTopContributors(
   );
 
   if (!response.success || !response.data?.results) {
-    console.error('Error fetching top contributors:', response.error);
     return [];
   }
 
@@ -235,7 +236,6 @@ export async function getScheduleAContributions(
   );
 
   if (!response.success || !response.data?.results) {
-    console.error('Error fetching Schedule A contributions:', response.error);
     return [];
   }
 

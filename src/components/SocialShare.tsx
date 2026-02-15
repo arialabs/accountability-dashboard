@@ -28,7 +28,7 @@ export default function SocialShare({ title, text, url }: SocialShareProps) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error("Failed to copy:", err);
+      // Silently fail - clipboard access may be blocked
     }
   };
 

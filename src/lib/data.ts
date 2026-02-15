@@ -165,7 +165,6 @@ export async function getMemberFinance(bioguideId: string): Promise<CampaignFina
     );
 
     if (!candidate) {
-      console.warn(`No FEC candidate found for ${member.full_name}`);
       return getMemberFinanceStatic(bioguideId);
     }
 
@@ -176,7 +175,6 @@ export async function getMemberFinance(bioguideId: string): Promise<CampaignFina
     ]);
 
     if (!breakdown) {
-      console.warn(`No finance data found for ${member.full_name}`);
       return getMemberFinanceStatic(bioguideId);
     }
 
@@ -211,8 +209,7 @@ export async function getMemberFinance(bioguideId: string): Promise<CampaignFina
 
     return finance;
   } catch (error) {
-    console.error(`Error fetching FEC data for ${bioguideId}:`, error);
-    // Fall back to static data
+    // Fall back to static data on error
     return getMemberFinanceStatic(bioguideId);
   }
 }
