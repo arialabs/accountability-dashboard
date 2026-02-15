@@ -50,6 +50,9 @@ export interface DeepDive {
     url: string;
     publication?: string;
     date?: string;
+    published_date?: string;
+    type?: string;
+    name?: string;
     credibility_rating?: "high" | "medium" | "low";
   }>;
   relatedMembers?: Array<{
