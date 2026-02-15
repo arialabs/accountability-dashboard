@@ -17,6 +17,7 @@ interface VoteDetails {
   date: string;
   bill: string;
   title: string;
+  plainEnglishSummary?: string;  // Plain English bill summary
   description: string;
   category: string;
   yea_count: number;
@@ -216,7 +217,7 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
           <div className="flex-1 pr-4">
             <h2 className="text-2xl font-bold text-slate-900 mb-2">
               {vote.bill && <span className="text-blue-600">{vote.bill}: </span>}
-              {vote.title}
+              {vote.plainEnglishSummary || vote.title}
             </h2>
             <div className="flex flex-wrap gap-2">
               <span className={`px-2 py-1 rounded-lg text-xs font-semibold ${RESULT_STYLES[vote.result]}`}>
@@ -247,6 +248,16 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
 
         {/* Content */}
         <div className="p-6 space-y-6">
+          {/* Show legislative title as expandable if we have plain English summary */}
+          {vote.plainEnglishSummary && vote.title && (
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
+              <h3 className="text-xs font-bold uppercase tracking-wide text-slate-500 mb-2">
+                Legislative Title
+              </h3>
+              <p className="text-sm text-slate-700 leading-relaxed">{vote.title}</p>
+            </div>
+          )}
+
           {/* Description */}
           {vote.description && (
             <div>
@@ -257,8 +268,8 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
             </div>
           )}
 
-          {/* Plain English Summary */}
-          {vote.summary && (
+          {/* Plain English Summary (AI-generated fallback) */}
+          {!vote.plainEnglishSummary && vote.summary && (
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
               <h3 className="text-sm font-bold uppercase tracking-wide text-blue-700 mb-2">
                 📋 Plain English Summary

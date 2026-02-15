@@ -235,6 +235,7 @@ export interface KeyVote {
   date: string;
   bill_id: string;
   bill_title: string;
+  plainEnglishSummary?: string;  // Short, plain English summary (1 sentence, <20 words)
   vote: 'yea' | 'nay' | 'abstain' | 'not_voting';
   bill_outcome: 'passed' | 'failed';
   
@@ -551,6 +552,7 @@ export interface BillVote {
   rollnumber: number;
   date: string;
   title: string;
+  plainEnglishSummary?: string;  // Short, plain English summary (1 sentence, <20 words)
   description: string;
   category: string;
   yea_count: number;

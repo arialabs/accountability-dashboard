@@ -135,7 +135,8 @@
       "Immigrants",
       "Low Income Communities"
     ],
-    "publicBenefit": "negative"
+    "publicBenefit": "negative",
+    "plainEnglishSummary": "Cut Medicaid and immigration enforcement funding"
   },
   {
     "id": "119-Senate-678",
@@ -507,7 +508,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-House-399",
@@ -962,7 +964,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Passed government funding bill"
   },
   {
     "id": "119-House-401",
@@ -1417,7 +1420,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Passed government funding bill"
   },
   {
     "id": "119-House-402",
@@ -2327,7 +2331,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Passed government funding bill"
   },
   {
     "id": "119-Senate-669",
@@ -2451,7 +2456,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-670",
@@ -3030,7 +3036,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-House-385",
@@ -4200,7 +4207,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-House-365",
@@ -6020,7 +6028,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-House-363",
@@ -7795,7 +7804,8 @@
       "Elderly",
       "Disabled"
     ],
-    "publicBenefit": "negative"
+    "publicBenefit": "negative",
+    "plainEnglishSummary": "Changed Social Security program"
   },
   {
     "id": "119-Senate-657",
@@ -8380,7 +8390,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "positive",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-House-343",
@@ -9911,7 +9922,8 @@
       "Elderly",
       "Disabled"
     ],
-    "publicBenefit": "negative"
+    "publicBenefit": "negative",
+    "plainEnglishSummary": "Changed Social Security program"
   },
   {
     "id": "119-Senate-643",
@@ -10615,7 +10627,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "positive",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-House-308",
@@ -12115,7 +12128,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-House-283",
@@ -13277,7 +13291,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-618",
@@ -13525,7 +13540,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-609",
@@ -13649,7 +13665,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-603",
@@ -13773,7 +13790,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-590",
@@ -13897,7 +13915,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-585",
@@ -14021,7 +14040,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-581",
@@ -14145,7 +14165,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-576",
@@ -14269,7 +14290,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-573",
@@ -14393,7 +14415,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-575",
@@ -14523,7 +14546,8 @@
     "harmed": [
       "Domestic Programs"
     ],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-572",
@@ -14647,7 +14671,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-571",
@@ -14771,7 +14796,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-557",
@@ -14895,7 +14921,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-558",
@@ -15019,7 +15046,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-568",
@@ -15403,7 +15431,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-551",
@@ -15527,7 +15556,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-547",
@@ -15811,7 +15841,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-545",
@@ -15935,7 +15966,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-546",
@@ -16219,7 +16251,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-543",
@@ -16343,7 +16376,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-536",
@@ -16467,7 +16501,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-537",
@@ -16591,7 +16626,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-534",
@@ -16963,7 +16999,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-House-279",
@@ -19185,7 +19222,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-House-272",
@@ -22791,7 +22829,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-House-242",
@@ -24741,7 +24780,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-House-221",
@@ -25780,7 +25820,8 @@
     "harmed": [
       "Domestic Programs"
     ],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-495",
@@ -27442,7 +27483,8 @@
     "harmed": [
       "Domestic Programs"
     ],
-    "publicBenefit": "negative"
+    "publicBenefit": "negative",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-425",
@@ -29402,7 +29444,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-Senate-411",
@@ -31904,7 +31947,8 @@
     "harmed": [
       "Domestic Programs"
     ],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-House-194",
@@ -33493,7 +33537,8 @@
       "Middle Class",
       "Healthcare Patients"
     ],
-    "publicBenefit": "negative"
+    "publicBenefit": "negative",
+    "plainEnglishSummary": "Modified Medicare benefits or funding"
   },
   {
     "id": "119-Senate-365",
@@ -40335,7 +40380,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-256",
@@ -42002,7 +42048,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Procedural vote to advance legislation"
   },
   {
     "id": "119-House-93",
@@ -43081,7 +43128,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "positive",
+    "plainEnglishSummary": "Modified Medicare benefits or funding"
   },
   {
     "id": "119-Senate-186",
@@ -43596,7 +43644,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "positive"
+    "publicBenefit": "positive",
+    "plainEnglishSummary": "Provided tax cuts"
   },
   {
     "id": "119-Senate-191",
@@ -43986,7 +44035,8 @@
       "Wealthy",
       "Insurance Companies"
     ],
-    "publicBenefit": "negative"
+    "publicBenefit": "negative",
+    "plainEnglishSummary": "Enhanced veterans benefits"
   },
   {
     "id": "119-Senate-174",
@@ -44614,7 +44664,8 @@
       "Elderly",
       "Disabled"
     ],
-    "publicBenefit": "negative"
+    "publicBenefit": "negative",
+    "plainEnglishSummary": "Changed Social Security program"
   },
   {
     "id": "119-Senate-164",
@@ -45944,7 +45995,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-125",
@@ -46316,7 +46368,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-133",
@@ -51948,7 +52001,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "negative"
+    "publicBenefit": "negative",
+    "plainEnglishSummary": "Enhanced veterans benefits"
   },
   {
     "id": "119-Senate-68",
@@ -53671,7 +53725,8 @@
       }
     ],
     "harmed": [],
-    "publicBenefit": "mixed"
+    "publicBenefit": "mixed",
+    "plainEnglishSummary": "Advanced spending bill to final vote"
   },
   {
     "id": "119-Senate-29",
