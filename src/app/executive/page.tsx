@@ -210,37 +210,37 @@ export default function ExecutiveBranch() {
           <h2 className="text-2xl font-black text-slate-900 mb-8 text-center">What We Track</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
+            <Link href="/executive/timeline" className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200 hover:shadow-lg transition-shadow group">
               <div className="text-2xl">📊</div>
               <div>
-                <h3 className="font-bold text-green-900">Policy Impact</h3>
+                <h3 className="font-bold text-green-900 group-hover:text-green-700">Policy Impact →</h3>
                 <p className="text-sm text-green-700">Measuring real-world outcomes of executive actions</p>
               </div>
-            </div>
+            </Link>
             
-            <div className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
+            <Link href="/executive/cabinet" className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200 hover:shadow-lg transition-shadow group">
               <div className="text-2xl">👥</div>
               <div>
-                <h3 className="font-bold text-green-900">Cabinet Appointments</h3>
+                <h3 className="font-bold text-green-900 group-hover:text-green-700">Cabinet Appointments →</h3>
                 <p className="text-sm text-green-700">Track all cabinet members and their departments</p>
               </div>
-            </div>
+            </Link>
             
-            <div className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
+            <Link href="/executive/timeline" className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200 hover:shadow-lg transition-shadow group">
               <div className="text-2xl">📜</div>
               <div>
-                <h3 className="font-bold text-green-900">Executive Actions</h3>
-                <p className="text-sm text-green-700">View presidential orders, proclamations, and memoranda</p>
+                <h3 className="font-bold text-green-900 group-hover:text-green-700">Executive Actions →</h3>
+                <p className="text-sm text-green-700">View orders, budget decisions, and policy changes</p>
               </div>
-            </div>
+            </Link>
             
-            <div className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200">
+            <Link href="/executive/cabinet" className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200 hover:shadow-lg transition-shadow group">
               <div className="text-2xl">💼</div>
               <div>
-                <h3 className="font-bold text-green-900">Transparency & Ethics</h3>
+                <h3 className="font-bold text-green-900 group-hover:text-green-700">Transparency & Ethics →</h3>
                 <p className="text-sm text-green-700">Financial disclosures and conflict of interest monitoring</p>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

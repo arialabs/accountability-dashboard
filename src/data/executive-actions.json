@@ -1,0 +1,245 @@
+{
+  "actions": [
+    {
+      "id": "eo-001",
+      "official_id": "secretary-of-defense",
+      "official_name": "Pete Hegseth",
+      "department": "Department of Defense",
+      "type": "policy_reversal",
+      "title": "Reversal of Pentagon DEI Programs",
+      "description": "Eliminated diversity, equity, and inclusion offices across all military branches, removing training programs and advisory positions.",
+      "date": "2025-01-25",
+      "impact_category": ["military", "civil_rights"],
+      "americans_affected": 1400000,
+      "budget_impact": -85000000,
+      "summary": "Dismantled DEI infrastructure within Department of Defense affecting 1.4M active duty and civilian personnel.",
+      "beneficiaries": ["Conservative advocacy groups"],
+      "affected_groups": ["Military personnel of color", "Women in military", "LGBTQ+ service members"],
+      "sources": [
+        {
+          "type": "news",
+          "title": "Pentagon eliminates DEI offices in sweeping policy change",
+          "publication": "Defense News",
+          "url": "https://example.com",
+          "published_date": "2025-01-25"
+        }
+      ],
+      "created_at": "2025-01-25T00:00:00Z",
+      "updated_at": "2025-01-25T00:00:00Z"
+    },
+    {
+      "id": "eo-002",
+      "official_id": "secretary-of-hhs",
+      "official_name": "Robert F. Kennedy Jr.",
+      "department": "Department of Health and Human Services",
+      "type": "regulatory_action",
+      "title": "FDA Vaccine Safety Review Initiative",
+      "description": "Ordered comprehensive review of all vaccine approvals since 2000, suspending new vaccine authorizations pending review completion.",
+      "date": "2025-01-28",
+      "impact_category": ["health", "public_safety"],
+      "americans_affected": 330000000,
+      "summary": "Initiated sweeping vaccine safety review affecting all Americans, raising concerns among public health officials.",
+      "beneficiaries": ["Anti-vaccine advocacy groups"],
+      "affected_groups": ["Parents", "Healthcare providers", "Immunocompromised individuals"],
+      "sources": [
+        {
+          "type": "news",
+          "title": "HHS orders FDA vaccine review amid safety concerns",
+          "publication": "Health Policy Watch",
+          "url": "https://example.com",
+          "published_date": "2025-01-28"
+        }
+      ],
+      "created_at": "2025-01-28T00:00:00Z",
+      "updated_at": "2025-01-28T00:00:00Z"
+    },
+    {
+      "id": "eo-003",
+      "official_id": "epa-administrator",
+      "official_name": "Lee Zeldin",
+      "department": "Environmental Protection Agency",
+      "type": "regulatory_action",
+      "title": "Rollback of Clean Water Protections",
+      "description": "Repealed Obama-era Waters of the United States (WOTUS) rule, reducing federal oversight of wetlands and streams.",
+      "date": "2025-02-01",
+      "impact_category": ["environment", "agriculture"],
+      "americans_affected": 117000000,
+      "budget_impact": 0,
+      "summary": "Removed federal protections for millions of acres of wetlands, affecting drinking water sources for 117 million Americans.",
+      "beneficiaries": ["Agricultural industry", "Real estate developers"],
+      "affected_groups": ["Rural communities", "Environmental advocates", "Indigenous tribes"],
+      "sources": [
+        {
+          "type": "news",
+          "title": "EPA rolls back Clean Water Act protections",
+          "publication": "Environmental Defense Fund",
+          "url": "https://example.com",
+          "published_date": "2025-02-01"
+        }
+      ],
+      "created_at": "2025-02-01T00:00:00Z",
+      "updated_at": "2025-02-01T00:00:00Z"
+    },
+    {
+      "id": "eo-004",
+      "official_id": "secretary-of-homeland-security",
+      "official_name": "Kristi Noem",
+      "department": "Department of Homeland Security",
+      "type": "hiring_freeze",
+      "title": "ICE Hiring Surge and Border Patrol Expansion",
+      "description": "Authorized hiring of 10,000 additional ICE and Border Patrol agents, with expedited training programs.",
+      "date": "2025-02-03",
+      "impact_category": ["immigration", "employment"],
+      "americans_affected": 11000000,
+      "budget_impact": 2400000000,
+      "summary": "Massive expansion of immigration enforcement workforce targeting undocumented immigrants.",
+      "beneficiaries": ["Law enforcement unions"],
+      "affected_groups": ["Undocumented immigrants", "Mixed-status families", "Immigrant advocates"],
+      "sources": [
+        {
+          "type": "news",
+          "title": "DHS announces major ICE expansion",
+          "publication": "Immigration Impact",
+          "url": "https://example.com",
+          "published_date": "2025-02-03"
+        }
+      ],
+      "created_at": "2025-02-03T00:00:00Z",
+      "updated_at": "2025-02-03T00:00:00Z"
+    },
+    {
+      "id": "eo-005",
+      "official_id": "secretary-of-education",
+      "official_name": "Linda McMahon",
+      "department": "Department of Education",
+      "type": "budget_cut",
+      "title": "Federal Student Loan Forgiveness Program Termination",
+      "description": "Cancelled Public Service Loan Forgiveness and income-driven repayment plans, affecting borrowers mid-program.",
+      "date": "2025-02-05",
+      "impact_category": ["education", "finance"],
+      "americans_affected": 8000000,
+      "budget_impact": -430000000000,
+      "summary": "Eliminated student debt relief programs, leaving millions of borrowers without promised forgiveness.",
+      "beneficiaries": ["Loan servicers", "For-profit colleges"],
+      "affected_groups": ["Public service workers", "Teachers", "Nurses", "Student loan borrowers"],
+      "sources": [
+        {
+          "type": "news",
+          "title": "Education Dept. ends student loan forgiveness programs",
+          "publication": "Chronicle of Higher Education",
+          "url": "https://example.com",
+          "published_date": "2025-02-05"
+        }
+      ],
+      "created_at": "2025-02-05T00:00:00Z",
+      "updated_at": "2025-02-05T00:00:00Z"
+    },
+    {
+      "id": "eo-006",
+      "official_id": "secretary-of-interior",
+      "official_name": "Doug Burgum",
+      "department": "Department of the Interior",
+      "type": "regulatory_action",
+      "title": "Expansion of Oil and Gas Leasing on Federal Lands",
+      "description": "Opened previously protected federal lands including national monuments for oil and gas drilling lease auctions.",
+      "date": "2025-02-08",
+      "impact_category": ["environment", "energy"],
+      "americans_affected": 330000000,
+      "budget_impact": 12000000000,
+      "summary": "Rolled back conservation protections, prioritizing fossil fuel extraction on public lands.",
+      "beneficiaries": ["Oil and gas companies", "Energy sector"],
+      "affected_groups": ["Indigenous tribes", "Environmental advocates", "Outdoor recreation industry"],
+      "sources": [
+        {
+          "type": "news",
+          "title": "Interior opens protected lands to drilling",
+          "publication": "Sierra Club",
+          "url": "https://example.com",
+          "published_date": "2025-02-08"
+        }
+      ],
+      "created_at": "2025-02-08T00:00:00Z",
+      "updated_at": "2025-02-08T00:00:00Z"
+    },
+    {
+      "id": "eo-007",
+      "official_id": "secretary-of-labor",
+      "official_name": "Lori Chavez-DeRemer",
+      "department": "Department of Labor",
+      "type": "regulatory_action",
+      "title": "Overtime Eligibility Rule Revision",
+      "description": "Raised salary threshold for overtime eligibility from $35,568 to $55,000, expanding overtime protections.",
+      "date": "2025-02-10",
+      "impact_category": ["labor", "economy"],
+      "americans_affected": 4200000,
+      "budget_impact": 1500000000,
+      "summary": "Expanded overtime pay protections for 4.2 million workers, requiring employers to compensate more workers for overtime hours.",
+      "beneficiaries": ["Low and middle-income workers"],
+      "affected_groups": ["Small business owners", "Restaurant industry"],
+      "sources": [
+        {
+          "type": "news",
+          "title": "Labor Dept. expands overtime protections",
+          "publication": "National Employment Law Project",
+          "url": "https://example.com",
+          "published_date": "2025-02-10"
+        }
+      ],
+      "created_at": "2025-02-10T00:00:00Z",
+      "updated_at": "2025-02-10T00:00:00Z"
+    },
+    {
+      "id": "eo-008",
+      "official_id": "attorney-general",
+      "official_name": "Pam Bondi",
+      "department": "Department of Justice",
+      "type": "policy_reversal",
+      "title": "Termination of Civil Rights Division Consent Decrees",
+      "description": "Withdrew from police reform consent decrees in over 40 jurisdictions, ending federal oversight of police departments.",
+      "date": "2025-02-12",
+      "impact_category": ["civil_rights", "law_enforcement"],
+      "americans_affected": 52000000,
+      "summary": "Ended federal police oversight programs established after civil rights violations, affecting residents in major cities.",
+      "beneficiaries": ["Police unions", "Law enforcement associations"],
+      "affected_groups": ["Communities of color", "Civil rights advocates", "Police reform activists"],
+      "sources": [
+        {
+          "type": "news",
+          "title": "DOJ ends police reform agreements nationwide",
+          "publication": "ACLU",
+          "url": "https://example.com",
+          "published_date": "2025-02-12"
+        }
+      ],
+      "created_at": "2025-02-12T00:00:00Z",
+      "updated_at": "2025-02-12T00:00:00Z"
+    },
+    {
+      "id": "eo-009",
+      "official_id": "secretary-of-energy",
+      "official_name": "Chris Wright",
+      "department": "Department of Energy",
+      "type": "budget_cut",
+      "title": "Renewable Energy Research Funding Cuts",
+      "description": "Slashed Department of Energy renewable energy and climate research budgets by 75%, redirecting funds to fossil fuel research.",
+      "date": "2025-02-14",
+      "impact_category": ["environment", "energy", "research"],
+      "americans_affected": 25000,
+      "budget_impact": -9800000000,
+      "summary": "Gutted clean energy research programs, eliminating thousands of research positions and halting climate initiatives.",
+      "beneficiaries": ["Fossil fuel industry"],
+      "affected_groups": ["Clean energy researchers", "Climate scientists", "Renewable energy industry"],
+      "sources": [
+        {
+          "type": "news",
+          "title": "Energy Dept. eliminates renewable energy programs",
+          "publication": "Clean Energy Wire",
+          "url": "https://example.com",
+          "published_date": "2025-02-14"
+        }
+      ],
+      "created_at": "2025-02-14T00:00:00Z",
+      "updated_at": "2025-02-14T00:00:00Z"
+    }
+  ]
+}

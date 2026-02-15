@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import cabinetData from "@/data/cabinet.json";
 import AlignmentSection from "./alignment-section";
@@ -56,9 +57,11 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Photo */}
-            <img 
+            <Image 
               src={member.photo_url}
               alt={member.name}
+              width={192}
+              height={192}
               className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover shadow-xl border-4 border-white"
             />
             

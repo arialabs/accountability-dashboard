@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import type { StaffMember } from "@/data/doge";
 
 function formatDate(dateStr: string) {
@@ -53,9 +54,11 @@ function StaffCard({ member }: StaffCardProps) {
         {/* Photo or Initials Avatar */}
         <div className="flex-shrink-0">
           {member.photoUrl ? (
-            <img
+            <Image
               src={member.photoUrl}
               alt={member.name}
+              width={64}
+              height={64}
               className="w-16 h-16 rounded-full object-cover border-2 border-slate-200"
             />
           ) : (

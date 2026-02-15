@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import cabinetData from "@/data/cabinet.json";
 import ConflictBadge from "@/components/ConflictBadge";
 import { 
@@ -270,9 +271,11 @@ export default function CabinetPage() {
                   >
                     {/* Photo */}
                     <div className="aspect-square overflow-hidden bg-slate-100 relative">
-                      <img
+                      <Image
                         src={member.photo_url}
                         alt={member.name}
+                        width={400}
+                        height={400}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       {/* Alignment Badge */}
@@ -335,9 +338,11 @@ export default function CabinetPage() {
                   >
                     <div className="flex gap-6 items-center">
                       {/* Photo */}
-                      <img
+                      <Image
                         src={member.photo_url}
                         alt={member.name}
+                        width={80}
+                        height={80}
                         className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg flex-shrink-0"
                       />
                       

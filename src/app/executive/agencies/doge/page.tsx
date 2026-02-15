@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { dogeData } from "@/data/doge";
 import type { Metadata } from "next";
 import ExpandableStaffRoster from "@/components/ExpandableStaffRoster";
@@ -91,9 +92,11 @@ export default function DogePage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="relative">
-              <img
+              <Image
                 src={leader.photoUrl}
                 alt={leader.name}
+                width={192}
+                height={192}
                 className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover shadow-2xl border-4 border-white"
               />
               <div className="absolute -bottom-2 -right-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
