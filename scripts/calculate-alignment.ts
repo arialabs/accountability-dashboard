@@ -3,11 +3,15 @@
  * Calculate alignment scores between stated positions and actual votes
  * Maps position topics to vote categories and calculates how often members
  * vote consistently with their stated positions.
+ * 
+ * Uses lib/alignment.ts as the single source of truth for alignment logic.
  */
 
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
+import { calculateMemberAlignment, isVoteAligned, getRelevantCategories } from '../src/lib/alignment.js';
+import type { MemberPositions, Position as LibPosition } from '../src/lib/types.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,7 +25,7 @@ interface Position {
   votes: string[];
 }
 
-interface MemberPositions {
+interface MemberPositionsFile {
   bioguide_id: string;
   name: string;
   source: string;
@@ -47,42 +51,6 @@ interface Vote {
   publicBenefit?: 'positive' | 'negative' | 'mixed';
 }
 
-// Map position topics to vote categories
-const TOPIC_TO_CATEGORY: Record<string, string[]> = {
-  'Abortion is a woman\'s unrestricted right': ['Healthcare', 'Civil Rights'],
-  'Expand ObamaCare': ['Healthcare'],
-  'Privatize Social Security': ['Economy & Taxes'],
-  'Vouchers for school choice': ['Education'],
-  'Fight EPA regulatory over-reach': ['Climate & Environment'],
-  'Drug use is immoral': ['Civil Rights', 'Healthcare'],
-  'Allow churches to provide welfare': ['Government Ethics'],
-  'More federal funding for health coverage': ['Healthcare'],
-  'Stricter punishment reduces crime': ['Civil Rights', 'National Security'],
-  'Absolute right to gun ownership': ['Civil Rights'],
-  'Higher taxes on the wealthy': ['Economy & Taxes'],
-  'Pathway to citizenship for illegal aliens': ['Immigration'],
-  'Support & expand free trade': ['Economy & Taxes'],
-  'Expand the military': ['National Security'],
-  'Make voter registration easier': ['Voting Rights'],
-};
-
-// Determine expected vote based on stance and vote's public benefit
-function getExpectedVote(stance: string, publicBenefit: string | undefined): 'Yea' | 'Nay' | null {
-  // Stances: "Strongly Supports", "Supports", "Neutral", "Opposes", "Strongly Opposes"
-  const isProgressive = stance.includes('Supports') || stance.includes('Favors');
-  const isConservative = stance.includes('Opposes');
-  
-  if (!publicBenefit || publicBenefit === 'mixed') return null;
-  
-  // For votes that benefit the public, progressives vote Yea, conservatives vote Nay
-  // This is a simplification - in reality it depends on the specific issue
-  if (publicBenefit === 'positive') {
-    return isProgressive ? 'Yea' : isConservative ? 'Nay' : null;
-  } else {
-    return isProgressive ? 'Nay' : isConservative ? 'Yea' : null;
-  }
-}
-
 interface AlignmentResult {
   bioguide_id: string;
   name: string;
@@ -102,7 +70,7 @@ interface AlignmentResult {
 
 function calculateAlignment(): AlignmentResult[] {
   // Load data
-  const positionsData: { members: MemberPositions[] } = JSON.parse(
+  const positionsData: { members: MemberPositionsFile[] } = JSON.parse(
     fs.readFileSync(path.join(DATA_DIR, 'positions.json'), 'utf-8')
   );
   const votesData: Vote[] = JSON.parse(
@@ -112,75 +80,116 @@ function calculateAlignment(): AlignmentResult[] {
   const results: AlignmentResult[] = [];
 
   for (const member of positionsData.members) {
+    // Convert to MemberPositions type for lib/alignment.ts
+    const memberPositions: MemberPositions = {
+      bioguide_id: member.bioguide_id,
+      name: member.name,
+      source: member.source,
+      source_url: member.source_url,
+      last_updated: member.last_updated,
+      positions: member.positions as LibPosition[],
+    };
+
+    // Prepare key votes in the format expected by calculateMemberAlignment
+    const keyVotes = votesData.map(v => ({
+      category: v.category,
+      publicBenefit: v.publicBenefit || 'positive',
+      votes: v.votes,
+      date: v.date,
+    }));
+
+    // Use the lib/alignment.ts function (single source of truth!)
+    const alignmentSummary = calculateMemberAlignment(memberPositions, keyVotes);
+
+    // Convert to the AlignmentResult format for the JSON file
     const result: AlignmentResult = {
       bioguide_id: member.bioguide_id,
       name: member.name,
       total_votes_analyzed: 0,
       aligned_votes: 0,
       misaligned_votes: 0,
-      alignment_score: 0,
+      alignment_score: alignmentSummary.overallAlignmentScore || 0,
       category_breakdown: {},
       notable_misalignments: [],
     };
 
-    // For each position, find matching votes
-    for (const position of member.positions) {
-      const matchingCategories = TOPIC_TO_CATEGORY[position.topic];
-      if (!matchingCategories) continue;
+    // Calculate totals from results
+    for (const positionResult of alignmentSummary.results) {
+      result.aligned_votes += positionResult.alignedVotes;
+      result.misaligned_votes += positionResult.opposedVotes;
+    }
+    result.total_votes_analyzed = result.aligned_votes + result.misaligned_votes;
 
-      // Find votes in matching categories
-      const matchingVotes = votesData.filter(v => 
-        matchingCategories.includes(v.category) &&
-        v.votes[member.bioguide_id]
-      );
-
-      for (const vote of matchingVotes) {
-        const actualVote = vote.votes[member.bioguide_id];
-        if (!actualVote || actualVote === 'Not Voting') continue;
-
-        const expectedVote = getExpectedVote(position.stance, vote.publicBenefit);
-        if (!expectedVote) continue;
-
-        result.total_votes_analyzed++;
-
-        // Track by category
-        if (!result.category_breakdown[vote.category]) {
-          result.category_breakdown[vote.category] = { aligned: 0, total: 0, score: 0 };
+    // Build category breakdown
+    for (const [category, score] of Object.entries(alignmentSummary.categoryScores)) {
+      // Count aligned and total votes for this category
+      let aligned = 0;
+      let total = 0;
+      
+      for (const positionResult of alignmentSummary.results) {
+        const categories = getRelevantCategories(positionResult.position.topic);
+        if (categories.includes(category)) {
+          aligned += positionResult.alignedVotes;
+          total += positionResult.alignedVotes + positionResult.opposedVotes;
         }
-        result.category_breakdown[vote.category].total++;
+      }
 
-        if (actualVote === expectedVote) {
-          result.aligned_votes++;
-          result.category_breakdown[vote.category].aligned++;
-        } else {
-          result.misaligned_votes++;
-          
-          // Track notable misalignments
-          if (result.notable_misalignments.length < 5) {
-            result.notable_misalignments.push({
-              vote_id: vote.id,
-              topic: position.topic,
-              stated_stance: position.stance,
-              actual_vote: actualVote,
-              expected_vote: expectedVote,
-            });
-          }
-        }
+      if (total > 0) {
+        result.category_breakdown[category] = {
+          aligned,
+          total,
+          score,
+        };
       }
     }
 
-    // Calculate scores
-    if (result.total_votes_analyzed > 0) {
-      result.alignment_score = Math.round(
-        (result.aligned_votes / result.total_votes_analyzed) * 100
-      );
-    }
+    // Track notable misalignments (positions where they voted opposite)
+    for (const positionResult of alignmentSummary.results) {
+      if (positionResult.opposedVotes > 0 && result.notable_misalignments.length < 5) {
+        // Find a specific vote where they misaligned
+        const relevantCategories = getRelevantCategories(positionResult.position.topic);
+        const misalignedVote = votesData.find(v => {
+          if (!relevantCategories.includes(v.category)) return false;
+          if (!v.votes[member.bioguide_id]) return false;
+          
+          const actualVote = v.votes[member.bioguide_id];
+          if (actualVote === 'Not Voting') return false;
+          
+          const alignment = isVoteAligned(
+            positionResult.position.stance,
+            actualVote,
+            v.publicBenefit || 'positive'
+          );
+          
+          return alignment === false; // Explicitly misaligned
+        });
 
-    for (const cat of Object.keys(result.category_breakdown)) {
-      const breakdown = result.category_breakdown[cat];
-      breakdown.score = breakdown.total > 0 
-        ? Math.round((breakdown.aligned / breakdown.total) * 100)
-        : 0;
+        if (misalignedVote) {
+          const actualVote = misalignedVote.votes[member.bioguide_id];
+          // Determine expected vote
+          const isProgressive = positionResult.position.stance.toLowerCase().includes('supports') ||
+                                positionResult.position.stance.toLowerCase().includes('favors');
+          const isConservative = positionResult.position.stance.toLowerCase().includes('opposes');
+          const billIsProgressive = misalignedVote.publicBenefit === 'positive';
+          
+          let expectedVote: string;
+          if (isProgressive) {
+            expectedVote = billIsProgressive ? 'Yea' : 'Nay';
+          } else if (isConservative) {
+            expectedVote = billIsProgressive ? 'Nay' : 'Yea';
+          } else {
+            expectedVote = 'Unknown';
+          }
+
+          result.notable_misalignments.push({
+            vote_id: misalignedVote.id,
+            topic: positionResult.position.topic,
+            stated_stance: positionResult.position.stance,
+            actual_vote: actualVote,
+            expected_vote: expectedVote,
+          });
+        }
+      }
     }
 
     // Only include members with analyzed votes
