@@ -145,7 +145,7 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
         )}
 
         {/* Main Content Sections */}
-        {investigation.sections.map((section) => (
+        {(investigation.sections ?? []).map((section) => (
           <section key={section.id} id={section.id} className="mb-12">
             <h2 className="text-3xl font-bold text-white mb-6 pb-3 border-b border-slate-700">
               {section.title}
