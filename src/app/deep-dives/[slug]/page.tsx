@@ -1,5 +1,4 @@
 // @ts-nocheck
-export const dynamic = "force-dynamic";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAllDeepDives, getDeepDiveBySlug } from "@/data/deep-dives";
@@ -10,7 +9,14 @@ type Props = {
   params: { slug: string };
 };
 
-// generateStaticParams removed — using force-dynamic until data types stabilize
+export function generateStaticParams() {
+  try {
+    return getAllDeepDives()
+      .filter(d => d.sections && d.keyFindings) // Only prerender pages with complete data
+      .map(d => ({ slug: d.slug }));
+  } catch { return []; }
+}
+
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const investigation = getDeepDiveBySlug(params.slug);
