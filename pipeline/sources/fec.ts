@@ -14,6 +14,32 @@ const FEC_API_BASE = "https://api.open.fec.gov/v1";
 const API_KEY = process.env.FEC_API_KEY || "DEMO_KEY";
 const CURRENT_CYCLE = 2024;
 
+// Retry helper with exponential backoff for rate limits
+async function fetchWithRetry(url: string, maxRetries = 3): Promise<Response | null> {
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      const response = await fetch(url);
+      
+      // If rate limited, wait and retry with exponential backoff
+      if (response.status === 429) {
+        const waitTime = Math.min(1000 * Math.pow(2, attempt), 30000); // Max 30s
+        console.log(`Rate limited, waiting ${waitTime}ms before retry ${attempt + 1}/${maxRetries}...`);
+        await new Promise(resolve => setTimeout(resolve, waitTime));
+        continue;
+      }
+      
+      return response;
+    } catch (err) {
+      if (attempt === maxRetries - 1) {
+        console.error(`Fetch error after ${maxRetries} attempts:`, err);
+        return null;
+      }
+      await new Promise(resolve => setTimeout(resolve, 1000 * Math.pow(2, attempt)));
+    }
+  }
+  return null;
+}
+
 // State name to code mapping
 const STATE_CODES: Record<string, string> = {
   "Alabama": "AL", "Alaska": "AK", "Arizona": "AZ", "Arkansas": "AR", "California": "CA",
@@ -88,9 +114,9 @@ async function searchCandidate(
   }
   
   try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      console.error(`FEC search failed: ${response.status}`);
+    const response = await fetchWithRetry(url);
+    if (!response || !response.ok) {
+      if (response) console.error(`FEC search failed: ${response.status}`);
       return null;
     }
     
@@ -120,8 +146,8 @@ async function getCandidateTotals(candidateId: string): Promise<any | null> {
   const url = `${FEC_API_BASE}/candidate/${candidateId}/totals/?api_key=${API_KEY}&cycle=${CURRENT_CYCLE}&sort=-cycle`;
   
   try {
-    const response = await fetch(url);
-    if (!response.ok) return null;
+    const response = await fetchWithRetry(url);
+    if (!response || !response.ok) return null;
     
     const data = await response.json();
     return data.results?.[0] || null;
@@ -135,8 +161,8 @@ async function getTopContributors(candidateId: string): Promise<any[]> {
   const url = `${FEC_API_BASE}/schedules/schedule_a/by_contributor/?api_key=${API_KEY}&candidate_id=${candidateId}&cycle=${CURRENT_CYCLE}&sort=-total&per_page=15`;
   
   try {
-    const response = await fetch(url);
-    if (!response.ok) return [];
+    const response = await fetchWithRetry(url);
+    if (!response || !response.ok) return [];
     
     const data = await response.json();
     return data.results || [];
