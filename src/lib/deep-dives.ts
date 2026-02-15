@@ -3,7 +3,7 @@
  * Provides access to investigation articles and analysis
  */
 
-import { deepDiveInvestigations as deepDivesData } from '@/data/deep-dives';
+import { deepDiveInvestigations as deepDivesData } from '@/data/deep-dives/index';
 
 export interface DeepDive {
   id: string;
