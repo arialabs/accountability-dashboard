@@ -29,6 +29,8 @@ export interface VotingRecordSummary {
   categoryScores: Record<string, CategoryVoteScore>;
   recentVotes: VoteRecord[];
   overallProgressiveScore: number; // 0-100
+  overallAlignmentScore: number; // 0-100, party-aware (high = votes with their ideology)
+  alignmentLabel: string; // "Progressive" or "Conservative"
 }
 
 /**
@@ -198,6 +200,15 @@ export function calculateVoteBasedScores(
     ? Math.round((totalProgressiveVotes / totalScoredVotes) * 100)
     : 50;
   
+  // Party-aware alignment score: for Democrats, progressive score IS their alignment.
+  // For Republicans, their alignment is the CONSERVATIVE score (100 - progressive).
+  // This way, a Republican voting 98% with party shows ~98% alignment, not 2%.
+  const isRepublican = memberParty === 'R';
+  const overallAlignmentScore = isRepublican 
+    ? (100 - overallProgressiveScore) 
+    : overallProgressiveScore;
+  const alignmentLabel = isRepublican ? 'Conservative' : 'Progressive';
+  
   // Sort recent votes by date
   recentVotes.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   
@@ -206,6 +217,8 @@ export function calculateVoteBasedScores(
     categoryScores,
     recentVotes: recentVotes.slice(0, 20), // Keep 20 most recent
     overallProgressiveScore,
+    overallAlignmentScore,
+    alignmentLabel,
   };
 }
 

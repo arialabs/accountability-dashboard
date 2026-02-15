@@ -417,8 +417,8 @@ export default function VoteBasedPositions({
         {/* Summary Stats */}
         <div className="flex flex-wrap gap-4 text-sm">
           <div className="flex items-center gap-2">
-            <span className="text-slate-600">Voting Record Score:</span>
-            <span className="font-bold text-blue-600">{votingRecord.overallProgressiveScore}%</span>
+            <span className="text-slate-600">{votingRecord.alignmentLabel} Voting Score:</span>
+            <span className="font-bold text-blue-600">{votingRecord.overallAlignmentScore}%</span>
           </div>
           {totalContradictions > 0 && (
             <div className="flex items-center gap-2">
