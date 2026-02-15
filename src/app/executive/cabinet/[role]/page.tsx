@@ -45,10 +45,10 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
     });
   };
   
-  const conflictScore = calculateConflictScore(official.conflicts_of_interest);
+  const conflictScore = calculateConflictScore(official.conflicts_of_interest as any);
   const conflictLabel = getConflictSeverityLabel(conflictScore);
   const tenure = formatTenure(official.appointed_date);
-  const groupedConflicts = groupConflictsByCategory(official.conflicts_of_interest);
+  const groupedConflicts = groupConflictsByCategory(official.conflicts_of_interest as any);
 
   return (
     <div className="min-h-screen bg-white">
