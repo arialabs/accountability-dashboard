@@ -234,7 +234,7 @@ export default function ExecutiveBranch() {
               </div>
             </Link>
             
-            <Link href="/executive/cabinet" className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200 hover:shadow-lg transition-shadow group">
+            <Link href="/executive/conflicts" className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200 hover:shadow-lg transition-shadow group">
               <div className="text-2xl">💼</div>
               <div>
                 <h3 className="font-bold text-green-900 group-hover:text-green-700">Transparency & Ethics →</h3>

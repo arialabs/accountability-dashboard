@@ -2,10 +2,13 @@
  * Enhanced Alignment Scoring with Multi-Factor Analysis
  * 
  * Combines multiple data sources for comprehensive scoring:
- * - Voting record alignment (primary)
+ * - Voting record alignment (primary) - from alignment.ts
  * - Campaign finance alignment (OpenFEC)
  * - Voting consistency
  * - Bipartisan cooperation
+ * 
+ * NOTE: This module extends the base alignment.ts calculator with additional
+ * data sources and confidence metrics for more nuanced scoring.
  */
 
 import { calculateConfidence, type ConfidenceMetrics, type DataSource } from './confidence';

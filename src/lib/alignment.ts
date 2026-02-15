@@ -3,6 +3,9 @@
  * 
  * Maps politician's stated positions (from OnTheIssues) to their actual votes
  * and calculates alignment scores with time-decay weighting for recent votes.
+ * 
+ * NOTE: This is the base alignment calculator.
+ * See alignment-enhanced.ts for multi-factor analysis that builds upon this.
  */
 
 import type { Position, MemberPositions } from './types';
