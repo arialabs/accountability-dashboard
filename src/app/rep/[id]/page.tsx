@@ -5,6 +5,7 @@ import Link from "next/link";
 import DonorAnalysisSection from "@/components/DonorAnalysisSection";
 import VotingRecordSection from "@/components/VotingRecordSection";
 import MemberVotingRecord from "@/components/MemberVotingRecord";
+import VoteHistorySection from "@/components/VoteHistorySection";
 import CommitteeMemberships from "@/components/CommitteeMemberships";
 import StockTradesSection from "@/components/StockTradesSection";
 import FinancialDisclosuresSection from "@/components/FinancialDisclosuresSection";
@@ -281,6 +282,13 @@ export default async function RepPage({ params }: { params: { id: string } }) {
                 }>}
               />
             
+
+            {/* Complete Vote History from Congress.gov */}
+            <VoteHistorySection
+              bioguideId={member.bioguide_id}
+              memberName={member.full_name}
+              chamber={member.chamber === "house" ? "House" : "Senate"}
+            />
 
             {/* Policy Positions: Says vs Does (Vote-Based) */}
             <VoteBasedPositions 
