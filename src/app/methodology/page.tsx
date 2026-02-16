@@ -338,7 +338,7 @@ export default function MethodologyPage() {
             </p>
             <div className="flex items-center justify-center gap-4 flex-wrap">
               <a
-                href="https://github.com/jeremyspofford/accountability-dashboard/issues"
+                href="https://github.com/arialabs/accountability-dashboard/issues"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition-colors"

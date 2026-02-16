@@ -82,7 +82,7 @@ export default function RootLayout({
     logo: `${siteUrl}/logo.png`,
     sameAs: [
       "https://twitter.com/arialabs",
-      "https://github.com/jeremyspofford/accountability-dashboard",
+      "https://github.com/arialabs/accountability-dashboard",
     ],
     foundingDate: "2026",
     founder: {

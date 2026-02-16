@@ -443,7 +443,7 @@ export default function DogePage() {
             All data is sourced from publicly available reporting. This page aims for factual accuracy.
             If you find an error, please{" "}
             <a
-              href="https://github.com/jeremyspofford/accountability-dashboard/issues"
+              href="https://github.com/arialabs/accountability-dashboard/issues"
               className="text-blue-500 underline"
               target="_blank"
               rel="noopener noreferrer"

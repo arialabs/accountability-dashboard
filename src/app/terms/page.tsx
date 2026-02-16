@@ -108,8 +108,8 @@ export default function TermsPage() {
           <h3 className="text-xl font-semibold text-slate-800 mb-3 mt-6">Open Source Code</h3>
           <p className="text-slate-700 leading-relaxed">
             The Site's source code is available at{" "}
-            <a href="https://github.com/jeremyspofford/accountability-dashboard" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-              github.com/jeremyspofford/accountability-dashboard
+            <a href="https://github.com/arialabs/accountability-dashboard" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              github.com/arialabs/accountability-dashboard
             </a>{" "}
             under the MIT License. You may use, modify, and distribute the code subject to the license terms.
           </p>
