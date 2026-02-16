@@ -1,16 +1,15 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import AlignmentLeaderboard from "@/components/AlignmentLeaderboard";
 import EpsteinFilesCard from "@/components/EpsteinFilesCard";
 import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
 
 export const metadata: Metadata = {
-  title: "Accountability Dashboard | Track Congressional Say vs. Do",
+  title: "Accountability Dashboard | Track Congressional Voting Records",
   description: "Tracking power. Protecting democracy. Monitor all three branches of government with transparent, publicly-sourced data. See who funds them, how they vote, and who they really represent.",
   openGraph: {
-    title: "Accountability Dashboard | Track Congressional Say vs. Do",
+    title: "Accountability Dashboard | Track Congressional Voting Records",
     description: "Monitor all three branches of government with transparent data. See who funds them, how they vote, and who they really represent.",
     type: "website",
     url: siteUrl,
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Accountability Dashboard | Track Congressional Say vs. Do",
+    title: "Accountability Dashboard | Track Congressional Voting Records",
     description: "Monitor all three branches of government with transparent data.",
     images: ["/og-image.png"],
   },
@@ -83,7 +82,6 @@ export default function Home() {
       </section>
 
       {/* Alignment Leaderboard — REMOVED: Scoring algorithm needs redesign (issue #84) */}
-      {/* <AlignmentLeaderboard /> */}
       
 
       {/* Three Branches Section */}
