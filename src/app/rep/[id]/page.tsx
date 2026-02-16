@@ -187,7 +187,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
     name: member.full_name,
     jobTitle: jobTitle,
     description: `${getPartyName(member.party)} ${member.chamber === "house" ? "Representative" : "Senator"}. View voting record, campaign finance data, and accountability metrics.`,
-    image: member.photo_url,
+    image: member.photo_url ?? undefined,
     url: `/rep/${params.id}`,
     party: member.party,
     state: member.state,
