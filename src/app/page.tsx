@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import AlignmentLeaderboard from "@/components/AlignmentLeaderboard";
 import EpsteinFilesCard from "@/components/EpsteinFilesCard";
-
+import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
 
@@ -32,8 +32,28 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  // Schema.org structured data for homepage
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+  ]);
+
+  const congressSchema = generateGovernmentOrgSchema({
+    name: "U.S. Congress",
+    description: "The legislative branch of the United States federal government, composed of the House of Representatives and the Senate.",
+    url: "/congress",
+  });
+
   return (
     <div className="min-h-screen antialiased overflow-x-hidden">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(breadcrumbSchema)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(congressSchema)}
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-24 md:py-32 lg:py-40">
         {/* Modern gradient mesh background */}
@@ -62,9 +82,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Alignment Leaderboard */}
-      
-        <AlignmentLeaderboard />
+      {/* Alignment Leaderboard — REMOVED: Scoring algorithm needs redesign (issue #84) */}
+      {/* <AlignmentLeaderboard /> */}
       
 
       {/* Three Branches Section */}

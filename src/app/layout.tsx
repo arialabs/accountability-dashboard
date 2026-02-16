@@ -134,10 +134,15 @@ export default function RootLayout({
           <Breadcrumbs />
           <main className="bg-slate-50">{children}</main>
           <footer className="bg-white border-t border-slate-200 py-12 mt-24">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 leading-relaxed space-y-3">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 leading-relaxed space-y-4">
               <p className="font-semibold text-slate-700 text-sm sm:text-base">Built by Aria Labs</p>
               <p className="text-sm sm:text-base">Data from Congress.gov, Voteview, and OpenFEC</p>
               <p className="text-sm sm:text-base">Democracy shouldn't be paywalled. This is open source.</p>
+              <div className="flex justify-center gap-6 text-sm">
+                <a href="/privacy" className="text-slate-600 hover:text-blue-600 transition">Privacy Policy</a>
+                <a href="/terms" className="text-slate-600 hover:text-blue-600 transition">Terms of Service</a>
+                <a href="/methodology" className="text-slate-600 hover:text-blue-600 transition">Methodology</a>
+              </div>
             </div>
           </footer>
         

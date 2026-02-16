@@ -2,6 +2,7 @@ import { getMember, getMembers, getMemberFinance, getMemberTrades, getMemberDisc
 import { getMemberAlignmentEnhanced, getAlignmentRankingEnhanced } from "@/lib/data-enhanced";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import DonorAnalysisSection from "@/components/DonorAnalysisSection";
 import VotingRecordSection from "@/components/VotingRecordSection";
 import MemberVotingRecord from "@/components/MemberVotingRecord";
@@ -15,6 +16,7 @@ import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced"
 import RepresentativeImage from "@/components/RepresentativeImage";
 import SocialShare from "@/components/SocialShare";
 import ConflictOfInterestSection from "@/components/ConflictOfInterestSection";
+import { generatePersonSchema, generateRatingSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 import keyVotesData from "@/data/key-votes.json";
 import positionsData from "@/data/positions.json";
@@ -23,6 +25,25 @@ export function generateStaticParams() {
   return getMembers().map((member) => ({
     id: member.bioguide_id,
   }));
+}
+
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const member = getMember(params.id);
+
+  if (!member) {
+    return {
+      title: "Representative Not Found | Accountability Dashboard",
+    };
+  }
+
+  const partyName = member.party === "D" ? "Democrat" : member.party === "R" ? "Republican" : "Independent";
+  const chamberName = member.chamber === "house" ? "Representative" : "Senator";
+  const district = member.district ? ` (${member.state}-${member.district})` : ` (${member.state})`;
+
+  return {
+    title: `${member.full_name} - ${chamberName}${district}`,
+    description: `${partyName} ${chamberName} ${member.full_name}. View voting record, campaign finance data, alignment scores, stock trades, and accountability metrics.`,
+  };
 }
 
 export default async function RepPage({ params }: { params: { id: string } }) {
@@ -155,8 +176,62 @@ export default async function RepPage({ params }: { params: { id: string } }) {
     }
   };
 
+  // Schema.org structured data
+  const chamberName = member.chamber === "house" ? "U.S. House of Representatives" : "U.S. Senate";
+  const chamberUrl = member.chamber === "house" ? "/house" : "/senate";
+  const jobTitle = member.chamber === "house" 
+    ? `U.S. Representative for ${member.state}${member.district ? `-${member.district}` : ""}` 
+    : `U.S. Senator from ${member.state}`;
+  
+  const personSchema = generatePersonSchema({
+    name: member.full_name,
+    jobTitle: jobTitle,
+    description: `${getPartyName(member.party)} ${member.chamber === "house" ? "Representative" : "Senator"}. View voting record, campaign finance data, and accountability metrics.`,
+    image: member.photo_url,
+    url: `/rep/${params.id}`,
+    party: member.party,
+    state: member.state,
+    district: member.district,
+    chamber: member.chamber,
+    affiliation: {
+      name: chamberName,
+      url: chamberUrl,
+    },
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Congress", url: "/congress" },
+    { name: member.full_name, url: `/rep/${params.id}` },
+  ]);
+
+  // Rating schema for alignment score (if available)
+  const ratingSchema = alignmentEnhanced ? generateRatingSchema({
+    itemReviewed: `${member.full_name} - Position Alignment`,
+    ratingValue: alignmentEnhanced.overallScore,
+    bestRating: 100,
+    worstRating: 0,
+    author: "Accountability Dashboard",
+    description: `Alignment score measures how consistently ${member.full_name} votes in line with their stated positions.`,
+  }) : null;
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(personSchema)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(breadcrumbSchema)}
+      />
+      {ratingSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={structuredDataScript(ratingSchema)}
+        />
+      )}
       {/* Header Section */}
       <section className="bg-gradient-to-b from-slate-50 to-white border-b border-slate-200 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -282,23 +357,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
               />
             
 
-            {/* Policy Positions: Says vs Does (Vote-Based) */}
-            <VoteBasedPositions 
-              bioguideId={member.bioguide_id} 
-              positionsData={positionsData as { members: Array<{ bioguide_id: string; name: string; source: string; source_url: string; last_updated: string; positions: Array<{ topic: string; stance: string; intensity: number; quotes: string[]; votes?: unknown[] }> }> }}
-              keyVotesData={keyVotesData as unknown as Array<{
-                id: string;
-                bill: string;
-                title: string;
-                category: string;
-                date: string;
-                description: string;
-                votes: Record<string, string>;
-                yea_count: number;
-                nay_count: number;
-              }>}
-              allMembers={getMembers().map(m => ({ bioguide_id: m.bioguide_id, party: m.party }))}
-            />
+            {/* Policy Positions: Says vs Does — REMOVED: Scoring needs redesign (issue #84) */}
             
             {/* Voting Record (Party Loyalty & Ideology) */}
             <VotingRecordSection
@@ -331,19 +390,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
 
           {/* Sidebar (1/3 width) */}
           <aside className="space-y-8">
-            {/* Position-to-Vote Alignment (Enhanced) */}
-            
-              {alignmentEnhanced ? (
-                <AlignmentScoreCardEnhanced 
-                  alignment={alignmentEnhanced} 
-                  ranking={alignmentRankingEnhanced}
-                />
-              ) : (
-                <AlignmentScoreCard 
-                  alignment={alignment} 
-                  ranking={alignmentRanking}
-                />
-              )}
+            {/* Position-to-Vote Alignment — REMOVED: Scoring needs redesign (issue #84) */}
             
 
             {/* Committee Memberships */}

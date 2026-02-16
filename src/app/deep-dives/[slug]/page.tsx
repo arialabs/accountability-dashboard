@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAllDeepDives, getDeepDiveBySlug } from "@/data/deep-dives";
 import type { Metadata } from "next";
+import { generateArticleSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 // Content rendered as paragraphs (no markdown dependency needed)
 
 type Props = {
@@ -40,8 +41,34 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
     notFound();
   }
 
+  // Schema.org structured data
+  const articleSchema = generateArticleSchema({
+    headline: investigation.title,
+    description: investigation.description,
+    datePublished: investigation.publishedDate,
+    dateModified: investigation.updatedDate || investigation.publishedDate,
+    author: "Aria Labs",
+    url: `/deep-dives/${params.slug}`,
+    keywords: investigation.tags,
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Deep Dive Investigations", url: "/deep-dives" },
+    { name: investigation.title, url: `/deep-dives/${params.slug}` },
+  ]);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(articleSchema)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(breadcrumbSchema)}
+      />
       {/* Header */}
       <div className="bg-slate-900/50 border-b border-slate-800">
         <div className="container mx-auto px-4 py-8 max-w-5xl">

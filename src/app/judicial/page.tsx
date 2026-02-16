@@ -1,12 +1,45 @@
 import Link from "next/link";
 import { getSupremeCourtJustices, getIdeologyBreakdown } from "@/lib/data";
+import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 export default function JudicialBranch() {
   const justices = getSupremeCourtJustices();
   const breakdown = getIdeologyBreakdown();
 
+  // Schema.org structured data
+  const judicialSchema = generateGovernmentOrgSchema({
+    name: "Judicial Branch of the United States",
+    description: "The judicial branch interprets the meaning of laws, applies laws to individual cases, and decides if laws violate the Constitution. It includes the Supreme Court and federal courts.",
+    url: "/judicial",
+  });
+
+  const supremeCourtSchema = generateGovernmentOrgSchema({
+    name: "Supreme Court of the United States",
+    description: "The highest court in the United States, composed of nine justices who serve lifetime appointments.",
+    url: "/judicial/scotus",
+    parentOrganization: "Judicial Branch of the United States",
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Judicial Branch", url: "/judicial" },
+  ]);
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(judicialSchema)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(supremeCourtSchema)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(breadcrumbSchema)}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-slate-50 to-white border-b border-slate-200 py-24 md:py-32">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">

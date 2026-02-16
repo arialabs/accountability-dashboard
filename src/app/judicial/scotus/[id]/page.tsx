@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { getSupremeCourtJustice, getSupremeCourtJustices } from "@/lib/data";
+import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 interface PageProps {
   params: {
@@ -15,6 +17,21 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const justice = getSupremeCourtJustice(params.id);
+
+  if (!justice) {
+    return {
+      title: "Justice Not Found | Accountability Dashboard",
+    };
+  }
+
+  return {
+    title: `${justice.name} - ${justice.title}`,
+    description: `${justice.title} ${justice.name}, ${justice.ideology_label}. Appointed by ${justice.appointed_by} in ${justice.year_appointed}. View voting patterns and ideology analysis.`,
+  };
+}
+
 export default async function JusticePage({ params }: PageProps) {
   const justice = getSupremeCourtJustice(params.id);
 
@@ -25,8 +42,36 @@ export default async function JusticePage({ params }: PageProps) {
   // Calculate position on ideology scale (-4 to +4)
   const ideologyPosition = ((justice.ideology_score + 4) / 8) * 100;
 
+  // Schema.org structured data
+  const personSchema = generatePersonSchema({
+    name: justice.name,
+    jobTitle: justice.title,
+    description: `${justice.title} of the Supreme Court of the United States. ${justice.ideology_label}. Appointed by ${justice.appointed_by}.`,
+    url: `/judicial/scotus/${params.id}`,
+    affiliation: {
+      name: "Supreme Court of the United States",
+      url: "/judicial/scotus",
+    },
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Judicial Branch", url: "/judicial" },
+    { name: "Supreme Court", url: "/judicial/scotus" },
+    { name: justice.name, url: `/judicial/scotus/${params.id}` },
+  ]);
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(personSchema)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(breadcrumbSchema)}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-slate-50 to-white border-b border-slate-200 py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
