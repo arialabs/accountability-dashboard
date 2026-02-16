@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${justice.name} - ${justice.title}`,
-    description: `${justice.title} ${justice.name}, ${justice.ideology_label}. Appointed by ${justice.appointed_by} in ${justice.year_appointed}. View voting patterns and ideology analysis.`,
+    description: `${justice.title} ${justice.name}, ${justice.ideology_label}. Appointed by ${justice.appointed_by} in ${justice.confirmation_year}. View voting patterns and ideology analysis.`,
   };
 }
 
