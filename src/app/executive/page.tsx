@@ -94,7 +94,7 @@ export default function ExecutiveBranch() {
             <div className="flex flex-col md:flex-row items-center gap-6">
               {/* Photo */}
               <Image 
-                src="/images/officials/vance-placeholder.svg"
+                src="/images/officials/vance.jpg"
                 alt="J.D. Vance"
                 width={96}
                 height={96}
@@ -183,8 +183,8 @@ export default function ExecutiveBranch() {
             {[
               { role: "Secretary of State", name: "Marco Rubio", id: "secretary-of-state", photo: "/images/officials/rubio.jpg" },
               { role: "Secretary of Defense", name: "Pete Hegseth", id: "secretary-of-defense", photo: "" },
-              { role: "Attorney General", name: "Pam Bondi", id: "attorney-general", photo: "" },
-              { role: "Secretary of Treasury", name: "Scott Bessent", id: "secretary-of-treasury", photo: "" },
+              { role: "Attorney General", name: "Pam Bondi", id: "attorney-general", photo: "/images/officials/bondi.jpg" },
+              { role: "Secretary of Treasury", name: "Scott Bessent", id: "secretary-of-treasury", photo: "/images/officials/bessent.jpg" },
               { role: "Secretary of HHS", name: "RFK Jr.", id: "secretary-of-hhs", photo: "/images/officials/kennedy.jpg" },
               { role: "Secretary of Homeland Security", name: "Kristi Noem", id: "secretary-of-homeland-security", photo: "/images/officials/noem.jpg" },
               { role: "EPA Administrator", name: "Lee Zeldin", id: "epa-administrator", photo: "/images/officials/zeldin.jpg" },
