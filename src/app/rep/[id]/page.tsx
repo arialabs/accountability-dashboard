@@ -192,7 +192,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
     url: `/rep/${params.id}`,
     party: member.party,
     state: member.state,
-    district: member.district,
+    district: member.district ? String(member.district) : undefined,
     chamber: member.chamber,
     affiliation: {
       name: chamberName,
@@ -209,7 +209,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
   // Rating schema for alignment score (if available)
   const ratingSchema = alignmentEnhanced ? generateRatingSchema({
     itemReviewed: `${member.full_name} - Position Alignment`,
-    ratingValue: alignmentEnhanced.overallScore,
+    ratingValue: alignmentEnhanced.alignment_score,
     bestRating: 100,
     worstRating: 0,
     author: "Accountability Dashboard",

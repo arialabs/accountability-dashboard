@@ -1,10 +1,10 @@
 "use client";
 
 import { useApi } from "./useApi";
-import { fetchLeaderboard, type ApiLeaderboard } from "../lib/api-client";
+import { fetchLeaderboard, type ApiLeaderboardData } from "../lib/api-client";
 
 export function useLeaderboard() {
-  return useApi<ApiLeaderboard>(
+  return useApi<ApiLeaderboardData>(
     (signal) => fetchLeaderboard(signal),
     []
   );
