@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dash
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Accountability Dashboard | Track Congressional Say vs. Do",
+    default: "Accountability Dashboard | Track Congressional Voting Records",
     template: "%s | Accountability Dashboard",
   },
   description: "Tracking power. Protecting democracy. Monitor all three branches of government with transparent, publicly-sourced data. See who funds them, how they vote, and who they really represent.",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "representative tracking",
     "PAC donations",
     "political corruption",
-    "say vs do",
+    "congressional accountability",
   ],
   authors: [{ name: "Aria Labs" }],
   creator: "Aria Labs",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    title: "Accountability Dashboard | Track Congressional Say vs. Do",
+    title: "Accountability Dashboard | Track Congressional Voting Records",
     description: "Monitor all three branches of government with transparent data. See who funds them, how they vote, and who they really represent.",
     siteName: "Accountability Dashboard",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Accountability Dashboard | Track Congressional Say vs. Do",
+    title: "Accountability Dashboard | Track Congressional Voting Records",
     description: "Monitor all three branches of government with transparent data. See who funds them, how they vote, and who they really represent.",
     images: ["/og-image.png"],
     creator: "@arialabs",
