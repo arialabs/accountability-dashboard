@@ -13,12 +13,14 @@ async function apiFetch<T>(path: string, signal?: AbortSignal): Promise<T> {
   });
 
   if (!resp.ok) {
-    const error = await resp.json().catch(() => ({ error: resp.statusText }));
-    throw new Error((error as any).error || `API error: ${resp.status}`);
+    const error = await resp.json().catch(() => ({ error: resp.statusText })) as { error?: string };
+    throw new Error(error.error || `API error: ${resp.status}`);
   }
 
   return resp.json() as Promise<T>;
 }
+
+import type { Committee } from './types';
 
 // ==================== Types (matching worker response format) ====================
 
@@ -35,7 +37,7 @@ export interface ApiMember {
   photo_url: string | null;
   bills_sponsored: number;
   bills_cosponsored: number;
-  committees: any[];
+  committees: Committee[];
   party_loyalty_pct: number;
   ideology_score: number | null;
   votes_cast: number;

@@ -10,6 +10,36 @@ interface AlignmentScore {
   rationale: string;
 }
 
+interface PresidentialPromise {
+  id: number;
+  promise_text: string;
+  category: string;
+  subcategory?: string;
+  date_made?: string;
+  source_url?: string;
+  source_type?: string;
+  status: string;
+  priority?: string;
+}
+
+interface AlignmentData {
+  stats: {
+    overall_alignment_score?: number;
+    avg_alignment: number;
+    aligned_count: number;
+    conflicted_count: number;
+    total_promises: number;
+    promises_aligned?: number;
+    policies_aligned?: number;
+    promises_neutral?: number;
+    policies_neutral?: number;
+    promises_conflicted?: number;
+    policies_conflicted?: number;
+  };
+  alignment_scores: AlignmentScore[];
+  related_promises?: PresidentialPromise[];
+}
+
 interface AlignmentSectionProps {
   memberId: string;
 }
@@ -29,7 +59,7 @@ function getScoreLabel(score: number): string {
 }
 
 export default function AlignmentSection({ memberId }: AlignmentSectionProps) {
-  const [alignmentData, setAlignmentData] = useState<any>(null);
+  const [alignmentData, setAlignmentData] = useState<AlignmentData | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -125,7 +155,7 @@ export default function AlignmentSection({ memberId }: AlignmentSectionProps) {
         
         <div className="space-y-4">
           {alignment_scores.map((alignment: AlignmentScore) => {
-            const promise = related_promises?.find((p: any) => p.id === alignment.promise_id);
+            const promise = related_promises?.find((p) => p.id === alignment.promise_id);
             if (!promise) return null;
             
             const scoreColor = getScoreColor(alignment.score);

@@ -75,7 +75,7 @@ export default function CabinetPage() {
   const [viewMode, setViewMode] = useState<ViewMode>("grid");
   const [selectedDepartment, setSelectedDepartment] = useState<string>("all");
 
-  const members = cabinetData.members as unknown as CabinetMemberData[];
+  const members = cabinetData.members as CabinetMemberData[];
   const officials = getAllOfficials();
 
   // Get unique departments for filter

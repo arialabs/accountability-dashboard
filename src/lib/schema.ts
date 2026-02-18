@@ -2,6 +2,8 @@
  * Schema.org structured data utilities for SEO and rich snippets
  */
 
+type JsonLdSchema = Record<string, unknown>;
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reps.arialabs.ai";
 
 /**
@@ -25,7 +27,7 @@ export function generatePersonSchema(params: {
     url: string;
   };
 }) {
-  const schema: any = {
+  const schema: JsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: params.name,
@@ -65,10 +67,11 @@ export function generatePersonSchema(params: {
 
   // Additional political metadata
   if (params.party || params.state || params.district) {
-    schema.additionalProperty = [];
+    const additionalProperty: Array<Record<string, string>> = [];
+    schema.additionalProperty = additionalProperty;
     
     if (params.party) {
-      schema.additionalProperty.push({
+      additionalProperty.push({
         "@type": "PropertyValue",
         name: "Political Party",
         value: params.party === "D" ? "Democratic" : params.party === "R" ? "Republican" : "Independent",
@@ -76,7 +79,7 @@ export function generatePersonSchema(params: {
     }
 
     if (params.state) {
-      schema.additionalProperty.push({
+      additionalProperty.push({
         "@type": "PropertyValue",
         name: "State",
         value: params.state,
@@ -84,7 +87,7 @@ export function generatePersonSchema(params: {
     }
 
     if (params.district && params.chamber === "house") {
-      schema.additionalProperty.push({
+      additionalProperty.push({
         "@type": "PropertyValue",
         name: "District",
         value: params.district,
@@ -105,7 +108,7 @@ export function generateGovernmentOrgSchema(params: {
   parentOrganization?: string;
   logo?: string;
 }) {
-  const schema: any = {
+  const schema: JsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "GovernmentOrganization",
     name: params.name,
@@ -140,7 +143,7 @@ export function generateRatingSchema(params: {
   author?: string;
   description?: string;
 }) {
-  const schema: any = {
+  const schema: JsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "Rating",
     ratingValue: params.ratingValue,
@@ -175,7 +178,7 @@ export function generateArticleSchema(params: {
   image?: string;
   keywords?: string[];
 }) {
-  const schema: any = {
+  const schema: JsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: params.headline,
@@ -231,7 +234,7 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
 /**
  * Inject structured data script into page head
  */
-export function structuredDataScript(schema: any) {
+export function structuredDataScript(schema: JsonLdSchema) {
   return {
     __html: JSON.stringify(schema),
   };

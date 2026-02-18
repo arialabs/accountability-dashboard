@@ -94,7 +94,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
         const industries = aggregateByIndustry(scheduleAData);
         
         // Get member's votes from keyVotesData
-        const memberVotes = (keyVotesData as any[])
+        const memberVotes = (keyVotesData as Array<{ bill: string; title: string; category: string; date: string; votes: Record<string, string> }>)
           .filter(vote => vote.votes && vote.votes[params.id])
           .map(vote => ({
             bill: vote.bill,
@@ -336,7 +336,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
                 bioguideId={member.bioguide_id}
                 memberName={member.full_name}
                 chamber={member.chamber === "house" ? "House" : "Senate"}
-                keyVotes={keyVotesData as unknown as Array<{
+                keyVotes={keyVotesData as Array<{
                   id: string;
                   congress: number;
                   chamber: "House" | "Senate";

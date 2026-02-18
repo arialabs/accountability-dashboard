@@ -11,6 +11,7 @@ import type {
   DepartmentMetrics,
   ConflictSeverity,
   ActionType,
+  DepartmentName,
 } from '@/types/executive';
 import cabinetData from '@/data/cabinet.json';
 
@@ -24,7 +25,7 @@ export function getAllOfficials(): ExecutiveOfficial[] {
     name: member.name,
     role: member.role,
     official_role: "cabinet_secretary",
-    department: member.department as any,
+    department: member.department as DepartmentName,
     photo_url: member.photo_url,
     appointed_date: member.appointed_date,
     confirmation_vote: member.confirmation_vote,

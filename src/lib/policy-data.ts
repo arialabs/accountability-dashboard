@@ -1,5 +1,5 @@
 import policyData from "@/data/policy-impacts.json";
-import type { PolicyImpact, PolicySummary, PolicyCategory, PolicyCategoryInfo } from "@/lib/types";
+import type { PolicyImpact, PolicySummary, PolicyCategory, PolicyCategoryInfo, ImpactGrade } from "@/lib/types";
 
 export const POLICY_CATEGORIES: Record<PolicyCategory, PolicyCategoryInfo> = {
   'economy': {
@@ -73,7 +73,7 @@ export function getPolicySummary(): PolicySummary {
   const summary: PolicySummary = {
     total_policies: policies.length,
     overall_impact_score: policyData.summary.overall_impact_score,
-    overall_grade: policyData.summary.overall_grade as any,
+    overall_grade: policyData.summary.overall_grade as ImpactGrade,
     americans_affected: policyData.summary.americans_affected,
     categories: {}
   };

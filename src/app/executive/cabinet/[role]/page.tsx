@@ -1,4 +1,3 @@
-// @ts-nocheck
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -15,6 +14,12 @@ import {
   getConflictSeverityLabel,
 } from "@/lib/executive-data";
 import type { ConflictSeverity } from "@/types/executive";
+
+interface ConflictOfInterest {
+  description: string;
+  severity: string;
+  category: string;
+}
 
 interface CabinetMemberPageProps {
   params: Promise<{ role: string }>;
@@ -46,10 +51,10 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
     });
   };
   
-  const conflictScore = calculateConflictScore(official.conflicts_of_interest as any);
+  const conflictScore = calculateConflictScore(official.conflicts_of_interest as Array<{ severity: ConflictSeverity }>);
   const conflictLabel = getConflictSeverityLabel(conflictScore);
   const tenure = formatTenure(official.appointed_date);
-  const groupedConflicts = groupConflictsByCategory(official.conflicts_of_interest as any);
+  const groupedConflicts = groupConflictsByCategory(official.conflicts_of_interest as Array<{ severity: ConflictSeverity; category: string }>);
 
   return (
     <div className="min-h-screen bg-white">
@@ -159,7 +164,7 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
                       </span>
                     </h3>
                     <div className="space-y-3">
-                      {conflicts.map((conflict: any, idx: number) => (
+                      {conflicts.map((conflict, idx: number) => (
                         <div key={idx} className="flex gap-3">
                           <ConflictBadge severity={conflict.severity as ConflictSeverity} />
                           <p className="text-slate-700 text-sm flex-1">

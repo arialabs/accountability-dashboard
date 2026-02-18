@@ -1,10 +1,9 @@
-// @ts-nocheck
 "use client";
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { getAllOfficials } from "@/lib/executive-data";
-import { analyzeOfficialConflicts, scoreConflictRisk, groupConflictsByCategory, filterBySeverity } from "@/lib/executive-conflicts";
+import { analyzeOfficialConflicts, scoreConflictRisk, groupConflictsByCategory, filterBySeverity, type DetectedConflict } from "@/lib/executive-conflicts";
 import type { ConflictSeverity } from "@/types/executive";
 import ConflictBadge from "@/components/ConflictBadge";
 
@@ -155,7 +154,7 @@ export default function ConflictsPage() {
           <div className="grid md:grid-cols-3 gap-4">
             <select
               value={selectedSeverity}
-              onChange={(e) => setSelectedSeverity(e.target.value as any)}
+              onChange={(e) => setSelectedSeverity(e.target.value as ConflictSeverity | "all")}
               className="px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             >
               <option value="all">All Severities</option>
@@ -349,7 +348,7 @@ export default function ConflictsPage() {
   );
 }
 
-function ConflictCard({ conflict }: { conflict: any }) {
+function ConflictCard({ conflict }: { conflict: DetectedConflict }) {
   return (
     <div className="bg-white rounded-2xl border-2 border-red-200 p-6 shadow-sm hover:shadow-lg transition-shadow">
       <div className="flex items-start justify-between gap-4 mb-4">

@@ -52,9 +52,10 @@ export function formatPercent(value: number, decimals: number = 1): string {
  * @returns Formatted date string
  */
 export function formatDate(
-  dateStr: string,
+  dateStr: string | null | undefined,
   format: 'short' | 'long' | 'full' = 'long'
 ): string {
+  if (!dateStr) return 'Date unavailable';
   const [year, month, day] = dateStr.split('-').map(Number);
   const date = new Date(year, month - 1, day);
 
