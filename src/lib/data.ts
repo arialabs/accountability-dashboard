@@ -10,6 +10,8 @@ import scotusData from "../data/scotus.json";
 import houseDisclosuresData from "../data/house-disclosures.json";
 import alignmentData from "../data/alignment-scores.json";
 import type { Member, CampaignFinance, SupremeCourtJustice } from "./types";
+import { getDonorBreakdown, searchCandidateByName, getCandidateFinancials, getScheduleAContributions } from './fec';
+import { aggregateByIndustry } from './industry-classifier';
 
 // Alignment score types
 interface CategoryBreakdown {
@@ -145,69 +147,92 @@ export function getMemberFinanceStatic(bioguideId: string): CampaignFinance | nu
 }
 
 /**
+ * Helper: Find FEC candidate record for a member
+ */
+async function findFECCandidate(member: Member) {
+  const office = member.chamber === 'house' ? 'H' : 'S';
+  return await searchCandidateByName(
+    member.first_name,
+    member.last_name,
+    office
+  );
+}
+
+/**
+ * Helper: Fetch all FEC data for a member in parallel
+ */
+async function fetchFECDataForMember(candidateId: string) {
+  return await Promise.all([
+    getDonorBreakdown(candidateId),
+    getCandidateFinancials(candidateId),
+    getScheduleAContributions(candidateId, undefined, 500),
+  ]);
+}
+
+/**
+ * Helper: Transform FEC API data to CampaignFinance format
+ */
+function transformToFinance(
+  candidateId: string,
+  breakdown: any,
+  financials: any,
+  scheduleAData: any[]
+): CampaignFinance {
+  // Classify contributions by industry
+  const industries = aggregateByIndustry(scheduleAData);
+  const topIndustries = industries.slice(0, 10).map(ind => ({
+    industry: ind.displayName,
+    total: ind.total,
+    pac_amount: 0, // Not available from Schedule A directly
+    individual_amount: ind.total,
+  }));
+
+  return {
+    candidate_id: candidateId,
+    cycle: breakdown.cycle,
+    total_raised: breakdown.total_raised,
+    total_spent: financials?.total_disbursements || 0,
+    cash_on_hand: financials?.cash_on_hand || 0,
+    individual_contributions: breakdown.individual_total,
+    pac_contributions: breakdown.pac_total,
+    party_contributions: financials?.party_contributions || 0,
+    candidate_self_funding: financials?.candidate_contributions || 0,
+    small_donors: breakdown.small_donor_total,
+    large_donors: breakdown.large_donor_total,
+    pac_percentage: breakdown.pac_percentage,
+    small_donor_percentage: breakdown.small_donor_percentage,
+    large_donor_percentage: breakdown.large_donor_percentage,
+    top_contributors: breakdown.top_contributors,
+    top_industries: topIndustries,
+  };
+}
+
+/**
  * Get member finance data - fetches from OpenFEC API in real-time
  * Falls back to static data if API fails
+ * 
+ * Refactored to use single-purpose helper functions for better maintainability
  */
 export async function getMemberFinance(bioguideId: string): Promise<CampaignFinance | null> {
   const member = getMember(bioguideId);
   if (!member) return null;
 
-  // Try to fetch from FEC API
   try {
-    const { getDonorBreakdown, searchCandidateByName, getCandidateFinancials, getScheduleAContributions } = await import('./fec');
-    const { aggregateByIndustry } = await import('./industry-classifier');
-    
-    const office = member.chamber === 'house' ? 'H' : 'S';
-    const candidate = await searchCandidateByName(
-      member.first_name,
-      member.last_name,
-      office
-    );
-
+    // Step 1: Find candidate in FEC database
+    const candidate = await findFECCandidate(member);
     if (!candidate) {
       return getMemberFinanceStatic(bioguideId);
     }
 
-    const [breakdown, financials, scheduleAData] = await Promise.all([
-      getDonorBreakdown(candidate.candidate_id),
-      getCandidateFinancials(candidate.candidate_id),
-      getScheduleAContributions(candidate.candidate_id, undefined, 500),
-    ]);
+    // Step 2: Fetch all FEC data in parallel
+    const [breakdown, financials, scheduleAData] = await fetchFECDataForMember(candidate.candidate_id);
 
     if (!breakdown) {
       return getMemberFinanceStatic(bioguideId);
     }
 
-    // Classify contributions by industry
-    const industries = aggregateByIndustry(scheduleAData);
-    const topIndustries = industries.slice(0, 10).map(ind => ({
-      industry: ind.displayName,
-      total: ind.total,
-      pac_amount: 0, // Not available from Schedule A directly
-      individual_amount: ind.total,
-    }));
-
-    // Transform to our CampaignFinance format
-    const finance: CampaignFinance = {
-      candidate_id: candidate.candidate_id,
-      cycle: breakdown.cycle,
-      total_raised: breakdown.total_raised,
-      total_spent: financials?.total_disbursements || 0,
-      cash_on_hand: financials?.cash_on_hand || 0,
-      individual_contributions: breakdown.individual_total,
-      pac_contributions: breakdown.pac_total,
-      party_contributions: financials?.party_contributions || 0,
-      candidate_self_funding: financials?.candidate_contributions || 0,
-      small_donors: breakdown.small_donor_total,
-      large_donors: breakdown.large_donor_total,
-      pac_percentage: breakdown.pac_percentage,
-      small_donor_percentage: breakdown.small_donor_percentage,
-      large_donor_percentage: breakdown.large_donor_percentage,
-      top_contributors: breakdown.top_contributors,
-      top_industries: topIndustries,
-    };
-
-    return finance;
+    // Step 3: Transform to our format
+    return transformToFinance(candidate.candidate_id, breakdown, financials, scheduleAData);
   } catch (error) {
     // Fall back to static data on error
     return getMemberFinanceStatic(bioguideId);
