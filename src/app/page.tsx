@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import AlignmentLeaderboardLive from "@/components/AlignmentLeaderboardLive";
 import EpsteinFilesCard from "@/components/EpsteinFilesCard";
 import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
@@ -194,13 +193,6 @@ export default function Home() {
             </Link>
             
           </div>
-        </div>
-      </section>
-
-      {/* Say vs. Do Leaderboard — Live from API */}
-      <section className="py-20 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <AlignmentLeaderboardLive />
         </div>
       </section>
 

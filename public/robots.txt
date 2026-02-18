@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/*
+Disallow: /test/*
+
+# Host
+Host: https://accountability-dashboard.pages.dev
+
+# Sitemaps
+Sitemap: https://accountability-dashboard.pages.dev/sitemap.xml
