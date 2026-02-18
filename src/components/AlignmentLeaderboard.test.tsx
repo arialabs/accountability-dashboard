@@ -15,13 +15,14 @@ vi.mock('next/link', () => ({
 }));
 
 describe('AlignmentLeaderboard', () => {
+  // Removed: scoring algorithm needs redesign (#84)
   it('should not render the Say vs Do leaderboard (issue #84)', () => {
     const { container } = render(<AlignmentLeaderboard />);
     expect(container.innerHTML).toBe('');
     expect(screen.queryByText('Say vs. Do Leaderboard')).toBeNull();
   });
 
-  it('should not render any leaderboard content when feature flag is off', () => {
+  it('should return null until scoring algorithm is redesigned', () => {
     const { container } = render(<AlignmentLeaderboard />);
     expect(container.firstChild).toBeNull();
   });

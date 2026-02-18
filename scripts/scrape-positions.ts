@@ -98,7 +98,7 @@ async function fetchWithRetry(url: string, retries = MAX_RETRIES): Promise<strin
     try {
       const response = await fetch(url, {
         headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; AccountabilityDashboard/1.0; +https://github.com/jeremyspofford/accountability-dashboard)',
+          'User-Agent': 'Mozilla/5.0 (compatible; AccountabilityDashboard/1.0; +https://github.com/arialabs/accountability-dashboard)',
         },
       });
 

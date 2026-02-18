@@ -262,4 +262,4 @@ No FEC candidate found for [Name]
 
 **Implementation Date:** February 12, 2026  
 **Status:** ✅ Production Ready  
-**Maintainer:** Pyra Labs
+**Maintainer:** Aria Labs

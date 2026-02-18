@@ -1,7 +1,7 @@
 # Issue #5: Integrate Real FEC Campaign Finance Data ✅ COMPLETE
 
 **Status**: ✅ Completed  
-**PR**: [#7 - Integrate Real FEC Campaign Finance Data](https://github.com/jeremyspofford/accountability-dashboard/pull/7)  
+**PR**: [#7 - Integrate Real FEC Campaign Finance Data](https://github.com/arialabs/accountability-dashboard/pull/7)  
 **Branch**: `feature/fec-data-integration`
 
 ---
@@ -268,6 +268,6 @@ We successfully integrated real FEC campaign finance data for all 538 members of
 
 ---
 
-**PR**: https://github.com/jeremyspofford/accountability-dashboard/pull/7  
+**PR**: https://github.com/arialabs/accountability-dashboard/pull/7  
 **Branch**: `feature/fec-data-integration`  
 **Completed**: February 12, 2026

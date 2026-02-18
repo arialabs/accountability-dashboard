@@ -2,7 +2,7 @@
 
 **Task**: Add Senate data to Say vs. Do leaderboard  
 **Branch**: `feat/add-senate-data`  
-**PR**: https://github.com/jeremyspofford/accountability-dashboard/pull/34  
+**PR**: https://github.com/arialabs/accountability-dashboard/pull/34  
 **Status**: ✅ Complete
 
 ## What Was Built
@@ -170,7 +170,7 @@ node scripts/fetch-senate-data.js
 ## Deployment
 
 **Branch**: `feat/add-senate-data`  
-**PR**: https://github.com/jeremyspofford/accountability-dashboard/pull/34  
+**PR**: https://github.com/arialabs/accountability-dashboard/pull/34  
 **Ready to merge**: Yes ✅
 
 ### Pre-merge Checklist

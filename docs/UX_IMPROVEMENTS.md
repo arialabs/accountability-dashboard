@@ -105,7 +105,7 @@ Full transparency page covering:
 ```
 Data sourced from: Congress.gov · OpenFEC · OnTheIssues.org
 Scoring methodology v1.2 · Last updated Feb 13, 2026
-Open source: github.com/jeremyspofford/accountability-dashboard
+Open source: github.com/arialabs/accountability-dashboard
 ```
 
 ### Timestamps

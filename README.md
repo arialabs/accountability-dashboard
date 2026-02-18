@@ -1,6 +1,6 @@
 # Accountability Dashboard
 
-[![Deploy](https://github.com/jeremyspofford/accountability-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/jeremyspofford/accountability-dashboard/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/arialabs/accountability-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/arialabs/accountability-dashboard/actions/workflows/deploy.yml)
 
 **Track what politicians say vs what they do.**
 
@@ -70,4 +70,4 @@ MIT — Use this however you want. Democracy shouldn't be paywalled.
 
 ---
 
-*Built by [Pyra Labs](https://github.com/jeremyspofford) 🔥*
+*Built by [Aria Labs](https://github.com/arialabs) 🔥*
