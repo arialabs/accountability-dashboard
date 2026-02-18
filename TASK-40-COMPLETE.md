@@ -146,7 +146,7 @@ A  test-image-fallback.html                # Standalone test file
 
 ```
 commit 63c0ad4
-Author: Jeremy Spofford
+Author: Aria Labs
 Date:   Thu Feb 12 04:05:48 2026
 
     Fix: Implement multiple fallback sources for representative images

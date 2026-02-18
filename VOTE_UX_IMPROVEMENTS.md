@@ -136,5 +136,5 @@ Three vote UX improvements implemented to enhance user engagement and accessibil
 ---
 
 **Deployed by:** Nova (subagent)  
-**Requested by:** Jeremy Spofford  
+**Requested by:** Aria Labs  
 **Session:** agent:main:subagent:81482489-026a-4256-8413-901ec6c1bd74
