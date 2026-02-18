@@ -86,7 +86,7 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
       <Link
         href={dropdown.href}
         onKeyDown={handleKeyDown}
-        className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-1 font-medium text-sm"
+        className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-1 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
         aria-expanded={open}
         aria-haspopup="true"
       >
@@ -107,7 +107,7 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
             <Link
               key={item.href}
               href={item.href}
-              className="flex items-center justify-between px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+              className="flex items-center justify-between px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500"
               onClick={() => setOpen(false)}
             >
               <span>{item.label}</span>
@@ -201,7 +201,8 @@ export default function Navigation() {
       <div className="hidden md:flex items-center gap-4 lg:gap-6">
         <Link
           href="/"
-          className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center font-medium text-sm"
+          aria-current={pathname === '/' ? 'page' : undefined}
+          className={`text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded ${pathname === '/' ? 'text-blue-600 font-bold' : ''}`}
         >
           Dashboard
         </Link>
@@ -210,7 +211,8 @@ export default function Navigation() {
         ))}
         <Link
           href="/scandals"
-          className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center font-medium text-sm"
+          aria-current={pathname === '/scandals' ? 'page' : undefined}
+          className={`text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded ${pathname === '/scandals' ? 'text-blue-600 font-bold' : ''}`}
         >
           Scandals
         </Link>
@@ -251,7 +253,7 @@ export default function Navigation() {
               {/* Search */}
               <Link
                 href="/congress?search="
-                className="px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium border-b border-slate-100"
+                className="px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium border-b border-slate-100 focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500"
               >
                 🔍 Search
               </Link>
@@ -259,7 +261,8 @@ export default function Navigation() {
               {/* Dashboard */}
               <Link
                 href="/"
-                className="px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium border-b border-slate-100"
+                aria-current={pathname === '/' ? 'page' : undefined}
+                className={`px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium border-b border-slate-100 focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500 ${pathname === '/' ? 'bg-blue-50 text-blue-600 font-bold' : ''}`}
               >
                 🏠 Dashboard
               </Link>
@@ -269,8 +272,9 @@ export default function Navigation() {
                 <div key={d.label} className="border-b border-slate-100">
                   <button
                     onClick={() => setExpandedMobile(expandedMobile === d.label ? null : d.label)}
-                    className="w-full px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center justify-between font-medium"
+                    className="w-full px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center justify-between font-medium focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500"
                     aria-expanded={expandedMobile === d.label}
+                    aria-label={`${d.label} navigation menu`}
                   >
                     <span className="flex items-center gap-3">
                       {d.icon} {d.label}
@@ -290,7 +294,7 @@ export default function Navigation() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="flex items-center justify-between pl-12 pr-4 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+                          className="flex items-center justify-between pl-12 pr-4 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors focus:outline-none focus:bg-slate-200 focus:ring-2 focus:ring-inset focus:ring-blue-500"
                         >
                           <span>{item.label}</span>
                           {item.badge && (
@@ -308,7 +312,8 @@ export default function Navigation() {
               {/* Scandals */}
               <Link
                 href="/scandals"
-                className="px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium"
+                aria-current={pathname === '/scandals' ? 'page' : undefined}
+                className={`px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500 ${pathname === '/scandals' ? 'bg-blue-50 text-blue-600 font-bold' : ''}`}
               >
                 🚨 Scandals
               </Link>

@@ -12,9 +12,13 @@ function PartyBadge({ party }: { party: string }) {
   };
   
   const names = { D: 'D', R: 'R', I: 'I' };
+  const fullNames = { D: 'Democrat', R: 'Republican', I: 'Independent' };
   
   return (
-    <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${colors[party as keyof typeof colors] || 'bg-slate-100 text-slate-700'}`}>
+    <span 
+      className={`px-2 py-0.5 rounded-full text-xs font-bold ${colors[party as keyof typeof colors] || 'bg-slate-100 text-slate-700'}`}
+      aria-label={fullNames[party as keyof typeof fullNames] || party}
+    >
       {names[party as keyof typeof names] || party}
     </span>
   );
@@ -33,21 +37,24 @@ function ChamberBadge({ chamber }: { chamber: 'House' | 'Senate' }) {
 }
 
 function ScoreBadge({ score }: { score: number }) {
-  let bgColor, textColor;
+  let bgColor, textColor, label;
   
   if (score >= 75) {
     bgColor = 'bg-green-100';
     textColor = 'text-green-700';
+    label = 'High alignment';
   } else if (score >= 50) {
     bgColor = 'bg-yellow-100';
     textColor = 'text-yellow-700';
+    label = 'Moderate alignment';
   } else {
     bgColor = 'bg-red-100';
     textColor = 'text-red-700';
+    label = 'Low alignment';
   }
   
   return (
-    <span className={`px-3 py-1 rounded-full text-sm font-bold ${bgColor} ${textColor}`}>
+    <span className={`px-3 py-1 rounded-full text-sm font-bold ${bgColor} ${textColor}`} aria-label={`${label}: ${score}%`}>
       {score}%
     </span>
   );
@@ -115,10 +122,12 @@ export default function AlignmentLeaderboard() {
           </div>
           
           {/* Chamber Filter */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-2" role="group" aria-label="Chamber filter">
             <button
               onClick={() => setChamberFilter('all')}
-              className={`px-4 py-2 min-h-[44px] rounded-lg font-medium text-sm transition ${
+              aria-pressed={chamberFilter === 'all'}
+              aria-label="Show all chambers"
+              className={`px-4 py-2 min-h-[44px] rounded-lg font-medium text-sm transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                 chamberFilter === 'all' 
                   ? 'bg-slate-900 text-white' 
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -128,7 +137,9 @@ export default function AlignmentLeaderboard() {
             </button>
             <button
               onClick={() => setChamberFilter('house')}
-              className={`px-4 py-2 min-h-[44px] rounded-lg font-medium text-sm transition ${
+              aria-pressed={chamberFilter === 'house'}
+              aria-label="Show House of Representatives only"
+              className={`px-4 py-2 min-h-[44px] rounded-lg font-medium text-sm transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                 chamberFilter === 'house' 
                   ? 'bg-slate-900 text-white' 
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -138,7 +149,9 @@ export default function AlignmentLeaderboard() {
             </button>
             <button
               onClick={() => setChamberFilter('senate')}
-              className={`px-4 py-2 min-h-[44px] rounded-lg font-medium text-sm transition ${
+              aria-pressed={chamberFilter === 'senate'}
+              aria-label="Show Senate only"
+              className={`px-4 py-2 min-h-[44px] rounded-lg font-medium text-sm transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                 chamberFilter === 'senate' 
                   ? 'bg-indigo-600 text-white' 
                   : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'

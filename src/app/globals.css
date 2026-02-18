@@ -10,6 +10,16 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
   
+  /* Accessibility: Focus visible for keyboard navigation */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+  
+  /* Remove focus outline for mouse users */
+  *:focus:not(:focus-visible) {
+    @apply outline-none;
+  }
+  
   h1, h2, h3, h4, h5, h6 {
     @apply text-slate-900 leading-tight;
   }

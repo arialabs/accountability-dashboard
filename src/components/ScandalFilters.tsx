@@ -96,7 +96,8 @@ export default function ScandalFilters({
         {hasActiveFilters && (
           <button
             onClick={clearAllFilters}
-            className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+            aria-label="Clear all filters"
+            className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1"
           >
             Clear All Filters ✕
           </button>
@@ -129,22 +130,35 @@ export default function ScandalFilters({
           Party
         </label>
         <div className="flex flex-wrap gap-2">
-          {["", "D", "R", "I"].map((party) => (
-            <button
-              key={party || "all"}
-              onClick={() => updateFilter("party", party)}
-              className={`
-                px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px]
-                ${filters.party === party
-                  ? "bg-blue-600 text-white"
-                  : "bg-blue-100 text-blue-700 hover:bg-blue-200"
-                }
-              `}
-            >
-              {party === "" ? "All" : party === "D" ? "Democrat" : party === "R" ? "Republican" : "Independent"}
-              {party && stats.byParty[party] ? ` (${stats.byParty[party]})` : ""}
-            </button>
-          ))}
+          {["", "D", "R", "I"].map((party) => {
+            const partyLabel = party === "" ? "All parties" : 
+                              party === "D" ? "Filter by Democrat" : 
+                              party === "R" ? "Filter by Republican" : 
+                              "Filter by Independent";
+            const displayText = party === "" ? "All" : 
+                               party === "D" ? "Democrat" : 
+                               party === "R" ? "Republican" : 
+                               "Independent";
+            return (
+              <button
+                key={party || "all"}
+                onClick={() => updateFilter("party", party)}
+                aria-label={partyLabel}
+                aria-pressed={filters.party === party}
+                className={`
+                  px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px]
+                  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+                  ${filters.party === party
+                    ? "bg-blue-600 text-white"
+                    : "bg-blue-100 text-blue-700 hover:bg-blue-200"
+                  }
+                `}
+              >
+                {displayText}
+                {party && stats.byParty[party] ? ` (${stats.byParty[party]})` : ""}
+              </button>
+            );
+          })}
         </div>
       </div>
       
@@ -203,22 +217,35 @@ export default function ScandalFilters({
           Chamber
         </label>
         <div className="flex flex-wrap gap-2">
-          {["", "executive", "house", "senate"].map((chamber) => (
-            <button
-              key={chamber || "all"}
-              onClick={() => updateFilter("chamber", chamber)}
-              className={`
-                px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px]
-                ${filters.chamber === chamber
-                  ? "bg-blue-600 text-white"
-                  : "bg-blue-100 text-blue-700 hover:bg-blue-200"
-                }
-              `}
-            >
-              {chamber === "" ? "All" : chamber === "executive" ? "Executive" : chamber === "house" ? "House" : "Senate"}
-              {chamber && stats.byChamber[chamber] ? ` (${stats.byChamber[chamber]})` : ""}
-            </button>
-          ))}
+          {["", "executive", "house", "senate"].map((chamber) => {
+            const chamberLabel = chamber === "" ? "All chambers" :
+                                chamber === "executive" ? "Filter by Executive branch" :
+                                chamber === "house" ? "Filter by House of Representatives" :
+                                "Filter by Senate";
+            const displayText = chamber === "" ? "All" : 
+                               chamber === "executive" ? "Executive" : 
+                               chamber === "house" ? "House" : 
+                               "Senate";
+            return (
+              <button
+                key={chamber || "all"}
+                onClick={() => updateFilter("chamber", chamber)}
+                aria-label={chamberLabel}
+                aria-pressed={filters.chamber === chamber}
+                className={`
+                  px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px]
+                  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+                  ${filters.chamber === chamber
+                    ? "bg-blue-600 text-white"
+                    : "bg-blue-100 text-blue-700 hover:bg-blue-200"
+                  }
+                `}
+              >
+                {displayText}
+                {chamber && stats.byChamber[chamber] ? ` (${stats.byChamber[chamber]})` : ""}
+              </button>
+            );
+          })}
         </div>
       </div>
       
