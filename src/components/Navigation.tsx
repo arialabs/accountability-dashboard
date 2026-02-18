@@ -46,7 +46,7 @@ const dropdowns: NavDropdown[] = [
 function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);

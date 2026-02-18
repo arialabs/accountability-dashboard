@@ -19,12 +19,12 @@
     "db:studio": "turso db shell accountability-dashboard"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.74.0",
-    "@libsql/client": "^0.5.0",
-    "next": "14.2.24",
+    "@anthropic-ai/sdk": "^0.75.0",
+    "@libsql/client": "^0.17.0",
+    "next": "16.1.6",
     "pdf-parse": "^2.4.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "swr": "^2.2.5"
   },
   "devDependencies": {
@@ -32,12 +32,12 @@
     "@testing-library/react": "^16.3.2",
     "@types/node": "^20.11.0",
     "@types/pdf-parse": "^1.1.5",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
     "autoprefixer": "^10.4.17",
     "cheerio": "^1.2.0",
     "csv-parse": "^6.1.0",
-    "jsdom": "^28.0.0",
+    "jsdom": "^28.1.0",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
@@ -47,5 +47,9 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "overrides": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3"
   }
 }
