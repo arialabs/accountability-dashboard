@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import promiseData from "@/data/trump-promises.json";
+import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  title: "President of the United States | Accountability Dashboard",
+  description: "Track the President's policy actions, promises, and their impact on different groups. Non-partisan analysis of who benefits and who is harmed by executive decisions.",
+};
 
 type ImpactLevel = "positive" | "negative" | "mixed" | "in_progress";
 
@@ -55,8 +62,36 @@ export default function PresidentPage() {
     return acc;
   }, {} as Record<string, number>);
   
+  // Schema.org structured data
+  const personSchema = generatePersonSchema({
+    name: president.name,
+    jobTitle: "47th President of the United States",
+    description: "Track policy actions and their impact. Non-partisan analysis of executive decisions.",
+    url: "/executive/president",
+    party: "R",
+    affiliation: {
+      name: "Executive Branch of the United States",
+      url: "/executive",
+    },
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Executive Branch", url: "/executive" },
+    { name: "President", url: "/executive/president" },
+  ]);
+  
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(personSchema)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(breadcrumbSchema)}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-red-50 to-white border-b border-slate-200 py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">

@@ -1,12 +1,48 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import vpData from "@/data/vp.json";
+import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  title: "Vice President of the United States | Accountability Dashboard",
+  description: "Track the Vice President's role, Senate record, and policy positions. View voting history and accountability metrics.",
+};
 
 export default function VicePresidentPage() {
   const { vice_president, senate_record } = vpData;
   
+  // Schema.org structured data
+  const personSchema = generatePersonSchema({
+    name: vice_president.name,
+    jobTitle: "Vice President of the United States",
+    description: "Track the Vice President's role, Senate record, and policy positions.",
+    url: "/executive/vp",
+    party: "R",
+    state: "OH",
+    affiliation: {
+      name: "Executive Branch of the United States",
+      url: "/executive",
+    },
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Executive Branch", url: "/executive" },
+    { name: "Vice President", url: "/executive/vp" },
+  ]);
+  
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(personSchema)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(breadcrumbSchema)}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-50 to-white border-b border-slate-200 py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">

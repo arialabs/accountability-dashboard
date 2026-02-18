@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import cabinetData from "@/data/cabinet.json";
 import AlignmentSection from "./alignment-section";
 import ConflictBadge from "@/components/ConflictBadge";
@@ -14,6 +15,23 @@ import {
   getConflictSeverityLabel,
 } from "@/lib/executive-data";
 import type { ConflictSeverity } from "@/types/executive";
+import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
+
+export async function generateMetadata({ params }: CabinetMemberPageProps): Promise<Metadata> {
+  const { role } = await params;
+  const member = cabinetData.members.find((m) => m.id === role);
+
+  if (!member) {
+    return {
+      title: "Cabinet Member Not Found | Accountability Dashboard",
+    };
+  }
+
+  return {
+    title: `${member.name} - ${member.role}`,
+    description: `${member.role} ${member.name}. Track policy positions, conflicts of interest, and accountability metrics for ${member.department}.`,
+  };
+}
 
 interface ConflictOfInterest {
   description: string;
@@ -56,8 +74,36 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
   const tenure = formatTenure(official.appointed_date);
   const groupedConflicts = groupConflictsByCategory(official.conflicts_of_interest as Array<{ severity: ConflictSeverity; category: string }>);
 
+  // Schema.org structured data
+  const personSchema = generatePersonSchema({
+    name: member.name,
+    jobTitle: member.role,
+    description: `${member.role} of the ${member.department}. Track policy positions and accountability metrics.`,
+    url: `/executive/cabinet/${role}`,
+    affiliation: {
+      name: member.department,
+      url: "/executive/cabinet",
+    },
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Executive Branch", url: "/executive" },
+    { name: "Cabinet", url: "/executive/cabinet" },
+    { name: member.name, url: `/executive/cabinet/${role}` },
+  ]);
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(personSchema)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={structuredDataScript(breadcrumbSchema)}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-red-50 to-white border-b border-slate-200 py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
