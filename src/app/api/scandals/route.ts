@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
     }
     if (memberId) {
       scandals = scandals.filter(s => 
-        s.involved_members?.includes(memberId)
+        s.bioguide_id === memberId || s.member_name?.toLowerCase().includes(memberId.toLowerCase())
       );
     }
 

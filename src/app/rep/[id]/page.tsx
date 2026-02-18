@@ -203,15 +203,8 @@ export default async function RepPage({ params }: { params: { id: string } }) {
     { name: member.full_name, url: `/rep/${params.id}` },
   ]);
 
-  // Rating schema for alignment score (if available)
-  const ratingSchema = alignmentEnhanced ? generateRatingSchema({
-    itemReviewed: `${member.full_name} - Position Alignment`,
-    ratingValue: alignmentEnhanced.alignment_score,
-    bestRating: 100,
-    worstRating: 0,
-    author: "Accountability Dashboard",
-    description: `Alignment score measures how consistently ${member.full_name} votes in line with their stated positions.`,
-  }) : null;
+  // Rating schema disabled per #84 (alignment scoring paused)
+  const ratingSchema = null;
 
   return (
     <div className="min-h-screen bg-white">
@@ -407,7 +400,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
             {/* Social Share */}
             <SocialShare
               title={`${member.full_name} - Accountability Dashboard`}
-              text={`Check out ${member.full_name}'s voting record, campaign finance, and Say vs. Do Score${alignmentEnhanced ? ` of ${alignmentEnhanced.alignment_score}%` : ""} on the Accountability Dashboard.`}
+              text={`Check out ${member.full_name}'s voting record and campaign finance data on the Accountability Dashboard.`}
               url={`https://reps.arialabs.ai/rep/${member.bioguide_id}`}
             />
 
