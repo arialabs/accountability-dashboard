@@ -1,4 +1,3 @@
-// @ts-nocheck
 "use client";
 
 import { useState, useMemo } from "react";
@@ -15,12 +14,40 @@ import {
 } from "@/lib/executive-data";
 import type { ConflictSeverity } from "@/types/executive";
 
+interface ConflictOfInterest {
+  description: string;
+  severity: ConflictSeverity;
+  category: string;
+}
+
+interface CabinetMemberData {
+  id: string;
+  name: string;
+  role: string;
+  department: string;
+  photo_url: string;
+  appointed_date: string;
+  confirmation_vote: string;
+  bio: string;
+  prior_positions: Array<{
+    title: string;
+    organization: string;
+    years: string;
+  }>;
+  conflicts_of_interest: ConflictOfInterest[];
+  net_worth: string;
+  policy_positions: Array<{
+    topic: string;
+    stance: string;
+  }>;
+}
+
 // Calculate a basic alignment score based on conflicts
-function calculateAlignmentScore(member: any): number {
+function calculateAlignmentScore(member: CabinetMemberData): number {
   let score = 100;
   
   if (member.conflicts_of_interest) {
-    member.conflicts_of_interest.forEach((conflict: any) => {
+    member.conflicts_of_interest.forEach((conflict) => {
       switch (conflict.severity) {
         case 'critical': score -= 25; break;
         case 'high': score -= 15; break;
@@ -48,7 +75,7 @@ export default function CabinetPage() {
   const [viewMode, setViewMode] = useState<ViewMode>("grid");
   const [selectedDepartment, setSelectedDepartment] = useState<string>("all");
 
-  const { members } = cabinetData;
+  const members = cabinetData.members as unknown as CabinetMemberData[];
   const officials = getAllOfficials();
 
   // Get unique departments for filter
@@ -101,7 +128,7 @@ export default function CabinetPage() {
       sum + (m.conflicts_of_interest?.length || 0), 0
     );
     const criticalConflicts = members.reduce((sum, m) => 
-      sum + (m.conflicts_of_interest?.filter((c: any) => c.severity === 'critical').length || 0), 0
+      sum + (m.conflicts_of_interest?.filter((c) => c.severity === 'critical').length || 0), 0
     );
     const avgAlignment = members.reduce((sum, m) => 
       sum + calculateAlignmentScore(m), 0) / totalMembers;
@@ -261,7 +288,7 @@ export default function CabinetPage() {
               {filteredMembers.map((member) => {
                 const alignmentScore = calculateAlignmentScore(member);
                 const alignmentColor = getAlignmentColor(alignmentScore);
-                const conflictScore = calculateConflictScore(member.conflicts_of_interest || []);
+                const conflictScore = calculateConflictScore((member.conflicts_of_interest as Array<{ severity: ConflictSeverity }>) || []);
                 const conflictLabel = getConflictSeverityLabel(conflictScore);
                 
                 return (
@@ -308,8 +335,8 @@ export default function CabinetPage() {
                       </p>
                       {member.conflicts_of_interest && member.conflicts_of_interest.length > 0 && (
                         <div className="flex flex-wrap gap-1 mt-2">
-                          {member.conflicts_of_interest.slice(0, 2).map((conflict: any, idx: number) => (
-                            <ConflictBadge key={idx} severity={conflict.severity as ConflictSeverity} />
+                          {member.conflicts_of_interest.slice(0, 2).map((conflict, idx: number) => (
+                            <ConflictBadge key={idx} severity={conflict.severity} />
                           ))}
                           {member.conflicts_of_interest.length > 2 && (
                             <span className="text-xs text-slate-500">
@@ -386,9 +413,9 @@ export default function CabinetPage() {
                     {member.conflicts_of_interest && member.conflicts_of_interest.length > 0 && (
                       <div className="mt-4 pt-4 border-t border-slate-200">
                         <div className="flex flex-wrap gap-2">
-                          {member.conflicts_of_interest.slice(0, 3).map((conflict: any, idx: number) => (
+                          {member.conflicts_of_interest.slice(0, 3).map((conflict, idx: number) => (
                             <div key={idx} className="flex items-center gap-2 text-sm">
-                              <ConflictBadge severity={conflict.severity as ConflictSeverity} />
+                              <ConflictBadge severity={conflict.severity} />
                               <span className="text-slate-600 truncate max-w-md">
                                 {conflict.description}
                               </span>
