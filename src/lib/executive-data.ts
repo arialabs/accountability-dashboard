@@ -19,7 +19,7 @@ import cabinetData from '@/data/cabinet.json';
  * Get all executive officials
  */
 export function getAllOfficials(): ExecutiveOfficial[] {
-  return allOfficials;
+  return getExecutiveOfficials();
 }
 
 export function getExecutiveOfficials(): ExecutiveOfficial[] {
