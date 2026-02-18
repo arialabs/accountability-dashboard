@@ -3,6 +3,7 @@ import DevelopmentBanner from "@/components/DevelopmentBanner";
 import Navigation from "@/components/Navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PWARegister from "@/components/PWARegister";
+import LayoutErrorBoundary from "@/components/LayoutErrorBoundary";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
@@ -145,7 +146,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen">
         <PWARegister />
-        
+        <LayoutErrorBoundary>
           <DevelopmentBanner />
           <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,7 +172,7 @@ export default function RootLayout({
               </div>
             </div>
           </footer>
-        
+        </LayoutErrorBoundary>
       </body>
     </html>
   );

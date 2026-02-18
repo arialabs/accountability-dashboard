@@ -18,6 +18,7 @@ import ScandalsSection from "@/components/ScandalsSection";
 import RepresentativeImage from "@/components/RepresentativeImage";
 import SocialShare from "@/components/SocialShare";
 import ConflictOfInterestSection from "@/components/ConflictOfInterestSection";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import { generatePersonSchema, generateRatingSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 import keyVotesData from "@/data/key-votes.json";
@@ -325,13 +326,17 @@ export default async function RepPage({ params }: { params: { id: string } }) {
           {/* Main Content (2/3 width) */}
           <div className="lg:col-span-2 space-y-8">
             {/* Campaign Finance - Now the main focus */}
-            <DonorAnalysisSection finance={finance} />
+            <ErrorBoundary context="campaign finance data">
+              <DonorAnalysisSection finance={finance} />
+            </ErrorBoundary>
 
             {/* Potential Conflicts of Interest */}
-            <ConflictOfInterestSection conflicts={conflicts} memberName={member.full_name} />
+            <ErrorBoundary context="conflict of interest analysis">
+              <ConflictOfInterestSection conflicts={conflicts} memberName={member.full_name} />
+            </ErrorBoundary>
 
             {/* Key Votes Record */}
-            
+            <ErrorBoundary context="voting record">
               <MemberVotingRecord
                 bioguideId={member.bioguide_id}
                 memberName={member.full_name}
@@ -352,37 +357,43 @@ export default async function RepPage({ params }: { params: { id: string } }) {
                   votes: Record<string, string>;
                 }>}
               />
-            
+            </ErrorBoundary>
 
             {/* Policy Positions: Says vs Does — REMOVED: Scoring needs redesign (issue #84) */}
             
             {/* Voting Record (Party Loyalty & Ideology) */}
-            <VotingRecordSection
-              partyLoyalty={member.party_alignment_pct}
-              ideologyScore={member.ideology_score}
-              keyVotes={keyVotes}
-            />
+            <ErrorBoundary context="party loyalty and ideology data">
+              <VotingRecordSection
+                partyLoyalty={member.party_alignment_pct}
+                ideologyScore={member.ideology_score}
+                keyVotes={keyVotes}
+              />
+            </ErrorBoundary>
 
             {/* Stock Trades */}
-            
+            <ErrorBoundary context="stock trades">
               <StockTradesSection 
                 trades={stockTrades} 
                 memberName={member.full_name} 
               />
-            
+            </ErrorBoundary>
 
             {/* Financial Disclosures */}
-            <FinancialDisclosuresSection 
-              disclosures={financialDisclosures} 
-              memberName={member.full_name} 
-            />
+            <ErrorBoundary context="financial disclosures">
+              <FinancialDisclosuresSection 
+                disclosures={financialDisclosures} 
+                memberName={member.full_name} 
+              />
+            </ErrorBoundary>
 
             {/* Scandals & Controversies */}
-            <ScandalsSection
-              bioguideId={member.bioguide_id}
-              memberName={member.full_name}
-              maxVisible={3}
-            />
+            <ErrorBoundary context="scandals">
+              <ScandalsSection
+                bioguideId={member.bioguide_id}
+                memberName={member.full_name}
+                maxVisible={3}
+              />
+            </ErrorBoundary>
           </div>
 
           {/* Sidebar (1/3 width) */}

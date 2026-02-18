@@ -11,6 +11,8 @@ import { logger } from '@/lib/logger';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
+  context?: string; // Identifies which component boundary failed (e.g., "campaign finance data")
 }
 
 interface State {
@@ -43,11 +45,17 @@ export class ErrorBoundary extends Component<Props, State> {
       error: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
+      context: this.props.context,
     });
 
     this.setState({
       errorInfo,
     });
+
+    // Call optional error callback (for error tracking services like Sentry)
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
   }
 
   render(): ReactNode {
@@ -83,7 +91,9 @@ export class ErrorBoundary extends Component<Props, State> {
             </div>
 
             <p className="text-gray-600 mb-4">
-              We encountered an unexpected error. Please try refreshing the page.
+              {this.props.context
+                ? `There was an error loading ${this.props.context}. Please try refreshing the page.`
+                : "We encountered an unexpected error. Please try refreshing the page."}
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -112,3 +122,6 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+// Default export for convenience
+export default ErrorBoundary;
