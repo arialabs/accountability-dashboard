@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { getMember, getMembers, getMemberFinance, getMemberTrades, getMemberDisclosures, getMemberAlignment, getAlignmentRanking } from "@/lib/data";
-import { getMemberAlignmentEnhanced, getAlignmentRankingEnhanced } from "@/lib/data-enhanced";
+import { getMember, getMembers, getMemberFinance, getMemberTrades, getMemberDisclosures } from "@/lib/data";
+import { getMemberAlignmentEnhanced } from "@/lib/data-enhanced";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -11,9 +11,10 @@ import CommitteeMemberships from "@/components/CommitteeMemberships";
 import StockTradesSection from "@/components/StockTradesSection";
 import FinancialDisclosuresSection from "@/components/FinancialDisclosuresSection";
 import ScandalsSection from "@/components/ScandalsSection";
-import VoteBasedPositions from "@/components/VoteBasedPositions";
-import AlignmentScoreCard from "@/components/AlignmentScoreCard";
-import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced";
+// Alignment components removed from live site per #84 (Say vs Do scoring paused)
+// import VoteBasedPositions from "@/components/VoteBasedPositions";
+// import AlignmentScoreCard from "@/components/AlignmentScoreCard";
+// import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced";
 import RepresentativeImage from "@/components/RepresentativeImage";
 import SocialShare from "@/components/SocialShare";
 import ConflictOfInterestSection from "@/components/ConflictOfInterestSection";
@@ -143,13 +144,8 @@ export default async function RepPage({ params }: { params: { id: string } }) {
   // Financial disclosures from House Clerk
   const financialDisclosures = getMemberDisclosures(params.id);
 
-  // Position-to-vote alignment data (enhanced with confidence and multi-factor scoring)
+  // Alignment data (used for rating schema + social share text)
   const alignmentEnhanced = getMemberAlignmentEnhanced(params.id);
-  const alignmentRankingEnhanced = getAlignmentRankingEnhanced(params.id);
-  
-  // Keep basic alignment as fallback
-  const alignment = getMemberAlignment(params.id);
-  const alignmentRanking = getAlignmentRanking(params.id);
 
   const getPartyBadgeClass = (party: string) => {
     switch (party) {
