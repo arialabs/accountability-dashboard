@@ -3,7 +3,7 @@
  * Fetches data from our Cloudflare Worker which serves enriched government data
  */
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://reps-api-worker.jeremyspofford.workers.dev";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://reps-api.arialabs.ai";
 
 async function apiFetch<T>(path: string, signal?: AbortSignal): Promise<T> {
   const url = `${API_BASE}${path}`;
