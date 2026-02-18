@@ -59,7 +59,7 @@ interface MemberVote {
 async function fetchWithAuth(url: string): Promise<Response> {
   return fetch(url, {
     headers: {
-      "X-API-Key": API_KEY,
+      "X-API-Key": API_KEY as string,
     },
   });
 }
