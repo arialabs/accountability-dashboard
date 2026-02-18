@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { formatDate } from "@/lib/formatting";
 
 interface ExecutiveOrder {
   document_number: string;
@@ -32,15 +33,6 @@ async function fetchExecutiveOrders(): Promise<FederalRegisterResponse | null> {
   } catch (error) {
     return null;
   }
-}
-
-function formatDate(dateString: string): string {
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
 }
 
 export default async function ExecutiveOrdersPage() {
@@ -104,7 +96,7 @@ export default async function ExecutiveOrdersPage() {
                         EO {order.executive_order_number}
                       </span>
                       <span className="text-sm text-slate-500">
-                        {formatDate(order.signing_date)}
+                        {formatDate(order.signing_date, 'full')}
                       </span>
                     </div>
                     <h2 className="text-xl md:text-2xl font-bold text-slate-900">

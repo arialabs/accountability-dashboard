@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { formatCurrencyShort } from "@/lib/formatting";
 
 interface AssetRange {
   min: number;
@@ -33,20 +34,11 @@ interface WealthTrackerProps {
   memberName: string;
 }
 
-function formatCurrency(amount: number): string {
-  if (amount >= 1000000) {
-    return `$${(amount / 1000000).toFixed(1)}M`;
-  } else if (amount >= 1000) {
-    return `$${(amount / 1000).toFixed(0)}K`;
-  }
-  return `$${amount.toFixed(0)}`;
-}
-
 function formatRange(range: AssetRange): string {
   if (range.min === range.max) {
-    return formatCurrency(range.min);
+    return formatCurrencyShort(range.min);
   }
-  return `${formatCurrency(range.min)} - ${formatCurrency(range.max)}`;
+  return `${formatCurrencyShort(range.min)} - ${formatCurrencyShort(range.max)}`;
 }
 
 export function WealthTracker({ disclosures, memberName }: WealthTrackerProps) {
@@ -142,7 +134,7 @@ export function WealthTracker({ disclosures, memberName }: WealthTrackerProps) {
                 Change ({wealthChange.years}yr)
               </p>
               <p className={`text-2xl font-black ${wealthChange.amount >= 0 ? "text-emerald-600" : "text-red-600"}`}>
-                {wealthChange.amount >= 0 ? "+" : ""}{formatCurrency(wealthChange.amount)}
+                {wealthChange.amount >= 0 ? "+" : ""}{formatCurrencyShort(wealthChange.amount)}
               </p>
             </div>
             <div className="bg-slate-50 rounded-xl p-4">

@@ -1,32 +1,11 @@
 "use client";
 
 import type { ConflictOfInterest } from "@/lib/conflict-detector";
+import { formatCurrencyShort, formatDate } from "@/lib/formatting";
 
 interface ConflictOfInterestSectionProps {
   conflicts: ConflictOfInterest[];
   memberName: string;
-}
-
-function formatCurrency(amount: number): string {
-  if (amount >= 1000000) {
-    return `$${(amount / 1000000).toFixed(1)}M`;
-  } else if (amount >= 1000) {
-    return `$${(amount / 1000).toFixed(0)}K`;
-  }
-  return `$${amount.toFixed(0)}`;
-}
-
-function formatDate(dateString: string): string {
-  try {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  } catch {
-    return dateString;
-  }
 }
 
 function ConflictCard({ conflict }: { conflict: ConflictOfInterest }) {
@@ -58,7 +37,7 @@ function ConflictCard({ conflict }: { conflict: ConflictOfInterest }) {
               {conflict.industryDisplayName}
             </h4>
             <p className="text-sm text-slate-600">
-              {formatCurrency(conflict.donationAmount)} in donations
+              {formatCurrencyShort(conflict.donationAmount)} in donations
             </p>
           </div>
         </div>

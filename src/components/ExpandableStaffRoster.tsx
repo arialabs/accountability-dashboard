@@ -3,16 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import type { StaffMember } from "@/data/doge";
-
-function formatDate(dateStr: string) {
-  const [year, month, day] = dateStr.split("-").map(Number);
-  const date = new Date(year, month - 1, day);
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-}
+import { formatDate } from "@/lib/formatting";
 
 function getInitials(name: string): string {
   return name

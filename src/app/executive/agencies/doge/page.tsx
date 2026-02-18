@@ -3,22 +3,13 @@ import Image from "next/image";
 import { dogeData } from "@/data/doge";
 import type { Metadata } from "next";
 import ExpandableStaffRoster from "@/components/ExpandableStaffRoster";
+import { formatDate } from "@/lib/formatting";
 
 export const metadata: Metadata = {
   title: "DOGE Tracker — Department of Government Efficiency",
   description:
     "Track the impact of Elon Musk's Department of Government Efficiency (DOGE): federal workforce cuts, agency disruptions, conflicts of interest, and legal challenges.",
 };
-
-function formatDate(dateStr: string) {
-  const [year, month, day] = dateStr.split("-").map(Number);
-  const date = new Date(year, month - 1, day);
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-}
 
 function getCategoryColor(category: string) {
   const colors: Record<string, string> = {

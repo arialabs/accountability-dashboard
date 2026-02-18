@@ -3,22 +3,10 @@
 import { useState } from "react";
 import type { CampaignFinance, Contributor } from "@/lib/types";
 import DonorBreakdownBarChart from "./DonorBreakdownBarChart";
+import { formatCurrencyShort, formatPercent } from "@/lib/formatting";
 
 interface DonorAnalysisSectionProps {
   finance: CampaignFinance | null;
-}
-
-function formatCurrency(amount: number): string {
-  if (amount >= 1000000) {
-    return `$${(amount / 1000000).toFixed(1)}M`;
-  } else if (amount >= 1000) {
-    return `$${(amount / 1000).toFixed(0)}K`;
-  }
-  return `$${amount.toFixed(0)}`;
-}
-
-function formatPercent(value: number): string {
-  return `${value.toFixed(1)}%`;
 }
 
 // Tooltip component for inline explanations
@@ -142,7 +130,7 @@ function ContributorRow({ contributor, rank }: { contributor: Contributor; rank:
         </div>
       </div>
       <div className="text-right">
-        <p className="font-mono font-bold text-slate-900">{formatCurrency(contributor.total)}</p>
+        <p className="font-mono font-bold text-slate-900">{formatCurrencyShort(contributor.total)}</p>
         <p className="text-xs text-slate-500">{contributor.count} contribution{contributor.count !== 1 ? 's' : ''}</p>
       </div>
     </div>
@@ -186,19 +174,19 @@ export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionPr
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
         <div className="bg-slate-50 rounded-xl p-4 text-center">
           <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Total Raised</p>
-          <p className="font-mono text-2xl font-black text-slate-900">{formatCurrency(finance.total_raised)}</p>
+          <p className="font-mono text-2xl font-black text-slate-900">{formatCurrencyShort(finance.total_raised)}</p>
         </div>
         <div className="bg-slate-50 rounded-xl p-4 text-center">
           <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Total Spent</p>
-          <p className="font-mono text-2xl font-black text-slate-900">{formatCurrency(finance.total_spent)}</p>
+          <p className="font-mono text-2xl font-black text-slate-900">{formatCurrencyShort(finance.total_spent)}</p>
         </div>
         <div className="bg-slate-50 rounded-xl p-4 text-center">
           <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Cash on Hand</p>
-          <p className="font-mono text-2xl font-black text-slate-900">{formatCurrency(finance.cash_on_hand)}</p>
+          <p className="font-mono text-2xl font-black text-slate-900">{formatCurrencyShort(finance.cash_on_hand)}</p>
         </div>
         <div className="bg-slate-50 rounded-xl p-4 text-center">
           <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Self-Funded</p>
-          <p className="font-mono text-2xl font-black text-slate-900">{formatCurrency(finance.candidate_self_funding)}</p>
+          <p className="font-mono text-2xl font-black text-slate-900">{formatCurrencyShort(finance.candidate_self_funding)}</p>
         </div>
       </div>
       
@@ -253,21 +241,21 @@ export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionPr
               </span>
               <div className="flex items-center gap-2">
                 <span className="font-mono font-bold text-red-600">{formatPercent(finance.pac_percentage)}</span>
-                <span className="text-slate-400 text-sm">({formatCurrency(finance.pac_contributions)})</span>
+                <span className="text-slate-400 text-sm">({formatCurrencyShort(finance.pac_contributions)})</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
               <span className="text-slate-600 text-sm sm:text-base">Large Individual Donors (&gt;$200)</span>
               <div className="flex items-center gap-2">
                 <span className="font-mono font-bold text-orange-600">{formatPercent(finance.large_donor_percentage)}</span>
-                <span className="text-slate-400 text-sm">({formatCurrency(finance.large_donors)})</span>
+                <span className="text-slate-400 text-sm">({formatCurrencyShort(finance.large_donors)})</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
               <span className="text-slate-600 text-sm sm:text-base">Small Individual Donors (≤$200)</span>
               <div className="flex items-center gap-2">
                 <span className="font-mono font-bold text-green-600">{formatPercent(finance.small_donor_percentage)}</span>
-                <span className="text-slate-400 text-sm">({formatCurrency(finance.small_donors)})</span>
+                <span className="text-slate-400 text-sm">({formatCurrencyShort(finance.small_donors)})</span>
               </div>
             </div>
           </div>
@@ -320,7 +308,7 @@ export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionPr
             {finance.top_industries.slice(0, 5).map((industry, i) => (
               <div key={i} className="bg-slate-50 rounded-xl p-4 text-center">
                 <p className="font-semibold text-slate-900 text-sm mb-1">{industry.industry}</p>
-                <p className="font-mono font-bold text-lg">{formatCurrency(industry.total)}</p>
+                <p className="font-mono font-bold text-lg">{formatCurrencyShort(industry.total)}</p>
               </div>
             ))}
           </div>
