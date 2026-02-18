@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import DevelopmentBanner from "@/components/DevelopmentBanner";
 import Navigation from "@/components/Navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import PWARegister from "@/components/PWARegister";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
@@ -28,6 +29,15 @@ export const metadata: Metadata = {
   authors: [{ name: "Aria Labs" }],
   creator: "Aria Labs",
   publisher: "Aria Labs",
+  applicationName: "Accountability Dashboard",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Accountability Dashboard",
+  },
+  formatDetection: {
+    telephone: false,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -63,7 +73,15 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/icon-152x152.png", sizes: "152x152", type: "image/png" },
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
   },
   manifest: "/site.webmanifest",
 };
@@ -109,6 +127,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Accountability" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -119,6 +144,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen">
+        <PWARegister />
         
           <DevelopmentBanner />
           <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">

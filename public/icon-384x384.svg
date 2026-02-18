@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" width="384" height="384">
+  <rect width="384" height="384" fill="#ffffff"/>
+  
+  <!-- Capitol building icon -->
+  <g transform="translate(38.400000000000006, 38.400000000000006)">
+    <!-- Base -->
+    <rect x="61.44" y="215.04" width="184.32" height="76.8" fill="#3b82f6"/>
+    
+    <!-- Columns -->
+    <rect x="76.8" y="122.88" width="24.576" height="92.16" fill="#3b82f6"/>
+    <rect x="132.096" y="122.88" width="24.576" height="92.16" fill="#3b82f6"/>
+    <rect x="187.392" y="122.88" width="24.576" height="92.16" fill="#3b82f6"/>
+    
+    <!-- Roof triangle -->
+    <polygon points="153.6,15.36 46.08,122.88 261.12,122.88" fill="#3b82f6"/>
+    
+    <!-- Dome circle -->
+    <circle cx="153.6" cy="61.44" r="36.864" fill="#3b82f6"/>
+    <rect x="138.24" y="46.08" width="30.72" height="76.8" fill="#3b82f6"/>
+  </g>
+</svg>
