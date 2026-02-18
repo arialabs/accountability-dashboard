@@ -5,7 +5,9 @@
 
 import membersData from "../data/members.json";
 import financeData from "../data/finance.json";
-import tradesData from "../data/trades-by-member.json";
+// trades-by-member.json excluded from build (72MB exceeds CF Pages 25MB limit)
+// TODO: Split per-member or serve from API
+const tradesData: Record<string, any[]> = {};
 import scotusData from "../data/scotus.json";
 import houseDisclosuresData from "../data/house-disclosures.json";
 import alignmentData from "../data/alignment-scores.json";
