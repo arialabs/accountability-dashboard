@@ -9,16 +9,6 @@
     "ideology_score": 0.45,
     "ideology_label": "Conservative",
     "bio": "Chief Justice Roberts has served as the 17th Chief Justice of the United States since 2005. Before his appointment, he served on the U.S. Court of Appeals for the D.C. Circuit.",
-    "financial_disclosures": [
-      {
-        "year": 2024,
-        "url": "https://fixthecourt.com/disclosure-database/roberts-2024/"
-      },
-      {
-        "year": 2023,
-        "url": "https://fixthecourt.com/disclosure-database/roberts-2023/"
-      }
-    ],
     "key_rulings": [
       {
         "case": "NFIB v. Sebelius",

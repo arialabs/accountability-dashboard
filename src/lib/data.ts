@@ -472,3 +472,4 @@ export {
   getDeepDivesByTag,
   type DeepDive,
 } from './deep-dives';
+export function getAllMembers(): Member[] { return getMembers(); }

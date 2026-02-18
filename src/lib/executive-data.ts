@@ -19,6 +19,10 @@ import cabinetData from '@/data/cabinet.json';
  * Get all executive officials
  */
 export function getAllOfficials(): ExecutiveOfficial[] {
+  return allOfficials;
+}
+
+export function getExecutiveOfficials(): ExecutiveOfficial[] {
   // Map cabinet data to ExecutiveOfficial type
   return cabinetData.members.map((member): ExecutiveOfficial => ({
     id: member.id,
