@@ -88,7 +88,16 @@ function LeaderboardRow({ entry, rank, type }: { entry: LeaderboardEntry; rank: 
   );
 }
 
+// Feature flag: Say vs Do leaderboard is disabled per issue #84
+// Set to true to re-enable once the scoring algorithm is fixed
+const SHOW_SAY_VS_DO_LEADERBOARD = false;
+
 export default function AlignmentLeaderboard() {
+  // Hidden behind feature flag (#84) — returns null when disabled
+  if (!SHOW_SAY_VS_DO_LEADERBOARD) {
+    return null;
+  }
+
   const [chamberFilter, setChamberFilter] = useState<'all' | 'house' | 'senate'>('all');
   const allLeaderboard = getLeaderboard(100); // Get more to filter from
   

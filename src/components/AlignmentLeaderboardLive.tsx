@@ -110,7 +110,14 @@ function LeaderboardSkeleton() {
   );
 }
 
+// Feature flag: Say vs Do leaderboard is disabled per issue #84
+const SHOW_SAY_VS_DO_LEADERBOARD = false;
+
 export default function AlignmentLeaderboardLive() {
+  if (!SHOW_SAY_VS_DO_LEADERBOARD) {
+    return null;
+  }
+
   const { data, loading, error } = useLeaderboard();
   const [chamberFilter, setChamberFilter] = useState<'all' | 'house' | 'senate'>('all');
 
