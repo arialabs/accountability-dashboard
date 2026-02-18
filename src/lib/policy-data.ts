@@ -107,15 +107,8 @@ export function getImpactGrade(score: number): 'A' | 'B' | 'C+' | 'C' | 'C-' | '
   return 'F-';
 }
 
-export function formatNumber(num: number): string {
-  if (num >= 1000000) {
-    return `${(num / 1000000).toFixed(1)}M`;
-  }
-  if (num >= 1000) {
-    return `${(num / 1000).toFixed(1)}K`;
-  }
-  return num.toString();
-}
+// Re-export from shared formatting utilities
+export { formatNumber } from './formatting';
 
 export function getPromiseQuadrant(promiseAlignment: number, impactScore: number): {
   label: string;

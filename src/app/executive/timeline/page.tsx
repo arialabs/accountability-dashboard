@@ -6,6 +6,7 @@ import Link from "next/link";
 import actionsData from "@/data/executive-actions.json";
 import type { ExecutiveAction, ActionType, DepartmentName } from "@/types/executive";
 import { formatCurrency } from "@/lib/executive-data";
+import { formatNumber } from "@/lib/formatting";
 
 const actionTypeLabels: Record<string, string> = {
   executive_order: "📜 Executive Order",
@@ -115,15 +116,7 @@ export default function TimelinePage() {
     });
   };
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) {
-      return `${(num / 1000000).toFixed(1)}M`;
-    }
-    if (num >= 1000) {
-      return `${(num / 1000).toFixed(1)}K`;
-    }
-    return num.toString();
-  };
+  // formatNumber imported from @/lib/formatting
 
   const toggleDepartment = (dept: string) => {
     setSelectedDepartments(prev =>

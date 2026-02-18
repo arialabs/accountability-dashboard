@@ -2,19 +2,11 @@
 
 import { useState } from "react";
 import type { IndustryDonation } from "@/lib/types";
+import { formatCurrencyShort as formatCurrency } from "@/lib/formatting";
 
 interface IndustryBreakdownChartProps {
   industries: IndustryDonation[];
   totalRaised: number;
-}
-
-function formatCurrency(amount: number): string {
-  if (amount >= 1000000) {
-    return `$${(amount / 1000000).toFixed(1)}M`;
-  } else if (amount >= 1000) {
-    return `$${(amount / 1000).toFixed(0)}K`;
-  }
-  return `$${amount.toFixed(0)}`;
 }
 
 // Color palette for industries
