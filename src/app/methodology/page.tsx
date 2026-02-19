@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DataSourceBadge from "@/components/credibility/DataSourceBadge";
+import { BodyText, Caption } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Methodology",
@@ -66,7 +67,7 @@ export default function MethodologyPage() {
                     <h3 className="text-lg font-bold text-slate-900">{item.name}</h3>
                     <DataSourceBadge source={item.source} url={item.url} />
                   </div>
-                  <p className="text-sm text-slate-600">{item.description}</p>
+                  <BodyText>{item.description}</BodyText>
                 </div>
               ))}
             </div>
@@ -152,28 +153,28 @@ export default function MethodologyPage() {
                     <span className="font-bold text-slate-900">Position-to-Vote Alignment</span>
                     <span className="text-lg font-black text-blue-600">50%</span>
                   </div>
-                  <p className="text-sm text-slate-600">Core metric: do votes match stated positions?</p>
+                  <BodyText>Core metric: do votes match stated positions?</BodyText>
                 </div>
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-bold text-slate-900">Voting Consistency</span>
                     <span className="text-lg font-black text-blue-600">20%</span>
                   </div>
-                  <p className="text-sm text-slate-600">Consistency within policy categories over time</p>
+                  <BodyText>Consistency within policy categories over time</BodyText>
                 </div>
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-bold text-slate-900">Campaign Finance Independence</span>
                     <span className="text-lg font-black text-blue-600">15%</span>
                   </div>
-                  <p className="text-sm text-slate-600">Higher small-donor % = higher score</p>
+                  <BodyText>Higher small-donor % = higher score</BodyText>
                 </div>
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-bold text-slate-900">Bipartisan Cooperation</span>
                     <span className="text-lg font-black text-blue-600">15%</span>
                   </div>
-                  <p className="text-sm text-slate-600">Moderate cross-party voting suggests independence</p>
+                  <BodyText>Moderate cross-party voting suggests independence</BodyText>
                 </div>
               </div>
             </div>
@@ -289,42 +290,42 @@ export default function MethodologyPage() {
               <div className="border-l-4 border-blue-500 pl-4 py-2">
                 <div className="flex items-center gap-3 mb-1">
                   <span className="text-sm font-bold text-slate-900">v1.3</span>
-                  <span className="text-xs text-slate-500">February 15, 2026</span>
+                  <Caption>February 15, 2026</Caption>
                 </div>
-                <p className="text-sm text-slate-600">
+                <BodyText>
                   Added plain English bill summaries for all votes. Added "How is this scored?"
                   tooltips and color legend to all alignment scores. Enhanced misalignment
                   descriptions with plain English explanations.
-                </p>
+                </BodyText>
               </div>
               <div className="border-l-4 border-slate-300 pl-4 py-2">
                 <div className="flex items-center gap-3 mb-1">
                   <span className="text-sm font-bold text-slate-900">v1.2</span>
-                  <span className="text-xs text-slate-500">February 13, 2026</span>
+                  <Caption>February 13, 2026</Caption>
                 </div>
-                <p className="text-sm text-slate-600">
+                <BodyText>
                   Added confidence scoring, data source badges, and this methodology page.
                   Introduced weighted factor breakdown on individual rep pages.
-                </p>
+                </BodyText>
               </div>
               <div className="border-l-4 border-slate-300 pl-4 py-2">
                 <div className="flex items-center gap-3 mb-1">
                   <span className="text-sm font-bold text-slate-900">v1.1</span>
-                  <span className="text-xs text-slate-500">January 2026</span>
+                  <Caption>January 2026</Caption>
                 </div>
-                <p className="text-sm text-slate-600">
+                <BodyText>
                   Added time-decay weighting for votes. Recent votes now count more heavily.
                   Added campaign finance independence factor.
-                </p>
+                </BodyText>
               </div>
               <div className="border-l-4 border-slate-300 pl-4 py-2">
                 <div className="flex items-center gap-3 mb-1">
                   <span className="text-sm font-bold text-slate-900">v1.0</span>
-                  <span className="text-xs text-slate-500">December 2025</span>
+                  <Caption>December 2025</Caption>
                 </div>
-                <p className="text-sm text-slate-600">
+                <BodyText>
                   Initial scoring: simple position-to-vote alignment percentage.
-                </p>
+                </BodyText>
               </div>
             </div>
           </section>

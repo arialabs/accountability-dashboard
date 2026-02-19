@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getSupremeCourtJustices } from "@/lib/data";
+import { BodyText, Caption } from "@/components/ui";
 
 export default function ScotusPage() {
   const justices = getSupremeCourtJustices();
@@ -82,24 +83,24 @@ export default function ScotusPage() {
                   
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-slate-600">Majority</span>
+                      <BodyText as="span">Majority</BodyText>
                       <span className="text-sm font-bold text-green-700">{majority}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-slate-600">Concurrence</span>
+                      <BodyText as="span">Concurrence</BodyText>
                       <span className="text-sm font-bold text-purple-700">{concurrence}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-slate-600">Dissent</span>
+                      <BodyText as="span">Dissent</BodyText>
                       <span className="text-sm font-bold text-red-700">{dissent}</span>
                     </div>
                   </div>
                   
                   {rulings.length > 0 && (
                     <div className="mt-4 pt-4 border-t border-slate-200">
-                      <p className="text-xs text-slate-500">
+                      <Caption as="p">
                         {rulings.length} notable ruling{rulings.length !== 1 ? 's' : ''} tracked
-                      </p>
+                      </Caption>
                     </div>
                   )}
                 </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Container } from "@/components/ui";
 import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 export default function ExecutiveBranch() {
@@ -28,7 +29,7 @@ export default function ExecutiveBranch() {
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-slate-50 to-white border-b border-slate-200 py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+        <Container className="text-center">
           <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-4xl mb-6 shadow-xl mx-auto">
             🏛️
           </div>
@@ -39,12 +40,12 @@ export default function ExecutiveBranch() {
             Track presidential accountability: policy impact, executive orders, 
             appointments, and financial transparency.
           </p>
-        </div>
+        </Container>
       </section>
 
       {/* Current President Card */}
       <section className="py-12 bg-slate-50">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl font-black text-slate-900 mb-8">Current Administration</h2>
           
           <Link 
@@ -79,12 +80,12 @@ export default function ExecutiveBranch() {
               </div>
             </div>
           </Link>
-        </div>
+        </Container>
       </section>
 
       {/* Vice President */}
       <section className="py-12 bg-white">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl font-black text-slate-900 mb-8">Vice President</h2>
           
           <Link 
@@ -119,12 +120,12 @@ export default function ExecutiveBranch() {
               </div>
             </div>
           </Link>
-        </div>
+        </Container>
       </section>
 
       {/* DOGE Section - Featured */}
       <section className="py-12 bg-amber-50 border-b-2 border-amber-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl font-black text-slate-900 mb-4">Department of Government Efficiency</h2>
 
           <Link
@@ -163,12 +164,12 @@ export default function ExecutiveBranch() {
               </div>
             </div>
           </Link>
-        </div>
+        </Container>
       </section>
 
       {/* Cabinet */}
       <section className="py-12 bg-slate-50">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-black text-slate-900">Cabinet</h2>
             <Link 
@@ -222,12 +223,12 @@ export default function ExecutiveBranch() {
               View Full Cabinet
             </Link>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* What We Track */}
       <section className="py-12 bg-white">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl font-black text-slate-900 mb-8 text-center">What We Track</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -263,7 +264,7 @@ export default function ExecutiveBranch() {
               </div>
             </Link>
           </div>
-        </div>
+        </Container>
       </section>
     </div>
   );

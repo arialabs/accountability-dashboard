@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { AlignmentScore } from "@/lib/data";
 import AlignmentTooltip from "./AlignmentTooltip";
 import AlignmentLegend from "./AlignmentLegend";
+import { Caption } from "@/components/ui";
 
 interface AlignmentScoreCardProps {
   alignment: AlignmentScore | null;
@@ -165,10 +166,10 @@ export default function AlignmentScoreCard({ alignment, ranking }: AlignmentScor
 
       {/* Methodology Note */}
       <div className="bg-slate-50 border-t border-slate-100 px-6 py-3">
-        <p className="text-xs text-slate-500">
+        <Caption as="p">
           Alignment calculated by mapping stated positions (from OnTheIssues) to relevant
           key votes. A higher score means votes more consistently match stated beliefs.
-        </p>
+        </Caption>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import promiseData from "@/data/trump-promises.json";
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
+import { Container } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "President of the United States",
@@ -94,7 +95,7 @@ export default function PresidentPage() {
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-red-50 to-white border-b border-slate-200 py-16 md:py-20">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Photo */}
             <Image 
@@ -120,12 +121,12 @@ export default function PresidentPage() {
               </p>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Impact Analysis Summary */}
       <section className="py-12 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-2 text-center">
             Policy Impact Analysis
           </h2>
@@ -151,12 +152,12 @@ export default function PresidentPage() {
               <div className="text-sm font-semibold text-slate-600 uppercase tracking-wider">Total Actions</div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Policy Impact Tracker - Featured */}
       <section className="py-12 bg-gradient-to-b from-blue-50 to-slate-50 border-y border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="text-center mb-8">
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-bold mb-4">
               ✨ NEW: Impact-Based Tracking
@@ -232,12 +233,12 @@ export default function PresidentPage() {
               </div>
             </div>
           </Link>
-        </div>
+        </Container>
       </section>
 
       {/* Policy Actions List */}
       <section className="py-12">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <h2 className="text-2xl font-black text-slate-900">Policy Actions & Impact</h2>
             <div className="flex gap-2 flex-wrap">
@@ -342,12 +343,12 @@ export default function PresidentPage() {
               );
             })}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Executive Orders Section */}
       <section className="py-12 bg-slate-50">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl font-black text-slate-900 mb-8 text-center">More Presidential Tracking</h2>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -378,19 +379,19 @@ export default function PresidentPage() {
               </div>
             </Link>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Back Link */}
       <section className="py-8 bg-white border-t border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+        <Container className="text-center">
           <Link 
             href="/executive"
             className="text-blue-600 hover:text-blue-700 font-semibold"
           >
             ← Back to Executive Branch
           </Link>
-        </div>
+        </Container>
       </section>
     </div>
   );

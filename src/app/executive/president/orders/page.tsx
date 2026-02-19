@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { formatDate } from "@/lib/formatting";
+import { Container } from "@/components/ui";
 
 interface ExecutiveOrder {
   document_number: string;
@@ -42,7 +43,7 @@ export default async function ExecutiveOrdersPage() {
     return (
       <div className="min-h-screen bg-white">
         <section className="py-16">
-          <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <Container className="text-center">
             <h1 className="text-4xl font-black text-slate-900 mb-4">Executive Orders</h1>
             <p className="text-red-600">Failed to load executive orders. Please try again later.</p>
             <Link 
@@ -51,7 +52,7 @@ export default async function ExecutiveOrdersPage() {
             >
               ← Back to President
             </Link>
-          </div>
+          </Container>
         </section>
       </div>
     );
@@ -63,7 +64,7 @@ export default async function ExecutiveOrdersPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-50 to-white border-b border-slate-200 py-16 md:py-20">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="text-center">
             <div className="text-6xl mb-4">📜</div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900 mb-4">
@@ -76,12 +77,12 @@ export default async function ExecutiveOrdersPage() {
               {count} Executive Orders
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Executive Orders List */}
       <section className="py-12">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="space-y-6">
             {orders.map((order) => (
               <div 
@@ -141,19 +142,19 @@ export default async function ExecutiveOrdersPage() {
               <p className="text-slate-600">Check back soon for updates.</p>
             </div>
           )}
-        </div>
+        </Container>
       </section>
 
       {/* Back Link */}
       <section className="py-8 bg-white border-t border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+        <Container className="text-center">
           <Link 
             href="/executive/president"
             className="text-blue-600 hover:text-blue-700 font-semibold"
           >
             ← Back to President
           </Link>
-        </div>
+        </Container>
       </section>
     </div>
   );

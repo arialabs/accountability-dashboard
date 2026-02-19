@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { CampaignFinance, Contributor } from "@/lib/types";
 import DonorBreakdownBarChart from "./DonorBreakdownBarChart";
 import { formatCurrencyShort, formatPercent } from "@/lib/formatting";
+import { Caption } from "@/components/ui";
 
 interface DonorAnalysisSectionProps {
   finance: CampaignFinance | null;
@@ -131,7 +132,7 @@ function ContributorRow({ contributor, rank }: { contributor: Contributor; rank:
       </div>
       <div className="text-right">
         <p className="font-mono font-bold text-slate-900">{formatCurrencyShort(contributor.total)}</p>
-        <p className="text-xs text-slate-500">{contributor.count} contribution{contributor.count !== 1 ? 's' : ''}</p>
+        <Caption as="p">{contributor.count} contribution{contributor.count !== 1 ? 's' : ''}</Caption>
       </div>
     </div>
   );

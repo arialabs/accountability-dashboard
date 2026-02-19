@@ -5,6 +5,7 @@ import { useState, useMemo } from "react";
 import { getPolicies, getPolicySummary, POLICY_CATEGORIES, formatNumber } from "@/lib/policy-data";
 import ImpactBadge from "@/components/ImpactBadge";
 import type { PolicyCategory } from "@/lib/types";
+import { BodyText, Caption } from "@/components/ui";
 
 export default function PoliciesPage() {
   const policies = getPolicies();
@@ -145,7 +146,7 @@ export default function PoliciesPage() {
                       <span className="text-3xl">{category.icon}</span>
                       <div>
                         <h3 className="font-bold text-slate-900">{category.name}</h3>
-                        <p className="text-sm text-slate-600">{stats.count} {stats.count === 1 ? 'policy' : 'policies'}</p>
+                        <BodyText>{stats.count} {stats.count === 1 ? 'policy' : 'policies'}</BodyText>
                       </div>
                     </div>
                     
@@ -264,9 +265,9 @@ export default function PoliciesPage() {
                       {category.icon} {category.name}
                     </span>
                     <span className="text-xs text-slate-400">•</span>
-                    <span className="text-xs text-slate-500">
+                    <Caption>
                       Updated {daysAgo === 0 ? 'today' : `${daysAgo}d ago`}
-                    </span>
+                    </Caption>
                   </div>
                   
                   {/* Title */}

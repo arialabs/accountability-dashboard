@@ -1,6 +1,7 @@
 "use client";
 
 import DataSourceBadge from "./DataSourceBadge";
+import { Caption } from "@/components/ui";
 
 interface VoteComparisonProps {
   /** What they publicly stated */
@@ -49,7 +50,7 @@ export default function VoteComparisonCard({ statement, vote, aligned, category 
             "{statement.text}"
           </blockquote>
           <div className="flex items-center justify-between">
-            <p className="text-xs text-slate-500">{statement.context}</p>
+            <Caption as="p">{statement.context}</Caption>
             {statement.sourceUrl && (
               <DataSourceBadge source="ontheissues" url={statement.sourceUrl} compact />
             )}
@@ -76,13 +77,13 @@ export default function VoteComparisonCard({ statement, vote, aligned, category 
               }`}>
                 {vote.position}
               </span>
-              <span className="text-xs text-slate-500">
+              <Caption>
                 {new Date(vote.date).toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
                   year: "numeric",
                 })}
-              </span>
+              </Caption>
             </div>
           </div>
           <div className="flex items-center justify-between">

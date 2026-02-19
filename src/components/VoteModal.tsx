@@ -3,6 +3,7 @@
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import membersData from "@/data/members.json";
+import { BodyText, Caption } from "@/components/ui";
 
 interface BeneficiaryImpact {
   group: string;
@@ -198,7 +199,7 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
             {member.full_name}
           </span>
         </div>
-        <span className="text-xs text-slate-500">{displayState}</span>
+        <Caption>{displayState}</Caption>
       </Link>
     );
   };
@@ -355,9 +356,9 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
                 <div className="bg-blue-50 rounded-lg p-3">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-semibold text-blue-700">Democrats</span>
-                    <span className="text-sm text-slate-600">
+                    <BodyText as="span">
                       {vote.party_breakdown.dem_yea + vote.party_breakdown.dem_nay} total
-                    </span>
+                    </BodyText>
                   </div>
                   <div className="flex gap-4 text-sm">
                     <span className="text-emerald-600">✓ {vote.party_breakdown.dem_yea} Yea</span>
@@ -368,9 +369,9 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
                 <div className="bg-red-50 rounded-lg p-3">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-semibold text-red-700">Republicans</span>
-                    <span className="text-sm text-slate-600">
+                    <BodyText as="span">
                       {vote.party_breakdown.rep_yea + vote.party_breakdown.rep_nay} total
-                    </span>
+                    </BodyText>
                   </div>
                   <div className="flex gap-4 text-sm">
                     <span className="text-emerald-600">✓ {vote.party_breakdown.rep_yea} Yea</span>
@@ -382,9 +383,9 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
                   <div className="bg-slate-50 rounded-lg p-3">
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-semibold text-slate-700">Independent/Other</span>
-                      <span className="text-sm text-slate-600">
+                      <BodyText as="span">
                         {vote.party_breakdown.other_yea + vote.party_breakdown.other_nay} total
-                      </span>
+                      </BodyText>
                     </div>
                     <div className="flex gap-4 text-sm">
                       <span className="text-emerald-600">✓ {vote.party_breakdown.other_yea} Yea</span>

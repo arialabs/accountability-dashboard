@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSupremeCourtJustices, getIdeologyBreakdown } from "@/lib/data";
 import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
+import { Container } from "@/components/ui";
 
 export default function JudicialBranch() {
   const justices = getSupremeCourtJustices();
@@ -61,7 +62,7 @@ export default function JudicialBranch() {
 
       {/* SCOTUS Overview */}
       <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
               Current Supreme Court
@@ -107,12 +108,12 @@ export default function JudicialBranch() {
               View All Justices →
             </Link>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* What's Coming Section */}
       <section className="py-20 bg-slate-50">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-12 text-center">
             What We'll Track
           </h2>
@@ -150,7 +151,7 @@ export default function JudicialBranch() {
               </p>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* CTA Section */}

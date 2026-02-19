@@ -10,6 +10,7 @@ import RepresentativeImage from "@/components/RepresentativeImage";
 import PartyLoyaltyChart from "@/components/PartyLoyaltyChart";
 import IdeologySpectrumChart from "@/components/IdeologySpectrumChart";
 import type { Member } from "@/lib/types";
+import { BodyText } from "@/components/ui";
 
 // Helper to get user's state from IP geolocation
 async function getUserStateFromIP(): Promise<string | null> {
@@ -329,7 +330,7 @@ export default function CongressContentLive() {
                 />
                 <div>
                   <h3 className="font-bold text-slate-900">{member.full_name}</h3>
-                  <p className="text-sm text-slate-600">{member.state}</p>
+                  <BodyText>{member.state}</BodyText>
                 </div>
               </div>
               <div className="text-sm text-slate-500">

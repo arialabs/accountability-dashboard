@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { EnhancedAlignmentScore } from "@/lib/alignment-enhanced";
 import { getConfidenceColor, getConfidenceDots } from "@/lib/confidence";
 import ScoreBreakdownModal from "./ScoreBreakdownModal";
+import { Caption } from "@/components/ui";
 
 interface AlignmentScoreCardEnhancedProps {
   alignment: EnhancedAlignmentScore;
@@ -183,9 +184,9 @@ export default function AlignmentScoreCardEnhanced({
                 </button>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs text-slate-500">
+                <Caption>
                   Consistency: {alignment.consistency_score}%
-                </span>
+                </Caption>
                 <button 
                   title="Consistency measures how similar voting patterns are across different categories. High consistency means predictable voting."
                   className="text-slate-400 hover:text-slate-600"

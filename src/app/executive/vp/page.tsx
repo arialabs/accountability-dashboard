@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import vpData from "@/data/vp.json";
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
+import { Container } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Vice President of the United States",
@@ -45,7 +46,7 @@ export default function VicePresidentPage() {
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-50 to-white border-b border-slate-200 py-16 md:py-20">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Photo */}
             <Image 
@@ -71,12 +72,12 @@ export default function VicePresidentPage() {
               </p>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Background Section */}
       <section className="py-12 bg-white border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">
             Background
           </h2>
@@ -93,12 +94,12 @@ export default function VicePresidentPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Senate Record */}
       <section className="py-12 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">
             Senate Record (2023-2025)
           </h2>
@@ -140,12 +141,12 @@ export default function VicePresidentPage() {
               ))}
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Key Votes */}
       <section className="py-12 bg-white border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">
             Key Votes
           </h2>
@@ -185,12 +186,12 @@ export default function VicePresidentPage() {
           <p className="mt-6 text-sm text-slate-500 text-center">
             Click on any bill to view full details on Congress.gov
           </p>
-        </div>
+        </Container>
       </section>
 
       {/* Sponsored Legislation */}
       <section className="py-12 bg-slate-50">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">
             Sponsored Legislation
           </h2>
@@ -217,19 +218,19 @@ export default function VicePresidentPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Back Link */}
       <section className="py-8 bg-white border-t border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+        <Container className="text-center">
           <Link 
             href="/executive"
             className="text-blue-600 hover:text-blue-700 font-semibold"
           >
             ← Back to Executive Branch
           </Link>
-        </div>
+        </Container>
       </section>
     </div>
   );

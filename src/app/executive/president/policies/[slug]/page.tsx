@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPolicy, getPolicies, POLICY_CATEGORIES, formatNumber, getPromiseQuadrant } from "@/lib/policy-data";
 import ImpactBadge from "@/components/ImpactBadge";
+import { Caption } from "@/components/ui";
 
 export function generateStaticParams() {
   return getPolicies().map((policy) => ({
@@ -297,7 +298,7 @@ export default async function PolicyDetailPage({ params }: { params: Promise<{ s
                         }`}>
                           {analysis.bias}
                         </span>
-                        <span className="text-xs text-slate-500">{analysis.type}</span>
+                        <Caption>{analysis.type}</Caption>
                       </div>
                       
                       <p className="text-sm text-slate-700 mb-3">

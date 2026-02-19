@@ -16,6 +16,7 @@ import {
 } from "@/lib/executive-data";
 import type { ConflictSeverity } from "@/types/executive";
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
+import { Container } from "@/components/ui";
 
 export async function generateMetadata({ params }: CabinetMemberPageProps): Promise<Metadata> {
   const { role } = await params;
@@ -106,7 +107,7 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-red-50 to-white border-b border-slate-200 py-16 md:py-20">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Photo */}
             <Image 
@@ -129,12 +130,12 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
               </p>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Details Section */}
       <section className="py-12">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {/* Appointment Info */}
             <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
@@ -272,19 +273,19 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
 
           {/* Policy Alignment Section */}
           <AlignmentSection memberId={member.id} />
-        </div>
+        </Container>
       </section>
 
       {/* Back Link */}
       <section className="py-8 bg-white border-t border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+        <Container className="text-center">
           <Link 
             href="/executive/cabinet"
             className="text-blue-600 hover:text-blue-700 font-semibold"
           >
             ← Back to Cabinet
           </Link>
-        </div>
+        </Container>
       </section>
     </div>
   );

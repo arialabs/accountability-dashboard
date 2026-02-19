@@ -44,10 +44,13 @@ describe('data utilities', () => {
       expect(first).toHaveProperty('votes_cast');
     });
 
-    it('caches results on subsequent calls', () => {
+    it('returns the same data on subsequent calls', () => {
       const first = getMembers();
       const second = getMembers();
-      expect(first).toBe(second); // Same reference = cached
+      // Module-level caching was removed (issue #67): JSON imports are already
+      // module-cached by the bundler, so each call produces a fresh array with
+      // identical data.  Deep equality is the correct assertion here.
+      expect(first).toStrictEqual(second);
     });
   });
 

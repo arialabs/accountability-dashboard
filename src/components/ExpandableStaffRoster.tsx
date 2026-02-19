@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import type { StaffMember } from "@/data/doge";
 import { formatDate } from "@/lib/formatting";
+import { Caption } from "@/components/ui";
 
 function getInitials(name: string): string {
   return name
@@ -71,7 +72,7 @@ function StaffCard({ member }: StaffCardProps) {
                 {member.name}
               </h4>
               {member.age && (
-                <span className="text-xs text-slate-500">Age {member.age}</span>
+                <Caption>Age {member.age}</Caption>
               )}
             </div>
             <div className="flex items-center gap-2 flex-shrink-0">

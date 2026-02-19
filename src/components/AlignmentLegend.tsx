@@ -1,5 +1,7 @@
 "use client";
 
+import { Caption } from "@/components/ui";
+
 interface AlignmentLegendProps {
   /** Show in compact mode */
   compact?: boolean;
@@ -40,7 +42,7 @@ export default function AlignmentLegend({ compact = false, className = "" }: Ali
             <div className="w-4 h-4 rounded-full bg-emerald-500"></div>
             <span className="font-medium text-emerald-700">High Alignment</span>
           </div>
-          <span className="text-xs text-slate-500">70-100%</span>
+          <Caption>70-100%</Caption>
         </div>
         
         <div className="flex items-center gap-3">
@@ -48,7 +50,7 @@ export default function AlignmentLegend({ compact = false, className = "" }: Ali
             <div className="w-4 h-4 rounded-full bg-amber-500"></div>
             <span className="font-medium text-amber-700">Mixed Record</span>
           </div>
-          <span className="text-xs text-slate-500">40-69%</span>
+          <Caption>40-69%</Caption>
         </div>
         
         <div className="flex items-center gap-3">
@@ -56,7 +58,7 @@ export default function AlignmentLegend({ compact = false, className = "" }: Ali
             <div className="w-4 h-4 rounded-full bg-red-500"></div>
             <span className="font-medium text-red-700">Low Alignment</span>
           </div>
-          <span className="text-xs text-slate-500">0-39%</span>
+          <Caption>0-39%</Caption>
         </div>
       </div>
       

@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { calculateMemberAlignment, type AlignmentResult, type MemberAlignmentSummary } from "@/lib/alignment";
 import type { MemberPositions } from "@/lib/types";
+import { BodyText, Caption } from "@/components/ui";
 
 export interface Position {
   topic: string;
@@ -170,9 +171,9 @@ function PositionCard({ position, alignment }: { position: Position; alignment?:
           <div className="flex items-center gap-2">
             <AlignmentBadge score={alignment.alignmentScore} />
             {alignment.relevantVotes > 0 && (
-              <span className="text-xs text-slate-500">
+              <Caption>
                 ({alignment.alignedVotes}/{alignment.relevantVotes} votes)
-              </span>
+              </Caption>
             )}
           </div>
         )}
@@ -301,9 +302,9 @@ function OverallAlignmentScore({ summary }: { summary: MemberAlignmentSummary | 
         </div>
         <div className="text-right">
           <p className={`text-3xl font-black ${textColor}`}>{score}%</p>
-          <p className="text-xs text-slate-500">
+          <Caption as="p">
             {summary.positionsWithVotes} of {summary.totalPositions} positions have votes
-          </p>
+          </Caption>
         </div>
       </div>
       
@@ -395,9 +396,9 @@ export default function CampaignPositions({ bioguideId, positionsData, keyVotesD
         <h2 className="text-2xl font-black text-slate-900 mb-2 tracking-tight">
           Campaign Positions
         </h2>
-        <p className="text-sm text-slate-600">
+        <BodyText>
           {memberData.name}&apos;s stated positions on key issues from campaign and public statements
-        </p>
+        </BodyText>
         <div className="mt-3 flex items-center gap-2 text-xs text-slate-500">
           <span>📊 {memberData.positions.length} positions tracked</span>
           <span>•</span>

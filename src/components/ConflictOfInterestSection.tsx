@@ -2,6 +2,7 @@
 
 import type { ConflictOfInterest } from "@/lib/conflict-detector";
 import { formatCurrencyShort, formatDate } from "@/lib/formatting";
+import { BodyText, Caption } from "@/components/ui";
 
 interface ConflictOfInterestSectionProps {
   conflicts: ConflictOfInterest[];
@@ -36,9 +37,9 @@ function ConflictCard({ conflict }: { conflict: ConflictOfInterest }) {
             <h4 className="font-bold text-slate-900 text-lg">
               {conflict.industryDisplayName}
             </h4>
-            <p className="text-sm text-slate-600">
+            <BodyText>
               {formatCurrencyShort(conflict.donationAmount)} in donations
-            </p>
+            </BodyText>
           </div>
         </div>
         <span className={`px-3 py-1 rounded-full text-xs font-bold ${severityBadges[conflict.conflictSeverity]}`}>
@@ -64,9 +65,9 @@ function ConflictCard({ conflict }: { conflict: ConflictOfInterest }) {
             <p className="text-sm text-slate-600 mb-2">
               {conflict.voteTitle}
             </p>
-            <p className="text-xs text-slate-500">
+            <Caption as="p">
               {formatDate(conflict.voteDate)} • {conflict.voteCategory}
-            </p>
+            </Caption>
           </div>
         </div>
       </div>

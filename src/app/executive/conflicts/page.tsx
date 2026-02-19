@@ -6,6 +6,7 @@ import { getAllOfficials } from "@/lib/executive-data";
 import { analyzeOfficialConflicts, scoreConflictRisk, groupConflictsByCategory, filterBySeverity, type DetectedConflict } from "@/lib/executive-conflicts";
 import type { ConflictSeverity } from "@/types/executive";
 import ConflictBadge from "@/components/ConflictBadge";
+import { BodyText } from "@/components/ui";
 
 const categoryLabels: Record<string, string> = {
   financial: "💰 Financial",
@@ -311,23 +312,23 @@ export default function ConflictsPage() {
             <div className="bg-white rounded-xl border border-slate-200 p-6">
               <div className="text-3xl mb-3">📄</div>
               <h3 className="font-bold text-slate-900 mb-2">Financial Disclosures</h3>
-              <p className="text-sm text-slate-600">
+              <BodyText>
                 Parse official financial disclosure forms to identify assets, investments, and business relationships.
-              </p>
+              </BodyText>
             </div>
             <div className="bg-white rounded-xl border border-slate-200 p-6">
               <div className="text-3xl mb-3">🔍</div>
               <h3 className="font-bold text-slate-900 mb-2">Cross-Reference</h3>
-              <p className="text-sm text-slate-600">
+              <BodyText>
                 Match holdings against policy decisions, contracts awarded, and regulatory actions overseen.
-              </p>
+              </BodyText>
             </div>
             <div className="bg-white rounded-xl border border-slate-200 p-6">
               <div className="text-3xl mb-3">⚠️</div>
               <h3 className="font-bold text-slate-900 mb-2">Flag Conflicts</h3>
-              <p className="text-sm text-slate-600">
+              <BodyText>
                 Detect overlaps and assess severity based on financial amounts and policy impact.
-              </p>
+              </BodyText>
             </div>
           </div>
         </div>

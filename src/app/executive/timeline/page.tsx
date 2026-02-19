@@ -6,6 +6,7 @@ import actionsData from "@/data/executive-actions.json";
 import type { ExecutiveAction, ActionType, DepartmentName } from "@/types/executive";
 import { formatCurrency } from "@/lib/executive-data";
 import { formatNumber } from "@/lib/formatting";
+import { Container } from "@/components/ui";
 
 const actionTypeLabels: Record<string, string> = {
   executive_order: "📜 Executive Order",
@@ -253,7 +254,7 @@ export default function TimelinePage() {
 
       {/* Timeline */}
       <section className="py-12">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           {filteredActions.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-slate-500 text-lg">No actions found matching your criteria.</p>
@@ -366,7 +367,7 @@ export default function TimelinePage() {
               </div>
             </div>
           )}
-        </div>
+        </Container>
       </section>
 
       {/* Back Link */}

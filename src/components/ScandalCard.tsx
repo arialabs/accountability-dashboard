@@ -2,6 +2,7 @@ import type { ScandalEntry } from "@/lib/types";
 import SeverityBadge, { severityConfig } from "./SeverityBadge";
 import SourceList from "./SourceList";
 import Link from "next/link";
+import { BodyText } from "@/components/ui";
 
 interface ScandalCardProps {
   scandal: ScandalEntry;
@@ -86,10 +87,10 @@ export default function ScandalCard({
               `}>
                 {scandal.party}
               </span>
-              <span className="text-sm text-slate-600">
+              <BodyText as="span">
                 {scandal.chamber === "executive" ? "President" : scandal.chamber === "house" ? "Rep" : "Sen"}{scandal.state ? `, ${scandal.state}` : ''}
                 {scandal.district ? `-${scandal.district}` : ''}
-              </span>
+              </BodyText>
             </div>
           </div>
         )}

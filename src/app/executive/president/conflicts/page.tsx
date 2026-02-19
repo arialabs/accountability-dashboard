@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import conflictsData from "@/data/trump-conflicts.json";
+import { Container } from "@/components/ui";
 
 type Category = "all" | "foreign_payments" | "domestic_conflicts" | "family_involvement";
 type Severity = "high" | "medium" | "low";
@@ -31,7 +32,7 @@ export default function ConflictsPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-amber-50 to-white border-b border-slate-200 py-16 md:py-20">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="text-5xl">💰</span>
@@ -46,12 +47,12 @@ export default function ConflictsPage() {
               Tracking documented conflicts of interest, foreign payments, and emoluments clause violations during Trump's presidency
             </p>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Summary Statistics */}
       <section className="py-12 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-8 text-center">
             By The Numbers
           </h2>
@@ -82,12 +83,12 @@ export default function ConflictsPage() {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Category Filter */}
       <section className="py-8 bg-white border-b border-slate-200 sticky top-0 z-10 shadow-sm">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="flex flex-wrap gap-3 justify-center">
             <button
               onClick={() => setSelectedCategory("all")}
@@ -115,12 +116,12 @@ export default function ConflictsPage() {
               </button>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Conflicts List */}
       <section className="py-12">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <h2 className="text-2xl font-black text-slate-900">
               {selectedCategory === "all" 
@@ -216,12 +217,12 @@ export default function ConflictsPage() {
               <p className="text-slate-500 text-lg">No conflicts found in this category.</p>
             </div>
           )}
-        </div>
+        </Container>
       </section>
 
       {/* Context Section */}
       <section className="py-12 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <Container>
           <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8">
             <h3 className="text-2xl font-black text-blue-900 mb-4">
               📜 About the Emoluments Clause
@@ -238,19 +239,19 @@ export default function ConflictsPage() {
               that occurred during or immediately after his presidency.
             </p>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Back Link */}
       <section className="py-8 bg-white border-t border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+        <Container className="text-center">
           <Link 
             href="/executive/president"
             className="text-blue-600 hover:text-blue-700 font-semibold text-lg"
           >
             ← Back to President Trump
           </Link>
-        </div>
+        </Container>
       </section>
     </div>
   );

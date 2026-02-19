@@ -13,6 +13,7 @@ import {
   getAllOfficials,
 } from "@/lib/executive-data";
 import type { ConflictSeverity } from "@/types/executive";
+import { BodyText, Caption } from "@/components/ui";
 
 interface ConflictOfInterest {
   description: string;
@@ -246,7 +247,7 @@ export default function CabinetPage() {
           {/* Active Filters */}
           {(searchQuery || selectedDepartment !== "all") && (
             <div className="mt-4 flex flex-wrap gap-2 items-center">
-              <span className="text-sm text-slate-600">Active filters:</span>
+              <BodyText as="span">Active filters:</BodyText>
               {searchQuery && (
                 <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm flex items-center gap-2">
                   Search: "{searchQuery}"
@@ -339,9 +340,9 @@ export default function CabinetPage() {
                             <ConflictBadge key={idx} severity={conflict.severity} />
                           ))}
                           {member.conflicts_of_interest.length > 2 && (
-                            <span className="text-xs text-slate-500">
+                            <Caption>
                               +{member.conflicts_of_interest.length - 2} more
-                            </span>
+                            </Caption>
                           )}
                         </div>
                       )}

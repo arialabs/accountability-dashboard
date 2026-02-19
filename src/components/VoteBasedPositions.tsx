@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { Caption } from "@/components/ui";
 import { 
   calculateVoteBasedScores, 
   analyzeContradiction,
@@ -212,9 +213,9 @@ function CategorySection({
             )}
           </h3>
           {votingScore && (
-            <span className="text-xs text-slate-500">
+            <Caption>
               {votingScore.totalVotes} votes analyzed
-            </span>
+            </Caption>
           )}
         </div>
         
@@ -264,9 +265,9 @@ function CategorySection({
                       <span className={`px-3 py-1 rounded-lg text-xs font-bold border ${stanceColor}`}>
                         {pos.stance}
                       </span>
-                      <span className="text-xs text-slate-500">
+                      <Caption>
                         on: {pos.topic}
-                      </span>
+                      </Caption>
                     </div>
                     {contradiction && (
                       <div className="mt-2">

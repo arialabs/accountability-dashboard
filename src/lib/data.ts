@@ -116,31 +116,27 @@ function transformMember(raw: RawMember): Member {
   };
 }
 
-// Cache transformed data
-let _members: Member[] | null = null;
-let _financeMap: Map<string, CampaignFinance> | null = null;
+// JSON imports are already module-cached by webpack/Node — no extra caching needed.
+// See: https://nextjs.org/docs/app/api-reference/functions/unstable_cache
+// Transforming directly keeps state immutable and safe across HMR reloads.
 
 export function getMembers(): Member[] {
-  if (!_members) {
-    _members = (membersData as RawMember[]).map(transformMember);
-  }
-  return _members;
+  return (membersData as RawMember[]).map(transformMember);
 }
 
 export function getMember(bioguideId: string): Member | undefined {
   return getMembers().find(m => m.bioguide_id === bioguideId);
 }
 
-// Finance data access
+// Finance data access — builds Map from JSON import on each call.
+// JSON imports are module-cached by the bundler, so no module-level Map needed.
 function getFinanceMap(): Map<string, CampaignFinance> {
-  if (!_financeMap) {
-    _financeMap = new Map();
-    const data = financeData as Record<string, CampaignFinance>;
-    for (const [bioguideId, finance] of Object.entries(data)) {
-      _financeMap.set(bioguideId, finance);
-    }
+  const map = new Map<string, CampaignFinance>();
+  const data = financeData as Record<string, CampaignFinance>;
+  for (const [bioguideId, finance] of Object.entries(data)) {
+    map.set(bioguideId, finance);
   }
-  return _financeMap;
+  return map;
 }
 
 // Static finance data (from pre-built JSON)
@@ -356,14 +352,8 @@ export function getMemberCommitteesForDisplay(bioguideId: string): Array<{
 
 // ==================== Supreme Court Data ====================
 
-// Cache for SCOTUS justices
-let _justices: SupremeCourtJustice[] | null = null;
-
 export function getSupremeCourtJustices(): SupremeCourtJustice[] {
-  if (!_justices) {
-    _justices = scotusData as SupremeCourtJustice[];
-  }
-  return _justices;
+  return scotusData as SupremeCourtJustice[];
 }
 
 export function getSupremeCourtJustice(id: string): SupremeCourtJustice | undefined {
