@@ -147,11 +147,27 @@ export default function Home() {
           </h1>
 
           <p
-            className="mb-8 text-lg md:text-xl max-w-2xl"
+            className="mb-6 text-lg md:text-xl max-w-2xl"
             style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)", lineHeight: 1.6 }}
           >
             Follow the money. Expose the votes. Track what politicians say vs what they actually do — using data directly from the FEC, Congress.gov, and federal financial disclosures.
           </p>
+
+          {/* Mission statement — prominent, not buried */}
+          <div
+            className="mb-8 flex items-start gap-3 py-3 border-l-4"
+            style={{ borderColor: "var(--accent)" }}
+          >
+            <p
+              className="text-base font-semibold"
+              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)", paddingLeft: "0.75rem" }}
+            >
+              Democracy shouldn&apos;t be paywalled.{" "}
+              <span style={{ color: "var(--text-secondary)", fontWeight: 400 }}>
+                All data sourced from official government records — free, forever.
+              </span>
+            </p>
+          </div>
 
           {/* Search bar — primary action */}
           <RepSearch size="large" placeholder="Search by name, state, or ZIP code" />

@@ -43,8 +43,9 @@ describe('Navigation', () => {
 
     it('opens dropdown on click', () => {
       render(<Navigation />);
-      // Navigation dropdown opens on click (or mouseEnter)
-      fireEvent.click(screen.getByText('Legislative'));
+      // Navigation dropdown opens on click — click the label button
+      const legislativeButton = screen.getByRole('button', { name: /Legislative menu/i });
+      fireEvent.click(legislativeButton);
       expect(screen.getByText('House of Representatives')).toBeInTheDocument();
       expect(screen.getByText('Senate')).toBeInTheDocument();
       expect(screen.getByText('Bills & Votes')).toBeInTheDocument();
@@ -53,8 +54,13 @@ describe('Navigation', () => {
     it('shows Coming Soon badge on Federal Courts', () => {
       render(<Navigation />);
       // Open the Judicial dropdown via click
-      fireEvent.click(screen.getByText('Judicial'));
-      expect(screen.getByText('Coming Soon')).toBeInTheDocument();
+      const judicialButton = screen.getByRole('button', { name: /Judicial menu/i });
+      fireEvent.click(judicialButton);
+      // Both Supreme Court and Federal Courts have Coming Soon badges
+      const comingSoonBadges = screen.getAllByText('Coming Soon');
+      expect(comingSoonBadges.length).toBeGreaterThan(0);
+      // Verify Federal Courts is listed
+      expect(screen.getByText('Federal Courts')).toBeInTheDocument();
     });
 
     it('has search button', () => {
@@ -82,15 +88,16 @@ describe('Navigation', () => {
     it('expands mobile dropdown sections', () => {
       render(<Navigation />);
       fireEvent.click(screen.getByTestId('hamburger-button'));
-      // Click Legislative section
-      fireEvent.click(screen.getByText('🏛️ Legislative'));
+      // Click the toggle button to expand the Legislative section
+      const toggleButton = screen.getByLabelText('Toggle Legislative submenu');
+      fireEvent.click(toggleButton);
       expect(screen.getByText('House of Representatives')).toBeInTheDocument();
     });
 
     it('has search in mobile menu', () => {
       render(<Navigation />);
       fireEvent.click(screen.getByTestId('hamburger-button'));
-      expect(screen.getByText('🔍 Search')).toBeInTheDocument();
+      expect(screen.getByText('Search')).toBeInTheDocument();
     });
 
     it('prevents body scroll when open', () => {

@@ -155,31 +155,14 @@ function ScandalsPageContent() {
         </div>
       </div>
       
-      {/* Featured Investigation */}
+      {/* Featured Deep Dive */}
       <div className="border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-6">
-          <a
-            href="https://epstein.arialabs.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center gap-4 bg-white rounded-xl p-4 border border-slate-200 hover:border-purple-400 hover:shadow-md transition-all"
-          >
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-rose-600 flex items-center justify-center flex-shrink-0">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2">
-                <h2 className="font-bold text-slate-900 text-sm sm:text-base">Epstein Files Explorer</h2>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 font-semibold">Deep Dive</span>
-              </div>
-              <p className="text-slate-500 text-xs sm:text-sm truncate">Interactive timeline, connections, and court documents</p>
-            </div>
-            <svg className="w-5 h-5 text-purple-600 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
+          <div className="mb-3">
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-slate-500">Featured Deep Dive</h2>
+            <p className="text-xs text-slate-400 mt-0.5">Comprehensive investigations into major cases</p>
+          </div>
+          <EpsteinFilesCard variant="compact" />
         </div>
       </div>
       

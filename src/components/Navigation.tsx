@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 
 interface NavDropdown {
   label: string;
-  icon: string;
   href: string;
   items: { href: string; label: string; badge?: string }[];
 }
@@ -14,7 +13,6 @@ interface NavDropdown {
 const dropdowns: NavDropdown[] = [
   {
     label: 'Legislative',
-    icon: '🏛️',
     href: '/congress',
     items: [
       { href: '/house', label: 'House of Representatives' },
@@ -24,17 +22,15 @@ const dropdowns: NavDropdown[] = [
   },
   {
     label: 'Executive',
-    icon: '🏢',
     href: '/executive',
     items: [
       { href: '/executive/president', label: 'President' },
       { href: '/executive/cabinet', label: 'Cabinet' },
-      { href: '/executive/agencies/doge', label: '🐕 DOGE (Federal Agencies)' },
+      { href: '/executive/agencies/doge', label: 'DOGE (Federal Agencies)' },
     ],
   },
   {
     label: 'Judicial',
-    icon: '⚖️',
     href: '/judicial',
     items: [
       { href: '/judicial/supreme-court', label: 'Supreme Court', badge: 'Coming Soon' },
@@ -57,6 +53,11 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
     timeoutRef.current = setTimeout(() => setOpen(false), 150);
   };
 
+  const handleHeaderClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setOpen(!open);
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -64,11 +65,6 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
     } else if (e.key === 'Escape') {
       setOpen(false);
     }
-  };
-
-  const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setOpen(!open);
   };
 
   useEffect(() => {
@@ -88,22 +84,25 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Clicking anywhere on the header row toggles the dropdown */}
       <div
-        className="flex items-center gap-0 min-h-[44px]"
+        className="flex items-center gap-0 min-h-[44px] cursor-pointer"
+        onClick={handleHeaderClick}
+        onKeyDown={handleKeyDown}
+        role="button"
+        tabIndex={0}
         aria-expanded={open}
         aria-haspopup="true"
+        aria-label={`${dropdown.label} menu`}
       >
-        <Link
-          href={dropdown.href}
-          className="text-slate-600 hover:text-slate-900 transition-colors duration-150 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+        <span
+          className="text-slate-600 hover:text-slate-900 transition-colors duration-150 font-medium text-sm select-none"
         >
           {dropdown.label}
-        </Link>
-        <button
-          onClick={(e) => { e.preventDefault(); setOpen(!open); }}
-          onKeyDown={handleKeyDown}
-          className="text-slate-400 hover:text-slate-600 p-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-          aria-label={`Toggle ${dropdown.label} menu`}
+        </span>
+        <span
+          className="text-slate-400 hover:text-slate-600 p-1"
+          aria-hidden="true"
         >
           <svg
             className={`w-4 h-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
@@ -113,11 +112,19 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
-        </button>
+        </span>
       </div>
 
       {open && (
         <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl border border-slate-200 shadow-xl py-2 z-50">
+          {/* Direct link to section */}
+          <Link
+            href={dropdown.href}
+            className="flex items-center px-4 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition-colors border-b border-slate-100 focus:outline-none focus:bg-slate-100"
+            onClick={() => setOpen(false)}
+          >
+            {dropdown.label} Overview
+          </Link>
           {dropdown.items.map((item) => (
             item.badge === 'Coming Soon' ? (
               <span
@@ -282,7 +289,10 @@ export default function Navigation() {
                 href="/congress?search="
                 className="px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium border-b border-slate-100 focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500"
               >
-                🔍 Search
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                Search
               </Link>
 
               {/* Dashboard */}
@@ -291,7 +301,7 @@ export default function Navigation() {
                 aria-current={pathname === '/' ? 'page' : undefined}
                 className={`px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium border-b border-slate-100 focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500 ${pathname === '/' ? 'bg-blue-50 text-blue-600 font-bold' : ''}`}
               >
-                🏠 Dashboard
+                Dashboard
               </Link>
 
               {/* Dropdowns */}
@@ -303,7 +313,7 @@ export default function Navigation() {
                       className="flex-1 px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500"
                       onClick={() => setIsOpen(false)}
                     >
-                      {d.icon} {d.label}
+                      {d.label}
                     </Link>
                     <button
                       onClick={() => setExpandedMobile(expandedMobile === d.label ? null : d.label)}
@@ -311,14 +321,15 @@ export default function Navigation() {
                       aria-expanded={expandedMobile === d.label}
                       aria-label={`Toggle ${d.label} submenu`}
                     >
-                    <svg
-                      className={`w-4 h-4 transition-transform duration-200 ${expandedMobile === d.label ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
+                      <svg
+                        className={`w-4 h-4 transition-transform duration-200 ${expandedMobile === d.label ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
                     </button>
                   </div>
                   {expandedMobile === d.label && (
@@ -360,7 +371,7 @@ export default function Navigation() {
                 aria-current={pathname === '/scandals' ? 'page' : undefined}
                 className={`px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500 ${pathname === '/scandals' ? 'bg-blue-50 text-blue-600 font-bold' : ''}`}
               >
-                🚨 Scandals
+                Scandals
               </Link>
             </nav>
           </div>
