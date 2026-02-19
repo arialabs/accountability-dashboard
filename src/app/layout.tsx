@@ -129,12 +129,15 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
-        <meta name="theme-color" content="#3b82f6" />
+        <meta name="theme-color" content="#0F766E" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Accountability" />
         <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        {/* Google Fonts — preconnect for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -151,8 +154,13 @@ export default function RootLayout({
           <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between h-16 items-center">
-                <a href="/" className="text-lg sm:text-xl font-bold text-slate-900 hover:text-blue-600 transition truncate">
-                  🏛️ <span className="hidden xs:inline">Accountability Dashboard</span><span className="inline xs:hidden">Dashboard</span>
+                <a
+                  href="/"
+                  className="text-lg sm:text-xl font-semibold text-slate-900 hover:text-teal-700 transition truncate"
+                  style={{ fontFamily: "'Newsreader', Georgia, serif" }}
+                >
+                  <span className="hidden xs:inline">Rep Accountability Dashboard</span>
+                  <span className="inline xs:hidden">Accountability</span>
                 </a>
                 <Navigation />
               </div>
