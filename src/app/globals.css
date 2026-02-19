@@ -233,6 +233,174 @@
   }
 }
 
+/* ══════════════════════════════════════════════════════════════
+   PHASE 3 — Editorial Tension & Distinctive Identity
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Brand Mark: Teal Flag Bar ── */
+.brand-flag-bar {
+  display: block;
+  height: 3px;
+  background: var(--accent);
+  width: 2.5rem;
+  border-radius: 1px;
+}
+
+/* Thick section divider: horizontal redaction-bar motif */
+.redaction-divider {
+  display: block;
+  height: 4px;
+  width: 3rem;
+  background: var(--text-primary);
+  border-radius: 1px;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Section heading with teal left-border "flag" ── */
+.section-flag-heading {
+  border-left: 3px solid var(--accent);
+  padding-left: 0.875rem;
+}
+
+/* ── Document Corner Fold (top-right) ── */
+.doc-corner-fold {
+  position: relative;
+  overflow: hidden;
+}
+
+.doc-corner-fold::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 22px 22px 0;
+  border-color: transparent #E2E8F0 transparent transparent;
+  filter: drop-shadow(-1px 1px 1px rgb(0 0 0 / 0.08));
+}
+
+.doc-corner-fold.dark-bg::after {
+  border-color: transparent #1E293B transparent transparent;
+}
+
+/* ── FILED / VERIFIED stamp-style badge ── */
+.stamp-badge {
+  font-family: 'JetBrains Mono', monospace;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  line-height: 1.6;
+  /* Slight rotation for authenticity */
+  transform: rotate(-0.8deg);
+  transform-origin: center;
+}
+
+.stamp-verified {
+  color: #0F766E;
+  background-color: #F0FDFA;
+}
+
+.stamp-filed {
+  color: #1D4ED8;
+  background-color: #EFF6FF;
+}
+
+.stamp-flagged {
+  color: #991B1B;
+  background-color: #FEF2F2;
+  border-color: #FCA5A5;
+}
+
+.stamp-trending {
+  color: #92400E;
+  background-color: #FEF3C7;
+  border-color: #FCD34D;
+}
+
+/* ── Data highlight: notable/flagged numbers ── */
+.data-flagged {
+  text-decoration: underline;
+  text-decoration-color: #F87171;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.data-notable {
+  text-decoration: underline;
+  text-decoration-color: #F59E0B;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* ── Card left-border "flag" motif ── */
+.card-flagged {
+  border-left: 3px solid var(--republican) !important;
+}
+
+.card-teal-flag {
+  border-left: 3px solid var(--accent) !important;
+}
+
+/* ── Spotlight: featured (60%) + supporting (40%) layout ── */
+.spotlight-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .spotlight-grid {
+    grid-template-columns: 3fr 2fr;
+    align-items: stretch;
+  }
+}
+
+.spotlight-featured {
+  /* newspaper front-page presence */
+  position: relative;
+}
+
+.spotlight-supporting {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Animated search: glow on focus ── */
+.search-wrap {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.search-wrap.search-focused {
+  transform: scaleX(1.018);
+  transform-origin: left center;
+  box-shadow: 0 0 0 3px rgb(20 184 166 / 0.22), 0 4px 20px rgb(20 184 166 / 0.12);
+}
+
+/* Scanning animation */
+@keyframes search-scan {
+  0%   { left: -15%; opacity: 0.5; }
+  100% { left: 105%; opacity: 0; }
+}
+
+.search-scanner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  background: linear-gradient(90deg, transparent, rgb(20 184 166 / 0.18), transparent);
+  pointer-events: none;
+  animation: search-scan 1.4s ease-in-out infinite;
+}
+
 /* ── Sparkline SVG animation ── */
 @keyframes draw-line {
   from { stroke-dashoffset: 400; }

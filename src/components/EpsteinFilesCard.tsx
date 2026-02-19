@@ -66,19 +66,24 @@ export default function EpsteinFilesCard({ variant = "full", className = "" }: E
       href="https://epstein.arialabs.ai"
       target="_blank"
       rel="noopener noreferrer"
-      className={`group block bg-white border border-slate-200 rounded-md overflow-hidden deep-dive-hero ${className}`}
+      className={`group block bg-white border border-slate-200 rounded-md overflow-hidden deep-dive-hero doc-corner-fold ${className}`}
+      style={{ borderLeft: "3px solid #7C3AED" }}
     >
       {/* Header accent bar */}
       <div className="h-1 w-full" style={{ backgroundColor: "#7C3AED" }} />
 
       <div className="p-8 md:p-10">
         <div className="flex items-start justify-between gap-4 mb-6">
-          <div>
+          <div className="flex items-center gap-3">
             <span
               className="text-xs font-semibold uppercase tracking-widest"
               style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#7C3AED" }}
             >
               Deep Dive Investigation
+            </span>
+            {/* FILED stamp */}
+            <span className="stamp-badge stamp-filed" aria-label="Filed investigation">
+              Filed
             </span>
           </div>
           <div
