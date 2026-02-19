@@ -182,7 +182,7 @@ export default function ExecutiveBranch() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             {[
               { role: "Secretary of State", name: "Marco Rubio", id: "secretary-of-state", photo: "/images/officials/rubio.jpg" },
-              { role: "Secretary of Defense", name: "Pete Hegseth", id: "secretary-of-defense", photo: "" },
+              { role: "Secretary of Defense", name: "Pete Hegseth", id: "secretary-of-defense", photo: "/images/officials/hegseth.jpg" },
               { role: "Attorney General", name: "Pam Bondi", id: "attorney-general", photo: "/images/officials/bondi.jpg" },
               { role: "Secretary of Treasury", name: "Scott Bessent", id: "secretary-of-treasury", photo: "/images/officials/bessent.jpg" },
               { role: "Secretary of HHS", name: "RFK Jr.", id: "secretary-of-hhs", photo: "/images/officials/kennedy.jpg" },

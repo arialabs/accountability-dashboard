@@ -112,7 +112,7 @@ export const dogeData: DogeProfile = {
     role: "Special Government Employee (SGE)",
     startDate: "2025-01-20",
     endDate: "2025-05-30",
-    photoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/440px-Elon_Musk_Royal_Society_%28crop2%29.jpg",
+    photoUrl: "/images/officials/musk.jpg",
     bio: "Elon Musk, CEO of Tesla and SpaceX and owner of X (formerly Twitter), was appointed to lead the Department of Government Efficiency on January 20, 2025. Despite the name, DOGE was not a formal government department but an advisory body operating under executive authority. Musk departed Washington in May 2025, and DOGE was quietly disbanded by late 2025, with its functions absorbed by the Office of Personnel Management.",
     netWorth: "~$350 billion (as of early 2025)",
   },
@@ -665,7 +665,7 @@ export const dogeData: DogeProfile = {
       name: "Vivek Ramaswamy",
       role: "Co-Leader (departed)",
       age: 39,
-      photoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Vivek_Ramaswamy_by_Gage_Skidmore_2.jpg/440px-Vivek_Ramaswamy_by_Gage_Skidmore_2.jpg",
+      photoUrl: "/images/officials/vivek.jpg",
       background: "Entrepreneur, former 2024 Republican presidential candidate, biotech entrepreneur",
       previousEmployer: ["Roivant Sciences (founder)", "Strive Asset Management (founder)"],
       tenure: {
@@ -740,6 +740,7 @@ export const dogeData: DogeProfile = {
       name: "Luke Farritor",
       role: "Software Engineer",
       age: 23,
+      photoUrl: "/images/officials/farritor.jpg",
       background: "University of Nebraska dropout, former SpaceX intern, Thiel Fellow",
       previousEmployer: ["SpaceX (intern)", "Nat Friedman (worked for Silicon Valley entrepreneur)"],
       tenure: {

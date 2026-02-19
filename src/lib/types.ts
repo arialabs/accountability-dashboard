@@ -192,6 +192,9 @@ export interface ScandalEntry {
   outcome?: string;
   created_at: string;
   updated_at: string;
+  
+  // Optional extended fields
+  involved_members?: string[];
 }
 
 // ==================== Wealth Tracking ====================
