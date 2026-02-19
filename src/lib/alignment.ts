@@ -1,11 +1,45 @@
 /**
- * Position-to-Vote Alignment Calculator
- * 
- * Maps politician's stated positions (from OnTheIssues) to their actual votes
- * and calculates alignment scores with time-decay weighting for recent votes.
- * 
- * NOTE: This is the base alignment calculator.
- * See alignment-enhanced.ts for multi-factor analysis that builds upon this.
+ * @module alignment
+ * @description Position-to-Vote Alignment Calculator — Base Module
+ *
+ * Maps a politician's **stated positions** (sourced from OnTheIssues) to their
+ * **actual voting record** (key congressional votes), computing an alignment
+ * score with time-decay weighting so recent votes carry more weight than
+ * old ones.
+ *
+ * ## When to use this module
+ * Use `alignment.ts` when you need:
+ * - Raw position-to-vote matching for a single member
+ * - Category-level alignment breakdowns (Healthcare, Immigration, etc.)
+ * - The `AlignmentResult` / `MemberAlignmentSummary` types
+ * - Leaderboard ranking data (used by `leaderboard.ts`)
+ * - Displaying stated-vs-actual position cards (used by `CampaignPositions.tsx`)
+ *
+ * ## When to use alignment-enhanced.ts instead
+ * Use `alignment-enhanced.ts` when you need:
+ * - A **weighted composite score** that factors in campaign finance, voting
+ *   consistency, and bipartisan cooperation alongside the base vote alignment
+ * - Confidence intervals / data-quality warnings ("Insufficient Data" banners)
+ * - The `EnhancedAlignmentScore` type (used by `AlignmentScoreCardEnhanced.tsx`
+ *   and `ScoreBreakdownModal.tsx`)
+ * - Multi-factor breakdown UI showing each factor's contribution
+ *
+ * ## Architecture
+ * ```
+ * alignment.ts          ← base scoring (this file)
+ *     ↓ extends
+ * alignment-enhanced.ts ← multi-factor scoring (calls calculateEnhancedAlignment)
+ * ```
+ *
+ * `alignment-enhanced.ts` imports `AlignmentScore` (the output of the pipeline
+ * that uses this module) from `data.ts` and wraps it with additional factors.
+ * The two modules compute **different things** and are both correct for their
+ * respective use-cases — they are NOT duplicates.
+ *
+ * ## Migration note
+ * New features displaying alignment to end users should use
+ * `alignment-enhanced.ts` for richer context. The base module remains the
+ * canonical source of truth for the raw vote-matching algorithm.
  */
 
 import type { Position, MemberPositions } from './types';

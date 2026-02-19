@@ -7,8 +7,6 @@ import { getMemberFinanceStatic } from "@/lib/data";
 import { calculateGrade } from "@/lib/grading";
 import { useLiveMembers } from "@/hooks/useLiveData";
 import RepresentativeImage from "@/components/RepresentativeImage";
-import PartyLoyaltyChart from "@/components/PartyLoyaltyChart";
-import IdeologySpectrumChart from "@/components/IdeologySpectrumChart";
 import type { Member } from "@/lib/types";
 
 // Helper to get user's state from IP geolocation
@@ -475,18 +473,6 @@ function CongressContent() {
           <div className="text-4xl sm:text-5xl font-black text-purple-600 mb-2 sm:mb-3 tabular-nums leading-tight">{filteredStats.independents}</div>
           <div className="text-slate-600 font-semibold text-xs sm:text-sm uppercase tracking-wider leading-relaxed">Independents</div>
         </div>
-      </div>
-
-      {/* Data Visualizations */}
-      <div className="grid lg:grid-cols-2 gap-8">
-        <PartyLoyaltyChart 
-          members={filteredMembers} 
-          selectedParty={party as "D" | "R" | "I" | ""}
-        />
-        <IdeologySpectrumChart 
-          members={filteredMembers}
-          chamber={chamber as "house" | "senate" | ""}
-        />
       </div>
 
       {/* Members Grid */}

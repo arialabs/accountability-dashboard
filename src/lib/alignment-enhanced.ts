@@ -1,14 +1,50 @@
 /**
- * Enhanced Alignment Scoring with Multi-Factor Analysis
- * 
- * Combines multiple data sources for comprehensive scoring:
- * - Voting record alignment (primary) - from alignment.ts
- * - Campaign finance alignment (OpenFEC)
- * - Voting consistency
- * - Bipartisan cooperation
- * 
- * NOTE: This module extends the base alignment.ts calculator with additional
- * data sources and confidence metrics for more nuanced scoring.
+ * @module alignment-enhanced
+ * @description Enhanced Alignment Scoring — Multi-Factor Module
+ *
+ * Wraps the base alignment score (computed by the `alignment.ts` pipeline and
+ * stored in `data/alignment-scores.json`) with **additional scoring factors**
+ * for a richer, more nuanced representation of how well a politician's actions
+ * match the public interest.
+ *
+ * ## What this module adds on top of alignment.ts
+ * | Factor                       | Weight | Source |
+ * |------------------------------|--------|--------|
+ * | Position-to-Vote Alignment   | 60–65% | alignment.ts base score |
+ * | Campaign Finance Influence   | 15–20% | OpenFEC donor data |
+ * | Voting Consistency           | 15%    | Category variance |
+ * | Bipartisan Cooperation       | 10%    | Party-line vote %  |
+ *
+ * ## When to use this module
+ * Use `alignment-enhanced.ts` when you need:
+ * - A **composite weighted score** (`EnhancedAlignmentScore.weighted_score`)
+ *   that incorporates campaign finance, consistency, and bipartisanship
+ * - **Confidence metrics** (low/medium/high) with explanations shown to users
+ * - **"Insufficient Data"** warnings when a member has fewer than 5 analyzed votes
+ * - Per-factor breakdowns for the Score Breakdown modal UI
+ * - The `EnhancedAlignmentScore` type (consumed by `AlignmentScoreCardEnhanced.tsx`,
+ *   `ScoreBreakdownModal.tsx`, and `data-enhanced.ts`)
+ *
+ * ## When to use alignment.ts instead
+ * Use `alignment.ts` (the base module) when you need:
+ * - Raw position-to-vote matching logic or the `calculateMemberAlignment` function
+ * - Leaderboard-style comparisons (used by `leaderboard.ts`)
+ * - Simple displayed positions without finance context (`CampaignPositions.tsx`)
+ *
+ * ## Architecture
+ * ```
+ * alignment.ts          ← base scoring (raw vote matching)
+ *     ↓ pre-computed to alignment-scores.json
+ * AlignmentScore        ← loaded via data.ts → getMemberAlignment()
+ *     ↓ passed into
+ * alignment-enhanced.ts ← this file; adds finance/consistency/bipartisan factors
+ *     ↓
+ * EnhancedAlignmentScore ← consumed by UI components
+ * ```
+ *
+ * The two modules are NOT duplicates — they operate at different stages of the
+ * data pipeline. `alignment.ts` computes the raw vote-matching score; this
+ * module enhances an already-computed score with additional context.
  */
 
 import { calculateConfidence, type ConfidenceMetrics, type DataSource } from './confidence';
