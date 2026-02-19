@@ -88,24 +88,33 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Link
-        href={dropdown.href}
-        onKeyDown={handleKeyDown}
-        onClick={handleClick}
-        className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-1 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+      <div
+        className="flex items-center gap-0 min-h-[44px]"
         aria-expanded={open}
         aria-haspopup="true"
       >
-        {dropdown.label}
-        <svg
-          className={`w-4 h-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+        <Link
+          href={dropdown.href}
+          className="text-slate-600 hover:text-slate-900 transition-colors duration-150 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </Link>
+          {dropdown.label}
+        </Link>
+        <button
+          onClick={(e) => { e.preventDefault(); setOpen(!open); }}
+          onKeyDown={handleKeyDown}
+          className="text-slate-400 hover:text-slate-600 p-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+          aria-label={`Toggle ${dropdown.label} menu`}
+        >
+          <svg
+            className={`w-4 h-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      </div>
 
       {open && (
         <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl border border-slate-200 shadow-xl py-2 z-50">
@@ -288,15 +297,20 @@ export default function Navigation() {
               {/* Dropdowns */}
               {dropdowns.map((d) => (
                 <div key={d.label} className="border-b border-slate-100">
-                  <button
-                    onClick={() => setExpandedMobile(expandedMobile === d.label ? null : d.label)}
-                    className="w-full px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center justify-between font-medium focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500"
-                    aria-expanded={expandedMobile === d.label}
-                    aria-label={`${d.label} navigation menu`}
-                  >
-                    <span className="flex items-center gap-3">
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={d.href}
+                      className="flex-1 px-4 py-4 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-3 font-medium focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                      onClick={() => setIsOpen(false)}
+                    >
                       {d.icon} {d.label}
-                    </span>
+                    </Link>
+                    <button
+                      onClick={() => setExpandedMobile(expandedMobile === d.label ? null : d.label)}
+                      className="px-4 py-4 text-slate-400 hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                      aria-expanded={expandedMobile === d.label}
+                      aria-label={`Toggle ${d.label} submenu`}
+                    >
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${expandedMobile === d.label ? 'rotate-180' : ''}`}
                       fill="none"
@@ -305,7 +319,8 @@ export default function Navigation() {
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                  </button>
+                    </button>
+                  </div>
                   {expandedMobile === d.label && (
                     <div className="bg-slate-50">
                       {d.items.map((item) => (
