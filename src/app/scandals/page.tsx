@@ -38,14 +38,25 @@ function ScandalsPageContent() {
   // Filter scandals based on current filters
   const filteredScandals = useMemo(() => {
     return allScandals.filter((scandal) => {
-      // Search filter
+      // Search filter — prioritize member name match
+      // If search looks like a person's name (matches any member), filter by member only
+      // Otherwise search title + description too
       if (filters.search) {
         const searchLower = filters.search.toLowerCase();
-        const matchesSearch = 
-          scandal.member_name.toLowerCase().includes(searchLower) ||
-          scandal.title.toLowerCase().includes(searchLower) ||
-          scandal.description.toLowerCase().includes(searchLower);
-        if (!matchesSearch) return false;
+        const isNameMatch = allScandals.some(s => 
+          s.member_name.toLowerCase().includes(searchLower)
+        );
+        
+        if (isNameMatch) {
+          // Person search: only match on the member's name
+          if (!scandal.member_name.toLowerCase().includes(searchLower)) return false;
+        } else {
+          // Topic search: match on title and description
+          const matchesSearch = 
+            scandal.title.toLowerCase().includes(searchLower) ||
+            scandal.description.toLowerCase().includes(searchLower);
+          if (!matchesSearch) return false;
+        }
       }
       
       // Party filter
