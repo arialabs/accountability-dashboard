@@ -37,7 +37,7 @@ const dropdowns: NavDropdown[] = [
     icon: '⚖️',
     href: '/judicial',
     items: [
-      { href: '/judicial/supreme-court', label: 'Supreme Court' },
+      { href: '/judicial/supreme-court', label: 'Supreme Court', badge: 'Coming Soon' },
       { href: '/judicial/federal-courts', label: 'Federal Courts', badge: 'Coming Soon' },
     ],
   },
@@ -110,19 +110,31 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
       {open && (
         <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl border border-slate-200 shadow-xl py-2 z-50">
           {dropdown.items.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="flex items-center justify-between px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500"
-              onClick={() => setOpen(false)}
-            >
-              <span>{item.label}</span>
-              {item.badge && (
+            item.badge === 'Coming Soon' ? (
+              <span
+                key={item.href}
+                className="flex items-center justify-between px-4 py-3 text-sm text-slate-400 cursor-not-allowed"
+              >
+                <span>{item.label}</span>
                 <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-medium">
                   {item.badge}
                 </span>
-              )}
-            </Link>
+              </span>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="flex items-center justify-between px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors focus:outline-none focus:bg-slate-100 focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                onClick={() => setOpen(false)}
+              >
+                <span>{item.label}</span>
+                {item.badge && (
+                  <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-medium">
+                    {item.badge}
+                  </span>
+                )}
+              </Link>
+            )
           ))}
         </div>
       )}
@@ -297,18 +309,30 @@ export default function Navigation() {
                   {expandedMobile === d.label && (
                     <div className="bg-slate-50">
                       {d.items.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="flex items-center justify-between pl-12 pr-4 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors focus:outline-none focus:bg-slate-200 focus:ring-2 focus:ring-inset focus:ring-blue-500"
-                        >
-                          <span>{item.label}</span>
-                          {item.badge && (
+                        item.badge === 'Coming Soon' ? (
+                          <span
+                            key={item.href}
+                            className="flex items-center justify-between pl-12 pr-4 py-3 text-sm text-slate-400 cursor-not-allowed"
+                          >
+                            <span>{item.label}</span>
                             <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-medium">
                               {item.badge}
                             </span>
-                          )}
-                        </Link>
+                          </span>
+                        ) : (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="flex items-center justify-between pl-12 pr-4 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors focus:outline-none focus:bg-slate-200 focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                          >
+                            <span>{item.label}</span>
+                            {item.badge && (
+                              <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-medium">
+                                {item.badge}
+                              </span>
+                            )}
+                          </Link>
+                        )
                       ))}
                     </div>
                   )}
