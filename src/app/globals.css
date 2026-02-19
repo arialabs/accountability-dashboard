@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,10 +16,20 @@
     --accent: #0F766E;
     --warning: #D97706;
     --border: #E2E8F0;
+
+    /* 8px base grid spacing tokens */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-6: 48px;
+    --space-8: 64px;
+    --space-12: 96px;
+    --space-15: 120px;
   }
 
   body {
-    @apply antialiased bg-white text-slate-600 text-base leading-relaxed;
+    @apply antialiased bg-white text-base leading-relaxed;
     font-family: 'Source Sans 3', Georgia, serif;
     color: var(--text-secondary);
     background-color: var(--bg-primary);
@@ -38,35 +48,45 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Newsreader', Georgia, serif;
     color: var(--text-primary);
-    line-height: 1.2;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
   }
 
   h1 {
-    @apply text-5xl font-bold tracking-tight;
+    /* 48px mobile, 56px desktop — Phase 2 upgrade */
+    font-size: clamp(3rem, 5vw, 3.5rem);
+    font-weight: 700;
   }
 
   h2 {
-    @apply text-4xl font-semibold tracking-tight;
+    /* 36px mobile, 40px desktop — Phase 2 upgrade */
+    font-size: clamp(2.25rem, 4vw, 2.5rem);
+    font-weight: 600;
   }
 
   h3 {
-    @apply text-3xl font-semibold;
+    font-size: 1.75rem;
+    font-weight: 600;
   }
 
   h4 {
-    @apply text-2xl font-semibold;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   h5 {
-    @apply text-xl font-semibold;
+    font-size: 1.25rem;
+    font-weight: 600;
   }
 
   h6 {
-    @apply text-lg font-semibold;
+    font-size: 1.125rem;
+    font-weight: 600;
   }
 
-  /* Tabular numbers for data */
-  .data-mono {
+  /* JetBrains Mono for ALL data numbers, stats, percentages, dollar amounts */
+  .data-mono,
+  .font-mono {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
     font-variant-numeric: tabular-nums;
   }
@@ -86,14 +106,15 @@
 }
 
 @layer components {
-  /* Card Component */
+  /* ── Card Component (Phase 2: sharper corners, consistent spacing) ── */
   .card {
-    @apply bg-white border border-slate-200 rounded-lg p-6 transition-shadow duration-200;
+    @apply bg-white border border-slate-200 rounded-md p-6 transition-all duration-200;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.06);
   }
 
   .card:hover {
-    box-shadow: 0 4px 12px 0 rgb(0 0 0 / 0.08);
+    @apply -translate-y-0.5;
+    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 0.10);
   }
 
   /* Primary Button */
@@ -102,10 +123,10 @@
     @apply bg-teal-700 hover:bg-teal-800 text-white font-semibold py-2 px-6 rounded transition-colors;
   }
 
-  /* Party Badges */
+  /* Party Badges — consistent size across all cards */
   .badge {
     font-family: 'Source Sans 3', sans-serif;
-    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wide;
+    @apply inline-flex items-center px-2 py-0.5 rounded-sm text-xs font-semibold uppercase tracking-wide;
   }
 
   .badge-dem {
@@ -129,12 +150,12 @@
   /* Grade Badge Component */
   .grade-badge {
     font-family: 'JetBrains Mono', monospace;
-    @apply inline-flex items-center gap-2 px-4 py-2 rounded border-2 font-bold;
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-sm border-2 font-bold;
   }
 
   .grade-badge-lg {
     font-family: 'JetBrains Mono', monospace;
-    @apply inline-flex items-center gap-3 px-6 py-3 rounded border-2;
+    @apply inline-flex items-center gap-3 px-6 py-3 rounded-sm border-2;
   }
 
   .grade-a { @apply bg-emerald-50 border-emerald-500 text-emerald-700; }
@@ -145,7 +166,7 @@
 
   /* Stat Card */
   .stat-card {
-    @apply bg-slate-50 rounded py-3 px-2 text-center border border-slate-100;
+    @apply bg-slate-50 rounded-sm py-3 px-2 text-center border border-slate-100;
   }
 
   .stat-label {
@@ -173,4 +194,63 @@
     font-family: 'Source Sans 3', sans-serif;
     @apply text-xs font-semibold uppercase tracking-widest text-slate-500;
   }
+
+  /* ── Micro-interactions: scroll fade-in ── */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger delays for child items */
+  .fade-in-up:nth-child(2) { transition-delay: 0.08s; }
+  .fade-in-up:nth-child(3) { transition-delay: 0.16s; }
+  .fade-in-up:nth-child(4) { transition-delay: 0.24s; }
+
+  /* ── Spotlight card hover: scale + shadow ── */
+  .spotlight-card {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+  }
+
+  .spotlight-card:hover {
+    transform: translateY(-3px) scale(1.005);
+    box-shadow: 0 12px 32px 0 rgb(0 0 0 / 0.10);
+  }
+
+  /* ── Deep Dive card: featured hero variant ── */
+  .deep-dive-hero {
+    @apply bg-white border border-slate-200 rounded-md transition-all duration-200;
+  }
+
+  .deep-dive-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px 0 rgb(0 0 0 / 0.09);
+  }
+}
+
+/* ── Sparkline SVG animation ── */
+@keyframes draw-line {
+  from { stroke-dashoffset: 400; }
+  to   { stroke-dashoffset: 0;   }
+}
+
+.sparkline-path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: draw-line 1.4s ease-out 0.4s forwards;
+}
+
+/* ── Counter animation ── */
+@keyframes count-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.counter-animated {
+  animation: count-fade-in 0.4s ease-out forwards;
 }

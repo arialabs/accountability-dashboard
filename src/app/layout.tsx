@@ -158,13 +158,55 @@ export default function RootLayout({
           <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between h-16 items-center">
+                {/* Logotype / Wordmark — Phase 2: distinctive weight contrast + teal accent */}
                 <a
                   href="/"
-                  className="text-lg sm:text-xl font-semibold text-slate-900 hover:text-teal-700 transition truncate"
-                  style={{ fontFamily: "'Newsreader', Georgia, serif" }}
+                  className="group flex items-center gap-0 hover:opacity-90 transition-opacity shrink-0"
+                  aria-label="Rep Accountability Dashboard — Home"
                 >
-                  <span className="hidden xs:inline">Rep Accountability Dashboard</span>
-                  <span className="inline xs:hidden">Accountability</span>
+                  {/* Teal accent mark */}
+                  <span
+                    className="inline-block w-1 h-5 mr-2 rounded-sm"
+                    style={{ backgroundColor: "var(--accent)" }}
+                    aria-hidden="true"
+                  />
+                  {/* "Accountability" — bold, tight tracking */}
+                  <span
+                    className="hidden sm:inline text-slate-900"
+                    style={{
+                      fontFamily: "'Newsreader', Georgia, serif",
+                      fontWeight: 700,
+                      fontSize: "1.05rem",
+                      letterSpacing: "-0.03em",
+                    }}
+                  >
+                    Accountability
+                  </span>
+                  {/* "Dashboard" — lighter weight, slightly muted */}
+                  <span
+                    className="hidden sm:inline text-slate-500"
+                    style={{
+                      fontFamily: "'Newsreader', Georgia, serif",
+                      fontWeight: 400,
+                      fontSize: "1.05rem",
+                      letterSpacing: "-0.01em",
+                      marginLeft: "0.25em",
+                    }}
+                  >
+                    Dashboard
+                  </span>
+                  {/* Mobile short form */}
+                  <span
+                    className="sm:hidden text-slate-900"
+                    style={{
+                      fontFamily: "'Newsreader', Georgia, serif",
+                      fontWeight: 700,
+                      fontSize: "1rem",
+                      letterSpacing: "-0.03em",
+                    }}
+                  >
+                    Accountability
+                  </span>
                 </a>
                 <Navigation />
               </div>

@@ -8,15 +8,15 @@ describe('EpsteinFilesCard', () => {
     
     expect(screen.getByText('Epstein Files Explorer')).toBeInTheDocument();
     expect(screen.getByText(/Comprehensive investigation into the Jeffrey Epstein case/)).toBeInTheDocument();
-    expect(screen.getByText('Explore')).toBeInTheDocument();
+    expect(screen.getByText(/Explore full investigation/)).toBeInTheDocument();
   });
 
   it('renders the compact variant with correct content', () => {
     render(<EpsteinFilesCard variant="compact" />);
     
     expect(screen.getByText('Epstein Files Explorer')).toBeInTheDocument();
-    expect(screen.getByText(/Dive deep into the Jeffrey Epstein case files/)).toBeInTheDocument();
-    expect(screen.getByText('Explore Deep Dive')).toBeInTheDocument();
+    expect(screen.getByText(/Interactive timeline, network connections/)).toBeInTheDocument();
+    expect(screen.getByText('Explore')).toBeInTheDocument();
   });
 
   it('renders as an external link with correct attributes', () => {
@@ -35,12 +35,30 @@ describe('EpsteinFilesCard', () => {
     expect(link).toHaveClass('custom-class');
   });
 
-  it('has proper hover states and transition classes', () => {
+  it('renders card accent bar', () => {
     const { container } = render(<EpsteinFilesCard />);
-    const link = container.querySelector('a');
-    
-    expect(link).toHaveClass('hover:-translate-y-2');
-    expect(link).toHaveClass('transition-all');
-    expect(link).toHaveClass('hover:border-purple-400');
+    // Full card has a purple accent bar at top
+    const accentBar = container.querySelector('.h-1');
+    expect(accentBar).not.toBeNull();
+  });
+
+  it('shows document stats in full variant', () => {
+    render(<EpsteinFilesCard variant="full" />);
+    expect(screen.getByText('2,100+')).toBeInTheDocument();
+    expect(screen.getByText('Documents')).toBeInTheDocument();
+    expect(screen.getByText('500+')).toBeInTheDocument();
+    expect(screen.getByText('Named individuals')).toBeInTheDocument();
+  });
+
+  it('uses JetBrains Mono for stat numbers', () => {
+    const { container } = render(<EpsteinFilesCard variant="full" />);
+    const monoElements = container.querySelectorAll('[style*="JetBrains Mono"]');
+    expect(monoElements.length).toBeGreaterThan(0);
+  });
+
+  it('uses Newsreader for the card title', () => {
+    const { container } = render(<EpsteinFilesCard variant="full" />);
+    const heading = container.querySelector('h3');
+    expect(heading?.getAttribute('style')).toContain('Newsreader');
   });
 });
