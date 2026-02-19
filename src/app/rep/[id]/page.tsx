@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { getMember, getMembers, getMemberFinance, getMemberTrades, getMemberDisclosures } from "@/lib/data";
 import { getMemberAlignmentEnhanced } from "@/lib/data-enhanced";
 import { notFound } from "next/navigation";
@@ -19,10 +18,9 @@ import RepresentativeImage from "@/components/RepresentativeImage";
 import SocialShare from "@/components/SocialShare";
 import ConflictOfInterestSection from "@/components/ConflictOfInterestSection";
 import ErrorBoundary from "@/components/ErrorBoundary";
-import { generatePersonSchema, generateRatingSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
+import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 import keyVotesData from "@/data/key-votes.json";
-import positionsData from "@/data/positions.json";
 
 export function generateStaticParams() {
   return getMembers().map((member) => ({
@@ -30,12 +28,13 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const member = getMember(params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const member = getMember(id);
 
   if (!member) {
     return {
-      title: "Representative Not Found | Accountability Dashboard",
+      title: "Representative Not Found",
     };
   }
 
@@ -49,15 +48,16 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default async function RepPage({ params }: { params: { id: string } }) {
-  const member = getMember(params.id);
+export default async function RepPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const member = getMember(id);
 
   if (!member) {
     notFound();
   }
 
   // Get real finance data from OpenFEC API
-  const finance = await getMemberFinance(params.id);
+  const finance = await getMemberFinance(id);
   
   // Detect conflicts of interest between donors and votes
   let conflicts: Array<{
@@ -95,14 +95,14 @@ export default async function RepPage({ params }: { params: { id: string } }) {
         const industries = aggregateByIndustry(scheduleAData);
         
         // Get member's votes from keyVotesData
-        const memberVotes = (keyVotesData as Array<{ bill: string; title: string; category: string; date: string; votes: Record<string, string> }>)
-          .filter(vote => vote.votes && vote.votes[params.id])
+        const memberVotes = (keyVotesData as unknown as Array<{ bill: string; title: string; description: string; category: string; date: string; votes: Record<string, string> }>)
+          .filter(vote => vote.votes && vote.votes[id])
           .map(vote => ({
             bill: vote.bill,
             title: vote.title,
             category: vote.category,
             date: vote.date,
-            vote: vote.votes[params.id] as "Yea" | "Nay" | "Present" | "Not Voting",
+            vote: vote.votes[id] as "Yea" | "Nay" | "Present" | "Not Voting",
             description: vote.description,
           }));
         
@@ -132,7 +132,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
   }> = [];
 
   // Real stock trades from Quiver Quant
-  const stockTrades = getMemberTrades(params.id) as Array<{
+  const stockTrades = getMemberTrades(id) as Array<{
     ticker: string;
     company: string | null;
     tradedDate: string;
@@ -143,10 +143,10 @@ export default async function RepPage({ params }: { params: { id: string } }) {
   }>;
 
   // Financial disclosures from House Clerk
-  const financialDisclosures = getMemberDisclosures(params.id);
+  const financialDisclosures = getMemberDisclosures(id);
 
   // Alignment data (used for rating schema + social share text)
-  const alignmentEnhanced = getMemberAlignmentEnhanced(params.id);
+  const alignmentEnhanced = getMemberAlignmentEnhanced(id);
 
   const getPartyBadgeClass = (party: string) => {
     switch (party) {
@@ -186,7 +186,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
     jobTitle: jobTitle,
     description: `${getPartyName(member.party)} ${member.chamber === "house" ? "Representative" : "Senator"}. View voting record, campaign finance data, and accountability metrics.`,
     image: member.photo_url ?? undefined,
-    url: `/rep/${params.id}`,
+    url: `/rep/${id}`,
     party: member.party,
     state: member.state,
     district: member.district ? String(member.district) : undefined,
@@ -200,7 +200,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "Congress", url: "/congress" },
-    { name: member.full_name, url: `/rep/${params.id}` },
+    { name: member.full_name, url: `/rep/${id}` },
   ]);
 
   // Rating schema disabled per #84 (alignment scoring paused)
@@ -334,7 +334,7 @@ export default async function RepPage({ params }: { params: { id: string } }) {
                 bioguideId={member.bioguide_id}
                 memberName={member.full_name}
                 chamber={member.chamber === "house" ? "House" : "Senate"}
-                keyVotes={keyVotesData as Array<{
+                keyVotes={keyVotesData as unknown as Array<{
                   id: string;
                   congress: number;
                   chamber: "House" | "Senate";

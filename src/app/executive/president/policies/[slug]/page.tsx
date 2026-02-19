@@ -9,8 +9,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function PolicyDetailPage({ params }: { params: { slug: string } }) {
-  const policy = getPolicy(params.slug);
+export default async function PolicyDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const policy = getPolicy(slug);
   
   if (!policy) {
     notFound();

@@ -50,7 +50,8 @@ const mockVotes = [
 describe("KeyVotes", () => {
   it("renders vote cards", () => {
     render(<KeyVotes votes={mockVotes} />);
-    expect(screen.getByText("H.R. 1")).toBeInTheDocument();
+    // Bill numbers may have colon appended, use regex
+    expect(screen.getByText(/H\.R\. 1/)).toBeInTheDocument();
     expect(screen.getByText("Healthcare Reform Act")).toBeInTheDocument();
   });
 
@@ -75,7 +76,7 @@ describe("KeyVotes", () => {
 
   it("respects limit prop", () => {
     render(<KeyVotes votes={mockVotes} limit={1} />);
-    expect(screen.getByText("H.R. 1")).toBeInTheDocument();
+    expect(screen.getByText(/H\.R\. 1/)).toBeInTheDocument();
     // Should show "Show More" button
     expect(screen.getByText(/Show.*More/i)).toBeInTheDocument();
   });
@@ -85,7 +86,7 @@ describe("KeyVotes", () => {
     const showMore = screen.getByText(/Show.*More/i);
     fireEvent.click(showMore);
     // All votes should now be visible
-    expect(screen.getByText("H.R. 2")).toBeInTheDocument();
+    expect(screen.getByText(/H\.R\. 2/)).toBeInTheDocument();
   });
 
   it("filters by chamber", () => {
@@ -93,16 +94,16 @@ describe("KeyVotes", () => {
     const chamberSelect = screen.getByLabelText("Chamber:");
     fireEvent.change(chamberSelect, { target: { value: "Senate" } });
     // Only Senate votes should show
-    expect(screen.getByText("S. 1")).toBeInTheDocument();
-    expect(screen.queryByText("H.R. 1")).not.toBeInTheDocument();
+    expect(screen.getByText(/S\. 1/)).toBeInTheDocument();
+    expect(screen.queryByText(/^H\.R\. 1/)).not.toBeInTheDocument();
   });
 
   it("filters by category", () => {
     render(<KeyVotes votes={mockVotes} showFilters={true} />);
     const categorySelect = screen.getByLabelText("Category:");
     fireEvent.change(categorySelect, { target: { value: "Healthcare" } });
-    expect(screen.getByText("H.R. 1")).toBeInTheDocument();
-    expect(screen.queryByText("S. 1")).not.toBeInTheDocument();
+    expect(screen.getByText(/H\.R\. 1/)).toBeInTheDocument();
+    expect(screen.queryByText(/^S\. 1/)).not.toBeInTheDocument();
   });
 
   it("shows empty state when no votes match filters", () => {

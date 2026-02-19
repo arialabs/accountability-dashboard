@@ -5,7 +5,7 @@ import promiseData from "@/data/trump-promises.json";
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "President of the United States | Accountability Dashboard",
+  title: "President of the United States",
   description: "Track the President's policy actions, promises, and their impact on different groups. Non-partisan analysis of who benefits and who is harmed by executive decisions.",
 };
 

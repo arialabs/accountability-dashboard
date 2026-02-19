@@ -3,7 +3,7 @@ import Link from "next/link";
 import DataSourceBadge from "@/components/credibility/DataSourceBadge";
 
 export const metadata: Metadata = {
-  title: "Methodology | Accountability Dashboard",
+  title: "Methodology",
   description: "How we calculate alignment scores — our data sources, scoring methodology, and known limitations.",
 };
 

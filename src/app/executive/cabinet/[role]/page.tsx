@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: CabinetMemberPageProps): Prom
 
   if (!member) {
     return {
-      title: "Cabinet Member Not Found | Accountability Dashboard",
+      title: "Cabinet Member Not Found",
     };
   }
 

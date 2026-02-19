@@ -5,7 +5,7 @@ import vpData from "@/data/vp.json";
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Vice President of the United States | Accountability Dashboard",
+  title: "Vice President of the United States",
   description: "Track the Vice President's role, Senate record, and policy positions. View voting history and accountability metrics.",
 };
 

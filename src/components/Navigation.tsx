@@ -38,7 +38,7 @@ const dropdowns: NavDropdown[] = [
     href: '/judicial',
     items: [
       { href: '/judicial/supreme-court', label: 'Supreme Court' },
-      { href: '/judicial/federal-courts', label: 'Federal Courts' },
+      { href: '/judicial/federal-courts', label: 'Federal Courts', badge: 'Coming Soon' },
     ],
   },
 ];
@@ -66,6 +66,11 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
     }
   };
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setOpen(!open);
+  };
+
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) {
@@ -86,6 +91,7 @@ function DesktopDropdown({ dropdown }: { dropdown: NavDropdown }) {
       <Link
         href={dropdown.href}
         onKeyDown={handleKeyDown}
+        onClick={handleClick}
         className="text-slate-600 hover:text-slate-900 transition-colors duration-150 min-h-[44px] flex items-center gap-1 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
         aria-expanded={open}
         aria-haspopup="true"

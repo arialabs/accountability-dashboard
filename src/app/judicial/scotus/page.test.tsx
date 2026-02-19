@@ -7,16 +7,17 @@ describe("SCOTUS Grid Page", () => {
   it("renders all 9 justices", () => {
     render(<ScotusPage />);
     
-    // Check for all 9 justices by name
-    expect(screen.getByText(/John G. Roberts Jr./)).toBeDefined();
-    expect(screen.getByText(/Clarence Thomas/)).toBeDefined();
-    expect(screen.getByText(/Samuel A. Alito Jr./)).toBeDefined();
-    expect(screen.getByText(/Sonia Sotomayor/)).toBeDefined();
-    expect(screen.getByText(/Elena Kagan/)).toBeDefined();
-    expect(screen.getByText(/Neil M. Gorsuch/)).toBeDefined();
-    expect(screen.getByText(/Brett M. Kavanaugh/)).toBeDefined();
-    expect(screen.getByText(/Amy Coney Barrett/)).toBeDefined();
-    expect(screen.getByText(/Ketanji Brown Jackson/)).toBeDefined();
+    // Justice names may appear multiple times in the page (cards + links)
+    // Use getAllByText and check at least one instance exists
+    expect(screen.getAllByText(/John G. Roberts Jr./).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Clarence Thomas/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Samuel A. Alito Jr./).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Sonia Sotomayor/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Elena Kagan/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Neil M. Gorsuch/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Brett M. Kavanaugh/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Amy Coney Barrett/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Ketanji Brown Jackson/).length).toBeGreaterThan(0);
   });
 
   it("shows justice name and appointing president", () => {

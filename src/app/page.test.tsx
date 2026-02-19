@@ -12,15 +12,16 @@ describe("Home Page", () => {
 
   it("renders all three branch cards", () => {
     render(<Home />);
-    expect(screen.getByText("Legislative")).toBeDefined();
-    expect(screen.getByText("Executive")).toBeDefined();
-    expect(screen.getByText("Judicial")).toBeDefined();
+    // Use getAllByText since nav also has these labels
+    expect(screen.getAllByText("Legislative").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Executive").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Judicial").length).toBeGreaterThan(0);
   });
 
   it("does not show 'Coming Soon' for any branch", () => {
     render(<Home />);
     
-    // Query for "Coming Soon" text - should not exist
+    // Navigation dropdowns are closed by default, so "Coming Soon" badge is not rendered
     const comingSoonElements = screen.queryAllByText("Coming Soon");
     expect(comingSoonElements.length).toBe(0);
   });
@@ -28,25 +29,27 @@ describe("Home Page", () => {
   it("has working links to all branches", () => {
     render(<Home />);
     
-    // Check for links
-    const legislativeLink = screen.getByRole("link", { name: /Legislative/i });
-    const executiveLink = screen.getByRole("link", { name: /Executive/i });
-    const judicialLink = screen.getByRole("link", { name: /Judicial/i });
+    // Use getAllByRole since nav also has branch links - find the main card links
+    const legislativeLinks = screen.getAllByRole("link", { name: /Legislative/i });
+    const executiveLinks = screen.getAllByRole("link", { name: /Executive/i });
+    const judicialLinks = screen.getAllByRole("link", { name: /Judicial/i });
     
-    expect(legislativeLink).toBeDefined();
-    expect(executiveLink).toBeDefined();
-    expect(judicialLink).toBeDefined();
+    // Find the card link (should link to /congress, /executive, /judicial)
+    const legislativeCard = legislativeLinks.find(l => l.getAttribute("href") === "/congress");
+    const executiveCard = executiveLinks.find(l => l.getAttribute("href") === "/executive");
+    const judicialCard = judicialLinks.find(l => l.getAttribute("href") === "/judicial");
     
-    // Verify href attributes
-    expect(legislativeLink.getAttribute("href")).toBe("/congress");
-    expect(executiveLink.getAttribute("href")).toBe("/executive");
-    expect(judicialLink.getAttribute("href")).toBe("/judicial");
+    expect(legislativeCard).toBeDefined();
+    expect(executiveCard).toBeDefined();
+    expect(judicialCard).toBeDefined();
   });
 
-  it("displays member count for Legislative branch", () => {
+  it("displays member count for Legislative branch with House and Senate breakdown", () => {
     render(<Home />);
-    expect(screen.getByText("535")).toBeDefined();
-    expect(screen.getByText("Members")).toBeDefined();
+    expect(screen.getByText("435")).toBeDefined();
+    expect(screen.getByText("100")).toBeDefined();
+    expect(screen.getByText("House")).toBeDefined();
+    expect(screen.getByText("Senate")).toBeDefined();
   });
 
   it("renders the Deep Dives section", () => {

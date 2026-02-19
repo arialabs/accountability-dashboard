@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import PresidentPage from './page';
 
@@ -16,13 +16,13 @@ describe('PresidentPage', () => {
     // Check for impact analysis heading instead of promise tracker
     expect(screen.getByText(/Policy Impact Analysis/i)).toBeInTheDocument();
     
-    // Check for impact-based stats instead of kept/broken
-    expect(screen.getByText(/Net Benefit/i)).toBeInTheDocument();
-    expect(screen.getByText(/Net Harm/i)).toBeInTheDocument();
-    expect(screen.getByText(/Mixed Impact/i)).toBeInTheDocument();
+    // Check for impact-based stats instead of kept/broken (may appear multiple times)
+    expect(screen.getAllByText(/Net Benefit/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Net Harm/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Mixed Impact/i).length).toBeGreaterThan(0);
     
     // Verify old promise-based language is NOT present
-    const pageText = screen.getByRole('main').textContent || '';
+    const pageText = document.body.textContent || '';
     expect(pageText).not.toMatch(/Kept/);
     expect(pageText).not.toMatch(/Broken/);
     expect(pageText).not.toMatch(/Campaign Promise Tracker/);
@@ -38,14 +38,10 @@ describe('PresidentPage', () => {
   it('displays impact badges with correct colors', () => {
     render(<PresidentPage />);
     
-    // Look for impact level badges
-    const netBenefitBadge = screen.getAllByText(/Net Benefit/i)[0];
-    const netHarmBadge = screen.getAllByText(/Net Harm/i)[0];
-    const mixedImpactBadge = screen.getAllByText(/Mixed Impact/i)[0];
-    
-    expect(netBenefitBadge).toBeInTheDocument();
-    expect(netHarmBadge).toBeInTheDocument();
-    expect(mixedImpactBadge).toBeInTheDocument();
+    // Look for impact level badges (may appear multiple times)
+    expect(screen.getAllByText(/Net Benefit/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Net Harm/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Mixed Impact/i).length).toBeGreaterThan(0);
   });
 
   it('shows who benefits and who is harmed for policy actions', () => {
@@ -67,8 +63,9 @@ describe('PresidentPage', () => {
   it('includes links to other presidential tracking pages', () => {
     render(<PresidentPage />);
     
-    expect(screen.getByText(/Executive Orders/i)).toBeInTheDocument();
-    expect(screen.getByText(/Conflicts of Interest/i)).toBeInTheDocument();
-    expect(screen.getByText(/Cabinet & Appointments/i)).toBeInTheDocument();
+    // These may appear multiple times in the page
+    expect(screen.getAllByText(/Executive Orders/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Conflicts of Interest/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Cabinet & Appointments/i).length).toBeGreaterThan(0);
   });
 });

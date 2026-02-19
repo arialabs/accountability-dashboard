@@ -12,6 +12,7 @@ export interface DeepDive {
   subtitle: string;
   description: string;
   publishedDate: string;
+  updatedDate?: string;
   readTimeMinutes: number;
   tags: string[];
   summary: string;

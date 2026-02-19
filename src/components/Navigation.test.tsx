@@ -43,6 +43,7 @@ describe('Navigation', () => {
 
     it('opens dropdown on click', () => {
       render(<Navigation />);
+      // Navigation dropdown opens on click (or mouseEnter)
       fireEvent.click(screen.getByText('Legislative'));
       expect(screen.getByText('House of Representatives')).toBeInTheDocument();
       expect(screen.getByText('Senate')).toBeInTheDocument();
@@ -51,6 +52,7 @@ describe('Navigation', () => {
 
     it('shows Coming Soon badge on Federal Courts', () => {
       render(<Navigation />);
+      // Open the Judicial dropdown via click
       fireEvent.click(screen.getByText('Judicial'));
       expect(screen.getByText('Coming Soon')).toBeInTheDocument();
     });

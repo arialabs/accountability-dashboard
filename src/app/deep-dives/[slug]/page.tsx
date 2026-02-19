@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAllDeepDives, getDeepDiveBySlug } from "@/data/deep-dives";
@@ -24,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!investigation) {
     return {
-      title: "Investigation Not Found | Accountability Dashboard",
+      title: "Investigation Not Found",
     };
   }
 

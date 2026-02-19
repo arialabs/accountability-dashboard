@@ -16,10 +16,10 @@ const mockMember: Member = {
   photo_url: null,
   bills_sponsored: 5,
   bills_cosponsored: 10,
+  committees: [],
   party_alignment_pct: 87,
   ideology_score: -0.456,
   votes_cast: 42,
-  total_raised: 1500000,
 };
 
 describe("VotingCharts", () => {

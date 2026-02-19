@@ -21,25 +21,27 @@ vi.mock("@/components/DonorAnalysisSection", () => ({
 }));
 
 describe("Rep Page - Financial Disclosures", () => {
-  it("displays Financial Disclosures section when data exists", () => {
+  it("displays Financial Disclosures section when data exists", async () => {
     // Use Robert Garcia who we know has disclosures
-    const params = { id: "G000585" };
+    const params = Promise.resolve({ id: "G000585" });
     
-    render(<RepPage params={params} />);
+    const page = await RepPage({ params });
+    render(page);
     
     // Check for Financial Disclosures heading (may appear multiple times in page)
     const headings = screen.getAllByText(/Financial Disclosures/i);
     expect(headings.length).toBeGreaterThan(0);
   });
 
-  it("shows filing type and date for each disclosure", () => {
-    const params = { id: "G000585" };
+  it("shows filing type and date for each disclosure", async () => {
+    const params = Promise.resolve({ id: "G000585" });
     const disclosures = getMemberDisclosures("G000585");
     
     // Verify we have test data
     expect(disclosures.length).toBeGreaterThan(0);
     
-    render(<RepPage params={params} />);
+    const page = await RepPage({ params });
+    render(page);
     
     // Should show the filing type (Annual or Amendment)
     const annualText = screen.queryAllByText(/Annual/i);
@@ -49,20 +51,22 @@ describe("Rep Page - Financial Disclosures", () => {
     expect(annualText.length + amendmentText.length).toBeGreaterThan(0);
   });
 
-  it("includes PDF links for each filing", () => {
-    const params = { id: "G000585" };
+  it("includes PDF links for each filing", async () => {
+    const params = Promise.resolve({ id: "G000585" });
     
-    render(<RepPage params={params} />);
+    const page = await RepPage({ params });
+    render(page);
     
     // Look for PDF link text
     const pdfLinks = screen.getAllByText(/View PDF/i);
     expect(pdfLinks.length).toBeGreaterThan(0);
   });
 
-  it("does not show 'Coming Soon' for Financial Disclosures", () => {
-    const params = { id: "G000585" };
+  it("does not show 'Coming Soon' for Financial Disclosures", async () => {
+    const params = Promise.resolve({ id: "G000585" });
     
-    render(<RepPage params={params} />);
+    const page = await RepPage({ params });
+    render(page);
     
     // Check that Financial Disclosures heading exists (may be multiple matches)
     const financialDisclosuresHeadings = screen.queryAllByText(/Financial Disclosures/i);
@@ -82,12 +86,12 @@ describe("Rep Page - Financial Disclosures", () => {
     }
   });
 
-  it("handles members with no disclosures gracefully", () => {
+  it("handles members with no disclosures gracefully", async () => {
     // Use a real member ID that exists
-    const params = { id: "A000370" }; // Alma Adams - should exist
+    const params = Promise.resolve({ id: "A000370" }); // Alma Adams - should exist
     
-    // This should render without crashing
-    render(<RepPage params={params} />);
+    const page = await RepPage({ params });
+    render(page);
     
     // Should show Financial Disclosures section (may be multiple matches)
     const headings = screen.queryAllByText(/Financial Disclosures/i);

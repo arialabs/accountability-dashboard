@@ -6,7 +6,7 @@ import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataSc
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
 
 export const metadata: Metadata = {
-  title: "Accountability Dashboard | Track Congressional Accountability",
+  title: { absolute: "Accountability Dashboard | Track Congressional Accountability" },
   description: "Tracking power. Protecting democracy. Monitor all three branches of government with transparent, publicly-sourced data. See who funds them, how they vote, and who they really represent.",
   openGraph: {
     title: "Accountability Dashboard | Track Congressional Accountability",
@@ -97,7 +97,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Legislative Branch */}
             <Link 
-              href="/house"
+              href="/congress"
               className="group relative bg-white rounded-3xl p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 border-2 border-slate-200 hover:border-blue-400 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-500/20"
             >
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/0 via-cyan-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:via-cyan-500/5 group-hover:to-indigo-500/5 transition-all duration-500" />
@@ -113,9 +113,16 @@ export default function Home() {
                   Congress makes the laws. Track voting records, campaign finance, and donor influence.
                 </p>
                 <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-4xl font-black text-slate-900 tabular-nums">535</div>
-                    <div className="text-sm text-slate-500 font-semibold">Members</div>
+                  <div className="flex gap-4">
+                    <div>
+                      <div className="text-2xl font-black text-slate-900 tabular-nums">435</div>
+                      <div className="text-xs text-slate-500 font-semibold">House</div>
+                    </div>
+                    <div className="text-slate-300 self-center text-xl">+</div>
+                    <div>
+                      <div className="text-2xl font-black text-slate-900 tabular-nums">100</div>
+                      <div className="text-xs text-slate-500 font-semibold">Senate</div>
+                    </div>
                   </div>
                   <div className="flex items-center gap-2 text-blue-600 font-bold group-hover:gap-3 transition-all">
                     Explore
@@ -248,7 +255,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
-              href="/house"
+              href="/congress"
               className="inline-flex items-center justify-center px-6 sm:px-10 py-4 min-h-[44px] bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-base sm:text-lg"
             >
               🏛️ Congress →

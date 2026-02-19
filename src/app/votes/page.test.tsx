@@ -51,9 +51,10 @@ describe("VotesPage", () => {
 
   it("displays vote cards", () => {
     render(<VotesPage />);
-    expect(screen.getByText("H.R. 1")).toBeInTheDocument();
+    // Bill numbers may have colon appended in component, use regex
+    expect(screen.getByText(/H\.R\. 1/)).toBeInTheDocument();
     expect(screen.getByText("Test Healthcare Bill")).toBeInTheDocument();
-    expect(screen.getByText("S. 1")).toBeInTheDocument();
+    expect(screen.getByText(/S\. 1/)).toBeInTheDocument();
   });
 
   it("shows vote results", () => {

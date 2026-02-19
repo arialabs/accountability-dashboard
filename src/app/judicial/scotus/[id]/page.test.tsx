@@ -5,14 +5,14 @@ import JusticePage from "./page";
 
 describe("Individual Justice Page", () => {
   it("renders justice name", async () => {
-    const page = await JusticePage({ params: { id: "roberts" } });
+    const page = await JusticePage({ params: Promise.resolve({ id: "roberts" }) });
     render(page);
     
     expect(screen.getByText(/John G. Roberts Jr./)).toBeDefined();
   });
 
   it("shows appointing president", async () => {
-    const page = await JusticePage({ params: { id: "sotomayor" } });
+    const page = await JusticePage({ params: Promise.resolve({ id: "sotomayor" }) });
     render(page);
     
     // Check for "Appointed by" text and the president's name
@@ -21,7 +21,7 @@ describe("Individual Justice Page", () => {
   });
 
   it("displays ideology score", async () => {
-    const page = await JusticePage({ params: { id: "thomas" } });
+    const page = await JusticePage({ params: Promise.resolve({ id: "thomas" }) });
     render(page);
     
     expect(screen.getByText(/Ideology Score/)).toBeDefined();
@@ -29,21 +29,21 @@ describe("Individual Justice Page", () => {
   });
 
   it("shows confirmation year", async () => {
-    const page = await JusticePage({ params: { id: "jackson" } });
+    const page = await JusticePage({ params: Promise.resolve({ id: "jackson" }) });
     render(page);
     
     expect(screen.getByText(/Confirmed in 2022/)).toBeDefined();
   });
 
   it("displays justice biography", async () => {
-    const page = await JusticePage({ params: { id: "kagan" } });
+    const page = await JusticePage({ params: Promise.resolve({ id: "kagan" }) });
     render(page);
     
     expect(screen.getByText(/Harvard Law School/)).toBeDefined();
   });
 
   it("shows ideology visualization", async () => {
-    const page = await JusticePage({ params: { id: "gorsuch" } });
+    const page = await JusticePage({ params: Promise.resolve({ id: "gorsuch" }) });
     render(page);
     
     expect(screen.getByText("Ideology Score")).toBeDefined();
@@ -53,14 +53,14 @@ describe("Individual Justice Page", () => {
   });
 
   it("handles Chief Justice title correctly", async () => {
-    const page = await JusticePage({ params: { id: "roberts" } });
+    const page = await JusticePage({ params: Promise.resolve({ id: "roberts" }) });
     render(page);
     
     expect(screen.getByText("Chief Justice")).toBeDefined();
   });
 
   it("handles Associate Justice title correctly", async () => {
-    const page = await JusticePage({ params: { id: "barrett" } });
+    const page = await JusticePage({ params: Promise.resolve({ id: "barrett" }) });
     render(page);
     
     expect(screen.getByText("Associate Justice")).toBeDefined();

@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * Executive branch data utilities
  * Functions for working with executive officials, actions, and metrics
@@ -10,6 +9,7 @@ import type {
   OfficialMetrics,
   DepartmentMetrics,
   ConflictSeverity,
+  ConflictOfInterest,
   ActionType,
   DepartmentName,
 } from '@/types/executive';
@@ -38,7 +38,7 @@ export function getExecutiveOfficials(): ExecutiveOfficial[] {
     prior_positions: member.prior_positions || [],
     net_worth: member.net_worth || "Unknown",
     financial_disclosures: [],
-    conflicts_of_interest: member.conflicts_of_interest || [],
+    conflicts_of_interest: (member.conflicts_of_interest || []) as ConflictOfInterest[],
     policy_positions: member.policy_positions || [],
   }));
 }

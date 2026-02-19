@@ -5,7 +5,8 @@ import type { CampaignFinance } from "@/lib/types";
 
 describe("DonorAnalysisSection", () => {
   const mockFinance: CampaignFinance = {
-    cycle: "2024",
+    candidate_id: "H0OH04000",
+    cycle: 2024,
     total_raised: 2800000,
     total_spent: 2500000,
     cash_on_hand: 300000,
@@ -13,13 +14,13 @@ describe("DonorAnalysisSection", () => {
     pac_contributions: 1200000,
     pac_percentage: 42.9,
     individual_contributions: 1550000,
-    individual_percentage: 55.4,
     large_donors: 910000,
     large_donor_percentage: 32.5,
     small_donors: 640000,
     small_donor_percentage: 22.9,
-    fec_candidate_id: "H0OH04000",
-    last_updated: "2024-01-01",
+    party_contributions: 0,
+    top_contributors: [],
+    top_industries: [],
   };
 
   it("renders the section title", () => {

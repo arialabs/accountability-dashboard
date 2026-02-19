@@ -5,9 +5,9 @@ import { getSupremeCourtJustice, getSupremeCourtJustices } from "@/lib/data";
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -18,11 +18,12 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const justice = getSupremeCourtJustice(params.id);
+  const { id } = await params;
+  const justice = getSupremeCourtJustice(id);
 
   if (!justice) {
     return {
-      title: "Justice Not Found | Accountability Dashboard",
+      title: "Justice Not Found",
     };
   }
 
@@ -33,7 +34,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function JusticePage({ params }: PageProps) {
-  const justice = getSupremeCourtJustice(params.id);
+  const { id } = await params;
+  const justice = getSupremeCourtJustice(id);
 
   if (!justice) {
     notFound();
@@ -47,7 +49,7 @@ export default async function JusticePage({ params }: PageProps) {
     name: justice.name,
     jobTitle: justice.title,
     description: `${justice.title} of the Supreme Court of the United States. ${justice.ideology_label}. Appointed by ${justice.appointed_by}.`,
-    url: `/judicial/scotus/${params.id}`,
+    url: `/judicial/scotus/${id}`,
     affiliation: {
       name: "Supreme Court of the United States",
       url: "/judicial/scotus",
@@ -58,7 +60,7 @@ export default async function JusticePage({ params }: PageProps) {
     { name: "Home", url: "/" },
     { name: "Judicial Branch", url: "/judicial" },
     { name: "Supreme Court", url: "/judicial/scotus" },
-    { name: justice.name, url: `/judicial/scotus/${params.id}` },
+    { name: justice.name, url: `/judicial/scotus/${id}` },
   ]);
 
   return (

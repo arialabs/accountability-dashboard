@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * Executive Branch Conflict of Interest Detector
  * Cross-references financial disclosures with government decisions and actions
@@ -53,7 +52,7 @@ export function analyzeOfficialConflicts(
         overlap: conflict.description,
       },
       date_detected: new Date().toISOString(),
-      status: conflict.status || "active",
+      status: (conflict.status === "resolved" ? "resolved" : conflict.status === "under_investigation" ? "under_investigation" : "active") as "resolved" | "active" | "under_investigation",
     });
   });
   

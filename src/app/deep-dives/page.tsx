@@ -1,10 +1,9 @@
-// @ts-nocheck
 import Link from "next/link";
 import { getAllDeepDives } from "@/data/deep-dives";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Deep Dive Investigations | Accountability Dashboard",
+  title: "Deep Dive Investigations",
   description: "In-depth investigative reports exposing corruption, conflicts of interest, and systemic failures in American government.",
 };
 

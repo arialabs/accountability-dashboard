@@ -54,6 +54,7 @@ const mockKeyVotes = [
     result: "Passed" as const,
     votes: {
       "B001234": "Yea", // House member shouldn't see this
+      "S005678": "Nay",
     },
   },
 ];

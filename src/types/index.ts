@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * Central exports for all TypeScript types
  */
@@ -6,5 +5,5 @@
 // Export all executive branch types
 export * from './executive';
 
-// Re-export legacy types from lib/types.ts for backwards compatibility
-export * from '../lib/types';
+// Note: lib/types.ts is imported directly by consumers to avoid naming conflicts
+// with types defined in ./executive (Position, Source, TimelineEvent)
