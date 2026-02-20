@@ -11,6 +11,8 @@ interface AccountabilityDataCardProps {
   context?: string;
   /** Optional: override card background (default dark) */
   light?: boolean;
+  /** Optional: make this stat visually dominant (larger number) */
+  featured?: boolean;
   className?: string;
 }
 
@@ -44,6 +46,7 @@ export default function AccountabilityDataCard({
   indicator = 'neutral',
   context,
   light = false,
+  featured = false,
   className = '',
 }: AccountabilityDataCardProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -115,7 +118,7 @@ export default function AccountabilityDataCard({
 
       {/* Value */}
       <div
-        className={`text-3xl font-bold tabular-nums leading-none mb-2 transition-all duration-700 ${
+        className={`${featured ? 'text-5xl' : 'text-3xl'} font-bold tabular-nums leading-none mb-2 transition-all duration-700 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
         }`}
         style={{ fontFamily: "'JetBrains Mono', monospace", color: '#5EEAD4' }}

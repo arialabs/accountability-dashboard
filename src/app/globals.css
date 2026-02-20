@@ -7,11 +7,11 @@
 @layer base {
   :root {
     --bg-primary: #FFFFFF;
-    --bg-secondary: #F8FAFC;
+    --bg-secondary: #FAF9F7;
     --text-primary: #0F172A;
     --text-secondary: #475569;
     --democrat: #2563EB;
-    --republican: #DC2626;
+    --republican: #B91C1C;
     --independent: #7C3AED;
     --accent: #0F766E;
     --warning: #D97706;
@@ -56,6 +56,7 @@
     /* 48px mobile, 56px desktop — Phase 2 upgrade */
     font-size: clamp(3rem, 5vw, 3.5rem);
     font-weight: 700;
+    line-height: 1.05;
   }
 
   h2 {

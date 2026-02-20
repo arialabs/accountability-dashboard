@@ -21,6 +21,11 @@ function DocumentIcon() {
   );
 }
 
+// Teal accent for Epstein card (consistent with site accent system)
+const EPSTEIN_ACCENT = "#0F766E";
+const EPSTEIN_ACCENT_DARK = "#0D9488";
+const EPSTEIN_ACCENT_BG = "#F0FDFA";
+
 export default function EpsteinFilesCard({ variant = "full", className = "" }: EpsteinFilesCardProps) {
   if (variant === "compact") {
     return (
@@ -33,13 +38,13 @@ export default function EpsteinFilesCard({ variant = "full", className = "" }: E
         <div className="flex items-start gap-3 mb-3">
           <div
             className="flex-shrink-0 w-8 h-8 rounded-sm flex items-center justify-center"
-            style={{ backgroundColor: "#F5F3FF", color: "#7C3AED" }}
+            style={{ backgroundColor: EPSTEIN_ACCENT_BG, color: EPSTEIN_ACCENT }}
           >
             <DocumentIcon />
           </div>
           <span
             className="text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded-sm"
-            style={{ fontFamily: "'Source Sans 3', sans-serif", backgroundColor: "#F5F3FF", color: "#6D28D9" }}
+            style={{ fontFamily: "'Source Sans 3', sans-serif", backgroundColor: EPSTEIN_ACCENT_BG, color: EPSTEIN_ACCENT }}
           >
             Deep Dive
           </span>
@@ -53,7 +58,7 @@ export default function EpsteinFilesCard({ variant = "full", className = "" }: E
         <p className="text-xs mb-3" style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}>
           Interactive timeline, network connections, and court documents.
         </p>
-        <div className="flex items-center gap-1 text-sm font-semibold group-hover:gap-2 transition-all" style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#6D28D9" }}>
+        <div className="flex items-center gap-1 text-sm font-semibold group-hover:gap-2 transition-all" style={{ fontFamily: "'Source Sans 3', sans-serif", color: EPSTEIN_ACCENT }}>
           Explore <ArrowRightIcon />
         </div>
       </a>
@@ -67,17 +72,17 @@ export default function EpsteinFilesCard({ variant = "full", className = "" }: E
       target="_blank"
       rel="noopener noreferrer"
       className={`group block bg-white border border-slate-200 rounded-md overflow-hidden deep-dive-hero doc-corner-fold ${className}`}
-      style={{ borderLeft: "3px solid #7C3AED" }}
+      style={{ borderLeft: `3px solid ${EPSTEIN_ACCENT}` }}
     >
       {/* Header accent bar */}
-      <div className="h-1 w-full" style={{ backgroundColor: "#7C3AED" }} />
+      <div className="h-1 w-full" style={{ backgroundColor: EPSTEIN_ACCENT }} />
 
       <div className="p-8 md:p-10">
         <div className="flex items-start justify-between gap-4 mb-6">
           <div className="flex items-center gap-3">
             <span
               className="text-xs font-semibold uppercase tracking-widest"
-              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#7C3AED" }}
+              style={{ fontFamily: "'Source Sans 3', sans-serif", color: EPSTEIN_ACCENT }}
             >
               Deep Dive Investigation
             </span>
@@ -88,7 +93,7 @@ export default function EpsteinFilesCard({ variant = "full", className = "" }: E
           </div>
           <div
             className="flex-shrink-0 w-10 h-10 rounded-sm flex items-center justify-center"
-            style={{ backgroundColor: "#F5F3FF", color: "#7C3AED" }}
+            style={{ backgroundColor: EPSTEIN_ACCENT_BG, color: EPSTEIN_ACCENT }}
           >
             <DocumentIcon />
           </div>
@@ -148,7 +153,7 @@ export default function EpsteinFilesCard({ variant = "full", className = "" }: E
 
         <div
           className="flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all"
-          style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#7C3AED" }}
+          style={{ fontFamily: "'Source Sans 3', sans-serif", color: EPSTEIN_ACCENT_DARK }}
         >
           Explore full investigation <ArrowRightIcon />
         </div>

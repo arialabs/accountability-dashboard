@@ -84,7 +84,7 @@ const SPOTLIGHT_FEATURED = {
   href: "/rep/M000355",
   // Mini bar-chart data (relative percentages)
   barData: [
-    { label: "Finance", pct: 92, color: "#DC2626" },
+    { label: "Finance", pct: 92, color: "#B91C1C" },
     { label: "Energy", pct: 61, color: "#D97706" },
     { label: "Defense", pct: 48, color: "#64748B" },
     { label: "Health", pct: 34, color: "#64748B" },
@@ -122,10 +122,10 @@ const SPOTLIGHT_SUPPORTING = [
 
 // ── Stats Bar Data ───────────────────────────────────────────────────────────
 const SITE_STATS = [
-  { value: "535", label: "Members of Congress tracked",    indicator: "neutral" as const },
-  { value: "26",  label: "Executive branch officials",     indicator: "up" as const,   context: "Updated daily" },
-  { value: "9",   label: "Supreme Court justices",         indicator: "neutral" as const },
-  { value: "2.4M+",label: "Votes recorded",               indicator: "up" as const,   context: "Expanding" },
+  { value: "535",   label: "Members of Congress tracked", indicator: "neutral" as const, featured: false },
+  { value: "26",    label: "Executive branch officials",  indicator: "up" as const,      featured: false, context: "Updated daily" },
+  { value: "9",     label: "Supreme Court justices",      indicator: "neutral" as const, featured: false },
+  { value: "2.4M+", label: "Votes recorded",             indicator: "up" as const,      featured: true,  context: "Expanding" },
 ];
 
 // ── Extra Deep Dives ─────────────────────────────────────────────────────────
@@ -215,7 +215,7 @@ export default function Home() {
       {/* ══ HERO ══════════════════════════════════════════════════════════ */}
       <section
         className="bg-white border-b border-slate-200"
-        style={{ paddingTop: "64px", paddingBottom: "120px" }}
+        style={{ paddingTop: "64px", paddingBottom: "80px" }}
       >
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           {/* Eyebrow — teal brand mark + label */}
@@ -241,7 +241,7 @@ export default function Home() {
           </h1>
 
           <p
-            className="mb-6 max-w-2xl"
+            className="mb-4 max-w-2xl"
             style={{
               fontFamily: "'Source Sans 3', sans-serif",
               color: "var(--text-secondary)",
@@ -295,6 +295,7 @@ export default function Home() {
                 label={stat.label}
                 indicator={stat.indicator}
                 context={stat.context}
+                featured={stat.featured}
               />
             ))}
           </div>
@@ -306,7 +307,7 @@ export default function Home() {
       ══ */}
       <section
         className="bg-white border-b border-slate-200"
-        style={{ paddingTop: "96px", paddingBottom: "96px" }}
+        style={{ paddingTop: "64px", paddingBottom: "72px" }}
       >
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           {/* Section header — teal brand mark + redaction aesthetic */}
@@ -429,8 +430,12 @@ export default function Home() {
 
                   <div className="flex-1" />
 
+                  <span className="text-[10px] font-mono text-slate-400 mt-4 block">
+                    Source: FEC · Updated Feb 2026
+                  </span>
+
                   <div
-                    className="flex items-center gap-1 text-sm font-semibold mt-6 group-hover:gap-2 transition-all"
+                    className="flex items-center gap-1 text-sm font-semibold mt-2 group-hover:gap-2 transition-all"
                     style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--republican)" }}
                   >
                     View full profile <ArrowRightIcon />
@@ -527,6 +532,10 @@ export default function Home() {
                           {item.headline}
                         </p>
 
+                        <span className="text-[10px] font-mono text-slate-400 mb-2 block">
+                          Source: FEC · Updated Feb 2026
+                        </span>
+
                         <div
                           className="flex items-center gap-1 text-sm font-semibold group-hover:gap-2 transition-all"
                           style={{ fontFamily: "'Source Sans 3', sans-serif", color: isRed ? "var(--republican)" : "var(--accent)" }}
@@ -546,7 +555,7 @@ export default function Home() {
       {/* ══ BRANCH NAVIGATION ══════════════════════════════════════════════ */}
       <section
         className="border-b border-slate-200"
-        style={{ paddingTop: "96px", paddingBottom: "96px", backgroundColor: "var(--bg-secondary)" }}
+        style={{ paddingTop: "64px", paddingBottom: "72px", backgroundColor: "var(--bg-secondary)", borderTop: "3px solid var(--accent)" }}
       >
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <ScrollFadeIn className="mb-10">
@@ -720,8 +729,7 @@ export default function Home() {
 
       {/* ══ DEEP DIVES ═════════════════════════════════════════════════════ */}
       <section
-        className="bg-white"
-        style={{ paddingTop: "96px", paddingBottom: "96px" }}
+        style={{ paddingTop: "64px", paddingBottom: "72px", backgroundColor: "#F1F0ED" }}
       >
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <ScrollFadeIn className="mb-10">
