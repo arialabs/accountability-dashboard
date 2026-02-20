@@ -7,7 +7,11 @@ import { getMemberFinanceStatic } from "@/lib/data";
 import { calculateGrade } from "@/lib/grading";
 import { useLiveMembers } from "@/hooks/useLiveData";
 import RepresentativeImage from "@/components/RepresentativeImage";
+import Pagination from "@/components/Pagination";
+import { ScoreLegend } from "@/components/ScoreLegend";
 import type { Member } from "@/lib/types";
+
+const ITEMS_PER_PAGE = 24;
 
 // Helper to get user's state from IP geolocation
 async function getUserStateFromIP(): Promise<string | null> {
@@ -72,6 +76,9 @@ function CongressContent() {
     if (urlParty) setParty(urlParty);
     if (urlChamber) setChamber(urlChamber);
   }, [searchParams]);
+
+  // Current page from URL (reset to 1 on filter change)
+  const currentPage = Math.max(1, parseInt(searchParams.get("page") || "1", 10));
   
   // Debounce search input
   useEffect(() => {
@@ -81,12 +88,14 @@ function CongressContent() {
     return () => clearTimeout(timer);
   }, [search]);
   
-  // Update URL params when filters change
+  // Update URL params when filters change (always resets to page 1)
   const updateURL = useCallback((filters: Record<string, string>) => {
     const params = new URLSearchParams();
     Object.entries(filters).forEach(([key, value]) => {
       if (value) params.set(key, value);
     });
+    // Strip page param so we go back to page 1 on any filter change
+    params.delete("page");
     const queryString = params.toString();
     router.replace(`${pathname}${queryString ? `?${queryString}` : ''}`, { scroll: false });
   }, [router, pathname]);
@@ -138,6 +147,12 @@ function CongressContent() {
   }), [filteredMembers]);
   
   const isFiltered = chamber || party || state || debouncedSearch;
+
+  // Paginate filtered results
+  const pagedMembers = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredMembers.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredMembers, currentPage]);
   
   const clearFilters = () => {
     setChamber("");
@@ -338,7 +353,7 @@ function CongressContent() {
         )}
         
         {/* Search + Filters */}
-        <div className="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 shadow-sm">
+        <div className="sticky top-16 z-10 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-xl p-4 sm:p-6 shadow-sm">
           <div className="space-y-4">
             {/* Search Input */}
             <div className="relative">
@@ -475,6 +490,9 @@ function CongressContent() {
         </div>
       </div>
 
+      {/* Score Legend */}
+      <ScoreLegend />
+
       {/* Members Grid */}
       {filteredMembers.length === 0 ? (
         <div className="text-center py-20 text-lg text-slate-500 leading-relaxed">
@@ -482,7 +500,7 @@ function CongressContent() {
         </div>
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredMembers.map((member) => {
+          {pagedMembers.map((member) => {
             // Get finance data and calculate grade
             const finance = getMemberFinanceStatic(member.bioguide_id);
             const grade = calculateGrade({
@@ -640,6 +658,15 @@ function CongressContent() {
           );
           })}
         </div>
+      )}
+
+      {/* Pagination */}
+      {filteredMembers.length > ITEMS_PER_PAGE && (
+        <Pagination
+          currentPage={currentPage}
+          totalItems={filteredMembers.length}
+          itemsPerPage={ITEMS_PER_PAGE}
+        />
       )}
     </div>
   );
