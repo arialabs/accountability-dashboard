@@ -18,6 +18,11 @@ interface CommitteeMembershipsProps {
 export default function CommitteeMemberships({
   committees,
 }: CommitteeMembershipsProps) {
+  // Hide entirely when no data — don't show a "coming soon" placeholder
+  if (committees.length === 0) {
+    return null;
+  }
+
   const getRoleBadge = (role: string) => {
     switch (role) {
       case "Chair":

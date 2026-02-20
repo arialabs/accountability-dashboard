@@ -87,17 +87,17 @@ export default function ConflictOfInterestSection({
     return (
       <section className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
-          <span className="text-3xl">✅</span>
+          <span className="text-3xl">🔎</span>
           <h3 className="text-2xl font-black uppercase tracking-tight text-slate-900">
             Potential Conflicts of Interest
           </h3>
         </div>
-        <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
-          <p className="text-green-800 font-semibold">
-            No obvious conflicts detected between {memberName}&apos;s top donor industries and voting record.
+        <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center">
+          <p className="text-slate-700 font-semibold">
+            Conflict of interest analysis is in progress for {memberName}.
           </p>
-          <p className="text-green-600 text-sm mt-2">
-            This doesn&apos;t guarantee no conflicts exist, but none were automatically flagged based on our analysis.
+          <p className="text-slate-500 text-sm mt-2">
+            We&apos;re cross-referencing donor industries with voting records. This analysis requires thorough review before publication.
           </p>
         </div>
       </section>

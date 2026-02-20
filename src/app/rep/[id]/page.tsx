@@ -120,6 +120,9 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
     subcommittees?: string[];
   }> = [];
 
+  // Track which sections have no data yet — used to show a subtle "data pending" footer
+  // rather than prominent "coming soon" cards for each empty section.
+
   // Key votes are now handled by MemberVotingRecord component using real VoteView data
   // This empty array is just to satisfy VotingRecordSection's interface
   const keyVotes: Array<{
@@ -147,6 +150,12 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
 
   // Alignment data (used for rating schema + social share text)
   const alignmentEnhanced = getMemberAlignmentEnhanced(id);
+
+  // Build list of sections that have no data yet for the subtle footer notice
+  const emptySections: string[] = [];
+  if (committees.length === 0) emptySections.push("Committee Memberships");
+  if (stockTrades.length === 0) emptySections.push("Stock Trades");
+  if (financialDisclosures.length === 0) emptySections.push("Financial Disclosures");
 
   const getPartyBadgeClass = (party: string) => {
     switch (party) {
@@ -318,6 +327,7 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content (2/3 width) */}
           <div className="lg:col-span-2 space-y-8">
+
             {/* Campaign Finance - Now the main focus */}
             <ErrorBoundary context="campaign finance data">
               <DonorAnalysisSection finance={finance} />
@@ -363,21 +373,25 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
               />
             </ErrorBoundary>
 
-            {/* Stock Trades */}
-            <ErrorBoundary context="stock trades">
-              <StockTradesSection 
-                trades={stockTrades} 
-                memberName={member.full_name} 
-              />
-            </ErrorBoundary>
+            {/* Stock Trades — only render the card when there's actual data */}
+            {stockTrades.length > 0 && (
+              <ErrorBoundary context="stock trades">
+                <StockTradesSection 
+                  trades={stockTrades} 
+                  memberName={member.full_name} 
+                />
+              </ErrorBoundary>
+            )}
 
-            {/* Financial Disclosures */}
-            <ErrorBoundary context="financial disclosures">
-              <FinancialDisclosuresSection 
-                disclosures={financialDisclosures} 
-                memberName={member.full_name} 
-              />
-            </ErrorBoundary>
+            {/* Financial Disclosures — only render the card when there's actual data */}
+            {financialDisclosures.length > 0 && (
+              <ErrorBoundary context="financial disclosures">
+                <FinancialDisclosuresSection 
+                  disclosures={financialDisclosures} 
+                  memberName={member.full_name} 
+                />
+              </ErrorBoundary>
+            )}
 
             {/* Scandals & Controversies */}
             <ErrorBoundary context="scandals">
@@ -387,6 +401,18 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
                 maxVisible={3}
               />
             </ErrorBoundary>
+
+            {/* Data Pending Notice — subtle footer instead of prominent "coming soon" cards */}
+            {emptySections.length > 0 && (
+              <div className="mt-4 py-4 border-t border-slate-200">
+                <p className="text-sm text-slate-400 font-mono">
+                  Data pending: {emptySections.join(", ")}.{" "}
+                  <a href="/methodology" className="text-teal-600 hover:underline ml-1">
+                    Learn about our data sources →
+                  </a>
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Sidebar (1/3 width) */}

@@ -142,10 +142,10 @@ export default function StockTradesSection({ trades, memberName }: StockTradesPr
 
       {normalizedTrades.length === 0 ? (
         <div className="text-center py-12">
-          <div className="text-6xl mb-4">📭</div>
-          <div className="text-xl font-bold text-slate-700 mb-2">No Stock Trades Found</div>
+          <div className="text-6xl mb-4">🔍</div>
+          <div className="text-xl font-bold text-slate-700 mb-2">Stock Trade Data Being Compiled</div>
           <div className="text-slate-500">
-            {memberName} has no disclosed stock trades in our database.
+            Stock trade data for {memberName} is being compiled from STOCK Act disclosures. Check back soon.
           </div>
         </div>
       ) : (

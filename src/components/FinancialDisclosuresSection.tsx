@@ -57,10 +57,10 @@ export default function FinancialDisclosuresSection({
       
       {disclosures.length === 0 ? (
         <div className="text-center py-12">
-          <div className="text-6xl mb-4">📋</div>
-          <div className="text-xl font-bold text-slate-700 mb-2">No Disclosures Found</div>
+          <div className="text-6xl mb-4">🔍</div>
+          <div className="text-xl font-bold text-slate-700 mb-2">Financial Disclosures Being Compiled</div>
           <div className="text-slate-500">
-            {memberName} has no financial disclosure filings in our database.
+            Financial disclosure filings for {memberName} are being indexed from House Clerk records. Check back soon.
           </div>
         </div>
       ) : (
