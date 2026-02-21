@@ -1,0 +1,687 @@
+[
+  {
+    "bioguide_id": "J000299",
+    "name": "Mike Johnson",
+    "party": "R",
+    "chamber": "house",
+    "role": "Speaker of the House",
+    "category_label": "majority",
+    "order": 1,
+    "total_key_votes": 62,
+    "caucus_alignment_pct": 100.0,
+    "caucus_breaks": 0,
+    "break_votes": [],
+    "category_breakdown": {
+      "National Security": {
+        "total": 3,
+        "breaks": 0
+      },
+      "Government Ethics": {
+        "total": 5,
+        "breaks": 0
+      },
+      "Climate & Environment": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Healthcare": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Voting Rights": {
+        "total": 1,
+        "breaks": 0
+      },
+      "Economy & Taxes": {
+        "total": 36,
+        "breaks": 0
+      },
+      "Immigration": {
+        "total": 5,
+        "breaks": 0
+      }
+    },
+    "finance": {
+      "total_raised": 14500289.62,
+      "pac_percentage": 8.3,
+      "small_donor_percentage": 33.8,
+      "cash_on_hand": 9152488.54,
+      "cycle": 2026
+    }
+  },
+  {
+    "bioguide_id": "S001176",
+    "name": "Steve Scalise",
+    "party": "R",
+    "chamber": "house",
+    "role": "House Majority Leader",
+    "category_label": "majority",
+    "order": 2,
+    "total_key_votes": 66,
+    "caucus_alignment_pct": 98.5,
+    "caucus_breaks": 1,
+    "break_votes": [
+      {
+        "vote_id": "119-House-194",
+        "bill": "HRES580",
+        "title": "On Agreeing to the Resolution",
+        "description": "Providing for consideration of the bills (H.R. 4016) Department of Defense Appropriations Act, 2026; (H.R. 3633) CLARITY Act; (H.R. 1919) Anti-CBDC Surveillance State Act; and (S. 1582) GENIUS Act",
+        "category": "Economy & Taxes",
+        "date": "2025-07-15",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 195,
+        "caucus_nay": 12,
+        "caucus_majority_pct": 94.2
+      }
+    ],
+    "category_breakdown": {
+      "National Security": {
+        "total": 5,
+        "breaks": 0
+      },
+      "Government Ethics": {
+        "total": 4,
+        "breaks": 0
+      },
+      "Climate & Environment": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Healthcare": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Voting Rights": {
+        "total": 1,
+        "breaks": 0
+      },
+      "Economy & Taxes": {
+        "total": 39,
+        "breaks": 1
+      },
+      "Immigration": {
+        "total": 5,
+        "breaks": 0
+      }
+    },
+    "finance": {
+      "total_raised": 7843280.41,
+      "pac_percentage": 1.1,
+      "small_donor_percentage": 21.8,
+      "cash_on_hand": 5528286.4,
+      "cycle": 2026
+    }
+  },
+  {
+    "bioguide_id": "E000294",
+    "name": "Tom Emmer",
+    "party": "R",
+    "chamber": "house",
+    "role": "House Majority Whip",
+    "category_label": "majority",
+    "order": 3,
+    "total_key_votes": 69,
+    "caucus_alignment_pct": 100.0,
+    "caucus_breaks": 0,
+    "break_votes": [],
+    "category_breakdown": {
+      "National Security": {
+        "total": 5,
+        "breaks": 0
+      },
+      "Government Ethics": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Climate & Environment": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Healthcare": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Voting Rights": {
+        "total": 1,
+        "breaks": 0
+      },
+      "Economy & Taxes": {
+        "total": 40,
+        "breaks": 0
+      },
+      "Immigration": {
+        "total": 5,
+        "breaks": 0
+      }
+    },
+    "finance": {
+      "total_raised": 6763926.56,
+      "pac_percentage": 19.4,
+      "small_donor_percentage": 22.8,
+      "cash_on_hand": 4945131.21,
+      "cycle": 2026
+    }
+  },
+  {
+    "bioguide_id": "J000294",
+    "name": "Hakeem Jeffries",
+    "party": "D",
+    "chamber": "house",
+    "role": "House Minority Leader",
+    "category_label": "minority",
+    "order": 1,
+    "total_key_votes": 69,
+    "caucus_alignment_pct": 100.0,
+    "caucus_breaks": 0,
+    "break_votes": [],
+    "category_breakdown": {
+      "National Security": {
+        "total": 5,
+        "breaks": 0
+      },
+      "Government Ethics": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Climate & Environment": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Healthcare": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Voting Rights": {
+        "total": 1,
+        "breaks": 0
+      },
+      "Economy & Taxes": {
+        "total": 40,
+        "breaks": 0
+      },
+      "Immigration": {
+        "total": 5,
+        "breaks": 0
+      }
+    },
+    "finance": {
+      "total_raised": 10327240.61,
+      "pac_percentage": 11.9,
+      "small_donor_percentage": 70.6,
+      "cash_on_hand": 5864742.02,
+      "cycle": 2026
+    }
+  },
+  {
+    "bioguide_id": "C001101",
+    "name": "Katherine Clark",
+    "party": "D",
+    "chamber": "house",
+    "role": "House Minority Whip",
+    "category_label": "minority",
+    "order": 2,
+    "total_key_votes": 69,
+    "caucus_alignment_pct": 100.0,
+    "caucus_breaks": 0,
+    "break_votes": [],
+    "category_breakdown": {
+      "National Security": {
+        "total": 5,
+        "breaks": 0
+      },
+      "Government Ethics": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Climate & Environment": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Healthcare": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Voting Rights": {
+        "total": 1,
+        "breaks": 0
+      },
+      "Economy & Taxes": {
+        "total": 40,
+        "breaks": 0
+      },
+      "Immigration": {
+        "total": 5,
+        "breaks": 0
+      }
+    },
+    "finance": {
+      "total_raised": 2722263.37,
+      "pac_percentage": 40.7,
+      "small_donor_percentage": 7.1,
+      "cash_on_hand": 2027744.8,
+      "cycle": 2026
+    }
+  },
+  {
+    "bioguide_id": "T000250",
+    "name": "John Thune",
+    "party": "R",
+    "chamber": "senate",
+    "role": "Senate Majority Leader",
+    "category_label": "majority",
+    "order": 1,
+    "total_key_votes": 189,
+    "caucus_alignment_pct": 95.2,
+    "caucus_breaks": 9,
+    "break_votes": [
+      {
+        "vote_id": "119-Senate-672",
+        "bill": "HR7148",
+        "title": "On Cloture on the Motion to Proceed",
+        "description": "A bill making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2026-01-29",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 45,
+        "caucus_nay": 8,
+        "caucus_majority_pct": 84.9
+      },
+      {
+        "vote_id": "119-Senate-585",
+        "bill": "S3012",
+        "title": "On Cloture on the Motion to Proceed",
+        "description": "A bill to appropriate funds for pay and allowances of excepted Federal employees for periods of work performed during a lapse in appropriations, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-10-23",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 51,
+        "caucus_nay": 1,
+        "caucus_majority_pct": 98.1
+      },
+      {
+        "vote_id": "119-Senate-581",
+        "bill": "HR5371",
+        "title": "On Cloture on the Motion to Proceed",
+        "description": "A bill making continuing appropriations and extensions for fiscal year 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-10-22",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 51,
+        "caucus_nay": 2,
+        "caucus_majority_pct": 96.2
+      },
+      {
+        "vote_id": "119-Senate-576",
+        "bill": "HR5371",
+        "title": "On Cloture on the Motion to Proceed",
+        "description": "A bill making continuing appropriations and extensions for fiscal year 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-10-20",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 48,
+        "caucus_nay": 2,
+        "caucus_majority_pct": 96.0
+      },
+      {
+        "vote_id": "119-Senate-573",
+        "bill": "HR5371",
+        "title": "On Cloture on the Motion to Proceed",
+        "description": "A bill making continuing appropriations and extensions for fiscal year 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-10-16",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 48,
+        "caucus_nay": 2,
+        "caucus_majority_pct": 96.0
+      },
+      {
+        "vote_id": "119-Senate-575",
+        "bill": "HR4016",
+        "title": "On Cloture on the Motion to Proceed",
+        "description": "A bill making appropriations for the Department of Defense for the fiscal year ending September 30, 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-10-16",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 47,
+        "caucus_nay": 1,
+        "caucus_majority_pct": 97.9
+      },
+      {
+        "vote_id": "119-Senate-571",
+        "bill": "HR5371",
+        "title": "On Cloture on the Motion to Proceed",
+        "description": "A bill making continuing appropriations and extensions for fiscal year 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-10-14",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 47,
+        "caucus_nay": 2,
+        "caucus_majority_pct": 95.9
+      },
+      {
+        "vote_id": "119-Senate-533",
+        "bill": "S2806",
+        "title": "On Cloture on the Motion to Proceed",
+        "description": "A bill to provide for automatic continuing appropriations.",
+        "category": "Economy & Taxes",
+        "date": "2025-09-29",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 37,
+        "caucus_nay": 14,
+        "caucus_majority_pct": 72.5
+      },
+      {
+        "vote_id": "119-Senate-522",
+        "bill": "PN5525",
+        "title": "On the Cloture Motion",
+        "description": "Jessica Kramer, of Wisconsin, to be an Assistant Administrator of the Environmental Protection Agency; and Dario Gil, of New York, to be Under Secretary for Science, Department of Energy; and Brandon ",
+        "category": "Climate & Environment",
+        "date": "2025-09-17",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 51,
+        "caucus_nay": 1,
+        "caucus_majority_pct": 98.1
+      }
+    ],
+    "category_breakdown": {
+      "National Security": {
+        "total": 33,
+        "breaks": 0
+      },
+      "Climate & Environment": {
+        "total": 31,
+        "breaks": 1
+      },
+      "Healthcare": {
+        "total": 29,
+        "breaks": 0
+      },
+      "Economy & Taxes": {
+        "total": 77,
+        "breaks": 8
+      },
+      "Immigration": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Other": {
+        "total": 13,
+        "breaks": 0
+      }
+    },
+    "finance": {
+      "total_raised": 6957116.08,
+      "pac_percentage": 16.2,
+      "small_donor_percentage": 18.4,
+      "cash_on_hand": 17018309.65,
+      "cycle": 2028
+    }
+  },
+  {
+    "bioguide_id": "S000148",
+    "name": "Chuck Schumer",
+    "party": "D",
+    "chamber": "senate",
+    "role": "Senate Minority Leader",
+    "category_label": "minority",
+    "order": 1,
+    "total_key_votes": 189,
+    "caucus_alignment_pct": 97.9,
+    "caucus_breaks": 4,
+    "break_votes": [
+      {
+        "vote_id": "119-Senate-679",
+        "bill": "HR7148",
+        "title": "On Passage of the Bill",
+        "description": "A bill making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2026-01-30",
+        "leader_vote": "Yea",
+        "caucus_position": "Nay",
+        "caucus_yea": 22,
+        "caucus_nay": 23,
+        "caucus_majority_pct": 51.1
+      },
+      {
+        "vote_id": "119-Senate-454",
+        "bill": "SJRES41",
+        "title": "On the Motion to Discharge",
+        "description": "A joint resolution providing for congressional disapproval of the proposed export of certain defense articles to Israel.",
+        "category": "National Security",
+        "date": "2025-07-30",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 25,
+        "caucus_nay": 17,
+        "caucus_majority_pct": 59.5
+      },
+      {
+        "vote_id": "119-Senate-455",
+        "bill": "SJRES34",
+        "title": "On the Motion to Discharge",
+        "description": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Israel of certain defense articles and services.",
+        "category": "National Security",
+        "date": "2025-07-30",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 22,
+        "caucus_nay": 20,
+        "caucus_majority_pct": 52.4
+      },
+      {
+        "vote_id": "119-Senate-128",
+        "bill": "HR1968",
+        "title": "On the Cloture Motion",
+        "description": "A bill making further continuing appropriations and other extensions for the fiscal year ending September 30, 2025, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-03-14",
+        "leader_vote": "Yea",
+        "caucus_position": "Nay",
+        "caucus_yea": 9,
+        "caucus_nay": 36,
+        "caucus_majority_pct": 80.0
+      }
+    ],
+    "category_breakdown": {
+      "National Security": {
+        "total": 33,
+        "breaks": 2
+      },
+      "Climate & Environment": {
+        "total": 31,
+        "breaks": 0
+      },
+      "Healthcare": {
+        "total": 29,
+        "breaks": 0
+      },
+      "Economy & Taxes": {
+        "total": 77,
+        "breaks": 2
+      },
+      "Immigration": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Other": {
+        "total": 13,
+        "breaks": 0
+      }
+    },
+    "finance": {
+      "total_raised": 3389213.52,
+      "pac_percentage": 7,
+      "small_donor_percentage": 57.2,
+      "cash_on_hand": 8396646.6,
+      "cycle": 2028
+    }
+  },
+  {
+    "bioguide_id": "D000563",
+    "name": "Dick Durbin",
+    "party": "D",
+    "chamber": "senate",
+    "role": "",
+    "category_label": "",
+    "order": 0,
+    "total_key_votes": 185,
+    "caucus_alignment_pct": 95.1,
+    "caucus_breaks": 9,
+    "break_votes": [
+      {
+        "vote_id": "119-Senate-679",
+        "bill": "HR7148",
+        "title": "On Passage of the Bill",
+        "description": "A bill making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2026-01-30",
+        "leader_vote": "Yea",
+        "caucus_position": "Nay",
+        "caucus_yea": 22,
+        "caucus_nay": 23,
+        "caucus_majority_pct": 51.1
+      },
+      {
+        "vote_id": "119-Senate-611",
+        "bill": "HR5371",
+        "title": "On the Motion to Proceed",
+        "description": "A bill making continuing appropriations and extensions for fiscal year 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-11-10",
+        "leader_vote": "Yea",
+        "caucus_position": "Nay",
+        "caucus_yea": 7,
+        "caucus_nay": 38,
+        "caucus_majority_pct": 84.4
+      },
+      {
+        "vote_id": "119-Senate-617",
+        "bill": "HR5371",
+        "title": "On the Cloture Motion",
+        "description": "A bill making continuing appropriations and extensions for fiscal year 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-11-10",
+        "leader_vote": "Yea",
+        "caucus_position": "Nay",
+        "caucus_yea": 7,
+        "caucus_nay": 38,
+        "caucus_majority_pct": 84.4
+      },
+      {
+        "vote_id": "119-Senate-618",
+        "bill": "HR5371",
+        "title": "On Passage of the Bill",
+        "description": "A bill making continuing appropriations and extensions for fiscal year 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-11-10",
+        "leader_vote": "Yea",
+        "caucus_position": "Nay",
+        "caucus_yea": 7,
+        "caucus_nay": 38,
+        "caucus_majority_pct": 84.4
+      },
+      {
+        "vote_id": "119-Senate-610",
+        "bill": "HR5371",
+        "title": "On Cloture on the Motion to Proceed",
+        "description": "A bill making continuing appropriations and extensions for fiscal year 2026, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-11-09",
+        "leader_vote": "Yea",
+        "caucus_position": "Nay",
+        "caucus_yea": 7,
+        "caucus_nay": 38,
+        "caucus_majority_pct": 84.4
+      },
+      {
+        "vote_id": "119-Senate-570",
+        "bill": "S2296",
+        "title": "On Passage of the Bill",
+        "description": "An original bill to authorize appropriations for fiscal year 2026 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energ",
+        "category": "Economy & Taxes",
+        "date": "2025-10-09",
+        "leader_vote": "Nay",
+        "caucus_position": "Yea",
+        "caucus_yea": 26,
+        "caucus_nay": 18,
+        "caucus_majority_pct": 59.1
+      },
+      {
+        "vote_id": "119-Senate-165",
+        "bill": "SJRES33",
+        "title": "On the Motion to Discharge",
+        "description": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Israel of certain defense articles and services.",
+        "category": "National Security",
+        "date": "2025-04-03",
+        "leader_vote": "Yea",
+        "caucus_position": "Nay",
+        "caucus_yea": 14,
+        "caucus_nay": 28,
+        "caucus_majority_pct": 66.7
+      },
+      {
+        "vote_id": "119-Senate-166",
+        "bill": "SJRES26",
+        "title": "On the Motion to Discharge",
+        "description": "A joint resolution providing for congressional disapproval of the proposed foreign military sale to Israel of certain defense articles and services.",
+        "category": "National Security",
+        "date": "2025-04-03",
+        "leader_vote": "Yea",
+        "caucus_position": "Nay",
+        "caucus_yea": 14,
+        "caucus_nay": 29,
+        "caucus_majority_pct": 67.4
+      },
+      {
+        "vote_id": "119-Senate-128",
+        "bill": "HR1968",
+        "title": "On the Cloture Motion",
+        "description": "A bill making further continuing appropriations and other extensions for the fiscal year ending September 30, 2025, and for other purposes.",
+        "category": "Economy & Taxes",
+        "date": "2025-03-14",
+        "leader_vote": "Yea",
+        "caucus_position": "Nay",
+        "caucus_yea": 9,
+        "caucus_nay": 36,
+        "caucus_majority_pct": 80.0
+      }
+    ],
+    "category_breakdown": {
+      "National Security": {
+        "total": 30,
+        "breaks": 2
+      },
+      "Climate & Environment": {
+        "total": 31,
+        "breaks": 0
+      },
+      "Healthcare": {
+        "total": 28,
+        "breaks": 0
+      },
+      "Economy & Taxes": {
+        "total": 77,
+        "breaks": 7
+      },
+      "Immigration": {
+        "total": 6,
+        "breaks": 0
+      },
+      "Other": {
+        "total": 13,
+        "breaks": 0
+      }
+    },
+    "finance": null
+  }
+]
