@@ -1,0 +1,331 @@
+[
+  {
+    "bioguide_id": "J000299",
+    "fec_candidate_id": "H6LA04138",
+    "name": "Mike Johnson",
+    "role": "Speaker of the House",
+    "party": "R",
+    "chamber": "house",
+    "category": "majority",
+    "order": 1,
+    "cycle": 2026,
+    "total_raised": 14500289.62,
+    "total_spent": 6600177.61,
+    "cash_on_hand": 9152488.54,
+    "individual_contributions": 7868133.62,
+    "individual_itemized": 5208916.3,
+    "individual_unitemized": 2659217.32,
+    "pac_contributions": 1199700,
+    "pac_percentage": 8.3,
+    "small_donor_percentage": 33.8,
+    "top_contributors": [
+      {
+        "name": "FUTURE FORWARD USA ACTION",
+        "total": 90000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "HARRIS VICTORY FUND",
+        "total": 85000000,
+        "type": "OTHER COMMITTEE"
+      },
+      {
+        "name": "EMPOWER PARENTS PAC",
+        "total": 82500000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "FUND FOR POLICY REFORM",
+        "total": 60000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "TRUMP NATIONAL COMMITTEE JFC, INC.",
+        "total": 59847559.4,
+        "type": "OTHER COMMITTEE"
+      }
+    ]
+  },
+  {
+    "bioguide_id": "S001176",
+    "fec_candidate_id": "H0LA01087",
+    "name": "Steve Scalise",
+    "role": "House Majority Leader",
+    "party": "R",
+    "chamber": "house",
+    "category": "majority",
+    "order": 2,
+    "cycle": 2026,
+    "total_raised": 7843280.41,
+    "total_spent": 6446146.58,
+    "cash_on_hand": 5528286.4,
+    "individual_contributions": 826830.38,
+    "individual_itemized": 646818.31,
+    "individual_unitemized": 180012.07,
+    "pac_contributions": 89500,
+    "pac_percentage": 1.1,
+    "small_donor_percentage": 21.8,
+    "top_contributors": [
+      {
+        "name": "FUTURE FORWARD USA ACTION",
+        "total": 90000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "HARRIS VICTORY FUND",
+        "total": 85000000,
+        "type": "OTHER COMMITTEE"
+      },
+      {
+        "name": "EMPOWER PARENTS PAC",
+        "total": 82500000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "FUND FOR POLICY REFORM",
+        "total": 60000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "TRUMP NATIONAL COMMITTEE JFC, INC.",
+        "total": 59847559.4,
+        "type": "OTHER COMMITTEE"
+      }
+    ]
+  },
+  {
+    "bioguide_id": "E000294",
+    "fec_candidate_id": "H4MN06087",
+    "name": "Tom Emmer",
+    "role": "House Majority Whip",
+    "party": "R",
+    "chamber": "house",
+    "category": "majority",
+    "order": 3,
+    "cycle": 2026,
+    "total_raised": 6763926.56,
+    "total_spent": 3507247.18,
+    "cash_on_hand": 4945131.21,
+    "individual_contributions": 1616564.03,
+    "individual_itemized": 1248023.27,
+    "individual_unitemized": 368540.76,
+    "pac_contributions": 1315250,
+    "pac_percentage": 19.4,
+    "small_donor_percentage": 22.8,
+    "top_contributors": [
+      {
+        "name": "FUTURE FORWARD USA ACTION",
+        "total": 90000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "HARRIS VICTORY FUND",
+        "total": 85000000,
+        "type": "OTHER COMMITTEE"
+      },
+      {
+        "name": "EMPOWER PARENTS PAC",
+        "total": 82500000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "FUND FOR POLICY REFORM",
+        "total": 60000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "TRUMP NATIONAL COMMITTEE JFC, INC.",
+        "total": 59847559.4,
+        "type": "OTHER COMMITTEE"
+      }
+    ]
+  },
+  {
+    "bioguide_id": "J000294",
+    "fec_candidate_id": "H2NY10092",
+    "name": "Hakeem Jeffries",
+    "role": "House Minority Leader",
+    "party": "D",
+    "chamber": "house",
+    "category": "minority",
+    "order": 1,
+    "cycle": 2026,
+    "total_raised": 10327240.61,
+    "total_spent": 9417063.24,
+    "cash_on_hand": 5864742.02,
+    "individual_contributions": 7686947.46,
+    "individual_itemized": 2259644.93,
+    "individual_unitemized": 5427302.53,
+    "pac_contributions": 1224500,
+    "pac_percentage": 11.9,
+    "small_donor_percentage": 70.6,
+    "top_contributors": [
+      {
+        "name": "FUTURE FORWARD USA ACTION",
+        "total": 90000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "HARRIS VICTORY FUND",
+        "total": 85000000,
+        "type": "OTHER COMMITTEE"
+      },
+      {
+        "name": "EMPOWER PARENTS PAC",
+        "total": 82500000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "FUND FOR POLICY REFORM",
+        "total": 60000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "TRUMP NATIONAL COMMITTEE JFC, INC.",
+        "total": 59847559.4,
+        "type": "OTHER COMMITTEE"
+      }
+    ]
+  },
+  {
+    "bioguide_id": "C001101",
+    "fec_candidate_id": "H4MA05084",
+    "name": "Katherine Clark",
+    "role": "House Minority Whip",
+    "party": "D",
+    "chamber": "house",
+    "category": "minority",
+    "order": 2,
+    "cycle": 2026,
+    "total_raised": 2722263.37,
+    "total_spent": 2020409.28,
+    "cash_on_hand": 2027744.8,
+    "individual_contributions": 737386.71,
+    "individual_itemized": 684923.17,
+    "individual_unitemized": 52463.54,
+    "pac_contributions": 1106607.1,
+    "pac_percentage": 40.7,
+    "small_donor_percentage": 7.1,
+    "top_contributors": [
+      {
+        "name": "FUTURE FORWARD USA ACTION",
+        "total": 90000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "HARRIS VICTORY FUND",
+        "total": 85000000,
+        "type": "OTHER COMMITTEE"
+      },
+      {
+        "name": "EMPOWER PARENTS PAC",
+        "total": 82500000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "FUND FOR POLICY REFORM",
+        "total": 60000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "TRUMP NATIONAL COMMITTEE JFC, INC.",
+        "total": 59847559.4,
+        "type": "OTHER COMMITTEE"
+      }
+    ]
+  },
+  {
+    "bioguide_id": "T000250",
+    "fec_candidate_id": "S2SD00068",
+    "name": "John Thune",
+    "role": "Senate Majority Leader",
+    "party": "R",
+    "chamber": "senate",
+    "category": "majority",
+    "order": 1,
+    "cycle": 2028,
+    "total_raised": 6957116.08,
+    "total_spent": 6881039.07,
+    "cash_on_hand": 17018309.65,
+    "individual_contributions": 2214311.09,
+    "individual_itemized": 1805830.15,
+    "individual_unitemized": 408480.94,
+    "pac_contributions": 1127200,
+    "pac_percentage": 16.2,
+    "small_donor_percentage": 18.4,
+    "top_contributors": [
+      {
+        "name": "FUTURE FORWARD USA ACTION",
+        "total": 90000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "HARRIS VICTORY FUND",
+        "total": 85000000,
+        "type": "OTHER COMMITTEE"
+      },
+      {
+        "name": "EMPOWER PARENTS PAC",
+        "total": 82500000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "FUND FOR POLICY REFORM",
+        "total": 60000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "TRUMP NATIONAL COMMITTEE JFC, INC.",
+        "total": 59847559.4,
+        "type": "OTHER COMMITTEE"
+      }
+    ]
+  },
+  {
+    "bioguide_id": "S000148",
+    "fec_candidate_id": "S8NY00082",
+    "name": "Chuck Schumer",
+    "role": "Senate Minority Leader",
+    "party": "D",
+    "chamber": "senate",
+    "category": "minority",
+    "order": 1,
+    "cycle": 2028,
+    "total_raised": 3389213.52,
+    "total_spent": 4874610.58,
+    "cash_on_hand": 8396646.6,
+    "individual_contributions": 2751325.38,
+    "individual_itemized": 1176895.38,
+    "individual_unitemized": 1574430,
+    "pac_contributions": 237300,
+    "pac_percentage": 7,
+    "small_donor_percentage": 57.2,
+    "top_contributors": [
+      {
+        "name": "FUTURE FORWARD USA ACTION",
+        "total": 90000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "HARRIS VICTORY FUND",
+        "total": 85000000,
+        "type": "OTHER COMMITTEE"
+      },
+      {
+        "name": "EMPOWER PARENTS PAC",
+        "total": 82500000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "FUND FOR POLICY REFORM",
+        "total": 60000000,
+        "type": "ORGANIZATION"
+      },
+      {
+        "name": "TRUMP NATIONAL COMMITTEE JFC, INC.",
+        "total": 59847559.4,
+        "type": "OTHER COMMITTEE"
+      }
+    ]
+  }
+]
