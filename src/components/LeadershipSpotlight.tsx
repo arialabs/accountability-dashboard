@@ -72,7 +72,7 @@ function LeaderProfile({ leader }: { leader: LeaderFinance }) {
             bioguideId={leader.bioguide_id}
             fullName={leader.name}
             party={leader.party}
-            size="lg"
+            size="sm"
           />
           <div className="min-w-0 flex-1">
             <h3 className="font-bold text-base group-hover:underline text-gray-900 dark:text-white">
