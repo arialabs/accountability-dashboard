@@ -151,7 +151,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className="min-h-screen">
+      <body className="min-h-screen overflow-x-hidden">
         <PWARegister />
         <LayoutErrorBoundary>
           <DevelopmentBanner />

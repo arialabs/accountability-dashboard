@@ -194,7 +194,7 @@ function CongressContent() {
   
   if (membersLoading) {
     return (
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="animate-pulse space-y-8">
           <div className="space-y-4">
             <div className="h-12 bg-slate-200 rounded-lg w-1/3"></div>
@@ -228,7 +228,7 @@ function CongressContent() {
 
   if (membersError) {
     return (
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <p className="text-lg text-slate-500">Unable to load congress members. Please try again later.</p>
         <p className="text-sm text-slate-400 mt-2">{membersError}</p>
       </div>
@@ -236,11 +236,11 @@ function CongressContent() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 space-y-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
       <div className="flex flex-col gap-6 mb-12">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h1 className="text-5xl md:text-6xl font-black leading-tight tracking-tight text-slate-900">Congress Members</h1>
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tight text-slate-900">Congress Members</h1>
             <p className="text-lg text-slate-600 mt-4 leading-relaxed">
               {isFiltered 
                 ? `Showing ${filteredStats.total} of ${stats.total} members`
@@ -675,7 +675,7 @@ function CongressContent() {
 export default function CongressPage() {
   return (
     <Suspense fallback={
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="animate-pulse space-y-8">
           <div className="space-y-4">
             <div className="h-12 bg-slate-200 rounded-lg w-1/3"></div>
