@@ -3,6 +3,7 @@
 import Link from "next/link";
 import RepresentativeImage from "./RepresentativeImage";
 import scrutinyData from "@/data/leadership-scrutiny.json";
+import donorData from "@/data/leadership-donors.json";
 
 interface BreakVote {
   vote_id: string;
@@ -40,6 +41,16 @@ interface LeaderScrutiny {
   } | null;
 }
 
+interface DonorProfile {
+  bioguide_id: string;
+  name: string;
+  top_pac_donors: Array<{ name: string; total: number; interest_area: string }>;
+  total_interest_pac_money: number;
+  note: string;
+}
+
+const donors = donorData as DonorProfile[];
+const donorMap = new Map(donors.map(d => [d.bioguide_id, d]));
 const leaders = scrutinyData as LeaderScrutiny[];
 
 function formatMoney(amount: number): string {
@@ -226,6 +237,72 @@ function LeaderProfile({ leader }: { leader: LeaderScrutiny }) {
           )}
         </div>
       )}
+
+      {/* Donor interests — who's paying, what do they want */}
+      {(() => {
+        const donorProfile = donorMap.get(leader.bioguide_id);
+        const pacDonors = donorProfile?.top_pac_donors || [];
+        if (pacDonors.length === 0) return null;
+
+        // Group by interest area
+        const byInterest = new Map<string, number>();
+        for (const d of pacDonors) {
+          const curr = byInterest.get(d.interest_area) || 0;
+          byInterest.set(d.interest_area, curr + d.total);
+        }
+        const sortedInterests = [...byInterest.entries()].sort((a, b) => b[1] - a[1]);
+
+        return (
+          <div className="px-4 pb-3 border-t border-gray-100 dark:border-gray-800 pt-3">
+            <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-2">
+              Who&apos;s Buying Influence?
+            </p>
+            {/* Interest area summary bars */}
+            <div className="space-y-1.5 mb-2">
+              {sortedInterests.slice(0, 4).map(([interest, total]) => {
+                const maxTotal = sortedInterests[0][1];
+                const pct = (total / maxTotal) * 100;
+                const isHighlight = total > 100000;
+                return (
+                  <div key={interest} className="flex items-center gap-2 text-xs">
+                    <span className={`w-24 shrink-0 truncate ${isHighlight ? "font-semibold text-red-600 dark:text-red-400" : "text-gray-500 dark:text-gray-400"}`}>
+                      {interest}
+                    </span>
+                    <div className="flex-1 h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                      <div
+                        className="h-full rounded-full"
+                        style={{
+                          width: `${pct}%`,
+                          backgroundColor: isHighlight ? "#DC2626" : "#64748B",
+                        }}
+                      />
+                    </div>
+                    <span className={`w-14 text-right font-mono text-[11px] ${isHighlight ? "font-bold text-red-600 dark:text-red-400" : "text-gray-600 dark:text-gray-300"}`}>
+                      {formatMoney(total)}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+            {/* Top individual PAC donors */}
+            <div className="space-y-0.5">
+              {pacDonors.slice(0, 3).map((d, i) => (
+                <div key={i} className="flex items-center justify-between text-[10px]">
+                  <span className="text-gray-500 dark:text-gray-400 truncate mr-2">{d.name}</span>
+                  <span className="font-mono font-semibold text-gray-700 dark:text-gray-300 shrink-0">
+                    {formatMoney(d.total)}
+                  </span>
+                </div>
+              ))}
+            </div>
+            {donorProfile?.note && donorProfile.note.includes("$") && (
+              <p className="text-[10px] text-red-600 dark:text-red-400 mt-2 italic">
+                {donorProfile.note}
+              </p>
+            )}
+          </div>
+        );
+      })()}
 
       {/* Footer — view full profile */}
       <div className="px-4 py-2 bg-gray-50 dark:bg-gray-800/50 border-t border-gray-100 dark:border-gray-800 flex items-center text-xs">

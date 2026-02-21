@@ -1,0 +1,88 @@
+[
+  {
+    "bioguide_id": "J000299",
+    "name": "Mike Johnson",
+    "top_pac_donors": [
+      { "name": "CREDIT UNION NATIONAL ASSOCIATION", "total": 3500, "interest_area": "Banking/Finance" }
+    ],
+    "total_interest_pac_money": 3500,
+    "note": "Johnson receives relatively little PAC money compared to other leaders"
+  },
+  {
+    "bioguide_id": "S001176",
+    "name": "Steve Scalise",
+    "top_pac_donors": [
+      { "name": "AT&T INC PAC", "total": 257500, "interest_area": "Telecom" },
+      { "name": "NATIONAL ASSOCIATION OF REALTORS PAC", "total": 98000, "interest_area": "Real Estate" },
+      { "name": "AMERICAN BANKERS ASSOCIATION PAC", "total": 96500, "interest_area": "Banking/Finance" },
+      { "name": "COMCAST CORPORATION PAC", "total": 79500, "interest_area": "Telecom/Media" },
+      { "name": "NATIONAL BEER WHOLESALERS ASSOCIATION PAC", "total": 79500, "interest_area": "Alcohol Industry" },
+      { "name": "LOCKHEED MARTIN PAC", "total": 75000, "interest_area": "Defense" },
+      { "name": "RAYTHEON PAC", "total": 69000, "interest_area": "Defense" },
+      { "name": "BOEING PAC", "total": 53500, "interest_area": "Defense/Aerospace" },
+      { "name": "NATIONAL RIFLE ASSOCIATION PAC", "total": 50600, "interest_area": "Guns" }
+    ],
+    "total_interest_pac_money": 859100,
+    "note": "Largest PAC recipient among House leaders. Heavy telecom, defense, and banking money."
+  },
+  {
+    "bioguide_id": "E000294",
+    "name": "Tom Emmer",
+    "top_pac_donors": [
+      { "name": "AMERICAN BANKERS ASSOCIATION PAC", "total": 95000, "interest_area": "Banking/Finance" },
+      { "name": "COMCAST CORPORATION PAC", "total": 85000, "interest_area": "Telecom/Media" },
+      { "name": "RAYTHEON PAC", "total": 61918, "interest_area": "Defense" },
+      { "name": "NATIONAL BEER WHOLESALERS ASSOCIATION PAC", "total": 55000, "interest_area": "Alcohol Industry" },
+      { "name": "NATIONAL ASSOCIATION OF REALTORS PAC", "total": 54000, "interest_area": "Real Estate" },
+      { "name": "AT&T INC PAC", "total": 47500, "interest_area": "Telecom" },
+      { "name": "LOCKHEED MARTIN PAC", "total": 36500, "interest_area": "Defense" },
+      { "name": "BOEING PAC", "total": 29000, "interest_area": "Defense/Aerospace" },
+      { "name": "NATIONAL RIFLE ASSOCIATION PAC", "total": 27800, "interest_area": "Guns" }
+    ],
+    "total_interest_pac_money": 491718,
+    "note": "Banking and telecom heavy. Significant defense industry presence."
+  },
+  {
+    "bioguide_id": "J000294",
+    "name": "Hakeem Jeffries",
+    "top_pac_donors": [
+      { "name": "AIPAC PAC (AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE)", "total": 1375933, "interest_area": "Pro-Israel" },
+      { "name": "NATIONAL ASSOCIATION OF REALTORS PAC", "total": 74000, "interest_area": "Real Estate" },
+      { "name": "AT&T INC PAC", "total": 56900, "interest_area": "Telecom" },
+      { "name": "RAYTHEON PAC", "total": 54500, "interest_area": "Defense" },
+      { "name": "NATIONAL BEER WHOLESALERS ASSOCIATION PAC", "total": 47500, "interest_area": "Alcohol Industry" },
+      { "name": "LOCKHEED MARTIN PAC", "total": 31500, "interest_area": "Defense" },
+      { "name": "BOEING PAC", "total": 8250, "interest_area": "Defense/Aerospace" }
+    ],
+    "total_interest_pac_money": 1648583,
+    "note": "$1.37M from AIPAC alone — largest single PAC donor to any House leader. Jeffries' Brooklyn district (NY-8) is heavily progressive and polls strongly for Palestinian rights."
+  },
+  {
+    "bioguide_id": "C001101",
+    "name": "Katherine Clark",
+    "top_pac_donors": [],
+    "total_interest_pac_money": 0,
+    "note": "Data pending — FEC rate limit. Known to have 40.7% PAC funding overall."
+  },
+  {
+    "bioguide_id": "T000250",
+    "name": "John Thune",
+    "top_pac_donors": [],
+    "total_interest_pac_money": 0,
+    "note": "Data pending — FEC rate limit. Will fetch in next run."
+  },
+  {
+    "bioguide_id": "S000148",
+    "name": "Chuck Schumer",
+    "top_pac_donors": [],
+    "total_interest_pac_money": 0,
+    "note": "Data pending — FEC rate limit. Schumer broke from Democrats on Israel arms sale votes (SJRES41, SJRES34)."
+  },
+  {
+    "bioguide_id": "D000563",
+    "name": "Dick Durbin",
+    "top_pac_donors": [],
+    "total_interest_pac_money": 0,
+    "note": "Data pending — FEC rate limit."
+  }
+]
