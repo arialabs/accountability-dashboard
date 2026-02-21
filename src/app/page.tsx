@@ -7,6 +7,7 @@ import ScrollFadeIn from "@/components/ScrollFadeIn";
 import HeroSparkline from "@/components/HeroSparkline";
 import AccountabilityDataCard from "@/components/AccountabilityDataCard";
 import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
+import LeadershipSpotlight from "@/components/LeadershipSpotlight";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reps.arialabs.ai";
 
@@ -552,7 +553,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ BRANCH NAVIGATION ══════════════════════════════════════════════ */}
+      {/* ══ CONGRESSIONAL LEADERSHIP ═══════════════════════════════════════ */}
+      <section
+        className="border-b border-slate-200"
+        style={{ paddingTop: "56px", paddingBottom: "56px", backgroundColor: "var(--bg-primary)" }}
+      >
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <ScrollFadeIn>
+            <LeadershipSpotlight />
+          </ScrollFadeIn>
+        </div>
+      </section>
+
+{/* ══ BRANCH NAVIGATION ══════════════════════════════════════════════ */}
       <section
         className="border-b border-slate-200"
         style={{ paddingTop: "64px", paddingBottom: "72px", backgroundColor: "var(--bg-secondary)", borderTop: "3px solid var(--accent)" }}

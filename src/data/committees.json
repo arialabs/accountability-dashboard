@@ -1,55 +1,3507 @@
 {
-  "last_updated": "2025-02-01",
-  "source": "congress.gov",
   "committees": [
-    { "id": "HSAG", "name": "Agriculture", "chamber": "house", "type": "standing" },
-    { "id": "HSAP", "name": "Appropriations", "chamber": "house", "type": "standing" },
-    { "id": "HSAS", "name": "Armed Services", "chamber": "house", "type": "standing" },
-    { "id": "HSBA", "name": "Financial Services", "chamber": "house", "type": "standing" },
-    { "id": "HSCM", "name": "Energy and Commerce", "chamber": "house", "type": "standing" },
-    { "id": "HSED", "name": "Education and the Workforce", "chamber": "house", "type": "standing" },
-    { "id": "HSFA", "name": "Foreign Affairs", "chamber": "house", "type": "standing" },
-    { "id": "HSHM", "name": "Homeland Security", "chamber": "house", "type": "standing" },
-    { "id": "HSHA", "name": "House Administration", "chamber": "house", "type": "standing" },
-    { "id": "HSII", "name": "Natural Resources", "chamber": "house", "type": "standing" },
-    { "id": "HSIN", "name": "Intelligence (Permanent Select)", "chamber": "house", "type": "select" },
-    { "id": "HSJU", "name": "Judiciary", "chamber": "house", "type": "standing" },
-    { "id": "HSNM", "name": "Natural Resources", "chamber": "house", "type": "standing" },
-    { "id": "HSOG", "name": "Oversight and Accountability", "chamber": "house", "type": "standing" },
-    { "id": "HSRU", "name": "Rules", "chamber": "house", "type": "standing" },
-    { "id": "HSSM", "name": "Small Business", "chamber": "house", "type": "standing" },
-    { "id": "HSSCI", "name": "Science, Space, and Technology", "chamber": "house", "type": "standing" },
-    { "id": "HSTL", "name": "Transportation and Infrastructure", "chamber": "house", "type": "standing" },
-    { "id": "HSVR", "name": "Veterans' Affairs", "chamber": "house", "type": "standing" },
-    { "id": "HSWM", "name": "Ways and Means", "chamber": "house", "type": "standing" },
-    { "id": "SSAF", "name": "Agriculture, Nutrition, and Forestry", "chamber": "senate", "type": "standing" },
-    { "id": "SSAP", "name": "Appropriations", "chamber": "senate", "type": "standing" },
-    { "id": "SSAS", "name": "Armed Services", "chamber": "senate", "type": "standing" },
-    { "id": "SSBK", "name": "Banking, Housing, and Urban Affairs", "chamber": "senate", "type": "standing" },
-    { "id": "SSBU", "name": "Budget", "chamber": "senate", "type": "standing" },
-    { "id": "SSCM", "name": "Commerce, Science, and Transportation", "chamber": "senate", "type": "standing" },
-    { "id": "SSEG", "name": "Energy and Natural Resources", "chamber": "senate", "type": "standing" },
-    { "id": "SSEV", "name": "Environment and Public Works", "chamber": "senate", "type": "standing" },
-    { "id": "SSFI", "name": "Finance", "chamber": "senate", "type": "standing" },
-    { "id": "SSFR", "name": "Foreign Relations", "chamber": "senate", "type": "standing" },
-    { "id": "SSGA", "name": "Homeland Security and Governmental Affairs", "chamber": "senate", "type": "standing" },
-    { "id": "SSHR", "name": "Health, Education, Labor, and Pensions", "chamber": "senate", "type": "standing" },
-    { "id": "SSJU", "name": "Judiciary", "chamber": "senate", "type": "standing" },
-    { "id": "SSRA", "name": "Rules and Administration", "chamber": "senate", "type": "standing" },
-    { "id": "SSSB", "name": "Small Business and Entrepreneurship", "chamber": "senate", "type": "standing" },
-    { "id": "SSVA", "name": "Veterans' Affairs", "chamber": "senate", "type": "standing" },
-    { "id": "JSEPR", "name": "Joint Economic Committee", "chamber": "joint", "type": "joint" },
-    { "id": "JSPR", "name": "Joint Committee on Printing", "chamber": "joint", "type": "joint" },
-    { "id": "JSLC", "name": "Joint Committee on the Library", "chamber": "joint", "type": "joint" },
-    { "id": "JSTAX", "name": "Joint Committee on Taxation", "chamber": "joint", "type": "joint" }
+    {
+      "id": "hzgo34",
+      "name": "Task Force on the Declassification of Federal Secrets Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hzgo34?format=json"
+    },
+    {
+      "id": "hlqj00",
+      "name": "Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlqj00?format=json"
+    },
+    {
+      "id": "hlmh00",
+      "name": "Select Committee on the Modernization of Congress",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlmh00?format=json"
+    },
+    {
+      "id": "hlig11",
+      "name": "Open Source Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlig11?format=json"
+    },
+    {
+      "id": "hsfa19",
+      "name": "South and Central Asia  Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsfa19?format=json"
+    },
+    {
+      "id": "hsgo33",
+      "name": "Federal Law Enforcement Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsgo33?format=json"
+    },
+    {
+      "id": "hsgo16",
+      "name": "Delivering on Government Efficiency Subcommittee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsgo16?format=json"
+    },
+    {
+      "id": "hlfd00",
+      "name": "Select Subcommittee on the Weaponization of the Federal Government",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlfd00?format=json"
+    },
+    {
+      "id": "hlvc00",
+      "name": "Select Subcommittee on the Coronavirus Pandemic",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlvc00?format=json"
+    },
+    {
+      "id": "htzt00",
+      "name": "Task Force on the Attempted Assassination of Donald J. Trump Task Force",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/htzt00?format=json"
+    },
+    {
+      "id": "hspw05",
+      "name": "Aviation Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hspw05?format=json"
+    },
+    {
+      "id": "hswm03",
+      "name": "Work and Welfare Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hswm03?format=json"
+    },
+    {
+      "id": "hswm04",
+      "name": "Trade Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hswm04?format=json"
+    },
+    {
+      "id": "hswm05",
+      "name": "Tax Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hswm05?format=json"
+    },
+    {
+      "id": "hswm01",
+      "name": "Social Security Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hswm01?format=json"
+    },
+    {
+      "id": "hswm06",
+      "name": "Oversight Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hswm06?format=json"
+    },
+    {
+      "id": "hswm02",
+      "name": "Health Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hswm02?format=json"
+    },
+    {
+      "id": "hsvr11",
+      "name": "Technology Modernization Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr11?format=json"
+    },
+    {
+      "id": "hsvr08",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr08?format=json"
+    },
+    {
+      "id": "hsvr03",
+      "name": "Health Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr03?format=json"
+    },
+    {
+      "id": "hsvr10",
+      "name": "Economic Opportunity Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr10?format=json"
+    },
+    {
+      "id": "hsvr09",
+      "name": "Disability Assistance and Memorial Affairs Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr09?format=json"
+    },
+    {
+      "id": "hspw02",
+      "name": "Water Resources and Environment Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hspw02?format=json"
+    },
+    {
+      "id": "hspw14",
+      "name": "Railroads, Pipelines, and Hazardous Materials Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hspw14?format=json"
+    },
+    {
+      "id": "hspw12",
+      "name": "Highways and Transit Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hspw12?format=json"
+    },
+    {
+      "id": "hspw13",
+      "name": "Economic Development, Public Buildings, and Emergency Management Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hspw13?format=json"
+    },
+    {
+      "id": "hspw07",
+      "name": "Coast Guard and Maritime Transportation Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hspw07?format=json"
+    },
+    {
+      "id": "hssm21",
+      "name": "Rural Development, Energy, and Supply Chains Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hssm21?format=json"
+    },
+    {
+      "id": "hssm24",
+      "name": "Oversight, Investigations, and Regulations",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hssm24?format=json"
+    },
+    {
+      "id": "hssm22",
+      "name": "Innovation, Entrepreneurship, and Workforce Development Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hssm22?format=json"
+    },
+    {
+      "id": "hssm27",
+      "name": "Economic Growth, Tax, and Capital Access Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hssm27?format=json"
+    },
+    {
+      "id": "hssm23",
+      "name": "Contracting and Infrastructure Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hssm23?format=json"
+    },
+    {
+      "id": "hssy16",
+      "name": "Space and Aeronautics Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hssy16?format=json"
+    },
+    {
+      "id": "hssy15",
+      "name": "Research and Technology Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hssy15?format=json"
+    },
+    {
+      "id": "hssy21",
+      "name": "Investigations and Oversight Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hssy21?format=json"
+    },
+    {
+      "id": "hssy18",
+      "name": "Environment Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hssy18?format=json"
+    },
+    {
+      "id": "hssy20",
+      "name": "Energy Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hssy20?format=json"
+    },
+    {
+      "id": "hsru04",
+      "name": "Rules and Organization of the House Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsru04?format=json"
+    },
+    {
+      "id": "hsru02",
+      "name": "Legislative and Budget Process Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsru02?format=json"
+    },
+    {
+      "id": "hsgo06",
+      "name": "Military and Foreign Affairs Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsgo06?format=json"
+    },
+    {
+      "id": "hsgo27",
+      "name": "Health Care and Financial Services Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsgo27?format=json"
+    },
+    {
+      "id": "hsgo24",
+      "name": "Government Operations Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsgo24?format=json"
+    },
+    {
+      "id": "hsgo05",
+      "name": "Economic Growth, Energy Policy, and Regulatory Affairs Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsgo05?format=json"
+    },
+    {
+      "id": "hsgo12",
+      "name": "Cybersecurity, Information Technology, and Government Innovation Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsgo12?format=json"
+    },
+    {
+      "id": "hsii13",
+      "name": "Water, Wildlife and Fisheries Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsii13?format=json"
+    },
+    {
+      "id": "hsii15",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsii15?format=json"
+    },
+    {
+      "id": "hsii24",
+      "name": "Indian and Insular Affairs Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsii24?format=json"
+    },
+    {
+      "id": "hsii10",
+      "name": "Federal Lands Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsii10?format=json"
+    },
+    {
+      "id": "hsii06",
+      "name": "Energy and Mineral Resources Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsii06?format=json"
+    },
+    {
+      "id": "hsju13",
+      "name": "Oversight Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsju13?format=json"
+    },
+    {
+      "id": "hsju01",
+      "name": "Immigration Integrity, Security, and Enforcement Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsju01?format=json"
+    },
+    {
+      "id": "hsju08",
+      "name": "Crime and Federal Government Surveillance Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsju08?format=json"
+    },
+    {
+      "id": "hsju03",
+      "name": "Courts, Intellectual Property, Artificial Intelligence, and the Internet Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsju03?format=json"
+    },
+    {
+      "id": "hsju10",
+      "name": "Constitution and Limited Government Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsju10?format=json"
+    },
+    {
+      "id": "hsju05",
+      "name": "Administrative State, Regulatory Reform, and Antitrust Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsju05?format=json"
+    },
+    {
+      "id": "hlig09",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlig09?format=json"
+    },
+    {
+      "id": "hlig02",
+      "name": "National Security Agency and Cyber Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlig02?format=json"
+    },
+    {
+      "id": "hlig06",
+      "name": "National Intelligence Enterprise Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlig06?format=json"
+    },
+    {
+      "id": "hlig04",
+      "name": "Subcommittee on Defense Intelligence and Overhead Architecture",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlig04?format=json"
+    },
+    {
+      "id": "hlig01",
+      "name": "Central Intelligence Agency Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlig01?format=json"
+    },
+    {
+      "id": "hsha06",
+      "name": "Oversight Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsha06?format=json"
+    },
+    {
+      "id": "hsha27",
+      "name": "Modernization and Innovation Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsha27?format=json"
+    },
+    {
+      "id": "hsha08",
+      "name": "Elections Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsha08?format=json"
+    },
+    {
+      "id": "hshm07",
+      "name": "Transportation and Maritime Security Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hshm07?format=json"
+    },
+    {
+      "id": "hshm09",
+      "name": "Oversight, Investigations, and Accountability Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hshm09?format=json"
+    },
+    {
+      "id": "hshm12",
+      "name": "Emergency Management and Technology Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hshm12?format=json"
+    },
+    {
+      "id": "hshm08",
+      "name": "Cybersecurity and Infrastructure Protection Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hshm08?format=json"
+    },
+    {
+      "id": "hshm05",
+      "name": "Counterterrorism, Law Enforcement, and Intelligence Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hshm05?format=json"
+    },
+    {
+      "id": "hshm11",
+      "name": "Border Security and Enforcement Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hshm11?format=json"
+    },
+    {
+      "id": "hsfa07",
+      "name": "Western Hemisphere Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsfa07?format=json"
+    },
+    {
+      "id": "hsfa17",
+      "name": "Oversight and Intelligence Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsfa17?format=json"
+    },
+    {
+      "id": "hsfa13",
+      "name": "Middle East and North Africa Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsfa13?format=json"
+    },
+    {
+      "id": "hsfa05",
+      "name": "East Asia and Pacific Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsfa05?format=json"
+    },
+    {
+      "id": "hsfa06",
+      "name": "Global Health, Global Human Rights, and International Organizations Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsfa06?format=json"
+    },
+    {
+      "id": "hsfa14",
+      "name": "Europe Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsfa14?format=json"
+    },
+    {
+      "id": "hsfa16",
+      "name": "Africa Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsfa16?format=json"
+    },
+    {
+      "id": "hsba10",
+      "name": "National Security, Illicit Finance, and International Financial Institutions Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsba10?format=json"
+    },
+    {
+      "id": "hsba04",
+      "name": "Housing and Insurance Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsba04?format=json"
+    },
+    {
+      "id": "hsba20",
+      "name": "Financial Institutions and Monetary Policy Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsba20?format=json"
+    },
+    {
+      "id": "hsba21",
+      "name": "Digital Assets, Financial Technology, and Artificial Intelligence Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsba21?format=json"
+    },
+    {
+      "id": "hsba16",
+      "name": "Capital Markets Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsba16?format=json"
+    },
+    {
+      "id": "hsif02",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsif02?format=json"
+    },
+    {
+      "id": "hsif17",
+      "name": "Commerce, Manufacturing, and Trade Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsif17?format=json"
+    },
+    {
+      "id": "hsif14",
+      "name": "Health Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsif14?format=json"
+    },
+    {
+      "id": "hsif18",
+      "name": "Environment Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsif18?format=json"
+    },
+    {
+      "id": "hsif03",
+      "name": "Energy Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsif03?format=json"
+    },
+    {
+      "id": "hsif16",
+      "name": "Communications and Technology Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsif16?format=json"
+    },
+    {
+      "id": "hsed10",
+      "name": "Workforce Protections Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsed10?format=json"
+    },
+    {
+      "id": "hsed13",
+      "name": "Higher Education and Workforce Development Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsed13?format=json"
+    },
+    {
+      "id": "hsed02",
+      "name": "Health, Employment, Labor, and Pensions Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsed02?format=json"
+    },
+    {
+      "id": "hsed14",
+      "name": "Early Childhood, Elementary, and Secondary Education Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsed14?format=json"
+    },
+    {
+      "id": "hsas25",
+      "name": "Tactical Air and Land Forces Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsas25?format=json"
+    },
+    {
+      "id": "hsas29",
+      "name": "Strategic Forces Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsas29?format=json"
+    },
+    {
+      "id": "hsas28",
+      "name": "Seapower and Projection Forces Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsas28?format=json"
+    },
+    {
+      "id": "hsas03",
+      "name": "Readiness Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsas03?format=json"
+    },
+    {
+      "id": "hsas02",
+      "name": "Military Personnel Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsas02?format=json"
+    },
+    {
+      "id": "hsas26",
+      "name": "Intelligence and Special Operations Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsas26?format=json"
+    },
+    {
+      "id": "hsas35",
+      "name": "Cyber, Information Technologies, and Innovation Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsas35?format=json"
+    },
+    {
+      "id": "hsap04",
+      "name": "National Security, Department of State, and Related Programs Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap04?format=json"
+    },
+    {
+      "id": "hsap06",
+      "name": "Interior, Environment, and Related Agencies Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap06?format=json"
+    },
+    {
+      "id": "hsap02",
+      "name": "Defense Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap02?format=json"
+    },
+    {
+      "id": "hsap10",
+      "name": "Energy and Water Development, and Related Agencies Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap10?format=json"
+    },
+    {
+      "id": "hsap14",
+      "name": "Transportation, Treasury and Independent Agencies Subcommittee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsap14?format=json"
+    },
+    {
+      "id": "hsap15",
+      "name": "Department of Homeland Security Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap15?format=json"
+    },
+    {
+      "id": "hsap18",
+      "name": "Military Construction, Veterans Affairs, and Related Agencies Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap18?format=json"
+    },
+    {
+      "id": "hsap20",
+      "name": "Departments of Transportation, and Housing and Urban Development, and Related Agencies Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap20?format=json"
+    },
+    {
+      "id": "hsap19",
+      "name": "Commerce, Justice, Science, and Related Agencies Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap19?format=json"
+    },
+    {
+      "id": "hsap24",
+      "name": "Legislative Branch Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap24?format=json"
+    },
+    {
+      "id": "hsap23",
+      "name": "Financial Services and General Government Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap23?format=json"
+    },
+    {
+      "id": "hsag16",
+      "name": "General Farm Commodities, Risk Management, and Credit Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsag16?format=json"
+    },
+    {
+      "id": "hsag15",
+      "name": "Forestry and Horticulture Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsag15?format=json"
+    },
+    {
+      "id": "hsag14",
+      "name": "Conservation, Research, and Biotechnology Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsag14?format=json"
+    },
+    {
+      "id": "hsag22",
+      "name": "Commodity Markets, Digital Assets, and Rural Development Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsag22?format=json"
+    },
+    {
+      "id": "hsag29",
+      "name": "Livestock, Dairy, and Poultry Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsag29?format=json"
+    },
+    {
+      "id": "hsgo28",
+      "name": "Environment Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsgo28?format=json"
+    },
+    {
+      "id": "hsba09",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsba09?format=json"
+    },
+    {
+      "id": "hsap07",
+      "name": "Departments of Labor, Health and Human Services, Education, and Related Agencies Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap07?format=json"
+    },
+    {
+      "id": "hsap01",
+      "name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsap01?format=json"
+    },
+    {
+      "id": "hsag03",
+      "name": "Nutrition and Foreign Agriculture Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsag03?format=json"
+    },
+    {
+      "id": "hsqa00",
+      "name": "Ethics Enforcement Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsqa00?format=json"
+    },
+    {
+      "id": "hlse06",
+      "name": "Task Force on the Rural Elderly Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlse06?format=json"
+    },
+    {
+      "id": "hlse05",
+      "name": "Task Force on Social Security and Women Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlse05?format=json"
+    },
+    {
+      "id": "hlhn01",
+      "name": "International Task Force Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlhn01?format=json"
+    },
+    {
+      "id": "hlhn02",
+      "name": "Domestic Task Force Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlhn02?format=json"
+    },
+    {
+      "id": "hsju11",
+      "name": "Antitrust (Full Committee Task Force) Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsju11?format=json"
+    },
+    {
+      "id": "hspo08",
+      "name": "Ad Hoc Task Force on Presidential Pay Recommendation Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hspo08?format=json"
+    },
+    {
+      "id": "hlij00",
+      "name": "Select Investigate the January 6th Attack on the United States Capitol",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlij00?format=json"
+    },
+    {
+      "id": "n2006005584",
+      "name": "Expenditures in the Agriculture Department Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n2006005584?format=json"
+    },
+    {
+      "id": "n88156927",
+      "name": "Public Buildings and Grounds Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n88156927?format=json"
+    },
+    {
+      "id": "n79049131",
+      "name": "Labor Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n79049131?format=json"
+    },
+    {
+      "id": "no2009049242",
+      "name": "Levees and Improvements of the Mississippi River Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no2009049242?format=json"
+    },
+    {
+      "id": "n79047544",
+      "name": "Manufactures Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n79047544?format=json"
+    },
+    {
+      "id": "nr97009062",
+      "name": "Mileage Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr97009062?format=json"
+    },
+    {
+      "id": "nr95012879",
+      "name": "Militia Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr95012879?format=json"
+    },
+    {
+      "id": "n81038421",
+      "name": "Military Affairs Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n81038421?format=json"
+    },
+    {
+      "id": "nr95003115",
+      "name": "Military Pensions Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr95003115?format=json"
+    },
+    {
+      "id": "no94034726",
+      "name": "Mines and Mining Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no94034726?format=json"
+    },
+    {
+      "id": "n81038422",
+      "name": "Naval Affairs Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n81038422?format=json"
+    },
+    {
+      "id": "no2009135915",
+      "name": "Pacific Railroad Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no2009135915?format=json"
+    },
+    {
+      "id": "n79036852",
+      "name": "Patents Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n79036852?format=json"
+    },
+    {
+      "id": "n81096143",
+      "name": "Pensions Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n81096143?format=json"
+    },
+    {
+      "id": "n88256891",
+      "name": "Post Office and Post Roads Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n88256891?format=json"
+    },
+    {
+      "id": "n88636576",
+      "name": "Private Land Claims Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n88636576?format=json"
+    },
+    {
+      "id": "nr93025509",
+      "name": "Public Expenditures Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr93025509?format=json"
+    },
+    {
+      "id": "nr2004025444",
+      "name": "Railways and Canals Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr2004025444?format=json"
+    },
+    {
+      "id": "no2003106805",
+      "name": "Reform in the Civil Service Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no2003106805?format=json"
+    },
+    {
+      "id": "n79036853",
+      "name": "Revision of the Laws Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n79036853?format=json"
+    },
+    {
+      "id": "nr93007702",
+      "name": "Revolutionary Pensions Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr93007702?format=json"
+    },
+    {
+      "id": "n85185939",
+      "name": "Rivers and Harbors Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n85185939?format=json"
+    },
+    {
+      "id": "no99051135",
+      "name": "Roads Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no99051135?format=json"
+    },
+    {
+      "id": "n50080783",
+      "name": "Territories Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n50080783?format=json"
+    },
+    {
+      "id": "no2010049600",
+      "name": "Ventilation and Acoustics Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no2010049600?format=json"
+    },
+    {
+      "id": "no94029614",
+      "name": "War Claims Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no94029614?format=json"
+    },
+    {
+      "id": "n95033314",
+      "name": "Woman Suffrage Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n95033314?format=json"
+    },
+    {
+      "id": "n81096142",
+      "name": "World War Veterans' Legislation Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n81096142?format=json"
+    },
+    {
+      "id": "no94034730",
+      "name": "Irrigation and Reclamation Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no94034730?format=json"
+    },
+    {
+      "id": "n2006005638",
+      "name": "Expenditures in the Justice Department Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n2006005638?format=json"
+    },
+    {
+      "id": "n2005089915",
+      "name": "Expenditures in the Post-Office Department Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n2005089915?format=json"
+    },
+    {
+      "id": "nr93024937",
+      "name": "Expenditures on the Public Buildings Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr93024937?format=json"
+    },
+    {
+      "id": "nr94041327",
+      "name": "Expenditures in the State Department Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr94041327?format=json"
+    },
+    {
+      "id": "nr93007908",
+      "name": "Expenditures in the Navy Department Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr93007908?format=json"
+    },
+    {
+      "id": "nr00013789",
+      "name": "Freedmen's Affairs Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr00013789?format=json"
+    },
+    {
+      "id": "n79036851",
+      "name": "Immigration and Naturalization Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n79036851?format=json"
+    },
+    {
+      "id": "n85053458",
+      "name": "Flood Control Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n85053458?format=json"
+    },
+    {
+      "id": "n80146651",
+      "name": "Indian Affairs Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n80146651?format=json"
+    },
+    {
+      "id": "no2003009975",
+      "name": "Industrial Arts and Expositions Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no2003009975?format=json"
+    },
+    {
+      "id": "no94034735",
+      "name": "Insular Affairs Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no94034735?format=json"
+    },
+    {
+      "id": "n81096141",
+      "name": "Invalid Pensions Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n81096141?format=json"
+    },
+    {
+      "id": "n2005041565",
+      "name": "Irrigation of Arid Lands Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n2005041565?format=json"
+    },
+    {
+      "id": "n88663430",
+      "name": "Expenditures in the War Department Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n88663430?format=json"
+    },
+    {
+      "id": "nr93017700",
+      "name": "Expenditures in the Treasury Department Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr93017700?format=json"
+    },
+    {
+      "id": "n2007069112",
+      "name": "Elections no. 2 Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n2007069112?format=json"
+    },
+    {
+      "id": "n81025902",
+      "name": "Coinage, Weights, and Measures Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n81025902?format=json"
+    },
+    {
+      "id": "n2006005529",
+      "name": "Election of President, Vice President, and Representatives in Congress Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n2006005529?format=json"
+    },
+    {
+      "id": "nr95008630",
+      "name": "Accounts Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/nr95008630?format=json"
+    },
+    {
+      "id": "n2006005654",
+      "name": "Expenditures in the Department of Commerce Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n2006005654?format=json"
+    },
+    {
+      "id": "no98108649",
+      "name": "Census Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no98108649?format=json"
+    },
+    {
+      "id": "no2003009976",
+      "name": "Civil Service Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no2003009976?format=json"
+    },
+    {
+      "id": "n2007069138",
+      "name": "Elections no. 1 Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n2007069138?format=json"
+    },
+    {
+      "id": "n88001560",
+      "name": "Elections Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n88001560?format=json"
+    },
+    {
+      "id": "n50078971",
+      "name": "Claims Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n50078971?format=json"
+    },
+    {
+      "id": "hsgo00",
+      "name": "Oversight and Government Reform Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsgo00?format=json"
+    },
+    {
+      "id": "hsju00",
+      "name": "Judiciary Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsju00?format=json"
+    },
+    {
+      "id": "no90011669",
+      "name": "Expenditures in Interior Department Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/no90011669?format=json"
+    },
+    {
+      "id": "n2006001899",
+      "name": "Alcoholic Liquor Traffic Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/n2006001899?format=json"
+    },
+    {
+      "id": "hlzs00",
+      "name": "Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlzs00?format=json"
+    },
+    {
+      "id": "hsed00",
+      "name": "Education and Workforce Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsed00?format=json"
+    },
+    {
+      "id": "hlcn00",
+      "name": "Select Committee on the Climate Crisis",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlcn00?format=json"
+    },
+    {
+      "id": "hlef00",
+      "name": "Select Committee on Economic Disparity and Fairness in Growth",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlef00?format=json"
+    },
+    {
+      "id": "hlhk00",
+      "name": "Response to Hurricane Katrina Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlhk00?format=json"
+    },
+    {
+      "id": "hlrk00",
+      "name": "U.S. National and Military/Commercial Concerns with China (Select) Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlrk00?format=json"
+    },
+    {
+      "id": "hotl00",
+      "name": "Tom Lantos Human Rights Commission",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hotl00?format=json"
+    },
+    {
+      "id": "hsat00",
+      "name": "Joint Atomic Energy Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsat00?format=json"
+    },
+    {
+      "id": "hleb00",
+      "name": "Select Committee on Ethics (105th)",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hleb00?format=json"
+    },
+    {
+      "id": "hlcf00",
+      "name": "Children, Youth, and Families (Select) Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlcf00?format=json"
+    },
+    {
+      "id": "hlse00",
+      "name": "Aging (Select) Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlse00?format=json"
+    },
+    {
+      "id": "hlgw00",
+      "name": "Energy Independence and Global Warming (Select) Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlgw00?format=json"
+    },
+    {
+      "id": "hspw00",
+      "name": "Transportation and Infrastructure Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hspw00?format=json"
+    },
+    {
+      "id": "hshf00",
+      "name": "Whole House on State of Union Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hshf00?format=json"
+    },
+    {
+      "id": "hsba00",
+      "name": "Financial Services Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsba00?format=json"
+    },
+    {
+      "id": "hsag00",
+      "name": "Agriculture Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsag00?format=json"
+    },
+    {
+      "id": "hsso00",
+      "name": "Ethics Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsso00?format=json"
+    },
+    {
+      "id": "hlig10",
+      "name": "Strategic Technologies and Advanced Research Subcommittee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlig10?format=json"
+    },
+    {
+      "id": "hsba01",
+      "name": "Terrorism and Illicit Finance Subcommittee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsba01?format=json"
+    },
+    {
+      "id": "hssm00",
+      "name": "Small Business Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hssm00?format=json"
+    },
+    {
+      "id": "hsap00",
+      "name": "Appropriations Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsap00?format=json"
+    },
+    {
+      "id": "hsfa00",
+      "name": "Foreign Affairs Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsfa00?format=json"
+    },
+    {
+      "id": "hsru05",
+      "name": "Expedited Procedures",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsru05?format=json"
+    },
+    {
+      "id": "hsas00",
+      "name": "Armed Services Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsas00?format=json"
+    },
+    {
+      "id": "hsii00",
+      "name": "Natural Resources Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsii00?format=json"
+    },
+    {
+      "id": "hlig00",
+      "name": "Intelligence (Permanent Select) Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlig00?format=json"
+    },
+    {
+      "id": "hswm00",
+      "name": "Ways and Means Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hswm00?format=json"
+    },
+    {
+      "id": "hlzi00",
+      "name": "Select Committee on the Events Surrounding the 2012 Terrorist Attack in Benghazi Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlzi00?format=json"
+    },
+    {
+      "id": "hlet00",
+      "name": "Ethics (Select) Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlet00?format=json"
+    },
+    {
+      "id": "hssy00",
+      "name": "Science, Space, and Technology Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hssy00?format=json"
+    },
+    {
+      "id": "hsvr00",
+      "name": "Veterans' Affairs Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr00?format=json"
+    },
+    {
+      "id": "hsha00",
+      "name": "Committee on House Administration",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsha00?format=json"
+    },
+    {
+      "id": "hshm00",
+      "name": "Homeland Security Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hshm00?format=json"
+    },
+    {
+      "id": "hsif00",
+      "name": "Energy and Commerce Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsif00?format=json"
+    },
+    {
+      "id": "hsru00",
+      "name": "Rules Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsru00?format=json"
+    },
+    {
+      "id": "hlcq00",
+      "name": "Select Committee on Committees Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlcq00?format=json"
+    },
+    {
+      "id": "hlzf00",
+      "name": "Missing Persons Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlzf00?format=json"
+    },
+    {
+      "id": "hlna00",
+      "name": "Narcotics Abuse and Control Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlna00?format=json"
+    },
+    {
+      "id": "hlze00",
+      "name": "Population Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlze00?format=json"
+    },
+    {
+      "id": "htht00",
+      "name": "Hostages Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/htht00?format=json"
+    },
+    {
+      "id": "htde00",
+      "name": "Joint Deficit Reduction Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/htde00?format=json"
+    },
+    {
+      "id": "hsua00",
+      "name": "Internal Security Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsua00?format=json"
+    },
+    {
+      "id": "hspo00",
+      "name": "Post Office and Civil Service Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hspo00?format=json"
+    },
+    {
+      "id": "hsmm00",
+      "name": "Merchant Marine and Fisheries Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsmm00?format=json"
+    },
+    {
+      "id": "hcza00",
+      "name": "Bicentenary Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hcza00?format=json"
+    },
+    {
+      "id": "hhah00",
+      "name": "Energy (Ad Hoc) Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hhah00?format=json"
+    },
+    {
+      "id": "hlbz00",
+      "name": "U.S. Role in Iranian Arms Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlbz00?format=json"
+    },
+    {
+      "id": "hlhn00",
+      "name": "Hunger Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlhn00?format=json"
+    },
+    {
+      "id": "hlie00",
+      "name": "Select Panel Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlie00?format=json"
+    },
+    {
+      "id": "hlir00",
+      "name": "Covert Arms Deals with Iran Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlir00?format=json"
+    },
+    {
+      "id": "hloc00",
+      "name": "Outer Continental Shelf (Select) Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hloc00?format=json"
+    },
+    {
+      "id": "hlzc00",
+      "name": "Assassinations Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlzc00?format=json"
+    },
+    {
+      "id": "hlzd00",
+      "name": "Congressional Operations Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlzd00?format=json"
+    },
+    {
+      "id": "hlzg00",
+      "name": "Professional Sports Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hlzg00?format=json"
+    },
+    {
+      "id": "hpzh00",
+      "name": "Investigate Campaign Expenditures Committee",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hpzh00?format=json"
+    },
+    {
+      "id": "hsbu00",
+      "name": "Budget Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsbu00?format=json"
+    },
+    {
+      "id": "hsdt00",
+      "name": "District of Columbia Committee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsdt00?format=json"
+    },
+    {
+      "id": "hsro00",
+      "name": "Select Committee to Investigate the Voting Irregularities of August 2, 2007",
+      "chamber": "house",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/house/hsro00?format=json"
+    },
+    {
+      "id": "hsvr06",
+      "name": "Benefits Subcommittee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr06?format=json"
+    },
+    {
+      "id": "hsvr01",
+      "name": "Compensation, Pension and Insurance Subcommittee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr01?format=json"
+    },
+    {
+      "id": "hsvr04",
+      "name": "Housing and Memorial Affairs Subcommittee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr04?format=json"
+    },
+    {
+      "id": "hsvr05",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr05?format=json"
+    },
+    {
+      "id": "hsvr07",
+      "name": "Education, Training, Employment and Housing Subcommittee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr07?format=json"
+    },
+    {
+      "id": "hsvr02",
+      "name": "Education, Training and Employment Subcommittee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hsvr02?format=json"
+    },
+    {
+      "id": "hssy14",
+      "name": "Research Subcommittee",
+      "chamber": "house",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/house/hssy14?format=json"
+    },
+    {
+      "id": "n79043125",
+      "name": "Indian Affairs Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n79043125?format=json"
+    },
+    {
+      "id": "n79043126",
+      "name": "Territories and Insular Affairs Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n79043126?format=json"
+    },
+    {
+      "id": "ssbk13",
+      "name": "Digital Assets Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssbk13?format=json"
+    },
+    {
+      "id": "ssra00",
+      "name": "Rules and Administration Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssra00?format=json"
+    },
+    {
+      "id": "ssva00",
+      "name": "Veterans' Affairs Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssva00?format=json"
+    },
+    {
+      "id": "sssb00",
+      "name": "Small Business and Entrepreneurship Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb00?format=json"
+    },
+    {
+      "id": "sshr11",
+      "name": "Employment and Workplace Safety Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr11?format=json"
+    },
+    {
+      "id": "ssju21",
+      "name": "Constitution Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju21?format=json"
+    },
+    {
+      "id": "ssju00",
+      "name": "Judiciary Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju00?format=json"
+    },
+    {
+      "id": "ssju22",
+      "name": "Crime and Counterterrorism Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju22?format=json"
+    },
+    {
+      "id": "ssju28",
+      "name": "Privacy, Technology, and the Law Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju28?format=json"
+    },
+    {
+      "id": "sshr09",
+      "name": "Education and the American Family Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr09?format=json"
+    },
+    {
+      "id": "sshr12",
+      "name": "Primary Health and Retirement Security Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr12?format=json"
+    },
+    {
+      "id": "ssga22",
+      "name": "Border Management, Federal Workforce, and Regulatory Affairs Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga22?format=json"
+    },
+    {
+      "id": "sshr00",
+      "name": "Health, Education, Labor, and Pensions Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr00?format=json"
+    },
+    {
+      "id": "ssju04",
+      "name": "Border Security and Immigration Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju04?format=json"
+    },
+    {
+      "id": "ssju01",
+      "name": "Antitrust, Competition Policy, and Consumer Rights Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju01?format=json"
+    },
+    {
+      "id": "ssju25",
+      "name": "Federal Courts, Oversight, Agency Action, and Federal Rights Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju25?format=json"
+    },
+    {
+      "id": "ssju26",
+      "name": "Intellectual Property Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju26?format=json"
+    },
+    {
+      "id": "ssju27",
+      "name": "Human Rights and the Law Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju27?format=json"
+    },
+    {
+      "id": "ssfr01",
+      "name": "Europe and Regional Security Cooperation Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr01?format=json"
+    },
+    {
+      "id": "ssga20",
+      "name": "Disaster Management, District of Columbia, and Census Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga20?format=json"
+    },
+    {
+      "id": "ssga01",
+      "name": "Permanent Subcommittee on Investigations",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga01?format=json"
+    },
+    {
+      "id": "ssfi12",
+      "name": "Energy, Natural Resources, and Infrastructure Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi12?format=json"
+    },
+    {
+      "id": "ssfi11",
+      "name": "Taxation and IRS Oversight Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi11?format=json"
+    },
+    {
+      "id": "ssfi02",
+      "name": "Social Security, Pensions, and Family Policy Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi02?format=json"
+    },
+    {
+      "id": "ssfr09",
+      "name": "Africa and Global Health Policy Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr09?format=json"
+    },
+    {
+      "id": "ssfr06",
+      "name": "Western Hemisphere, Transnational Crime, Civilian Security, Democracy, Human Rights, and Global Women's Issues Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr06?format=json"
+    },
+    {
+      "id": "ssfi00",
+      "name": "Finance Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi00?format=json"
+    },
+    {
+      "id": "ssfi10",
+      "name": "Health Care Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi10?format=json"
+    },
+    {
+      "id": "ssfi13",
+      "name": "International Trade, Customs, and Global Competitiveness Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi13?format=json"
+    },
+    {
+      "id": "ssfr02",
+      "name": "East Asia, the Pacific, and International Cybersecurity Policy Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr02?format=json"
+    },
+    {
+      "id": "ssfr07",
+      "name": "Near East, South Asia, Central Asia, and Counterterrorism Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr07?format=json"
+    },
+    {
+      "id": "ssfr14",
+      "name": "State Department and USAID Management, International Operations, and Bilateral International Development Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr14?format=json"
+    },
+    {
+      "id": "ssfi14",
+      "name": "Fiscal Responsibility and Economic Growth Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi14?format=json"
+    },
+    {
+      "id": "ssfr15",
+      "name": "Multilateral International Development, Multilateral Institutions, and International Economic, Energy, and Environmental Policy Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr15?format=json"
+    },
+    {
+      "id": "ssfr00",
+      "name": "Foreign Relations Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr00?format=json"
+    },
+    {
+      "id": "ssga00",
+      "name": "Homeland Security and Governmental Affairs Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga00?format=json"
+    },
+    {
+      "id": "sseg07",
+      "name": "Water and Power Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sseg07?format=json"
+    },
+    {
+      "id": "ssev08",
+      "name": "Transportation and Infrastructure Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev08?format=json"
+    },
+    {
+      "id": "sscm37",
+      "name": "Science, Manufacturing, and Competitiveness Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm37?format=json"
+    },
+    {
+      "id": "sseg03",
+      "name": "Public Lands, Forests, and Mining Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sseg03?format=json"
+    },
+    {
+      "id": "ssev09",
+      "name": "Chemical Safety, Waste Management, Environmental Justice, and Regulatory Oversight Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev09?format=json"
+    },
+    {
+      "id": "ssev15",
+      "name": "Fisheries, Wildlife, and Water Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev15?format=json"
+    },
+    {
+      "id": "sscm36",
+      "name": "Coast Guard, Maritime, and Fisheries Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm36?format=json"
+    },
+    {
+      "id": "ssev00",
+      "name": "Environment and Public Works Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev00?format=json"
+    },
+    {
+      "id": "ssev10",
+      "name": "Clean Air, Climate, and Nuclear Innovation and Safety Subcommittee Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev10?format=json"
+    },
+    {
+      "id": "sscm35",
+      "name": "Consumer Protection, Technology, and Data Privacy Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm35?format=json"
+    },
+    {
+      "id": "sseg04",
+      "name": "National Parks Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sseg04?format=json"
+    },
+    {
+      "id": "sscm39",
+      "name": "Tourism, Trade, and Export",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm39?format=json"
+    },
+    {
+      "id": "sscm38",
+      "name": "Surface Transportation, Freight, Pipelines, and Safety Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm38?format=json"
+    },
+    {
+      "id": "sseg00",
+      "name": "Energy and Natural Resources Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sseg00?format=json"
+    },
+    {
+      "id": "sseg01",
+      "name": "Energy Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sseg01?format=json"
+    },
+    {
+      "id": "ssbk08",
+      "name": "Financial Institutions and Consumer Protection Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssbk08?format=json"
+    },
+    {
+      "id": "sscm34",
+      "name": "Telecommunications and Media Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm34?format=json"
+    },
+    {
+      "id": "ssbu00",
+      "name": "Budget Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssbu00?format=json"
+    },
+    {
+      "id": "sscm33",
+      "name": "Aviation, Space, and Innovation Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm33?format=json"
+    },
+    {
+      "id": "ssbk12",
+      "name": "Economic Policy Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssbk12?format=json"
+    },
+    {
+      "id": "ssbk09",
+      "name": "Housing, Transportation, and Community Development Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssbk09?format=json"
+    },
+    {
+      "id": "ssbk05",
+      "name": "National Security and International Trade and Finance Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssbk05?format=json"
+    },
+    {
+      "id": "ssbk04",
+      "name": "Securities, Insurance, and Investment Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssbk04?format=json"
+    },
+    {
+      "id": "ssbk00",
+      "name": "Banking, Housing, and Urban Affairs Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssbk00?format=json"
+    },
+    {
+      "id": "sscm00",
+      "name": "Commerce, Science, and Transportation Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm00?format=json"
+    },
+    {
+      "id": "ssas13",
+      "name": "Seapower Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssas13?format=json"
+    },
+    {
+      "id": "ssap24",
+      "name": "Transportation, Housing and Urban Development, and Related Agencies Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap24?format=json"
+    },
+    {
+      "id": "ssas15",
+      "name": "Readiness and Management Support Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssas15?format=json"
+    },
+    {
+      "id": "ssap16",
+      "name": "Commerce, Justice, Science, and Related Agencies Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap16?format=json"
+    },
+    {
+      "id": "ssap22",
+      "name": "Energy and Water Development Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap22?format=json"
+    },
+    {
+      "id": "ssap20",
+      "name": "State, Foreign Operations, and Related Programs Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap20?format=json"
+    },
+    {
+      "id": "ssas16",
+      "name": "Strategic Forces Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssas16?format=json"
+    },
+    {
+      "id": "ssap14",
+      "name": "Department of Homeland Security Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap14?format=json"
+    },
+    {
+      "id": "ssas17",
+      "name": "Personnel Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssas17?format=json"
+    },
+    {
+      "id": "ssas20",
+      "name": "Emerging Threats and Capabilities Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssas20?format=json"
+    },
+    {
+      "id": "ssap23",
+      "name": "Financial Services and General Government Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap23?format=json"
+    },
+    {
+      "id": "ssas21",
+      "name": "Cybersecurity Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssas21?format=json"
+    },
+    {
+      "id": "ssap00",
+      "name": "Appropriations Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap00?format=json"
+    },
+    {
+      "id": "ssap08",
+      "name": "Legislative Branch Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap08?format=json"
+    },
+    {
+      "id": "ssap18",
+      "name": "Departments of Labor, Health and Human Services, and Education, and Related Agencies Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap18?format=json"
+    },
+    {
+      "id": "ssap19",
+      "name": "Military Construction, Veterans Affairs, and Related Agencies Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap19?format=json"
+    },
+    {
+      "id": "ssap02",
+      "name": "Department of Defense Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap02?format=json"
+    },
+    {
+      "id": "ssap01",
+      "name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap01?format=json"
+    },
+    {
+      "id": "ssas00",
+      "name": "Armed Services Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssas00?format=json"
+    },
+    {
+      "id": "ssap17",
+      "name": "Department of the Interior, Environment, and Related Agencies Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap17?format=json"
+    },
+    {
+      "id": "ssas14",
+      "name": "Airland Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssas14?format=json"
+    },
+    {
+      "id": "spag00",
+      "name": "Aging (Special) Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/spag00?format=json"
+    },
+    {
+      "id": "slin00",
+      "name": "Intelligence (Select) Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/slin00?format=json"
+    },
+    {
+      "id": "ssaf15",
+      "name": "Rural Development, Energy, and Credit Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssaf15?format=json"
+    },
+    {
+      "id": "ssaf17",
+      "name": "Livestock, Dairy, Poultry, and Food Safety Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssaf17?format=json"
+    },
+    {
+      "id": "ssaf16",
+      "name": "Food and Nutrition, Specialty Crops, Organics, and Research Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssaf16?format=json"
+    },
+    {
+      "id": "ssaf00",
+      "name": "Agriculture, Nutrition, and Forestry Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssaf00?format=json"
+    },
+    {
+      "id": "ssaf13",
+      "name": "Commodities, Derivatives, Risk Management, and Trade Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssaf13?format=json"
+    },
+    {
+      "id": "ssaf14",
+      "name": "Conservation, Forestry, Natural Resources, and Biotechnology Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssaf14?format=json"
+    },
+    {
+      "id": "slia00",
+      "name": "Indian Affairs Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/slia00?format=json"
+    },
+    {
+      "id": "slet00",
+      "name": "Ethics (Select) Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/slet00?format=json"
+    },
+    {
+      "id": "scnc00",
+      "name": "United States Senate Caucus on International Narcotics Control",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/scnc00?format=json"
+    },
+    {
+      "id": "ssap07",
+      "name": "Labor, Health and Human Services, and Education Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/ssap07?format=json"
+    },
+    {
+      "id": "jtdr00",
+      "name": "Senate Joint Deficit Reduction Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/jtdr00?format=json"
+    },
+    {
+      "id": "sp2k00",
+      "name": "Year 2000 Technology Problem (Special) Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sp2k00?format=json"
+    },
+    {
+      "id": "n81096146",
+      "name": "Commerce Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n81096146?format=json"
+    },
+    {
+      "id": "no94032278",
+      "name": "Railroads",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/no94032278?format=json"
+    },
+    {
+      "id": "n50077731",
+      "name": "Philippines",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n50077731?format=json"
+    },
+    {
+      "id": "no2004044998",
+      "name": "Rules",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/no2004044998?format=json"
+    },
+    {
+      "id": "nr92040127",
+      "name": "Pensions",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/nr92040127?format=json"
+    },
+    {
+      "id": "no94026591",
+      "name": "Printing",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/no94026591?format=json"
+    },
+    {
+      "id": "n50083180",
+      "name": "Post Offices and Post Roads",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n50083180?format=json"
+    },
+    {
+      "id": "n85188720",
+      "name": "Public Buildings and Grounds",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n85188720?format=json"
+    },
+    {
+      "id": "no2013136533",
+      "name": "Pacific Railroads",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/no2013136533?format=json"
+    },
+    {
+      "id": "n79043123",
+      "name": "Mines and Mining",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n79043123?format=json"
+    },
+    {
+      "id": "n50081225",
+      "name": "Naval Affairs",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n50081225?format=json"
+    },
+    {
+      "id": "n2006083963",
+      "name": "Retrenchment",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2006083963?format=json"
+    },
+    {
+      "id": "n2006083967",
+      "name": "Revolutionary Claims",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2006083967?format=json"
+    },
+    {
+      "id": "n50083181",
+      "name": "Public Health and National Quarantine",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n50083181?format=json"
+    },
+    {
+      "id": "n79043122",
+      "name": "Irrigation and Reclamation",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n79043122?format=json"
+    },
+    {
+      "id": "n79055978",
+      "name": "Military Affairs",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n79055978?format=json"
+    },
+    {
+      "id": "n2005032206",
+      "name": "Fisheries",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2005032206?format=json"
+    },
+    {
+      "id": "n2008076716",
+      "name": "Forest Reservations and the Protection of Game",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2008076716?format=json"
+    },
+    {
+      "id": "no96026568",
+      "name": "Indian Depredations",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/no96026568?format=json"
+    },
+    {
+      "id": "n2011037996",
+      "name": "Industrial Expositions",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2011037996?format=json"
+    },
+    {
+      "id": "n81096148",
+      "name": "Interoceanic Canals",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n81096148?format=json"
+    },
+    {
+      "id": "n81096149",
+      "name": "Interstate Commerce",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n81096149?format=json"
+    },
+    {
+      "id": "n81096147",
+      "name": "Manufactures",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n81096147?format=json"
+    },
+    {
+      "id": "nr92039132",
+      "name": "Claims",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/nr92039132?format=json"
+    },
+    {
+      "id": "nr93031597",
+      "name": "Audit and Control of the Contingent Expenses of the Senate",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/nr93031597?format=json"
+    },
+    {
+      "id": "n2006083948",
+      "name": "Census",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2006083948?format=json"
+    },
+    {
+      "id": "n2005026015",
+      "name": "Civil Service",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2005026015?format=json"
+    },
+    {
+      "id": "n2005025889",
+      "name": "Civil Service and Retrenchment",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2005025889?format=json"
+    },
+    {
+      "id": "n2007025578",
+      "name": "Coastal and Insular Survey",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2007025578?format=json"
+    },
+    {
+      "id": "n2005042729",
+      "name": "Coast Defenses",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2005042729?format=json"
+    },
+    {
+      "id": "n81096145",
+      "name": "Commerce and Manufactures",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n81096145?format=json"
+    },
+    {
+      "id": "n2006083954",
+      "name": "Cuban Relations",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n2006083954?format=json"
+    },
+    {
+      "id": "n88030116",
+      "name": "Expenditures in the Executive Departments",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n88030116?format=json"
+    },
+    {
+      "id": "n85113718",
+      "name": "Privileges and Elections Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n85113718?format=json"
+    },
+    {
+      "id": "no2004111834",
+      "name": "Patents Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/no2004111834?format=json"
+    },
+    {
+      "id": "no00001702",
+      "name": "Immigration Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/no00001702?format=json"
+    },
+    {
+      "id": "nr92024277",
+      "name": "Roads and Canals Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/nr92024277?format=json"
+    },
+    {
+      "id": "n87901340",
+      "name": "Private Land Claims Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/n87901340?format=json"
+    },
+    {
+      "id": "slso00",
+      "name": "Select Committee on Secret Military Assistance to Iran and the Nicaraguan Opposition",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/slso00?format=json"
+    },
+    {
+      "id": "slia01",
+      "name": "Investigations Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/slia01?format=json"
+    },
+    {
+      "id": "jsec03",
+      "name": "Economic Goals and Intergovernmental Policy Subcommittee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/jsec03?format=json"
+    },
+    {
+      "id": "sowg00",
+      "name": "Senate National Security Working Group",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sowg00?format=json"
+    },
+    {
+      "id": "jsat00",
+      "name": "Joint Atomic Energy Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/jsat00?format=json"
+    },
+    {
+      "id": "slpo00",
+      "name": "POW/MIA Affairs (Select) Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/slpo00?format=json"
+    },
+    {
+      "id": "spia00",
+      "name": "Impeachment Trial Committee on the Articles Against Judge G. Thomas Porteous, Jr.",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/spia00?format=json"
+    },
+    {
+      "id": "sscm29",
+      "name": "Manufacturing, Trade, and Consumer Protection Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm29?format=json"
+    },
+    {
+      "id": "sscm32",
+      "name": "Transportation and Safety Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm32?format=json"
+    },
+    {
+      "id": "sscm31",
+      "name": "Security Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm31?format=json"
+    },
+    {
+      "id": "sscm28",
+      "name": "Aviation and Space Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sscm28?format=json"
+    },
+    {
+      "id": "spww00",
+      "name": "Investigate Whitewater Development Corporation and Related Matters (Special) Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/spww00?format=json"
+    },
+    {
+      "id": "ssga19",
+      "name": "Regulatory Affairs and Federal Management Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga19?format=json"
+    },
+    {
+      "id": "sspo00",
+      "name": "Post Office and Civil Service Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sspo00?format=json"
+    },
+    {
+      "id": "spim00",
+      "name": "Impeachment Trial Committee on the Articles Against Judge Alcee L. Hastings",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/spim00?format=json"
+    },
+    {
+      "id": "spoc00",
+      "name": "Official Conduct (Special) Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/spoc00?format=json"
+    },
+    {
+      "id": "slzp00",
+      "name": "Watergate Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/slzp00?format=json"
+    },
+    {
+      "id": "sptr00",
+      "name": "Impeachment Trial Committee on the Articles Against Judge Walter L. Nixon, Jr.",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sptr00?format=json"
+    },
+    {
+      "id": "spzk00",
+      "name": "National Emergencies Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/spzk00?format=json"
+    },
+    {
+      "id": "spzm00",
+      "name": "Secret and Confidential Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/spzm00?format=json"
+    },
+    {
+      "id": "ssae00",
+      "name": "Aeronautical and Space Sciences Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssae00?format=json"
+    },
+    {
+      "id": "slzj00",
+      "name": "Study Intelligence Activities Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/slzj00?format=json"
+    },
+    {
+      "id": "sluc00",
+      "name": "Undercover Activities Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sluc00?format=json"
+    },
+    {
+      "id": "sltc00",
+      "name": "Study Committee System Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/sltc00?format=json"
+    },
+    {
+      "id": "scet00",
+      "name": "Ethics Study Commission Committee",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/scet00?format=json"
+    },
+    {
+      "id": "ssdt00",
+      "name": "District of Columbia Committee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssdt00?format=json"
+    },
+    {
+      "id": "spie00",
+      "name": "Special Committee on the Impeachment Trial of Judge Harry E. Claiborne",
+      "chamber": "senate",
+      "type": "select",
+      "url": "https://api.congress.gov/v3/committee/senate/spie00?format=json"
+    },
+    {
+      "id": "sssb06",
+      "name": "Urban and Minority-Owned Business Development Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb06?format=json"
+    },
+    {
+      "id": "sssb02",
+      "name": "Government Contracting and Paperwork Reduction Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb02?format=json"
+    },
+    {
+      "id": "sssb04",
+      "name": "Innovation, Manufacturing, and Technology Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb04?format=json"
+    },
+    {
+      "id": "sssb07",
+      "name": "Competitiveness, Capital Formation and Economic Opportunity Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb07?format=json"
+    },
+    {
+      "id": "sssb08",
+      "name": "Advocacy and The Future of Small Business Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb08?format=json"
+    },
+    {
+      "id": "sssb03",
+      "name": "Rural Economy and Family Farming Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb03?format=json"
+    },
+    {
+      "id": "sssb11",
+      "name": "Small Business: Family Farm Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb11?format=json"
+    },
+    {
+      "id": "sssb05",
+      "name": "Competition and Antitrust Enforcement Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb05?format=json"
+    },
+    {
+      "id": "sssb12",
+      "name": "Entrepreneurship and Special Problems Facing Small Business Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb12?format=json"
+    },
+    {
+      "id": "ssju20",
+      "name": "Human Rights and the Law Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju20?format=json"
+    },
+    {
+      "id": "ssju23",
+      "name": "Privacy, Technology and the Law Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju23?format=json"
+    },
+    {
+      "id": "sssb01",
+      "name": "Export Expansion and Agricultural Development Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sssb01?format=json"
+    },
+    {
+      "id": "ssju18",
+      "name": "Constitution Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju18?format=json"
+    },
+    {
+      "id": "ssju24",
+      "name": "Bankruptcy and the Courts Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju24?format=json"
+    },
+    {
+      "id": "ssju15",
+      "name": "Crime and Drugs Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju15?format=json"
+    },
+    {
+      "id": "ssju17",
+      "name": "Intellectual Property Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju17?format=json"
+    },
+    {
+      "id": "ssju19",
+      "name": "Human Rights and the Law Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju19?format=json"
+    },
+    {
+      "id": "ssju14",
+      "name": "Corrections and Rehabilitation Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju14?format=json"
+    },
+    {
+      "id": "ssju07",
+      "name": "Youth Violence Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju07?format=json"
+    },
+    {
+      "id": "ssju06",
+      "name": "Patents, Copyrights and Trademarks Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju06?format=json"
+    },
+    {
+      "id": "ssju11",
+      "name": "Criminal Justice Oversight Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju11?format=json"
+    },
+    {
+      "id": "ssju02",
+      "name": "Administrative Oversight and the Courts Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju02?format=json"
+    },
+    {
+      "id": "ssju12",
+      "name": "Crime, Corrections and Victims' Rights Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju12?format=json"
+    },
+    {
+      "id": "ssju09",
+      "name": "Terrorism and Homeland Security Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju09?format=json"
+    },
+    {
+      "id": "ssju05",
+      "name": "Terrorism, Technology, and Government Information Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju05?format=json"
+    },
+    {
+      "id": "ssju03",
+      "name": "Constitution, Civil Rights and Property Rights Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssju03?format=json"
+    },
+    {
+      "id": "sshr05",
+      "name": "Aging Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr05?format=json"
+    },
+    {
+      "id": "sshr04",
+      "name": "Employment and Productivity Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr04?format=json"
+    },
+    {
+      "id": "sshr07",
+      "name": "Substance Abuse and Mental Health Services Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr07?format=json"
+    },
+    {
+      "id": "sshr10",
+      "name": "Bioterrorism and Public Health Preparedness Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr10?format=json"
+    },
+    {
+      "id": "sshr06",
+      "name": "Children and Families Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr06?format=json"
+    },
+    {
+      "id": "sshr02",
+      "name": "Disability Policy Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr02?format=json"
+    },
+    {
+      "id": "sshr08",
+      "name": "Employment, Safety, and Training Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr08?format=json"
+    },
+    {
+      "id": "sshr03",
+      "name": "Labor Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr03?format=json"
+    },
+    {
+      "id": "sshr01",
+      "name": "Education, Arts and Humanities Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sshr01?format=json"
+    },
+    {
+      "id": "ssga16",
+      "name": "Efficiency and Effectiveness of Federal Programs and the Federal Workforce Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga16?format=json"
+    },
+    {
+      "id": "ssga13",
+      "name": "Contracting Oversight (Ad Hoc) Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga13?format=json"
+    },
+    {
+      "id": "ssga02",
+      "name": "Regulation and Government Information Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga02?format=json"
+    },
+    {
+      "id": "ssga05",
+      "name": "Post Office and Civil Service Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga05?format=json"
+    },
+    {
+      "id": "ssga06",
+      "name": "Financial Management and Accountability Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga06?format=json"
+    },
+    {
+      "id": "ssga07",
+      "name": "International Security, Proliferation and Federal Services Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga07?format=json"
+    },
+    {
+      "id": "ssga09",
+      "name": "Federal Financial Management, Government Information, Federal Services, and International Security Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga09?format=json"
+    },
+    {
+      "id": "ssga11",
+      "name": "Disaster Recovery (Ad Hoc) Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga11?format=json"
+    },
+    {
+      "id": "ssga14",
+      "name": "Disaster Recovery and Intergovernmental Affairs (Ad Hoc) Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga14?format=json"
+    },
+    {
+      "id": "ssga17",
+      "name": "Emergency Management, Intergovernmental Relations, and the District of Columbia Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga17?format=json"
+    },
+    {
+      "id": "ssga03",
+      "name": "Oversight of Government Management, the Federal Workforce, and the District of Columbia Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga03?format=json"
+    },
+    {
+      "id": "ssga08",
+      "name": "Oversight of Government Management Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga08?format=json"
+    },
+    {
+      "id": "ssga18",
+      "name": "Federal Spending Oversight and Emergency Management Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga18?format=json"
+    },
+    {
+      "id": "ssga10",
+      "name": "State, Local, and Private Sector Preparedness and Integration (Ad Hoc) Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga10?format=json"
+    },
+    {
+      "id": "ssga04",
+      "name": "General Services, Federalism, and the District of Columbia Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga04?format=json"
+    },
+    {
+      "id": "ssga15",
+      "name": "Financial and Contracting Oversight Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssga15?format=json"
+    },
+    {
+      "id": "ssfr12",
+      "name": "International Development and Foreign Assistance, Economic Affairs, International Environmental Protection, and Peace Corps Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr12?format=json"
+    },
+    {
+      "id": "ssfr10",
+      "name": "Special Subcommittee on War Powers Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr10?format=json"
+    },
+    {
+      "id": "ssfr04",
+      "name": "International Operations and Terrorism Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr04?format=json"
+    },
+    {
+      "id": "ssfr13",
+      "name": "International Operations and Organizations, Human Rights, Democracy, and Global Women's Issues Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr13?format=json"
+    },
+    {
+      "id": "ssfr03",
+      "name": "International Economic Policy, Export and Trade Promotion Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr03?format=json"
+    },
+    {
+      "id": "ssfr11",
+      "name": "Central Asia and South Caucasus Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfr11?format=json"
+    },
+    {
+      "id": "ssfi19",
+      "name": "Savings, Pensions and Investment Policy Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi19?format=json"
+    },
+    {
+      "id": "ssfi04",
+      "name": "Long-Term Growth, Debt and Deficit Reduction Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi04?format=json"
+    },
+    {
+      "id": "ssfi05",
+      "name": "Private Retirement Plans and Oversight of the Internal Revenue Service Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi05?format=json"
+    },
+    {
+      "id": "ssfi09",
+      "name": "Long-Term Growth and Debt Reduction Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi09?format=json"
+    },
+    {
+      "id": "ssfi21",
+      "name": "Estate and Gift Taxation Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi21?format=json"
+    },
+    {
+      "id": "ssfi20",
+      "name": "Economic Growth, Employment and Revenue Sharing Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi20?format=json"
+    },
+    {
+      "id": "ssfi16",
+      "name": "Oversight of the Internal Revenue Service Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi16?format=json"
+    },
+    {
+      "id": "ssfi08",
+      "name": "Medicare, Long-Term Care and Health Insurance Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi08?format=json"
+    },
+    {
+      "id": "ssfi07",
+      "name": "Energy and Agricultural Taxation Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi07?format=json"
+    },
+    {
+      "id": "ssfi06",
+      "name": "Taxation and IRS Oversight Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi06?format=json"
+    },
+    {
+      "id": "ssfi03",
+      "name": "International Trade Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi03?format=json"
+    },
+    {
+      "id": "ssfi01",
+      "name": "Medicaid and Health Care for Low-Income Families Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssfi01?format=json"
+    },
+    {
+      "id": "ssev13",
+      "name": "Private Sector and Consumer Solutions to Global Warming and Wildlife Protection Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev13?format=json"
+    },
+    {
+      "id": "ssev17",
+      "name": "Children's Health and Environmental Responsibility Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev17?format=json"
+    },
+    {
+      "id": "ssev16",
+      "name": "Green Jobs and the New Economy Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev16?format=json"
+    },
+    {
+      "id": "ssev18",
+      "name": "Oversight Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev18?format=json"
+    },
+    {
+      "id": "ssev07",
+      "name": "Clean Air and Nuclear Regulation Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev07?format=json"
+    },
+    {
+      "id": "ssev12",
+      "name": "Public Sector Solutions to Global Warming, Oversight, and Children's Health Protection Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev12?format=json"
+    },
+    {
+      "id": "ssev06",
+      "name": "Clean Water, Fisheries and Wildlife Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev06?format=json"
+    },
+    {
+      "id": "ssev14",
+      "name": "Transportation Safety, Infrastructure Security, and Water Quality Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev14?format=json"
+    },
+    {
+      "id": "ssev11",
+      "name": "Fisheries, Wildlife, and Water Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev11?format=json"
+    },
+    {
+      "id": "ssev05",
+      "name": "Nuclear Regulation Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev05?format=json"
+    },
+    {
+      "id": "ssev03",
+      "name": "Toxic Substances, Research and Development Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev03?format=json"
+    },
+    {
+      "id": "ssev02",
+      "name": "Environmental Protection Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev02?format=json"
+    },
+    {
+      "id": "ssev04",
+      "name": "Superfund, Recycling, and Solid Waste Management Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev04?format=json"
+    },
+    {
+      "id": "ssev01",
+      "name": "Water Resources, Transportation, Public Buildings, and Economic Development Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/ssev01?format=json"
+    },
+    {
+      "id": "sseg10",
+      "name": "Natural Resources Development and Production Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sseg10?format=json"
+    },
+    {
+      "id": "sseg08",
+      "name": "Water and Power Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sseg08?format=json"
+    },
+    {
+      "id": "sseg05",
+      "name": "Energy Production and Regulation Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sseg05?format=json"
+    },
+    {
+      "id": "sseg09",
+      "name": "Public Lands, Reserved Water and Resource Conservation Subcommittee",
+      "chamber": "senate",
+      "type": "standing",
+      "url": "https://api.congress.gov/v3/committee/senate/sseg09?format=json"
+    }
   ],
-  "member_assignments": [
-    { "bioguide_id": "S000148", "committee_id": "SSFI", "role": "ranking_member" },
-    { "bioguide_id": "M000355", "committee_id": "SSJU", "role": "member" },
-    { "bioguide_id": "P000197", "committee_id": "HSBA", "role": "member" },
-    { "bioguide_id": "A000370", "committee_id": "HSED", "role": "member" },
-    { "bioguide_id": "G000585", "committee_id": "HSAG", "role": "member" },
-    { "bioguide_id": "O000172", "committee_id": "HSWM", "role": "member" },
-    { "bioguide_id": "T000483", "committee_id": "HSBA", "role": "member" }
-  ]
+  "member_assignments": [],
+  "source": "Congress.gov API",
+  "last_updated": "2026-02-20T22:18:30.513Z"
 }

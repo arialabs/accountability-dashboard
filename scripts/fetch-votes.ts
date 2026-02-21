@@ -1,11 +1,11 @@
 #!/usr/bin/env tsx
 /**
- * Fetch recent key votes from Congress.gov API
+ * Fetch House roll call votes from Congress.gov API v3
  * 
  * Usage: CONGRESS_API_KEY=xxx tsx scripts/fetch-votes.ts
  * 
- * Fetches roll call votes for the current Congress and categorizes them
- * for use in alignment score calculation.
+ * Uses the /house-vote endpoint (added May 2025).
+ * Senate votes are not yet available in the API — use VoteView data for Senate.
  * 
  * Output: src/data/key-votes.json
  * Source: https://api.congress.gov/v3
@@ -20,7 +20,7 @@ const CURRENT_CONGRESS = 119; // 2025-2027
 const OUTPUT_PATH = path.join(__dirname, "../src/data/key-votes.json");
 
 if (!API_KEY) {
-  console.error("❌ CONGRESS_API_KEY required.");
+  console.error("❌ CONGRESS_API_KEY required. Get one at https://api.congress.gov/sign-up/");
   process.exit(1);
 }
 
@@ -38,7 +38,6 @@ const CATEGORY_MAP: Record<string, string> = {
   "social_security": "Privatize Social Security",
 };
 
-// Keywords to auto-categorize bills
 const CATEGORY_KEYWORDS: Record<string, string[]> = {
   healthcare: ["health", "medicare", "medicaid", "aca", "affordable care", "drug pricing", "pharmaceutical"],
   environment: ["climate", "environment", "epa", "emission", "clean energy", "renewable", "conservation"],
@@ -57,17 +56,26 @@ interface BillVoteRecord {
   congress: number;
   chamber: "House" | "Senate";
   roll_number: number;
+  session: number;
   date: string;
   bill_id: string;
   bill_title: string;
   description: string;
   category: string;
-  category_topic: string; // Maps to OnTheIssues topic
+  category_topic: string;
   result: "Passed" | "Failed" | "Unknown";
-  yea_count: number;
-  nay_count: number;
+  vote_question: string;
+  vote_type: string;
+  party_totals: {
+    party: string;
+    yea: number;
+    nay: number;
+    not_voting: number;
+    present: number;
+  }[];
   votes: Record<string, "Yea" | "Nay" | "Not Voting" | "Present">;
   bill_url: string;
+  source_url: string;
   is_key_vote: boolean;
   key_vote_reason: string;
 }
@@ -77,7 +85,9 @@ async function fetchWithRetry(url: string, retries = 3): Promise<any> {
     try {
       const res = await fetch(url);
       if (res.status === 429) {
-        await new Promise(r => setTimeout(r, Math.pow(2, i) * 2000));
+        const wait = Math.pow(2, i) * 2000;
+        console.log(`  ⏳ Rate limited, waiting ${wait}ms...`);
+        await new Promise(r => setTimeout(r, wait));
         continue;
       }
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -89,9 +99,8 @@ async function fetchWithRetry(url: string, retries = 3): Promise<any> {
   }
 }
 
-function categorize(title: string, description: string): { category: string; topic: string } {
-  const text = `${title} ${description}`.toLowerCase();
-  
+function categorize(title: string, question: string): { category: string; topic: string } {
+  const text = `${title} ${question}`.toLowerCase();
   for (const [category, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
     if (keywords.some(kw => text.includes(kw))) {
       return { category, topic: CATEGORY_MAP[category] || category };
@@ -100,49 +109,56 @@ function categorize(title: string, description: string): { category: string; top
   return { category: "other", topic: "other" };
 }
 
-function isKeyVote(vote: any): { is_key: boolean; reason: string } {
-  // Final passage votes are key votes
-  if (vote.question?.includes("On Passage") || vote.question?.includes("On the Resolution")) {
+function isKeyVote(question: string): { is_key: boolean; reason: string } {
+  if (question.includes("On Passage") || question.includes("On the Resolution")) {
     return { is_key: true, reason: "Final passage vote" };
   }
-  // Cloture votes on major bills
-  if (vote.question?.includes("On the Cloture Motion")) {
-    return { is_key: true, reason: "Cloture motion (filibuster override)" };
+  if (question.includes("Cloture")) {
+    return { is_key: true, reason: "Cloture motion" };
   }
-  // Veto overrides
-  if (vote.question?.includes("Override")) {
+  if (question.includes("Override")) {
     return { is_key: true, reason: "Veto override attempt" };
   }
-  // Conference report adoption
-  if (vote.question?.includes("Conference Report")) {
+  if (question.includes("Conference Report")) {
     return { is_key: true, reason: "Conference report adoption" };
+  }
+  if (question.includes("On Agreeing to the Resolution")) {
+    return { is_key: true, reason: "Resolution vote" };
   }
   return { is_key: false, reason: "" };
 }
 
-async function fetchRollCallVotes(chamber: "house" | "senate"): Promise<any[]> {
+async function fetchBillTitle(legislationType: string, legislationNumber: string): Promise<string> {
+  try {
+    const type = legislationType.toLowerCase();
+    const url = `${API_BASE}/bill/${CURRENT_CONGRESS}/${type}/${legislationNumber}?api_key=${API_KEY}`;
+    const data = await fetchWithRetry(url);
+    return data.bill?.title || "";
+  } catch {
+    return "";
+  }
+}
+
+async function fetchAllHouseVotes(): Promise<any[]> {
   const votes: any[] = [];
   let offset = 0;
   const limit = 250;
 
-  console.log(`\n📥 Fetching ${chamber} roll call votes for Congress ${CURRENT_CONGRESS}...`);
+  console.log(`\n📥 Fetching House roll call votes for Congress ${CURRENT_CONGRESS}...`);
 
   while (true) {
-    const url = `${API_BASE}/roll-call-vote/${CURRENT_CONGRESS}/${chamber}?limit=${limit}&offset=${offset}&api_key=${API_KEY}`;
-    
+    const url = `${API_BASE}/house-vote?congress=${CURRENT_CONGRESS}&limit=${limit}&offset=${offset}&api_key=${API_KEY}`;
     try {
       const data = await fetchWithRetry(url);
-      const items = data.rollCallVotes || data.roll_call_votes || [];
-      
+      const items = data.houseRollCallVotes || [];
       if (items.length === 0) break;
       votes.push(...items);
-      console.log(`  Fetched ${votes.length} ${chamber} votes...`);
-
+      console.log(`  Fetched ${votes.length} votes...`);
       if (!data.pagination?.next) break;
       offset += limit;
-      await new Promise(r => setTimeout(r, 500));
+      await new Promise(r => setTimeout(r, 300));
     } catch (e) {
-      console.warn(`  ⚠️ Error fetching ${chamber} votes at offset ${offset}: ${e}`);
+      console.warn(`  ⚠️ Error at offset ${offset}: ${e}`);
       break;
     }
   }
@@ -150,64 +166,151 @@ async function fetchRollCallVotes(chamber: "house" | "senate"): Promise<any[]> {
   return votes;
 }
 
-async function fetchVoteDetail(url: string): Promise<any> {
-  try {
-    const fullUrl = url.includes("api_key") ? url : `${url}?api_key=${API_KEY}`;
-    return await fetchWithRetry(fullUrl);
-  } catch (e) {
-    console.warn(`  ⚠️ Could not fetch vote detail: ${e}`);
-    return null;
+async function fetchMemberVotes(session: number, rollNumber: number): Promise<Record<string, string>> {
+  const votes: Record<string, string> = {};
+  let offset = 0;
+  const limit = 250;
+
+  while (true) {
+    const url = `${API_BASE}/house-vote/${CURRENT_CONGRESS}/${session}/${rollNumber}/members?limit=${limit}&offset=${offset}&api_key=${API_KEY}`;
+    try {
+      const data = await fetchWithRetry(url);
+      const results = data.houseRollCallVoteMemberVotes?.results || [];
+      if (results.length === 0) break;
+      for (const m of results) {
+        if (m.bioguideID && m.voteCast) {
+          votes[m.bioguideID] = m.voteCast;
+        }
+      }
+      if (!data.pagination?.next) break;
+      offset += limit;
+      await new Promise(r => setTimeout(r, 200));
+    } catch {
+      break;
+    }
   }
+
+  return votes;
 }
 
 async function main() {
   console.log("=".repeat(50));
-  console.log("Key Votes Fetch Script");
+  console.log("House Votes Fetch Script (Congress.gov API v3)");
   console.log("=".repeat(50));
   console.log(`Congress: ${CURRENT_CONGRESS}`);
-  console.log(`Source: Congress.gov API v3`);
   console.log(`Output: ${OUTPUT_PATH}\n`);
+  console.log(`ℹ️ Senate votes not yet available in API — use VoteView for Senate data.\n`);
+
+  const rawVotes = await fetchAllHouseVotes();
+  console.log(`\n📊 Total House votes found: ${rawVotes.length}`);
+
+  // Sort by date descending (newest first)
+  rawVotes.sort((a, b) => new Date(b.startDate || b.actionDate || 0).getTime() - new Date(a.startDate || a.actionDate || 0).getTime());
+
+  // Parse limit arg
+  const limitArg = process.argv.find(a => a.startsWith('--limit='));
+  const maxToProcess = limitArg ? parseInt(limitArg.split('=')[1]) : 50;
+  console.log(`ℹ️ Limiting detailed processing to newest ${maxToProcess} votes (use --limit=N to change)`);
 
   const allVotes: BillVoteRecord[] = [];
+  let processed = 0;
+  let detailedCount = 0;
 
-  // Fetch from both chambers
-  for (const chamber of ["house", "senate"] as const) {
-    const rawVotes = await fetchRollCallVotes(chamber);
-    console.log(`  Got ${rawVotes.length} raw ${chamber} votes`);
-
-    // Process each vote
-    for (const vote of rawVotes) {
-      const title = vote.bill?.title || vote.question || "Unknown";
-      const desc = vote.description || "";
-      const { category, topic } = categorize(title, desc);
-      const { is_key, reason } = isKeyVote(vote);
-
-      // Only keep key votes and categorizable votes
-      if (!is_key && category === "other") continue;
-
-      const record: BillVoteRecord = {
-        id: `${chamber}-${CURRENT_CONGRESS}-${vote.rollNumber || vote.roll_number}`,
-        congress: CURRENT_CONGRESS,
-        chamber: chamber === "house" ? "House" : "Senate",
-        roll_number: vote.rollNumber || vote.roll_number,
-        date: vote.date || vote.actionDate || "",
-        bill_id: vote.bill?.number ? `${vote.bill.type || ""}${vote.bill.number}` : "",
-        bill_title: title,
-        description: desc,
-        category,
-        category_topic: topic,
-        result: vote.result?.includes("Passed") || vote.result?.includes("Agreed") ? "Passed" : 
-                vote.result?.includes("Failed") || vote.result?.includes("Rejected") ? "Failed" : "Unknown",
-        yea_count: vote.yea_count || vote.total?.yea || 0,
-        nay_count: vote.nay_count || vote.total?.nay || 0,
-        votes: {}, // Populated from vote detail
-        bill_url: vote.bill?.url || vote.url || "",
-        is_key_vote: is_key,
-        key_vote_reason: reason,
-      };
-
-      allVotes.push(record);
+  // Load existing votes to skip redundant processing
+  let existingVotes: Record<string, BillVoteRecord> = {};
+  if (fs.existsSync(OUTPUT_PATH) && !process.argv.includes('--force')) {
+    try {
+      const data = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf-8'));
+      if (Array.isArray(data)) {
+        data.forEach((v: BillVoteRecord) => existingVotes[v.id] = v);
+        console.log(`ℹ️ Loaded ${Object.keys(existingVotes).length} existing votes from disk.`);
+      }
+    } catch (e) {
+      console.warn(`⚠️ Could not read existing votes: ${e}`);
     }
+  }
+
+  for (const vote of rawVotes) {
+    const voteId = `house-${CURRENT_CONGRESS}-${vote.rollCallNumber}`;
+    
+    // Skip if already exists and has votes
+    if (existingVotes[voteId] && Object.keys(existingVotes[voteId].votes || {}).length > 0) {
+      allVotes.push(existingVotes[voteId]);
+      continue;
+    }
+
+    if (detailedCount >= maxToProcess) {
+      // If limit reached, keep existing record if available, else skip details
+      if (existingVotes[voteId]) {
+        allVotes.push(existingVotes[voteId]);
+      }
+      continue; 
+    }
+
+    const question = vote.voteQuestion || "";
+    const { is_key, reason } = isKeyVote(question);
+    
+    // Get bill title for categorization
+    let billTitle = "";
+    if (vote.legislationType && vote.legislationNumber) {
+      billTitle = await fetchBillTitle(vote.legislationType, vote.legislationNumber);
+      await new Promise(r => setTimeout(r, 200));
+    }
+
+    const { category, topic } = categorize(billTitle, question);
+
+    // Keep key votes and categorizable votes
+    if (!is_key && category === "other") {
+      processed++;
+      if (processed % 50 === 0) console.log(`  Processed ${processed}/${rawVotes.length}...`);
+      continue;
+    }
+
+    detailedCount++;
+    if (detailedCount > maxToProcess) {
+      console.log(`\n🛑 Reached limit of ${maxToProcess} detailed votes. Switching to existing-only mode.`);
+    }
+
+    // Fetch per-member votes for key/categorized votes
+    console.log(`  🗳️ Fetching member votes for roll #${vote.rollCallNumber}: ${billTitle.slice(0, 60) || question.slice(0, 60)}...`);
+    const memberVotes = await fetchMemberVotes(vote.sessionNumber, vote.rollCallNumber);
+    await new Promise(r => setTimeout(r, 300));
+
+    const partyTotals = (vote.votePartyTotal || []).map((p: any) => ({
+      party: p.party?.type || p.voteParty || "?",
+      yea: p.yeaTotal || 0,
+      nay: p.nayTotal || 0,
+      not_voting: p.notVotingTotal || 0,
+      present: p.presentTotal || 0,
+    }));
+
+    const record: BillVoteRecord = {
+      id: `house-${CURRENT_CONGRESS}-${vote.rollCallNumber}`,
+      congress: CURRENT_CONGRESS,
+      chamber: "House",
+      roll_number: vote.rollCallNumber,
+      session: vote.sessionNumber,
+      date: vote.startDate || "",
+      bill_id: vote.legislationNumber ? `${vote.legislationType}${vote.legislationNumber}` : "",
+      bill_title: billTitle,
+      description: question,
+      category,
+      category_topic: topic,
+      result: vote.result === "Passed" || vote.result?.includes("Agreed") ? "Passed" :
+              vote.result === "Failed" || vote.result?.includes("Rejected") ? "Failed" : "Unknown",
+      vote_question: question,
+      vote_type: vote.voteType || "",
+      party_totals: partyTotals,
+      votes: memberVotes,
+      bill_url: vote.legislationUrl || "",
+      source_url: vote.sourceDataURL || "",
+      is_key_vote: is_key,
+      key_vote_reason: reason,
+    };
+
+    allVotes.push(record);
+    processed++;
+    if (processed % 50 === 0) console.log(`  Processed ${processed}/${rawVotes.length}...`);
   }
 
   // Write output
@@ -220,6 +323,7 @@ async function main() {
   console.log(`\n✅ Wrote ${allVotes.length} votes to ${OUTPUT_PATH}`);
   console.log(`   Key votes: ${keyVotes.length}`);
   console.log(`   Categorized: ${categorized.length}`);
+  console.log(`   With member-level data: ${allVotes.filter(v => Object.keys(v.votes).length > 0).length}`);
   console.log(`   Categories:`);
   const cats = allVotes.reduce((acc, v) => { acc[v.category] = (acc[v.category] || 0) + 1; return acc; }, {} as Record<string, number>);
   for (const [cat, count] of Object.entries(cats).sort((a, b) => b[1] - a[1])) {
