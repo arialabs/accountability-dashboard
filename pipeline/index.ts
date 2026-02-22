@@ -77,10 +77,26 @@ async function runPipeline() {
     // Step 3: Fetch campaign finance from FEC
     console.log("\n[3/5] Fetching campaign finance from FEC...");
     
-    let financeData: Record<string, any> = {};
+    // Define output directories early so we can read existing data
+    const srcDataDir = "./src/data";
+    
+    // Load existing finance data to avoid overwriting with empty when FEC is skipped
+    let existingFinanceData: Record<string, any> = {};
+    const financeJsonPath = `${srcDataDir}/finance.json`;
+    if (fs.existsSync(financeJsonPath)) {
+      try {
+        const raw = fs.readFileSync(financeJsonPath, "utf-8");
+        existingFinanceData = JSON.parse(raw);
+        console.log(`  Loaded ${Object.keys(existingFinanceData).length} existing finance records`);
+      } catch {
+        console.log("  Could not read existing finance.json, starting fresh");
+      }
+    }
+    
+    let freshFinanceData: Record<string, any> = {};
     
     if (process.env.FEC_API_KEY && process.env.FEC_API_KEY !== 'DEMO_KEY') {
-      financeData = await fetchAllMemberFinance(
+      freshFinanceData = await fetchAllMemberFinance(
         transformedMembers.map(m => ({
           bioguide_id: m.bioguide_id,
           full_name: m.full_name,
@@ -92,17 +108,20 @@ async function runPipeline() {
         2000 // delay between batches (ms) - 2 seconds
       );
       
-      console.log(`✓ Got detailed finance data for ${Object.keys(financeData).length} members`);
+      console.log(`✓ Got detailed finance data for ${Object.keys(freshFinanceData).length} members`);
     } else {
-      console.log("⚠️  Skipping FEC (set FEC_API_KEY for real data)");
+      console.log("⚠️  Skipping FEC fetch (set FEC_API_KEY for real data)");
       console.log("   Run: export FEC_API_KEY=your_key_here");
+      console.log(`   Preserving ${Object.keys(existingFinanceData).length} existing records`);
     }
+    
+    // Merge: existing data as base, new data overrides (so CI without FEC key preserves data)
+    const financeData: Record<string, any> = { ...existingFinanceData, ...freshFinanceData };
 
     // Step 4: Write output files
     console.log("\n[4/5] Writing output files...");
     
     const outDir = "./pipeline/output";
-    const srcDataDir = "./src/data";
     
     if (!fs.existsSync(outDir)) {
       fs.mkdirSync(outDir, { recursive: true });

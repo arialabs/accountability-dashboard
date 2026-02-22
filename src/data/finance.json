@@ -1,1 +1,38 @@
-{}
+{
+  "M000355": {
+    "candidate_id": "S2KY00012",
+    "cycle": 2026,
+    "total_raised": 112901,
+    "total_spent": 927283,
+    "cash_on_hand": 0,
+    "individual_contributions": 18654,
+    "pac_contributions": 15000,
+    "party_contributions": 0,
+    "candidate_self_funding": 0,
+    "small_donors": 1453,
+    "large_donors": 17201,
+    "pac_percentage": 13.3,
+    "small_donor_percentage": 1.3,
+    "large_donor_percentage": 15.2,
+    "top_contributors": [],
+    "top_industries": []
+  },
+  "D000563": {
+    "candidate_id": "S6IL00151",
+    "cycle": 2026,
+    "total_raised": 76714,
+    "total_spent": 618011,
+    "cash_on_hand": 0,
+    "individual_contributions": 32051,
+    "pac_contributions": 7000,
+    "party_contributions": 0,
+    "candidate_self_funding": 0,
+    "small_donors": 10679,
+    "large_donors": 21372,
+    "pac_percentage": 9.1,
+    "small_donor_percentage": 13.9,
+    "large_donor_percentage": 27.9,
+    "top_contributors": [],
+    "top_industries": []
+  }
+}

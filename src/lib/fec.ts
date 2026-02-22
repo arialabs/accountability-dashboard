@@ -138,13 +138,24 @@ export async function searchCandidateByName(
 }
 
 /**
- * Get financial summary for a candidate
+ * Most recent completed FEC election cycle — used as fallback when the
+ * current year returns no data (e.g. retired members, off-cycle senators).
+ */
+const FALLBACK_CYCLE = 2024;
+
+/**
+ * Get financial summary for a candidate.
+ * Tries the requested (or current) cycle first; falls back to FALLBACK_CYCLE
+ * so that senators who retired or are not up in the current cycle (e.g.
+ * McConnell, Durbin) still get data shown.
  */
 export async function getCandidateFinancials(
   candidateId: string,
   cycle?: number
 ): Promise<FECFinancialSummary | null> {
-  const targetCycle = cycle || new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
+  // FEC cycles are even-numbered 2-year periods; snap to nearest even year.
+  const targetCycle = cycle || (currentYear % 2 === 0 ? currentYear : currentYear + 1);
   
   const response = await fetchFECData<FECApiResponse<FECApiFinancialTotals>>(
     `/candidate/${candidateId}/totals/`,
@@ -154,11 +165,15 @@ export async function getCandidateFinancials(
     }
   );
 
-  if (!response.success || !response.data?.results) {
-    return null;
-  }
-
-  if (response.data.results.length === 0) {
+  // If no data for the target cycle, try the fallback cycle (most recent completed)
+  if (
+    !response.success ||
+    !response.data?.results ||
+    response.data.results.length === 0
+  ) {
+    if (targetCycle !== FALLBACK_CYCLE) {
+      return getCandidateFinancials(candidateId, FALLBACK_CYCLE);
+    }
     return null;
   }
 
@@ -181,14 +196,16 @@ export async function getCandidateFinancials(
 }
 
 /**
- * Get top contributors for a candidate
+ * Get top contributors for a candidate.
+ * Falls back to FALLBACK_CYCLE when the current cycle returns no results.
  */
 export async function getTopContributors(
   candidateId: string,
   cycle?: number,
   limit = 10
 ): Promise<FECContributor[]> {
-  const targetCycle = cycle || new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
+  const targetCycle = cycle || (currentYear % 2 === 0 ? currentYear : currentYear + 1);
   
   const response = await fetchFECData<FECApiResponse<FECApiContributor>>(
     `/candidate/${candidateId}/schedules/schedule_a/by_contributor/`,
@@ -199,7 +216,11 @@ export async function getTopContributors(
     }
   );
 
-  if (!response.success || !response.data?.results) {
+  if (!response.success || !response.data?.results || response.data.results.length === 0) {
+    // Retry with fallback cycle if current cycle has no data
+    if (targetCycle !== FALLBACK_CYCLE) {
+      return getTopContributors(candidateId, FALLBACK_CYCLE, limit);
+    }
     return [];
   }
 
@@ -212,7 +233,8 @@ export async function getTopContributors(
 }
 
 /**
- * Get detailed Schedule A contributions for industry analysis
+ * Get detailed Schedule A contributions for industry analysis.
+ * Falls back to FALLBACK_CYCLE when current cycle returns no data.
  */
 export async function getScheduleAContributions(
   candidateId: string,
@@ -226,7 +248,8 @@ export async function getScheduleAContributions(
   contribution_receipt_date: string;
   committee_name: string;
 }>> {
-  const targetCycle = cycle || new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
+  const targetCycle = cycle || (currentYear % 2 === 0 ? currentYear : currentYear + 1);
   
   const response = await fetchFECData<FECApiResponse<FECApiScheduleAContribution>>(
     `/schedules/schedule_a/`,
@@ -239,7 +262,11 @@ export async function getScheduleAContributions(
     30 * 60 * 1000 // Cache for 30 minutes
   );
 
-  if (!response.success || !response.data?.results) {
+  if (!response.success || !response.data?.results || response.data.results.length === 0) {
+    // Retry with fallback cycle if current cycle has no data
+    if (targetCycle !== FALLBACK_CYCLE) {
+      return getScheduleAContributions(candidateId, FALLBACK_CYCLE, limit);
+    }
     return [];
   }
 
