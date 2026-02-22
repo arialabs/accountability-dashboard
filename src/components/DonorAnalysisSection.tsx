@@ -172,7 +172,7 @@ export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionPr
       </p>
       
       {/* Summary Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <div className="grid grid-cols-2 gap-4 mb-10">
         <div className="bg-slate-50 rounded-xl p-4 text-center">
           <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Total Raised</p>
           <p className="font-mono text-2xl font-black text-slate-900">{formatCurrencyShort(finance.total_raised)}</p>
@@ -180,14 +180,6 @@ export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionPr
         <div className="bg-slate-50 rounded-xl p-4 text-center">
           <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Total Spent</p>
           <p className="font-mono text-2xl font-black text-slate-900">{formatCurrencyShort(finance.total_spent)}</p>
-        </div>
-        <div className="bg-slate-50 rounded-xl p-4 text-center">
-          <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Cash on Hand</p>
-          <p className="font-mono text-2xl font-black text-slate-900">{formatCurrencyShort(finance.cash_on_hand)}</p>
-        </div>
-        <div className="bg-slate-50 rounded-xl p-4 text-center">
-          <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Self-Funded</p>
-          <p className="font-mono text-2xl font-black text-slate-900">{formatCurrencyShort(finance.candidate_self_funding)}</p>
         </div>
       </div>
       

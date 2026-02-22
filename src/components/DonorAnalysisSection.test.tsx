@@ -39,7 +39,6 @@ describe("DonorAnalysisSection", () => {
     render(<DonorAnalysisSection finance={mockFinance} />);
     expect(screen.getByText("Total Raised")).toBeInTheDocument();
     expect(screen.getByText("Total Spent")).toBeInTheDocument();
-    expect(screen.getByText("Cash on Hand")).toBeInTheDocument();
   });
 
   it("formats currency correctly", () => {
