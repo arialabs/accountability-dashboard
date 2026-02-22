@@ -236,12 +236,12 @@ function CongressContent() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
+    <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-16 space-y-8 overflow-x-hidden">
       <div className="flex flex-col gap-6 mb-12">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tight text-slate-900">Congress Members</h1>
-            <p className="text-lg text-slate-600 mt-4 leading-relaxed">
+            <h1 className="text-2xl sm:text-4xl md:text-6xl font-black leading-tight tracking-tight text-slate-900">Congress Members</h1>
+            <p className="text-base sm:text-lg text-slate-600 mt-2 sm:mt-4 leading-relaxed">
               {isFiltered 
                 ? `Showing ${filteredStats.total} of ${stats.total} members`
                 : `All ${stats.total} members of the 119th United States Congress`}
