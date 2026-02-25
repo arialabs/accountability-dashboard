@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+  actions: write
 
     steps:
       - name: Checkout
@@ -25,13 +26,27 @@ jobs:
         run: node .github/scripts/update-changelog.mjs
 
       - name: Commit changelog
+        id: commit
         run: |
           if git diff --quiet CHANGELOG.md .changelog-last-commit; then
             echo "No changelog updates"
             exit 0
+          echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add CHANGELOG.md .changelog-last-commit
           git commit -m "chore: update changelog"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -s -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/arialabs/accountability-dashboard/actions/workflows/deploy.yml/dispatches \
+            -d '{"ref":"main"}'
+
