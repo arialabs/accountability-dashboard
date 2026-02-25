@@ -1,0 +1,37 @@
+name: Changelog
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  update-changelog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Update changelog
+        run: node .github/scripts/update-changelog.mjs
+
+      - name: Commit changelog
+        run: |
+          if git diff --quiet CHANGELOG.md .changelog-last-commit; then
+            echo "No changelog updates"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CHANGELOG.md .changelog-last-commit
+          git commit -m "chore: update changelog"
+          git push
