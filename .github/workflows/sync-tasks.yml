@@ -1,0 +1,85 @@
+name: Sync Tasks
+
+on:
+  issues:
+    types: [opened, labeled]
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync with tasks repo
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const repo = context.repo.repo;
+            const owner = context.repo.owner;
+
+            if (context.eventName === 'issues') {
+              const issue = context.payload.issue;
+              if (issue.pull_request) return; // ignore PRs
+
+              const labels = issue.labels.map(l => l.name);
+              const projectLabel = labels.find(l => l.startsWith('project:'));
+              if (!projectLabel) return;
+              if (labels.includes('synced:tasks')) return;
+
+              const title = `[${repo}] ${issue.title}`;
+              const body = `Source: ${issue.html_url}
+
+${issue.body || ''}`;
+              const newIssue = await github.rest.issues.create({
+                owner: 'arialabs',
+                repo: 'tasks',
+                title,
+                body,
+                labels: [projectLabel, `source:${repo}`]
+              });
+
+              await github.rest.issues.addLabels({
+                owner,
+                repo,
+                issue_number: issue.number,
+                labels: ['synced:tasks']
+              });
+
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: issue.number,
+                body: `Synced to arialabs/tasks#${newIssue.data.number}`
+              });
+            }
+
+            if (context.eventName === 'pull_request') {
+              const pr = context.payload.pull_request;
+              if (!pr.merged) return;
+              const text = `${pr.title}
+${pr.body || ''}`;
+              const regex = /(?:arialabs\/tasks#|tasks#)(\d+)/g;
+              const ids = new Set();
+              let m;
+              while ((m = regex.exec(text)) !== null) ids.add(Number(m[1]));
+              for (const id of ids) {
+                await github.rest.issues.update({
+                  owner: 'arialabs',
+                  repo: 'tasks',
+                  issue_number: id,
+                  state: 'closed'
+                });
+                await github.rest.issues.createComment({
+                  owner: 'arialabs',
+                  repo: 'tasks',
+                  issue_number: id,
+                  body: `Auto-closed by merged PR: ${pr.html_url}`
+                });
+              }
+            }
