@@ -213,8 +213,8 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={structuredDataScript(congressSchema)} />
 
       {/* ══ HERO ══════════════════════════════════════════════════════════ */}
-      <section className="bg-white border-b border-slate-200 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+      <section className="section-shell bg-gradient-to-b from-white to-[var(--bg-secondary)] border-b border-slate-200">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
           {/* Eyebrow — teal brand mark + label */}
           <div className="mb-5 flex items-center gap-3">
             <div className="brand-flag-bar" aria-hidden="true" />
@@ -228,7 +228,7 @@ export default function Home() {
 
           {/* Headline */}
           <h1
-            className="mb-4"
+            className="mb-5"
             style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)", fontWeight: 700 }}
           >
             <span>Accountability</span>
@@ -238,7 +238,7 @@ export default function Home() {
           </h1>
 
           <p
-            className="mb-5 max-w-2xl"
+            className="mb-6 max-w-3xl"
             style={{
               fontFamily: "'Source Sans 3', sans-serif",
               color: "var(--text-secondary)",
@@ -252,7 +252,7 @@ export default function Home() {
 
           {/* Mission statement — teal left border "flag" */}
           <div
-            className="mb-6 py-3 section-flag-heading md:mb-8"
+            className="mb-8 py-3 section-flag-heading md:mb-10"
             style={{ borderColor: "var(--accent)" }}
           >
             <p
@@ -270,21 +270,21 @@ export default function Home() {
           <RepSearch size="large" placeholder="Search by name, state, or ZIP code" />
 
           <p
-            className="mt-2 text-sm"
+            className="mt-3 text-sm"
             style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
           >
             Browse by branch below, or search directly for a representative, senator, or official.
           </p>
 
           {/* Hero data viz */}
-          <div className="mt-6 pt-4 border-t border-slate-100 md:mt-7">
+          <div className="mt-8 pt-5 border-t border-slate-200 md:mt-10">
             <HeroSparkline />
           </div>
         </div>
       </section>
 
       {/* ══ QUICK STATS BAR — AccountabilityDataCards ═════════════════════ */}
-      <section className="bg-slate-900 py-6 md:py-8" aria-label="Site statistics">
+      <section className="section-shell-tight bg-slate-900" aria-label="Site statistics">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
             {SITE_STATS.map((stat) => (
@@ -304,10 +304,10 @@ export default function Home() {
       {/* ══ TRENDING SPOTLIGHT — Editorial layout ══════════════════════════
           Phase 3: 1 LARGE featured (60%) + 2 smaller supporting (40% stacked)
       ══ */}
-      <section className="bg-white border-b border-slate-200 py-12 md:py-16">
+      <section className="section-shell bg-white border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-6 lg:px-8 space-y-8 md:space-y-10">
           {/* Section header — teal brand mark + redaction aesthetic */}
-          <ScrollFadeIn>
+          <ScrollFadeIn className="section-header">
             <div className="flex items-baseline gap-4 mb-3">
               <div className="brand-flag-bar" aria-hidden="true" />
               <span
@@ -329,7 +329,7 @@ export default function Home() {
               Reps in the data spotlight
             </h2>
             <p
-              className="mt-2 text-sm"
+              className="mt-3 text-base leading-relaxed"
               style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
             >
               Officials with notable data patterns this cycle
@@ -553,7 +553,7 @@ export default function Home() {
         className="border-b border-slate-200"
         style={{ backgroundColor: "var(--bg-primary)" }}
       >
-        <div className="max-w-5xl mx-auto px-6 py-10 lg:px-8 md:py-12">
+        <div className="max-w-5xl mx-auto px-6 section-shell-tight lg:px-8">
           <ScrollFadeIn>
             <LeadershipSpotlight />
           </ScrollFadeIn>
@@ -562,11 +562,11 @@ export default function Home() {
 
 {/* ══ BRANCH NAVIGATION ══════════════════════════════════════════════ */}
       <section
-        className="border-b border-slate-200 py-12 md:py-16"
+        className="section-shell border-b border-slate-200"
         style={{ backgroundColor: "var(--bg-secondary)", borderTop: "3px solid var(--accent)" }}
       >
         <div className="max-w-5xl mx-auto px-6 lg:px-8 space-y-8 md:space-y-10">
-          <ScrollFadeIn>
+          <ScrollFadeIn className="section-header">
             {/* Teal brand-mark bar as section divider */}
             <div className="brand-flag-bar mb-3" aria-hidden="true" />
             <h2
@@ -575,7 +575,7 @@ export default function Home() {
               Browse by branch
             </h2>
             <p
-              className="mt-2 text-sm"
+              className="mt-3 text-base leading-relaxed"
               style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
             >
               Accountability data across the entire federal government
@@ -736,9 +736,9 @@ export default function Home() {
       </section>
 
       {/* ══ DEEP DIVES ═════════════════════════════════════════════════════ */}
-      <section className="py-12 md:py-16" style={{ backgroundColor: "#F1F0ED" }}>
+      <section className="section-shell border-b border-slate-200" style={{ backgroundColor: "#F1F0ED" }}>
         <div className="max-w-5xl mx-auto px-6 lg:px-8 space-y-8 md:space-y-10">
-          <ScrollFadeIn>
+          <ScrollFadeIn className="section-header">
             <div className="brand-flag-bar mb-3" aria-hidden="true" />
             <h2
               style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}
@@ -746,7 +746,7 @@ export default function Home() {
               Deep Dives
             </h2>
             <p
-              className="mt-2 text-sm"
+              className="mt-3 text-base leading-relaxed"
               style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
             >
               In-depth investigations into major scandals and political corruption cases.
@@ -827,7 +827,7 @@ export default function Home() {
         className="border-t border-slate-200"
         style={{ backgroundColor: "var(--bg-secondary)" }}
       >
-        <div className="max-w-4xl mx-auto px-6 py-8 lg:px-8 md:py-10">
+        <div className="max-w-4xl mx-auto px-6 section-shell-tight lg:px-8">
           {/* Teal redaction-bar accent at top */}
           <div className="brand-flag-bar mb-4 md:mb-5" aria-hidden="true" />
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-12">

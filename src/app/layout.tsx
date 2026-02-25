@@ -155,9 +155,9 @@ export default function RootLayout({
         <PWARegister />
         <LayoutErrorBoundary>
           <DevelopmentBanner />
-          <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+          <nav className="bg-white/95 backdrop-blur border-b border-slate-200 sticky top-0 z-50 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex justify-between h-16 items-center">
+              <div className="flex justify-between h-16 md:h-[4.5rem] items-center">
                 {/* Logotype / Wordmark — Phase 2: distinctive weight contrast + teal accent */}
                 <a
                   href="/"
@@ -213,10 +213,10 @@ export default function RootLayout({
             </div>
           </nav>
           <Breadcrumbs />
-          <main className="bg-slate-50">{children}</main>
-          <footer className="bg-white border-t border-slate-200 py-12 mt-24">
+          <main className="bg-slate-50/70">{children}</main>
+          <footer className="bg-white border-t border-slate-200 py-14 mt-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 leading-relaxed space-y-4">
-              <p className="font-semibold text-slate-700 text-sm sm:text-base">Built by Aria Labs</p>
+              <p className="font-semibold text-slate-700 text-sm sm:text-base tracking-wide">Built by Aria Labs</p>
               <p className="text-sm sm:text-base">Data from Congress.gov, Voteview, and OpenFEC</p>
               <p className="text-sm sm:text-base">Democracy shouldn't be paywalled. This is open source.</p>
               <div className="flex justify-center gap-6 text-sm">
