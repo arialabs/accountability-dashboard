@@ -90,7 +90,7 @@ describe("Home Page", () => {
     expect(screen.getByText("435")).toBeDefined();
     expect(screen.getByText("100")).toBeDefined();
     expect(screen.getByText("House")).toBeDefined();
-    expect(screen.getByText("Senate")).toBeDefined();
+    expect(screen.getAllByText("Senate").length).toBeGreaterThan(0);
   });
 
   it("renders the Deep Dives section", () => {
