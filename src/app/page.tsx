@@ -128,15 +128,49 @@ const SITE_STATS = [
   { value: "2.4M+", label: "Votes recorded",             indicator: "up" as const,      featured: true,  context: "Expanding" },
 ];
 
-const HERO_ACTIONS = [
-  { href: "/congress", label: "Explore Congress Data", primary: true },
-  { href: "/methodology", label: "How Scores Are Calculated", primary: false },
-];
-
 const TRUST_SIGNALS = [
   "Official government data only",
   "Methodology fully public",
   "Coverage across all 3 branches",
+];
+
+const SEARCH_SHORTCUTS = [
+  { href: "/house", label: "Browse House" },
+  { href: "/senate", label: "Browse Senate" },
+  { href: "/executive", label: "Browse Executive" },
+];
+
+const FIND_REP_STEPS = [
+  {
+    title: "Start with a name, state, or ZIP",
+    detail: "Search routes you to matching members and officials across branches.",
+  },
+  {
+    title: "Open the profile",
+    detail: "See campaign money, voting behavior, stock trades, and disclosures in one place.",
+  },
+  {
+    title: "Compare claims to actions",
+    detail: "Data cards and trend lines show where rhetoric and record diverge.",
+  },
+];
+
+const DATA_INSIGHTS = [
+  {
+    title: "Money and donors",
+    description: "FEC campaign finance records linked to donor sectors and contribution patterns.",
+    metric: "Millions of donations indexed",
+  },
+  {
+    title: "Votes and policy outcomes",
+    description: "Congress votes connected to bill topics so users can track consistency over time.",
+    metric: "2.4M+ vote records tracked",
+  },
+  {
+    title: "Disclosures and conflicts",
+    description: "Financial disclosures and trade filings surfaced alongside committee oversight roles.",
+    metric: "Cross-branch conflict signals",
+  },
 ];
 
 // ── Extra Deep Dives ─────────────────────────────────────────────────────────
@@ -226,89 +260,134 @@ export default function Home() {
       {/* ══ HERO ══════════════════════════════════════════════════════════ */}
       <section className="section-shell hero-surface border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          {/* Eyebrow — teal brand mark + label */}
-          <div className="mb-4 flex items-center gap-3 md:mb-5">
-            <div className="brand-flag-bar" aria-hidden="true" />
-            <span
-              className="text-xs font-semibold uppercase tracking-widest"
+          <div className="hero-search-grid">
+            <div className="hero-search-panel order-1 md:order-2">
+              <span
+                className="text-xs font-semibold uppercase tracking-widest"
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              >
+                Find a representative first
+              </span>
+              <h2
+                className="mt-2 text-3xl md:text-4xl"
+                style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}
+              >
+                Search any rep, senator, or official
+              </h2>
+              <p
+                className="mt-3 text-base leading-relaxed"
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              >
+                Start with a name, state, or ZIP and jump straight to complete accountability records.
+              </p>
+              <div className="mt-4">
+                <RepSearch size="large" placeholder="Search by name, state, or ZIP code" />
+              </div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {SEARCH_SHORTCUTS.map((shortcut) => (
+                  <Link
+                    key={shortcut.href}
+                    href={shortcut.href}
+                    className="inline-flex items-center rounded-sm border border-slate-300 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-700 hover:border-slate-500"
+                    style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+                  >
+                    {shortcut.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="order-2 md:order-1">
+              <div className="mb-4 flex items-center gap-3 md:mb-5">
+                <div className="brand-flag-bar" aria-hidden="true" />
+                <span
+                  className="text-xs font-semibold uppercase tracking-widest"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                >
+                  Rep Accountability Dashboard
+                </span>
+              </div>
+
+              <h1
+                className="mb-5"
+                style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)", fontWeight: 700 }}
+              >
+                <span>Data-first</span>
+                <span className="block" style={{ color: "var(--accent)" }}>
+                  accountability tracking
+                </span>
+              </h1>
+
+              <p
+                className="mb-5 md:mb-6"
+                style={{
+                  fontFamily: "'Source Sans 3', sans-serif",
+                  color: "var(--text-secondary)",
+                  fontSize: "1.125rem",
+                  lineHeight: 1.65,
+                }}
+              >
+                Follow the money. Expose the votes. Track what politicians say vs what they actually
+                do with data from the FEC, Congress.gov, and federal financial disclosures.
+              </p>
+
+              <div
+                className="mb-6 py-3 section-flag-heading md:mb-8"
+                style={{ borderColor: "var(--accent)" }}
+              >
+                <p
+                  className="text-base font-semibold"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+                >
+                  Democracy shouldn&apos;t be paywalled.{" "}
+                  <span style={{ color: "var(--text-secondary)", fontWeight: 400 }}>
+                    All data sourced from official government records and available free.
+                  </span>
+                </p>
+              </div>
+
+              <div className="hero-trust-grid">
+                {TRUST_SIGNALS.map((signal) => (
+                  <span key={signal} className="trust-pill">
+                    {signal}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-3 md:grid-cols-3 md:gap-4">
+            {FIND_REP_STEPS.map((step, index) => (
+              <div key={step.title} className="rounded-md border border-slate-200 bg-white/90 p-4">
+                <p
+                  className="mb-2 text-xs font-semibold uppercase tracking-widest"
+                  style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--accent)" }}
+                >
+                  Step {index + 1}
+                </p>
+                <p
+                  className="text-sm font-semibold"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+                >
+                  {step.title}
+                </p>
+                <p
+                  className="mt-1 text-sm leading-relaxed"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                >
+                  {step.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 pt-5 border-t border-slate-200 md:mt-8">
+            <p
+              className="mb-3 text-xs font-semibold uppercase tracking-widest"
               style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
             >
-              Rep Accountability Dashboard
-            </span>
-          </div>
-
-          {/* Headline */}
-          <h1
-            className="mb-5"
-            style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)", fontWeight: 700 }}
-          >
-            <span>Accountability</span>
-            <span className="block" style={{ color: "var(--accent)" }}>
-              Dashboard
-            </span>
-          </h1>
-
-          <p
-            className="mb-5 max-w-3xl md:mb-6"
-            style={{
-              fontFamily: "'Source Sans 3', sans-serif",
-              color: "var(--text-secondary)",
-              fontSize: "1.125rem",
-              lineHeight: 1.65,
-            }}
-          >
-            Follow the money. Expose the votes. Track what politicians say vs what they actually
-            do — using data directly from the FEC, Congress.gov, and federal financial disclosures.
-          </p>
-
-          {/* Mission statement — teal left border "flag" */}
-          <div
-            className="mb-6 py-3 section-flag-heading md:mb-8"
-            style={{ borderColor: "var(--accent)" }}
-          >
-            <p
-              className="text-base font-semibold"
-              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
-            >
-              Democracy shouldn&apos;t be paywalled.{" "}
-              <span style={{ color: "var(--text-secondary)", fontWeight: 400 }}>
-                All data sourced from official government records — free, forever.
-              </span>
+              Live activity snapshot
             </p>
-          </div>
-
-          <div className="hero-actions mb-6 md:mb-8">
-            {HERO_ACTIONS.map((action) => (
-              <Link
-                key={action.href}
-                href={action.href}
-                className={action.primary ? "btn-primary px-5 py-2.5" : "btn-secondary"}
-              >
-                {action.label}
-              </Link>
-            ))}
-          </div>
-
-          <div className="hero-trust-grid mb-8 md:mb-10">
-            {TRUST_SIGNALS.map((signal) => (
-              <span key={signal} className="trust-pill">
-                {signal}
-              </span>
-            ))}
-          </div>
-
-          {/* Search */}
-          <RepSearch size="large" placeholder="Search by name, state, or ZIP code" />
-
-          <p
-            className="mt-3 text-sm"
-            style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
-          >
-            Browse by branch below, or search directly for a representative, senator, or official.
-          </p>
-
-          {/* Hero data viz */}
-          <div className="mt-6 pt-5 border-t border-slate-200 md:mt-8">
             <HeroSparkline />
           </div>
         </div>
@@ -342,6 +421,50 @@ export default function Home() {
                 context={stat.context}
                 featured={stat.featured}
               />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-shell border-b border-slate-200" style={{ backgroundColor: "#F8FAFC" }}>
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 space-y-8 md:space-y-10">
+          <ScrollFadeIn className="section-header">
+            <div className="brand-flag-bar mb-3" aria-hidden="true" />
+            <h2 style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}>
+              Data-driven insights
+            </h2>
+            <p
+              className="mt-3 text-base leading-relaxed"
+              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+            >
+              Each profile combines primary government datasets so users can evaluate behavior, not headlines.
+            </p>
+          </ScrollFadeIn>
+
+          <div className="grid gap-4 md:grid-cols-3 md:gap-5">
+            {DATA_INSIGHTS.map((insight, idx) => (
+              <ScrollFadeIn key={insight.title} delay={idx * 80}>
+                <article className="h-full rounded-md border border-slate-200 bg-white p-5 md:p-6">
+                  <p
+                    className="text-xs font-semibold uppercase tracking-widest"
+                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--accent)" }}
+                  >
+                    {insight.metric}
+                  </p>
+                  <h3
+                    className="mt-3 text-xl"
+                    style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}
+                  >
+                    {insight.title}
+                  </h3>
+                  <p
+                    className="mt-2 text-sm leading-relaxed"
+                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  >
+                    {insight.description}
+                  </p>
+                </article>
+              </ScrollFadeIn>
             ))}
           </div>
         </div>
