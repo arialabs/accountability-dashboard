@@ -14,6 +14,8 @@ import {
   getConflictCategoryLabel,
   getConflictSeverityLabel,
 } from "@/lib/executive-data";
+import { getOfficialAgencySpending } from "@/lib/data";
+import { formatCurrencyShort } from "@/lib/formatting";
 import type { ConflictSeverity } from "@/types/executive";
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 import { Container } from "@/components/ui";
@@ -74,6 +76,8 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
   const conflictLabel = getConflictSeverityLabel(conflictScore);
   const tenure = formatTenure(official.appointed_date);
   const groupedConflicts = groupConflictsByCategory(official.conflicts_of_interest as Array<{ severity: ConflictSeverity; category: string }>);
+  const agencySpending = getOfficialAgencySpending(role);
+  const latestBudgetYear = agencySpending?.budget_totals_by_fiscal_year.at(-1);
 
   // Schema.org structured data
   const personSchema = generatePersonSchema({
@@ -270,6 +274,79 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
               {getDepartmentDescription(member.department)}
             </p>
           </div>
+
+          {/* Federal Budget + Awards (USASpending) */}
+          {agencySpending && (
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 mb-12">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-6">
+                <div>
+                  <h2 className="text-2xl font-black text-slate-900">Federal Budget & Awards</h2>
+                  <p className="text-sm text-slate-600">
+                    FY {agencySpending.fiscal_year_start}-{agencySpending.fiscal_year_end} • Source: USASpending.gov
+                  </p>
+                </div>
+                <p className="text-xs text-slate-500">
+                  Last updated {new Date(agencySpending.last_updated).toLocaleDateString("en-US")}
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="rounded-xl border border-slate-200 p-4 bg-slate-50">
+                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Latest FY Obligations</p>
+                  <p className="text-2xl font-black text-slate-900">
+                    {formatCurrencyShort(latestBudgetYear?.total_obligations || 0)}
+                  </p>
+                </div>
+                <div className="rounded-xl border border-slate-200 p-4 bg-slate-50">
+                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Contracts (Top Awards)</p>
+                  <p className="text-2xl font-black text-slate-900">
+                    {formatCurrencyShort(agencySpending.contracts_obligated)}
+                  </p>
+                </div>
+                <div className="rounded-xl border border-slate-200 p-4 bg-slate-50">
+                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Grants (Top Awards)</p>
+                  <p className="text-2xl font-black text-slate-900">
+                    {formatCurrencyShort(agencySpending.grants_obligated)}
+                  </p>
+                </div>
+              </div>
+
+              {agencySpending.program_funding_changes.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">Largest Program Funding Changes</h3>
+                  <div className="space-y-2">
+                    {agencySpending.program_funding_changes.slice(0, 5).map((program) => (
+                      <div key={program.program_name} className="flex items-center justify-between rounded-lg border border-slate-200 px-3 py-2">
+                        <p className="text-sm text-slate-800">{program.program_name}</p>
+                        <p className={`text-sm font-semibold ${program.change_amount >= 0 ? "text-green-700" : "text-red-700"}`}>
+                          {program.change_amount >= 0 ? "+" : ""}{formatCurrencyShort(program.change_amount)}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {agencySpending.awards.length > 0 && (
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">Top Contract & Grant Awards</h3>
+                  <div className="space-y-2">
+                    {agencySpending.awards.slice(0, 6).map((award) => (
+                      <div key={`${award.award_id}-${award.recipient_name}`} className="rounded-lg border border-slate-200 p-3">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                          <div>
+                            <p className="font-semibold text-slate-900">{award.recipient_name}</p>
+                            <p className="text-xs text-slate-500">{award.award_type_label}{award.action_date ? ` • ${award.action_date}` : ""}</p>
+                          </div>
+                          <p className="text-sm font-bold text-slate-900">{formatCurrencyShort(award.amount)}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Policy Alignment Section */}
           <AlignmentSection memberId={member.id} />

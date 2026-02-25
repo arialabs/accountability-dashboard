@@ -28,6 +28,7 @@ Built for citizens who demand transparency from their elected representatives.
 | [ProPublica Congress API](https://www.propublica.org/datastore/api/propublica-congress-api) | Voting records, bill details |
 | [OpenSecrets](https://www.opensecrets.org/open-data) | Campaign finance (bulk data) |
 | [FEC API](https://api.open.fec.gov/) | Detailed contributions |
+| [USASpending.gov API](https://api.usaspending.gov/) | Agency FY budgets, program changes, contracts/grants awards |
 
 ## Development
 
@@ -41,12 +42,35 @@ pnpm run pipeline
 # Sync recent Congress.gov roll calls into live vote store
 pnpm run votes:sync
 
+# Sync USASpending agency budgets + awards into executive data store
+pnpm run usaspending:sync
+
 # Start dev server
 pnpm dev
 
 # Build for production
 pnpm build
 ```
+
+## USASpending Sync (Local)
+
+```bash
+# Default: last 3 completed fiscal years
+pnpm usaspending:sync
+
+# Optional overrides
+pnpm usaspending:sync --fyStart=2022 --fyEnd=2024 --awardsLimit=50
+
+# Test mode writes to pipeline/output
+pnpm usaspending:sync:test
+
+# Optional DB persistence (Turso) in addition to JSON artifacts
+TURSO_DATABASE_URL=libsql://... TURSO_AUTH_TOKEN=... pnpm usaspending:sync
+```
+
+Artifacts:
+- `src/data/usaspending.json`
+- `src/data/usaspending-sync-status.json`
 
 ## Project Structure
 

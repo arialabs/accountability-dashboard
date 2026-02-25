@@ -1,0 +1,12 @@
+{
+  "last_attempt_at": "",
+  "last_success_at": null,
+  "status": "error",
+  "fiscal_year_start": 0,
+  "fiscal_year_end": 0,
+  "total_agencies_processed": 0,
+  "total_agencies_with_data": 0,
+  "total_officials_mapped": 0,
+  "total_awards_stored": 0,
+  "errors": []
+}

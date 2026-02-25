@@ -19,6 +19,8 @@
     "pipeline:votes": "tsx pipeline/sources/propublica-votes.ts",
     "votes:sync": "tsx pipeline/sync-votes.ts",
     "votes:sync:test": "tsx pipeline/sync-votes.ts --test",
+    "usaspending:sync": "tsx pipeline/sync-usaspending.ts",
+    "usaspending:sync:test": "tsx pipeline/sync-usaspending.ts --test",
     "votes:trigger": "tsx scripts/trigger-vote-sync.ts",
     "db:push": "turso db shell accountability-dashboard < database/schema.sql",
     "db:studio": "turso db shell accountability-dashboard"

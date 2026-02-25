@@ -658,3 +658,75 @@ export interface DeepDiveRelatedMember {
   party: string;
   relevance: string;
 }
+
+// ==================== USASpending (Executive Agencies) ====================
+
+export interface AgencyFiscalYearBudget {
+  fiscal_year: number;
+  total_obligations: number;
+  total_outlays: number;
+  total_budget_authority: number;
+  yoy_change_pct: number | null;
+}
+
+export interface ProgramFundingChange {
+  program_name: string;
+  fiscal_year: number;
+  current_amount: number;
+  previous_amount: number;
+  change_amount: number;
+  change_pct: number | null;
+}
+
+export type AgencyAwardType = 'contract' | 'grant' | 'other';
+
+export interface AgencyAward {
+  award_id: string;
+  generated_internal_id: string | null;
+  recipient_name: string;
+  amount: number;
+  award_type: AgencyAwardType;
+  award_type_label: string;
+  awarding_agency: string;
+  awarding_sub_agency: string | null;
+  action_date: string | null;
+  description: string;
+  source_url: string | null;
+}
+
+export interface AgencySpendingProfile {
+  agency_slug: string;
+  agency_name: string;
+  fiscal_year_start: number;
+  fiscal_year_end: number;
+  budget_totals_by_fiscal_year: AgencyFiscalYearBudget[];
+  program_funding_changes: ProgramFundingChange[];
+  awards: AgencyAward[];
+  contracts_obligated: number;
+  grants_obligated: number;
+  total_awards_obligated: number;
+  last_updated: string;
+  source: 'usaspending.gov';
+}
+
+export interface OfficialAgencyMap {
+  official_id: string;
+  official_name: string;
+  role: string;
+  department: string;
+  agency_slug: string;
+}
+
+export interface USASpendingDataStore {
+  meta: {
+    generated_at: string;
+    source: 'usaspending.gov';
+    fiscal_year_start: number;
+    fiscal_year_end: number;
+    total_agencies: number;
+    total_officials: number;
+    total_awards: number;
+  };
+  agencies: Record<string, AgencySpendingProfile>;
+  officials: Record<string, OfficialAgencyMap>;
+}

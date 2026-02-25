@@ -7,6 +7,7 @@ import {
   getMembersByParty,
   getStates,
   getPartyBreakdown,
+  getOfficialAgencySpending,
   type Member,
 } from './data';
 
@@ -225,6 +226,13 @@ describe('data utilities', () => {
         expect(member.bills_sponsored).toBeGreaterThanOrEqual(0);
         expect(member.bills_cosponsored).toBeGreaterThanOrEqual(0);
       }
+    });
+  });
+
+  describe('USASpending data access', () => {
+    it('returns null when no agency spending profile exists for an official', () => {
+      const data = getOfficialAgencySpending('non-existent-official');
+      expect(data).toBeNull();
     });
   });
 });

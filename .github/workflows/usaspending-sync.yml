@@ -1,0 +1,66 @@
+name: USASpending Sync
+
+on:
+  schedule:
+    - cron: '23 10 * * 1'
+  workflow_dispatch:
+    inputs:
+      fy_start:
+        description: 'Fiscal year start (optional)'
+        required: false
+      fy_end:
+        description: 'Fiscal year end (optional)'
+        required: false
+      awards_limit:
+        description: 'Awards per agency (optional)'
+        required: false
+        default: '30'
+
+jobs:
+  sync-usaspending:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Sync USASpending
+        env:
+          FY_START: ${{ github.event.inputs.fy_start || '' }}
+          FY_END: ${{ github.event.inputs.fy_end || '' }}
+          AWARDS_LIMIT: ${{ github.event.inputs.awards_limit || '30' }}
+        run: |
+          CMD="pnpm usaspending:sync"
+          if [ -n "$FY_START" ]; then CMD="$CMD --fyStart=$FY_START"; fi
+          if [ -n "$FY_END" ]; then CMD="$CMD --fyEnd=$FY_END"; fi
+          if [ -n "$AWARDS_LIMIT" ]; then CMD="$CMD --awardsLimit=$AWARDS_LIMIT"; fi
+          echo "$CMD"
+          eval "$CMD"
+
+      - name: Commit updated USASpending store
+        run: |
+          if git diff --quiet src/data/usaspending.json src/data/usaspending-sync-status.json; then
+            echo "No USASpending changes"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/usaspending.json src/data/usaspending-sync-status.json
+          git commit -m "chore(data): sync USASpending agency budgets"
+          git push

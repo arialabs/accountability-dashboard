@@ -11,7 +11,8 @@ const tradesData: Record<string, any[]> = {};
 import scotusData from "../data/scotus.json";
 import houseDisclosuresData from "../data/house-disclosures.json";
 import alignmentData from "../data/alignment-scores.json";
-import type { Member, CampaignFinance, SupremeCourtJustice } from "./types";
+import usaspendingData from "../data/usaspending.json";
+import type { Member, CampaignFinance, SupremeCourtJustice, AgencySpendingProfile, USASpendingDataStore } from "./types";
 import { getDonorBreakdown, searchCandidateByName, getCandidateFinancials, getScheduleAContributions } from './fec';
 import { aggregateByIndustry } from './industry-classifier';
 
@@ -432,6 +433,32 @@ export function getAlignmentRanking(bioguideId: string): { rank: number; total: 
   const index = scores.findIndex(a => a.bioguide_id === bioguideId);
   if (index === -1) return null;
   return { rank: index + 1, total: scores.length };
+}
+
+// ==================== USASpending Agency Data ====================
+
+const usaSpendingStore = usaspendingData as USASpendingDataStore;
+
+function toAgencySlug(department: string): string {
+  return department
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+export function getUSASpendingStore(): USASpendingDataStore {
+  return usaSpendingStore;
+}
+
+export function getAgencySpendingByDepartment(department: string): AgencySpendingProfile | null {
+  const slug = toAgencySlug(department);
+  return usaSpendingStore.agencies?.[slug] || null;
+}
+
+export function getOfficialAgencySpending(officialId: string): AgencySpendingProfile | null {
+  const mapping = usaSpendingStore.officials?.[officialId];
+  if (!mapping) return null;
+  return usaSpendingStore.agencies?.[mapping.agency_slug] || null;
 }
 
 // ==================== Scandals & Controversies Data ====================

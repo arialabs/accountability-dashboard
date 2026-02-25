@@ -112,3 +112,64 @@ CREATE INDEX IF NOT EXISTS idx_bills_sponsor ON bills(sponsor_bioguide_id);
 CREATE INDEX IF NOT EXISTS idx_contributions_bioguide ON contributions(bioguide_id);
 CREATE INDEX IF NOT EXISTS idx_members_state ON members(state);
 CREATE INDEX IF NOT EXISTS idx_members_party ON members(party);
+
+-- USASpending agency budget totals by fiscal year
+CREATE TABLE IF NOT EXISTS agency_budget_totals (
+    agency_slug TEXT NOT NULL,
+    agency_name TEXT NOT NULL,
+    fiscal_year INTEGER NOT NULL,
+    total_obligations REAL NOT NULL,
+    total_outlays REAL NOT NULL,
+    total_budget_authority REAL NOT NULL,
+    yoy_change_pct REAL,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (agency_slug, fiscal_year)
+);
+
+-- USASpending program-level changes
+CREATE TABLE IF NOT EXISTS agency_program_changes (
+    agency_slug TEXT NOT NULL,
+    fiscal_year INTEGER NOT NULL,
+    program_name TEXT NOT NULL,
+    current_amount REAL NOT NULL,
+    previous_amount REAL NOT NULL,
+    change_amount REAL NOT NULL,
+    change_pct REAL,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (agency_slug, fiscal_year, program_name)
+);
+
+-- USASpending top awards (contracts + grants)
+CREATE TABLE IF NOT EXISTS agency_awards (
+    agency_slug TEXT NOT NULL,
+    award_id TEXT NOT NULL,
+    recipient_name TEXT NOT NULL,
+    amount REAL NOT NULL,
+    award_type TEXT NOT NULL,
+    award_type_label TEXT NOT NULL,
+    awarding_agency TEXT NOT NULL,
+    awarding_sub_agency TEXT,
+    action_date TEXT,
+    description TEXT NOT NULL,
+    source_url TEXT,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (agency_slug, award_id, recipient_name)
+);
+
+-- USASpending sync metadata/status log
+CREATE TABLE IF NOT EXISTS usaspending_sync_runs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    run_at DATETIME NOT NULL,
+    status TEXT NOT NULL,
+    fiscal_year_start INTEGER NOT NULL,
+    fiscal_year_end INTEGER NOT NULL,
+    agencies_processed INTEGER NOT NULL,
+    agencies_with_data INTEGER NOT NULL,
+    awards_stored INTEGER NOT NULL,
+    errors_json TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_agency_budget_fiscal_year ON agency_budget_totals(fiscal_year);
+CREATE INDEX IF NOT EXISTS idx_program_changes_fiscal_year ON agency_program_changes(fiscal_year);
+CREATE INDEX IF NOT EXISTS idx_agency_awards_type ON agency_awards(agency_slug, award_type);
+CREATE INDEX IF NOT EXISTS idx_agency_awards_action_date ON agency_awards(action_date);
