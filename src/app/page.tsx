@@ -128,6 +128,17 @@ const SITE_STATS = [
   { value: "2.4M+", label: "Votes recorded",             indicator: "up" as const,      featured: true,  context: "Expanding" },
 ];
 
+const HERO_ACTIONS = [
+  { href: "/congress", label: "Explore Congress Data", primary: true },
+  { href: "/methodology", label: "How Scores Are Calculated", primary: false },
+];
+
+const TRUST_SIGNALS = [
+  "Official government data only",
+  "Methodology fully public",
+  "Coverage across all 3 branches",
+];
+
 // ── Extra Deep Dives ─────────────────────────────────────────────────────────
 const ADDITIONAL_DEEP_DIVES = [
   {
@@ -213,10 +224,10 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={structuredDataScript(congressSchema)} />
 
       {/* ══ HERO ══════════════════════════════════════════════════════════ */}
-      <section className="section-shell bg-gradient-to-b from-white to-[var(--bg-secondary)] border-b border-slate-200">
+      <section className="section-shell hero-surface border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           {/* Eyebrow — teal brand mark + label */}
-          <div className="mb-5 flex items-center gap-3">
+          <div className="mb-4 flex items-center gap-3 md:mb-5">
             <div className="brand-flag-bar" aria-hidden="true" />
             <span
               className="text-xs font-semibold uppercase tracking-widest"
@@ -238,7 +249,7 @@ export default function Home() {
           </h1>
 
           <p
-            className="mb-6 max-w-3xl"
+            className="mb-5 max-w-3xl md:mb-6"
             style={{
               fontFamily: "'Source Sans 3', sans-serif",
               color: "var(--text-secondary)",
@@ -252,7 +263,7 @@ export default function Home() {
 
           {/* Mission statement — teal left border "flag" */}
           <div
-            className="mb-8 py-3 section-flag-heading md:mb-10"
+            className="mb-6 py-3 section-flag-heading md:mb-8"
             style={{ borderColor: "var(--accent)" }}
           >
             <p
@@ -266,6 +277,26 @@ export default function Home() {
             </p>
           </div>
 
+          <div className="hero-actions mb-6 md:mb-8">
+            {HERO_ACTIONS.map((action) => (
+              <Link
+                key={action.href}
+                href={action.href}
+                className={action.primary ? "btn-primary px-5 py-2.5" : "btn-secondary"}
+              >
+                {action.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="hero-trust-grid mb-8 md:mb-10">
+            {TRUST_SIGNALS.map((signal) => (
+              <span key={signal} className="trust-pill">
+                {signal}
+              </span>
+            ))}
+          </div>
+
           {/* Search */}
           <RepSearch size="large" placeholder="Search by name, state, or ZIP code" />
 
@@ -277,7 +308,7 @@ export default function Home() {
           </p>
 
           {/* Hero data viz */}
-          <div className="mt-8 pt-5 border-t border-slate-200 md:mt-10">
+          <div className="mt-6 pt-5 border-t border-slate-200 md:mt-8">
             <HeroSparkline />
           </div>
         </div>
@@ -286,6 +317,21 @@ export default function Home() {
       {/* ══ QUICK STATS BAR — AccountabilityDataCards ═════════════════════ */}
       <section className="section-shell-tight bg-slate-900" aria-label="Site statistics">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-4 flex items-end justify-between gap-4 md:mb-5">
+            <p
+              className="text-xs font-semibold uppercase tracking-widest"
+              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#94A3B8" }}
+            >
+              Coverage at a glance
+            </p>
+            <Link
+              href="/methodology"
+              className="text-xs font-semibold uppercase tracking-wide hover:underline"
+              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#5EEAD4" }}
+            >
+              Data sources and methods
+            </Link>
+          </div>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
             {SITE_STATS.map((stat) => (
               <AccountabilityDataCard
@@ -334,6 +380,9 @@ export default function Home() {
             >
               Officials with notable data patterns this cycle
             </p>
+            <Link href="/congress" className="section-cta-link">
+              View full watchlist <ArrowRightIcon />
+            </Link>
           </ScrollFadeIn>
 
           {/* ── Spotlight grid: 60/40 ── */}
@@ -580,6 +629,9 @@ export default function Home() {
             >
               Accountability data across the entire federal government
             </p>
+            <Link href="/about" className="section-cta-link">
+              See how coverage works <ArrowRightIcon />
+            </Link>
           </ScrollFadeIn>
 
           <div className="grid gap-4 md:grid-cols-3 md:gap-5">
@@ -609,6 +661,10 @@ export default function Home() {
                   Congress makes the laws. Track voting records, campaign finance, and donor influence
                   for all 535 members.
                 </p>
+
+                <span className="card-cta">
+                  Explore legislative records <ArrowRightIcon />
+                </span>
 
                 <div className="flex gap-6 pt-4 border-t border-slate-100">
                   <div>
@@ -671,6 +727,10 @@ export default function Home() {
                   conflict of interest disclosures.
                 </p>
 
+                <span className="card-cta">
+                  Explore executive records <ArrowRightIcon />
+                </span>
+
                 <div className="pt-4 border-t border-slate-100">
                   <div
                     className="text-xl font-bold"
@@ -715,6 +775,10 @@ export default function Home() {
                   recusal records.
                 </p>
 
+                <span className="card-cta">
+                  Explore judicial records <ArrowRightIcon />
+                </span>
+
                 <div className="pt-4 border-t border-slate-100">
                   <div
                     className="text-xl font-bold"
@@ -751,6 +815,9 @@ export default function Home() {
             >
               In-depth investigations into major scandals and political corruption cases.
             </p>
+            <Link href="/deep-dives" className="section-cta-link">
+              Browse all investigations <ArrowRightIcon />
+            </Link>
           </ScrollFadeIn>
 
           {/* Featured Epstein card */}
@@ -846,16 +913,28 @@ export default function Home() {
                 Commission (FEC), Congress.gov, Voteview, and required financial disclosures. We
                 don&apos;t editorialize — we show you the numbers.
               </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="trust-pill">Congress.gov</span>
+                <span className="trust-pill">OpenFEC</span>
+                <span className="trust-pill">Financial disclosures</span>
+              </div>
             </div>
-            <div className="flex items-center gap-3 flex-shrink-0">
+            <div className="flex flex-col items-stretch gap-2 flex-shrink-0 sm:flex-row sm:items-center">
               {/* VERIFIED stamp */}
-              <span className="stamp-badge stamp-verified">Verified</span>
+              <span className="stamp-badge stamp-verified self-start">Verified</span>
               <Link
                 href="/methodology"
-                className="inline-flex items-center gap-2 text-sm font-semibold border border-slate-300 rounded-sm px-4 py-2 hover:border-slate-500 transition-colors"
+                className="inline-flex items-center justify-center gap-2 text-sm font-semibold border border-slate-300 rounded-sm px-4 py-2 hover:border-slate-500 transition-colors"
                 style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
               >
                 Read our methodology <ArrowRightIcon />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center gap-2 text-sm font-semibold border border-slate-300 rounded-sm px-4 py-2 hover:border-slate-500 transition-colors"
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+              >
+                About the project <ArrowRightIcon />
               </Link>
             </div>
           </div>

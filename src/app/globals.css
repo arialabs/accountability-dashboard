@@ -247,6 +247,85 @@
   border-radius: 1px;
 }
 
+.hero-surface {
+  background:
+    radial-gradient(circle at 86% 8%, rgb(15 118 110 / 0.09) 0%, transparent 36%),
+    linear-gradient(to bottom, #FFFFFF, var(--bg-secondary));
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-secondary {
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--text-primary);
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #64748B;
+  color: #0F172A;
+}
+
+.hero-trust-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.trust-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid #CBD5E1;
+  background-color: rgb(255 255 255 / 0.92);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  padding: 0.5rem 0.625rem;
+  text-transform: uppercase;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.section-cta-link {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Source Sans 3', sans-serif;
+  transition: gap 0.2s ease;
+}
+
+.section-cta-link:hover {
+  gap: 0.55rem;
+}
+
+.card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
 /* Thick section divider: horizontal redaction-bar motif */
 .redaction-divider {
   display: block;
@@ -446,4 +525,15 @@
 .section-kicker {
   display: inline-block;
   margin-bottom: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  .hero-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-cta-link {
+    margin-top: 0.75rem;
+  }
 }

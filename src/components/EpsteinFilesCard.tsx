@@ -77,7 +77,7 @@ export default function EpsteinFilesCard({ variant = "full", className = "" }: E
       {/* Header accent bar */}
       <div className="h-1 w-full" style={{ backgroundColor: EPSTEIN_ACCENT }} />
 
-      <div className="p-8 md:p-10">
+      <div className="p-6 md:p-10">
         <div className="flex items-start justify-between gap-4 mb-6">
           <div className="flex items-center gap-3">
             <span
@@ -120,7 +120,7 @@ export default function EpsteinFilesCard({ variant = "full", className = "" }: E
         </p>
 
         {/* Stats row */}
-        <div className="flex gap-8 mb-6 pt-4 border-t border-slate-100">
+        <div className="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-slate-100 md:flex md:gap-8">
           <div>
             <div
               className="text-xl font-bold"

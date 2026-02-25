@@ -39,7 +39,7 @@ export default function HeroSparkline() {
 
   return (
     <div
-      className="flex items-center gap-4 mt-8 mb-2"
+      className="flex flex-wrap items-center gap-4 mt-8 mb-2 sm:flex-nowrap"
       style={{ fontFamily: "'Source Sans 3', sans-serif" }}
     >
       {/* Mini stat */}
@@ -59,11 +59,12 @@ export default function HeroSparkline() {
       <div className="w-px h-10 bg-slate-200" aria-hidden="true" />
 
       {/* Animated sparkline */}
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 min-w-0">
         <svg
-          width={W}
+          width="100%"
           height={H}
           viewBox={`0 0 ${W} ${H}`}
+          className="w-[180px] sm:w-[200px]"
           aria-hidden="true"
           role="img"
         >
