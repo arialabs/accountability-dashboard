@@ -1,64 +1,49 @@
 #!/usr/bin/env tsx
 /**
- * Sync congressional votes from Congress.gov API to database
- * 
+ * Sync congressional votes from Congress.gov API into JSON data store.
+ *
  * Usage:
- *   pnpm tsx pipeline/sync-votes.ts          # Sync past 7 days
- *   pnpm tsx pipeline/sync-votes.ts --days 30  # Sync past 30 days
- *   pnpm tsx pipeline/sync-votes.ts --test   # Test mode (no DB writes)
+ *   pnpm tsx pipeline/sync-votes.ts
+ *   pnpm tsx pipeline/sync-votes.ts --days=30
+ *   pnpm tsx pipeline/sync-votes.ts --test
  */
 
-import db from './lib/db.js';
-import { syncRecentVotes, fetchRecentHouseVotes, parseHouseRollCallXML } from './sources/congress-votes.js';
+import { syncRecentVotes } from './sources/congress-votes.js';
 
 const args = process.argv.slice(2);
-const lookbackDays = parseInt(args.find(a => a.startsWith('--days='))?.split('=')[1] || '7');
+const lookbackDays = parseInt(args.find((a) => a.startsWith('--days='))?.split('=')[1] || '7', 10);
 const testMode = args.includes('--test');
 
 async function main() {
-  console.log("=".repeat(60));
-  console.log("Congressional Votes Sync");
-  console.log("=".repeat(60));
+  console.log('='.repeat(60));
+  console.log('Congressional Votes Sync (JSON Store)');
+  console.log('='.repeat(60));
   console.log(`Started at: ${new Date().toISOString()}`);
   console.log(`Lookback period: ${lookbackDays} days`);
   console.log(`Test mode: ${testMode ? 'YES' : 'NO'}\n`);
 
-  if (testMode) {
-    console.log("TEST MODE: Fetching data but not writing to database\n");
-    
-    // Just test API access
-    const votes = await fetchRecentHouseVotes(119, 3);
-    console.log(`\n✓ Fetched ${votes.length} recent House votes`);
-    
-    if (votes[0]) {
-      console.log("\nSample vote:");
-      console.log(`  Roll Call: ${votes[0].rollCallNumber}`);
-      console.log(`  Date: ${votes[0].startDate}`);
-      console.log(`  Question: ${votes[0].voteQuestion || 'N/A'}`);
-      console.log(`  Result: ${votes[0].result}`);
-      
-      const members = await parseHouseRollCallXML(votes[0].sourceDataURL);
-      console.log(`\n✓ Parsed ${members.length} member votes`);
-      console.log("\nSample members:");
-      members.slice(0, 3).forEach(m => {
-        console.log(`  ${m.name} (${m.party}-${m.state}): ${m.vote}`);
-      });
-    }
-    
-    console.log("\n✓ Test complete - no database changes made");
-    return;
-  }
-
   try {
-    const synced = await syncRecentVotes(db, lookbackDays);
-    
-    console.log("\n" + "=".repeat(60));
-    console.log("Sync complete!");
-    console.log("=".repeat(60));
-    console.log(`Total records synced: ${synced}`);
+    const result = await syncRecentVotes({
+      lookbackDays,
+      outputPath: testMode ? './pipeline/output/live-votes.test.json' : './src/data/live-votes.json',
+      statusPath: testMode ? './pipeline/output/vote-sync-status.test.json' : './src/data/vote-sync-status.json',
+    });
+
+    console.log('\n' + '='.repeat(60));
+    console.log('Sync complete');
+    console.log('='.repeat(60));
+    console.log(`Status: ${result.status.status}`);
+    console.log(`Roll calls stored: ${result.status.total_roll_calls_stored}`);
+    console.log(`Member votes stored: ${result.status.total_member_votes_stored}`);
+    console.log(`Deduped member votes: ${result.status.deduped_member_votes}`);
+    console.log(`Errors: ${result.status.errors.length}`);
     console.log(`Completed at: ${new Date().toISOString()}`);
+
+    if (result.status.status === 'error') {
+      process.exit(1);
+    }
   } catch (error) {
-    console.error("\n❌ Sync failed:", error);
+    console.error('\n❌ Sync failed:', error);
     process.exit(1);
   }
 }

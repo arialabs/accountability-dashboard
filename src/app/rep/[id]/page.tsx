@@ -18,8 +18,10 @@ import RepresentativeImage from "@/components/RepresentativeImage";
 import SocialShare from "@/components/SocialShare";
 import ConflictOfInterestSection from "@/components/ConflictOfInterestSection";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import RecentVotesSection from "@/components/RecentVotesSection";
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 import { isLeader } from "@/lib/leadership";
+import { getRecentVotesForMember } from "@/lib/live-votes";
 
 import keyVotesData from "@/data/key-votes.json";
 
@@ -134,6 +136,8 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
     partyPosition: "Yea" | "Nay";
     aligned: boolean;
   }> = [];
+
+  const recentVotes = getRecentVotesForMember(id, 8);
 
   // Real stock trades from Quiver Quant
   const stockTrades = getMemberTrades(id) as Array<{
@@ -349,6 +353,9 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
             <ErrorBoundary context="conflict of interest analysis">
               <ConflictOfInterestSection conflicts={conflicts} memberName={member.full_name} />
             </ErrorBoundary>
+
+            {/* Key Votes Record */}
+            <RecentVotesSection memberName={member.full_name} votes={recentVotes} />
 
             {/* Key Votes Record */}
             <ErrorBoundary context="voting record">

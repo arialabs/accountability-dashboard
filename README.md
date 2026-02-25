@@ -38,6 +38,9 @@ pnpm install
 # Run data pipeline (fetch latest data)
 pnpm run pipeline
 
+# Sync recent Congress.gov roll calls into live vote store
+pnpm run votes:sync
+
 # Start dev server
 pnpm dev
 
