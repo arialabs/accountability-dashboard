@@ -312,9 +312,9 @@ export default function Home() {
                 className="mb-5"
                 style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)", fontWeight: 700 }}
               >
-                <span>Data-first</span>
+                <span>They work for you.</span>
                 <span className="block" style={{ color: "var(--accent)" }}>
-                  accountability tracking
+                  Prove it.
                 </span>
               </h1>
 
@@ -586,11 +586,8 @@ export default function Home() {
                       {SPOTLIGHT_FEATURED.statLabel}
                     </span>
                   </div>
-                  <p
-                    className="text-xs mb-4"
-                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#F59E0B", fontWeight: 600 }}
-                  >
-                    {SPOTLIGHT_FEATURED.statContext}
+                  <p className="text-xs mb-4">
+                    <span className="flag-pin">{SPOTLIGHT_FEATURED.statContext}</span>
                   </p>
 
                   {/* Inline mini bar chart */}

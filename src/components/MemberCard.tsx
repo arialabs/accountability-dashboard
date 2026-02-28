@@ -33,11 +33,18 @@ export default function MemberCard({ member, userState, currentStateFilter }: Me
   return (
     <Link
       href={`/rep/${member.bioguide_id}`}
-      className={`bg-white border rounded-xl p-6 transition-all duration-200 hover:shadow-lg cursor-pointer group ${
+      className={`bg-white border rounded-xl p-6 transition-all duration-200 hover:shadow-lg cursor-pointer group overflow-hidden relative ${
         isUserRep && currentStateFilter === userState
           ? 'border-blue-400 ring-2 ring-blue-200 bg-blue-50/30'
           : 'border-slate-200 hover:border-slate-300'
       }`}
+      style={{
+        borderLeft: `4px solid ${
+          member.party === 'D' ? '#2563EB' :
+          member.party === 'R' ? '#B91C1C' :
+          '#7C3AED'
+        }`,
+      }}
     >
       {/* User Rep Badge */}
       {isUserRep && currentStateFilter === userState && (

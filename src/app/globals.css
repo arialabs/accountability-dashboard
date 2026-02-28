@@ -247,6 +247,76 @@
   border-radius: 1px;
 }
 
+/* ── Flag Pin Motif — marks flagged/abnormal data ── */
+.flag-pin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  background: rgb(15 118 110 / 0.06);
+}
+
+.flag-pin::before {
+  content: "⚑";
+  font-size: 0.65rem;
+}
+
+/* ── Redaction motif — exposes data on hover ── */
+.data-redacted {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.data-redacted > * {
+  transition: opacity 0.25s ease;
+}
+
+.data-redacted::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: #0F172A;
+  border-radius: 2px;
+  transition: opacity 0.25s ease;
+}
+
+.data-redacted:hover::after {
+  opacity: 0;
+}
+
+/* Redacted label — visible when not hovered */
+.data-redacted[data-label]::before {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F172A;
+  font-size: 0.55rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  z-index: 1;
+  filter: invert(1);
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.data-redacted[data-label]:hover::before {
+  opacity: 0;
+}
+
 .hero-surface {
   background:
     radial-gradient(circle at 86% 8%, rgb(15 118 110 / 0.09) 0%, transparent 36%),
