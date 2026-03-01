@@ -53,10 +53,10 @@
   }
 
   h1 {
-    /* 48px mobile, 56px desktop — Phase 2 upgrade */
-    font-size: clamp(3rem, 5vw, 3.5rem);
+    /* 52px mobile → 64px desktop — Phase 4 upgrade: more editorial presence */
+    font-size: clamp(3.25rem, 6vw, 4rem);
     font-weight: 700;
-    line-height: 1.05;
+    line-height: 1.03;
   }
 
   h2 {
@@ -548,6 +548,47 @@
   flex-direction: column;
   gap: 1.25rem;
 }
+
+/* ── Hero H1 dramatic reveal (scroll-first storytelling) ── */
+@keyframes hero-line-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero-line-1 {
+  display: block;
+  animation: hero-line-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+}
+
+.hero-line-2 {
+  display: block;
+  animation: hero-line-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both;
+}
+
+/* ── Spotlight featured: newspaper headline scale ── */
+.spotlight-headline-featured {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+/* ── Scroll-triggered section: fade + slide up with stagger ── */
+@keyframes section-enter {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.section-stagger-1 { animation: section-enter 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both; }
+.section-stagger-2 { animation: section-enter 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both; }
+.section-stagger-3 { animation: section-enter 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both; }
 
 /* ── Animated search: glow on focus ── */
 .search-wrap {

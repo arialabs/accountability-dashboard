@@ -312,8 +312,8 @@ export default function Home() {
                 className="mb-5"
                 style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)", fontWeight: 700 }}
               >
-                <span>They work for you.</span>
-                <span className="block" style={{ color: "var(--accent)" }}>
+                <span className="hero-line-1">They work for you.</span>
+                <span className="hero-line-2" style={{ color: "var(--accent)" }}>
                   Prove it.
                 </span>
               </h1>
@@ -495,13 +495,13 @@ export default function Home() {
             <h2
               style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}
             >
-              Reps in the data spotlight
+              The data doesn&apos;t lie.
             </h2>
             <p
               className="mt-3 text-base leading-relaxed"
               style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
             >
-              Officials with notable data patterns this cycle
+              Officials with patterns their press releases won&apos;t mention — sourced from FEC records, financial disclosures, and congressional votes.
             </p>
             <Link href="/congress" className="section-cta-link">
               View full watchlist <ArrowRightIcon />
@@ -563,10 +563,14 @@ export default function Home() {
                     {SPOTLIGHT_FEATURED.role}
                   </p>
 
-                  {/* Subheadline */}
+                  {/* Subheadline — elevated to editorial pull-quote weight */}
                   <p
-                    className="text-base leading-relaxed mb-5"
-                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                    className="text-lg md:text-xl leading-snug mb-5 font-semibold"
+                    style={{
+                      fontFamily: "'Newsreader', Georgia, serif",
+                      color: "var(--text-primary)",
+                      fontStyle: "italic",
+                    }}
                   >
                     {SPOTLIGHT_FEATURED.headline}
                   </p>
