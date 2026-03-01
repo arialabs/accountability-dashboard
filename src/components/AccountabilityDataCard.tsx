@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import AnimatedCounter from './AnimatedCounter';
 
 interface AccountabilityDataCardProps {
   value: string;
@@ -122,8 +123,13 @@ export default function AccountabilityDataCard({
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
         }`}
         style={{ fontFamily: "'JetBrains Mono', monospace", color: '#5EEAD4' }}
+        aria-label={value}
       >
-        {value}
+        {visible ? (
+          <AnimatedCounter value={value} duration={1600} />
+        ) : (
+          <span>{value}</span>
+        )}
       </div>
 
       {/* Label */}
