@@ -33,9 +33,7 @@ jobs:
               if (labels.includes('synced:tasks')) return;
 
               const title = `[${repo}] ${issue.title}`;
-              const body = `Source: ${issue.html_url}
-
-${issue.body || ''}`;
+              const body = `Source: ${issue.html_url}\n\n${issue.body || ''}`;
               const newIssue = await github.rest.issues.create({
                 owner: 'arialabs',
                 repo: 'tasks',
@@ -62,8 +60,7 @@ ${issue.body || ''}`;
             if (context.eventName === 'pull_request') {
               const pr = context.payload.pull_request;
               if (!pr.merged) return;
-              const text = `${pr.title}
-${pr.body || ''}`;
+              const text = `${pr.title}\n${pr.body || ''}`;
               const regex = /(?:arialabs\/tasks#|tasks#)(\d+)/g;
               const ids = new Set();
               let m;
