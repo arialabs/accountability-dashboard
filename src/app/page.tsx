@@ -67,56 +67,59 @@ function ArrowRightIcon({ className = "w-4 h-4" }: { className?: string }) {
 }
 
 // ── Trending Spotlight Data ──────────────────────────────────────────────────
-// Featured story (front-page) + 2 supporting stories
+// Sourced from leadership-scrutiny.json + leadership-donors.json (FEC data)
+// Featured: Tom Emmer — House Majority Whip, top PAC donors are the industries he regulates
+// Supporting: John Thune (most caucus breaks) + Katherine Clark (highest PAC%)
 const SPOTLIGHT_FEATURED = {
   party: "R" as const,
-  name: "Mitch McConnell",
-  role: "Senator · Kentucky",
-  headline: "Received $21.3M from financial sector PACs over career while consistently opposing banking regulations and consumer protection measures",
-  subhead: "FEC records show the Senate Minority Leader's largest donors are the exact same financial institutions his committee oversees.",
-  stat: "$21.3M",
-  statLabel: "Financial sector PACs",
+  name: "Tom Emmer",
+  role: "House Majority Whip · MN-6",
+  headline: "Raised $6.8M while Banking, Telecom, and Defense PACs dominate his donor list — the same industries his caucus oversees",
+  subhead: "FEC records show Emmer's top donors are American Bankers Association, Comcast, and Raytheon PACs. He has voted with his party 100% of the time.",
+  stat: "$6.8M",
+  statLabel: "Total raised (2024 cycle)",
   statIndicator: "flag" as const,
-  statContext: "Flagged: exceeds median 12x",
+  statContext: "Flagged: 19.4% PAC-funded",
   tag: "Campaign Finance",
   tagStyle: "stamp-trending" as const,
   editorialMark: "FLAGGED" as const,
-  href: "/rep/M000355",
-  // Mini bar-chart data (relative percentages)
+  href: "/rep/E000294",
+  // Mini bar-chart: top donor sectors (relative to largest)
   barData: [
-    { label: "Finance", pct: 92, color: "#B91C1C" },
-    { label: "Energy", pct: 61, color: "#D97706" },
-    { label: "Defense", pct: 48, color: "#64748B" },
-    { label: "Health", pct: 34, color: "#64748B" },
+    { label: "Banking", pct: 100, color: "#B91C1C" },
+    { label: "Telecom",  pct: 89,  color: "#D97706" },
+    { label: "Defense",  pct: 65,  color: "#64748B" },
+    { label: "Alcohol",  pct: 58,  color: "#64748B" },
+    { label: "Real Est", pct: 57,  color: "#64748B" },
   ],
 };
 
 const SPOTLIGHT_SUPPORTING = [
   {
-    party: "D" as const,
-    name: "Nancy Pelosi",
-    role: "Representative · CA-11",
-    headline: "Stock portfolio returned 65% in 2023 — outperforming 99% of hedge fund managers",
-    stat: "65%",
-    statLabel: "Portfolio return 2023",
-    statIndicator: "up" as const,
-    tag: "Financial Disclosure",
-    tagStyle: "stamp-filed" as const,
-    editorialMark: "TRENDING" as const,
-    href: "/rep/P000197",
-  },
-  {
     party: "R" as const,
-    name: "Ted Cruz",
-    role: "Senator · Texas",
-    headline: "Voted against 87% of climate bills despite Texas leading the US in renewable energy capacity",
-    stat: "87%",
-    statLabel: "Climate bills opposed",
+    name: "John Thune",
+    role: "Senate Majority Leader · SD",
+    headline: "Broke from his own party 9 times in 189 votes — more than any other congressional leader in our dataset",
+    stat: "9",
+    statLabel: "Caucus breaks recorded",
     statIndicator: "flag" as const,
     tag: "Voting Record",
     tagStyle: "stamp-flagged" as const,
     editorialMark: "FLAGGED" as const,
-    href: "/rep/C001098",
+    href: "/rep/T000250",
+  },
+  {
+    party: "D" as const,
+    name: "Katherine Clark",
+    role: "House Minority Whip · MA-5",
+    headline: "40.7% of her $2.7M raised came from PACs — the highest PAC-funded rate among all House and Senate leaders tracked",
+    stat: "40.7%",
+    statLabel: "PAC-funded share",
+    statIndicator: "flag" as const,
+    tag: "Campaign Finance",
+    tagStyle: "stamp-trending" as const,
+    editorialMark: "FLAGGED" as const,
+    href: "/rep/C001101",
   },
 ];
 
