@@ -7,6 +7,8 @@
 
 const CONGRESS_API_BASE = 'https://api.congress.gov/v3';
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
+// Public key for client-side (browser) fetching — exposed in bundle intentionally
+const CONGRESS_API_KEY_PUBLIC = process.env.NEXT_PUBLIC_CONGRESS_API_KEY;
 
 if (!CONGRESS_API_KEY && typeof window === 'undefined') {
   console.warn('Warning: CONGRESS_API_KEY not set. Congress.gov API calls will fail.');
@@ -215,3 +217,57 @@ function normalizeResult(result: string): 'Passed' | 'Failed' | 'Agreed to' | 'R
 }
 
 export type { CongressVote, ApiResponse };
+
+/**
+ * Client-side version of getMemberVotes — uses NEXT_PUBLIC_CONGRESS_API_KEY
+ * Safe to call from browser (React components).
+ */
+export async function getMemberVotesClient(
+  bioguideId: string,
+  limit = 100,
+  offset = 0
+): Promise<ApiResponse<CongressVote[]>> {
+  const apiKey = CONGRESS_API_KEY_PUBLIC;
+  if (!apiKey) {
+    return { success: false, error: 'Congress API key not configured' };
+  }
+
+  try {
+    const url = `${CONGRESS_API_BASE}/member/${bioguideId}/votes?format=json&limit=${limit}&offset=${offset}&api_key=${apiKey}`;
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      return { success: false, error: `HTTP ${response.status}` };
+    }
+
+    const data = await response.json();
+    const votes = data.recordedVotes?.map((v: RollCallVote) => {
+      const rv = v.recordedVote;
+      return {
+        congress: rv.congress,
+        chamber: rv.chamber === 'House of Representatives' ? 'House' as const : 'Senate' as const,
+        rollNumber: rv.rollNumber,
+        date: rv.date,
+        question: rv.question,
+        result: normalizeResult(rv.result),
+        bill: rv.bill ? {
+          number: rv.bill.number,
+          title: rv.bill.title || rv.bill.number,
+          url: rv.bill.url || `https://www.congress.gov/bill/${rv.congress}th-congress/${rv.bill.number.toLowerCase()}`
+        } : undefined,
+        description: rv.description,
+        totals: {
+          yea: rv.vote_totals?.totals_by_vote?.YEA?.total || 0,
+          nay: rv.vote_totals?.totals_by_vote?.NAY?.total || 0,
+          present: rv.vote_totals?.totals_by_vote?.PRESENT?.total || 0,
+          notVoting: rv.vote_totals?.totals_by_vote?.NOT_VOTING?.total || 0,
+        },
+      };
+    }) || [];
+
+    return { success: true, data: votes };
+  } catch (error) {
+    console.error('Error fetching member votes (client):', error);
+    return { success: false, error: String(error) };
+  }
+}

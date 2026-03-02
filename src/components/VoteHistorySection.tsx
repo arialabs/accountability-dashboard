@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CongressVote } from "@/lib/congress";
+import { CongressVote, getMemberVotesClient } from "@/lib/congress";
 
 interface VoteHistorySectionProps {
   bioguideId: string;
@@ -40,16 +40,10 @@ export default function VoteHistorySection({
       setError(null);
 
       try {
-        const response = await fetch(`/api/congress/member-votes?bioguideId=${bioguideId}&limit=100`);
-        
-        if (!response.ok) {
-          throw new Error(`Failed to fetch votes: ${response.status}`);
-        }
+        const data = await getMemberVotesClient(bioguideId, 100);
 
-        const data = await response.json();
-        
-        if (data.success && data.votes) {
-          setVotes(data.votes);
+        if (data.success && data.data) {
+          setVotes(data.data);
         } else {
           setError(data.error || "Failed to load voting history");
         }

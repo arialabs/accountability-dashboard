@@ -32,6 +32,7 @@ jobs:
       - name: Build
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+          NEXT_PUBLIC_CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
           NEXT_PUBLIC_FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
           NEXT_PUBLIC_SITE_URL: https://reps.arialabs.ai
