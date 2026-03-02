@@ -126,3 +126,18 @@ MIT — Use this however you want. Democracy shouldn't be paywalled.
 ---
 
 *Built by [Aria Labs](https://github.com/arialabs) 🔥*
+
+## GitHub Actions Secrets
+
+The following secrets must be configured in the repository settings for CI/CD and data pipelines to work:
+
+| Secret | Description |
+|--------|-------------|
+| `OPENROUTER_API_KEY` | API key for OpenRouter (used by Perplexity Sonar news fetch in the nightly news refresh workflow) |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID for Pages deployment |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare API token with Pages deploy permissions |
+| `CONGRESS_API_KEY` | Congress.gov API key for legislative data pipeline |
+| `FEC_API_KEY` | Federal Election Commission API key for campaign finance data |
+| `GH_TOKEN` | GitHub Personal Access Token for workflow automation (write access to repo) |
+
+To add secrets: **Repo Settings → Secrets and variables → Actions → New repository secret**
