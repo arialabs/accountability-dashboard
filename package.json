@@ -23,7 +23,9 @@
     "usaspending:sync:test": "tsx pipeline/sync-usaspending.ts --test",
     "votes:trigger": "tsx scripts/trigger-vote-sync.ts",
     "db:push": "turso db shell accountability-dashboard < database/schema.sql",
-    "db:studio": "turso db shell accountability-dashboard"
+    "db:studio": "turso db shell accountability-dashboard",
+    "research:fetch": "node scripts/fetch-news.mjs",
+    "research:fetch:deep": "node scripts/fetch-news.mjs --deep"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.75.0",

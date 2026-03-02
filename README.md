@@ -30,6 +30,34 @@ Built for citizens who demand transparency from their elected representatives.
 | [FEC API](https://api.open.fec.gov/) | Detailed contributions |
 | [USASpending.gov API](https://api.usaspending.gov/) | Agency FY budgets, program changes, contracts/grants awards |
 
+## Environment Variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `OPENROUTER_API_KEY` | Yes (for news features) | OpenRouter API key — used to query Perplexity Sonar for live representative news. Get yours at [openrouter.ai](https://openrouter.ai). |
+
+```bash
+# .env.local (development)
+OPENROUTER_API_KEY=sk-or-...
+```
+
+## Perplexity News Integration
+
+The "Latest News" section on rep profile pages is powered by [Perplexity Sonar](https://perplexity.ai) via OpenRouter.
+
+### How it works
+
+- **Static builds (Cloudflare Pages):** Run `pnpm research:fetch` before building to pre-generate `src/data/news-cache.json`. The static pages load news from this cache at build time.
+- **Server deployments:** The `/api/research?id=<bioguide_id>` route fetches live news on demand (requires removing `output: "export"` from `next.config.mjs`).
+
+### Pre-fetch news for all reps
+
+```bash
+OPENROUTER_API_KEY=sk-or-... pnpm research:fetch          # sonar (fast)
+OPENROUTER_API_KEY=sk-or-... pnpm research:fetch:deep     # sonar-deep-research (thorough)
+OPENROUTER_API_KEY=sk-or-... pnpm research:fetch -- --ids A000374,B001271  # specific reps
+```
+
 ## Development
 
 ```bash
