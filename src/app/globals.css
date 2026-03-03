@@ -677,3 +677,73 @@
     transform: none;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   PHASE 4 — Data Viz Signature Language + Scroll Storytelling
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Unified chart wrapper — "leaked dossier" data panel ── */
+.chart-container {
+  position: relative;
+  background: #F8FAFC;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 4px 4px 0;
+  padding: 1.25rem 1.25rem 1rem 1.25rem;
+  /* Subtle grid-paper texture via repeating gradient */
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 23px,
+      rgb(226 232 240 / 0.4) 23px,
+      rgb(226 232 240 / 0.4) 24px
+    );
+}
+
+/* "DATA" label — top-right flag-pin motif */
+.chart-container::before {
+  content: "⚑ DATA";
+  position: absolute;
+  top: 0.6rem;
+  right: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  padding: 2px 6px;
+  background: rgb(15 118 110 / 0.06);
+  line-height: 1.4;
+}
+
+/* ── Scroll stagger: directional slide variants ── */
+@keyframes slide-from-left {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-from-right {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-from-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply via JS (ScrollFadeIn component) or manually */
+.scroll-from-left  { animation: slide-from-left  0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.scroll-from-right { animation: slide-from-right 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.scroll-from-up    { animation: slide-from-up    0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+/* Stagger delay utilities for static markup */
+.stagger-1 { animation-delay: 0.08s; }
+.stagger-2 { animation-delay: 0.16s; }
+.stagger-3 { animation-delay: 0.24s; }
+.stagger-4 { animation-delay: 0.32s; }
+.stagger-5 { animation-delay: 0.40s; }
+.stagger-6 { animation-delay: 0.48s; }
