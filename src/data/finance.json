@@ -34,5 +34,378 @@
     "large_donor_percentage": 27.9,
     "top_contributors": [],
     "top_industries": []
+  },
+  "J000299": {
+    "candidate_id": "H6LA04138",
+    "cycle": 2024,
+    "total_raised": 19867069,
+    "total_spent": 19499271,
+    "cash_on_hand": 0,
+    "individual_contributions": 10686555,
+    "pac_contributions": 1795400,
+    "party_contributions": 0,
+    "candidate_self_funding": 0,
+    "small_donors": 5236369,
+    "large_donors": 5450185,
+    "pac_percentage": 9,
+    "small_donor_percentage": 26.4,
+    "large_donor_percentage": 27.4,
+    "top_contributors": [
+      {
+        "name": "GROW THE MAJORITY",
+        "total": 2199917,
+        "count": 20,
+        "type": "committee"
+      },
+      {
+        "name": "STRATEGIC ADVANCE SERVICES LLC",
+        "total": 494916,
+        "count": 1,
+        "type": "committee"
+      },
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE PAC",
+        "total": 377355,
+        "count": 4,
+        "type": "pac"
+      },
+      {
+        "name": "CONVERT DIGITAL LLC",
+        "total": 300000,
+        "count": 1,
+        "type": "committee"
+      },
+      {
+        "name": "GROW THE MAJORITY NY",
+        "total": 107174,
+        "count": 2,
+        "type": "committee"
+      },
+      {
+        "name": "GROW THE MAJORITY CA",
+        "total": 34350,
+        "count": 1,
+        "type": "committee"
+      }
+    ],
+    "top_industries": []
+  },
+  "S001176": {
+    "candidate_id": "H0LA01087",
+    "cycle": 2024,
+    "total_raised": 14732239,
+    "total_spent": 15253286,
+    "cash_on_hand": 0,
+    "individual_contributions": 2538506,
+    "pac_contributions": 187000,
+    "party_contributions": 0,
+    "candidate_self_funding": 0,
+    "small_donors": 846440,
+    "large_donors": 1692066,
+    "pac_percentage": 1.3,
+    "small_donor_percentage": 5.7,
+    "large_donor_percentage": 11.5,
+    "top_contributors": [
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION CO",
+        "total": 402135,
+        "count": 13,
+        "type": "pac"
+      },
+      {
+        "name": "NATIONAL ASSOCIATION OF REALTORS POLITICAL ACTION COMMITTEE",
+        "total": 143500,
+        "count": 4,
+        "type": "pac"
+      }
+    ],
+    "top_industries": []
+  },
+  "E000294": {
+    "candidate_id": "H4MN06087",
+    "cycle": 2024,
+    "total_raised": 8158685,
+    "total_spent": 7115861,
+    "cash_on_hand": 0,
+    "individual_contributions": 2088654,
+    "pac_contributions": 2524190,
+    "party_contributions": 0,
+    "candidate_self_funding": 0,
+    "small_donors": 498537,
+    "large_donors": 1590117,
+    "pac_percentage": 30.9,
+    "small_donor_percentage": 6.1,
+    "large_donor_percentage": 19.5,
+    "top_contributors": [
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION CO",
+        "total": 322981,
+        "count": 16,
+        "type": "pac"
+      }
+    ],
+    "top_industries": []
+  },
+  "J000294": {
+    "candidate_id": "H2NY10092",
+    "cycle": 2024,
+    "total_raised": 22977197,
+    "total_spent": 20238858,
+    "cash_on_hand": 0,
+    "individual_contributions": 15936794,
+    "pac_contributions": 2639351,
+    "party_contributions": 418,
+    "candidate_self_funding": 0,
+    "small_donors": 8694626,
+    "large_donors": 7242168,
+    "pac_percentage": 11.5,
+    "small_donor_percentage": 37.8,
+    "large_donor_percentage": 31.5,
+    "top_contributors": [
+      {
+        "name": "DEFEND THE VOTE LEADERSHIP FUND - UNITEMIZED",
+        "total": 150767,
+        "count": 8,
+        "type": "pac"
+      },
+      {
+        "name": "DEFEND THE VOTE LEADERSHIP FUND",
+        "total": 128800,
+        "count": 8,
+        "type": "pac"
+      },
+      {
+        "name": "EMPIRE STATE VICTORY FUND",
+        "total": 48200,
+        "count": 4,
+        "type": "pac"
+      },
+      {
+        "name": "EMPIRE STATE STRIKES BACK",
+        "total": 13500,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "WRITERS GUILD OF AMERICA WEST, INC. PAC (WGAW PAC)",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "SOCIETY FOR VASCULAR SURGERY POLITICAL ACTION COMMITTEE",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "NATIONAL ELECTRICAL CONTRACTORS ASSOCIATION POLITICAL ACTION COMMITTEE (NECAPAC)",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "HEWLETT PACKARD ENTERPRISE COMPANY PAC",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "DISCOVER FINANCIAL SERVICES POLITICAL ACTION COMMITTEE",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "CISCO SYSTEMS, INC. FEDERAL PAC, AKA CISCO SYSTEMS EPAC",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      }
+    ],
+    "top_industries": []
+  },
+  "C001101": {
+    "candidate_id": "H4MA05084",
+    "cycle": 2024,
+    "total_raised": 4984889,
+    "total_spent": 4766148,
+    "cash_on_hand": 0,
+    "individual_contributions": 1910058,
+    "pac_contributions": 2303969,
+    "party_contributions": 0,
+    "candidate_self_funding": 0,
+    "small_donors": 159971,
+    "large_donors": 1750086,
+    "pac_percentage": 46.2,
+    "small_donor_percentage": 3.2,
+    "large_donor_percentage": 35.1,
+    "top_contributors": [
+      {
+        "name": "DEFEND THE VOTE LEADERSHIP FUND - UNITEMIZED",
+        "total": 166812,
+        "count": 8,
+        "type": "committee"
+      },
+      {
+        "name": "DEFEND THE VOTE LEADERSHIP FUND",
+        "total": 129200,
+        "count": 8,
+        "type": "committee"
+      },
+      {
+        "name": "FAIR SHOT PAC",
+        "total": 17292,
+        "count": 2,
+        "type": "pac"
+      },
+      {
+        "name": "WELLS FARGO AND COMPANY EMPLOYEES GOOD GOVERNMENT FEDERAL FUND II",
+        "total": 10000,
+        "count": 2,
+        "type": "pac"
+      },
+      {
+        "name": "HCA HEALTHCARE, INC. GOOD GOVERNMENT FUND",
+        "total": 10000,
+        "count": 2,
+        "type": "pac"
+      },
+      {
+        "name": "FEDERATION OF AMERICAN HOSPITALS PAC",
+        "total": 10000,
+        "count": 2,
+        "type": "pac"
+      },
+      {
+        "name": "TANDEM DESIGN",
+        "total": 7824,
+        "count": 1,
+        "type": "committee"
+      },
+      {
+        "name": "TELEVISAUNIVISION, INC. EMPLOYEE POLITICAL ACTION COMMITTEE",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "NATIONAL TREASURY EMPLOYEES UNION POLITICAL ACTION COMMITTEE",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "NATIONAL AUTOMOBILE DEALERS ASSOCIATION POLITICAL ACTION COMMITTEE",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      }
+    ],
+    "top_industries": []
+  },
+  "T000250": {
+    "candidate_id": "S2SD00068",
+    "cycle": 2024,
+    "total_raised": 4163983,
+    "total_spent": 5721879,
+    "cash_on_hand": 0,
+    "individual_contributions": 1339993,
+    "pac_contributions": 555700,
+    "party_contributions": 0,
+    "candidate_self_funding": 0,
+    "small_donors": 239030,
+    "large_donors": 1100963,
+    "pac_percentage": 13.3,
+    "small_donor_percentage": 5.7,
+    "large_donor_percentage": 26.4,
+    "top_contributors": [
+      {
+        "name": "CHARLES SCHWAB & CO INC",
+        "total": 1685134,
+        "count": 17,
+        "type": "committee"
+      }
+    ],
+    "top_industries": []
+  },
+  "S000148": {
+    "candidate_id": "S8NY00082",
+    "cycle": 2024,
+    "total_raised": 2790889,
+    "total_spent": 3349301,
+    "cash_on_hand": 0,
+    "individual_contributions": 2345346,
+    "pac_contributions": 202800,
+    "party_contributions": 0,
+    "candidate_self_funding": 0,
+    "small_donors": 1399703,
+    "large_donors": 945643,
+    "pac_percentage": 7.3,
+    "small_donor_percentage": 50.2,
+    "large_donor_percentage": 33.9,
+    "top_contributors": [
+      {
+        "name": "JANNEY MONTGOMERY SCOTT, LLC",
+        "total": 186101,
+        "count": 27,
+        "type": "committee"
+      },
+      {
+        "name": "AMALGAMATED BANK",
+        "total": 10085,
+        "count": 1,
+        "type": "committee"
+      },
+      {
+        "name": "L3HARRIS TECHNOLOGIES, INC. PAC",
+        "total": 10000,
+        "count": 2,
+        "type": "pac"
+      },
+      {
+        "name": "DELOITTE POLITICAL ACTION COMMITTEE",
+        "total": 10000,
+        "count": 2,
+        "type": "pac"
+      },
+      {
+        "name": "THE VANGUARD GROUP COMMITTEE FOR RESPONSIBLE GOVERNMENT",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "GRIDIRON PAC",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "FIRST SOLAR INC. POLITICAL ACTION COMMITTEE",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "DOW INC. PAC (DOWPAC)",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "NATIONAL ASSOCIATION OF HEALTH UNDERWRITERS PAC (HUPAC)",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      },
+      {
+        "name": "DELAWARE NORTH COMPANIES, INC. POLITICAL ACTION COMMITTEE",
+        "total": 5000,
+        "count": 1,
+        "type": "pac"
+      }
+    ],
+    "top_industries": []
   }
 }

@@ -156,16 +156,107 @@ async function getCandidateTotals(candidateId: string): Promise<any | null> {
   }
 }
 
-// Get top contributors for a candidate
-async function getTopContributors(candidateId: string): Promise<any[]> {
-  const url = `${FEC_API_BASE}/schedules/schedule_a/by_contributor/?api_key=${API_KEY}&candidate_id=${candidateId}&cycle=${CURRENT_CYCLE}&sort=-total&per_page=15`;
-  
+// Self-transfer entities to filter out (WinRed, ActBlue, own party committees, etc.)
+const SELF_TRANSFER_PATTERNS = [
+  /winred/i,
+  /actblue/i,
+  /ngp van/i,
+  /democratic congressional campaign/i,
+  /national republican congressional/i,
+  /democratic senatorial campaign/i,
+  /national republican senatorial/i,
+  /democratic national committee/i,
+  /republican national committee/i,
+  /joint fundraising/i,
+  /grassroots media/i,
+  /democracy engine/i,
+];
+
+// Suffixes that indicate member's own leadership PAC or victory committee
+const MEMBER_SELF_TRANSFER_SUFFIXES = [
+  /\bleadership\b/i,
+  /\bleadership fund\b/i,
+  /\bvictory\b/i,
+  /\bmajority\b/i,
+  /\bmajority fund\b/i,
+  /\bmajority committee\b/i,
+  /\bfor congress\b/i,
+  /\bfor senate\b/i,
+];
+
+function isSelfTransfer(name: string, memberLastName?: string): boolean {
+  if (SELF_TRANSFER_PATTERNS.some(p => p.test(name))) return true;
+  if (memberLastName) {
+    const nameLower = name.toLowerCase();
+    const lastLower = memberLastName.toLowerCase();
+    if (nameLower.includes(lastLower)) {
+      if (MEMBER_SELF_TRANSFER_SUFFIXES.some(p => p.test(name))) return true;
+      if (/^team\s+/i.test(name)) return true;
+    }
+  }
+  return false;
+}
+
+// Get the principal campaign committee ID for a candidate
+async function getCandidatePrincipalCommittee(candidateId: string): Promise<string | null> {
+  const url = `${FEC_API_BASE}/candidate/${candidateId}/committees/?api_key=${API_KEY}&designation=P&cycle=${CURRENT_CYCLE}`;
+  try {
+    const response = await fetchWithRetry(url);
+    if (!response || !response.ok) return null;
+    const data = await response.json();
+    const committee = data.results?.[0];
+    return committee?.committee_id || null;
+  } catch {
+    return null;
+  }
+}
+
+// Get top contributors for a candidate via Schedule A (committee-based)
+async function getTopContributors(candidateId: string, memberLastName?: string): Promise<any[]> {
+  // First get the principal committee ID
+  const committeeId = await getCandidatePrincipalCommittee(candidateId);
+  if (!committeeId) {
+    // Fallback to the by_contributor endpoint
+    const url = `${FEC_API_BASE}/schedules/schedule_a/by_contributor/?api_key=${API_KEY}&candidate_id=${candidateId}&cycle=${CURRENT_CYCLE}&sort=-total&per_page=20`;
+    try {
+      const response = await fetchWithRetry(url);
+      if (!response || !response.ok) return [];
+      const data = await response.json();
+      return data.results || [];
+    } catch {
+      return [];
+    }
+  }
+
+  // Fetch Schedule A contributions to the committee
+  const url = `${FEC_API_BASE}/schedules/schedule_a/?api_key=${API_KEY}&committee_id=${committeeId}&two_year_transaction_period=${CURRENT_CYCLE}&per_page=100&sort=-contribution_receipt_amount&is_individual=false`;
   try {
     const response = await fetchWithRetry(url);
     if (!response || !response.ok) return [];
-    
     const data = await response.json();
-    return data.results || [];
+    const raw: any[] = data.results || [];
+
+    // Aggregate by contributor name, filtering self-transfers
+    const aggregated = new Map<string, { total: number; count: number; type: string }>();
+    for (const r of raw) {
+      const name: string = r.contributor_name || r.committee_name || 'Unknown';
+      if (isSelfTransfer(name, memberLastName)) continue;
+      const amount = r.contribution_receipt_amount || 0;
+      if (amount <= 0) continue;
+      const existing = aggregated.get(name);
+      if (existing) {
+        existing.total += amount;
+        existing.count += 1;
+      } else {
+        aggregated.set(name, { total: amount, count: 1, type: r.entity_type || 'ORG' });
+      }
+    }
+
+    // Sort by total and return top 10
+    return Array.from(aggregated.entries())
+      .sort((a, b) => b[1].total - a[1].total)
+      .slice(0, 10)
+      .map(([name, d]) => ({ contributor_name: name, total: d.total, count: d.count, entity_type: d.type }));
   } catch {
     return [];
   }
@@ -192,8 +283,9 @@ export async function fetchMemberFinanceDetailed(
     return null;
   }
   
-  // Fetch top contributors
-  const rawContributors = await getTopContributors(candidate.candidate_id);
+  // Fetch top contributors (pass last name for self-transfer filtering)
+  const memberLastName = fullName.split(" ").pop();
+  const rawContributors = await getTopContributors(candidate.candidate_id, memberLastName);
   
   // Parse totals
   const totalRaised = totals.receipts || 0;
@@ -210,12 +302,19 @@ export async function fetchMemberFinanceDetailed(
   const largeDonorPercentage = totalRaised > 0 ? (largeDonors / totalRaised) * 100 : 0;
   
   // Process contributors
-  const topContributors = rawContributors.slice(0, 10).map((c: any) => ({
-    name: c.contributor_name || c.committee_name || 'Unknown',
-    total: c.total || 0,
-    count: c.count || 1,
-    type: (c.committee_id ? 'pac' : 'individual') as 'individual' | 'pac' | 'party' | 'committee',
-  }));
+  const topContributors = rawContributors.slice(0, 10).map((c: any) => {
+    const entityType = (c.entity_type || '').toUpperCase();
+    let type: 'individual' | 'pac' | 'party' | 'committee' = 'committee';
+    if (entityType === 'IND') type = 'individual';
+    else if (entityType === 'PAC') type = 'pac';
+    else if (entityType === 'PTY') type = 'party';
+    return {
+      name: c.contributor_name || c.committee_name || 'Unknown',
+      total: Math.round(c.total || 0),
+      count: c.count || 1,
+      type,
+    };
+  });
   
   return {
     candidate_id: candidate.candidate_id,
