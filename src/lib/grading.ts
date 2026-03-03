@@ -155,7 +155,7 @@ function explainVotingScore(data: MemberData, score: number): string {
   }
   
   const { key_votes_participated, key_votes_total, votes_against_public_interest } = data.voting_record;
-  const participationRate = ((key_votes_participated / key_votes_total) * 100).toFixed(1);
+  const participationRate = (key_votes_total > 0 ? (key_votes_participated / key_votes_total) * 100 : 0).toFixed(1);
   
   if (score >= 90) {
     return `Strong voting record: ${participationRate}% participation in key votes with consistent alignment.`;

@@ -42,6 +42,7 @@ export function formatNumber(num: number): string {
  * @returns Formatted percentage string (e.g., "45.2%")
  */
 export function formatPercent(value: number, decimals: number = 1): string {
+  if (value == null || isNaN(value)) return "N/A";
   return `${value.toFixed(decimals)}%`;
 }
 

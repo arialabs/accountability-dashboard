@@ -81,7 +81,7 @@ export default function VotingRecordSection({
       </div>
 
       {/* Ideology Score */}
-      {ideologyScore !== null && (
+      {ideologyScore != null && (
         <div className="mb-8 pb-8 border-b border-slate-200">
           <div className="text-xl font-black text-slate-900 mb-2">
             Ideology Score

@@ -133,7 +133,7 @@ export function getMember(bioguideId: string): Member | undefined {
 // JSON imports are module-cached by the bundler, so no module-level Map needed.
 function getFinanceMap(): Map<string, CampaignFinance> {
   const map = new Map<string, CampaignFinance>();
-  const data = financeData as Record<string, CampaignFinance>;
+  const data = financeData as unknown as Record<string, CampaignFinance>;
   for (const [bioguideId, finance] of Object.entries(data)) {
     map.set(bioguideId, finance);
   }
