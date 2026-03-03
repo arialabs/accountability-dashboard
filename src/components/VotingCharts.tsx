@@ -178,7 +178,7 @@ function VotingActivityChart({ votesCast, chamber }: { votesCast: number; chambe
  */
 export default function VotingCharts({ member }: VotingChartsProps) {
   return (
-    <div className="space-y-6">
+    <div className="chart-container space-y-6">
       {/* Party Alignment */}
       <div>
         <h3 className="text-sm font-medium text-slate-300 mb-3">Party Alignment</h3>

@@ -8,6 +8,7 @@ import RepresentativeImage from "@/components/RepresentativeImage";
 import Pagination from "@/components/Pagination";
 import { ScoreLegend } from "@/components/ScoreLegend";
 import MemberCard from "@/components/MemberCard";
+import ScrollFadeIn from "@/components/ScrollFadeIn";
 import type { Member } from "@/lib/types";
 
 const ITEMS_PER_PAGE = 24;
@@ -581,7 +582,7 @@ function CongressContent() {
             No members match your filters. Try adjusting your search.
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <ScrollFadeIn as="div" className="grid md:grid-cols-2 lg:grid-cols-3 gap-5" stagger staggerMs={60} direction="up" distance={24}>
             {pagedMembers.map((member) => (
               <MemberCard
                 key={member.bioguide_id}
@@ -590,7 +591,7 @@ function CongressContent() {
                 currentStateFilter={state}
               />
             ))}
-          </div>
+          </ScrollFadeIn>
         )}
 
         {/* Pagination */}

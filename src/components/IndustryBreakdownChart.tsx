@@ -157,7 +157,7 @@ export default function IndustryBreakdownChart({
   }
   
   return (
-    <div>
+    <div className="chart-container">
       <div className="flex items-center justify-between mb-6">
         <h4 className="text-lg font-bold text-slate-900">Industry Breakdown</h4>
         <div className="flex gap-2">
