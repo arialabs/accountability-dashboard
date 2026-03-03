@@ -235,23 +235,51 @@ function CongressContent() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-16 space-y-8 overflow-x-hidden">
-      <div className="flex flex-col gap-6 mb-12">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <div>
-            <h1 className="text-2xl sm:text-4xl md:text-6xl font-black leading-tight tracking-tight text-slate-900">Congress Members</h1>
-            <p className="text-base sm:text-lg text-slate-600 mt-2 sm:mt-4 leading-relaxed">
-              {isFiltered 
-                ? `Showing ${filteredStats.total} of ${stats.total} members`
-                : `All ${stats.total} members of the 119th United States Congress`}
-            </p>
-          </div>
-          
-          <button 
-            onClick={handleFindMyReps}
-            disabled={isLoadingLocation}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-blue-400 disabled:cursor-not-allowed min-h-[44px]"
-          >
+    <div className="min-h-screen" style={{ backgroundColor: "var(--bg-primary)" }}>
+      {/* ── Page Header — editorial style ── */}
+      <div
+        className="border-b border-slate-200"
+        style={{ borderTop: "3px solid var(--accent)", backgroundColor: "var(--bg-secondary)" }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="brand-flag-bar" aria-hidden="true" />
+                <span
+                  className="text-xs font-semibold uppercase tracking-widest"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                >
+                  119th United States Congress
+                </span>
+              </div>
+              <h1
+                style={{
+                  fontFamily: "'Newsreader', Georgia, serif",
+                  color: "var(--text-primary)",
+                  fontWeight: 700,
+                  letterSpacing: "-0.03em",
+                  lineHeight: 1.05,
+                }}
+              >
+                Congress Members
+              </h1>
+              <p
+                className="mt-3 text-base leading-relaxed"
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              >
+                {isFiltered
+                  ? `Showing ${filteredStats.total} of ${stats.total} members`
+                  : `All ${stats.total} members tracked — voting records, campaign finance, and financial disclosures.`}
+              </p>
+            </div>
+
+            <button
+              onClick={handleFindMyReps}
+              disabled={isLoadingLocation}
+              className="btn-primary flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              style={{ minHeight: 44 }}
+            >
             {isLoadingLocation ? (
               <>
                 <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -269,9 +297,12 @@ function CongressContent() {
                 <span>Find My Reps</span>
               </>
             )}
-          </button>
+            </button>
+          </div>
         </div>
-        
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 overflow-x-hidden">
         {/* Active Filter Chips */}
         {isFiltered && (
           <div className="flex flex-wrap gap-2 items-center">
@@ -333,41 +364,54 @@ function CongressContent() {
           </div>
         )}
         
-        {/* User's Representatives Alert (when "Find My Reps" is used) */}
+        {/* User's Representatives Alert */}
         {userState && state === userState && userRepresentatives.length > 0 && (
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <div
+            className="rounded-md border p-4 section-flag-heading"
+            style={{ backgroundColor: "rgb(15 118 110 / 0.04)", borderColor: "var(--accent)" }}
+          >
             <div className="flex items-start gap-3">
-              <svg className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: "var(--accent)" }}>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <div className="flex-1">
-                <h3 className="font-semibold text-blue-900 mb-1">Your Representatives ({userState})</h3>
-                <p className="text-sm text-blue-700">
-                  Showing {userRepresentatives.length} representative{userRepresentatives.length !== 1 ? 's' : ''} from your state. 
-                  Your cards are highlighted below.
+                <h3
+                  className="font-semibold mb-1"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+                >
+                  Your Representatives ({userState})
+                </h3>
+                <p
+                  className="text-sm"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                >
+                  Showing {userRepresentatives.length} representative{userRepresentatives.length !== 1 ? "s" : ""} from your state.
                 </p>
               </div>
             </div>
           </div>
         )}
         
-        {/* Search + Filters */}
-        <div className="sticky top-16 z-10 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-xl p-4 sm:p-6 shadow-sm">
+        {/* Search + Filters — editorial panel */}
+        <div
+          className="sticky top-16 z-10 backdrop-blur-sm border border-slate-200 rounded-md p-4 sm:p-6"
+          style={{ backgroundColor: "rgb(255 255 255 / 0.96)", boxShadow: "0 4px 16px rgb(15 23 42 / 0.06)" }}
+        >
           <div className="space-y-4">
             {/* Search Input */}
-            <div className="relative">
+            <div className="relative search-wrap">
               <input
                 type="text"
-                placeholder="Search by name, state, or district (e.g., CA-12)..."
+                placeholder="Search by name, state, or district (e.g., CA-12)…"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full px-4 py-3 pl-10 border border-slate-300 rounded-lg text-base leading-relaxed focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition min-h-[44px]"
+                className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-sm text-base leading-relaxed transition min-h-[44px]"
+                style={{ fontFamily: "'Source Sans 3', sans-serif", outlineColor: "var(--accent)" }}
               />
-              <svg 
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
+              <svg
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -384,62 +428,58 @@ function CongressContent() {
               )}
             </div>
 
-            {/* Party Filter Buttons */}
+            {/* Party Filter Buttons — design-system aligned */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Party</label>
+              <label
+                className="block text-xs font-semibold uppercase tracking-widest mb-2"
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              >
+                Party
+              </label>
               <div className="flex flex-wrap gap-2">
-                <button
-                  onClick={() => setParty("")}
-                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px] ${
-                    party === "" 
-                      ? "bg-slate-900 text-white" 
-                      : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                  }`}
-                >
-                  All ({stats.total})
-                </button>
-                <button
-                  onClick={() => setParty("D")}
-                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px] ${
-                    party === "D" 
-                      ? "bg-blue-600 text-white" 
-                      : "bg-blue-100 text-blue-700 hover:bg-blue-200"
-                  }`}
-                >
-                  Democrat ({stats.democrats})
-                </button>
-                <button
-                  onClick={() => setParty("R")}
-                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px] ${
-                    party === "R" 
-                      ? "bg-red-600 text-white" 
-                      : "bg-red-100 text-red-700 hover:bg-red-200"
-                  }`}
-                >
-                  Republican ({stats.republicans})
-                </button>
-                <button
-                  onClick={() => setParty("I")}
-                  className={`px-4 py-2 rounded-lg font-medium text-sm transition min-h-[44px] ${
-                    party === "I" 
-                      ? "bg-purple-600 text-white" 
-                      : "bg-purple-100 text-purple-700 hover:bg-purple-200"
-                  }`}
-                >
-                  Independent ({stats.independents})
-                </button>
+                {[
+                  { val: "", label: `All (${stats.total})`, color: "var(--text-primary)", bg: "#F1F5F9", activeBg: "#0F172A", activeText: "#FFFFFF" },
+                  { val: "D", label: `Democrat (${stats.democrats})`, color: "var(--democrat)", bg: "#EFF6FF", activeBg: "var(--democrat)", activeText: "#FFFFFF" },
+                  { val: "R", label: `Republican (${stats.republicans})`, color: "var(--republican)", bg: "#FEF2F2", activeBg: "var(--republican)", activeText: "#FFFFFF" },
+                  { val: "I", label: `Independent (${stats.independents})`, color: "var(--independent)", bg: "#F5F3FF", activeBg: "var(--independent)", activeText: "#FFFFFF" },
+                ].map((opt) => {
+                  const active = party === opt.val;
+                  return (
+                    <button
+                      key={opt.val}
+                      onClick={() => setParty(opt.val)}
+                      className="px-3 py-2 rounded-sm font-semibold text-xs uppercase tracking-wide transition"
+                      style={{
+                        fontFamily: "'Source Sans 3', sans-serif",
+                        minHeight: 40,
+                        backgroundColor: active ? opt.activeBg : opt.bg,
+                        color: active ? opt.activeText : opt.color,
+                        border: `1px solid ${active ? opt.activeBg : opt.color}44`,
+                      }}
+                    >
+                      {opt.label}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
             {/* Dropdowns Row */}
             <div className="flex flex-col sm:flex-row gap-3">
               <div className="flex-1">
-                <label htmlFor="chamber-select" className="block text-sm font-semibold text-slate-700 mb-2">Chamber</label>
-                <select 
+                <label
+                  htmlFor="chamber-select"
+                  className="block text-xs font-semibold uppercase tracking-widest mb-2"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                >
+                  Chamber
+                </label>
+                <select
                   id="chamber-select"
                   value={chamber}
                   onChange={(e) => setChamber(e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white text-slate-700 font-medium text-base leading-relaxed focus:ring-2 focus:ring-blue-500 transition min-h-[44px]"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-sm bg-white font-medium text-base leading-relaxed transition min-h-[44px]"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
                 >
                   <option value="">All Chambers</option>
                   <option value="house">House ({stats.house})</option>
@@ -447,12 +487,19 @@ function CongressContent() {
                 </select>
               </div>
               <div className="flex-1">
-                <label htmlFor="state-select" className="block text-sm font-semibold text-slate-700 mb-2">State</label>
-                <select 
+                <label
+                  htmlFor="state-select"
+                  className="block text-xs font-semibold uppercase tracking-widest mb-2"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                >
+                  State
+                </label>
+                <select
                   id="state-select"
                   value={state}
                   onChange={(e) => setState(e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white text-slate-700 font-medium text-base leading-relaxed focus:ring-2 focus:ring-blue-500 transition min-h-[44px]"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-sm bg-white font-medium text-base leading-relaxed transition min-h-[44px]"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
                 >
                   <option value="">All States</option>
                   {states.map(s => (
@@ -465,59 +512,96 @@ function CongressContent() {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Stats Bar */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-        <div className="card text-center py-6 sm:py-8">
-          <div className="text-4xl sm:text-5xl font-black text-slate-900 mb-2 sm:mb-3 tabular-nums leading-tight">{filteredStats.total}</div>
-          <div className="text-slate-600 font-semibold text-xs sm:text-sm uppercase tracking-wider leading-relaxed">
-            {isFiltered ? "Showing" : "Total Members"}
+        {/* ── Party composition bar ── */}
+        {!isFiltered && stats.total > 0 && (
+          <div className="rounded-md border border-slate-200 bg-white p-4 sm:p-5">
+            <p
+              className="text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+            >
+              Party composition — 119th Congress
+            </p>
+            <div className="flex h-3 rounded-full overflow-hidden">
+              <div style={{ width: `${(stats.democrats / stats.total) * 100}%`, backgroundColor: "var(--democrat)" }} title={`Democrat: ${stats.democrats}`} />
+              <div style={{ width: `${(stats.republicans / stats.total) * 100}%`, backgroundColor: "var(--republican)" }} title={`Republican: ${stats.republicans}`} />
+              <div style={{ width: `${(stats.independents / stats.total) * 100}%`, backgroundColor: "var(--independent)" }} title={`Independent: ${stats.independents}`} />
+            </div>
+            <div className="flex flex-wrap gap-4 mt-3">
+              {[
+                { label: "Democrat", count: stats.democrats, color: "var(--democrat)" },
+                { label: "Republican", count: stats.republicans, color: "var(--republican)" },
+                { label: "Independent", count: stats.independents, color: "var(--independent)" },
+              ].map((p) => (
+                <div key={p.label} className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: p.color }} />
+                  <span
+                    className="text-xs"
+                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  >
+                    {p.label}: <span style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)", fontWeight: 700 }}>{p.count}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="card text-center py-6 sm:py-8">
-          <div className="text-4xl sm:text-5xl font-black text-blue-600 mb-2 sm:mb-3 tabular-nums leading-tight">{filteredStats.democrats}</div>
-          <div className="text-slate-600 font-semibold text-xs sm:text-sm uppercase tracking-wider leading-relaxed">Democrats</div>
-        </div>
-        <div className="card text-center py-6 sm:py-8">
-          <div className="text-4xl sm:text-5xl font-black text-red-600 mb-2 sm:mb-3 tabular-nums leading-tight">{filteredStats.republicans}</div>
-          <div className="text-slate-600 font-semibold text-xs sm:text-sm uppercase tracking-wider leading-relaxed">Republicans</div>
-        </div>
-        <div className="card text-center py-6 sm:py-8">
-          <div className="text-4xl sm:text-5xl font-black text-purple-600 mb-2 sm:mb-3 tabular-nums leading-tight">{filteredStats.independents}</div>
-          <div className="text-slate-600 font-semibold text-xs sm:text-sm uppercase tracking-wider leading-relaxed">Independents</div>
-        </div>
-      </div>
+        )}
 
-      {/* Score Legend */}
-      <ScoreLegend />
-
-      {/* Members Grid */}
-      {filteredMembers.length === 0 ? (
-        <div className="text-center py-20 text-lg text-slate-500 leading-relaxed">
-          No members match your filters. Try adjusting your search.
-        </div>
-      ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {pagedMembers.map((member) => (
-            <MemberCard
-              key={member.bioguide_id}
-              member={member}
-              userState={userState}
-              currentStateFilter={state}
-            />
+        {/* Stats Bar */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          {[
+            { label: isFiltered ? "Showing" : "Total Members", value: filteredStats.total, color: "var(--text-primary)" },
+            { label: "Democrats", value: filteredStats.democrats, color: "var(--democrat)" },
+            { label: "Republicans", value: filteredStats.republicans, color: "var(--republican)" },
+            { label: "Independents", value: filteredStats.independents, color: "var(--independent)" },
+          ].map((s) => (
+            <div key={s.label} className="rounded-md border border-slate-200 bg-white py-5 px-4 text-center">
+              <div
+                className="text-4xl font-bold tabular-nums mb-1"
+                style={{ fontFamily: "'JetBrains Mono', monospace", color: s.color, lineHeight: 1 }}
+              >
+                {s.value}
+              </div>
+              <div
+                className="text-xs font-semibold uppercase tracking-wider"
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              >
+                {s.label}
+              </div>
+            </div>
           ))}
         </div>
-      )}
 
-      {/* Pagination */}
-      {filteredMembers.length > ITEMS_PER_PAGE && (
-        <Pagination
-          currentPage={currentPage}
-          totalItems={filteredMembers.length}
-          itemsPerPage={ITEMS_PER_PAGE}
-        />
-      )}
+        {/* Score Legend */}
+        <ScoreLegend />
+
+        {/* Members Grid */}
+        {filteredMembers.length === 0 ? (
+          <div className="text-center py-20 text-lg text-slate-500 leading-relaxed">
+            No members match your filters. Try adjusting your search.
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {pagedMembers.map((member) => (
+              <MemberCard
+                key={member.bioguide_id}
+                member={member}
+                userState={userState}
+                currentStateFilter={state}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Pagination */}
+        {filteredMembers.length > ITEMS_PER_PAGE && (
+          <Pagination
+            currentPage={currentPage}
+            totalItems={filteredMembers.length}
+            itemsPerPage={ITEMS_PER_PAGE}
+          />
+        )}
+      </div>
     </div>
   );
 }
