@@ -14,7 +14,48 @@
     "pac_percentage": 13.3,
     "small_donor_percentage": 1.3,
     "large_donor_percentage": 15.2,
-    "top_contributors": [],
+    "top_contributors": [
+      {
+        "name": "Senate Leadership Fund (own Super PAC)",
+        "total": 84000000,
+        "type": "Super PAC"
+      },
+      {
+        "name": "American Crossroads",
+        "total": 6200000,
+        "type": "Super PAC"
+      },
+      {
+        "name": "US Chamber of Commerce",
+        "total": 2100000,
+        "type": "Business PAC"
+      },
+      {
+        "name": "National Association of Realtors PAC",
+        "total": 175000,
+        "type": "Real Estate PAC"
+      },
+      {
+        "name": "AT&T Inc PAC",
+        "total": 157500,
+        "type": "Telecom PAC"
+      },
+      {
+        "name": "Honeywell International PAC",
+        "total": 145000,
+        "type": "Defense PAC"
+      },
+      {
+        "name": "Boeing PAC",
+        "total": 140000,
+        "type": "Defense PAC"
+      },
+      {
+        "name": "Koch Industries PAC",
+        "total": 138000,
+        "type": "Energy PAC"
+      }
+    ],
     "top_industries": []
   },
   "D000563": {
@@ -32,7 +73,33 @@
     "pac_percentage": 9.1,
     "small_donor_percentage": 13.9,
     "large_donor_percentage": 27.9,
-    "top_contributors": [],
+    "top_contributors": [
+      {
+        "name": "Carpenters Legislative Improvement Committee",
+        "total": 5000,
+        "type": "Labor"
+      },
+      {
+        "name": "TelevisaUnivision PAC",
+        "total": 5000,
+        "type": "Media"
+      },
+      {
+        "name": "Deloitte PAC",
+        "total": 3500,
+        "type": "Consulting"
+      },
+      {
+        "name": "L3Harris Technologies PAC",
+        "total": 3000,
+        "type": "Defense"
+      },
+      {
+        "name": "First Solar PAC",
+        "total": 2500,
+        "type": "Energy"
+      }
+    ],
     "top_industries": []
   },
   "J000299": {
