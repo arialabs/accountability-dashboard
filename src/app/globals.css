@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,15 +7,18 @@
 @layer base {
   :root {
     --bg-primary: #FFFFFF;
-    --bg-secondary: #FAF9F7;
-    --text-primary: #0F172A;
+    --bg-secondary: #F8F9FA;
+    --text-primary: #1A1A2E;
     --text-secondary: #475569;
-    --democrat: #2563EB;
-    --republican: #B91C1C;
+    --democrat: #1B3A6B;
+    --republican: #DC143C;
     --independent: #7C3AED;
-    --accent: #0F766E;
+    --accent: #DC143C;
+    --accent-navy: #1B3A6B;
     --warning: #D97706;
-    --border: #E2E8F0;
+    --border: #E5E7EB;
+    --font-serif: 'Lora', Georgia, serif;
+    --font-sans: 'Inter', sans-serif;
 
     /* 8px base grid spacing tokens */
     --space-1: 8px;
@@ -30,14 +33,14 @@
 
   body {
     @apply antialiased bg-white text-base leading-relaxed;
-    font-family: 'Source Sans 3', Georgia, serif;
+    font-family: 'Inter', sans-serif;
     color: var(--text-secondary);
     background-color: var(--bg-primary);
   }
 
   /* Accessibility: Focus visible for keyboard navigation */
   *:focus-visible {
-    @apply outline-none ring-2 ring-teal-600 ring-offset-2;
+    @apply outline-none ring-2 ring-red-600 ring-offset-2;
   }
 
   /* Remove focus outline for mouse users */
@@ -46,7 +49,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Newsreader', Georgia, serif;
+    font-family: 'Lora', Georgia, serif;
     color: var(--text-primary);
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -93,11 +96,11 @@
   }
 
   .font-display {
-    font-family: 'Newsreader', Georgia, serif;
+    font-family: 'Lora', Georgia, serif;
   }
 
   .font-body {
-    font-family: 'Source Sans 3', Georgia, serif;
+    font-family: 'Inter', sans-serif;
   }
 
   /* Legacy support */
@@ -120,13 +123,13 @@
 
   /* Primary Button */
   .btn-primary {
-    font-family: 'Source Sans 3', sans-serif;
-    @apply bg-teal-700 hover:bg-teal-800 text-white font-semibold py-2 px-6 rounded transition-colors;
+    font-family: 'Inter', sans-serif;
+    @apply bg-[#DC143C] hover:bg-[#b01030] text-white font-semibold py-2 px-6 rounded transition-colors;
   }
 
   /* Party Badges — consistent size across all cards */
   .badge {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Inter', sans-serif;
     @apply inline-flex items-center px-2 py-0.5 rounded-sm text-xs font-semibold uppercase tracking-wide;
   }
 
@@ -171,7 +174,7 @@
   }
 
   .stat-label {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Inter', sans-serif;
     @apply text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1;
   }
 
@@ -181,7 +184,7 @@
   }
 
   .stat-context {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Inter', sans-serif;
     @apply text-xs text-slate-500;
   }
 
@@ -192,7 +195,7 @@
   }
 
   .section-label {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Inter', sans-serif;
     @apply text-xs font-semibold uppercase tracking-widest text-slate-500;
   }
 
@@ -261,7 +264,7 @@
   padding: 0.15rem 0.45rem;
   border: 1px solid var(--accent);
   border-radius: 2px;
-  background: rgb(15 118 110 / 0.06);
+  background: rgb(220 20 60 / 0.06);
 }
 
 .flag-pin::before {
@@ -319,7 +322,7 @@
 
 .hero-surface {
   background:
-    radial-gradient(circle at 86% 8%, rgb(15 118 110 / 0.09) 0%, transparent 36%),
+    radial-gradient(circle at 86% 8%, rgb(220 20 60 / 0.09) 0%, transparent 36%),
     linear-gradient(to bottom, #FFFFFF, var(--bg-secondary));
 }
 
@@ -355,7 +358,7 @@
 }
 
 .btn-secondary {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--text-primary);
   background-color: white;
   border: 1px solid var(--border);
@@ -389,7 +392,7 @@
   line-height: 1;
   padding: 0.5rem 0.625rem;
   text-transform: uppercase;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .section-cta-link {
@@ -400,7 +403,7 @@
   color: var(--accent);
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   transition: gap 0.2s ease;
 }
 
@@ -418,7 +421,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Thick section divider: horizontal redaction-bar motif */
@@ -480,7 +483,7 @@
 }
 
 .stamp-verified {
-  color: #0F766E;
+  color: #DC143C;
   background-color: #F0FDFA;
 }
 
@@ -598,7 +601,7 @@
 .search-wrap.search-focused {
   transform: scaleX(1.018);
   transform-origin: left center;
-  box-shadow: 0 0 0 3px rgb(20 184 166 / 0.22), 0 4px 20px rgb(20 184 166 / 0.12);
+  box-shadow: 0 0 0 3px rgb(220 20 60 / 0.22), 0 4px 20px rgb(220 20 60 / 0.12);
 }
 
 /* Scanning animation */
@@ -612,7 +615,7 @@
   top: 0;
   bottom: 0;
   width: 15%;
-  background: linear-gradient(90deg, transparent, rgb(20 184 166 / 0.18), transparent);
+  background: linear-gradient(90deg, transparent, rgb(220 20 60 / 0.18), transparent);
   pointer-events: none;
   animation: search-scan 1.4s ease-in-out infinite;
 }
@@ -715,7 +718,7 @@
   border: 1px solid var(--accent);
   border-radius: 2px;
   padding: 2px 6px;
-  background: rgb(15 118 110 / 0.06);
+  background: rgb(220 20 60 / 0.06);
   line-height: 1.4;
 }
 

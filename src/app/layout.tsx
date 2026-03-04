@@ -129,7 +129,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
-        <meta name="theme-color" content="#0F766E" />
+        <meta name="theme-color" content="#1B3A6B" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -140,7 +140,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap"
         />
         <script
           type="application/ld+json"
@@ -161,51 +161,35 @@ export default function RootLayout({
                 {/* Logotype / Wordmark — Phase 2: distinctive weight contrast + teal accent */}
                 <a
                   href="/"
-                  className="group flex items-center gap-0 hover:opacity-90 transition-opacity shrink-0"
-                  aria-label="Rep Accountability Dashboard — Home"
+                  className="group flex items-center gap-2 hover:opacity-90 transition-opacity shrink-0"
+                  aria-label="Reps — Congressional Accountability Dashboard — Home"
                 >
-                  {/* Teal accent mark */}
+                  {/* Balance scale icon */}
+                  <span className="text-xl leading-none" aria-hidden="true">⚖️</span>
+                  {/* "Reps" wordmark in Lora serif */}
                   <span
-                    className="inline-block w-1 h-5 mr-2 rounded-sm"
-                    style={{ backgroundColor: "var(--accent)" }}
-                    aria-hidden="true"
-                  />
-                  {/* "Accountability" — bold, tight tracking */}
-                  <span
-                    className="hidden sm:inline text-slate-900"
+                    className="text-slate-900"
                     style={{
-                      fontFamily: "'Newsreader', Georgia, serif",
+                      fontFamily: "'Lora', Georgia, serif",
                       fontWeight: 700,
-                      fontSize: "1.05rem",
+                      fontSize: "1.15rem",
                       letterSpacing: "-0.03em",
                     }}
                   >
-                    Accountability
+                    Reps
                   </span>
-                  {/* "Dashboard" — lighter weight, slightly muted */}
+                  {/* Subtitle — desktop only */}
                   <span
-                    className="hidden sm:inline text-slate-500"
+                    className="hidden sm:inline text-slate-400"
                     style={{
-                      fontFamily: "'Newsreader', Georgia, serif",
+                      fontFamily: "'Inter', sans-serif",
                       fontWeight: 400,
-                      fontSize: "1.05rem",
-                      letterSpacing: "-0.01em",
-                      marginLeft: "0.25em",
+                      fontSize: "0.85rem",
+                      letterSpacing: "0",
+                      marginLeft: "0.15em",
                     }}
                   >
-                    Dashboard
-                  </span>
-                  {/* Mobile short form */}
-                  <span
-                    className="sm:hidden text-slate-900"
-                    style={{
-                      fontFamily: "'Newsreader', Georgia, serif",
-                      fontWeight: 700,
-                      fontSize: "1rem",
-                      letterSpacing: "-0.03em",
-                    }}
-                  >
-                    Accountability
+                    Congressional Accountability
                   </span>
                 </a>
                 <Navigation />

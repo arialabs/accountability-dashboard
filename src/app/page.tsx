@@ -214,7 +214,7 @@ function MiniBarChart({ data }: { data: typeof SPOTLIGHT_FEATURED.barData }) {
     <div className="mt-5 pt-4 border-t border-slate-100" aria-hidden="true">
       <div
         className="text-xs uppercase tracking-widest mb-3"
-        style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+        style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
       >
         Top donor sectors
       </div>
@@ -223,7 +223,7 @@ function MiniBarChart({ data }: { data: typeof SPOTLIGHT_FEATURED.barData }) {
           <div key={d.label} className="flex items-center gap-2">
             <div
               className="text-xs w-14 flex-shrink-0"
-              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
             >
               {d.label}
             </div>
@@ -267,19 +267,19 @@ export default function Home() {
             <div className="hero-search-panel order-1 md:order-2">
               <span
                 className="text-xs font-semibold uppercase tracking-widest"
-                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
               >
                 Find a representative first
               </span>
               <h2
                 className="mt-2 text-3xl md:text-4xl"
-                style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}
+                style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}
               >
                 Search any rep, senator, or official
               </h2>
               <p
                 className="mt-3 text-base leading-relaxed"
-                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
               >
                 Start with a name, state, or ZIP and jump straight to complete accountability records.
               </p>
@@ -292,7 +292,7 @@ export default function Home() {
                     key={shortcut.href}
                     href={shortcut.href}
                     className="inline-flex items-center rounded-sm border border-slate-300 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-700 hover:border-slate-500"
-                    style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {shortcut.label}
                   </Link>
@@ -305,7 +305,7 @@ export default function Home() {
                 <div className="brand-flag-bar" aria-hidden="true" />
                 <span
                   className="text-xs font-semibold uppercase tracking-widest"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                 >
                   Rep Accountability Dashboard
                 </span>
@@ -313,7 +313,7 @@ export default function Home() {
 
               <h1
                 className="mb-5"
-                style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)", fontWeight: 700 }}
+                style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)", fontWeight: 700 }}
               >
                 <span className="hero-line-1">They work for you.</span>
                 <span className="hero-line-2" style={{ color: "var(--accent)" }}>
@@ -324,7 +324,7 @@ export default function Home() {
               <p
                 className="mb-5 md:mb-6"
                 style={{
-                  fontFamily: "'Source Sans 3', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   color: "var(--text-secondary)",
                   fontSize: "1.125rem",
                   lineHeight: 1.65,
@@ -340,7 +340,7 @@ export default function Home() {
               >
                 <p
                   className="text-base font-semibold"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+                  style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-primary)" }}
                 >
                   Democracy shouldn&apos;t be paywalled.{" "}
                   <span style={{ color: "var(--text-secondary)", fontWeight: 400 }}>
@@ -370,13 +370,13 @@ export default function Home() {
                 </p>
                 <p
                   className="text-sm font-semibold"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+                  style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-primary)" }}
                 >
                   {step.title}
                 </p>
                 <p
                   className="mt-1 text-sm leading-relaxed"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                 >
                   {step.detail}
                 </p>
@@ -387,7 +387,7 @@ export default function Home() {
           <div className="mt-6 pt-5 border-t border-slate-200 md:mt-8">
             <p
               className="mb-3 text-xs font-semibold uppercase tracking-widest"
-              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
             >
               Live activity snapshot
             </p>
@@ -397,19 +397,19 @@ export default function Home() {
       </section>
 
       {/* ══ QUICK STATS BAR — AccountabilityDataCards ═════════════════════ */}
-      <section className="section-shell-tight bg-slate-900" aria-label="Site statistics">
+      <section className="section-shell-tight border-b border-slate-200" style={{ backgroundColor: "#1B3A6B" }} aria-label="Site statistics">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-4 flex items-end justify-between gap-4 md:mb-5">
             <p
               className="text-xs font-semibold uppercase tracking-widest"
-              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#94A3B8" }}
+              style={{ fontFamily: "'Inter', sans-serif", color: "#94A3B8" }}
             >
               Coverage at a glance
             </p>
             <Link
               href="/methodology"
               className="text-xs font-semibold uppercase tracking-wide hover:underline"
-              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#5EEAD4" }}
+              style={{ fontFamily: "'Inter', sans-serif", color: "#93C5FD" }}
             >
               Data sources and methods
             </Link>
@@ -433,12 +433,12 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8 space-y-8 md:space-y-10">
           <ScrollFadeIn className="section-header">
             <div className="brand-flag-bar mb-3" aria-hidden="true" />
-            <h2 style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}>
+            <h2 style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}>
               Data-driven insights
             </h2>
             <p
               className="mt-3 text-base leading-relaxed"
-              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
             >
               Each profile combines primary government datasets so users can evaluate behavior, not headlines.
             </p>
@@ -456,13 +456,13 @@ export default function Home() {
                   </p>
                   <h3
                     className="mt-3 text-xl"
-                    style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}
+                    style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}
                   >
                     {insight.title}
                   </h3>
                   <p
                     className="mt-2 text-sm leading-relaxed"
-                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                    style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                   >
                     {insight.description}
                   </p>
@@ -484,7 +484,7 @@ export default function Home() {
               <div className="brand-flag-bar" aria-hidden="true" />
               <span
                 className="text-xs font-semibold uppercase tracking-widest"
-                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
               >
                 Trending
               </span>
@@ -496,13 +496,13 @@ export default function Home() {
               />
             </div>
             <h2
-              style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}
+              style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}
             >
               The data doesn&apos;t lie.
             </h2>
             <p
               className="mt-3 text-base leading-relaxed"
-              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
             >
               Officials with patterns their press releases won&apos;t mention — sourced from FEC records, financial disclosures, and congressional votes.
             </p>
@@ -534,7 +534,7 @@ export default function Home() {
                     </span>
                     <span
                       className="text-xs font-semibold uppercase tracking-wide"
-                      style={{ fontFamily: "'Source Sans 3', sans-serif", color: partyColor(SPOTLIGHT_FEATURED.party) }}
+                      style={{ fontFamily: "'Inter', sans-serif", color: partyColor(SPOTLIGHT_FEATURED.party) }}
                     >
                       {partyLabel(SPOTLIGHT_FEATURED.party)}
                     </span>
@@ -543,7 +543,7 @@ export default function Home() {
                   {/* Category label */}
                   <div
                     className="text-xs font-semibold uppercase tracking-widest mb-3"
-                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                    style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                   >
                     {SPOTLIGHT_FEATURED.tag}
                   </div>
@@ -552,7 +552,7 @@ export default function Home() {
                   <h3
                     className="text-2xl md:text-3xl font-bold mb-1 group-hover:underline leading-tight"
                     style={{
-                      fontFamily: "'Newsreader', Georgia, serif",
+                      fontFamily: "'Lora', Georgia, serif",
                       color: "var(--text-primary)",
                       letterSpacing: "-0.025em",
                     }}
@@ -561,7 +561,7 @@ export default function Home() {
                   </h3>
                   <p
                     className="text-xs mb-3"
-                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                    style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                   >
                     {SPOTLIGHT_FEATURED.role}
                   </p>
@@ -570,7 +570,7 @@ export default function Home() {
                   <p
                     className="text-lg md:text-xl leading-snug mb-5 font-semibold"
                     style={{
-                      fontFamily: "'Newsreader', Georgia, serif",
+                      fontFamily: "'Lora', Georgia, serif",
                       color: "var(--text-primary)",
                       fontStyle: "italic",
                     }}
@@ -588,7 +588,7 @@ export default function Home() {
                     </span>
                     <span
                       className="text-xs"
-                      style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                      style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                     >
                       {SPOTLIGHT_FEATURED.statLabel}
                     </span>
@@ -608,7 +608,7 @@ export default function Home() {
 
                   <div
                     className="flex items-center gap-1 text-sm font-semibold mt-2 group-hover:gap-2 transition-all"
-                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--republican)" }}
+                    style={{ fontFamily: "'Inter', sans-serif", color: "var(--republican)" }}
                   >
                     View full profile <ArrowRightIcon />
                   </div>
@@ -647,7 +647,7 @@ export default function Home() {
                           </span>
                           <span
                             className="text-xs font-semibold uppercase tracking-wide"
-                            style={{ fontFamily: "'Source Sans 3', sans-serif", color: pColor }}
+                            style={{ fontFamily: "'Inter', sans-serif", color: pColor }}
                           >
                             {pLabel}
                           </span>
@@ -656,7 +656,7 @@ export default function Home() {
                         {/* Category label */}
                         <div
                           className="text-xs font-semibold uppercase tracking-widest mb-2"
-                          style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                          style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                         >
                           {item.tag}
                         </div>
@@ -664,7 +664,7 @@ export default function Home() {
                         <h3
                           className="text-lg font-semibold mb-0.5 group-hover:underline"
                           style={{
-                            fontFamily: "'Newsreader', Georgia, serif",
+                            fontFamily: "'Lora', Georgia, serif",
                             color: "var(--text-primary)",
                             letterSpacing: "-0.01em",
                           }}
@@ -673,7 +673,7 @@ export default function Home() {
                         </h3>
                         <p
                           className="text-xs mb-3"
-                          style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                          style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                         >
                           {item.role}
                         </p>
@@ -691,7 +691,7 @@ export default function Home() {
                           </span>
                           <span
                             className="text-xs"
-                            style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                            style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                           >
                             {item.statLabel}
                           </span>
@@ -699,7 +699,7 @@ export default function Home() {
 
                         <p
                           className="text-sm leading-relaxed mb-4 flex-1"
-                          style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                          style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                         >
                           {item.headline}
                         </p>
@@ -710,7 +710,7 @@ export default function Home() {
 
                         <div
                           className="flex items-center gap-1 text-sm font-semibold group-hover:gap-2 transition-all"
-                          style={{ fontFamily: "'Source Sans 3', sans-serif", color: isRed ? "var(--republican)" : "var(--accent)" }}
+                          style={{ fontFamily: "'Inter', sans-serif", color: isRed ? "var(--republican)" : "var(--accent)" }}
                         >
                           View full profile <ArrowRightIcon />
                         </div>
@@ -746,13 +746,13 @@ export default function Home() {
             {/* Teal brand-mark bar as section divider */}
             <div className="brand-flag-bar mb-3" aria-hidden="true" />
             <h2
-              style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}
+              style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}
             >
               Browse by branch
             </h2>
             <p
               className="mt-3 text-base leading-relaxed"
-              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
             >
               Accountability data across the entire federal government
             </p>
@@ -777,13 +777,13 @@ export default function Home() {
 
                 <h3
                   className="text-xl font-semibold mb-2"
-                  style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)", letterSpacing: "-0.01em" }}
+                  style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)", letterSpacing: "-0.01em" }}
                 >
                   Legislative
                 </h3>
                 <p
                   className="text-sm mb-5 flex-1 leading-relaxed"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                 >
                   Congress makes the laws. Track voting records, campaign finance, and donor influence
                   for all 535 members.
@@ -803,7 +803,7 @@ export default function Home() {
                     </div>
                     <div
                       className="text-xs uppercase tracking-wide"
-                      style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                      style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                     >
                       House
                     </div>
@@ -818,7 +818,7 @@ export default function Home() {
                     </div>
                     <div
                       className="text-xs uppercase tracking-wide"
-                      style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                      style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                     >
                       Senate
                     </div>
@@ -842,13 +842,13 @@ export default function Home() {
 
                 <h3
                   className="text-xl font-semibold mb-2"
-                  style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)", letterSpacing: "-0.01em" }}
+                  style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)", letterSpacing: "-0.01em" }}
                 >
                   Executive
                 </h3>
                 <p
                   className="text-sm mb-5 flex-1 leading-relaxed"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                 >
                   The President and federal agencies. Cabinet appointments, executive orders, and
                   conflict of interest disclosures.
@@ -867,7 +867,7 @@ export default function Home() {
                   </div>
                   <div
                     className="text-xs uppercase tracking-wide"
-                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                    style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                   >
                     Cabinet + VP
                   </div>
@@ -890,13 +890,13 @@ export default function Home() {
 
                 <h3
                   className="text-xl font-semibold mb-2"
-                  style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)", letterSpacing: "-0.01em" }}
+                  style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)", letterSpacing: "-0.01em" }}
                 >
                   Judicial
                 </h3>
                 <p
                   className="text-sm mb-5 flex-1 leading-relaxed"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                 >
                   The Supreme Court and federal judges. Financial disclosures, case history, and
                   recusal records.
@@ -915,7 +915,7 @@ export default function Home() {
                   </div>
                   <div
                     className="text-xs uppercase tracking-wide"
-                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                    style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                   >
                     Justices
                   </div>
@@ -932,13 +932,13 @@ export default function Home() {
           <ScrollFadeIn className="section-header">
             <div className="brand-flag-bar mb-3" aria-hidden="true" />
             <h2
-              style={{ fontFamily: "'Newsreader', Georgia, serif", color: "var(--text-primary)" }}
+              style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}
             >
               Deep Dives
             </h2>
             <p
               className="mt-3 text-base leading-relaxed"
-              style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
             >
               In-depth investigations into major scandals and political corruption cases.
             </p>
@@ -967,7 +967,7 @@ export default function Home() {
                     <div className="flex items-center justify-between mb-4">
                       <span
                         className="text-xs font-semibold uppercase tracking-widest"
-                        style={{ fontFamily: "'Source Sans 3', sans-serif", color: dive.accentColor }}
+                        style={{ fontFamily: "'Inter', sans-serif", color: dive.accentColor }}
                       >
                         Deep Dive Investigation
                       </span>
@@ -979,7 +979,7 @@ export default function Home() {
                     <h3
                       className="text-xl font-semibold mb-2"
                       style={{
-                        fontFamily: "'Newsreader', Georgia, serif",
+                        fontFamily: "'Lora', Georgia, serif",
                         color: "var(--text-primary)",
                         letterSpacing: "-0.02em",
                         lineHeight: 1.2,
@@ -990,7 +990,7 @@ export default function Home() {
 
                     <p
                       className="text-sm leading-relaxed mb-5"
-                      style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                      style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                     >
                       {dive.description}
                     </p>
@@ -1028,13 +1028,13 @@ export default function Home() {
             <div className="flex-1">
               <p
                 className="text-sm font-semibold mb-1"
-                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+                style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-primary)" }}
               >
                 Where does this data come from?
               </p>
               <p
                 className="text-sm leading-relaxed"
-                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
               >
                 All data is sourced directly from official government records: the Federal Election
                 Commission (FEC), Congress.gov, Voteview, and required financial disclosures. We
@@ -1052,14 +1052,14 @@ export default function Home() {
               <Link
                 href="/methodology"
                 className="inline-flex items-center justify-center gap-2 text-sm font-semibold border border-slate-300 rounded-sm px-4 py-2 hover:border-slate-500 transition-colors"
-                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+                style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-primary)" }}
               >
                 Read our methodology <ArrowRightIcon />
               </Link>
               <Link
                 href="/about"
                 className="inline-flex items-center justify-center gap-2 text-sm font-semibold border border-slate-300 rounded-sm px-4 py-2 hover:border-slate-500 transition-colors"
-                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+                style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-primary)" }}
               >
                 About the project <ArrowRightIcon />
               </Link>
