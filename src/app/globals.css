@@ -382,15 +382,16 @@
 .trust-pill {
   display: inline-flex;
   align-items: center;
+  gap: 0.25rem;
   border-radius: 9999px;
-  border: 1px solid #CBD5E1;
-  background-color: rgb(255 255 255 / 0.92);
-  color: var(--text-secondary);
+  border: 1px solid #99F6E4;
+  background-color: rgb(240 253 250 / 0.9);
+  color: #0F766E;
   font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   line-height: 1;
-  padding: 0.5rem 0.625rem;
+  padding: 0.5rem 0.75rem;
   text-transform: uppercase;
   font-family: 'Inter', sans-serif;
 }

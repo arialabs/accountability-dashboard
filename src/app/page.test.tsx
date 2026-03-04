@@ -43,8 +43,10 @@ vi.mock("@/components/HeroSparkline", () => ({
 describe("Home Page", () => {
   it("renders the main heading", () => {
     render(<Home />);
-    expect(screen.getByText("Accountability")).toBeDefined();
-    expect(screen.getByText("Dashboard")).toBeDefined();
+    // "Rep Accountability Dashboard" appears as the hero kicker label in the left column
+    expect(screen.getByText("Rep Accountability Dashboard")).toBeDefined();
+    // Hero h1 has the main tagline
+    expect(screen.getByText("They work for you.")).toBeDefined();
   });
 
   it("renders all three branch cards", () => {

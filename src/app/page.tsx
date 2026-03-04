@@ -132,9 +132,9 @@ const SITE_STATS = [
 ];
 
 const TRUST_SIGNALS = [
-  "Official government data only",
-  "Methodology fully public",
-  "Coverage across all 3 branches",
+  { icon: "🏛️", text: "Official government data only" },
+  { icon: "📖", text: "Methodology fully public" },
+  { icon: "⚖️", text: "Coverage across all 3 branches" },
 ];
 
 const SEARCH_SHORTCUTS = [
@@ -261,8 +261,8 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={structuredDataScript(congressSchema)} />
 
       {/* ══ HERO ══════════════════════════════════════════════════════════ */}
-      <section className="section-shell hero-surface border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+      <section className="section-shell hero-surface border-b border-slate-200 overflow-x-hidden">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-search-grid">
             <div className="hero-search-panel order-1 md:order-2">
               <span
@@ -349,10 +349,59 @@ export default function Home() {
                 </p>
               </div>
 
+              {/* ── Hero stats row ── */}
+              <div className="mb-5 flex flex-wrap items-center gap-x-5 gap-y-2">
+                <div className="flex items-baseline gap-1.5">
+                  <span
+                    className="text-2xl font-bold"
+                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)" }}
+                  >
+                    570
+                  </span>
+                  <span
+                    className="text-sm"
+                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  >
+                    officials tracked
+                  </span>
+                </div>
+                <span className="text-slate-300" aria-hidden="true">·</span>
+                <div className="flex items-baseline gap-1.5">
+                  <span
+                    className="text-2xl font-bold"
+                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--accent)" }}
+                  >
+                    2.4M+
+                  </span>
+                  <span
+                    className="text-sm"
+                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  >
+                    votes analyzed
+                  </span>
+                </div>
+                <span className="text-slate-300" aria-hidden="true">·</span>
+                <div className="flex items-baseline gap-1.5">
+                  <span
+                    className="text-2xl font-bold"
+                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)" }}
+                  >
+                    3
+                  </span>
+                  <span
+                    className="text-sm"
+                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  >
+                    branches covered
+                  </span>
+                </div>
+              </div>
+
               <div className="hero-trust-grid">
                 {TRUST_SIGNALS.map((signal) => (
-                  <span key={signal} className="trust-pill">
-                    {signal}
+                  <span key={signal.text} className="trust-pill">
+                    <span aria-hidden="true" className="mr-1">{signal.icon}</span>
+                    {signal.text}
                   </span>
                 ))}
               </div>

@@ -105,7 +105,7 @@ export default function RepSearch({
           )}
 
           <div
-            className={`relative flex items-center border-2 bg-white ${
+            className={`relative flex items-center border-2 bg-white overflow-hidden ${
               isFocused ? 'border-teal-600' : 'border-slate-900'
             } transition-colors duration-200`}
             style={{ borderRadius: showSuggestions ? '4px 4px 0 0' : '4px' }}
@@ -126,7 +126,7 @@ export default function RepSearch({
               onFocus={() => setIsFocused(true)}
               onBlur={() => setTimeout(() => setIsFocused(false), 150)}
               placeholder={placeholder}
-              className={`w-full bg-transparent px-3 text-slate-900 placeholder-slate-400 focus:outline-none ${
+              className={`flex-1 min-w-0 bg-transparent px-3 text-slate-900 placeholder-slate-400 focus:outline-none ${
                 size === 'large' ? 'py-4 text-lg' : 'py-3 text-base'
               }`}
               style={{ fontFamily: "'Source Sans 3', sans-serif" }}
