@@ -645,13 +645,13 @@
 
 /* ── Shared homepage/layout rhythm helpers ── */
 .section-shell {
-  padding-top: clamp(3.25rem, 5vw, 5rem);
-  padding-bottom: clamp(3.25rem, 5vw, 5rem);
+  padding-top: clamp(2.5rem, 4vw, 3.75rem);
+  padding-bottom: clamp(2.5rem, 4vw, 3.75rem);
 }
 
 .section-shell-tight {
-  padding-top: clamp(2.25rem, 3vw, 3rem);
-  padding-bottom: clamp(2.25rem, 3vw, 3rem);
+  padding-top: clamp(1.75rem, 2.5vw, 2.5rem);
+  padding-bottom: clamp(1.75rem, 2.5vw, 2.5rem);
 }
 
 .section-header {
