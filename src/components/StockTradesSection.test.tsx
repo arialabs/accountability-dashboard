@@ -148,10 +148,10 @@ describe('StockTradesSection', () => {
     it('handles empty trade list correctly', () => {
       const trades: StockTrade[] = [];
 
-      const { container } = render(<StockTradesSection trades={trades} memberName="Test Member" />);
+      render(<StockTradesSection trades={trades} memberName="Test Member" />);
 
-      // Should show "No Stock Trades Found" message
-      expect(screen.getByText('No Stock Trades Found')).toBeInTheDocument();
+      // Component now shows a "Being Compiled" message instead of "No Stock Trades Found"
+      expect(screen.getByText('Stock Trade Data Being Compiled')).toBeInTheDocument();
     });
 
     it('zero purchases or sales should display as 0, not hide the counter', () => {

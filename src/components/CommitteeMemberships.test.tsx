@@ -59,11 +59,9 @@ describe("CommitteeMemberships", () => {
     expect(leadershipCards.length).toBeGreaterThan(0);
   });
 
-  it("shows placeholder when no committees", () => {
-    render(<CommitteeMemberships committees={[]} />);
-
-    expect(
-      screen.getByText(/Committee information coming soon/)
-    ).toBeInTheDocument();
+  it("renders nothing when no committees", () => {
+    const { container } = render(<CommitteeMemberships committees={[]} />);
+    // Component returns null when no committees — no content rendered
+    expect(container).toBeEmptyDOMElement();
   });
 });
