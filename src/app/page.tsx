@@ -9,6 +9,7 @@ import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataSc
 import LeadershipSpotlight from "@/components/LeadershipSpotlight";
 import leadershipFinanceData from "@/data/leadership-finance.json";
 import scandalsData from "@/data/scandals.json";
+import keyVotesData from "@/data/key-votes.json";
 
 // Pre-compute scandal counts per member
 const scandalCounts: Record<string, number> = {};
@@ -27,6 +28,24 @@ type LeaderCard = {
   total_raised: number;
   scandals: number;
 };
+
+// Recent key votes — top 5 by date
+type KeyVote = {
+  id: string;
+  date: string;
+  title: string;
+  description: string;
+  category: string;
+  result: string;
+  yea_count: number;
+  nay_count: number;
+  chamber: string;
+};
+
+const RECENT_VOTES: KeyVote[] = [...(keyVotesData as KeyVote[])]
+  .filter(v => v.description && v.description.length > 20)
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 4);
 
 const LEADERSHIP_CARDS: LeaderCard[] = (leadershipFinanceData as Array<{
   bioguide_id: string; name: string; role: string; party: string;
@@ -413,15 +432,15 @@ export default function Home() {
                 <div className="flex items-baseline gap-1.5">
                   <span
                     className="text-2xl font-bold"
-                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)" }}
+                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--accent)" }}
                   >
-                    3
+                    53
                   </span>
                   <span
                     className="text-sm"
                     style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
                   >
-                    branches covered
+                    scandals documented
                   </span>
                 </div>
               </div>
@@ -620,6 +639,108 @@ export default function Home() {
             >
               All 535 members <ArrowRightIcon />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ RECENT KEY VOTES ══════════════════════════════════════════════════ */}
+      <section className="section-shell-tight border-b border-slate-200" style={{ backgroundColor: "#F8FAFC" }}>
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <ScrollFadeIn>
+            <div className="flex items-center justify-between mb-5">
+              <div>
+                <div className="brand-flag-bar mb-2" aria-hidden="true" />
+                <h2
+                  className="text-xl md:text-2xl"
+                  style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}
+                >
+                  Recent Key Votes
+                </h2>
+                <p className="mt-1 text-sm" style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}>
+                  How Congress voted on the issues that matter.
+                </p>
+              </div>
+              <Link
+                href="/congress"
+                className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold"
+                style={{ color: "var(--accent)", fontFamily: "'JetBrains Mono', monospace" }}
+              >
+                All votes <ArrowRightIcon />
+              </Link>
+            </div>
+          </ScrollFadeIn>
+
+          <div className="space-y-3">
+            {RECENT_VOTES.map((vote, idx) => {
+              const total = vote.yea_count + vote.nay_count;
+              const yeaPct = total > 0 ? Math.round((vote.yea_count / total) * 100) : 0;
+              const passed = vote.result === "Passed" || vote.result === "Agreed to";
+              return (
+                <ScrollFadeIn key={vote.id} delay={idx * 40}>
+                  <article
+                    className="rounded-sm border border-slate-200 bg-white p-4 md:p-5"
+                    style={{ borderLeft: `3px solid ${passed ? "#15803D" : "#B91C1C"}` }}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                          <span
+                            className="text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded-sm"
+                            style={{
+                              fontFamily: "'JetBrains Mono', monospace",
+                              backgroundColor: passed ? "#F0FDF4" : "#FEF2F2",
+                              color: passed ? "#15803D" : "#B91C1C",
+                            }}
+                          >
+                            {vote.result}
+                          </span>
+                          <span
+                            className="text-[10px] font-semibold uppercase tracking-widest"
+                            style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-secondary)" }}
+                          >
+                            {vote.chamber} · {vote.category}
+                          </span>
+                          <span
+                            className="text-[10px]"
+                            style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-secondary)" }}
+                          >
+                            {vote.date}
+                          </span>
+                        </div>
+                        <p
+                          className="text-sm leading-snug line-clamp-2"
+                          style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-primary)", fontWeight: 500 }}
+                        >
+                          {vote.description}
+                        </p>
+                      </div>
+                      <div className="shrink-0 text-right">
+                        <p
+                          className="text-sm font-bold tabular-nums"
+                          style={{ fontFamily: "'JetBrains Mono', monospace", color: "#15803D" }}
+                        >
+                          {vote.yea_count} Yea
+                        </p>
+                        <p
+                          className="text-sm font-bold tabular-nums"
+                          style={{ fontFamily: "'JetBrains Mono', monospace", color: "#B91C1C" }}
+                        >
+                          {vote.nay_count} Nay
+                        </p>
+                        {total > 0 && (
+                          <div className="mt-1 w-16 h-1.5 rounded-full overflow-hidden bg-red-100">
+                            <div
+                              className="h-full rounded-full bg-green-600"
+                              style={{ width: `${yeaPct}%` }}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </article>
+                </ScrollFadeIn>
+              );
+            })}
           </div>
         </div>
       </section>
