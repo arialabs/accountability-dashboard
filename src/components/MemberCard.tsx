@@ -147,6 +147,56 @@ export default function MemberCard({ member, userState, currentStateFilter }: Me
           </div>
         </div>
 
+        {/* Donor Verdict Badge */}
+        {(() => {
+          if (!finance) return null;
+          const pac = finance.pac_percentage ?? 0;
+          const large = finance.large_donor_percentage ?? 0;
+          if (pac === 0 && large === 0) return null;
+
+          let label: string;
+          let icon: string;
+          let bg: string;
+          let color: string;
+          let border: string;
+
+          if (pac >= 60 || large >= 75) {
+            label = "DONOR CAPTURED";
+            icon = "🚨";
+            bg = "#FEF2F2";
+            color = "#B91C1C";
+            border = "#EF4444";
+          } else if (pac >= 30 || large >= 50) {
+            label = "MIXED ALLEGIANCE";
+            icon = "⚠️";
+            bg = "#FFFBEB";
+            color = "#B45309";
+            border = "#F59E0B";
+          } else {
+            label = "CONSTITUENT FOCUSED";
+            icon = "✅";
+            bg = "#F0FDF4";
+            color = "#15803D";
+            border = "#22C55E";
+          }
+
+          return (
+            <div
+              className="mb-3 flex items-center gap-1.5 px-2 py-0.5 rounded-sm text-xs font-bold uppercase tracking-wider w-fit"
+              style={{
+                background: bg,
+                color,
+                border: `1px solid ${border}`,
+                fontFamily: "'Source Sans 3', sans-serif",
+              }}
+              title={`Donor capture assessment based on PAC funding (${pac.toFixed(0)}% PAC) and large-donor reliance (${large.toFixed(0)}% large donors)`}
+            >
+              <span role="img" aria-label={label}>{icon}</span>
+              {label}
+            </div>
+          );
+        })()}
+
         {/* Grade breakdown bars */}
         <div className="mb-4 space-y-1.5">
           {[
