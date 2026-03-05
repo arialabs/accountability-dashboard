@@ -216,6 +216,17 @@ export async function getMemberFinance(bioguideId: string): Promise<CampaignFina
   const member = getMember(bioguideId);
   if (!member) return null;
 
+  // During static build (Next.js generates 600+ pages), skip live FEC calls to avoid
+  // build timeouts. Static data is sufficient; live data is fetched client-side on the
+  // profile page via SWR. NEXT_PHASE is set by Next.js during `next build`.
+  const isBuildTime =
+    process.env.NEXT_PHASE === "phase-production-build" ||
+    process.env.NEXT_PHASE === "phase-export";
+
+  if (isBuildTime) {
+    return getMemberFinanceStatic(bioguideId);
+  }
+
   try {
     // Step 1: Find candidate in FEC database
     const candidate = await findFECCandidate(member);

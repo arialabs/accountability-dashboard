@@ -98,7 +98,11 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
     explanation: string;
   }> = [];
   
-  if (finance && finance.top_industries && finance.top_industries.length > 0) {
+  const isBuildTime =
+    process.env.NEXT_PHASE === "phase-production-build" ||
+    process.env.NEXT_PHASE === "phase-export";
+
+  if (!isBuildTime && finance && finance.top_industries && finance.top_industries.length > 0) {
     const { detectConflicts } = await import("@/lib/conflict-detector");
     const { aggregateByIndustry } = await import("@/lib/industry-classifier");
     const { getScheduleAContributions, searchCandidateByName } = await import("@/lib/fec");
