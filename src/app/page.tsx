@@ -7,6 +7,35 @@ import HeroSparkline from "@/components/HeroSparkline";
 import AccountabilityDataCard from "@/components/AccountabilityDataCard";
 import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 import LeadershipSpotlight from "@/components/LeadershipSpotlight";
+import leadershipFinanceData from "@/data/leadership-finance.json";
+import scandalsData from "@/data/scandals.json";
+
+// Pre-compute scandal counts per member
+const scandalCounts: Record<string, number> = {};
+(scandalsData as Array<{ bioguide_id?: string }>).forEach(s => {
+  if (s.bioguide_id && s.bioguide_id !== "null") {
+    scandalCounts[s.bioguide_id] = (scandalCounts[s.bioguide_id] || 0) + 1;
+  }
+});
+
+type LeaderCard = {
+  bioguide_id: string;
+  name: string;
+  role: string;
+  party: "R" | "D" | "I";
+  pac_percentage: number;
+  total_raised: number;
+  scandals: number;
+};
+
+const LEADERSHIP_CARDS: LeaderCard[] = (leadershipFinanceData as Array<{
+  bioguide_id: string; name: string; role: string; party: string;
+  pac_percentage: number; total_raised: number;
+}>).map(m => ({
+  ...m,
+  party: m.party as "R" | "D" | "I",
+  scandals: scandalCounts[m.bioguide_id] || 0,
+}));
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reps.arialabs.ai";
 
@@ -478,6 +507,124 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ══ CONGRESSIONAL LEADERSHIP AT A GLANCE ══════════════════════════════ */}
+      <section className="section-shell-tight border-b border-slate-200 bg-white">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <ScrollFadeIn>
+            <div className="flex items-center justify-between mb-5 md:mb-6">
+              <div>
+                <div className="brand-flag-bar mb-2" aria-hidden="true" />
+                <h2
+                  className="text-xl md:text-2xl"
+                  style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}
+                >
+                  Congressional Leadership
+                </h2>
+                <p
+                  className="mt-1 text-sm"
+                  style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
+                >
+                  The people setting the agenda — and who&apos;s funding them.
+                </p>
+              </div>
+              <Link
+                href="/congress"
+                className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold"
+                style={{ color: "var(--accent)", fontFamily: "'JetBrains Mono', monospace" }}
+              >
+                All 535 members <ArrowRightIcon />
+              </Link>
+            </div>
+          </ScrollFadeIn>
+
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 md:gap-4">
+            {LEADERSHIP_CARDS.slice(0, 6).map((leader, idx) => {
+              const pacVerdict =
+                leader.pac_percentage >= 35 ? { label: "HIGH PAC", color: "#B91C1C", bg: "#FEF2F2" } :
+                leader.pac_percentage >= 15 ? { label: "MED PAC",  color: "#B45309", bg: "#FFFBEB" } :
+                                              { label: "LOW PAC",  color: "#15803D", bg: "#F0FDF4" };
+              return (
+                <ScrollFadeIn key={leader.bioguide_id} delay={idx * 50}>
+                  <Link
+                    href={`/rep/${leader.bioguide_id}`}
+                    className="block rounded-sm border border-slate-200 bg-white p-4 hover:border-slate-400 transition-colors group"
+                    style={{ borderLeft: `3px solid ${leader.party === "R" ? "#B91C1C" : "#1D4ED8"}` }}
+                  >
+                    <div className="flex items-start justify-between gap-2 mb-3">
+                      <div>
+                        <p
+                          className="font-bold text-sm leading-tight group-hover:underline"
+                          style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-primary)" }}
+                        >
+                          {leader.name}
+                        </p>
+                        <p
+                          className="text-xs mt-0.5 leading-snug"
+                          style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
+                        >
+                          {leader.role}
+                        </p>
+                      </div>
+                      <span
+                        className="shrink-0 rounded-sm px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide"
+                        style={{ backgroundColor: pacVerdict.bg, color: pacVerdict.color }}
+                      >
+                        {pacVerdict.label}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div>
+                        <p
+                          className="text-lg font-bold tabular-nums"
+                          style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)" }}
+                        >
+                          {leader.pac_percentage.toFixed(1)}%
+                        </p>
+                        <p className="text-[10px] uppercase tracking-wide" style={{ color: "var(--text-secondary)", fontFamily: "'JetBrains Mono', monospace" }}>
+                          PAC-funded
+                        </p>
+                      </div>
+                      <div>
+                        <p
+                          className="text-lg font-bold tabular-nums"
+                          style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)" }}
+                        >
+                          ${(leader.total_raised / 1_000_000).toFixed(1)}M
+                        </p>
+                        <p className="text-[10px] uppercase tracking-wide" style={{ color: "var(--text-secondary)", fontFamily: "'JetBrains Mono', monospace" }}>
+                          raised
+                        </p>
+                      </div>
+                      {leader.scandals > 0 && (
+                        <div>
+                          <p className="text-lg font-bold tabular-nums" style={{ fontFamily: "'JetBrains Mono', monospace", color: "#B91C1C" }}>
+                            {leader.scandals}
+                          </p>
+                          <p className="text-[10px] uppercase tracking-wide" style={{ color: "#B91C1C", fontFamily: "'JetBrains Mono', monospace" }}>
+                            flagged
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </Link>
+                </ScrollFadeIn>
+              );
+            })}
+          </div>
+
+          <div className="mt-4 sm:hidden">
+            <Link
+              href="/congress"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold"
+              style={{ color: "var(--accent)", fontFamily: "'JetBrains Mono', monospace" }}
+            >
+              All 535 members <ArrowRightIcon />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ DATA-DRIVEN INSIGHTS ═══════════════════════════════════════════════ */}
       <section className="section-shell border-b border-slate-200" style={{ backgroundColor: "#F8FAFC" }}>
         <div className="max-w-5xl mx-auto px-6 lg:px-8 space-y-8 md:space-y-10">
           <ScrollFadeIn className="section-header">
