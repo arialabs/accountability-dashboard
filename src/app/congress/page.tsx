@@ -4,12 +4,25 @@ import Link from "next/link";
 import { useState, useMemo, useEffect, Suspense, useCallback } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { useLiveMembers } from "@/hooks/useLiveData";
+import { getMemberFinanceStatic } from "@/lib/data";
 import RepresentativeImage from "@/components/RepresentativeImage";
 import Pagination from "@/components/Pagination";
 import { ScoreLegend } from "@/components/ScoreLegend";
 import MemberCard from "@/components/MemberCard";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import type { Member } from "@/lib/types";
+
+/** Compute donor verdict for a member using the same thresholds as MemberCard */
+function getDonorVerdict(bioguideId: string): "captured" | "mixed" | "focused" | null {
+  const finance = getMemberFinanceStatic(bioguideId);
+  if (!finance) return null;
+  const pac = finance.pac_percentage ?? 0;
+  const large = finance.large_donor_percentage ?? 0;
+  if (pac === 0 && large === 0) return null;
+  if (pac >= 60 || large >= 75) return "captured";
+  if (pac >= 30 || large >= 50) return "mixed";
+  return "focused";
+}
 
 const ITEMS_PER_PAGE = 24;
 
@@ -48,6 +61,7 @@ function CongressContent() {
   const [chamber, setChamber] = useState<string>("");
   const [party, setParty] = useState<string>("");
   const [state, setState] = useState<string>("");
+  const [donorVerdict, setDonorVerdict] = useState<string>("");
   const [search, setSearch] = useState<string>("");
   const [debouncedSearch, setDebouncedSearch] = useState<string>("");
   const [userState, setUserState] = useState<string | null>(null); // User's home state
@@ -67,6 +81,7 @@ function CongressContent() {
     const urlSearch = searchParams.get("search");
     const urlParty = searchParams.get("party");
     const urlChamber = searchParams.get("chamber");
+    const urlVerdict = searchParams.get("verdict");
     
     if (urlState) setState(urlState.toUpperCase());
     if (urlSearch) {
@@ -75,6 +90,7 @@ function CongressContent() {
     }
     if (urlParty) setParty(urlParty);
     if (urlChamber) setChamber(urlChamber);
+    if (urlVerdict) setDonorVerdict(urlVerdict);
   }, [searchParams]);
 
   // Current page from URL (reset to 1 on filter change)
@@ -105,9 +121,10 @@ function CongressContent() {
       search: debouncedSearch, 
       state, 
       party, 
-      chamber 
+      chamber,
+      verdict: donorVerdict,
     });
-  }, [debouncedSearch, state, party, chamber, updateURL]);
+  }, [debouncedSearch, state, party, chamber, donorVerdict, updateURL]);
   
   // Filter members (using debounced search)
   const filteredMembers = useMemo(() => {
@@ -115,6 +132,10 @@ function CongressContent() {
       if (chamber && m.chamber !== chamber) return false;
       if (party && m.party !== party) return false;
       if (state && m.state !== state) return false;
+      if (donorVerdict) {
+        const verdict = getDonorVerdict(m.bioguide_id);
+        if (verdict !== donorVerdict) return false;
+      }
       if (debouncedSearch) {
         const q = debouncedSearch.toLowerCase();
         
@@ -130,7 +151,7 @@ function CongressContent() {
       }
       return true;
     });
-  }, [allMembers, chamber, party, state, debouncedSearch]);
+  }, [allMembers, chamber, party, state, donorVerdict, debouncedSearch]);
   
   // Get user's representatives (senators + house member)
   const userRepresentatives = useMemo(() => {
@@ -146,7 +167,24 @@ function CongressContent() {
     independents: filteredMembers.filter(m => m.party === "I").length,
   }), [filteredMembers]);
   
-  const isFiltered = chamber || party || state || debouncedSearch;
+  const isFiltered = chamber || party || state || donorVerdict || debouncedSearch;
+
+  // Pre-compute verdict counts for filter chips
+  const verdictCounts = useMemo(() => {
+    const counts = { captured: 0, mixed: 0, focused: 0 };
+    // Apply all filters EXCEPT donorVerdict so counts reflect current context
+    const base = allMembers.filter(m => {
+      if (chamber && m.chamber !== chamber) return false;
+      if (party && m.party !== party) return false;
+      if (state && m.state !== state) return false;
+      return true;
+    });
+    base.forEach(m => {
+      const v = getDonorVerdict(m.bioguide_id);
+      if (v) counts[v]++;
+    });
+    return counts;
+  }, [allMembers, chamber, party, state]);
 
   // Paginate filtered results
   const pagedMembers = useMemo(() => {
@@ -158,15 +196,17 @@ function CongressContent() {
     setChamber("");
     setParty("");
     setState("");
+    setDonorVerdict("");
     setSearch("");
     setDebouncedSearch("");
     updateURL({});
   };
   
-  const removeFilter = (filterType: 'chamber' | 'party' | 'state' | 'search') => {
+  const removeFilter = (filterType: 'chamber' | 'party' | 'state' | 'search' | 'verdict') => {
     if (filterType === 'chamber') setChamber("");
     if (filterType === 'party') setParty("");
     if (filterType === 'state') setState("");
+    if (filterType === 'verdict') setDonorVerdict("");
     if (filterType === 'search') {
       setSearch("");
       setDebouncedSearch("");
@@ -345,6 +385,23 @@ function CongressContent() {
                 </svg>
               </button>
             )}
+            {donorVerdict && (
+              <button
+                onClick={() => removeFilter('verdict')}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition ${
+                  donorVerdict === 'captured' ? 'bg-red-100 text-red-700 hover:bg-red-200' :
+                  donorVerdict === 'mixed'    ? 'bg-amber-100 text-amber-700 hover:bg-amber-200' :
+                                               'bg-green-100 text-green-700 hover:bg-green-200'
+                }`}
+              >
+                {donorVerdict === 'captured' ? '🚨 Donor Captured' :
+                 donorVerdict === 'mixed'    ? '⚠️ Mixed Allegiance' :
+                                              '✅ Constituent Focused'}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
             {debouncedSearch && (
               <button
                 onClick={() => removeFilter('search')}
@@ -459,6 +516,42 @@ function CongressContent() {
                       }}
                     >
                       {opt.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Donor Verdict Filter */}
+            <div>
+              <label
+                className="block text-xs font-semibold uppercase tracking-widest mb-2"
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+              >
+                Donor Allegiance
+              </label>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { val: "",         label: "All",                icon: "",   bg: "#F1F5F9", activeBg: "#0F172A", color: "var(--text-primary)",  activeText: "#FFFFFF" },
+                  { val: "captured", label: `Donor Captured (${verdictCounts.captured})`,   icon: "🚨", bg: "#FEF2F2", activeBg: "#B91C1C",  color: "#B91C1C",             activeText: "#FFFFFF" },
+                  { val: "mixed",    label: `Mixed Allegiance (${verdictCounts.mixed})`,    icon: "⚠️", bg: "#FFFBEB", activeBg: "#B45309",  color: "#B45309",             activeText: "#FFFFFF" },
+                  { val: "focused",  label: `Constituent Focused (${verdictCounts.focused})`, icon: "✅", bg: "#F0FDF4", activeBg: "#15803D",  color: "#15803D",             activeText: "#FFFFFF" },
+                ].map((opt) => {
+                  const active = donorVerdict === opt.val;
+                  return (
+                    <button
+                      key={opt.val}
+                      onClick={() => setDonorVerdict(opt.val)}
+                      className="px-3 py-2 rounded-sm font-semibold text-xs uppercase tracking-wide transition"
+                      style={{
+                        fontFamily: "'Source Sans 3', sans-serif",
+                        minHeight: 40,
+                        backgroundColor: active ? opt.activeBg : opt.bg,
+                        color: active ? opt.activeText : opt.color,
+                        border: `1px solid ${active ? opt.activeBg : opt.color}44`,
+                      }}
+                    >
+                      {opt.icon && <span className="mr-1">{opt.icon}</span>}{opt.label}
                     </button>
                   );
                 })}
