@@ -1,0 +1,101 @@
+[
+  {
+    "bioguide_id": "C001101",
+    "name": "Katherine Clark",
+    "role": "House Minority Whip",
+    "party": "D",
+    "state": "Massachusetts",
+    "pac_percentage": 46.2,
+    "large_donor_percentage": 35.1,
+    "total_raised": 4984889,
+    "scandals": 0
+  },
+  {
+    "bioguide_id": "E000294",
+    "name": "Tom Emmer",
+    "role": "House Majority Whip",
+    "party": "R",
+    "state": "Minnesota",
+    "pac_percentage": 30.9,
+    "large_donor_percentage": 19.5,
+    "total_raised": 8158685,
+    "scandals": 0
+  },
+  {
+    "bioguide_id": "M000355",
+    "name": "Mitch McConnell",
+    "role": "Senate Minority Leader",
+    "party": "R",
+    "state": "Kentucky",
+    "pac_percentage": 13.3,
+    "large_donor_percentage": 15.2,
+    "total_raised": 112901,
+    "scandals": 0
+  },
+  {
+    "bioguide_id": "T000250",
+    "name": "John Thune",
+    "role": "Senate Majority Leader",
+    "party": "R",
+    "state": "South Dakota",
+    "pac_percentage": 13.3,
+    "large_donor_percentage": 26.4,
+    "total_raised": 4163983,
+    "scandals": 0
+  },
+  {
+    "bioguide_id": "J000294",
+    "name": "Hakeem Jeffries",
+    "role": "House Minority Leader",
+    "party": "D",
+    "state": "New York",
+    "pac_percentage": 11.5,
+    "large_donor_percentage": 31.5,
+    "total_raised": 22977197,
+    "scandals": 0
+  },
+  {
+    "bioguide_id": "D000563",
+    "name": "Dick Durbin",
+    "role": "Senate Minority Whip",
+    "party": "D",
+    "state": "Illinois",
+    "pac_percentage": 9.1,
+    "large_donor_percentage": 27.9,
+    "total_raised": 76714,
+    "scandals": 0
+  },
+  {
+    "bioguide_id": "J000299",
+    "name": "Mike Johnson",
+    "role": "Speaker of the House",
+    "party": "R",
+    "state": "Louisiana",
+    "pac_percentage": 9,
+    "large_donor_percentage": 27.4,
+    "total_raised": 19867069,
+    "scandals": 0
+  },
+  {
+    "bioguide_id": "S000148",
+    "name": "Chuck Schumer",
+    "role": "Senate Minority Leader",
+    "party": "D",
+    "state": "New York",
+    "pac_percentage": 7.3,
+    "large_donor_percentage": 33.9,
+    "total_raised": 2790889,
+    "scandals": 0
+  },
+  {
+    "bioguide_id": "S001176",
+    "name": "Steve Scalise",
+    "role": "House Majority Leader",
+    "party": "R",
+    "state": "Louisiana",
+    "pac_percentage": 1.3,
+    "large_donor_percentage": 11.5,
+    "total_raised": 14732239,
+    "scandals": 0
+  }
+]
