@@ -12,10 +12,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reps.arialabs.ai";
 
 export const metadata: Metadata = {
   title: { absolute: "Rep Accountability Dashboard | Track What Politicians Say vs Do" },
-  description: "Follow the money. Expose the votes. Track campaign finance, voting records, and financial disclosures across all three branches of government — with data from official government sources.",
+  description: "Follow the money. Expose the votes. Track campaign finance, voting records, and financial disclosures for all 535 members of Congress and 26 executive branch officials — with data from official government sources.",
   openGraph: {
     title: "Rep Accountability Dashboard | Track What Politicians Say vs Do",
-    description: "Follow the money. Expose the votes. Track all three branches of government with official government data.",
+    description: "Follow the money. Expose the votes. Track Congress and the Executive branch with official government data.",
     type: "website",
     url: siteUrl,
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Rep Accountability Dashboard" }],
@@ -127,14 +127,14 @@ const SPOTLIGHT_SUPPORTING = [
 const SITE_STATS = [
   { value: "535",   label: "Members of Congress tracked", indicator: "neutral" as const, featured: false },
   { value: "26",    label: "Executive branch officials",  indicator: "up" as const,      featured: false, context: "Updated daily" },
-  { value: "9",     label: "Supreme Court justices",      indicator: "neutral" as const, featured: false },
-  { value: "2.4M+", label: "Votes recorded",             indicator: "up" as const,      featured: true,  context: "Expanding" },
+  { value: "81K+",  label: "Votes analyzed",              indicator: "up" as const,      featured: true,  context: "2.4M recorded total" },
+  { value: "66",    label: "Reps breaking with their party", indicator: "flag" as const, featured: false, context: "Voting independently" },
 ];
 
 const TRUST_SIGNALS = [
   { icon: "🏛️", text: "Official government data only" },
   { icon: "📖", text: "Methodology fully public" },
-  { icon: "⚖️", text: "Coverage across all 3 branches" },
+  { icon: "🔍", text: "Legislative + Executive branch tracked" },
 ];
 
 const SEARCH_SHORTCUTS = [
