@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import DonorAnalysisSection from "@/components/DonorAnalysisSection";
+import DonorCaptureScore from "@/components/DonorCaptureScore";
 import VotingRecordSection from "@/components/VotingRecordSection";
 import MemberVotingRecord from "@/components/MemberVotingRecord";
 import VoteHistorySection from "@/components/VoteHistorySection";
@@ -351,6 +352,17 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+        {/* Donor Capture Score — top-level verdict answering "who does this rep work for?" */}
+        {(conflicts.length > 0 || finance !== null) && (
+          <div className="mb-8">
+            <DonorCaptureScore
+              conflicts={conflicts}
+              finance={finance}
+              memberName={member.full_name}
+            />
+          </div>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content (2/3 width) */}
           <div className="lg:col-span-2 space-y-8">
