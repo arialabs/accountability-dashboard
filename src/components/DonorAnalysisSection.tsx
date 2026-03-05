@@ -5,9 +5,15 @@ import type { CampaignFinance, Contributor } from "@/lib/types";
 import DonorBreakdownBarChart from "./DonorBreakdownBarChart";
 import { formatCurrencyShort, formatPercent } from "@/lib/formatting";
 import { Caption } from "@/components/ui";
+import type { IndustryPercentileContext, DonorPercentilesData } from "@/lib/donor-percentiles";
 
 interface DonorAnalysisSectionProps {
   finance: CampaignFinance | null;
+  memberId?: string;
+  memberChamber?: "house" | "senate";
+  memberState?: string;
+  /** Pre-loaded percentiles data (passed from server component at build time) */
+  percentilesData?: DonorPercentilesData | null;
 }
 
 // Tooltip component for inline explanations
@@ -138,9 +144,65 @@ function ContributorRow({ contributor, rank }: { contributor: Contributor; rank:
   );
 }
 
-export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionProps) {
+/** Small badge showing peer-comparison context for an industry */
+function PercentileBadge({
+  context,
+  chamber,
+  state,
+}: {
+  context: IndustryPercentileContext;
+  chamber?: "house" | "senate";
+  state?: string;
+}) {
+  const items: string[] = [];
+
+  // Chamber context
+  items.push(context.chamber_label);
+
+  // State leader callout
+  if (context.is_state_leader && state) {
+    items.push(`Highest recipient in ${state}`);
+  } else if (
+    context.state_rank !== null &&
+    context.state_member_count !== null &&
+    context.state_member_count > 1
+  ) {
+    items.push(`#${context.state_rank} in ${state ?? "state"}`);
+  }
+
+  if (items.length === 0) return null;
+
+  // Color the badge based on percentile level
+  let colorClass = "text-slate-400";
+  if (context.chamber_percentile >= 90) colorClass = "text-amber-600 font-semibold";
+  else if (context.chamber_percentile >= 75) colorClass = "text-orange-500";
+  else if (context.chamber_percentile >= 50) colorClass = "text-blue-500";
+
+  return (
+    <div className={`mt-1 text-xs ${colorClass} flex flex-wrap gap-x-2 gap-y-0.5`}>
+      {items.map((item, i) => (
+        <span key={i} className="flex items-center gap-1">
+          {i > 0 && <span className="text-slate-300">·</span>}
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+export default function DonorAnalysisSection({
+  finance,
+  memberId,
+  memberChamber,
+  memberState,
+  percentilesData,
+}: DonorAnalysisSectionProps) {
   const [showPacTooltip, setShowPacTooltip] = useState(false);
   const [chartView, setChartView] = useState<"pie" | "bar">("pie");
+
+  // Look up pre-computed percentile context for this member
+  const memberPercentiles =
+    percentilesData && memberId ? percentilesData.members[memberId] ?? null : null;
   
   if (!finance) {
     return (
@@ -296,14 +358,29 @@ export default function DonorAnalysisSection({ finance }: DonorAnalysisSectionPr
       {/* Industry Breakdown (if available) */}
       {finance.top_industries && finance.top_industries.length > 0 && (
         <div className="mt-10 pt-8 border-t border-slate-200">
-          <h4 className="text-lg font-bold text-slate-900 mb-6">Top Industries</h4>
+          <h4 className="text-lg font-bold text-slate-900 mb-2">Top Industries</h4>
+          {memberPercentiles && (
+            <p className="text-xs text-slate-400 mb-6">
+              Percentile context compares this member to peers in the same chamber.
+            </p>
+          )}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {finance.top_industries.slice(0, 5).map((industry, i) => (
-              <div key={i} className="bg-slate-50 rounded-xl p-4 text-center">
-                <p className="font-semibold text-slate-900 text-sm mb-1">{industry.industry}</p>
-                <p className="font-mono font-bold text-lg">{formatCurrencyShort(industry.total)}</p>
-              </div>
-            ))}
+            {finance.top_industries.slice(0, 5).map((industry, i) => {
+              const ctx = memberPercentiles?.[industry.industry] ?? null;
+              return (
+                <div key={i} className="bg-slate-50 rounded-xl p-4">
+                  <p className="font-semibold text-slate-900 text-sm mb-1">{industry.industry}</p>
+                  <p className="font-mono font-bold text-lg">{formatCurrencyShort(industry.total)}</p>
+                  {ctx && (
+                    <PercentileBadge
+                      context={ctx}
+                      chamber={memberChamber}
+                      state={memberState}
+                    />
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       )}

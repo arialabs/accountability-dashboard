@@ -27,6 +27,7 @@ import { isLeader } from "@/lib/leadership";
 import { getRecentVotesForMember } from "@/lib/live-votes";
 import LatestNews from "@/components/LatestNews";
 import { getConflictCallouts } from "@/lib/conflict-callouts";
+import { loadDonorPercentiles } from "@/lib/donor-percentiles";
 
 import keyVotesData from "@/data/key-votes.json";
 import bioguideToIcpsrData from "@/data/bioguide-to-icpsr.json";
@@ -76,6 +77,9 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
 
   // Get real finance data from OpenFEC API
   const finance = await getMemberFinance(id);
+
+  // Load pre-computed peer-comparison percentiles (build-time static data)
+  const donorPercentiles = loadDonorPercentiles();
   
   // Detect conflicts of interest between donors and votes
   let conflicts: Array<{
@@ -401,7 +405,13 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
 
             {/* Campaign Finance - Now the main focus */}
             <ErrorBoundary context="campaign finance data">
-              <DonorAnalysisSection finance={finance} />
+              <DonorAnalysisSection
+                finance={finance}
+                memberId={member.bioguide_id}
+                memberChamber={member.chamber}
+                memberState={member.state}
+                percentilesData={donorPercentiles}
+              />
             </ErrorBoundary>
 
             {/* Potential Conflicts of Interest */}

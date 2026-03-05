@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import DonorAnalysisSection from "./DonorAnalysisSection";
 import type { CampaignFinance } from "@/lib/types";
+import type { DonorPercentilesData } from "@/lib/donor-percentiles";
 
 describe("DonorAnalysisSection", () => {
   const mockFinance: CampaignFinance = {
@@ -21,6 +22,36 @@ describe("DonorAnalysisSection", () => {
     party_contributions: 0,
     top_contributors: [],
     top_industries: [],
+  };
+
+  const mockFinanceWithIndustries: CampaignFinance = {
+    ...mockFinance,
+    top_industries: [
+      { industry: "Finance/Securities", total: 1500000, pac_amount: 600000, individual_amount: 900000 },
+      { industry: "Health", total: 900000, pac_amount: 500000, individual_amount: 400000 },
+    ],
+  };
+
+  const mockPercentilesData: DonorPercentilesData = {
+    generated_at: "2026-01-01T00:00:00.000Z",
+    members: {
+      "TEST001": {
+        "Finance/Securities": {
+          chamber_percentile: 89,
+          chamber_label: "More than 89% of House members",
+          state_rank: 1,
+          state_member_count: 3,
+          is_state_leader: true,
+        },
+        "Health": {
+          chamber_percentile: 65,
+          chamber_label: "More than 65% of House members",
+          state_rank: 2,
+          state_member_count: 3,
+          is_state_leader: false,
+        },
+      },
+    },
   };
 
   it("renders the section title", () => {
@@ -69,5 +100,88 @@ describe("DonorAnalysisSection", () => {
   it("handles null finance gracefully", () => {
     render(<DonorAnalysisSection finance={null} />);
     expect(screen.getByText(/Campaign finance data not yet available/)).toBeInTheDocument();
+  });
+
+  // ── Peer-comparison percentile tests ────────────────────────────────────────
+
+  it("shows top industries when present", () => {
+    render(<DonorAnalysisSection finance={mockFinanceWithIndustries} />);
+    expect(screen.getByText("Top Industries")).toBeInTheDocument();
+    expect(screen.getByText("Finance/Securities")).toBeInTheDocument();
+    expect(screen.getByText("Health")).toBeInTheDocument();
+  });
+
+  it("shows percentile context when percentilesData and memberId are provided", () => {
+    render(
+      <DonorAnalysisSection
+        finance={mockFinanceWithIndustries}
+        memberId="TEST001"
+        memberChamber="house"
+        memberState="Ohio"
+        percentilesData={mockPercentilesData}
+      />
+    );
+    // Should show chamber label for Finance/Securities (89th percentile)
+    expect(screen.getByText("More than 89% of House members")).toBeInTheDocument();
+    // Should show state leader callout
+    expect(screen.getByText("Highest recipient in Ohio")).toBeInTheDocument();
+    // Should show chamber label for Health (65th percentile)
+    expect(screen.getByText("More than 65% of House members")).toBeInTheDocument();
+    // Non-leader state rank
+    expect(screen.getByText("#2 in Ohio")).toBeInTheDocument();
+  });
+
+  it("does not show percentile context when percentilesData is null", () => {
+    render(
+      <DonorAnalysisSection
+        finance={mockFinanceWithIndustries}
+        memberId="TEST001"
+        memberChamber="house"
+        memberState="Ohio"
+        percentilesData={null}
+      />
+    );
+    // No percentile labels should appear
+    expect(screen.queryByText(/More than .* of House members/)).not.toBeInTheDocument();
+  });
+
+  it("does not show percentile context when memberId is not provided", () => {
+    render(
+      <DonorAnalysisSection
+        finance={mockFinanceWithIndustries}
+        memberChamber="house"
+        memberState="Ohio"
+        percentilesData={mockPercentilesData}
+      />
+    );
+    expect(screen.queryByText(/More than .* of House members/)).not.toBeInTheDocument();
+  });
+
+  it("does not show percentile context when member has no percentile data", () => {
+    render(
+      <DonorAnalysisSection
+        finance={mockFinanceWithIndustries}
+        memberId="UNKNOWN_ID"
+        memberChamber="house"
+        memberState="Ohio"
+        percentilesData={mockPercentilesData}
+      />
+    );
+    expect(screen.queryByText(/More than .* of House members/)).not.toBeInTheDocument();
+  });
+
+  it("shows percentile note when percentiles are available", () => {
+    render(
+      <DonorAnalysisSection
+        finance={mockFinanceWithIndustries}
+        memberId="TEST001"
+        memberChamber="house"
+        memberState="Ohio"
+        percentilesData={mockPercentilesData}
+      />
+    );
+    expect(
+      screen.getByText(/Percentile context compares this member to peers in the same chamber/)
+    ).toBeInTheDocument();
   });
 });

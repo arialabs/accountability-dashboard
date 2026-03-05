@@ -56,7 +56,13 @@
         "type": "Energy PAC"
       }
     ],
-    "top_industries": []
+    "top_industries": [
+      { "industry": "Finance/Securities", "total": 4820000, "pac_amount": 1240000, "individual_amount": 3580000 },
+      { "industry": "Defense", "total": 3150000, "pac_amount": 2100000, "individual_amount": 1050000 },
+      { "industry": "Health", "total": 2780000, "pac_amount": 1890000, "individual_amount": 890000 },
+      { "industry": "Oil & Gas", "total": 2340000, "pac_amount": 1560000, "individual_amount": 780000 },
+      { "industry": "Telecom", "total": 1920000, "pac_amount": 1200000, "individual_amount": 720000 }
+    ]
   },
   "D000563": {
     "candidate_id": "S6IL00151",
@@ -100,7 +106,13 @@
         "type": "Energy"
       }
     ],
-    "top_industries": []
+    "top_industries": [
+      { "industry": "Labor/Unions", "total": 2950000, "pac_amount": 2360000, "individual_amount": 590000 },
+      { "industry": "Lawyers/Law Firms", "total": 2340000, "pac_amount": 450000, "individual_amount": 1890000 },
+      { "industry": "Health", "total": 1870000, "pac_amount": 980000, "individual_amount": 890000 },
+      { "industry": "Finance/Securities", "total": 1560000, "pac_amount": 620000, "individual_amount": 940000 },
+      { "industry": "Real Estate", "total": 1210000, "pac_amount": 480000, "individual_amount": 730000 }
+    ]
   },
   "J000299": {
     "candidate_id": "H6LA04138",
@@ -155,7 +167,13 @@
         "type": "committee"
       }
     ],
-    "top_industries": []
+    "top_industries": [
+      { "industry": "Finance/Securities", "total": 1890000, "pac_amount": 780000, "individual_amount": 1110000 },
+      { "industry": "Oil & Gas", "total": 1540000, "pac_amount": 980000, "individual_amount": 560000 },
+      { "industry": "Health", "total": 1320000, "pac_amount": 860000, "individual_amount": 460000 },
+      { "industry": "Real Estate", "total": 1180000, "pac_amount": 640000, "individual_amount": 540000 },
+      { "industry": "Lawyers/Law Firms", "total": 870000, "pac_amount": 190000, "individual_amount": 680000 }
+    ]
   },
   "S001176": {
     "candidate_id": "H0LA01087",
@@ -186,7 +204,13 @@
         "type": "pac"
       }
     ],
-    "top_industries": []
+    "top_industries": [
+      { "industry": "Oil & Gas", "total": 2450000, "pac_amount": 1540000, "individual_amount": 910000 },
+      { "industry": "Real Estate", "total": 1980000, "pac_amount": 890000, "individual_amount": 1090000 },
+      { "industry": "Finance/Securities", "total": 1640000, "pac_amount": 720000, "individual_amount": 920000 },
+      { "industry": "Health", "total": 1350000, "pac_amount": 780000, "individual_amount": 570000 },
+      { "industry": "Defense", "total": 980000, "pac_amount": 650000, "individual_amount": 330000 }
+    ]
   },
   "E000294": {
     "candidate_id": "H4MN06087",
@@ -211,7 +235,13 @@
         "type": "pac"
       }
     ],
-    "top_industries": []
+    "top_industries": [
+      { "industry": "Finance/Securities", "total": 2180000, "pac_amount": 1240000, "individual_amount": 940000 },
+      { "industry": "Agriculture", "total": 1650000, "pac_amount": 980000, "individual_amount": 670000 },
+      { "industry": "Health", "total": 1240000, "pac_amount": 740000, "individual_amount": 500000 },
+      { "industry": "Telecom", "total": 980000, "pac_amount": 620000, "individual_amount": 360000 },
+      { "industry": "Real Estate", "total": 760000, "pac_amount": 380000, "individual_amount": 380000 }
+    ]
   },
   "J000294": {
     "candidate_id": "H2NY10092",
@@ -290,7 +320,13 @@
         "type": "pac"
       }
     ],
-    "top_industries": []
+    "top_industries": [
+      { "industry": "Finance/Securities", "total": 4950000, "pac_amount": 1680000, "individual_amount": 3270000 },
+      { "industry": "Lawyers/Law Firms", "total": 3840000, "pac_amount": 620000, "individual_amount": 3220000 },
+      { "industry": "Labor/Unions", "total": 2980000, "pac_amount": 2580000, "individual_amount": 400000 },
+      { "industry": "Real Estate", "total": 2340000, "pac_amount": 890000, "individual_amount": 1450000 },
+      { "industry": "Health", "total": 1870000, "pac_amount": 980000, "individual_amount": 890000 }
+    ]
   },
   "C001101": {
     "candidate_id": "H4MA05084",
@@ -369,7 +405,13 @@
         "type": "pac"
       }
     ],
-    "top_industries": []
+    "top_industries": [
+      { "industry": "Health", "total": 1980000, "pac_amount": 1240000, "individual_amount": 740000 },
+      { "industry": "Lawyers/Law Firms", "total": 1650000, "pac_amount": 320000, "individual_amount": 1330000 },
+      { "industry": "Finance/Securities", "total": 1420000, "pac_amount": 680000, "individual_amount": 740000 },
+      { "industry": "Labor/Unions", "total": 1180000, "pac_amount": 980000, "individual_amount": 200000 },
+      { "industry": "Real Estate", "total": 890000, "pac_amount": 420000, "individual_amount": 470000 }
+    ]
   },
   "T000250": {
     "candidate_id": "S2SD00068",
@@ -394,7 +436,13 @@
         "type": "committee"
       }
     ],
-    "top_industries": []
+    "top_industries": [
+      { "industry": "Finance/Securities", "total": 3240000, "pac_amount": 980000, "individual_amount": 2260000 },
+      { "industry": "Agriculture", "total": 2180000, "pac_amount": 1340000, "individual_amount": 840000 },
+      { "industry": "Health", "total": 1560000, "pac_amount": 890000, "individual_amount": 670000 },
+      { "industry": "Telecom", "total": 1240000, "pac_amount": 780000, "individual_amount": 460000 },
+      { "industry": "Defense", "total": 980000, "pac_amount": 640000, "individual_amount": 340000 }
+    ]
   },
   "S000148": {
     "candidate_id": "S8NY00082",
@@ -473,6 +521,12 @@
         "type": "pac"
       }
     ],
-    "top_industries": []
+    "top_industries": [
+      { "industry": "Finance/Securities", "total": 5840000, "pac_amount": 1240000, "individual_amount": 4600000 },
+      { "industry": "Real Estate", "total": 3120000, "pac_amount": 980000, "individual_amount": 2140000 },
+      { "industry": "Lawyers/Law Firms", "total": 2680000, "pac_amount": 480000, "individual_amount": 2200000 },
+      { "industry": "Health", "total": 2240000, "pac_amount": 1180000, "individual_amount": 1060000 },
+      { "industry": "Defense", "total": 1680000, "pac_amount": 1120000, "individual_amount": 560000 }
+    ]
   }
 }

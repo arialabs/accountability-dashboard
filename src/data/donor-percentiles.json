@@ -1,0 +1,338 @@
+{
+  "generated_at": "2026-03-05T05:40:14.031Z",
+  "members": {
+    "M000355": {
+      "Finance/Securities": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Defense": {
+        "chamber_percentile": 67,
+        "chamber_label": "More than 67% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Health": {
+        "chamber_percentile": 75,
+        "chamber_label": "More than 75% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Oil & Gas": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Telecom": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      }
+    },
+    "D000563": {
+      "Labor/Unions": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Lawyers/Law Firms": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Health": {
+        "chamber_percentile": 25,
+        "chamber_label": "Below average among senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Finance/Securities": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Real Estate": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      }
+    },
+    "J000299": {
+      "Finance/Securities": {
+        "chamber_percentile": 40,
+        "chamber_label": "Below average among House members",
+        "state_rank": 1,
+        "state_member_count": 2,
+        "is_state_leader": true
+      },
+      "Oil & Gas": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of House members",
+        "state_rank": 2,
+        "state_member_count": 2,
+        "is_state_leader": false
+      },
+      "Health": {
+        "chamber_percentile": 20,
+        "chamber_label": "Among lowest 80% of House members",
+        "state_rank": 2,
+        "state_member_count": 2,
+        "is_state_leader": false
+      },
+      "Real Estate": {
+        "chamber_percentile": 40,
+        "chamber_label": "Below average among House members",
+        "state_rank": 2,
+        "state_member_count": 2,
+        "is_state_leader": false
+      },
+      "Lawyers/Law Firms": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      }
+    },
+    "S001176": {
+      "Oil & Gas": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of House members",
+        "state_rank": 1,
+        "state_member_count": 2,
+        "is_state_leader": true
+      },
+      "Real Estate": {
+        "chamber_percentile": 60,
+        "chamber_label": "More than 60% of House members",
+        "state_rank": 1,
+        "state_member_count": 2,
+        "is_state_leader": true
+      },
+      "Finance/Securities": {
+        "chamber_percentile": 20,
+        "chamber_label": "Among lowest 80% of House members",
+        "state_rank": 2,
+        "state_member_count": 2,
+        "is_state_leader": false
+      },
+      "Health": {
+        "chamber_percentile": 40,
+        "chamber_label": "Below average among House members",
+        "state_rank": 1,
+        "state_member_count": 2,
+        "is_state_leader": true
+      },
+      "Defense": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      }
+    },
+    "E000294": {
+      "Finance/Securities": {
+        "chamber_percentile": 60,
+        "chamber_label": "More than 60% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Agriculture": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Health": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Telecom": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Real Estate": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      }
+    },
+    "J000294": {
+      "Finance/Securities": {
+        "chamber_percentile": 80,
+        "chamber_label": "More than 80% of House members",
+        "state_rank": 2,
+        "state_member_count": 2,
+        "is_state_leader": false
+      },
+      "Lawyers/Law Firms": {
+        "chamber_percentile": 67,
+        "chamber_label": "More than 67% of House members",
+        "state_rank": 1,
+        "state_member_count": 2,
+        "is_state_leader": true
+      },
+      "Labor/Unions": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Real Estate": {
+        "chamber_percentile": 80,
+        "chamber_label": "More than 80% of House members",
+        "state_rank": 2,
+        "state_member_count": 2,
+        "is_state_leader": false
+      },
+      "Health": {
+        "chamber_percentile": 60,
+        "chamber_label": "More than 60% of House members",
+        "state_rank": 2,
+        "state_member_count": 2,
+        "is_state_leader": false
+      }
+    },
+    "C001101": {
+      "Health": {
+        "chamber_percentile": 80,
+        "chamber_label": "More than 80% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Lawyers/Law Firms": {
+        "chamber_percentile": 33,
+        "chamber_label": "Below average among House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Finance/Securities": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Labor/Unions": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Real Estate": {
+        "chamber_percentile": 20,
+        "chamber_label": "Among lowest 80% of House members",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      }
+    },
+    "T000250": {
+      "Finance/Securities": {
+        "chamber_percentile": 25,
+        "chamber_label": "Below average among senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Agriculture": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Health": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Telecom": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      },
+      "Defense": {
+        "chamber_percentile": 0,
+        "chamber_label": "Among lowest 100% of senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      }
+    },
+    "S000148": {
+      "Finance/Securities": {
+        "chamber_percentile": 75,
+        "chamber_label": "More than 75% of senators",
+        "state_rank": 1,
+        "state_member_count": 2,
+        "is_state_leader": true
+      },
+      "Real Estate": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of senators",
+        "state_rank": 1,
+        "state_member_count": 2,
+        "is_state_leader": true
+      },
+      "Lawyers/Law Firms": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of senators",
+        "state_rank": 2,
+        "state_member_count": 2,
+        "is_state_leader": false
+      },
+      "Health": {
+        "chamber_percentile": 50,
+        "chamber_label": "More than 50% of senators",
+        "state_rank": 1,
+        "state_member_count": 2,
+        "is_state_leader": true
+      },
+      "Defense": {
+        "chamber_percentile": 33,
+        "chamber_label": "Below average among senators",
+        "state_rank": 1,
+        "state_member_count": 1,
+        "is_state_leader": false
+      }
+    }
+  }
+}
