@@ -10,6 +10,7 @@ import LeadershipSpotlight from "@/components/LeadershipSpotlight";
 import leadershipFinanceData from "@/data/leadership-finance.json";
 import scandalsData from "@/data/scandals.json";
 import keyVotesData from "@/data/key-votes.json";
+import bioguideToIcpsrData from "@/data/bioguide-to-icpsr.json";
 import topCapturedData from "@/data/top-captured.json";
 import cabinetData from "@/data/cabinet.json";
 
@@ -74,7 +75,20 @@ type KeyVote = {
   yea_count: number;
   nay_count: number;
   chamber: string;
+  votes?: Record<string, string | undefined>;
 };
+
+const BIOGUIDE_TO_ICPSR = bioguideToIcpsrData as Record<string, string>;
+
+// 6 prominent party leaders to show on each key vote
+const PARTY_LEADERS = [
+  { bioguide: "S000148", short: "Schumer",   party: "D" as const },
+  { bioguide: "W000817", short: "Warren",    party: "D" as const },
+  { bioguide: "S000033", short: "Sanders",   party: "D" as const },
+  { bioguide: "M000355", short: "McConnell", party: "R" as const },
+  { bioguide: "C001098", short: "Cruz",      party: "R" as const },
+  { bioguide: "T000250", short: "Thune",     party: "R" as const },
+];
 
 const RECENT_VOTES: KeyVote[] = [...(keyVotesData as KeyVote[])]
   .filter(v => v.description && v.description.length > 20)
@@ -829,6 +843,44 @@ export default function Home() {
                         )}
                       </div>
                     </div>
+                    {/* Party leader vote chips */}
+                    {(() => {
+                      const voteRecord = vote.votes;
+                      if (!voteRecord) return null;
+                      const leaderVotes = PARTY_LEADERS
+                        .map(l => ({ ...l, icpsr: BIOGUIDE_TO_ICPSR[l.bioguide], castVote: voteRecord[BIOGUIDE_TO_ICPSR[l.bioguide]] }))
+                        .filter(l => l.icpsr && l.castVote) as Array<{ bioguide: string; short: string; party: "D" | "R"; icpsr: string; castVote: string }>;
+                      if (leaderVotes.length === 0) return null;
+                      return (
+                        <div className="mt-3 pt-3 border-t border-slate-100 flex flex-wrap items-center gap-1.5">
+                          <span
+                            className="text-[10px] font-medium mr-0.5"
+                            style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
+                          >
+                            Party leaders:
+                          </span>
+                          {leaderVotes.map(l => {
+                            const isYea = l.castVote === "Yea";
+                            const isNay = l.castVote === "Nay";
+                            const label = isYea ? "Y" : isNay ? "N" : "NV";
+                            const bgColor = l.party === "D"
+                              ? (isYea ? "#1D4ED8" : "#DBEAFE")
+                              : (isYea ? "#B91C1C" : "#FEE2E2");
+                            const textColor = isYea ? "#FFFFFF" : (l.party === "D" ? "#1D4ED8" : "#B91C1C");
+                            return (
+                              <span
+                                key={l.bioguide}
+                                className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-semibold"
+                                style={{ fontFamily: "'JetBrains Mono', monospace", backgroundColor: bgColor, color: textColor }}
+                                title={`${l.short}: ${l.castVote}`}
+                              >
+                                {l.short} · {label}
+                              </span>
+                            );
+                          })}
+                        </div>
+                      );
+                    })()}
                   </article>
                 </ScrollFadeIn>
               );
