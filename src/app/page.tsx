@@ -601,7 +601,7 @@ export default function Home() {
 
       {/* ══ QUICK STATS BAR — AccountabilityDataCards ═════════════════════ */}
       <section className="section-shell-tight border-b border-slate-200" style={{ backgroundColor: "#1B3A6B" }} aria-label="Site statistics">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4 flex items-end justify-between gap-4 md:mb-5">
             <p
               className="text-xs font-semibold uppercase tracking-widest"
@@ -634,7 +634,7 @@ export default function Home() {
 
       {/* ══ CONGRESSIONAL LEADERSHIP AT A GLANCE ══════════════════════════════ */}
       <section className="section-shell-tight border-b border-slate-200 bg-white">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollFadeIn>
             <div className="flex items-center justify-between mb-5 md:mb-6">
               <div>
@@ -751,7 +751,7 @@ export default function Home() {
 
       {/* ══ RECENT KEY VOTES ══════════════════════════════════════════════════ */}
       <section className="section-shell-tight border-b border-slate-200" style={{ backgroundColor: "#F8FAFC" }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollFadeIn>
             <div className="flex items-center justify-between mb-5">
               <div>
@@ -891,7 +891,7 @@ export default function Home() {
 
       {/* ══ DATA-DRIVEN INSIGHTS ═══════════════════════════════════════════════ */}
       <section className="section-shell border-b border-slate-200" style={{ backgroundColor: "#F8FAFC" }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 space-y-8 md:space-y-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
           <ScrollFadeIn className="section-header">
             <div className="brand-flag-bar mb-3" aria-hidden="true" />
             <h2 style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}>
@@ -938,7 +938,7 @@ export default function Home() {
           Phase 3: 1 LARGE featured (60%) + 2 smaller supporting (40% stacked)
       ══ */}
       <section className="section-shell bg-white border-b border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 space-y-8 md:space-y-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
           {/* Section header — teal brand mark + redaction aesthetic */}
           <ScrollFadeIn className="section-header">
             <div className="flex items-baseline gap-4 mb-3">
@@ -1190,7 +1190,7 @@ export default function Home() {
         className="border-b border-slate-200"
         style={{ backgroundColor: "var(--bg-primary)" }}
       >
-        <div className="max-w-5xl mx-auto px-6 section-shell-tight lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 section-shell-tight lg:px-8">
           <ScrollFadeIn>
             <LeadershipSpotlight />
           </ScrollFadeIn>
@@ -1202,7 +1202,7 @@ export default function Home() {
         className="section-shell border-b border-slate-200"
         style={{ backgroundColor: "var(--bg-secondary)", borderTop: "3px solid var(--accent)" }}
       >
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 space-y-8 md:space-y-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
           <ScrollFadeIn className="section-header">
             {/* Teal brand-mark bar as section divider */}
             <div className="brand-flag-bar mb-3" aria-hidden="true" />
@@ -1438,7 +1438,7 @@ export default function Home() {
 
       {/* ══ DEEP DIVES ═════════════════════════════════════════════════════ */}
       <section className="section-shell border-b border-slate-200" style={{ backgroundColor: "#F1F0ED" }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 space-y-8 md:space-y-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
           <ScrollFadeIn className="section-header">
             <div className="brand-flag-bar mb-3" aria-hidden="true" />
             <h2
@@ -1531,7 +1531,7 @@ export default function Home() {
         className="border-t border-slate-200"
         style={{ backgroundColor: "var(--bg-secondary)" }}
       >
-        <div className="max-w-4xl mx-auto px-6 section-shell-tight lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 section-shell-tight lg:px-8">
           {/* Teal redaction-bar accent at top */}
           <div className="brand-flag-bar mb-4 md:mb-5" aria-hidden="true" />
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-12">
