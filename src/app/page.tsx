@@ -11,6 +11,7 @@ import leadershipFinanceData from "@/data/leadership-finance.json";
 import scandalsData from "@/data/scandals.json";
 import keyVotesData from "@/data/key-votes.json";
 import topCapturedData from "@/data/top-captured.json";
+import cabinetData from "@/data/cabinet.json";
 
 // Pre-compute scandal counts per member
 const scandalCounts: Record<string, number> = {};
@@ -36,6 +37,31 @@ type CapturedLeader = {
   pac_percentage: number; large_donor_percentage: number; total_raised: number; scandals: number;
 };
 const TOP_CAPTURED: CapturedLeader[] = (topCapturedData as CapturedLeader[]).slice(0, 5);
+
+// ── Cabinet Conflict Risk Data ───────────────────────────────────────────────
+type CabinetConflictEntry = {
+  id: string;
+  name: string;
+  role: string;
+  score: number;
+  num_conflicts: number;
+};
+
+const TOP_CONFLICT_RISKS: CabinetConflictEntry[] = (
+  (cabinetData as { members: Array<{
+    id: string; name: string; role: string;
+    conflicts_of_interest?: Array<{ severity: string }>;
+  }> }).members
+  .map(m => {
+    const weights: Record<string, number> = { critical: 25, high: 15, medium: 10, low: 5 };
+    const score = (m.conflicts_of_interest || []).reduce(
+      (sum, c) => sum + (weights[c.severity] || 0), 0
+    );
+    return { id: m.id, name: m.name, role: m.role, score, num_conflicts: (m.conflicts_of_interest || []).length };
+  })
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 4)
+);
 
 // Recent key votes — top 5 by date
 type KeyVote = {
@@ -1224,35 +1250,84 @@ export default function Home() {
                 </div>
 
                 <h3
-                  className="text-xl font-semibold mb-2"
+                  className="text-xl font-semibold mb-1"
                   style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)", letterSpacing: "-0.01em" }}
                 >
                   Executive
                 </h3>
                 <p
-                  className="text-sm mb-5 flex-1 leading-relaxed"
+                  className="text-xs mb-3 font-semibold uppercase tracking-widest"
                   style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                 >
-                  The President and federal agencies. Cabinet appointments, executive orders, and
-                  conflict of interest disclosures.
+                  Top Conflict Risks · Cabinet
                 </p>
 
+                {/* Cabinet conflict leaderboard */}
+                <div className="divide-y divide-slate-100 mb-4 flex-1">
+                  {TOP_CONFLICT_RISKS.map((official) => {
+                    const verdict =
+                      official.score >= 65 ? { label: "CRITICAL", color: "#B91C1C", bg: "#FEF2F2" } :
+                      official.score >= 35 ? { label: "HIGH RISK", color: "#B45309", bg: "#FFFBEB" } :
+                                             { label: "MED RISK",  color: "#64748B", bg: "#F8FAFC" };
+                    const barWidth = Math.min(100, Math.round(official.score));
+                    // Abbreviate long roles
+                    const shortRole = official.role
+                      .replace("Secretary of ", "Sec. ")
+                      .replace("Administrator", "Admin.");
+                    return (
+                      <div
+                        key={official.id}
+                        className="flex items-center gap-2 py-2"
+                      >
+                        <div className="flex-1 min-w-0">
+                          <div
+                            className="text-xs font-semibold truncate"
+                            style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-primary)" }}
+                          >
+                            {official.name}
+                          </div>
+                          <div className="mt-0.5 flex items-center gap-1.5">
+                            <div className="flex-1 h-1 rounded-full bg-slate-100 max-w-[100px]">
+                              <div
+                                className="h-full rounded-full"
+                                style={{ width: `${barWidth}%`, backgroundColor: verdict.color }}
+                              />
+                            </div>
+                            <span
+                              className="text-[10px] font-mono truncate"
+                              style={{ color: "var(--text-secondary)" }}
+                            >
+                              {shortRole}
+                            </span>
+                          </div>
+                        </div>
+                        <span
+                          className="shrink-0 px-1.5 py-0.5 rounded-sm text-[10px] font-bold uppercase"
+                          style={{ backgroundColor: verdict.bg, color: verdict.color }}
+                        >
+                          {verdict.label}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+
                 <span className="card-cta">
-                  Explore executive records <ArrowRightIcon />
+                  View all conflicts <ArrowRightIcon />
                 </span>
 
-                <div className="pt-4 border-t border-slate-100">
+                <div className="pt-3 border-t border-slate-100 mt-3">
                   <div
                     className="text-xl font-bold"
                     style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)" }}
                   >
-                    26
+                    16
                   </div>
                   <div
                     className="text-xs uppercase tracking-wide"
                     style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                   >
-                    Cabinet + VP
+                    Cabinet members tracked
                   </div>
                 </div>
               </Link>

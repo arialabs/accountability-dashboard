@@ -95,6 +95,19 @@ describe("Home Page", () => {
     expect(screen.getAllByText("Senate").length).toBeGreaterThan(0);
   });
 
+  it("displays cabinet conflict risk leaderboard in Executive branch card", () => {
+    render(<Home />);
+    // Top conflict risk heading
+    expect(screen.getByText(/Top Conflict Risks/i)).toBeDefined();
+    // RFK Jr. should be #1 with score 100
+    expect(screen.getByText("Robert F. Kennedy Jr.")).toBeDefined();
+    // CRITICAL verdict badge should appear
+    expect(screen.getAllByText("CRITICAL").length).toBeGreaterThan(0);
+    // Card count should reflect 16 tracked members
+    expect(screen.getByText("16")).toBeDefined();
+    expect(screen.getByText("Cabinet members tracked")).toBeDefined();
+  });
+
   it("renders the Deep Dives section", () => {
     render(<Home />);
     expect(screen.getByText("Deep Dives")).toBeDefined();
