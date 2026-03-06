@@ -353,8 +353,8 @@ export default function LeadershipSpotlight() {
           </h3>
           <span className="text-xs text-gray-400 ml-auto">221 R – 215 D</span>
         </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="min-w-0">
             <p className="text-xs font-bold uppercase tracking-wider text-red-500 dark:text-red-400 mb-3">
               Republican Majority
             </p>
@@ -362,7 +362,7 @@ export default function LeadershipSpotlight() {
               {houseMajority.map(l => <LeaderProfile key={l.bioguide_id} leader={l} />)}
             </div>
           </div>
-          <div>
+          <div className="min-w-0">
             <p className="text-xs font-bold uppercase tracking-wider text-blue-500 dark:text-blue-400 mb-3">
               Democratic Minority
             </p>
@@ -387,8 +387,8 @@ export default function LeadershipSpotlight() {
           </h3>
           <span className="text-xs text-gray-400 ml-auto">53 R – 47 D</span>
         </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="min-w-0">
             <p className="text-xs font-bold uppercase tracking-wider text-red-500 dark:text-red-400 mb-3">
               Republican Majority
             </p>
@@ -396,7 +396,7 @@ export default function LeadershipSpotlight() {
               {senateMajority.map(l => <LeaderProfile key={l.bioguide_id} leader={l} />)}
             </div>
           </div>
-          <div>
+          <div className="min-w-0">
             <p className="text-xs font-bold uppercase tracking-wider text-blue-500 dark:text-blue-400 mb-3">
               Democratic Minority
             </p>
