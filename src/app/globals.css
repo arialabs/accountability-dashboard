@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global mobile overflow prevention */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 @layer base {
   :root {
     --bg-primary: #FFFFFF;
@@ -330,7 +340,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
-  overflow: hidden;
+  max-width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }

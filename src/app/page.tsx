@@ -368,7 +368,7 @@ export default function Home() {
                 Find a representative first
               </span>
               <h2
-                className="mt-2 text-3xl md:text-4xl"
+                className="mt-2 text-xl sm:text-3xl md:text-4xl"
                 style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}
               >
                 Search any rep, senator, or official
