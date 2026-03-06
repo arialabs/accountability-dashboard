@@ -56,15 +56,15 @@
   }
 
   h1 {
-    /* 52px mobile → 64px desktop — Phase 4 upgrade: more editorial presence */
-    font-size: clamp(3.25rem, 6vw, 4rem);
+    /* 2rem mobile (32px) → scales up to 4rem desktop — prevents overflow at 375px */
+    font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 700;
-    line-height: 1.03;
+    line-height: 1.08;
   }
 
   h2 {
-    /* 36px mobile, 40px desktop — Phase 2 upgrade */
-    font-size: clamp(2.25rem, 4vw, 2.5rem);
+    /* 1.75rem mobile (28px) → 2.5rem desktop — prevents search panel h2 overflow */
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 600;
   }
 
@@ -600,9 +600,15 @@
 }
 
 .search-wrap.search-focused {
-  transform: scaleX(1.018);
-  transform-origin: left center;
+  /* No scaleX on mobile — causes right-edge overflow at 375px */
   box-shadow: 0 0 0 3px rgb(220 20 60 / 0.22), 0 4px 20px rgb(220 20 60 / 0.12);
+}
+
+@media (min-width: 768px) {
+  .search-wrap.search-focused {
+    transform: scaleX(1.018);
+    transform-origin: left center;
+  }
 }
 
 /* Scanning animation */
