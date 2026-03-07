@@ -40,6 +40,20 @@ vi.mock("@/components/HeroSparkline", () => ({
   ),
 }));
 
+vi.mock("@/components/MostCapturedPanel", () => ({
+  default: ({ members }: { members: Array<{ bioguide_id: string; name: string; pac_percentage: number }> }) => (
+    <div data-testid="most-captured-panel">
+      <p>Top 10 Most Captured</p>
+      {members.map((m) => (
+        <div key={m.bioguide_id}>
+          <span>{m.name}</span>
+          <span>{m.pac_percentage}% PAC</span>
+        </div>
+      ))}
+    </div>
+  ),
+}));
+
 describe("Home Page", () => {
   it("renders the main heading", () => {
     render(<Home />);
