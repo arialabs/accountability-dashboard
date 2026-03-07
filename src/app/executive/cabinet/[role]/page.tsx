@@ -25,6 +25,7 @@ import {
 } from "@/lib/revolving-door";
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 import { Container } from "@/components/ui";
+import { VerdictBanner } from "@/components/VerdictBanner";
 
 export async function generateMetadata({ params }: CabinetMemberPageProps): Promise<Metadata> {
   const { role } = await params;
@@ -144,6 +145,15 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
         </Container>
       </section>
 
+      {/* Verdict Banner */}
+      {rdEntry && (
+        <section className="pt-8 pb-0">
+          <Container>
+            <VerdictBanner entry={rdEntry} expandTargetId="revolving-door" />
+          </Container>
+        </section>
+      )}
+
       {/* Details Section */}
       <section className="py-12">
         <Container>
@@ -215,7 +225,7 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
             const rdIcon = getRevolvingDoorIcon(rdEntry.type);
             const isHighRisk = rdEntry.type === "industry_insider" || rdEntry.type === "ideological_conflict";
             return (
-              <div className={`rounded-2xl border-2 p-8 mb-8 ${isHighRisk ? "bg-orange-50 border-orange-300" : "bg-slate-50 border-slate-200"}`}>
+              <div id="revolving-door" className={`rounded-2xl border-2 p-8 mb-8 ${isHighRisk ? "bg-orange-50 border-orange-300" : "bg-slate-50 border-slate-200"}`}>
                 <h2 className={`text-2xl font-black mb-3 flex items-center gap-2 ${isHighRisk ? "text-orange-900" : "text-slate-700"}`}>
                   <span>{rdIcon}</span>
                   Revolving Door Analysis
