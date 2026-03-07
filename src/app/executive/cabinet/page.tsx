@@ -12,6 +12,13 @@ import {
   sortByConflictScore,
   getAllOfficials,
 } from "@/lib/executive-data";
+import {
+  getRevolvingDoorEntry,
+  getRevolvingDoorLabel,
+  getRevolvingDoorColor,
+  getRevolvingDoorIcon,
+  getRevolvingDoorShortDesc,
+} from "@/lib/revolving-door";
 import type { ConflictSeverity } from "@/types/executive";
 import { BodyText, Caption } from "@/components/ui";
 
@@ -334,6 +341,29 @@ export default function CabinetPage() {
                       <p className="text-xs text-slate-400 mb-2">
                         {member.department}
                       </p>
+                      {/* Revolving Door Badge */}
+                      {(() => {
+                        const rdEntry = getRevolvingDoorEntry(member.id);
+                        const rdLabel = getRevolvingDoorLabel(rdEntry?.type ?? null);
+                        const rdColor = getRevolvingDoorColor(rdEntry?.type ?? null);
+                        const rdIcon = getRevolvingDoorIcon(rdEntry?.type ?? null);
+                        const rdDesc = getRevolvingDoorShortDesc(rdEntry?.type ?? null);
+                        if (!rdEntry || rdEntry.type === "public_service") return null;
+                        return (
+                          <div
+                            className={`mt-2 flex items-start gap-1.5 px-2 py-1.5 rounded-lg border text-xs font-medium ${rdColor}`}
+                            title={rdEntry.summary}
+                          >
+                            <span className="shrink-0">{rdIcon}</span>
+                            <div className="min-w-0">
+                              <span className="font-bold">{rdLabel}</span>
+                              {rdDesc && (
+                                <p className="opacity-80 mt-0.5 leading-tight truncate">{rdDesc}</p>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })()}
                       {member.conflicts_of_interest && member.conflicts_of_interest.length > 0 && (
                         <div className="flex flex-wrap gap-1 mt-2">
                           {member.conflicts_of_interest.slice(0, 2).map((conflict, idx: number) => (

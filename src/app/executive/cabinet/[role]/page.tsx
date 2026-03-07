@@ -17,6 +17,12 @@ import {
 import { getOfficialAgencySpending } from "@/lib/data";
 import { formatCurrencyShort } from "@/lib/formatting";
 import type { ConflictSeverity } from "@/types/executive";
+import {
+  getRevolvingDoorEntry,
+  getRevolvingDoorLabel,
+  getRevolvingDoorColor,
+  getRevolvingDoorIcon,
+} from "@/lib/revolving-door";
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 import { Container } from "@/components/ui";
 
@@ -75,6 +81,7 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
   const conflictScore = calculateConflictScore(official.conflicts_of_interest as Array<{ severity: ConflictSeverity }>);
   const conflictLabel = getConflictSeverityLabel(conflictScore);
   const tenure = formatTenure(official.appointed_date);
+  const rdEntry = getRevolvingDoorEntry(role);
   const groupedConflicts = groupConflictsByCategory(official.conflicts_of_interest as Array<{ severity: ConflictSeverity; category: string }>);
   const agencySpending = getOfficialAgencySpending(role);
   const latestBudgetYear = agencySpending?.budget_totals_by_fiscal_year.at(-1);
@@ -198,6 +205,34 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
               </p>
             </div>
           )}
+
+          {/* Revolving Door Analysis */}
+          {(() => {
+            const rdEntry = getRevolvingDoorEntry(role);
+            if (!rdEntry) return null;
+            const rdLabel = getRevolvingDoorLabel(rdEntry.type);
+            const rdColor = getRevolvingDoorColor(rdEntry.type);
+            const rdIcon = getRevolvingDoorIcon(rdEntry.type);
+            const isHighRisk = rdEntry.type === "industry_insider" || rdEntry.type === "ideological_conflict";
+            return (
+              <div className={`rounded-2xl border-2 p-8 mb-8 ${isHighRisk ? "bg-orange-50 border-orange-300" : "bg-slate-50 border-slate-200"}`}>
+                <h2 className={`text-2xl font-black mb-3 flex items-center gap-2 ${isHighRisk ? "text-orange-900" : "text-slate-700"}`}>
+                  <span>{rdIcon}</span>
+                  Revolving Door Analysis
+                </h2>
+                <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-sm font-bold mb-4 ${rdColor}`}>
+                  {rdLabel}
+                </div>
+                <div className="mb-2">
+                  <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Prior Industry: </span>
+                  <span className="text-slate-800 font-semibold">{rdEntry.prior_industry}</span>
+                </div>
+                <p className={`text-base leading-relaxed ${isHighRisk ? "text-orange-800" : "text-slate-600"}`}>
+                  {rdEntry.summary}
+                </p>
+              </div>
+            );
+          })()}
 
           {/* Conflicts of Interest */}
           {official.conflicts_of_interest.length > 0 && (
