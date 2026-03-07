@@ -7,11 +7,11 @@ import HeroSparkline from "@/components/HeroSparkline";
 import AccountabilityDataCard from "@/components/AccountabilityDataCard";
 import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 import LeadershipSpotlight from "@/components/LeadershipSpotlight";
+import TopCapturedPanel from "@/components/TopCapturedPanel";
 import leadershipFinanceData from "@/data/leadership-finance.json";
 import scandalsData from "@/data/scandals.json";
 import keyVotesData from "@/data/key-votes.json";
 import bioguideToIcpsrData from "@/data/bioguide-to-icpsr.json";
-import topCapturedData from "@/data/top-captured.json";
 import cabinetData from "@/data/cabinet.json";
 
 // Pre-compute scandal counts per member
@@ -32,12 +32,7 @@ type LeaderCard = {
   scandals: number;
 };
 
-// Top-captured leaders for hero panel — sorted by PAC% desc, take top 5
-type CapturedLeader = {
-  bioguide_id: string; name: string; role: string; party: string; state: string;
-  pac_percentage: number; large_donor_percentage: number; total_raised: number; scandals: number;
-};
-const TOP_CAPTURED: CapturedLeader[] = (topCapturedData as CapturedLeader[]).slice(0, 5);
+// TopCapturedPanel is now a client component (see components/TopCapturedPanel.tsx)
 
 // ── Cabinet Conflict Risk Data ───────────────────────────────────────────────
 type CabinetConflictEntry = {
@@ -504,87 +499,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* ── Donor Capture Snapshot ──────────────────────────────────────── */}
-          <div className="mt-8 rounded-sm border border-slate-200 bg-white/95 overflow-hidden">
-            <div className="px-4 py-3 border-b border-slate-200 flex items-center justify-between"
-              style={{ backgroundColor: "#FAFAFA" }}>
-              <p
-                className="text-xs font-bold uppercase tracking-widest"
-                style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--accent)" }}
-              >
-                Leadership · PAC Reliance Ranking
-              </p>
-              <Link
-                href="/congress"
-                className="text-xs font-semibold flex items-center gap-1"
-                style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-secondary)" }}
-              >
-                All 535 <ArrowRightIcon className="w-3 h-3" />
-              </Link>
-            </div>
-            <div className="divide-y divide-slate-100">
-              {TOP_CAPTURED.map((leader, idx) => {
-                const verdict =
-                  leader.pac_percentage >= 35 ? { label: "HIGH PAC", color: "#B91C1C", bg: "#FEF2F2" } :
-                  leader.pac_percentage >= 15 ? { label: "MED PAC",  color: "#B45309", bg: "#FFFBEB" } :
-                                                { label: "LOW PAC",  color: "#15803D", bg: "#F0FDF4" };
-                const barWidth = Math.min(100, Math.round(leader.pac_percentage / 60 * 100));
-                return (
-                  <Link
-                    key={leader.bioguide_id}
-                    href={`/rep/${leader.bioguide_id}`}
-                    className="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 transition-colors group"
-                  >
-                    <span
-                      className="w-5 text-center text-xs font-bold tabular-nums"
-                      style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-secondary)" }}
-                    >
-                      {idx + 1}
-                    </span>
-                    <div
-                      className="w-1 self-stretch rounded-full"
-                      style={{ backgroundColor: leader.party === "R" ? "#B91C1C" : "#1D4ED8" }}
-                    />
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-baseline gap-1.5">
-                        <span
-                          className="text-sm font-semibold group-hover:underline truncate"
-                          style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-primary)" }}
-                        >
-                          {leader.name}
-                        </span>
-                        <span
-                          className="text-[10px] shrink-0"
-                          style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
-                        >
-                          ({leader.party}-{leader.state})
-                        </span>
-                      </div>
-                      <div className="mt-1 flex items-center gap-2">
-                        <div className="flex-1 h-1 rounded-full bg-slate-100 max-w-[120px]">
-                          <div
-                            className="h-full rounded-full"
-                            style={{ width: `${barWidth}%`, backgroundColor: verdict.color }}
-                          />
-                        </div>
-                        <span
-                          className="text-[10px] font-mono"
-                          style={{ color: "var(--text-secondary)" }}
-                        >
-                          {leader.pac_percentage.toFixed(1)}% PAC
-                        </span>
-                      </div>
-                    </div>
-                    <span
-                      className="shrink-0 px-1.5 py-0.5 rounded-sm text-[10px] font-bold uppercase"
-                      style={{ backgroundColor: verdict.bg, color: verdict.color }}
-                    >
-                      {verdict.label}
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
+          {/* ── Top 10 Most PAC-Captured (non-leadership) ───────────────────── */}
+          <div className="mt-8">
+            <TopCapturedPanel />
           </div>
 
           <div className="mt-5 pt-4 border-t border-slate-200">
