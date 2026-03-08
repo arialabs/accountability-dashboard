@@ -28,6 +28,7 @@ import { getRecentVotesForMember } from "@/lib/live-votes";
 import LatestNews from "@/components/LatestNews";
 import { getConflictCallouts } from "@/lib/conflict-callouts";
 import { loadDonorPercentiles } from "@/lib/donor-percentiles";
+import { RepVerdictBadge } from "@/components/RepVerdictBadge";
 
 import keyVotesData from "@/data/key-votes.json";
 import bioguideToIcpsrData from "@/data/bioguide-to-icpsr.json";
@@ -332,6 +333,17 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
                   {member.chamber === "house" ? "Representative" : "Senator"}
                 </span>
               </div>
+
+              {/* Accountability Verdict — answers "Who does this rep serve?" above the fold */}
+              {(finance !== null || conflicts.length > 0) && (
+                <div className="mb-5">
+                  <RepVerdictBadge
+                    pacPct={finance?.pac_percentage ?? null}
+                    highConflicts={conflicts.filter(c => c.conflictSeverity === "high").length}
+                    totalConflicts={conflicts.length}
+                  />
+                </div>
+              )}
 
               {/* Quick Stats Row */}
               <div className="flex flex-wrap gap-6 text-sm">
