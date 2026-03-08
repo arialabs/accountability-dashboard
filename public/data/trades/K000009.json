@@ -1,0 +1,1 @@
+[{"ticker":"ANDE","company":null,"tradedDate":"2022-10-21","filedDate":"2023-05-15","transaction":"Sale","tradeSizeUsd":1280.03,"excessReturn":5.37318341528727,"suspicious_flags":[{"type":"late_disclosure","severity":"high","description":"Filed 206 days after trade (STOCK Act requires 45 days)","days_late":161}],"risk_score":3}]

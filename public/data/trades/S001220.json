@@ -1,0 +1,1 @@
+[{"ticker":"IREN","company":null,"tradedDate":"2026-01-28","filedDate":"2026-01-28","transaction":"Purchase","tradeSizeUsd":1001,"excessReturn":-31.2185419151984,"suspicious_flags":[{"type":"unusual_return","severity":"high","description":"Lost 31.2% excess return","return_pct":-31.2185419151984}],"risk_score":3}]

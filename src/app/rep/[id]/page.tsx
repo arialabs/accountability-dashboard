@@ -1,4 +1,4 @@
-import { getMember, getMembers, getMemberFinance, getMemberTrades, getMemberDisclosures } from "@/lib/data";
+import { getMember, getMembers, getMemberFinance, getMemberDisclosures } from "@/lib/data";
 import { getMemberAlignmentEnhanced } from "@/lib/data-enhanced";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -180,16 +180,7 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
 
   const recentVotes = getRecentVotesForMember(id, 8);
 
-  // Real stock trades from Quiver Quant
-  const stockTrades = getMemberTrades(id) as Array<{
-    ticker: string;
-    company: string | null;
-    tradedDate: string;
-    filedDate: string;
-    transaction: "Purchase" | "Sale";
-    tradeSizeUsd: number;
-    excessReturn: number | null;
-  }>;
+  // Stock trades loaded client-side via /data/trades/[id].json (75MB file split into per-member files)
 
   // Financial disclosures from House Clerk
   const financialDisclosures = getMemberDisclosures(id);
@@ -200,7 +191,7 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
   // Build list of sections that have no data yet for the subtle footer notice
   const emptySections: string[] = [];
   if (committees.length === 0) emptySections.push("Committee Memberships");
-  if (stockTrades.length === 0) emptySections.push("Stock Trades");
+  // Stock trades: loaded client-side, always show the section (component handles empty state)
   if (financialDisclosures.length === 0) emptySections.push("Financial Disclosures");
 
   const getPartyBadgeClass = (party: string) => {
@@ -480,15 +471,13 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
               />
             </ErrorBoundary>
 
-            {/* Stock Trades — only render the card when there's actual data */}
-            {stockTrades.length > 0 && (
-              <ErrorBoundary context="stock trades">
-                <StockTradesSection 
-                  trades={stockTrades} 
-                  memberName={member.full_name} 
-                />
-              </ErrorBoundary>
-            )}
+            {/* Stock Trades — loaded client-side from /data/trades/[bioguideId].json */}
+            <ErrorBoundary context="stock trades">
+              <StockTradesSection
+                bioguideId={id}
+                memberName={member.full_name}
+              />
+            </ErrorBoundary>
 
             {/* Financial Disclosures — only render the card when there's actual data */}
             {financialDisclosures.length > 0 && (

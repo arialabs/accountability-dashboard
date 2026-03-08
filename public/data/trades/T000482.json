@@ -1,0 +1,1 @@
+[{"ticker":"GE","company":null,"tradedDate":"2021-12-27","filedDate":"2022-01-11","transaction":"Sale","tradeSizeUsd":1001,"excessReturn":376.042188663858,"suspicious_flags":[{"type":"unusual_return","severity":"high","description":"Gained 376.0% excess return","return_pct":376.042188663858}],"risk_score":3}]

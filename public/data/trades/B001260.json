@@ -1,0 +1,1 @@
+[{"ticker":"CTFS PARTN","company":null,"tradedDate":"2015-06-19","filedDate":"2015-07-02","transaction":"Sale","tradeSizeUsd":50001,"excessReturn":null,"suspicious_flags":[{"type":"large_trade","severity":"medium","description":"Large sale of $50,001","amount":50001}],"risk_score":2}]

@@ -1,0 +1,1 @@
+[{"ticker":"TSLA","company":null,"tradedDate":"2020-07-14","filedDate":"2020-07-16","transaction":"Sale","tradeSizeUsd":15001,"excessReturn":173.270568148831,"suspicious_flags":[{"type":"unusual_return","severity":"high","description":"Gained 173.3% excess return","return_pct":173.270568148831}],"risk_score":3}]

@@ -1,0 +1,1 @@
+[{"ticker":"NWL","company":null,"tradedDate":"2025-10-27","filedDate":"2025-11-21","transaction":"Purchase","tradeSizeUsd":15001,"excessReturn":-11.4241463186453,"suspicious_flags":[{"type":"unusual_return","severity":"medium","description":"Lost 11.4% excess return","return_pct":-11.4241463186453}],"risk_score":2}]

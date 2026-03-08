@@ -1,0 +1,1 @@
+[{"ticker":"DWAC","company":null,"tradedDate":"2021-10-25","filedDate":"2021-11-01","transaction":"Purchase","tradeSizeUsd":1001,"excessReturn":-54.5713670616628,"suspicious_flags":[{"type":"unusual_return","severity":"high","description":"Lost 54.6% excess return","return_pct":-54.5713670616628}],"risk_score":3}]

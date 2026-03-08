@@ -1,0 +1,1 @@
+[{"ticker":"WNRP","company":null,"tradedDate":"2022-11-17","filedDate":"2024-09-27","transaction":"Sale","tradeSizeUsd":1001,"excessReturn":null,"suspicious_flags":[{"type":"late_disclosure","severity":"high","description":"Filed 680 days after trade (STOCK Act requires 45 days)","days_late":635}],"risk_score":3}]
