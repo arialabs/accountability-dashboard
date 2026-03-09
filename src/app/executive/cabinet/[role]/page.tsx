@@ -37,9 +37,30 @@ export async function generateMetadata({ params }: CabinetMemberPageProps): Prom
     };
   }
 
+  const ogTitle = `${member.name} - ${member.role}`;
+  const ogDescription = `${member.role} ${member.name}. Track policy positions, conflicts of interest, and accountability metrics for ${member.department}.`;
+
   return {
-    title: `${member.name} - ${member.role}`,
-    description: `${member.role} ${member.name}. Track policy positions, conflicts of interest, and accountability metrics for ${member.department}.`,
+    title: ogTitle,
+    description: ogDescription,
+    openGraph: {
+      title: ogTitle,
+      description: ogDescription,
+      images: [
+        {
+          url: `/api/og/cabinet?id=${role}`,
+          width: 1200,
+          height: 630,
+          alt: `${member.name} accountability profile`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: ogTitle,
+      description: ogDescription,
+      images: [`/api/og/cabinet?id=${role}`],
+    },
   };
 }
 
