@@ -5,6 +5,7 @@ import { useState, useMemo, useEffect, Suspense, useCallback } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { useLiveMembers } from "@/hooks/useLiveData";
 import { getMemberFinanceStatic } from "@/lib/data";
+import { isZipCode, fetchRepsByZip, type ZipRepResult } from "@/lib/zip-lookup";
 import RepresentativeImage from "@/components/RepresentativeImage";
 import Pagination from "@/components/Pagination";
 import { ScoreLegend } from "@/components/ScoreLegend";
@@ -66,6 +67,12 @@ function CongressContent() {
   const [debouncedSearch, setDebouncedSearch] = useState<string>("");
   const [userState, setUserState] = useState<string | null>(null); // User's home state
   const [isLoadingLocation, setIsLoadingLocation] = useState(false);
+
+  // ZIP code lookup state
+  const [zipReps, setZipReps] = useState<ZipRepResult[]>([]);
+  const [zipLoading, setZipLoading] = useState(false);
+  const [zipFallback, setZipFallback] = useState<string | null>(null);
+  const [activeZip, setActiveZip] = useState<string | null>(null);
   
   // Load user's preferred state from localStorage on mount
   useEffect(() => {
@@ -104,6 +111,25 @@ function CongressContent() {
     return () => clearTimeout(timer);
   }, [search]);
   
+  // ZIP code detection — when debounced search matches 5-digit ZIP, call API
+  useEffect(() => {
+    if (isZipCode(debouncedSearch)) {
+      const zip = debouncedSearch.trim();
+      setZipLoading(true);
+      setZipFallback(null);
+      setActiveZip(zip);
+      fetchRepsByZip(zip).then(({ reps, fallback, message }) => {
+        setZipReps(reps);
+        setZipFallback(fallback ? message : null);
+        setZipLoading(false);
+      });
+    } else {
+      setZipReps([]);
+      setZipFallback(null);
+      setActiveZip(null);
+    }
+  }, [debouncedSearch]);
+
   // Update URL params when filters change (always resets to page 1)
   const updateURL = useCallback((filters: Record<string, string>) => {
     const params = new URLSearchParams();
@@ -451,6 +477,114 @@ function CongressContent() {
           </div>
         )}
         
+        {/* ZIP Code Results Panel */}
+        {activeZip && (
+          <div
+            className="rounded-md border p-5"
+            style={{ backgroundColor: "#F0FDF4", borderColor: "#22C55E" }}
+          >
+            <div className="flex items-center gap-2 mb-3">
+              <svg className="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <h3
+                className="font-semibold text-lg"
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+              >
+                Your Representatives — ZIP {activeZip}
+              </h3>
+            </div>
+
+            {zipLoading && (
+              <div className="flex items-center gap-2 text-sm text-slate-500">
+                <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                </svg>
+                Looking up representatives...
+              </div>
+            )}
+
+            {zipFallback && !zipLoading && (
+              <p className="text-sm text-amber-700">{zipFallback}</p>
+            )}
+
+            {!zipLoading && !zipFallback && zipReps.length === 0 && (
+              <p className="text-sm text-slate-500">No representatives found for this ZIP code.</p>
+            )}
+
+            {!zipLoading && zipReps.length > 0 && (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                {zipReps.map((rep) => {
+                  const partyColor = rep.party === "D" ? "var(--democrat)" : rep.party === "R" ? "var(--republican)" : "var(--independent)";
+                  const verdictStyle = rep.verdictScore === "captured"
+                    ? { bg: "#FEF2F2", border: "#EF4444", text: "#B91C1C", icon: "\uD83D\uDEA8" }
+                    : rep.verdictScore === "mixed"
+                    ? { bg: "#FFFBEB", border: "#F59E0B", text: "#B45309", icon: "\u26A0\uFE0F" }
+                    : rep.verdictScore === "focused"
+                    ? { bg: "#F0FDF4", border: "#22C55E", text: "#15803D", icon: "\u2705" }
+                    : null;
+
+                  return (
+                    <Link
+                      key={rep.id}
+                      href={`/rep/${rep.id}`}
+                      className="flex items-center gap-3 bg-white rounded-md border border-slate-200 p-3 hover:border-teal-400 transition-colors"
+                    >
+                      {rep.photo_url && (
+                        <img
+                          src={rep.photo_url}
+                          alt=""
+                          className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                        />
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span
+                            className="font-semibold text-sm truncate"
+                            style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-primary)" }}
+                          >
+                            {rep.name}
+                          </span>
+                          <span
+                            className="text-xs font-bold px-1.5 py-0.5 rounded-sm flex-shrink-0"
+                            style={{
+                              fontFamily: "'JetBrains Mono', monospace",
+                              backgroundColor: rep.party === "D" ? "#EFF6FF" : rep.party === "R" ? "#FEF2F2" : "#F5F3FF",
+                              color: partyColor,
+                              fontSize: "0.625rem",
+                            }}
+                          >
+                            {rep.party}
+                          </span>
+                        </div>
+                        <div className="text-xs text-slate-500" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
+                          {rep.chamber === "senate" ? "Senator" : "Representative"} · {rep.state}{rep.district ? `-${rep.district}` : ""}
+                        </div>
+                        {verdictStyle && (
+                          <div
+                            className="inline-block mt-1 text-xs font-semibold px-2 py-0.5 rounded-sm"
+                            style={{
+                              backgroundColor: verdictStyle.bg,
+                              color: verdictStyle.text,
+                              border: `1px solid ${verdictStyle.border}`,
+                              fontFamily: "'Source Sans 3', sans-serif",
+                              fontSize: "0.65rem",
+                            }}
+                          >
+                            {verdictStyle.icon} {rep.verdictLabel}
+                          </div>
+                        )}
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Search + Filters — editorial panel */}
         <div
           className="sticky top-16 z-10 backdrop-blur-sm border border-slate-200 rounded-md p-4 sm:p-6"
