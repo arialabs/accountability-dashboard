@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "prebuild": "npm run icons:generate && npm run donor-percentiles",
+    "prebuild": "node scripts/compute-party-loyalty.mjs && npm run icons:generate && npm run donor-percentiles",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
@@ -26,7 +26,8 @@
     "db:push": "turso db shell accountability-dashboard < database/schema.sql",
     "db:studio": "turso db shell accountability-dashboard",
     "research:fetch": "node scripts/fetch-news.mjs",
-    "research:fetch:deep": "node scripts/fetch-news.mjs --deep"
+    "research:fetch:deep": "node scripts/fetch-news.mjs --deep",
+    "party-loyalty": "node scripts/compute-party-loyalty.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.75.0",
