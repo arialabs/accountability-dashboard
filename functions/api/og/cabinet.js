@@ -1,242 +1,87 @@
 /**
  * Cloudflare Pages Function — /api/og/cabinet?id=[member_id]
  *
- * Generates a 1200×630 PNG social share image for a cabinet member.
- * Uses satori (JSX → SVG) + @resvg/resvg-js (SVG → PNG).
+ * Returns an SVG social share image (1200×630) for a cabinet member.
+ * Pure SVG — no native binaries, works in Cloudflare Workers runtime.
  */
-
-import satori from "satori";
-import { Resvg } from "@resvg/resvg-js";
 
 import cabinetData from "../../../src/data/cabinet.json";
 
-// ── data helpers ──────────────────────────────────────────────────────────────
-
-const SEVERITY_WEIGHTS = { low: 1, medium: 3, high: 7, critical: 10 };
-
-function lookup(memberId) {
-  const member = cabinetData.members.find((m) => m.id === memberId);
-  if (!member) return null;
-
-  const score = member.conflicts_of_interest.reduce(
-    (t, c) => t + (SEVERITY_WEIGHTS[c.severity] ?? 0),
-    0,
-  );
-
-  let conflictLabel;
-  if (score === 0) conflictLabel = "None";
-  else if (score < 5) conflictLabel = "Low";
-  else if (score < 15) conflictLabel = "Medium";
-  else if (score < 25) conflictLabel = "High";
-  else conflictLabel = "Critical";
-
-  const verdictType =
-    score >= 15 ? "HIGH RISK" : score >= 5 ? "MODERATE" : "LOW RISK";
-
-  return { member, conflictScore: score, conflictLabel, verdictType };
+function escapeXml(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
-// ── satori markup ─────────────────────────────────────────────────────────────
+function conflictColor(score) {
+  if (score >= 25) return "#DC2626";
+  if (score >= 15) return "#D97706";
+  if (score >= 5)  return "#CA8A04";
+  return "#16A34A";
+}
 
-function buildMarkup(data) {
-  const { member, conflictLabel, verdictType } = data;
+function conflictLabel(score) {
+  if (score >= 25) return "Critical Conflicts";
+  if (score >= 15) return "High Risk";
+  if (score >= 5)  return "Moderate Risk";
+  return "Low Risk";
+}
 
-  const verdictColor =
-    verdictType === "HIGH RISK"
-      ? "#DC2626"
-      : verdictType === "MODERATE"
-        ? "#D97706"
-        : "#16A34A";
+export async function onRequestGet(context) {
+  const { searchParams } = new URL(context.request.url);
+  const id = searchParams.get("id");
+  if (!id) return new Response("Missing id", { status: 400 });
 
-  return {
-    type: "div",
-    props: {
-      style: {
-        display: "flex",
-        flexDirection: "column",
-        width: "1200px",
-        height: "630px",
-        backgroundColor: "#1C1917",
-        color: "#FFFFFF",
-        fontFamily: "sans-serif",
-        padding: "60px",
-      },
-      children: [
-        // Top bar
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginBottom: "40px",
-            },
-            children: [
-              {
-                type: "div",
-                props: {
-                  style: {
-                    fontSize: "22px",
-                    color: "#9A3412",
-                    fontWeight: 700,
-                    letterSpacing: "0.05em",
-                  },
-                  children: "ACCOUNTABILITY DASHBOARD",
-                },
-              },
-              {
-                type: "div",
-                props: {
-                  style: { fontSize: "18px", color: "#A8A29E" },
-                  children: "reps.arialabs.ai",
-                },
-              },
-            ],
-          },
-        },
-        // Name
-        {
-          type: "div",
-          props: {
-            style: {
-              fontSize: "56px",
-              fontWeight: 800,
-              lineHeight: 1.1,
-              marginBottom: "12px",
-            },
-            children: member.name,
-          },
-        },
-        // Role & department
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              fontSize: "26px",
-              color: "#A8A29E",
-              marginBottom: "40px",
-              gap: "12px",
-            },
-            children: [
-              { type: "span", props: { children: member.role } },
-              { type: "span", props: { children: "·" } },
-              { type: "span", props: { children: member.department } },
-            ],
-          },
-        },
-        // Conflict score
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              flexDirection: "column",
-              marginBottom: "40px",
-            },
-            children: [
-              {
-                type: "div",
-                props: {
-                  style: { fontSize: "48px", fontWeight: 800 },
-                  children: conflictLabel,
-                },
-              },
-              {
-                type: "div",
-                props: {
-                  style: {
-                    fontSize: "18px",
-                    color: "#9A3412",
-                    fontWeight: 600,
-                    letterSpacing: "0.05em",
-                    textTransform: "uppercase",
-                  },
-                  children: "CONFLICT SCORE",
-                },
-              },
-            ],
-          },
-        },
-        // Verdict
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              alignItems: "center",
-              gap: "16px",
-              marginTop: "auto",
-            },
-            children: [
-              {
-                type: "div",
-                props: {
-                  style: {
-                    width: "14px",
-                    height: "14px",
-                    borderRadius: "7px",
-                    backgroundColor: verdictColor,
-                  },
-                },
-              },
-              {
-                type: "div",
-                props: {
-                  style: {
-                    fontSize: "28px",
-                    fontWeight: 700,
-                    color: verdictColor,
-                    letterSpacing: "0.08em",
-                  },
-                  children: verdictType,
-                },
-              },
-            ],
-          },
-        },
-      ],
+  const members = cabinetData?.members ?? cabinetData ?? [];
+  const member = members.find((m) => m.id === id);
+  if (!member) return new Response("Not found", { status: 404 });
+
+  const name = escapeXml(member.name ?? "");
+  const role = escapeXml(member.role ?? "");
+  const conflicts = member.conflicts_of_interest ?? [];
+  const score = conflicts.reduce((s, c) => {
+    const w = { critical: 10, high: 7, medium: 3, low: 1 };
+    return s + (w[c.severity] ?? 0);
+  }, 0);
+  const label = conflictLabel(score);
+  const color = conflictColor(score);
+
+  const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="8" height="630" fill="#1F2937"/>
+  <rect x="8" y="0" width="1192" height="80" fill="#F9FAFB"/>
+  <text x="48" y="52" font-family="Georgia, serif" font-size="22" fill="#6B7280">
+    Rep. Accountability Dashboard — Executive Branch · reps.arialabs.ai
+  </text>
+
+  <text x="48" y="80" font-family="system-ui, sans-serif" font-size="20" fill="#9CA3AF">CABINET MEMBER</text>
+  <text x="48" y="180" font-family="Georgia, serif" font-size="72" fill="#111111" font-weight="bold">${name}</text>
+  <text x="48" y="230" font-family="system-ui, sans-serif" font-size="28" fill="#374151">${role}</text>
+
+  <line x1="48" y1="270" x2="1152" y2="270" stroke="#E5E7EB" stroke-width="1"/>
+
+  <text x="48" y="340" font-family="system-ui, sans-serif" font-size="22" fill="#6B7280">CONFLICTS OF INTEREST</text>
+  <text x="48" y="400" font-family="Georgia, serif" font-size="64" fill="#111111" font-weight="bold">${conflicts.length}</text>
+  <text x="160" y="400" font-family="system-ui, sans-serif" font-size="28" fill="#6B7280">identified</text>
+
+  <text x="480" y="340" font-family="system-ui, sans-serif" font-size="22" fill="#6B7280">RISK LEVEL</text>
+  <rect x="480" y="350" width="280" height="60" rx="6" fill="${color}" opacity="0.12"/>
+  <text x="500" y="392" font-family="system-ui, sans-serif" font-size="34" fill="${color}" font-weight="bold">${escapeXml(label)}</text>
+
+  <rect x="8" y="570" width="1192" height="60" fill="#F9FAFB"/>
+  <text x="48" y="607" font-family="system-ui, sans-serif" font-size="20" fill="#9CA3AF">
+    Data: Public financial disclosures · Last updated ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+  </text>
+</svg>`;
+
+  return new Response(svg, {
+    headers: {
+      "Content-Type": "image/svg+xml",
+      "Cache-Control": "public, max-age=86400",
     },
-  };
-}
-
-// ── handler ───────────────────────────────────────────────────────────────────
-
-export async function onRequest(context) {
-  const url = new URL(context.request.url);
-  const id = url.searchParams.get("id");
-
-  if (!id) {
-    return new Response("Missing id parameter", { status: 400 });
-  }
-
-  const data = lookup(id);
-
-  if (!data) {
-    return Response.redirect(new URL("/og-image.png", url.origin).toString(), 302);
-  }
-
-  try {
-    const svg = await satori(buildMarkup(data), {
-      width: 1200,
-      height: 630,
-      fonts: [],
-    });
-
-    const resvg = new Resvg(svg, {
-      fitTo: { mode: "width", value: 1200 },
-    });
-    const pngData = resvg.render();
-    const pngBuffer = pngData.asPng();
-
-    return new Response(pngBuffer, {
-      headers: {
-        "Content-Type": "image/png",
-        "Cache-Control": "public, max-age=86400, s-maxage=604800",
-      },
-    });
-  } catch {
-    return Response.redirect(new URL("/og-image.png", url.origin).toString(), 302);
-  }
+  });
 }
