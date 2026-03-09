@@ -13,6 +13,8 @@ import scandalsData from "@/data/scandals.json";
 import keyVotesData from "@/data/key-votes.json";
 import bioguideToIcpsrData from "@/data/bioguide-to-icpsr.json";
 import cabinetData from "@/data/cabinet.json";
+import { calculateConflictScore, getConflictSeverityLabel } from "@/lib/executive-data";
+import type { ConflictSeverity } from "@/types/executive";
 
 // Pre-compute scandal counts per member
 const scandalCounts: Record<string, number> = {};
@@ -40,6 +42,7 @@ type CabinetConflictEntry = {
   name: string;
   role: string;
   score: number;
+  severityLabel: string;
   num_conflicts: number;
 };
 
@@ -49,11 +52,16 @@ const TOP_CONFLICT_RISKS: CabinetConflictEntry[] = (
     conflicts_of_interest?: Array<{ severity: string }>;
   }> }).members
   .map(m => {
-    const weights: Record<string, number> = { critical: 25, high: 15, medium: 10, low: 5 };
-    const score = (m.conflicts_of_interest || []).reduce(
-      (sum, c) => sum + (weights[c.severity] || 0), 0
-    );
-    return { id: m.id, name: m.name, role: m.role, score, num_conflicts: (m.conflicts_of_interest || []).length };
+    const conflicts = (m.conflicts_of_interest || []) as Array<{ severity: ConflictSeverity }>;
+    const score = calculateConflictScore(conflicts);
+    return {
+      id: m.id,
+      name: m.name,
+      role: m.role,
+      score,
+      severityLabel: getConflictSeverityLabel(score),
+      num_conflicts: conflicts.length,
+    };
   })
   .sort((a, b) => b.score - a.score)
   .slice(0, 4)
@@ -1234,10 +1242,15 @@ export default function Home() {
                 {/* Cabinet conflict leaderboard */}
                 <div className="divide-y divide-slate-100 mb-4 flex-1">
                   {TOP_CONFLICT_RISKS.map((official) => {
-                    const verdict =
-                      official.score >= 65 ? { label: "CRITICAL", color: "#B91C1C", bg: "#FEF2F2" } :
-                      official.score >= 35 ? { label: "HIGH RISK", color: "#B45309", bg: "#FFFBEB" } :
-                                             { label: "MED RISK",  color: "#64748B", bg: "#F8FAFC" };
+                    const verdict = (() => {
+                      switch (official.severityLabel) {
+                        case "Critical": return { label: "CRITICAL", color: "#B91C1C", bg: "#FEF2F2" };
+                        case "High":     return { label: "HIGH", color: "#B45309", bg: "#FFFBEB" };
+                        case "Medium":   return { label: "MEDIUM", color: "#D97706", bg: "#FFF7ED" };
+                        case "Low":      return { label: "LOW", color: "#15803D", bg: "#F0FDF4" };
+                        default:         return { label: "NONE", color: "#64748B", bg: "#F8FAFC" };
+                      }
+                    })();
                     const barWidth = Math.min(100, Math.round(official.score));
                     // Abbreviate long roles
                     const shortRole = official.role

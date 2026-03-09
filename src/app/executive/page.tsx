@@ -237,14 +237,14 @@ export default function ExecutiveBranch() {
                   <div className="text-xs text-slate-500 mb-1">{cabinet.role}</div>
                   <div className="text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition-colors mb-2">{cabinet.name}</div>
                   {bs && conflict && (
-                    <div
+                    <span
                       className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide border"
                       style={{ background: bs.bg, color: bs.text, borderColor: bs.border }}
-                      title={`Conflict of interest severity: ${conflict.label} (score: ${conflict.score})`}
+                      title={`Conflict of interest severity: ${conflict.label} (score: ${conflict.score}) — See /methodology for details`}
                     >
                       <span aria-hidden="true">{bs.icon}</span>
                       {conflict.label}
-                    </div>
+                    </span>
                   )}
                 </Link>
               );
