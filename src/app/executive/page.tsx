@@ -354,35 +354,35 @@ export default function ExecutiveBranch() {
           <h2 className="text-2xl font-black text-slate-900 mb-8 text-center">What We Track</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/executive/timeline" className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200 hover:shadow-lg transition-shadow group">
+            <Link href="/executive/timeline" className="flex gap-4 p-4 rounded-xl bg-blue-50 border border-blue-200 hover:shadow-lg transition-shadow group">
               <div className="text-2xl">📊</div>
               <div>
-                <h3 className="font-bold text-green-900 group-hover:text-green-700">Policy Impact →</h3>
-                <p className="text-sm text-green-700">Measuring real-world outcomes of executive actions</p>
+                <h3 className="font-bold text-blue-900 group-hover:text-blue-700">Policy Impact →</h3>
+                <p className="text-sm text-blue-700">Measuring real-world outcomes of executive actions</p>
               </div>
             </Link>
-            
-            <Link href="/executive/cabinet" className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200 hover:shadow-lg transition-shadow group">
+
+            <Link href="/executive/cabinet" className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 hover:shadow-lg transition-shadow group">
               <div className="text-2xl">👥</div>
               <div>
-                <h3 className="font-bold text-green-900 group-hover:text-green-700">Cabinet Appointments →</h3>
-                <p className="text-sm text-green-700">Track all cabinet members and their departments</p>
+                <h3 className="font-bold text-slate-900 group-hover:text-slate-700">Cabinet Appointments →</h3>
+                <p className="text-sm text-slate-600">Track all cabinet members and their departments</p>
               </div>
             </Link>
-            
-            <Link href="/executive/timeline" className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200 hover:shadow-lg transition-shadow group">
+
+            <Link href="/executive/timeline" className="flex gap-4 p-4 rounded-xl bg-amber-50 border border-amber-200 hover:shadow-lg transition-shadow group">
               <div className="text-2xl">📜</div>
               <div>
-                <h3 className="font-bold text-green-900 group-hover:text-green-700">Executive Actions →</h3>
-                <p className="text-sm text-green-700">View orders, budget decisions, and policy changes</p>
+                <h3 className="font-bold text-amber-900 group-hover:text-amber-700">Executive Actions →</h3>
+                <p className="text-sm text-amber-700">View orders, budget decisions, and policy changes</p>
               </div>
             </Link>
-            
-            <Link href="/executive/conflicts" className="flex gap-4 p-4 rounded-xl bg-green-50 border border-green-200 hover:shadow-lg transition-shadow group">
+
+            <Link href="/executive/conflicts" className="flex gap-4 p-4 rounded-xl bg-red-50 border border-red-200 hover:shadow-lg transition-shadow group">
               <div className="text-2xl">💼</div>
               <div>
-                <h3 className="font-bold text-green-900 group-hover:text-green-700">Transparency & Ethics →</h3>
-                <p className="text-sm text-green-700">Financial disclosures and conflict of interest monitoring</p>
+                <h3 className="font-bold text-red-900 group-hover:text-red-700">Transparency & Ethics →</h3>
+                <p className="text-sm text-red-700">Financial disclosures and conflict of interest monitoring</p>
               </div>
             </Link>
           </div>

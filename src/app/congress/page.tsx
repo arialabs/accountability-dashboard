@@ -641,30 +641,32 @@ function CongressContent() {
           </div>
         )}
 
-        {/* Stats Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-          {[
-            { label: isFiltered ? "Showing" : "Total Members", value: filteredStats.total, color: "var(--text-primary)" },
-            { label: "Democrats", value: filteredStats.democrats, color: "var(--democrat)" },
-            { label: "Republicans", value: filteredStats.republicans, color: "var(--republican)" },
-            { label: "Independents", value: filteredStats.independents, color: "var(--independent)" },
-          ].map((s) => (
-            <div key={s.label} className="rounded-md border border-slate-200 bg-white py-5 px-4 text-center">
-              <div
-                className="text-4xl font-bold tabular-nums mb-1"
-                style={{ fontFamily: "'JetBrains Mono', monospace", color: s.color, lineHeight: 1 }}
-              >
-                {s.value}
+        {/* Stats Bar — only shown when filters are active (composition bar covers unfiltered state) */}
+        {isFiltered && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            {[
+              { label: "Showing", value: filteredStats.total, color: "var(--text-primary)" },
+              { label: "Democrats", value: filteredStats.democrats, color: "var(--democrat)" },
+              { label: "Republicans", value: filteredStats.republicans, color: "var(--republican)" },
+              { label: "Independents", value: filteredStats.independents, color: "var(--independent)" },
+            ].map((s) => (
+              <div key={s.label} className="rounded-md border border-slate-200 bg-white py-5 px-4 text-center">
+                <div
+                  className="text-4xl font-bold tabular-nums mb-1"
+                  style={{ fontFamily: "'JetBrains Mono', monospace", color: s.color, lineHeight: 1 }}
+                >
+                  {s.value}
+                </div>
+                <div
+                  className="text-xs font-semibold uppercase tracking-wider"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                >
+                  {s.label}
+                </div>
               </div>
-              <div
-                className="text-xs font-semibold uppercase tracking-wider"
-                style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
-              >
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* Score Legend */}
         <ScoreLegend />
