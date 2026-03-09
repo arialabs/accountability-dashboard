@@ -358,18 +358,18 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
               )}
 
               {/* Quick Stats Row */}
-              <div className="flex flex-wrap gap-6 text-sm">
-                <div>
-                  <span className="text-slate-500">Bills Sponsored</span>
-                  <span className="ml-2 font-bold text-slate-900">{member.bills_sponsored}</span>
+              <div className="grid grid-cols-3 gap-3 text-sm">
+                <div className="bg-slate-50 rounded-lg px-3 py-2 text-center">
+                  <div className="font-bold text-slate-900 text-lg tabular-nums">{member.bills_sponsored}</div>
+                  <div className="text-slate-500 text-xs">Sponsored</div>
                 </div>
-                <div>
-                  <span className="text-slate-500">Bills Cosponsored</span>
-                  <span className="ml-2 font-bold text-slate-900">{member.bills_cosponsored}</span>
+                <div className="bg-slate-50 rounded-lg px-3 py-2 text-center">
+                  <div className="font-bold text-slate-900 text-lg tabular-nums">{member.bills_cosponsored}</div>
+                  <div className="text-slate-500 text-xs">Cosponsored</div>
                 </div>
-                <div>
-                  <span className="text-slate-500">Votes Cast</span>
-                  <span className="ml-2 font-bold text-slate-900">{member.votes_cast}</span>
+                <div className="bg-slate-50 rounded-lg px-3 py-2 text-center">
+                  <div className="font-bold text-slate-900 text-lg tabular-nums">{member.votes_cast}</div>
+                  <div className="text-slate-500 text-xs">Votes Cast</div>
                 </div>
               </div>
 
@@ -544,8 +544,10 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
               staticCache={newsCache}
             />
 
-            {/* Committee Memberships */}
-            <CommitteeMemberships committees={committees} />
+            {/* Committee Memberships — only render when data is available */}
+            {committees.length > 0 && (
+              <CommitteeMemberships committees={committees} />
+            )}
 
             {/* Social Share */}
             <SocialShare
