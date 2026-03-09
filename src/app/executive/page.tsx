@@ -65,6 +65,92 @@ export default function ExecutiveBranch() {
         </Container>
       </section>
 
+      {/* Administration Accountability Scorecard */}
+      {(() => {
+        type CabinetMember = {
+          id: string;
+          name: string;
+          role: string;
+          conflicts_of_interest?: Array<{ severity: string }>;
+        };
+        const members = cabinetData.members as CabinetMember[];
+        const scored = members.map((m) => ({
+          id: m.id,
+          name: m.name,
+          role: m.role,
+          score: calculateConflictScore((m.conflicts_of_interest ?? []) as Array<{ severity: "low"|"medium"|"high"|"critical" }>),
+          label: getConflictSeverityLabel(calculateConflictScore((m.conflicts_of_interest ?? []) as Array<{ severity: "low"|"medium"|"high"|"critical" }>)),
+        })).sort((a, b) => b.score - a.score);
+
+        const counts = { Critical: 0, High: 0, Medium: 0, Low: 0, None: 0 };
+        scored.forEach(m => { counts[m.label as keyof typeof counts] = (counts[m.label as keyof typeof counts] ?? 0) + 1; });
+        const conflicted = scored.filter(m => m.label !== "None").length;
+        const top3 = scored.slice(0, 3);
+
+        return (
+          <section className="py-10 bg-white border-b-2 border-red-100">
+            <Container>
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h2 className="text-2xl font-black text-slate-900">Administration Scorecard</h2>
+                  <p className="text-slate-500 text-sm mt-1">
+                    {conflicted} of {members.length} cabinet members have documented conflicts of interest
+                  </p>
+                </div>
+                <Link href="/executive/conflicts" className="text-sm font-semibold text-blue-600 hover:text-blue-700">
+                  Full Leaderboard →
+                </Link>
+              </div>
+
+              {/* Conflict breakdown bar */}
+              <div className="mb-6">
+                <div className="flex rounded-full overflow-hidden h-3 mb-3">
+                  {counts.Critical > 0 && <div style={{ width: `${(counts.Critical / members.length) * 100}%`, background: "#EF4444" }} title={`${counts.Critical} Critical`} />}
+                  {counts.High > 0 && <div style={{ width: `${(counts.High / members.length) * 100}%`, background: "#F97316" }} title={`${counts.High} High`} />}
+                  {counts.Medium > 0 && <div style={{ width: `${(counts.Medium / members.length) * 100}%`, background: "#EAB308" }} title={`${counts.Medium} Medium`} />}
+                  {counts.Low > 0 && <div style={{ width: `${(counts.Low / members.length) * 100}%`, background: "#22C55E" }} title={`${counts.Low} Low`} />}
+                  {counts.None > 0 && <div style={{ width: `${(counts.None / members.length) * 100}%`, background: "#E2E8F0" }} title={`${counts.None} None`} />}
+                </div>
+                <div className="flex flex-wrap gap-3 text-xs text-slate-600">
+                  {counts.Critical > 0 && <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-red-500 inline-block" />{counts.Critical} Critical</span>}
+                  {counts.High > 0 && <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-orange-500 inline-block" />{counts.High} High</span>}
+                  {counts.Medium > 0 && <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-yellow-400 inline-block" />{counts.Medium} Medium</span>}
+                  {counts.Low > 0 && <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-green-500 inline-block" />{counts.Low} Low</span>}
+                  {counts.None > 0 && <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-slate-200 inline-block" />{counts.None} None documented</span>}
+                </div>
+              </div>
+
+              {/* Top 3 most-conflicted */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {top3.map((m, i) => {
+                  const bs = conflictBadgeStyle(m.label);
+                  return (
+                    <Link
+                      key={m.id}
+                      href={`/executive/cabinet/${m.id}`}
+                      className="flex items-center gap-3 p-3 rounded-xl border hover:shadow-md transition-all"
+                      style={{ borderColor: bs.border, background: `${bs.bg}80` }}
+                    >
+                      <span className="text-lg font-black text-slate-400 w-5">#{i + 1}</span>
+                      <div className="flex-1 min-w-0">
+                        <div className="font-bold text-sm text-slate-900 truncate">{m.name}</div>
+                        <div className="text-xs text-slate-500 truncate">{m.role}</div>
+                      </div>
+                      <span
+                        className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide border flex-shrink-0"
+                        style={{ background: bs.bg, color: bs.text, borderColor: bs.border }}
+                      >
+                        {bs.icon} {m.label}
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </Container>
+          </section>
+        );
+      })()}
+
       {/* Current President Card */}
       <section className="py-12 bg-slate-50">
         <Container>
