@@ -236,10 +236,11 @@ const TRUST_SIGNALS = [
   { icon: "🔍", text: "Legislative + Executive branch tracked" },
 ];
 
-const SEARCH_SHORTCUTS = [
-  { href: "/house", label: "Browse House" },
-  { href: "/senate", label: "Browse Senate" },
-  { href: "/executive", label: "Browse Executive" },
+const SEARCH_SUGGESTIONS = [
+  { href: "/rep/P000197", label: "Nancy Pelosi" },
+  { href: "/rep/C001098", label: "Ted Cruz" },
+  { href: "/congress?search=", label: "Your ZIP →" },
+  { href: "/congress?sort=pac_percentage&order=desc", label: "Most Captured" },
 ];
 
 const FIND_REP_STEPS = [
@@ -363,7 +364,7 @@ export default function Home() {
       <section className="section-shell hero-surface border-b border-slate-200 overflow-x-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-search-grid">
-            <div className="hero-search-panel order-1 md:order-2">
+            <div className="hero-search-panel">
               <span
                 className="text-xs font-semibold uppercase tracking-widest"
                 style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
@@ -386,20 +387,20 @@ export default function Home() {
                 <RepSearch size="large" placeholder="Search by name, state, or ZIP code" />
               </div>
               <div className="mt-3 flex flex-wrap gap-2">
-                {SEARCH_SHORTCUTS.map((shortcut) => (
+                {SEARCH_SUGGESTIONS.map((chip) => (
                   <Link
-                    key={shortcut.href}
-                    href={shortcut.href}
-                    className="inline-flex items-center rounded-sm border border-slate-300 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-700 hover:border-slate-500"
+                    key={chip.href}
+                    href={chip.href}
+                    className="inline-flex items-center rounded-full border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:border-slate-500 hover:text-slate-900 transition-colors"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
-                    {shortcut.label}
+                    {chip.label}
                   </Link>
                 ))}
               </div>
             </div>
 
-            <div className="order-2 md:order-1">
+            <div>
               <div className="mb-4 flex items-center gap-3 md:mb-5">
                 <div className="brand-flag-bar" aria-hidden="true" />
                 <span
@@ -754,12 +755,12 @@ export default function Home() {
                         </p>
                         <p
                           className="text-sm font-bold tabular-nums"
-                          style={{ fontFamily: "'JetBrains Mono', monospace", color: "#B91C1C" }}
+                          style={{ fontFamily: "'JetBrains Mono', monospace", color: "#475569" }}
                         >
                           {vote.nay_count} Nay
                         </p>
                         {total > 0 && (
-                          <div className="mt-1 w-16 h-1.5 rounded-full overflow-hidden bg-red-100">
+                          <div className="mt-1 w-16 h-1.5 rounded-full overflow-hidden bg-slate-200">
                             <div
                               className="h-full rounded-full bg-green-600"
                               style={{ width: `${yeaPct}%` }}
