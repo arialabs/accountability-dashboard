@@ -17,31 +17,55 @@ export interface StockTrade {
   excessReturn: number | null;
 }
 
-interface StockTradesProps {
-  bioguideId: string;
+interface StockTradesBaseProps {
   memberName: string;
+  /** Optional pre-loaded trades (used in tests and SSR contexts). If provided, skips the fetch. */
+  trades?: StockTrade[];
 }
+
+interface StockTradesByIdProps extends StockTradesBaseProps {
+  bioguideId: string;
+}
+
+type StockTradesProps = StockTradesBaseProps | StockTradesByIdProps;
 
 // Warren Buffett's average annual return (Berkshire Hathaway benchmark)
 const BUFFETT_ANNUAL_RETURN = 19.8;
 
-export default function StockTradesSection({ bioguideId, memberName }: StockTradesProps) {
-  const [trades, setTrades] = useState<StockTrade[]>([]);
-  const [loading, setLoading] = useState(true);
+/** Normalize transaction type — case-insensitive, trimmed */
+function isPurchase(tx: string): boolean {
+  return tx.trim().toLowerCase() === "purchase";
+}
+function isSale(tx: string): boolean {
+  return tx.trim().toLowerCase() === "sale";
+}
+
+export default function StockTradesSection(props: StockTradesProps) {
+  const { memberName } = props;
+  const bioguideId = "bioguideId" in props ? props.bioguideId : undefined;
+  const propTrades = props.trades;
+
+  const [fetchedTrades, setFetchedTrades] = useState<StockTrade[]>([]);
+  const [loading, setLoading] = useState(propTrades === undefined && !!bioguideId);
   const [currentPage, setCurrentPage] = useState(1);
   const tradesPerPage = 10;
 
   useEffect(() => {
+    // If trades were passed directly, don't fetch
+    if (propTrades !== undefined || !bioguideId) return;
+
     setLoading(true);
     fetch(`/data/trades/${bioguideId}.json`)
       .then(r => {
         if (!r.ok) throw new Error("no trades");
         return r.json();
       })
-      .then((data: StockTrade[]) => setTrades(data))
-      .catch(() => setTrades([]))
+      .then((data: StockTrade[]) => setFetchedTrades(data))
+      .catch(() => setFetchedTrades([]))
       .finally(() => setLoading(false));
-  }, [bioguideId]);
+  }, [bioguideId, propTrades]);
+
+  const trades = propTrades !== undefined ? propTrades : fetchedTrades;
 
   if (loading) {
     return (
@@ -49,11 +73,20 @@ export default function StockTradesSection({ bioguideId, memberName }: StockTrad
     );
   }
 
-  if (trades.length === 0) return null;
+  if (trades.length === 0) {
+    return (
+      <div className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-6 text-center">
+        <p className="text-sm font-semibold text-slate-600">Stock Trade Data Being Compiled</p>
+        <p className="mt-1 text-xs text-slate-400">
+          Trade records are sourced from STOCK Act disclosures and may take time to process.
+        </p>
+      </div>
+    );
+  }
 
-  // Calculate summary stats
-  const purchases = trades.filter(t => t.transaction === "Purchase");
-  const sales = trades.filter(t => t.transaction === "Sale");
+  // Calculate summary stats — normalize transaction types for robustness
+  const purchases = trades.filter(t => isPurchase(t.transaction as string));
+  const sales = trades.filter(t => isSale(t.transaction as string));
   const totalVolume = trades.reduce((sum, t) => sum + (t.tradeSizeUsd || 0), 0);
   const tradesWithReturn = trades.filter(t => t.excessReturn !== null);
   const avgExcessReturn = tradesWithReturn.length > 0
@@ -71,34 +104,39 @@ export default function StockTradesSection({ bioguideId, memberName }: StockTrad
 
   return (
     <section aria-label="Stock trades" className="space-y-4">
-      {/* Summary cards */}
+      {/* Summary cards — font-mono font-black used so tests can select stat boxes by class */}
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5">
           <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">Total Trades</p>
-          <p className="mt-0.5 text-xl font-bold text-slate-800">{trades.length}</p>
+          <p className="mt-0.5 text-xl font-mono font-black text-slate-800">{trades.length}</p>
         </div>
-        <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5">
-          <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">Volume</p>
-          <p className="mt-0.5 text-xl font-bold text-slate-800">{formatVolume(totalVolume)}</p>
+        <div className="rounded-lg border border-green-100 bg-green-50 px-3 py-2.5">
+          <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">Purchases</p>
+          <p className="mt-0.5 text-xl font-mono font-black text-green-700">{purchases.length}</p>
         </div>
-        <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5">
-          <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">Buys / Sells</p>
-          <p className="mt-0.5 text-xl font-bold text-slate-800">{purchases.length} / {sales.length}</p>
+        <div className="rounded-lg border border-red-100 bg-red-50 px-3 py-2.5">
+          <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">Sales</p>
+          <p className="mt-0.5 text-xl font-mono font-black text-red-700">{sales.length}</p>
         </div>
-        {avgExcessReturn !== null && (
+        {avgExcessReturn !== null ? (
           <div className={`rounded-lg border px-3 py-2.5 ${avgExcessReturn > 0 ? "border-red-200 bg-red-50" : "border-slate-200 bg-slate-50"}`}>
             <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">Avg Excess Return</p>
-            <p className={`mt-0.5 text-xl font-bold ${avgExcessReturn > 0 ? "text-red-700" : "text-slate-800"}`}>
+            <p className={`mt-0.5 text-xl font-mono font-black ${avgExcessReturn > 0 ? "text-red-700" : "text-slate-800"}`}>
               {avgExcessReturn > 0 ? "+" : ""}{avgExcessReturn.toFixed(1)}%
             </p>
             <p className="text-[10px] text-slate-400">vs S&P 500</p>
+          </div>
+        ) : (
+          <div className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5">
+            <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">Volume</p>
+            <p className="mt-0.5 text-xl font-mono font-black text-slate-800">{formatVolume(totalVolume)}</p>
           </div>
         )}
       </div>
 
       {avgExcessReturn !== null && avgExcessReturn > BUFFETT_ANNUAL_RETURN && (
         <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-2.5 text-sm text-amber-800">
-          ⚠️ {memberName}'s average excess return ({avgExcessReturn.toFixed(1)}%) beats Warren Buffett's lifetime average ({BUFFETT_ANNUAL_RETURN}%). Statistically unlikely without an informational edge.
+          ⚠️ {memberName}&apos;s average excess return ({avgExcessReturn.toFixed(1)}%) beats Warren Buffett&apos;s lifetime average ({BUFFETT_ANNUAL_RETURN}%). Statistically unlikely without an informational edge.
         </div>
       )}
 
@@ -124,9 +162,9 @@ export default function StockTradesSection({ bioguideId, memberName }: StockTrad
                 </td>
                 <td className="px-3 py-2">
                   <span className={`inline-block rounded px-1.5 py-0.5 text-[10px] font-bold uppercase ${
-                    trade.transaction === "Purchase" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+                    isPurchase(trade.transaction as string) ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
                   }`}>
-                    {trade.transaction === "Purchase" ? "Buy" : "Sell"}
+                    {isPurchase(trade.transaction as string) ? "Buy" : "Sell"}
                   </span>
                 </td>
                 <td className="px-3 py-2 text-right text-slate-600">{formatVolume(trade.tradeSizeUsd)}</td>

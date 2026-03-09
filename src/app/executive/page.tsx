@@ -2,6 +2,28 @@ import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui";
 import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
+import cabinetData from "@/data/cabinet.json";
+import { calculateConflictScore, getConflictSeverityLabel } from "@/lib/executive-data";
+
+/** Pre-compute conflict score labels keyed by member id */
+const cabinetConflictMap: Record<string, { label: string; score: number }> = Object.fromEntries(
+  (cabinetData.members as Array<{ id: string; conflicts_of_interest?: Array<{ severity: string }> }>).map((m) => {
+    const score = calculateConflictScore(
+      (m.conflicts_of_interest ?? []) as Array<{ severity: "low" | "medium" | "high" | "critical" }>
+    );
+    return [m.id, { label: getConflictSeverityLabel(score), score }];
+  })
+);
+
+function conflictBadgeStyle(label: string): { bg: string; text: string; border: string; icon: string } {
+  switch (label) {
+    case "Critical": return { bg: "#FEF2F2", text: "#991B1B", border: "#FCA5A5", icon: "🚨" };
+    case "High":     return { bg: "#FFF7ED", text: "#C2410C", border: "#FDBA74", icon: "⚠️" };
+    case "Medium":   return { bg: "#FFFBEB", text: "#92400E", border: "#FCD34D", icon: "🔶" };
+    case "Low":      return { bg: "#F0FDF4", text: "#15803D", border: "#86EFAC", icon: "✅" };
+    default:         return { bg: "#F8FAFC", text: "#64748B", border: "#E2E8F0", icon: "—" };
+  }
+}
 
 export default function ExecutiveBranch() {
   // Schema.org structured data
@@ -190,29 +212,43 @@ export default function ExecutiveBranch() {
               { role: "Secretary of Homeland Security", name: "Kristi Noem", id: "secretary-of-homeland-security", photo: "/images/officials/noem.jpg" },
               { role: "EPA Administrator", name: "Lee Zeldin", id: "epa-administrator", photo: "/images/officials/zeldin.jpg" },
               { role: "Secretary of Interior", name: "Doug Burgum", id: "secretary-of-interior", photo: "/images/officials/burgum.jpg" },
-            ].map((cabinet) => (
-              <Link
-                key={cabinet.id}
-                href={`/executive/cabinet/${cabinet.id}`}
-                className="bg-white rounded-xl border border-slate-200 p-4 text-center hover:shadow-lg hover:border-blue-300 transition-all group"
-              >
-                {cabinet.photo ? (
-                  <Image
-                    src={cabinet.photo}
-                    alt={cabinet.name}
-                    width={80}
-                    height={80}
-                    className="w-20 h-20 rounded-full object-cover mx-auto mb-2 border-2 border-slate-100 group-hover:border-blue-200"
-                  />
-                ) : (
-                  <div className="w-20 h-20 rounded-full bg-slate-200 flex items-center justify-center text-sm font-bold text-slate-500 mx-auto mb-2 group-hover:bg-blue-50">
-                    {cabinet.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                )}
-                <div className="text-xs text-slate-500 mb-1">{cabinet.role}</div>
-                <div className="text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">{cabinet.name}</div>
-              </Link>
-            ))}
+            ].map((cabinet) => {
+              const conflict = cabinetConflictMap[cabinet.id];
+              const bs = conflict ? conflictBadgeStyle(conflict.label) : null;
+              return (
+                <Link
+                  key={cabinet.id}
+                  href={`/executive/cabinet/${cabinet.id}`}
+                  className="bg-white rounded-xl border border-slate-200 p-4 text-center hover:shadow-lg hover:border-blue-300 transition-all group flex flex-col items-center"
+                >
+                  {cabinet.photo ? (
+                    <Image
+                      src={cabinet.photo}
+                      alt={cabinet.name}
+                      width={80}
+                      height={80}
+                      className="w-20 h-20 rounded-full object-cover mx-auto mb-2 border-2 border-slate-100 group-hover:border-blue-200"
+                    />
+                  ) : (
+                    <div className="w-20 h-20 rounded-full bg-slate-200 flex items-center justify-center text-sm font-bold text-slate-500 mx-auto mb-2 group-hover:bg-blue-50">
+                      {cabinet.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                  )}
+                  <div className="text-xs text-slate-500 mb-1">{cabinet.role}</div>
+                  <div className="text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition-colors mb-2">{cabinet.name}</div>
+                  {bs && conflict && (
+                    <div
+                      className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide border"
+                      style={{ background: bs.bg, color: bs.text, borderColor: bs.border }}
+                      title={`Conflict of interest severity: ${conflict.label} (score: ${conflict.score})`}
+                    >
+                      <span aria-hidden="true">{bs.icon}</span>
+                      {conflict.label}
+                    </div>
+                  )}
+                </Link>
+              );
+            })}
           </div>
           
           <div className="text-center">
