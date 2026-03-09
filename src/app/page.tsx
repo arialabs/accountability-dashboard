@@ -468,7 +468,7 @@ export default function Home() {
                 <div className="flex items-baseline gap-1.5">
                   <span
                     className="text-2xl font-bold"
-                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--accent)" }}
+                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)" }}
                   >
                     2.4M+
                   </span>
@@ -483,7 +483,7 @@ export default function Home() {
                 <div className="flex items-baseline gap-1.5">
                   <span
                     className="text-2xl font-bold"
-                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--accent)" }}
+                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "#DC2626" }}
                   >
                     53
                   </span>

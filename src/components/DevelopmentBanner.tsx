@@ -20,27 +20,29 @@ const LAST_SYNCED = formatSyncDate(
 export default function DevelopmentBanner() {
   return (
     <div
-      className="border-b border-slate-200 py-1.5 px-4"
+      className="border-b py-1 px-4"
       style={{
-        backgroundColor: "#F8FAFC",
+        backgroundColor: "#F1F5F9",
+        borderColor: "#E2E8F0",
         fontFamily: "'JetBrains Mono', monospace",
       }}
       role="status"
-      aria-label="Data freshness indicator"
+      aria-label="Site status and data freshness"
     >
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-3 gap-y-0.5 text-center">
-        <span className="text-[11px] font-semibold uppercase tracking-widest" style={{ color: "#6B7280" }}>
-          Data synced
+        <span className="text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded" style={{ backgroundColor: "#FEF3C7", color: "#92400E" }}>
+          Beta
         </span>
-        <span className="text-[11px] font-bold" style={{ color: "#111827" }}>
-          {LAST_SYNCED}
+        <span className="text-slate-300 hidden sm:inline" aria-hidden="true">·</span>
+        <span className="text-[11px]" style={{ color: "#64748B" }}>
+          Data synced <span className="font-semibold" style={{ color: "#334155" }}>{LAST_SYNCED}</span>
         </span>
-        <span className="text-slate-300" aria-hidden="true">·</span>
-        <span className="text-[11px]" style={{ color: "#6B7280" }}>
+        <span className="text-slate-300 hidden sm:inline" aria-hidden="true">·</span>
+        <span className="text-[11px] hidden sm:inline" style={{ color: "#64748B" }}>
           Sources: Congress.gov · OpenFEC · Voteview
         </span>
-        <span className="text-slate-300" aria-hidden="true">·</span>
-        <span className="text-[11px]" style={{ color: "#6B7280" }}>
+        <span className="text-slate-300 hidden sm:inline" aria-hidden="true">·</span>
+        <span className="text-[11px] hidden sm:inline" style={{ color: "#64748B" }}>
           535 members · 2.4M+ votes
         </span>
       </div>
