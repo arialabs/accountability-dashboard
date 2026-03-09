@@ -1,18 +1,30 @@
 /**
- * Cloudflare Pages Function — /api/og?id=[bioguide_id]
+ * Cloudflare Pages Function — /api/og/rep?id=[bioguide_id]
  *
- * Generates a 1200×630 PNG social share image for a Congress member.
- * Uses satori (JSX → SVG) + @resvg/resvg-js (SVG → PNG).
+ * Generates a 1200x630 PNG social share image for a congress member.
+ * Uses satori (JSX -> SVG) + @resvg/resvg-js (SVG -> PNG).
  */
 
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
 
-// Static JSON data is bundled at build time by the Pages Functions bundler
-import membersData from "../../src/data/members.json";
-import financeData from "../../src/data/finance.json";
+import membersData from "../../../src/data/members.json";
+import financeData from "../../../src/data/finance.json";
 
 // ── data helpers ──────────────────────────────────────────────────────────────
+
+function partyFull(code) {
+  if (code === "D") return "Democrat";
+  if (code === "R") return "Republican";
+  return "Independent";
+}
+
+function verdictLabel(pacPct) {
+  if (pacPct === null || pacPct === undefined) return "NO DATA";
+  if (pacPct >= 60) return "DONOR CAPTURED";
+  if (pacPct >= 30) return "MIXED ALLEGIANCE";
+  return "CONSTITUENT FOCUSED";
+}
 
 function lookup(bioguideId) {
   const member = membersData.find((m) => m.bioguide_id === bioguideId);
@@ -20,50 +32,44 @@ function lookup(bioguideId) {
 
   const finance = financeData[bioguideId];
   const pacPct = finance?.pac_percentage ?? null;
-  const totalRaised = finance?.total_raised ?? null;
 
-  const partyFull =
-    member.party === "D"
-      ? "Democrat"
-      : member.party === "R"
-        ? "Republican"
-        : "Independent";
-
-  let verdictLabel = "NO DATA";
-  if (pacPct !== null) {
-    if (pacPct >= 60) verdictLabel = "DONOR CAPTURED";
-    else if (pacPct >= 30) verdictLabel = "MIXED ALLEGIANCE";
-    else verdictLabel = "CONSTITUENT FOCUSED";
-  }
-
-  return { member, partyFull, pacPct, totalRaised, verdictLabel };
-}
-
-function fmtDollars(n) {
-  if (n >= 1e9) return `$${(n / 1e9).toFixed(1)}B`;
-  if (n >= 1e6) return `$${(n / 1e6).toFixed(1)}M`;
-  if (n >= 1e3) return `$${(n / 1e3).toFixed(0)}K`;
-  return `$${n.toLocaleString()}`;
+  return {
+    member,
+    pacPct,
+    totalRaised: finance?.total_raised ?? null,
+    partyFull: partyFull(member.party),
+    verdictLabel: verdictLabel(pacPct),
+  };
 }
 
 // ── satori markup ─────────────────────────────────────────────────────────────
 
 function buildMarkup(data) {
-  const { member, partyFull, pacPct, totalRaised, verdictLabel } = data;
-  const chamber =
+  const { member, pacPct, verdictLabel: verdict, partyFull: party } = data;
+
+  const verdictColor =
+    verdict === "DONOR CAPTURED"
+      ? "#DC2626"
+      : verdict === "MIXED ALLEGIANCE"
+        ? "#D97706"
+        : verdict === "NO DATA"
+          ? "#6B7280"
+          : "#16A34A";
+
+  const partyColor =
+    member.party === "D"
+      ? "#3B82F6"
+      : member.party === "R"
+        ? "#EF4444"
+        : "#8B5CF6";
+
+  const chamberLabel =
     member.chamber === "house" ? "Representative" : "Senator";
-  const district = member.district
+  const location = member.district
     ? `${member.state}-${member.district}`
     : member.state;
 
-  const verdictColor =
-    verdictLabel === "DONOR CAPTURED"
-      ? "#DC2626"
-      : verdictLabel === "MIXED ALLEGIANCE"
-        ? "#D97706"
-        : verdictLabel === "CONSTITUENT FOCUSED"
-          ? "#16A34A"
-          : "#71717A";
+  const statLine = pacPct !== null ? `${Math.round(pacPct)}%` : "—";
 
   return {
     type: "div",
@@ -73,13 +79,13 @@ function buildMarkup(data) {
         flexDirection: "column",
         width: "1200px",
         height: "630px",
-        backgroundColor: "#1C1917",
+        backgroundColor: "#0F172A",
         color: "#FFFFFF",
         fontFamily: "sans-serif",
         padding: "60px",
       },
       children: [
-        // Top bar: site name
+        // Top bar
         {
           type: "div",
           props: {
@@ -95,7 +101,7 @@ function buildMarkup(data) {
                 props: {
                   style: {
                     fontSize: "22px",
-                    color: "#9A3412",
+                    color: "#38BDF8",
                     fontWeight: 700,
                     letterSpacing: "0.05em",
                   },
@@ -105,7 +111,7 @@ function buildMarkup(data) {
               {
                 type: "div",
                 props: {
-                  style: { fontSize: "18px", color: "#A8A29E" },
+                  style: { fontSize: "18px", color: "#94A3B8" },
                   children: "reps.arialabs.ai",
                 },
               },
@@ -125,41 +131,64 @@ function buildMarkup(data) {
             children: member.full_name,
           },
         },
-        // Subtitle
+        // Party, state, chamber
         {
           type: "div",
           props: {
             style: {
               display: "flex",
               fontSize: "26px",
-              color: "#A8A29E",
+              color: "#94A3B8",
               marginBottom: "40px",
               gap: "12px",
             },
             children: [
-              { type: "span", props: { children: `${partyFull} ${chamber}` } },
+              {
+                type: "span",
+                props: {
+                  style: { color: partyColor, fontWeight: 700 },
+                  children: party,
+                },
+              },
               { type: "span", props: { children: "·" } },
-              { type: "span", props: { children: district } },
+              { type: "span", props: { children: `${chamberLabel}, ${location}` } },
             ],
           },
         },
-        // Stats row
+        // Big stat — PAC percentage
         {
           type: "div",
           props: {
             style: {
               display: "flex",
-              gap: "60px",
+              flexDirection: "column",
               marginBottom: "40px",
             },
             children: [
-              pacPct !== null && statBlock(`${pacPct.toFixed(0)}%`, "PAC Funded"),
-              totalRaised !== null &&
-                statBlock(fmtDollars(totalRaised), "Total Raised"),
-            ].filter(Boolean),
+              {
+                type: "div",
+                props: {
+                  style: { fontSize: "72px", fontWeight: 800 },
+                  children: statLine,
+                },
+              },
+              {
+                type: "div",
+                props: {
+                  style: {
+                    fontSize: "18px",
+                    color: "#38BDF8",
+                    fontWeight: 600,
+                    letterSpacing: "0.05em",
+                    textTransform: "uppercase",
+                  },
+                  children: "PAC MONEY",
+                },
+              },
+            ],
           },
         },
-        // Verdict
+        // Verdict badge
         {
           type: "div",
           props: {
@@ -190,41 +219,10 @@ function buildMarkup(data) {
                     color: verdictColor,
                     letterSpacing: "0.08em",
                   },
-                  children: verdictLabel,
+                  children: verdict,
                 },
               },
             ],
-          },
-        },
-      ],
-    },
-  };
-}
-
-function statBlock(value, label) {
-  return {
-    type: "div",
-    props: {
-      style: { display: "flex", flexDirection: "column" },
-      children: [
-        {
-          type: "div",
-          props: {
-            style: { fontSize: "48px", fontWeight: 800, color: "#FFFFFF" },
-            children: value,
-          },
-        },
-        {
-          type: "div",
-          props: {
-            style: {
-              fontSize: "18px",
-              color: "#9A3412",
-              fontWeight: 600,
-              letterSpacing: "0.05em",
-              textTransform: "uppercase",
-            },
-            children: label,
           },
         },
       ],
@@ -245,8 +243,10 @@ export async function onRequest(context) {
   const data = lookup(id);
 
   if (!data) {
-    // Redirect to static placeholder
-    return Response.redirect(new URL("/og-image.png", url.origin).toString(), 302);
+    return Response.redirect(
+      new URL("/og-image.png", url.origin).toString(),
+      302,
+    );
   }
 
   try {
@@ -269,6 +269,9 @@ export async function onRequest(context) {
       },
     });
   } catch {
-    return Response.redirect(new URL("/og-image.png", url.origin).toString(), 302);
+    return Response.redirect(
+      new URL("/og-image.png", url.origin).toString(),
+      302,
+    );
   }
 }

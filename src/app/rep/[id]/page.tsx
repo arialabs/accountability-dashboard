@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       description: ogDescription,
       images: [
         {
-          url: `/api/og?id=${id}`,
+          url: `/api/og/rep?id=${id}`,
           width: 1200,
           height: 630,
           alt: `${member.full_name} accountability profile`,
@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       card: "summary_large_image",
       title: ogTitle,
       description: ogDescription,
-      images: [`/api/og?id=${id}`],
+      images: [`/api/og/rep?id=${id}`],
     },
   };
 }
