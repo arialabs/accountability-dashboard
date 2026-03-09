@@ -1,17 +1,13 @@
 /**
  * Cloudflare Pages Function — /api/og/rep?id=[bioguide_id]
  *
- * Generates a 1200x630 PNG social share image for a congress member.
- * Uses satori (JSX -> SVG) + @resvg/resvg-js (SVG -> PNG).
+ * Returns an SVG social share image (1200×630) for a congress member.
+ * Pure SVG — no native binaries, works in Cloudflare Workers runtime.
+ * Social crawlers (Twitter, LinkedIn, Slack, iMessage) accept SVG OG images.
  */
-
-import satori from "satori";
-import { Resvg } from "@resvg/resvg-js";
 
 import membersData from "../../../src/data/members.json";
 import financeData from "../../../src/data/finance.json";
-
-// ── data helpers ──────────────────────────────────────────────────────────────
 
 function partyFull(code) {
   if (code === "D") return "Democrat";
@@ -19,259 +15,107 @@ function partyFull(code) {
   return "Independent";
 }
 
-function verdictLabel(pacPct) {
-  if (pacPct === null || pacPct === undefined) return "NO DATA";
-  if (pacPct >= 60) return "DONOR CAPTURED";
-  if (pacPct >= 30) return "MIXED ALLEGIANCE";
-  return "CONSTITUENT FOCUSED";
+function partyColor(code) {
+  if (code === "D") return "#1D4ED8";
+  if (code === "R") return "#DC2626";
+  return "#6B7280";
 }
 
-function lookup(bioguideId) {
-  const member = membersData.find((m) => m.bioguide_id === bioguideId);
-  if (!member) return null;
-
-  const finance = financeData[bioguideId];
-  const pacPct = finance?.pac_percentage ?? null;
-
-  return {
-    member,
-    pacPct,
-    totalRaised: finance?.total_raised ?? null,
-    partyFull: partyFull(member.party),
-    verdictLabel: verdictLabel(pacPct),
-  };
+function verdictColor(label) {
+  if (!label) return "#6B7280";
+  const l = label.toLowerCase();
+  if (l.includes("captured") || l.includes("critical")) return "#DC2626";
+  if (l.includes("high")) return "#D97706";
+  if (l.includes("clean") || l.includes("low")) return "#16A34A";
+  return "#6B7280";
 }
 
-// ── satori markup ─────────────────────────────────────────────────────────────
+function escapeXml(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
 
-function buildMarkup(data) {
-  const { member, pacPct, verdictLabel: verdict, partyFull: party } = data;
+export async function onRequestGet(context) {
+  const { searchParams } = new URL(context.request.url);
+  const id = searchParams.get("id");
+  if (!id) return new Response("Missing id", { status: 400 });
 
-  const verdictColor =
-    verdict === "DONOR CAPTURED"
-      ? "#DC2626"
-      : verdict === "MIXED ALLEGIANCE"
-        ? "#D97706"
-        : verdict === "NO DATA"
-          ? "#6B7280"
-          : "#16A34A";
+  const members = membersData?.members ?? membersData ?? [];
+  const member = members.find((m) => m.bioguide_id === id);
+  if (!member) return new Response("Not found", { status: 404 });
 
-  const partyColor =
-    member.party === "D"
-      ? "#3B82F6"
-      : member.party === "R"
-        ? "#EF4444"
-        : "#8B5CF6";
+  const finance = (financeData?.members ?? financeData ?? []).find(
+    (f) => f.bioguide_id === id
+  );
 
-  const chamberLabel =
-    member.chamber === "house" ? "Representative" : "Senator";
-  const location = member.district
-    ? `${member.state}-${member.district}`
-    : member.state;
+  const name = escapeXml(member.full_name ?? `${member.first_name} ${member.last_name}`);
+  const party = escapeXml(partyFull(member.party));
+  const state = escapeXml(member.state ?? "");
+  const chamber = escapeXml(
+    member.chamber === "senate" ? "U.S. Senate" : "U.S. House of Representatives"
+  );
+  const pacPct = finance?.pac_percentage != null
+    ? `${finance.pac_percentage.toFixed(0)}% PAC`
+    : null;
+  const raised = finance?.total_raised != null
+    ? `$${(finance.total_raised / 1_000_000).toFixed(1)}M raised`
+    : null;
+  const verdictLabel = escapeXml(finance?.verdict_label ?? "");
+  const vColor = verdictColor(finance?.verdict_label ?? "");
+  const pColor = partyColor(member.party);
 
-  const statLine = pacPct !== null ? `${Math.round(pacPct)}%` : "—";
+  const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="630" fill="${pColor}"/>
+  <!-- Top strip -->
+  <rect x="8" y="0" width="1192" height="80" fill="#F9FAFB"/>
+  <text x="48" y="52" font-family="Georgia, serif" font-size="22" fill="#6B7280" font-weight="normal">
+    Rep. Accountability Dashboard · reps.arialabs.ai
+  </text>
 
-  return {
-    type: "div",
-    props: {
-      style: {
-        display: "flex",
-        flexDirection: "column",
-        width: "1200px",
-        height: "630px",
-        backgroundColor: "#0F172A",
-        color: "#FFFFFF",
-        fontFamily: "sans-serif",
-        padding: "60px",
-      },
-      children: [
-        // Top bar
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginBottom: "40px",
-            },
-            children: [
-              {
-                type: "div",
-                props: {
-                  style: {
-                    fontSize: "22px",
-                    color: "#38BDF8",
-                    fontWeight: 700,
-                    letterSpacing: "0.05em",
-                  },
-                  children: "ACCOUNTABILITY DASHBOARD",
-                },
-              },
-              {
-                type: "div",
-                props: {
-                  style: { fontSize: "18px", color: "#94A3B8" },
-                  children: "reps.arialabs.ai",
-                },
-              },
-            ],
-          },
-        },
-        // Name
-        {
-          type: "div",
-          props: {
-            style: {
-              fontSize: "56px",
-              fontWeight: 800,
-              lineHeight: 1.1,
-              marginBottom: "12px",
-            },
-            children: member.full_name,
-          },
-        },
-        // Party, state, chamber
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              fontSize: "26px",
-              color: "#94A3B8",
-              marginBottom: "40px",
-              gap: "12px",
-            },
-            children: [
-              {
-                type: "span",
-                props: {
-                  style: { color: partyColor, fontWeight: 700 },
-                  children: party,
-                },
-              },
-              { type: "span", props: { children: "·" } },
-              { type: "span", props: { children: `${chamberLabel}, ${location}` } },
-            ],
-          },
-        },
-        // Big stat — PAC percentage
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              flexDirection: "column",
-              marginBottom: "40px",
-            },
-            children: [
-              {
-                type: "div",
-                props: {
-                  style: { fontSize: "72px", fontWeight: 800 },
-                  children: statLine,
-                },
-              },
-              {
-                type: "div",
-                props: {
-                  style: {
-                    fontSize: "18px",
-                    color: "#38BDF8",
-                    fontWeight: 600,
-                    letterSpacing: "0.05em",
-                    textTransform: "uppercase",
-                  },
-                  children: "PAC MONEY",
-                },
-              },
-            ],
-          },
-        },
-        // Verdict badge
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              alignItems: "center",
-              gap: "16px",
-              marginTop: "auto",
-            },
-            children: [
-              {
-                type: "div",
-                props: {
-                  style: {
-                    width: "14px",
-                    height: "14px",
-                    borderRadius: "7px",
-                    backgroundColor: verdictColor,
-                  },
-                },
-              },
-              {
-                type: "div",
-                props: {
-                  style: {
-                    fontSize: "28px",
-                    fontWeight: 700,
-                    color: verdictColor,
-                    letterSpacing: "0.08em",
-                  },
-                  children: verdict,
-                },
-              },
-            ],
-          },
-        },
-      ],
+  <!-- Name -->
+  <text x="48" y="180" font-family="Georgia, serif" font-size="72" fill="#111111" font-weight="bold">${name}</text>
+
+  <!-- Party + State + Chamber -->
+  <rect x="48" y="205" width="12" height="12" rx="2" fill="${pColor}"/>
+  <text x="68" y="216" font-family="system-ui, sans-serif" font-size="26" fill="#374151">${party} · ${state} · ${chamber}</text>
+
+  <!-- Divider -->
+  <line x1="48" y1="260" x2="1152" y2="260" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Stats row -->
+  ${pacPct ? `
+  <text x="48" y="330" font-family="system-ui, sans-serif" font-size="22" fill="#6B7280">PAC FUNDING</text>
+  <text x="48" y="375" font-family="Georgia, serif" font-size="48" fill="#111111" font-weight="bold">${escapeXml(pacPct)}</text>
+  ` : ""}
+  ${raised ? `
+  <text x="380" y="330" font-family="system-ui, sans-serif" font-size="22" fill="#6B7280">TOTAL RAISED</text>
+  <text x="380" y="375" font-family="Georgia, serif" font-size="48" fill="#111111" font-weight="bold">${escapeXml(raised)}</text>
+  ` : ""}
+  ${verdictLabel ? `
+  <text x="720" y="330" font-family="system-ui, sans-serif" font-size="22" fill="#6B7280">ACCOUNTABILITY</text>
+  <rect x="720" y="340" width="${Math.min(verdictLabel.length * 20 + 40, 400)}" height="52" rx="6" fill="${vColor}" opacity="0.12"/>
+  <text x="740" y="377" font-family="system-ui, sans-serif" font-size="32" fill="${vColor}" font-weight="bold">${verdictLabel}</text>
+  ` : ""}
+
+  <!-- Footer -->
+  <rect x="8" y="570" width="1192" height="60" fill="#F9FAFB"/>
+  <text x="48" y="607" font-family="system-ui, sans-serif" font-size="20" fill="#9CA3AF">
+    Data: Congress.gov · OpenFEC · Last updated ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+  </text>
+</svg>`;
+
+  return new Response(svg, {
+    headers: {
+      "Content-Type": "image/svg+xml",
+      "Cache-Control": "public, max-age=86400",
     },
-  };
-}
-
-// ── handler ───────────────────────────────────────────────────────────────────
-
-export async function onRequest(context) {
-  const url = new URL(context.request.url);
-  const id = url.searchParams.get("id");
-
-  if (!id) {
-    return new Response("Missing id parameter", { status: 400 });
-  }
-
-  const data = lookup(id);
-
-  if (!data) {
-    return Response.redirect(
-      new URL("/og-image.png", url.origin).toString(),
-      302,
-    );
-  }
-
-  try {
-    const svg = await satori(buildMarkup(data), {
-      width: 1200,
-      height: 630,
-      fonts: [],
-    });
-
-    const resvg = new Resvg(svg, {
-      fitTo: { mode: "width", value: 1200 },
-    });
-    const pngData = resvg.render();
-    const pngBuffer = pngData.asPng();
-
-    return new Response(pngBuffer, {
-      headers: {
-        "Content-Type": "image/png",
-        "Cache-Control": "public, max-age=86400, s-maxage=604800",
-      },
-    });
-  } catch {
-    return Response.redirect(
-      new URL("/og-image.png", url.origin).toString(),
-      302,
-    );
-  }
+  });
 }
