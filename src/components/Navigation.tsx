@@ -18,6 +18,7 @@ const dropdowns: NavDropdown[] = [
       { href: '/house', label: 'House of Representatives' },
       { href: '/senate', label: 'Senate' },
       { href: '/bills', label: 'Bills & Votes' },
+      { href: '/congress/trades', label: 'Stock Trades', badge: 'New' },
     ],
   },
   {
