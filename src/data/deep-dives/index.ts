@@ -1,9 +1,11 @@
 import { congressionalStockTrading } from "./congressional-stock-trading";
 import { pharmaLobbyingDrugPrices } from "./pharma-lobbying-drug-prices";
 import { defenseContractorRevolvingDoor } from "./defense-contractor-revolving-door";
+import { covidInsiderTrading } from "./covid-insider-trading";
 import type { DeepDiveInvestigation } from "@/lib/types";
 
 export const deepDiveInvestigations: DeepDiveInvestigation[] = [
+  covidInsiderTrading,
   congressionalStockTrading,
   pharmaLobbyingDrugPrices,
   defenseContractorRevolvingDoor,
