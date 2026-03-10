@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import EpsteinFilesCard from "@/components/EpsteinFilesCard";
+import ConflictDataViz from "@/components/ConflictDataViz";
 import RepSearch from "@/components/RepSearch";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import HeroSparkline from "@/components/HeroSparkline";
@@ -931,6 +932,11 @@ export default function Home() {
               </ScrollFadeIn>
             ))}
           </div>
+
+          {/* ── Live data visualization ── */}
+          <ScrollFadeIn>
+            <ConflictDataViz />
+          </ScrollFadeIn>
         </div>
       </section>
 
