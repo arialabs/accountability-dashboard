@@ -1,0 +1,112 @@
+name: Executive Orders Sync
+
+on:
+  schedule:
+    # Run daily at 3:00 AM ET (07:00 UTC)
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch executive orders from Federal Register
+        run: |
+          python3 - << 'EOF'
+          import urllib.request, json, urllib.parse, time, sys
+
+          def fetch_eos(page=1, per_page=100):
+              params = urllib.parse.urlencode({
+                  'fields[]': ['title', 'document_number', 'type', 'signing_date',
+                               'abstract', 'html_url', 'agencies', 'topics',
+                               'executive_order_number'],
+                  'conditions[type][]': 'PRESDOCU',
+                  'conditions[presidential_document_type][]': 'executive_order',
+                  'conditions[signing_date][gte]': '2025-01-20',
+                  'per_page': per_page,
+                  'page': page,
+                  'order': 'newest',
+              }, doseq=True)
+              url = f'https://www.federalregister.gov/api/v1/documents.json?{params}'
+              with urllib.request.urlopen(url) as r:
+                  return json.load(r)
+
+          CATEGORIES = {
+              'Immigration & Border': ['immigration', 'border', 'asylum', 'migrant', 'alien', 'deportat', 'sanctuary', 'visa', 'refugee'],
+              'National Security': ['national security', 'defense', 'military', 'terror', 'intel', 'foreign', 'weapon', 'nato', 'war', 'armed forces'],
+              'Trade & Tariffs': ['tariff', 'trade', 'import', 'export', 'commerce', 'duty', 'steel', 'aluminum'],
+              'Energy & Environment': ['energy', 'oil', 'gas', 'coal', 'drill', 'environment', 'climate', 'emission', 'natural resource', 'mineral'],
+              'Government Reform': ['federal workforce', 'government', 'agency', 'regulation', 'deregulat', 'bureauc', 'doge', 'efficiency', 'spending'],
+              'Civil Rights': ['civil right', 'dei', 'diversity', 'equity', 'inclusion', 'discriminat', 'affirmative'],
+              'Healthcare': ['health', 'medicaid', 'medicare', 'drug', 'pharma', 'medical', 'fda'],
+              'Technology': ['technology', 'ai ', 'artificial intelligence', 'cyber', 'digital', 'data'],
+              'Finance & Economy': ['financial', 'economic', 'crypto', 'bank', 'tax', 'budget', 'inflation'],
+          }
+
+          def categorize(title):
+              t = title.lower()
+              for cat, keywords in CATEGORIES.items():
+                  if any(kw in t for kw in keywords):
+                      return cat
+              return 'Other'
+
+          all_results = []
+          page = 1
+          while True:
+              data = fetch_eos(page=page)
+              results = data['results']
+              all_results.extend(results)
+              print(f'Page {page}: {len(results)} results ({len(all_results)} / {data["count"]})', flush=True)
+              if len(all_results) >= data['count'] or len(results) < 100:
+                  break
+              page += 1
+              time.sleep(0.5)
+
+          clean = []
+          for r in all_results:
+              agencies = [a.get('name', '') for a in (r.get('agencies') or [])]
+              title = r.get('title', '')
+              clean.append({
+                  'document_number': r.get('document_number', ''),
+                  'eo_number': r.get('executive_order_number'),
+                  'title': title,
+                  'signing_date': r.get('signing_date', ''),
+                  'abstract': r.get('abstract') or '',
+                  'html_url': r.get('html_url', ''),
+                  'agencies': agencies,
+                  'topics': r.get('topics') or [],
+                  'category': categorize(title),
+              })
+
+          out = {
+              'total': len(clean),
+              'source': 'Federal Register API',
+              'last_updated': time.strftime('%Y-%m-%d'),
+              'orders': clean,
+          }
+          with open('src/data/executive-orders.json', 'w') as f:
+              json.dump(out, f, indent=2)
+          print(f'✅ Wrote {len(clean)} executive orders')
+          EOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name "Nova [bot]"
+          git config user.email "nova-arialabs@users.noreply.github.com"
+          git add src/data/executive-orders.json
+          if git diff --staged --quiet; then
+            echo "No new executive orders to commit"
+          else
+            COUNT=$(python3 -c "import json; d=json.load(open('src/data/executive-orders.json')); print(d['total'])")
+            git commit -m "data: sync executive orders — ${COUNT} total [skip ci]"
+            git push
+          fi
