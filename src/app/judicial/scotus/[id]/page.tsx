@@ -282,6 +282,102 @@ export default async function JusticePage({ params }: PageProps) {
         </div>
       </section>
 
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 space-y-8">
+          {/* Career History */}
+          {justice.career && justice.career.length > 0 && (
+            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+              <h2 className="text-2xl font-black text-slate-900 mb-6">Career Path</h2>
+              <div className="relative">
+                <div className="absolute left-3 top-2 bottom-2 w-0.5 bg-slate-200" aria-hidden="true" />
+                <div className="space-y-5">
+                  {justice.career.map((pos: {role: string; org: string; years: string}, idx: number) => (
+                    <div key={idx} className="relative flex items-start gap-5">
+                      <div className="flex-shrink-0 w-7 h-7 rounded-full bg-slate-700 ring-2 ring-white flex items-center justify-center mt-0.5 z-10">
+                        <span className="text-white text-xs">•</span>
+                      </div>
+                      <div className="flex-1 pb-1">
+                        <div className="flex flex-wrap items-baseline gap-2">
+                          <span className="font-bold text-slate-900">{pos.role}</span>
+                          <span className="text-xs font-semibold text-slate-400 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded-full">
+                            {pos.years}
+                          </span>
+                        </div>
+                        <p className="text-sm text-slate-600 mt-0.5">{pos.org}</p>
+                      </div>
+                    </div>
+                  ))}
+                  <div className="relative flex items-start gap-5">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-700 ring-2 ring-white flex items-center justify-center mt-0.5 z-10">
+                      <span className="text-white text-xs">⚖</span>
+                    </div>
+                    <div className="flex-1">
+                      <span className="font-bold text-blue-900">{justice.title}</span>
+                      <p className="text-sm text-blue-700">Supreme Court of the United States · {justice.confirmation_year}–Present</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Controversies */}
+          {justice.controversies && justice.controversies.length > 0 && (
+            <div className="bg-red-50 rounded-2xl p-8 border-2 border-red-200 shadow-sm">
+              <h2 className="text-2xl font-black text-red-900 mb-6">
+                ⚠️ Controversies &amp; Allegations ({justice.controversies.length})
+              </h2>
+              <div className="space-y-5">
+                {justice.controversies.map((c: {title: string; year: number; severity: string; description: string; source: string}, idx: number) => {
+                  const severityColors: Record<string, string> = {
+                    critical: "bg-red-700 text-white",
+                    high: "bg-orange-600 text-white",
+                    medium: "bg-amber-500 text-white",
+                    low: "bg-slate-400 text-white",
+                  };
+                  return (
+                    <div key={idx} className="bg-white rounded-xl border border-red-200 p-5">
+                      <div className="flex flex-wrap items-start gap-2 mb-2">
+                        <h3 className="font-bold text-red-900 flex-1">{c.title}</h3>
+                        <div className="flex gap-2 flex-shrink-0">
+                          <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${severityColors[c.severity] ?? severityColors.medium}`}>
+                            {c.severity.toUpperCase()}
+                          </span>
+                          <span className="text-xs text-slate-500 font-semibold">{c.year}</span>
+                        </div>
+                      </div>
+                      <p className="text-slate-700 text-sm leading-relaxed mb-2">{c.description}</p>
+                      <p className="text-xs text-slate-400 italic">Source: {c.source}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Financial Disclosures */}
+          {justice.financial_disclosures && justice.financial_disclosures.length > 0 && (
+            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+              <h2 className="text-2xl font-black text-slate-900 mb-4">Financial Disclosures</h2>
+              <p className="text-sm text-slate-600 mb-4">Annual financial disclosure reports as required by the Ethics in Government Act.</p>
+              <div className="flex flex-wrap gap-3">
+                {justice.financial_disclosures.map((fd) => (
+                  <a
+                    key={fd.year}
+                    href={fd.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+                  >
+                    📄 {fd.year} Disclosure ↗
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
       {/* Navigation */}
       <section className="py-12 bg-slate-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">

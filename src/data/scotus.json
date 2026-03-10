@@ -48,6 +48,64 @@
         "description": "Concurred with the majority opinion overturning Roe v. Wade, ending federal constitutional right to abortion.",
         "url": "https://www.supremecourt.gov/opinions/21pdf/19-1392_6j37.pdf"
       }
+    ],
+    "birth_year": 1955,
+    "home_state": "Indiana",
+    "law_school": "Harvard Law School (J.D., 1979)",
+    "career": [
+      {
+        "role": "Law Clerk",
+        "org": "Justice William Rehnquist, SCOTUS",
+        "years": "1980\u20131981"
+      },
+      {
+        "role": "Special Assistant to the Attorney General",
+        "org": "DOJ",
+        "years": "1981\u20131982"
+      },
+      {
+        "role": "Associate Counsel",
+        "org": "White House Counsel's Office",
+        "years": "1982\u20131986"
+      },
+      {
+        "role": "Partner",
+        "org": "Hogan & Hartson (now Hogan Lovells)",
+        "years": "1986\u20131989, 1993\u20132003"
+      },
+      {
+        "role": "Principal Deputy Solicitor General",
+        "org": "DOJ",
+        "years": "1989\u20131993"
+      },
+      {
+        "role": "Circuit Judge",
+        "org": "U.S. Court of Appeals, D.C. Circuit",
+        "years": "2003\u20132005"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "Undisclosed Federalist Society Trip",
+        "year": 2023,
+        "severity": "medium",
+        "description": "ProPublica reported Roberts attended a Federalist Society fishing trip in Alaska paid for by Republican donors, not initially disclosed.",
+        "source": "ProPublica, 2023"
+      },
+      {
+        "title": "Recusal Refusal on Congressional Subpoena",
+        "year": 2023,
+        "severity": "medium",
+        "description": "Roberts declined a Senate Judiciary Committee invitation to testify on SCOTUS ethics, citing separation of powers concerns.",
+        "source": "Senate Judiciary Committee, 2023"
+      },
+      {
+        "title": "Wife's Legal Recruiting Fees",
+        "year": 2023,
+        "severity": "medium",
+        "description": "Jane Roberts earned $10.3M in legal recruiting fees from firms that have cases before SCOTUS, raising conflict of interest questions.",
+        "source": "Senate Finance Committee, 2023"
+      }
     ]
   },
   {
@@ -88,6 +146,83 @@
         "vote": "Concurrence",
         "description": "Concurred in striking down affirmative action in college admissions.",
         "url": "https://www.supremecourt.gov/opinions/22pdf/20-1199_hgdj.pdf"
+      }
+    ],
+    "birth_year": 1948,
+    "home_state": "Georgia",
+    "law_school": "Yale Law School (J.D., 1974)",
+    "career": [
+      {
+        "role": "Assistant Attorney General",
+        "org": "Missouri",
+        "years": "1974\u20131977"
+      },
+      {
+        "role": "Legislative Assistant",
+        "org": "Senator John Danforth (R-MO)",
+        "years": "1979\u20131981"
+      },
+      {
+        "role": "Assistant Secretary for Civil Rights",
+        "org": "Dept. of Education",
+        "years": "1981\u20131982"
+      },
+      {
+        "role": "Chairman",
+        "org": "U.S. Equal Employment Opportunity Commission (EEOC)",
+        "years": "1982\u20131990"
+      },
+      {
+        "role": "Circuit Judge",
+        "org": "U.S. Court of Appeals, D.C. Circuit",
+        "years": "1990\u20131991"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "Harlan Crow Real Estate & Luxury Gifts ($4M+)",
+        "year": 2023,
+        "severity": "critical",
+        "description": "ProPublica revealed Thomas accepted over $4M in undisclosed luxury travel and gifts from Republican megadonor Harlan Crow, including private jet trips, superyacht voyages, and private school tuition for Thomas's grandnephew. Crow also purchased Thomas's mother's home.",
+        "source": "ProPublica, April 2023"
+      },
+      {
+        "title": "Anthony Welters Private Jet Flights (Unreported)",
+        "year": 2023,
+        "severity": "high",
+        "description": "Additional unreported private jet travel from health care executive Anthony Welters, who had business before the federal government.",
+        "source": "ProPublica, 2023"
+      },
+      {
+        "title": "Ginni Thomas January 6th Texts",
+        "year": 2022,
+        "severity": "high",
+        "description": "Thomas's wife Virginia 'Ginni' Thomas sent texts urging White House Chief of Staff Mark Meadows to overturn the 2020 election. Thomas refused to recuse himself from Jan. 6-related cases.",
+        "source": "Washington Post, 2022"
+      },
+      {
+        "title": "Anita Hill Confirmation Hearing",
+        "year": 1991,
+        "severity": "high",
+        "description": "Anita Hill testified under oath that Thomas sexually harassed her while she was his employee at the EEOC. Thomas denied all allegations and was confirmed 52\u201348.",
+        "source": "Senate Judiciary Committee, 1991"
+      },
+      {
+        "title": "20+ Years of Unreported Gifts",
+        "year": 2023,
+        "severity": "critical",
+        "description": "Thomas failed to report Harlan Crow gifts on required financial disclosure forms for over two decades, in apparent violation of federal disclosure law.",
+        "source": "ProPublica, 2023"
+      }
+    ],
+    "financial_disclosures": [
+      {
+        "year": 2023,
+        "url": "https://fixthecourt.com/disclosure-database/thomas-2023/"
+      },
+      {
+        "year": 2022,
+        "url": "https://fixthecourt.com/disclosure-database/thomas-2022/"
       }
     ]
   },
@@ -130,6 +265,70 @@
         "description": "Ruled that public school coach could pray on the field after games.",
         "url": "https://www.supremecourt.gov/opinions/21pdf/21-418_i425.pdf"
       }
+    ],
+    "birth_year": 1950,
+    "home_state": "New Jersey",
+    "law_school": "Yale Law School (J.D., 1975)",
+    "career": [
+      {
+        "role": "Law Clerk",
+        "org": "Judge Leonard Garth, 3rd Circuit",
+        "years": "1976\u20131977"
+      },
+      {
+        "role": "Assistant U.S. Attorney",
+        "org": "District of New Jersey",
+        "years": "1977\u20131981"
+      },
+      {
+        "role": "Assistant to the Solicitor General",
+        "org": "DOJ",
+        "years": "1981\u20131985"
+      },
+      {
+        "role": "Deputy Assistant Attorney General",
+        "org": "DOJ Office of Legal Counsel",
+        "years": "1985\u20131987"
+      },
+      {
+        "role": "U.S. Attorney",
+        "org": "District of New Jersey",
+        "years": "1987\u20131990"
+      },
+      {
+        "role": "Circuit Judge",
+        "org": "U.S. Court of Appeals, 3rd Circuit",
+        "years": "1990\u20132006"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "Upside-Down American Flag After January 6",
+        "year": 2024,
+        "severity": "high",
+        "description": "An upside-down American flag \u2014 a symbol used by Stop the Steal movement \u2014 was flown at Alito's Virginia home in January 2021, days after the Capitol riot. Alito blamed his wife but refused to recuse from Jan. 6 cases.",
+        "source": "New York Times, May 2024"
+      },
+      {
+        "title": "Appeal to Heaven Flag",
+        "year": 2024,
+        "severity": "high",
+        "description": "An 'Appeal to Heaven' flag \u2014 associated with Christian nationalism and January 6 rioters \u2014 was flown at Alito's New Jersey vacation home. Alito again refused to recuse.",
+        "source": "New York Times, May 2024"
+      },
+      {
+        "title": "Paul Singer Undisclosed Trips",
+        "year": 2023,
+        "severity": "high",
+        "description": "ProPublica reported Alito took an undisclosed luxury fishing trip to Alaska in 2008 with hedge fund billionaire Paul Singer, whose firm later had business before SCOTUS. Alito did not recuse himself.",
+        "source": "ProPublica, June 2023"
+      }
+    ],
+    "financial_disclosures": [
+      {
+        "year": 2023,
+        "url": "https://fixthecourt.com/disclosure-database/alito-2023/"
+      }
     ]
   },
   {
@@ -170,6 +369,46 @@
         "vote": "Dissent",
         "description": "Joined the dissent opposing the overturning of Roe v. Wade.",
         "url": "https://www.supremecourt.gov/opinions/21pdf/19-1392_6j37.pdf"
+      }
+    ],
+    "birth_year": 1954,
+    "home_state": "New York",
+    "law_school": "Yale Law School (J.D., 1979)",
+    "career": [
+      {
+        "role": "Assistant District Attorney",
+        "org": "Manhattan DA's Office",
+        "years": "1979\u20131984"
+      },
+      {
+        "role": "Associate and Partner",
+        "org": "Pavia & Harcourt",
+        "years": "1984\u20131991"
+      },
+      {
+        "role": "U.S. District Judge",
+        "org": "S.D. New York",
+        "years": "1992\u20131998"
+      },
+      {
+        "role": "Circuit Judge",
+        "org": "U.S. Court of Appeals, 2nd Circuit",
+        "years": "1998\u20132009"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "'Wise Latina' Controversy",
+        "year": 2009,
+        "severity": "low",
+        "description": "A 2001 speech in which Sotomayor said a 'wise Latina woman' might reach better decisions than a white male drew criticism during her confirmation hearings. She called it a poor word choice.",
+        "source": "Senate Judiciary Committee, 2009"
+      }
+    ],
+    "financial_disclosures": [
+      {
+        "year": 2023,
+        "url": "https://fixthecourt.com/disclosure-database/sotomayor-2023/"
       }
     ]
   },
@@ -212,6 +451,38 @@
         "description": "Joined the dissent opposing the overturning of Roe v. Wade.",
         "url": "https://www.supremecourt.gov/opinions/21pdf/19-1392_6j37.pdf"
       }
+    ],
+    "birth_year": 1960,
+    "home_state": "New York",
+    "law_school": "Harvard Law School (J.D., 1986)",
+    "career": [
+      {
+        "role": "Law Clerk",
+        "org": "Justice Thurgood Marshall, SCOTUS",
+        "years": "1987\u20131988"
+      },
+      {
+        "role": "Associate Counsel",
+        "org": "Clinton White House Counsel's Office",
+        "years": "1995\u20131999"
+      },
+      {
+        "role": "Dean",
+        "org": "Harvard Law School",
+        "years": "2003\u20132009"
+      },
+      {
+        "role": "Solicitor General",
+        "org": "United States",
+        "years": "2009\u20132010"
+      }
+    ],
+    "controversies": [],
+    "financial_disclosures": [
+      {
+        "year": 2023,
+        "url": "https://fixthecourt.com/disclosure-database/kagan-2023/"
+      }
     ]
   },
   {
@@ -252,6 +523,53 @@
         "vote": "Majority",
         "description": "Joined the majority striking down affirmative action in college admissions.",
         "url": "https://www.supremecourt.gov/opinions/22pdf/20-1199_hgdj.pdf"
+      }
+    ],
+    "birth_year": 1967,
+    "home_state": "Colorado",
+    "law_school": "Harvard Law School (J.D., 1991); Oxford (D.Phil.)",
+    "career": [
+      {
+        "role": "Law Clerk",
+        "org": "Justice Byron White & Justice Anthony Kennedy, SCOTUS",
+        "years": "1993\u20131994"
+      },
+      {
+        "role": "Partner",
+        "org": "Kellogg, Huber, Hansen, Todd, Evans & Figel",
+        "years": "1995\u20132005"
+      },
+      {
+        "role": "Principal Deputy Associate Attorney General",
+        "org": "DOJ",
+        "years": "2005\u20132006"
+      },
+      {
+        "role": "Circuit Judge",
+        "org": "U.S. Court of Appeals, 10th Circuit",
+        "years": "2006\u20132017"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "Stolen Seat \u2014 Merrick Garland Block",
+        "year": 2017,
+        "severity": "high",
+        "description": "Gorsuch fills the seat Senate Republicans refused to consider for Merrick Garland (Obama's nominee) for 10 months before the 2016 election \u2014 an unprecedented partisan obstruction.",
+        "source": "Congressional Record, 2016"
+      },
+      {
+        "title": "Real Estate Sale to Law Firm Client",
+        "year": 2023,
+        "severity": "medium",
+        "description": "Gorsuch sold a 40-acre property to the CEO of a law firm that had cases before SCOTUS, two weeks after his confirmation. Not disclosed until ProPublica's investigation.",
+        "source": "ProPublica, July 2023"
+      }
+    ],
+    "financial_disclosures": [
+      {
+        "year": 2023,
+        "url": "https://fixthecourt.com/disclosure-database/gorsuch-2023/"
       }
     ]
   },
@@ -294,6 +612,65 @@
         "description": "Struck down President Biden's student loan forgiveness plan.",
         "url": "https://www.supremecourt.gov/opinions/22pdf/22-506_nmip.pdf"
       }
+    ],
+    "birth_year": 1965,
+    "home_state": "Maryland",
+    "law_school": "Yale Law School (J.D., 1990)",
+    "career": [
+      {
+        "role": "Law Clerk",
+        "org": "Judge Alex Kozinski, 9th Circuit; Justice Anthony Kennedy, SCOTUS",
+        "years": "1991\u20131993"
+      },
+      {
+        "role": "Associate Independent Counsel",
+        "org": "Office of Independent Counsel (Starr Investigation)",
+        "years": "1994\u20131997, 1998"
+      },
+      {
+        "role": "Associate White House Counsel",
+        "org": "George W. Bush White House",
+        "years": "2001\u20132003"
+      },
+      {
+        "role": "Staff Secretary",
+        "org": "George W. Bush White House",
+        "years": "2003\u20132006"
+      },
+      {
+        "role": "Circuit Judge",
+        "org": "U.S. Court of Appeals, D.C. Circuit",
+        "years": "2006\u20132018"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "Christine Blasey Ford Sexual Assault Allegation",
+        "year": 2018,
+        "severity": "critical",
+        "description": "Dr. Christine Blasey Ford testified under oath that Kavanaugh sexually assaulted her at a high school party in 1982. Kavanaugh denied it. An FBI investigation was limited in scope. He was confirmed 50\u201348.",
+        "source": "Senate Judiciary Committee, October 2018"
+      },
+      {
+        "title": "Deborah Ramirez and Julie Swetnick Allegations",
+        "year": 2018,
+        "severity": "high",
+        "description": "Two additional women \u2014 Deborah Ramirez (Yale classmate) and Julie Swetnick \u2014 made sexual misconduct allegations. The FBI did not investigate Ramirez's claim despite her witness list.",
+        "source": "New Yorker, 2018; Senate Judiciary Committee, 2018"
+      },
+      {
+        "title": "Perjury Allegations Over Pre-Confirmation Statements",
+        "year": 2018,
+        "severity": "high",
+        "description": "Multiple former colleagues contradicted Kavanaugh's sworn testimony about his knowledge of Democratic memos during his time as a Bush White House aide. Critics alleged perjury.",
+        "source": "Senate Judiciary letters, 2018"
+      }
+    ],
+    "financial_disclosures": [
+      {
+        "year": 2023,
+        "url": "https://fixthecourt.com/disclosure-database/kavanaugh-2023/"
+      }
     ]
   },
   {
@@ -335,6 +712,53 @@
         "description": "Joined the majority striking down affirmative action in college admissions.",
         "url": "https://www.supremecourt.gov/opinions/22pdf/20-1199_hgdj.pdf"
       }
+    ],
+    "birth_year": 1972,
+    "home_state": "Indiana",
+    "law_school": "Notre Dame Law School (J.D., 1997)",
+    "career": [
+      {
+        "role": "Law Clerk",
+        "org": "Justice Antonin Scalia, SCOTUS",
+        "years": "1998\u20131999"
+      },
+      {
+        "role": "Associate",
+        "org": "Miller Cassidy Larroca & Lewin",
+        "years": "1999\u20132001"
+      },
+      {
+        "role": "Professor of Law",
+        "org": "Notre Dame Law School",
+        "years": "2002\u20132017"
+      },
+      {
+        "role": "Circuit Judge",
+        "org": "U.S. Court of Appeals, 7th Circuit",
+        "years": "2017\u20132020"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "Rushed Confirmation \u2014 27 Days Before Election",
+        "year": 2020,
+        "severity": "high",
+        "description": "Barrett was confirmed 52\u201348 on Oct. 26, 2020 \u2014 8 days before the election \u2014 after Republicans refused to consider Merrick Garland 10 months before the 2016 election, citing the 'Biden Rule.'",
+        "source": "Congressional Record, 2020"
+      },
+      {
+        "title": "People of Praise Membership",
+        "year": 2020,
+        "severity": "low",
+        "description": "Barrett's membership in the charismatic Catholic group 'People of Praise,' which has traditional views on gender roles, raised questions during confirmation. Barrett declined to discuss it in detail.",
+        "source": "Senate Judiciary Committee, 2020"
+      }
+    ],
+    "financial_disclosures": [
+      {
+        "year": 2023,
+        "url": "https://fixthecourt.com/disclosure-database/barrett-2023/"
+      }
     ]
   },
   {
@@ -375,6 +799,56 @@
         "vote": "Concurrence",
         "description": "Concurred in rejecting the 'independent state legislature theory' for elections.",
         "url": "https://www.supremecourt.gov/opinions/22pdf/21-1271_3f14.pdf"
+      }
+    ],
+    "birth_year": 1970,
+    "home_state": "Florida / D.C.",
+    "law_school": "Harvard Law School (J.D., 1996)",
+    "career": [
+      {
+        "role": "Law Clerk",
+        "org": "Justice Stephen Breyer, SCOTUS",
+        "years": "1999\u20132000"
+      },
+      {
+        "role": "Associate",
+        "org": "Goodwin Procter LLP",
+        "years": "2000\u20132005"
+      },
+      {
+        "role": "Assistant Federal Public Defender",
+        "org": "D.C. Public Defender Service",
+        "years": "2005\u20132007"
+      },
+      {
+        "role": "U.S. Sentencing Commissioner",
+        "org": "U.S. Sentencing Commission",
+        "years": "2010\u20132014, 2015\u20132021"
+      },
+      {
+        "role": "U.S. District Judge",
+        "org": "D.D.C.",
+        "years": "2013\u20132021"
+      },
+      {
+        "role": "Circuit Judge",
+        "org": "U.S. Court of Appeals, D.C. Circuit",
+        "years": "2021\u20132022"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "Sentencing Criticism from Republicans",
+        "year": 2022,
+        "severity": "low",
+        "description": "Republicans attacked Jackson during confirmation over sentencing decisions in child pornography cases, alleging she was too lenient. Legal experts said her sentences were in line with similar judges.",
+        "source": "Senate Judiciary Committee, 2022"
+      }
+    ],
+    "financial_disclosures": [
+      {
+        "year": 2023,
+        "url": "https://fixthecourt.com/disclosure-database/jackson-2023/"
       }
     ]
   }

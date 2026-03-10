@@ -380,6 +380,25 @@ export interface KeyRuling {
   url?: string;
 }
 
+export interface JusticeCareerPosition {
+  role: string;
+  org: string;
+  years: string;
+}
+
+export interface JusticeControversy {
+  title: string;
+  year: number;
+  severity: "critical" | "high" | "medium" | "low";
+  description: string;
+  source: string;
+}
+
+export interface JusticeFinancialDisclosure {
+  year: number;
+  url: string;
+}
+
 export interface SupremeCourtJustice {
   id: string;
   name: string;
@@ -390,6 +409,12 @@ export interface SupremeCourtJustice {
   ideology_score: number;  // Martin-Quinn score: negative = liberal, positive = conservative
   ideology_label: "Very Liberal" | "Liberal" | "Moderate" | "Conservative" | "Very Conservative";
   bio: string;
+  birth_year?: number;
+  home_state?: string;
+  law_school?: string;
+  career?: JusticeCareerPosition[];
+  controversies?: JusticeControversy[];
+  financial_disclosures?: JusticeFinancialDisclosure[];
   key_rulings?: KeyRuling[];
 }
 
