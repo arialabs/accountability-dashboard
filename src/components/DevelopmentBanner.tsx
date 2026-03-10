@@ -30,10 +30,6 @@ export default function DevelopmentBanner() {
       aria-label="Site status and data freshness"
     >
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-3 gap-y-0.5 text-center">
-        <span className="text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded" style={{ backgroundColor: "#FEF3C7", color: "#92400E" }}>
-          Beta
-        </span>
-        <span className="text-slate-300 hidden sm:inline" aria-hidden="true">·</span>
         <span className="text-[11px]" style={{ color: "#64748B" }}>
           Data synced <span className="font-semibold" style={{ color: "#334155" }}>{LAST_SYNCED}</span>
         </span>

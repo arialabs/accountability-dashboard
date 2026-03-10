@@ -494,7 +494,47 @@ export default function Home() {
                     scandals documented
                   </span>
                 </div>
+                <span className="text-slate-300" aria-hidden="true">·</span>
+                <div className="flex items-baseline gap-1.5">
+                  <span
+                    className="text-2xl font-bold"
+                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "#DC2626" }}
+                  >
+                    117
+                  </span>
+                  <span
+                    className="text-sm"
+                    style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
+                  >
+                    committee conflicts
+                  </span>
+                </div>
               </div>
+
+              {/* ── Breaking findings strip ── */}
+              <Link
+                href="/congress/trades"
+                className="mb-5 flex items-center gap-3 rounded-lg border border-red-200 bg-red-50 px-4 py-3 hover:bg-red-100 transition-colors group"
+              >
+                <span className="flex-shrink-0 text-red-600 font-black text-xl">⚠️</span>
+                <div className="flex-1 min-w-0">
+                  <span
+                    className="block text-sm font-bold"
+                    style={{ fontFamily: "'Inter', sans-serif", color: "#7F1D1D" }}
+                  >
+                    117 members trading stocks in sectors their committee oversees
+                  </span>
+                  <span
+                    className="text-xs"
+                    style={{ fontFamily: "'Inter', sans-serif", color: "#B91C1C" }}
+                  >
+                    Banking committee members buying bank stocks. Energy committee members buying oil. →
+                  </span>
+                </div>
+                <span className="flex-shrink-0 text-red-400 group-hover:text-red-600 transition-colors text-sm font-semibold">
+                  See leaderboard →
+                </span>
+              </Link>
 
               <div className="hero-trust-grid">
                 {TRUST_SIGNALS.map((signal) => (
