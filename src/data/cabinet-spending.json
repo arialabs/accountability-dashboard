@@ -1,0 +1,780 @@
+{
+  "meta": {
+    "generated_at": "2026-03-10",
+    "source": "usaspending.gov",
+    "fiscal_year_start": 2022,
+    "fiscal_year_end": 2026,
+    "total_agencies": 15,
+    "total_officials": 0,
+    "total_awards": 75,
+    "total_federal_budget": 13286077276206.8
+  },
+  "agencies": [
+    {
+      "code": "019",
+      "name": "Department of State",
+      "cabinet_id": "secretary-of-state",
+      "slug": "state",
+      "budget_authority_fy2026": 62101508741.81,
+      "obligated_fy2026": 8667066438.1,
+      "outlay_fy2026": 12852475126.04,
+      "percentage_of_total": 0.004674179402299855,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "19AQMM23F0766",
+          "recipient": "XATOR LLC",
+          "amount": 2326916907.41,
+          "date": null,
+          "description": "CARE LOGISTICAL SUPPORT SERVICES - CLSS"
+        },
+        {
+          "award_id": "SAQMMA11F0233",
+          "recipient": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+          "amount": 2087211597.56,
+          "date": null,
+          "description": "TASK ORDER TO PROVIDE PROJECT MANAGEMENT SUPPORT, TRANSITION SUPPORT, ENGINEERING AND DESIGN SUPPORT, SECURING THE INFRASTRUCTURE SUPPORT AND O&M SUPPORT FOR THE DEPARTMENT'S IT CONSOLIDATION PROGRAM."
+        },
+        {
+          "award_id": "19AQMM18C0185",
+          "recipient": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+          "amount": 1495892089.85,
+          "date": null,
+          "description": "GLOBAL SECURITY ENGINEERING&SUPPLY CHAIN SERVICES."
+        },
+        {
+          "award_id": "SAQMMA12C0130",
+          "recipient": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+          "amount": 1219847693.56,
+          "date": null,
+          "description": "IGF::OT::IGF THE PURPOSE OF THIS ACTION IS TO ESTABLISH A NEW CONTRACT WITH GENERAL DYNAMICS INFORMATION TECHNOLOGY FOR GLOBAL SUPPLY CHAIN MANAGEMENT, LOGISTICS AND TECHNOLOGY DEVELOPMENT SERVICES TO SUPPORT THE DEPARTMENT OF STATE. THE INITIAL FUNDING ASSOCIATED WITH THIS CONTRACT IS $22,304,578.00. THE OVERALL CONTRACT VALUE IS $2,200,000,000.00"
+        },
+        {
+          "award_id": "19AQMM22C0048",
+          "recipient": "BL HARBERT INTERNATIONAL LLC",
+          "amount": 816916976.0,
+          "date": null,
+          "description": "BASE AWARD FOR CONSTRUCTION MANAGER AS CONSTRUCTOR CLIN-001 FOR DESIGN-PHASE SERVICES FOR HANOI NEC."
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "0.5%"
+    },
+    {
+      "code": "097",
+      "name": "Department of Defense",
+      "cabinet_id": "secretary-of-defense",
+      "slug": "defense",
+      "budget_authority_fy2026": 1430276793773.38,
+      "obligated_fy2026": 599654674395.45,
+      "outlay_fy2026": 611734951606.08,
+      "percentage_of_total": 0.10765230128043682,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "HT940216C0001",
+          "recipient": "HUMANA GOVERNMENT BUSINESS INC",
+          "amount": 51189205263.03,
+          "date": null,
+          "description": "IGF::OT::IGF"
+        },
+        {
+          "award_id": "N0001917C0001",
+          "recipient": "LOCKHEED MARTIN CORPORATION",
+          "amount": 35135514910.2,
+          "date": null,
+          "description": "LRIP LOT 12 ADVANCE ACQUISITION CONTRACT"
+        },
+        {
+          "award_id": "N0002417C2100",
+          "recipient": "ELECTRIC BOAT CORPORATION",
+          "amount": 34651962242.0,
+          "date": null,
+          "description": "SSN 802 AND 803 LONG LEAD TIME MATERIAL"
+        },
+        {
+          "award_id": "N0001902C3002",
+          "recipient": "LOCKHEED MARTIN CORPORATION",
+          "amount": 34173959111.96,
+          "date": null,
+          "description": "200204!008532!1700!AF600 !NAVAL AIR SYSTEMS COMMAND       !N0001902C3002  !A!N! !N!                   !20011026!20120430!008016958!008016958!834951691!N!LOCKHEED MARTIN CORPORATION   !LOCKHEED BLVD             !FORT WORTH          !TX!76108!27000!439!48!FORT WORTH          !TARRANT               !TEXAS     !+000026000000!N!N!018981928201!AC15!RDTE/AIRCRAFT-ENG/MANUF DEVELOP                   !A1A!AIRFRAMES AND SPARES          !2AMA!JAST/JSF                      !336411!E! !3! ! ! ! ! !99990909!B! ! !A! !A!N!R!2!002!N!1A!A!N!Z!  !  !N!C!N! ! ! !A!A!A!A!000!A!C!N! ! ! !Y!    !N00019!0001!"
+        },
+        {
+          "award_id": "FA862511C6600",
+          "recipient": "THE BOEING COMPANY",
+          "amount": 31955918249.03,
+          "date": null,
+          "description": "KC-X MODERNIZATION PROGRAM"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "10.8%"
+    },
+    {
+      "code": "020",
+      "name": "Department of the Treasury",
+      "cabinet_id": "secretary-of-treasury",
+      "slug": "treasury",
+      "budget_authority_fy2026": 5001852235346.64,
+      "obligated_fy2026": 559003544578.09,
+      "outlay_fy2026": 556931229917.84,
+      "percentage_of_total": 0.3764732156348467,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "2032H521F00043",
+          "recipient": "DELOITTE CONSULTING LLP",
+          "amount": 383773457.14,
+          "date": null,
+          "description": "CADE 2 LTIS3 COVID-19"
+        },
+        {
+          "award_id": "2032H521F00050",
+          "recipient": "AT&T ENTERPRISES, LLC",
+          "amount": 320206879.61,
+          "date": null,
+          "description": "ESTABLISH A BROAD NETWORKING AND TELECOMMUNICATIONS SERVICE ENVIRONMENT TO MEET ITS NETWORK SERVICES (WIDE AREA AND LOCAL AREA NETWORK), VOICE TELECOMMUNICATIONS SERVICES, AUDIO/VIDEO/WEB CONFERENCING, AND CYBER REQUIREMENTS."
+        },
+        {
+          "award_id": "2032H520F00200",
+          "recipient": "BOOZ ALLEN HAMILTON INC",
+          "amount": 305453250.98,
+          "date": null,
+          "description": "THE INTERNAL REVENUE SERVICE (IRS), OFFICE OF INFORMATION TECHNOLOGY OFFICE, ISSUES THIS ORDER UNDER GSA ALLIANT 2 (UNRESTRICTED).  ENTERPRISE CASE MANAGEMENT (ECM) SOLUTION INTEGRATION SERVICES"
+        },
+        {
+          "award_id": "2032H519F00641",
+          "recipient": "VERIZON BUSINESS NETWORK SERVICES LLC",
+          "amount": 264331366.67,
+          "date": null,
+          "description": "THE TFCCEIS TASK ORDER IS TO TRANSITION THE EXISTING TFCC SERVICES FROM THE NETWORX CONTRACT ONTO THE EIS CONTRACT VEHICLE IN A MANNER THAT WILL ENABLE CONTINUITY OF AN ENTERPRISE NETWORK OF TOLL FREE SERVICES FOR THE IRS."
+        },
+        {
+          "award_id": "2032H325F00032",
+          "recipient": "LANCER INFORMATION SOLUTIONS, LLC",
+          "amount": 250351502.98,
+          "date": null,
+          "description": "SALESFORCE SEWP CATALOG NNG15SD29B"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "37.6%"
+    },
+    {
+      "code": "015",
+      "name": "Department of Justice",
+      "cabinet_id": "attorney-general",
+      "slug": "justice",
+      "budget_authority_fy2026": 67124031402.0,
+      "obligated_fy2026": 19160057719.65,
+      "outlay_fy2026": 19994397153.4,
+      "percentage_of_total": 0.005052208413856526,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "DJJODT7C0003",
+          "recipient": "THE GEO GROUP, INC.",
+          "amount": 772525631.86,
+          "date": null,
+          "description": "DETENTION SERVICES - SAN DIEGO"
+        },
+        {
+          "award_id": "15JPSS19F00000507",
+          "recipient": "AT&T ENTERPRISES, LLC",
+          "amount": 616450825.87,
+          "date": null,
+          "description": "CO: TELLY RENFROE AWARD OF NEW TASK ORDER BASE YEAR INITIAL FUNDING"
+        },
+        {
+          "award_id": "15A00020FAQA00189",
+          "recipient": "LEIDOS, INC.",
+          "amount": 558690095.99,
+          "date": null,
+          "description": "ESA V MANAGED SERVICES (ATF AND FCS)"
+        },
+        {
+          "award_id": "DJJODT8C0001",
+          "recipient": "CORECIVIC, INC.",
+          "amount": 556956721.14,
+          "date": null,
+          "description": "DETENTION SERVICES - LAS VERGAS, NV"
+        },
+        {
+          "award_id": "DJJODT8C0005",
+          "recipient": "THE GEO GROUP, INC.",
+          "amount": 544119116.34,
+          "date": null,
+          "description": "DETENTION SERVICES"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "0.5%"
+    },
+    {
+      "code": "014",
+      "name": "Department of the Interior",
+      "cabinet_id": "secretary-of-interior",
+      "slug": "interior",
+      "budget_authority_fy2026": 81476223572.96,
+      "obligated_fy2026": 9580379210.81,
+      "outlay_fy2026": 11432057567.89,
+      "percentage_of_total": 0.00613245142859967,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "140D0422C0009",
+          "recipient": "ACACIA CENTER FOR JUSTICE",
+          "amount": 917343861.03,
+          "date": null,
+          "description": "DEPARTMENT OF HEALTH AND HUMAN SERVICES, ADMINISTRATION OF CHILDREN AND FAMILIES, OFFICE OF REFUGEE RESETTLEMENT'S LEGAL SERVICES FOR UNACCOMPANIED CHILDREN"
+        },
+        {
+          "award_id": "140D0418F0205",
+          "recipient": "GUIDEHOUSE DIGITAL LLC",
+          "amount": 446333130.39,
+          "date": null,
+          "description": "GRANTS PROGRAM SOLUTIONS AND INFORMATION TECHNOLOGY SUPPORT SERVICES"
+        },
+        {
+          "award_id": "INR17PC00023",
+          "recipient": "CDM CONSTRUCTORS INC",
+          "amount": 357531502.0,
+          "date": null,
+          "description": "POJOAQUE BASIN REGIONAL WATER SYSTEM IGF::OT::IGF"
+        },
+        {
+          "award_id": "140D0423F0882",
+          "recipient": "GUIDEHOUSE INC.",
+          "amount": 353787143.99,
+          "date": null,
+          "description": "THE PURPOSE OF THIS REQUIREMENT FOR GRANTS PROGRAM SOLUTIONS AND IT SUPPORT SERVICES IS TO PROVIDE EFFICIENT AND EFFECTIVE GRANT, FINANCIAL, AND CONTRACT MANAGEMENT SERVICES, IT SOLUTIONS, AND SUPPORT TO THE GRANTSOLUTIONS AND ITS PARTNERS."
+        },
+        {
+          "award_id": "140D0424F0005",
+          "recipient": "FAMILY ENDEAVORS, INC.",
+          "amount": 346530745.39,
+          "date": null,
+          "description": "ORR INFLUX CARE FACILITY"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "0.6%"
+    },
+    {
+      "code": "012",
+      "name": "Department of Agriculture",
+      "cabinet_id": "secretary-of-agriculture",
+      "slug": "agriculture",
+      "budget_authority_fy2026": 456583082016.83,
+      "obligated_fy2026": 89240058383.51,
+      "outlay_fy2026": 82678251406.67,
+      "percentage_of_total": 0.034365529608539606,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "12314418F0020",
+          "recipient": "ACCENTURE FEDERAL SERVICES LLC",
+          "amount": 335021908.51,
+          "date": null,
+          "description": "USDA ENTERPRISE-SCALE FEDRAMP CERTIFIED CLOUD HOSTING SERVICES.  IGF::OT::IGF"
+        },
+        {
+          "award_id": "12314420F0355",
+          "recipient": "CARAHSOFT TECHNOLOGY CORP",
+          "amount": 294798840.99,
+          "date": null,
+          "description": "USDA DISC ENTERPRISE WIDE SALESFORCE SOFTWARE&SUPPORT SERVICES"
+        },
+        {
+          "award_id": "12314421F0279",
+          "recipient": "SYNERGY BUSINESS INNOVATION & SOLUTIONS INC.",
+          "amount": 273416775.77,
+          "date": null,
+          "description": "ENTERPRISE APPLICATION SERVICES"
+        },
+        {
+          "award_id": "12445126C0001",
+          "recipient": "KIEWIT INFRASTRUCTURE SOUTH CO",
+          "amount": 241843089.47,
+          "date": null,
+          "description": "MORATORIUM EXCEPTION\"  BLI DDVAK725 HURRICANE HELENE VCT DISASTER RECON DESIGN-BUILD HURRICANE HELENE IN VA"
+        },
+        {
+          "award_id": "12314422C0055",
+          "recipient": "MINBURN TECHNOLOGY GROUP, LLC",
+          "amount": 234662303.95,
+          "date": null,
+          "description": "FY23 USDA OCIO ENTERPRISE SOLUTIONS POP: 10/1/2022 - 9/30/2023"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "3.4%"
+    },
+    {
+      "code": "013",
+      "name": "Department of Commerce",
+      "cabinet_id": "secretary-of-commerce",
+      "slug": "commerce",
+      "budget_authority_fy2026": 50193491174.01,
+      "obligated_fy2026": 4684291008.97,
+      "outlay_fy2026": 6870750208.22,
+      "percentage_of_total": 0.0037779014927075854,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "DOCDG133E09CN0094",
+          "recipient": "L3HARRIS TECHNOLOGIES, INC.",
+          "amount": 1826479031.57,
+          "date": null,
+          "description": "THE PURPOSE OF THIS CONTRACT IS TO DEVELOP THE GROUND SYSTEM THAT WILL SUPPORT NOAA S NEXT GENERATION GEOSTATIONARY SATELLITE SERIES, GOES-R. THIS NEW SERIES OF SPACECRAFT, SET TO BEGIN LAUNCHING IN 2015, IS EXPECTED TO DOUBLE THE CLARITY OF TODAY S SATELLITE IMAGERY AND PROVIDE AT LEAST 20 TIMES MORE ATMOSPHERIC OBSERVATIONS FROM SPACE. THE CONTRACTOR IS TO DESIGN, DEVELOP, TEST AND IMPLEMENT THE GOES-R GROUND SYSTEM. THE GROUND SYSTEM WILL CAPTURE DATA FROM THE GOES-R SATELLITES, AND PROCESS AND DISTRIBUTE THE INFORMATION TO OPERATIONAL USERS."
+        },
+        {
+          "award_id": "DOC003",
+          "recipient": "T-REX SOLUTIONS LLC",
+          "amount": 1480169956.14,
+          "date": null,
+          "description": "IGF::OT::IGF  ENTERPRISE SOLUTIONS FRAMEWORK (ESF) FOR MULTI-TIERED ACQUISITION FRAMEWORK FOR SYSTEMS ENGINEERING AND INTEGRATION - PROGRAM TIER WORK ORDER 003 - 2020 CENSUS TECHNICAL INTEGRATOR"
+        },
+        {
+          "award_id": "DOCYA132316CN0017",
+          "recipient": "MAXIMUS FEDERAL SERVICES, INC.",
+          "amount": 918336629.02,
+          "date": null,
+          "description": "IGF::OT::IGF   2020 CENSUS QUESTIONNAIRE ASSISTANCE (2020 CQA)"
+        },
+        {
+          "award_id": "1333BJ21C00151002",
+          "recipient": "REED TECHNOLOGY AND INFORMATION SERVICES LLC",
+          "amount": 801286513.92,
+          "date": null,
+          "description": "PATENT DATA AND DOCUMENT MANAGEMENT (PD&DM)"
+        },
+        {
+          "award_id": "1305M224C0039",
+          "recipient": "LOCKHEED MARTIN CORPORATION",
+          "amount": 461039171.0,
+          "date": null,
+          "description": "NOAA/OMAO_PRODUCTION OF UP TO FOUR (4) FULLY MODIFIED C130J AIRCRAFT"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "0.4%"
+    },
+    {
+      "code": "1601",
+      "name": "Department of Labor",
+      "cabinet_id": "secretary-of-labor",
+      "slug": "labor",
+      "budget_authority_fy2026": 34432828163.03,
+      "obligated_fy2026": 22727879386.05,
+      "outlay_fy2026": 23062894202.89,
+      "percentage_of_total": 0.002591647440188654,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "1605DC19F00028",
+          "recipient": "PERATON ENTERPRISE SOLUTIONS LLC",
+          "amount": 274671362.19,
+          "date": null,
+          "description": "DOL ENTERPRISE OPERATIONS AND MAINTENANCE SUPPORT SERVICES"
+        },
+        {
+          "award_id": "1630J418C0001",
+          "recipient": "ADAMS AND ASSOCIATES INC",
+          "amount": 156667550.56,
+          "date": null,
+          "description": "IGF::OT::IGF GARY JCC"
+        },
+        {
+          "award_id": "1605JE21C0003",
+          "recipient": "ADAMS AND ASSOCIATES INC",
+          "amount": 149319903.33,
+          "date": null,
+          "description": "OPERATION OF THE KEYSTONE/RED ROCK JOB CORPS CENTERS, OUTREACH/ADMISSIONS, CAREER TRANSITION SERVICES"
+        },
+        {
+          "award_id": "1630J417C0009",
+          "recipient": "MANAGEMENT & TRAINING CORPORATION",
+          "amount": 148397420.82,
+          "date": null,
+          "description": "::IGF::OT::IGF CLEARFIELD JCC"
+        },
+        {
+          "award_id": "1630J219C0001",
+          "recipient": "MANAGEMENT & TRAINING CORPORATION",
+          "amount": 137093489.0,
+          "date": null,
+          "description": "EARLE C CLEMENTS/15069/MTC, 1630J2-19-C-0001, AWARD REQ AND INCREMENTAL FUNDING"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "0.3%"
+    },
+    {
+      "code": "075",
+      "name": "Department of Health and Human Services",
+      "cabinet_id": "secretary-of-hhs",
+      "slug": "hhs",
+      "budget_authority_fy2026": 2604642818489.3,
+      "obligated_fy2026": 1188028178928.09,
+      "outlay_fy2026": 1000653785822.32,
+      "percentage_of_total": 0.19604302792621797,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "HHSM500201300103C",
+          "recipient": "MAXIMUS FEDERAL SERVICES, INC.",
+          "amount": 5536080055.0,
+          "date": null,
+          "description": "IGF::OT::IGF CONTACT CENTER OPERATIONS (CCO)"
+        },
+        {
+          "award_id": "HHSN261200800001E",
+          "recipient": "LEIDOS BIOMEDICAL RESEARCH INC",
+          "amount": 4813063024.9,
+          "date": null,
+          "description": "TAS::75 0849::TAS  OPER OF GOVT R&D GOCO FACILITIES"
+        },
+        {
+          "award_id": "75ACF121C00020",
+          "recipient": "RAPID DEPLOYMENT INC",
+          "amount": 3516373311.63,
+          "date": null,
+          "description": "THE PURPOSE OF THIS CONTRACT IS TO PROVIDE THE FULL COMPLEMENT OF SERVICES NECESSARY TO CARE FOR UC IN ORR CUSTODY INCLUDING FACILITIES SET-UP, MAINTENANCE, AND SUPPORT INTERNAL AND PERIMETER (IF APPLICABLE) SECURITY, DIRECT CARE AND SUPERVISION INC"
+        },
+        {
+          "award_id": "75FCMC22C0038",
+          "recipient": "MAXIMUS FEDERAL SERVICES, INC.",
+          "amount": 2641443092.0,
+          "date": null,
+          "description": "CONTACT CENTER OPERATIONS"
+        },
+        {
+          "award_id": "75N91020F00003",
+          "recipient": "LEIDOS BIOMEDICAL RESEARCH INC",
+          "amount": 1775391302.47,
+          "date": null,
+          "description": "NCI OPERATIONAL TASK ORDER"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "19.6%"
+    },
+    {
+      "code": "086",
+      "name": "Department of Housing and Urban Development",
+      "cabinet_id": "secretary-of-hud",
+      "slug": "hud",
+      "budget_authority_fy2026": 275121693822.48,
+      "obligated_fy2026": 26532333483.96,
+      "outlay_fy2026": 28192718282.12,
+      "percentage_of_total": 0.020707518713230587,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "86615623C00016",
+          "recipient": "CARRINGTON MORTGAGE SERVICES LLC",
+          "amount": 981984466.11,
+          "date": null,
+          "description": "SINGLE FAMILY MASTER SUBSERVICER SERVICES IN SUPPORT OF GINNIE MAE'S MORTGAGE-BACKED SECURITIES (MBS) PROGRAMS."
+        },
+        {
+          "award_id": "DU100G14C04",
+          "recipient": "SELENE FINANCE LP",
+          "amount": 314162444.95,
+          "date": null,
+          "description": "SINGLE FAMILY MASTER SUBSERVICER  IGF::OT::IGF"
+        },
+        {
+          "award_id": "86615619C00007",
+          "recipient": "CARRINGTON MORTGAGE SERVICES LLC",
+          "amount": 291649408.8,
+          "date": null,
+          "description": "SINGLE FAMILY MASTER SUBSERVICER SERVICES IN SUPPORT OF GINNIE MAE'S MORTGAGE-BACKED SECURITIES (MBS) PROGRAMS."
+        },
+        {
+          "award_id": "DU100G15C08",
+          "recipient": "BANK OF NEW YORK MELLON (THE)",
+          "amount": 194819571.26,
+          "date": null,
+          "description": "POOL PROCESSING AGENT SERVICES  IGF::OT::IGF"
+        },
+        {
+          "award_id": "86615423C00001",
+          "recipient": "PERATON ENTERPRISE SOLUTIONS LLC",
+          "amount": 150861858.2,
+          "date": null,
+          "description": "HITS-CS IS A MISSION CRITICAL REQUIREMENT PROVIDING THE PROVISIONING, MANAGEMENT, STORAGE, MAINTENANCE, BACKUP, AND OPERATION OF ALL INFRASTRUCTURE HARDWARE, SOFTWARE, AND SUPPORT SERVICES NEEDED FOR HUD'S ENTERPRISE INFRASTRUCTURE CORE FUNCTION"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "2.1%"
+    },
+    {
+      "code": "069",
+      "name": "Department of Transportation",
+      "cabinet_id": "secretary-of-transportation",
+      "slug": "transportation",
+      "budget_authority_fy2026": 222848500844.22,
+      "obligated_fy2026": 30347338265.22,
+      "outlay_fy2026": 42950210232.39,
+      "percentage_of_total": 0.016773084802337055,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "693KA821F00222",
+          "recipient": "HARRIS CORPORATION",
+          "amount": 1819936495.22,
+          "date": null,
+          "description": "THE PURPOSE OF THIS DELIVERY ORDER AWARD IS TO ADD FUNDING FOR FTI TELECOMMUNICATIONS SERVICES."
+        },
+        {
+          "award_id": "DTFAWA10C00080",
+          "recipient": "THE MITRE CORPORATION",
+          "amount": 1701706860.27,
+          "date": null,
+          "description": "CENTER FOR ADVANCED AVIATION DEVELOPMENT (CAASD) FFRDC MITRE"
+        },
+        {
+          "award_id": "DTFA0102D03006CALL0001",
+          "recipient": "HARRIS CORPORATION",
+          "amount": 1541767077.67,
+          "date": null,
+          "description": "DAFIS UDO RECONSTRUCT W/O ADVANCE"
+        },
+        {
+          "award_id": "DTFAWA12C00064",
+          "recipient": "PARSONS GOVERNMENT SERVICES INC.",
+          "amount": 1499977355.14,
+          "date": null,
+          "description": "THE CONTRACTOR MUST FURNISH ALL PROFESSIONAL, TECHNICAL AND SUPPORT LABOR, MATERIAL, SUPPLIES, MANAGEMENT SERVICES, DATA, AND FACILITIES REQUIRED TO ACCOMPLISH THE WORK TO BE ORDERED UNDER TECHNICAL F IGF::OT::IGF"
+        },
+        {
+          "award_id": "DTFA0102D03006CALL0016",
+          "recipient": "HARRIS CORPORATION",
+          "amount": 1240364575.99,
+          "date": null,
+          "description": "THE PURPOSE OF THIS DELIVERY ORDER AWARD IS TO ADD FUNDING FOR FTI TELECOMMUNICATIONS SERVICES.  THIS DELIVERY ORDER SUCCEEDS DELIVERY ORDER 0004 AND DELIVERY ORDER 0015.  DELIVERY ORDER 0004, DELIVERY ORDER 0015, AND THIS DELIVERY ORDER COMPRISE THE AGGREGATE OF FTI TELECOMMUNICATION SERVICE ORDERS.    TAS::69 1301::TAS"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "1.7%"
+    },
+    {
+      "code": "089",
+      "name": "Department of Energy",
+      "cabinet_id": "secretary-of-energy",
+      "slug": "energy",
+      "budget_authority_fy2026": 134150632618.29,
+      "obligated_fy2026": 20021448855.57,
+      "outlay_fy2026": 22672021081.36,
+      "percentage_of_total": 0.010097083573232855,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "DEAC0494AL85000",
+          "recipient": "LOCKHEED MARTIN CORP",
+          "amount": 48066473048.89,
+          "date": null,
+          "description": null
+        },
+        {
+          "award_id": "DENA0003525",
+          "recipient": "NATIONAL TECHNOLOGY & ENGINEERING SOLUTIONS OF SANDIA, LLC",
+          "amount": 41457924341.17,
+          "date": null,
+          "description": "IGF::CL,CT::IGF CONTRACT AWARD DE-NA0003525 TO THE NATIONAL TECHNOLOGY&ENGINEERING SOLUTIONS OF SANDIA, LLC (NTESS) FOR THE MANAGEMENT AND OPERATION OF THE DEPARTMENT OF ENERGY, NATIONAL NUCLEAR SECURITY ADMINISTRATION'S SANDIA NATIONAL LABORATORIES (SNL)"
+        },
+        {
+          "award_id": "DEAC0500OR22725",
+          "recipient": "UT-BATTELLE LLC",
+          "amount": 40676045110.67,
+          "date": null,
+          "description": "MANAGEMENT AND OPERATION OF THE OAK RIDGE NATIONAL LABORATORY"
+        },
+        {
+          "award_id": "DEAC5207NA27344",
+          "recipient": "LAWRENCE LIVERMORE NATIONAL SECURITY, LLC",
+          "amount": 40613251292.31,
+          "date": null,
+          "description": "TAS::89 0240::TAS THIS PERFORMANCE-BASED MANAGEMENT CONTRACT (PBMC) IS FOR THE MANAGEMENT AND OPERATION OF THE LAWRENCE LIVERMORE NATIONAL LABORATORY (LLNL). THE CONTRACTOR SHALL, IN ACCORDANCE WITH THE PROVISIONS OF THIS CONTRACT, ACCOMPLISH THE MISSIONS AND PROGRAMS ASSIGNED BY THE U.S. DEPARTMENT OF ENERGY (DOE) AND MANAGE AND OPERATE THE LABORATORY.  THE LABORATORY IS ONE OF DOES OFFICE OF DEFENSE PROGRAM MULTI-PROGRAM LABORATORIES.  THE LABORATORY IS A FEDERALLY FUNDED RESEARCH AND DEVELOPMENT INSTITUTION (ESTABLISHED IN ACCORDANCE WITH THE FEDERAL ACQUISITION REGULATION (FAR) PART 35 AND OPERATED UNDER THIS MANAGEMENT AND OPERATING (M&O) CONTRACT, AS DEFINED IN FAR 17.6 AND DEAR 917.6."
+        },
+        {
+          "award_id": "DEAC3243AL00036",
+          "recipient": "REGENTS OF THE UNIVERSITY OF CALIFORNIA, THE",
+          "amount": 35295675219.18,
+          "date": null,
+          "description": "M&O OF LANL BR OF U OF CA"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "1.0%"
+    },
+    {
+      "code": "091",
+      "name": "Department of Education",
+      "cabinet_id": "secretary-of-education",
+      "slug": "education",
+      "budget_authority_fy2026": 99586685883.8,
+      "obligated_fy2026": 46916433015.13,
+      "outlay_fy2026": 52806145775.28,
+      "percentage_of_total": 0.007495567262892827,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "EDFSA15C0006",
+          "recipient": "ACCENTURE FEDERAL SERVICES LLC",
+          "amount": 1507684723.07,
+          "date": null,
+          "description": "IGF::CL::IGF - TIVOD SUPPORTS THE ORIGINATION, DISBURSEMENT, AND REPORTING OF TITLE IV FEDERAL STUDENT AID PROGRAMS, INCLUDING - BUT NOT LIMITED TO - DIRECT LOANS, PELL GRANTS, AND THE TEACHER EDUCATION ASSISTANCE FOR COLLEGE AND HIGHER EDUCATION GRANTS. THE TITLE IV SOLUTION SHALL ALSO PROVIDE ONGOING SUPPORT FOR THE DISCONTINUED TITLE IV FEDERAL STUDENT AID PROGRAMS, INCLUDING - BUT NOT LIMITED TO - ACADEMIC COMPETITIVENESS GRANTS AND NATIONAL SCIENCE AND MATHEMATICS ACCESS TO RETAIN TALENT GRANTS."
+        },
+        {
+          "award_id": "91003120F0312",
+          "recipient": "NELNET SERVICING LLC",
+          "amount": 983684675.89,
+          "date": null,
+          "description": "PROVIDE DIRECT LOAN SERVICES SUCH AS CALL CENTER AND FINANCIAL REPORTING - NELNET FROM 12/15/2019 THROUGH 12/14/2020"
+        },
+        {
+          "award_id": "EDFSA13C0021",
+          "recipient": "MAXIMUS FEDERAL SERVICES, INC.",
+          "amount": 906920531.21,
+          "date": null,
+          "description": "DEBT MANAGEMENT AND COLLECTIONS SYSTEM (DMCS) IGF::CT::IGF"
+        },
+        {
+          "award_id": "91003119F0003",
+          "recipient": "ACCENTURE FEDERAL SERVICES LLC",
+          "amount": 840559113.93,
+          "date": null,
+          "description": "THIS TASK ORDER IS FOR AN ENTERPRISE-WIDE DIGITAL AND CUSTOMER CARE PLATFORMS AND SERVICES SOLUTION (ENTERPRISE-WIDE DIGITAL AND CUSTOMER CARE SOLUTION, AKA EWDCCPS, AKA DCC) THAT WILL ENABLE AN FSA-BRANDED OMNI-CHANNEL ENGAGEMENT APPROACH LED BY A MOBILE-FIRST, MOBILE-COMPLETE, AND MOBILE-CONTINUOUS DIGITAL PLATFORM SUPPORTING THE COMPLETE LIFECYCLE OF STUDENT FINANCING."
+        },
+        {
+          "award_id": "91003120F0314",
+          "recipient": "MAXIMUS EDUCATION LLC",
+          "amount": 762138897.16,
+          "date": null,
+          "description": "PROVIDE DIRECT LOAN SERVICES SUCH AS CALL CENTER AND FINANCIAL REPORTING - NAVIENT FROM 12/15/2019 THROUGH 12/14/2020"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "0.7%"
+    },
+    {
+      "code": "036",
+      "name": "Department of Veterans Affairs",
+      "cabinet_id": "secretary-of-veterans-affairs",
+      "slug": "veterans",
+      "budget_authority_fy2026": 518798819550.15,
+      "obligated_fy2026": 155138142014.46,
+      "outlay_fy2026": 156007527520.4,
+      "percentage_of_total": 0.03904830664196378,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "VA11817F1888",
+          "recipient": "DELL FEDERAL SYSTEMS L.P",
+          "amount": 1730532626.58,
+          "date": null,
+          "description": "THE PURPOSE OF THIS ACQUISITION IS TO PROVIDE THE DEPARTMENT OF VETERANS AFFAIRS WITH AN ENTERPRISE AGREEMENT FOR BRAND NAME MICROSOFT SOFTWARE PRODUCTS AND SERVICES.  THIS ENTERPRISE AGREEMENT WILL PROVIDE 1) SUPPORT SERVICES 2) OPERATIONAL SUPPORT AND 3) ADDITIONAL LICENSES OF MICROSOFT PRODUCTS, CURRENT AND PLANNED, TO SUPPORT THE VA ENTERPRISE.  SUBJECT PROCUREMENT WAS COMPETED AMONG MICROSOFT'S EIGHT AUTHORIZED FEDERAL GOVERNMENT LICENSE SOLUTION PROVIDERS.  IGF::OT::IGF"
+        },
+        {
+          "award_id": "36C10B22F0089",
+          "recipient": "DELL FEDERAL SYSTEMS L.P",
+          "amount": 1590224177.53,
+          "date": null,
+          "description": "VA MICROSOFT ENTERPRISE LICENSE AGREEMENT."
+        },
+        {
+          "award_id": "36C24026K1002",
+          "recipient": "MCKESSON CORPORATION",
+          "amount": 1406868182.35,
+          "date": null,
+          "description": "EXPRESS REPORT: PHARMACEUTICAL PRIME VENDOR (PPV)FY2026 NOVEMBER"
+        },
+        {
+          "award_id": "36C10G24K0111",
+          "recipient": "OPTUM PUBLIC SECTOR SOLUTIONS, INC.",
+          "amount": 1365317619.33,
+          "date": null,
+          "description": "EXPRESS REPORT: R3 FY 24 3RD QTR APRIL"
+        },
+        {
+          "award_id": "36C10B21N10070021",
+          "recipient": "BOOZ ALLEN HAMILTON INC",
+          "amount": 1365285599.63,
+          "date": null,
+          "description": "TRANSFORMATION TWENTY-ONE TOTAL TECHNOLOGY NEXT GENERATION (T4NG) TASK ORDER - BENEFITS INTEGRATED DELIVERY"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "3.9%"
+    },
+    {
+      "code": "070",
+      "name": "Department of Homeland Security",
+      "cabinet_id": "secretary-of-homeland-security",
+      "slug": "homeland",
+      "budget_authority_fy2026": 0.0,
+      "obligated_fy2026": 0.0,
+      "outlay_fy2026": 0.0,
+      "percentage_of_total": 0.0,
+      "budget_history": [],
+      "top_contracts": [
+        {
+          "award_id": "HSCG2316CAFR625",
+          "recipient": "BOLLINGER SHIPYARDS LOCKPORT, L.L.C.",
+          "amount": 2075724899.08,
+          "date": null,
+          "description": "THE UNITED STATES COAST GUARD HAS A REQUIREMENT TO PROCURE UP TO TWENTY-SIX (26) FAST RESPONSE CUTTERS (FRCS) ON A FIRM FIXED PRICE (FFP) BASIS WITH AN ECONOMIC PRICE ADJUSTMENT (EPA).  PHASE II OF THE FRC PROGRAM WILL COMPLETE THE FLEET FOR A TOTAL OF 58 CUTTERS."
+        },
+        {
+          "award_id": "70B01C26F00000073",
+          "recipient": "FISHER SAND & GRAVEL CO",
+          "amount": 1787500000.0,
+          "date": null,
+          "description": "DESIGN AND CONSTRUCT NEW VERTICAL BARRIER AND POWER DISTRIBUTION, LIGHTING, CAMERAS, EQUIPMENT SHELTERS AND LINEAR GROUND DETECTION SYSTEM (LGDS) IN HILDAGO COUNTY, NM."
+        },
+        {
+          "award_id": "HSCG2313CADB014",
+          "recipient": "HUNTINGTON INGALLS INCORPORATED",
+          "amount": 1654352379.0,
+          "date": null,
+          "description": "PRODUCTION&DELIVERY OF NATIONAL SECURITY CUTTER (NSC) 6."
+        },
+        {
+          "award_id": "70B01C26F00000044",
+          "recipient": "FISHER SAND & GRAVEL CO",
+          "amount": 1650754000.0,
+          "date": null,
+          "description": "YUM-2 VERTICAL BORDER AND WATERBORNE BARRIER CONSTRUCTION"
+        },
+        {
+          "award_id": "70B01C26F00000017",
+          "recipient": "FISHER SAND & GRAVEL CO",
+          "amount": 1550800000.0,
+          "date": null,
+          "description": "CONSTRUCT VERTICAL BORDER BARRIER"
+        }
+      ],
+      "agency_slug": "",
+      "total_federal_budget": 13286077276206.8,
+      "pct_display": "0.0%"
+    }
+  ],
+  "officials": []
+}

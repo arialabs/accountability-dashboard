@@ -27,6 +27,7 @@ import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } 
 import { Container } from "@/components/ui";
 import { VerdictBanner } from "@/components/VerdictBanner";
 import { CareerTimeline } from "@/components/CareerTimeline";
+import { AgencyBudget } from "@/components/AgencyBudget";
 
 export async function generateMetadata({ params }: CabinetMemberPageProps): Promise<Metadata> {
   const { role } = await params;
@@ -324,6 +325,9 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
             </div>
           )}
           
+          {/* Agency Budget (USASpending.gov) */}
+          <AgencyBudget cabinetId={role} />
+
           {/* Department Info */}
           <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 mb-12">
             <h2 className="text-2xl font-black text-slate-900 mb-4">
