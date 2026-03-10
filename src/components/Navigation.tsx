@@ -27,6 +27,7 @@ const dropdowns: NavDropdown[] = [
     items: [
       { href: '/executive/president', label: 'President' },
       { href: '/executive/cabinet', label: 'Cabinet' },
+      { href: '/executive/orders', label: 'Executive Orders', badge: 'New' },
       { href: '/executive/agencies/doge', label: 'DOGE (Federal Agencies)' },
     ],
   },
