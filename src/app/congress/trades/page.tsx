@@ -4,8 +4,8 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import tradingSummaries from "@/data/trading-summaries.json";
 import membersData from "@/data/members.json";
+import committeeConflictsData from "@/data/committee-conflicts.json";
 
-type SuspicionLevel = "high" | "medium" | "low" | "none";
 type Chamber = "all" | "house" | "senate";
 type SortField = "total_trades" | "flagged_trades" | "flag_rate" | "total_risk_score";
 
@@ -37,12 +37,19 @@ interface Member {
   photo_url: string;
 }
 
+interface CommitteeConflict {
+  conflict_sectors: string[];
+  conflict_tickers: string[];
+  relevant_committees: string[];
+}
+
 const memberMap = new Map<string, Member>();
 for (const m of membersData as Member[]) {
   memberMap.set(m.bioguide_id, m);
 }
 
 const summaries = tradingSummaries as Record<string, TradingSummary>;
+const committeeConflicts = committeeConflictsData as Record<string, CommitteeConflict>;
 
 function getSuspicionColor(level: string) {
   switch (level) {
@@ -109,6 +116,7 @@ export default function TradesLeaderboard() {
   const [chamber, setChamber] = useState<Chamber>("all");
   const [sortBy, setSortBy] = useState<SortField>("total_risk_score");
   const [showOnlyFlagged, setShowOnlyFlagged] = useState(false);
+  const [showOnlyConflicts, setShowOnlyConflicts] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   const leaderboard = useMemo(() => {
@@ -128,6 +136,8 @@ export default function TradesLeaderboard() {
       .filter((e) => {
         if (chamber !== "all" && e.member.chamber !== chamber) return false;
         if (showOnlyFlagged && e.summary.overall_suspicion_level !== "high")
+          return false;
+        if (showOnlyConflicts && !committeeConflicts[e.bioguideId])
           return false;
         if (searchQuery) {
           const q = searchQuery.toLowerCase();
@@ -154,7 +164,7 @@ export default function TradesLeaderboard() {
             return b.summary.total_risk_score - a.summary.total_risk_score;
         }
       });
-  }, [chamber, sortBy, showOnlyFlagged, searchQuery]);
+  }, [chamber, sortBy, showOnlyFlagged, showOnlyConflicts, searchQuery]);
 
   const stats = useMemo(() => {
     const all = Object.values(summaries);
@@ -162,8 +172,8 @@ export default function TradesLeaderboard() {
       totalMembers: all.length,
       totalTrades: all.reduce((s, t) => s + t.total_trades, 0),
       totalFlagged: all.reduce((s, t) => s + t.flagged_trades, 0),
-      highSuspicion: all.filter((t) => t.overall_suspicion_level === "high")
-        .length,
+      highSuspicion: all.filter((t) => t.overall_suspicion_level === "high").length,
+      committeeConflicts: Object.keys(committeeConflicts).length,
     };
   }, []);
 
@@ -194,7 +204,7 @@ export default function TradesLeaderboard() {
       {/* Stats Bar */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             <div className="text-center">
               <div className="text-3xl font-black text-slate-900">
                 {stats.totalMembers}
@@ -218,6 +228,12 @@ export default function TradesLeaderboard() {
                 {stats.highSuspicion}
               </div>
               <div className="text-sm text-slate-500">High Suspicion</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-black text-orange-700">
+                {stats.committeeConflicts}
+              </div>
+              <div className="text-sm text-slate-500">Committee Conflicts</div>
             </div>
           </div>
         </div>
@@ -276,6 +292,19 @@ export default function TradesLeaderboard() {
               High suspicion only
             </span>
           </label>
+
+          {/* Committee Conflicts Toggle */}
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={showOnlyConflicts}
+              onChange={(e) => setShowOnlyConflicts(e.target.checked)}
+              className="w-4 h-4 text-orange-600 rounded"
+            />
+            <span className="text-sm font-medium text-slate-700">
+              Committee conflicts only
+            </span>
+          </label>
         </div>
       </div>
 
@@ -290,6 +319,7 @@ export default function TradesLeaderboard() {
             const colors = getSuspicionColor(
               entry.summary.overall_suspicion_level
             );
+            const conflict = committeeConflicts[entry.bioguideId] ?? null;
             const patterns = entry.summary.suspicious_patterns ?? {};
             const patternTotal =
               (patterns.rapid_trading ?? 0) +
@@ -337,6 +367,26 @@ export default function TradesLeaderboard() {
                         {entry.member.chamber}
                       </span>
                     </div>
+
+                    {/* Committee Conflict Badge */}
+                    {conflict && (
+                      <div className="flex flex-wrap gap-1.5 mt-2">
+                        <span
+                          className="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-orange-100 text-orange-900 border border-orange-300 font-semibold"
+                          title={`Trades in sectors their committee oversees: ${conflict.conflict_sectors.join(", ")}`}
+                        >
+                          ⚠️ Committee Conflict
+                        </span>
+                        {conflict.conflict_sectors.map((s) => (
+                          <span
+                            key={s}
+                            className="text-xs px-2 py-0.5 rounded-full bg-orange-50 text-orange-700 border border-orange-200 capitalize"
+                          >
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    )}
 
                     {/* Pattern Breakdown */}
                     {patternTotal > 0 && (
@@ -418,9 +468,12 @@ export default function TradesLeaderboard() {
             under the STOCK Act.
           </p>
           <p className="text-sm text-slate-500 mt-3">
-            <strong>Coming soon:</strong> Committee conflict detection — flagging
-            trades in sectors directly overseen by a member&apos;s committee
-            assignments.
+            <strong>Committee conflict detection</strong> identifies members trading stocks in sectors
+            directly overseen by their committee assignments (e.g., a Banking Committee member
+            trading bank stocks). Committee membership data sourced from{" "}
+            <a href="https://github.com/unitedstates/congress-legislators" className="underline" target="_blank" rel="noopener noreferrer">
+              unitedstates/congress-legislators
+            </a>.
           </p>
         </div>
       </div>

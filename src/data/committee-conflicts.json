@@ -1,0 +1,2530 @@
+{
+  "B001236": {
+    "conflict_sectors": [
+      "defense",
+      "energy",
+      "financials",
+      "healthcare",
+      "industrials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ABBV",
+      "ADBE",
+      "AMD",
+      "AMZN",
+      "AVGO",
+      "AXP",
+      "BAC",
+      "CRM",
+      "GD",
+      "GE",
+      "GILD",
+      "GOOGL",
+      "JPM",
+      "KRE",
+      "LLY",
+      "MA",
+      "META",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "PFE",
+      "QQQ",
+      "RTX",
+      "UNH",
+      "VLO",
+      "WFC"
+    ],
+    "relevant_committees": [
+      "Conservation, Forestry, Natural Resources, and Biotechnology",
+      "Rural Development, Energy, and Credit",
+      "Department of Defense",
+      "Financial Services and General Government",
+      "Departments of Labor, Health and Human Services, and Education, and Related Agencies",
+      "Military Construction, Veterans Affairs, and Related Agencies",
+      "Transportation, Housing and Urban Development, and Related Agencies",
+      "Senate Committee on Environment and Public Works",
+      "Clean Air, Climate, and Nuclear Innovation and Safety",
+      "Transportation and Infrastructure"
+    ]
+  },
+  "H001061": {
+    "conflict_sectors": [
+      "defense",
+      "energy",
+      "healthcare",
+      "industrials",
+      "realestate",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ABBV",
+      "AMGN",
+      "AMZN",
+      "AVGO",
+      "BA",
+      "BMY",
+      "CAT",
+      "CCI",
+      "CSX",
+      "CVS",
+      "CVX",
+      "FDX",
+      "GOOG",
+      "HON",
+      "IBM",
+      "INTC",
+      "JNJ",
+      "MPC",
+      "MRK",
+      "PFE",
+      "QCOM",
+      "SLB",
+      "UNP",
+      "UPS",
+      "VLO",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Conservation, Forestry, Natural Resources, and Biotechnology",
+      "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies",
+      "Department of Defense",
+      "Energy and Water Development",
+      "Department of Interior, Environment, and Related Agencies",
+      "Military Construction, Veterans Affairs, and Related Agencies",
+      "Transportation, Housing and Urban Development, and Related Agencies",
+      "Senate Committee on Energy and Natural Resources",
+      "Energy"
+    ]
+  },
+  "M001198": {
+    "conflict_sectors": [
+      "healthcare",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMD",
+      "AMZN",
+      "GILD",
+      "INTC",
+      "MSFT",
+      "NVDA",
+      "TSLA"
+    ],
+    "relevant_committees": [
+      "Conservation, Forestry, Natural Resources, and Biotechnology",
+      "Health Care",
+      "Senate Committee on Health, Education, Labor, and Pensions",
+      "Primary Health and Retirement Security"
+    ]
+  },
+  "T000278": {
+    "conflict_sectors": [
+      "agriculture",
+      "defense",
+      "energy",
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "ABBV",
+      "ADM",
+      "AMGN",
+      "BMY",
+      "CVS",
+      "CVX",
+      "GD",
+      "GILD",
+      "JNJ",
+      "LLY",
+      "LMT",
+      "MRK",
+      "NOC",
+      "OXY",
+      "PFE",
+      "RTX",
+      "XLV",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Agriculture, Nutrition, and Forestry",
+      "Food and Nutrition, Specialty Crops, Organics, and Research",
+      "Rural Development, Energy, and Credit",
+      "Senate Committee on Armed Services",
+      "Senate Committee on Health, Education, Labor, and Pensions",
+      "Senate Special Committee on Aging"
+    ]
+  },
+  "F000463": {
+    "conflict_sectors": [
+      "defense",
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "CAT",
+      "LMT"
+    ],
+    "relevant_committees": [
+      "Military Construction, Veterans Affairs, and Related Agencies",
+      "Senate Committee on Armed Services",
+      "Senate Committee on Commerce, Science, and Transportation",
+      "Surface Transportation, Freight, Pipelines, and Safety"
+    ]
+  },
+  "M000934": {
+    "conflict_sectors": [
+      "energy",
+      "healthcare",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ABBV",
+      "AMZN",
+      "CMCSA",
+      "CVS",
+      "CVX",
+      "DIS",
+      "GILD",
+      "GOOG",
+      "HAL",
+      "INTC",
+      "JNJ",
+      "META",
+      "MPC",
+      "MSFT",
+      "OXY",
+      "PFE",
+      "VZ",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Rural Development, Energy, and Credit",
+      "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies",
+      "Commerce, Justice, Science, and Related Agencies",
+      "Departments of Labor, Health and Human Services, and Education, and Related Agencies",
+      "Senate Committee on Commerce, Science, and Transportation",
+      "Aviation, Space, and Innovation",
+      "Telecommunications and Media",
+      "Consumer Protection, Technology, and Data Privacy"
+    ]
+  },
+  "W000800": {
+    "conflict_sectors": [
+      "energy",
+      "financials",
+      "industrials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "FDX",
+      "GE",
+      "IBM",
+      "ORCL",
+      "SCHW",
+      "UNP",
+      "UPS",
+      "USB",
+      "WFC",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Conservation, Forestry, Natural Resources, and Biotechnology",
+      "Rural Development, Energy, and Credit",
+      "Senate Committee on Finance",
+      "Energy, Natural Resources, and Infrastructure"
+    ]
+  },
+  "F000479": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "GOOG"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Commerce, Science, and Transportation",
+      "Aviation, Space, and Innovation"
+    ]
+  },
+  "S001150": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL"
+    ],
+    "relevant_committees": [
+      "Conservation, Forestry, Natural Resources, and Biotechnology",
+      "Clean Air, Climate, and Nuclear Innovation and Safety",
+      "Privacy, Technology, and the Law"
+    ]
+  },
+  "C001035": {
+    "conflict_sectors": [
+      "defense",
+      "energy",
+      "financials",
+      "healthcare",
+      "industrials",
+      "realestate",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMT",
+      "AMZN",
+      "AXP",
+      "BA",
+      "BAC",
+      "BMY",
+      "C",
+      "CAT",
+      "COP",
+      "CRM",
+      "CVS",
+      "CVX",
+      "GE",
+      "GILD",
+      "GOOG",
+      "GOOGL",
+      "GS",
+      "HAL",
+      "HON",
+      "INTC",
+      "JNJ",
+      "JPM",
+      "MRK",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "OXY",
+      "PFE",
+      "PSX",
+      "QCOM",
+      "SCHW",
+      "SLB",
+      "UNH",
+      "UNP",
+      "UPS",
+      "USB",
+      "WFC",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies",
+      "Commerce, Justice, Science, and Related Agencies",
+      "Department of Defense",
+      "Energy and Water Development",
+      "Financial Services and General Government",
+      "Department of Interior, Environment, and Related Agencies",
+      "Departments of Labor, Health and Human Services, and Education, and Related Agencies",
+      "Military Construction, Veterans Affairs, and Related Agencies",
+      "Transportation, Housing and Urban Development, and Related Agencies",
+      "Senate Committee on Health, Education, Labor, and Pensions",
+      "Primary Health and Retirement Security",
+      "Senate Select Committee on Intelligence"
+    ]
+  },
+  "C001047": {
+    "conflict_sectors": [
+      "defense",
+      "energy",
+      "healthcare",
+      "industrials",
+      "media",
+      "realestate",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMGN",
+      "AMT",
+      "AMZN",
+      "AVGO",
+      "BA",
+      "BMY",
+      "CCI",
+      "CMCSA",
+      "COP",
+      "CSX",
+      "CVX",
+      "GD",
+      "GE",
+      "GILD",
+      "GOOG",
+      "GOOGL",
+      "IBM",
+      "INTC",
+      "JNJ",
+      "LLY",
+      "LMT",
+      "META",
+      "MRK",
+      "MSFT",
+      "OXY",
+      "PFE",
+      "PLD",
+      "PSX",
+      "QCOM",
+      "RTX",
+      "SLB",
+      "T",
+      "UNH",
+      "UPS",
+      "VZ",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Commerce, Justice, Science, and Related Agencies",
+      "Department of Defense",
+      "Department of Interior, Environment, and Related Agencies",
+      "Departments of Labor, Health and Human Services, and Education, and Related Agencies",
+      "Transportation, Housing and Urban Development, and Related Agencies",
+      "Senate Committee on Commerce, Science, and Transportation",
+      "Aviation, Space, and Innovation",
+      "Telecommunications and Media",
+      "Consumer Protection, Technology, and Data Privacy",
+      "Surface Transportation, Freight, Pipelines, and Safety",
+      "Senate Committee on Environment and Public Works",
+      "Chemical Safety, Waste Management, Environmental Justice, and Regulatory Oversight",
+      "Clean Air, Climate, and Nuclear Innovation and Safety",
+      "Transportation and Infrastructure"
+    ]
+  },
+  "H000601": {
+    "conflict_sectors": [
+      "defense"
+    ],
+    "conflict_tickers": [
+      "BA"
+    ],
+    "relevant_committees": [
+      "Military Construction, Veterans Affairs, and Related Agencies",
+      "National Security and International Trade and Finance"
+    ]
+  },
+  "B001319": {
+    "conflict_sectors": [
+      "energy",
+      "financials",
+      "healthcare",
+      "industrials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMZN",
+      "EOG",
+      "GOOG",
+      "JPM",
+      "MSFT",
+      "NVDA",
+      "UNH",
+      "UPS",
+      "V",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Commerce, Justice, Science, and Related Agencies",
+      "Energy and Water Development",
+      "Departments of Labor, Health and Human Services, and Education, and Related Agencies",
+      "Transportation, Housing and Urban Development, and Related Agencies",
+      "Senate Committee on Banking, Housing, and Urban Affairs",
+      "Housing, Transportation, and Community Development",
+      "Securities, Insurance, and Investment"
+    ]
+  },
+  "M001190": {
+    "conflict_sectors": [
+      "defense",
+      "energy",
+      "financials",
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "AXP",
+      "BLK",
+      "C",
+      "COF",
+      "COP",
+      "CVX",
+      "GS",
+      "JPM",
+      "LLY",
+      "MA",
+      "RTX",
+      "UNH",
+      "V",
+      "VLO"
+    ],
+    "relevant_committees": [
+      "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies",
+      "Financial Services and General Government",
+      "Department of Interior, Environment, and Related Agencies",
+      "Departments of Labor, Health and Human Services, and Education, and Related Agencies",
+      "Senate Committee on Armed Services",
+      "Senate Committee on Health, Education, Labor, and Pensions",
+      "Primary Health and Retirement Security"
+    ]
+  },
+  "M001111": {
+    "conflict_sectors": [
+      "defense",
+      "energy",
+      "financials",
+      "healthcare",
+      "industrials",
+      "realestate",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMGN",
+      "AMT",
+      "BA",
+      "BAC",
+      "BMY",
+      "CCI",
+      "COP",
+      "CVS",
+      "CVX",
+      "GD",
+      "GE",
+      "GILD",
+      "JNJ",
+      "JPM",
+      "MRK",
+      "MS",
+      "MSFT",
+      "PFE",
+      "QCOM",
+      "SLB",
+      "UPS",
+      "USB",
+      "WFC",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies",
+      "Commerce, Justice, Science, and Related Agencies",
+      "Department of Defense",
+      "Energy and Water Development",
+      "Financial Services and General Government",
+      "Department of Interior, Environment, and Related Agencies",
+      "Departments of Labor, Health and Human Services, and Education, and Related Agencies",
+      "Military Construction, Veterans Affairs, and Related Agencies",
+      "Transportation, Housing and Urban Development, and Related Agencies",
+      "Senate Committee on Health, Education, Labor, and Pensions",
+      "Primary Health and Retirement Security"
+    ]
+  },
+  "R000122": {
+    "conflict_sectors": [
+      "healthcare",
+      "industrials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMGN",
+      "CVS",
+      "FDX",
+      "HON",
+      "INTC",
+      "MSFT",
+      "QCOM"
+    ],
+    "relevant_committees": [
+      "Commerce, Justice, Science, and Related Agencies",
+      "Departments of Labor, Health and Human Services, and Education, and Related Agencies",
+      "Transportation, Housing and Urban Development, and Related Agencies"
+    ]
+  },
+  "C001088": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "MSFT"
+    ],
+    "relevant_committees": [
+      "Commerce, Justice, Science, and Related Agencies",
+      "Privacy, Technology, and the Law"
+    ]
+  },
+  "V000128": {
+    "conflict_sectors": [
+      "healthcare",
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "GE",
+      "JNJ"
+    ],
+    "relevant_committees": [
+      "Transportation, Housing and Urban Development, and Related Agencies",
+      "Housing, Transportation, and Community Development",
+      "Africa and Global Health Policy"
+    ]
+  },
+  "P000595": {
+    "conflict_sectors": [
+      "energy",
+      "healthcare",
+      "industrials",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "ABBV",
+      "CVS",
+      "GE",
+      "IBM",
+      "INTC",
+      "PFE",
+      "QCOM",
+      "SLB",
+      "T",
+      "UNP",
+      "VZ"
+    ],
+    "relevant_committees": [
+      "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies",
+      "Commerce, Justice, Science, and Related Agencies",
+      "Energy and Water Development",
+      "Senate Committee on Commerce, Science, and Transportation",
+      "Telecommunications and Media",
+      "Science, Manufacturing, and Competitiveness",
+      "Surface Transportation, Freight, Pipelines, and Safety"
+    ]
+  },
+  "S001198": {
+    "conflict_sectors": [
+      "energy",
+      "industrials",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMZN",
+      "CMCSA",
+      "CVX",
+      "DIS",
+      "GOOG",
+      "HON",
+      "META",
+      "MSFT",
+      "NVDA"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Commerce, Science, and Transportation",
+      "Telecommunications and Media",
+      "Surface Transportation, Freight, Pipelines, and Safety",
+      "Senate Committee on Environment and Public Works",
+      "Chemical Safety, Waste Management, Environmental Justice, and Regulatory Oversight",
+      "Transportation and Infrastructure"
+    ]
+  },
+  "K000383": {
+    "conflict_sectors": [
+      "energy"
+    ],
+    "conflict_tickers": [
+      "COP",
+      "SLB",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Energy and Natural Resources",
+      "Energy"
+    ]
+  },
+  "D000622": {
+    "conflict_sectors": [
+      "defense",
+      "industrials",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "CAT",
+      "DIS",
+      "GE",
+      "INTC",
+      "LMT",
+      "VZ"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Armed Services",
+      "Senate Committee on Commerce, Science, and Transportation",
+      "Aviation, Space, and Innovation",
+      "Telecommunications and Media",
+      "Surface Transportation, Freight, Pipelines, and Safety"
+    ]
+  },
+  "R000608": {
+    "conflict_sectors": [
+      "industrials",
+      "media"
+    ],
+    "conflict_tickers": [
+      "GE",
+      "T"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Commerce, Science, and Transportation",
+      "Aviation, Space, and Innovation",
+      "Telecommunications and Media"
+    ]
+  },
+  "T000476": {
+    "conflict_sectors": [
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "CVS"
+    ],
+    "relevant_committees": [
+      "Health Care"
+    ]
+  },
+  "R000618": {
+    "conflict_sectors": [
+      "defense",
+      "financials",
+      "industrials",
+      "realestate"
+    ],
+    "conflict_tickers": [
+      "GD",
+      "PLD",
+      "PNC",
+      "UNP"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Banking, Housing, and Urban Affairs",
+      "National Security and International Trade and Finance",
+      "Transportation and Infrastructure"
+    ]
+  },
+  "M001243": {
+    "conflict_sectors": [
+      "financials"
+    ],
+    "conflict_tickers": [
+      "GS"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Banking, Housing, and Urban Affairs",
+      "National Security and International Trade and Finance"
+    ]
+  },
+  "C001114": {
+    "conflict_sectors": [
+      "energy",
+      "industrials",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMD",
+      "AMZN",
+      "CAT",
+      "CMCSA",
+      "COP",
+      "CRM",
+      "CSX",
+      "CVX",
+      "DIS",
+      "GOOG",
+      "GOOGL",
+      "HON",
+      "INTC",
+      "META",
+      "MSFT",
+      "NVDA",
+      "UNP",
+      "VLO"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Commerce, Science, and Transportation",
+      "Telecommunications and Media",
+      "Consumer Protection, Technology, and Data Privacy",
+      "Senate Committee on Environment and Public Works",
+      "Chemical Safety, Waste Management, Environmental Justice, and Regulatory Oversight",
+      "Clean Air, Climate, and Nuclear Innovation and Safety",
+      "Transportation and Infrastructure"
+    ]
+  },
+  "H000273": {
+    "conflict_sectors": [
+      "energy",
+      "healthcare",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMZN",
+      "CMCSA",
+      "CVX",
+      "DIS",
+      "GOOGL",
+      "INTC",
+      "MRK",
+      "MSFT",
+      "NVDA",
+      "VZ"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Commerce, Science, and Transportation",
+      "Aviation, Space, and Innovation",
+      "Telecommunications and Media",
+      "Consumer Protection, Technology, and Data Privacy",
+      "Science, Manufacturing, and Competitiveness",
+      "Senate Committee on Energy and Natural Resources",
+      "Energy",
+      "Senate Committee on Health, Education, Labor, and Pensions",
+      "Primary Health and Retirement Security"
+    ]
+  },
+  "C001075": {
+    "conflict_sectors": [
+      "energy",
+      "financials",
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "AMGN",
+      "BLK",
+      "COP",
+      "CVS",
+      "CVX",
+      "JNJ",
+      "JPM",
+      "OXY",
+      "PSX",
+      "SLB",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Energy and Natural Resources",
+      "Energy",
+      "Senate Committee on Finance",
+      "Health Care",
+      "Senate Committee on Health, Education, Labor, and Pensions",
+      "Primary Health and Retirement Security"
+    ]
+  },
+  "W000779": {
+    "conflict_sectors": [
+      "energy",
+      "financials",
+      "healthcare",
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "C",
+      "CAT",
+      "FDX",
+      "GE",
+      "LLY",
+      "PFE",
+      "UPS",
+      "V",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Energy and Natural Resources",
+      "Energy",
+      "Senate Committee on Finance",
+      "Energy, Natural Resources, and Infrastructure",
+      "Health Care"
+    ]
+  },
+  "W000802": {
+    "conflict_sectors": [
+      "energy",
+      "financials",
+      "healthcare",
+      "industrials",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ABBV",
+      "AMGN",
+      "AMZN",
+      "AXP",
+      "BAC",
+      "BMY",
+      "C",
+      "CAT",
+      "CMCSA",
+      "COF",
+      "CSX",
+      "CVS",
+      "DIS",
+      "GE",
+      "GILD",
+      "GOOGL",
+      "GS",
+      "HON",
+      "IBM",
+      "INTC",
+      "JNJ",
+      "JPM",
+      "LLY",
+      "MA",
+      "MRK",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "PFE",
+      "QCOM",
+      "QQQ",
+      "SLB",
+      "T",
+      "TSLA",
+      "UNH",
+      "UNP",
+      "USB",
+      "V",
+      "VZ",
+      "WFC"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Environment and Public Works",
+      "Chemical Safety, Waste Management, Environmental Justice, and Regulatory Oversight",
+      "Clean Air, Climate, and Nuclear Innovation and Safety",
+      "Transportation and Infrastructure",
+      "Senate Committee on Finance",
+      "Health Care",
+      "Senate Committee on the Judiciary"
+    ]
+  },
+  "C001056": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL"
+    ],
+    "relevant_committees": [
+      "Privacy, Technology, and the Law"
+    ]
+  },
+  "M001244": {
+    "conflict_sectors": [
+      "healthcare",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AMD",
+      "LLY",
+      "NVDA"
+    ],
+    "relevant_committees": [
+      "Senate Committee on Health, Education, Labor, and Pensions",
+      "Primary Health and Retirement Security",
+      "Privacy, Technology, and the Law",
+      "Senate Special Committee on Aging"
+    ]
+  },
+  "S001213": {
+    "conflict_sectors": [
+      "financials"
+    ],
+    "conflict_tickers": [
+      "JPM",
+      "USB"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services"
+    ]
+  },
+  "M001206": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMZN",
+      "GOOGL",
+      "INTC",
+      "MSFT"
+    ],
+    "relevant_committees": [
+      "Commerce, Justice, Science, and Related Agencies",
+      "Modernization and Innovation"
+    ]
+  },
+  "D000399": {
+    "conflict_sectors": [
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "JNJ"
+    ],
+    "relevant_committees": [
+      "Health"
+    ]
+  },
+  "J000310": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMZN",
+      "AVGO",
+      "CRM",
+      "GOOG",
+      "GOOGL",
+      "IBM",
+      "META",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "TSLA"
+    ],
+    "relevant_committees": [
+      "Emergency Management and Technology"
+    ]
+  },
+  "B001292": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMZN",
+      "GOOG",
+      "MSFT",
+      "NVDA"
+    ],
+    "relevant_committees": [
+      "House Committee on Science, Space, and Technology"
+    ]
+  },
+  "W000821": {
+    "conflict_sectors": [
+      "energy",
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "CAT",
+      "COP",
+      "CSX",
+      "CVX",
+      "UNP",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "House Committee on Natural Resources",
+      "House Committee on Transportation and Infrastructure",
+      "Railroads, Pipelines, and Hazardous Materials",
+      "Water Resources and Environment"
+    ]
+  },
+  "W000804": {
+    "conflict_sectors": [
+      "defense",
+      "energy"
+    ],
+    "conflict_tickers": [
+      "BA",
+      "CVX",
+      "EOG",
+      "LMT",
+      "NOC",
+      "PSX",
+      "SLB",
+      "XLE",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "House Committee on Natural Resources",
+      "House Committee on Armed Services",
+      "Energy and Mineral Resources"
+    ]
+  },
+  "H001094": {
+    "conflict_sectors": [
+      "energy",
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "COP",
+      "CSX",
+      "FDX",
+      "GE",
+      "UPS",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "House Committee on Natural Resources",
+      "House Committee on Transportation and Infrastructure",
+      "Aviation",
+      "Water Resources and Environment"
+    ]
+  },
+  "B000668": {
+    "conflict_sectors": [
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "AMGN"
+    ],
+    "relevant_committees": [
+      "Health"
+    ]
+  },
+  "R000621": {
+    "conflict_sectors": [
+      "energy",
+      "financials",
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "AMGN",
+      "WFC",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "House Committee on Natural Resources",
+      "Health Care and Financial Services"
+    ]
+  },
+  "D000624": {
+    "conflict_sectors": [
+      "energy",
+      "healthcare",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ABBV",
+      "AMGN",
+      "AMZN",
+      "CMCSA",
+      "CVS",
+      "CVX",
+      "DIS",
+      "GOOG",
+      "IBM",
+      "JNJ",
+      "META",
+      "MSFT",
+      "NVDA",
+      "PFE",
+      "QCOM",
+      "SLB",
+      "T",
+      "UNH",
+      "VLO",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "House Committee on Natural Resources",
+      "House Committee on Energy and Commerce",
+      "Energy and Mineral Resources",
+      "Communications and Technology",
+      "Commerce, Manufacturing, and Trade",
+      "Health"
+    ]
+  },
+  "L000590": {
+    "conflict_sectors": [
+      "defense",
+      "energy"
+    ],
+    "conflict_tickers": [
+      "LDOS",
+      "MPC",
+      "NOC",
+      "SAIC",
+      "VLO"
+    ],
+    "relevant_committees": [
+      "House Committee on Natural Resources",
+      "Energy and Mineral Resources",
+      "Defense",
+      "Energy and Water Development and Related Agencies"
+    ]
+  },
+  "L000560": {
+    "conflict_sectors": [
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "FDX",
+      "UNP",
+      "UPS"
+    ],
+    "relevant_committees": [
+      "House Committee on Transportation and Infrastructure"
+    ]
+  },
+  "M001184": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "TSLA"
+    ],
+    "relevant_committees": [
+      "Courts, Intellectual Property, Artificial Intelligence, and the Internet"
+    ]
+  },
+  "R000603": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AMZN",
+      "NVDA"
+    ],
+    "relevant_committees": [
+      "House Committee on Science, Space, and Technology",
+      "Research and Technology"
+    ]
+  },
+  "S001211": {
+    "conflict_sectors": [
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "CAT",
+      "UNP",
+      "UPS"
+    ],
+    "relevant_committees": [
+      "House Committee on Transportation and Infrastructure",
+      "Aviation"
+    ]
+  },
+  "M001196": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AMZN"
+    ],
+    "relevant_committees": [
+      "Cyber, Information Technologies, and Innovation"
+    ]
+  },
+  "W000829": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "ADBE",
+      "MSFT"
+    ],
+    "relevant_committees": [
+      "Innovation, Entrepreneurship, and Workforce Development"
+    ]
+  },
+  "B001327": {
+    "conflict_sectors": [
+      "agriculture",
+      "industrials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ADBE",
+      "ADM",
+      "AMD",
+      "AMZN",
+      "AVGO",
+      "CAT",
+      "CRM",
+      "CSX",
+      "FDX",
+      "GE",
+      "GOOG",
+      "GOOGL",
+      "HON",
+      "IBM",
+      "INTC",
+      "META",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "QCOM",
+      "QQQ",
+      "TSLA",
+      "UNP",
+      "UPS"
+    ],
+    "relevant_committees": [
+      "House Committee on Transportation and Infrastructure",
+      "House Committee on Agriculture",
+      "Commodity Markets, Digital Assets, and Rural Development",
+      "Innovation, Entrepreneurship, and Workforce Development",
+      "Conservation, Research, and Biotechnology",
+      "Aviation"
+    ]
+  },
+  "S001229": {
+    "conflict_sectors": [
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "CAT",
+      "CSX",
+      "GE",
+      "HON",
+      "UNP",
+      "UPS"
+    ],
+    "relevant_committees": [
+      "House Committee on Transportation and Infrastructure",
+      "Aviation",
+      "Railroads, Pipelines, and Hazardous Materials"
+    ]
+  },
+  "T000490": {
+    "conflict_sectors": [
+      "energy"
+    ],
+    "conflict_tickers": [
+      "MPC"
+    ],
+    "relevant_committees": [
+      "Water Resources and Environment"
+    ]
+  },
+  "L000397": {
+    "conflict_sectors": [
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMZN",
+      "CMCSA",
+      "DIS",
+      "GOOGL",
+      "INTC",
+      "MSFT",
+      "QCOM",
+      "T",
+      "TSLA",
+      "VZ"
+    ],
+    "relevant_committees": [
+      "House Committee on Science, Space, and Technology",
+      "House Committee on the Judiciary",
+      "Courts, Intellectual Property, Artificial Intelligence, and the Internet"
+    ]
+  },
+  "R000305": {
+    "conflict_sectors": [
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMD",
+      "DIS",
+      "GOOGL",
+      "MSFT",
+      "ORCL"
+    ],
+    "relevant_committees": [
+      "House Committee on Science, Space, and Technology",
+      "House Committee on the Judiciary",
+      "Courts, Intellectual Property, Artificial Intelligence, and the Internet"
+    ]
+  },
+  "F000472": {
+    "conflict_sectors": [
+      "defense",
+      "healthcare",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMGN",
+      "AMZN",
+      "GD",
+      "GOOG",
+      "GOOGL",
+      "JNJ",
+      "LMT",
+      "MRK",
+      "MSFT",
+      "PFE",
+      "QQQ",
+      "UNH"
+    ],
+    "relevant_committees": [
+      "House Committee on Science, Space, and Technology",
+      "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies",
+      "Military Construction, Veterans Affairs, and Related Agencies"
+    ]
+  },
+  "M001218": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "MSFT"
+    ],
+    "relevant_committees": [
+      "House Committee on Science, Space, and Technology",
+      "Cyber, Information Technologies, and Innovation"
+    ]
+  },
+  "W000830": {
+    "conflict_sectors": [
+      "defense",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "INTC",
+      "LMT",
+      "MSFT",
+      "RTX"
+    ],
+    "relevant_committees": [
+      "House Committee on Science, Space, and Technology",
+      "House Committee on Armed Services",
+      "Cyber, Information Technologies, and Innovation"
+    ]
+  },
+  "B001325": {
+    "conflict_sectors": [
+      "energy",
+      "industrials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "CVX",
+      "MSFT",
+      "SLB",
+      "UPS"
+    ],
+    "relevant_committees": [
+      "House Committee on Science, Space, and Technology",
+      "Energy",
+      "Transportation and Maritime Security",
+      "Research and Technology"
+    ]
+  },
+  "R000612": {
+    "conflict_sectors": [
+      "financials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "BAC",
+      "GOOG",
+      "GOOGL",
+      "MSFT",
+      "WFC"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services",
+      "Conservation, Research, and Biotechnology",
+      "Digital Assets, Financial Technology, and Artificial Intelligence"
+    ]
+  },
+  "N000189": {
+    "conflict_sectors": [
+      "energy",
+      "healthcare",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMD",
+      "AMZN",
+      "AVGO",
+      "COP",
+      "CRM",
+      "GOOGL",
+      "LLY",
+      "MPC",
+      "MSFT",
+      "NVDA",
+      "TSLA",
+      "UNH",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Conservation, Research, and Biotechnology",
+      "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies",
+      "Energy and Water Development and Related Agencies"
+    ]
+  },
+  "C001068": {
+    "conflict_sectors": [
+      "defense",
+      "media"
+    ],
+    "conflict_tickers": [
+      "BA",
+      "CMCSA",
+      "DIS",
+      "NOC",
+      "T"
+    ],
+    "relevant_committees": [
+      "House Committee on the Judiciary",
+      "House Permanent Select Committee on Intelligence",
+      "National Security Agency and Cyber",
+      "Open Source Intelligence"
+    ]
+  },
+  "R000614": {
+    "conflict_sectors": [
+      "media"
+    ],
+    "conflict_tickers": [
+      "T"
+    ],
+    "relevant_committees": [
+      "House Committee on the Judiciary"
+    ]
+  },
+  "L000597": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Courts, Intellectual Property, Artificial Intelligence, and the Internet",
+      "Commerce, Manufacturing, and Trade"
+    ]
+  },
+  "M001217": {
+    "conflict_sectors": [
+      "defense",
+      "media"
+    ],
+    "conflict_tickers": [
+      "CMCSA",
+      "DIS",
+      "LMT",
+      "NOC",
+      "RTX"
+    ],
+    "relevant_committees": [
+      "House Committee on the Judiciary",
+      "Oversight and Intelligence"
+    ]
+  },
+  "G000599": {
+    "conflict_sectors": [
+      "defense",
+      "media"
+    ],
+    "conflict_tickers": [
+      "LMT",
+      "NOC",
+      "PARA",
+      "RTX",
+      "T",
+      "VZ"
+    ],
+    "relevant_committees": [
+      "House Committee on the Judiciary",
+      "Counterterrorism and Intelligence"
+    ]
+  },
+  "C001069": {
+    "conflict_sectors": [
+      "defense"
+    ],
+    "conflict_tickers": [
+      "LMT"
+    ],
+    "relevant_committees": [
+      "House Committee on Armed Services"
+    ]
+  },
+  "K000389": {
+    "conflict_sectors": [
+      "defense",
+      "energy",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMD",
+      "AMZN",
+      "AVGO",
+      "BA",
+      "COP",
+      "CRM",
+      "CVX",
+      "EOG",
+      "GD",
+      "GOOG",
+      "GOOGL",
+      "HAL",
+      "HII",
+      "IBM",
+      "INTC",
+      "LDOS",
+      "LMT",
+      "META",
+      "MPC",
+      "MSFT",
+      "NOC",
+      "NVDA",
+      "ORCL",
+      "OXY",
+      "PSX",
+      "QCOM",
+      "RTX",
+      "SLB",
+      "TSLA",
+      "VLO",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "House Committee on Armed Services",
+      "Economic Growth, Energy Policy, and Regulatory Affairs",
+      "Cybersecurity, Information Technology, and Government Innovation",
+      "Cyber, Information Technologies, and Innovation"
+    ]
+  },
+  "K000375": {
+    "conflict_sectors": [
+      "defense",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "ADBE",
+      "AMZN",
+      "BA",
+      "GOOGL",
+      "MSFT",
+      "NOC",
+      "QCOM"
+    ],
+    "relevant_committees": [
+      "House Committee on Armed Services",
+      "Intelligence and Special Operations",
+      "Cyber, Information Technologies, and Innovation"
+    ]
+  },
+  "F000246": {
+    "conflict_sectors": [
+      "defense",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMZN",
+      "BA",
+      "CRM",
+      "MSFT"
+    ],
+    "relevant_committees": [
+      "House Committee on Armed Services",
+      "House Permanent Select Committee on Intelligence",
+      "Cyber, Information Technologies, and Innovation",
+      "Military Personnel",
+      "Defense Intelligence and Overhead Architecture",
+      "Open Source Intelligence"
+    ]
+  },
+  "C001123": {
+    "conflict_sectors": [
+      "defense",
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "BA",
+      "CAT",
+      "FDX",
+      "GD",
+      "GE",
+      "HON",
+      "LMT",
+      "NOC",
+      "RTX",
+      "UNP",
+      "UPS"
+    ],
+    "relevant_committees": [
+      "House Committee on Armed Services",
+      "Contracting and Infrastructure",
+      "Intelligence and Special Operations",
+      "Military Personnel"
+    ]
+  },
+  "M001239": {
+    "conflict_sectors": [
+      "healthcare",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "META",
+      "UNH"
+    ],
+    "relevant_committees": [
+      "Cybersecurity, Information Technology, and Government Innovation",
+      "Health Care and Financial Services",
+      "Cyber, Information Technologies, and Innovation"
+    ]
+  },
+  "S001148": {
+    "conflict_sectors": [
+      "energy"
+    ],
+    "conflict_tickers": [
+      "PSX"
+    ],
+    "relevant_committees": [
+      "Interior, Environment, and Related Agencies",
+      "Energy and Water Development and Related Agencies"
+    ]
+  },
+  "W000797": {
+    "conflict_sectors": [
+      "energy"
+    ],
+    "conflict_tickers": [
+      "XLE"
+    ],
+    "relevant_committees": [
+      "Energy and Water Development and Related Agencies"
+    ]
+  },
+  "J000295": {
+    "conflict_sectors": [
+      "defense",
+      "financials",
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "BA",
+      "BLK",
+      "C",
+      "GE",
+      "KBE",
+      "UPS"
+    ],
+    "relevant_committees": [
+      "Defense",
+      "Transportation, Housing and Urban Development, and Related Agencies",
+      "Financial Services and General Government"
+    ]
+  },
+  "F000462": {
+    "conflict_sectors": [
+      "defense",
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "ABBV",
+      "CVS",
+      "GD",
+      "JNJ",
+      "LDOS",
+      "LMT",
+      "MRK",
+      "NOC",
+      "PFE",
+      "SAIC"
+    ],
+    "relevant_committees": [
+      "Labor, Health and Human Services, Education, and Related Agencies",
+      "National Security, Department of State, and Related Programs"
+    ]
+  },
+  "R000609": {
+    "conflict_sectors": [
+      "defense",
+      "industrials",
+      "realestate"
+    ],
+    "conflict_tickers": [
+      "CAT",
+      "CCI",
+      "GD",
+      "GE",
+      "LMT",
+      "PLD",
+      "RTX"
+    ],
+    "relevant_committees": [
+      "Transportation, Housing and Urban Development, and Related Agencies",
+      "Military Construction, Veterans Affairs, and Related Agencies"
+    ]
+  },
+  "L000595": {
+    "conflict_sectors": [
+      "agriculture",
+      "defense",
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "ABBV",
+      "AMGN",
+      "BA",
+      "BMY",
+      "CF",
+      "PFE",
+      "UNH"
+    ],
+    "relevant_committees": [
+      "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies",
+      "Labor, Health and Human Services, Education, and Related Agencies",
+      "National Security, Department of State, and Related Programs"
+    ]
+  },
+  "G000591": {
+    "conflict_sectors": [
+      "defense",
+      "energy"
+    ],
+    "conflict_tickers": [
+      "CVX",
+      "GD",
+      "VLO",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "Energy and Water Development and Related Agencies",
+      "Military Construction, Veterans Affairs, and Related Agencies"
+    ]
+  },
+  "G000597": {
+    "conflict_sectors": [
+      "financials"
+    ],
+    "conflict_tickers": [
+      "BAC"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services"
+    ]
+  },
+  "P000048": {
+    "conflict_sectors": [
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "DIS",
+      "MSFT"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Communications and Technology"
+    ]
+  },
+  "L000562": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "NVDA"
+    ],
+    "relevant_committees": [
+      "Digital Assets, Financial Technology, and Artificial Intelligence"
+    ]
+  },
+  "F000450": {
+    "conflict_sectors": [
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "ABBV",
+      "AMGN",
+      "BMY",
+      "JNJ",
+      "MRK",
+      "PFE"
+    ],
+    "relevant_committees": [
+      "Health, Employment, Labor, and Pensions"
+    ]
+  },
+  "P000609": {
+    "conflict_sectors": [
+      "energy",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMZN",
+      "AVGO",
+      "GOOGL",
+      "MPC",
+      "MSFT",
+      "VLO"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Economic Growth, Energy Policy, and Regulatory Affairs",
+      "Energy",
+      "Environment"
+    ]
+  },
+  "S000250": {
+    "conflict_sectors": [
+      "defense",
+      "financials",
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "ABBV",
+      "AXP",
+      "BA",
+      "BAC",
+      "CVS",
+      "GS",
+      "JNJ",
+      "JPM",
+      "LLY",
+      "LMT",
+      "MA",
+      "PNC",
+      "UNH",
+      "V"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services",
+      "Health Care and Financial Services",
+      "National Security, Illicit Finance, and International Financial Institutions"
+    ]
+  },
+  "D000032": {
+    "conflict_sectors": [
+      "defense",
+      "financials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AMZN",
+      "AVGO",
+      "GOOG",
+      "JPM",
+      "LMT",
+      "MA",
+      "NVDA",
+      "V"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services",
+      "Military and Foreign Affairs",
+      "Digital Assets, Financial Technology, and Artificial Intelligence"
+    ]
+  },
+  "T000480": {
+    "conflict_sectors": [
+      "financials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMZN",
+      "BAC",
+      "CRM",
+      "MSFT"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services",
+      "Digital Assets, Financial Technology, and Artificial Intelligence"
+    ]
+  },
+  "P000034": {
+    "conflict_sectors": [
+      "energy"
+    ],
+    "conflict_tickers": [
+      "CVX"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce"
+    ]
+  },
+  "C001066": {
+    "conflict_sectors": [
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "DIS",
+      "INTC",
+      "T",
+      "VZ"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Communications and Technology",
+      "Commerce, Manufacturing, and Trade"
+    ]
+  },
+  "R000599": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "MSFT"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Communications and Technology"
+    ]
+  },
+  "C001120": {
+    "conflict_sectors": [
+      "defense",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMZN",
+      "BA",
+      "GOOG",
+      "META",
+      "TSLA"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "House Permanent Select Committee on Intelligence",
+      "Central Intelligence Agency",
+      "Defense Intelligence and Overhead Architecture"
+    ]
+  },
+  "P000608": {
+    "conflict_sectors": [
+      "energy",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMZN",
+      "CMCSA",
+      "DIS",
+      "EOG",
+      "GOOG",
+      "MSFT",
+      "ORCL",
+      "QCOM",
+      "VZ"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Energy",
+      "Environment",
+      "Communications and Technology"
+    ]
+  },
+  "A000372": {
+    "conflict_sectors": [
+      "energy",
+      "healthcare",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "ABBV",
+      "AMGN",
+      "AMZN",
+      "DIS",
+      "GOOGL",
+      "JNJ",
+      "MRK",
+      "MSFT",
+      "PFE",
+      "PSX",
+      "VZ",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Energy",
+      "Communications and Technology",
+      "Health, Employment, Labor, and Pensions"
+    ]
+  },
+  "S001216": {
+    "conflict_sectors": [
+      "healthcare",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "BMY",
+      "CVS",
+      "GOOGL",
+      "IBM",
+      "TSLA"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Commerce, Manufacturing, and Trade",
+      "Health"
+    ]
+  },
+  "H001086": {
+    "conflict_sectors": [
+      "energy",
+      "healthcare",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ABBV",
+      "ADBE",
+      "AMZN",
+      "AVGO",
+      "BMY",
+      "CVS",
+      "CVX",
+      "EOG",
+      "GOOG",
+      "GOOGL",
+      "JNJ",
+      "META",
+      "MRK",
+      "MSFT",
+      "ORCL",
+      "QCOM",
+      "SLB",
+      "UNH"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Energy",
+      "Health"
+    ]
+  },
+  "F000468": {
+    "conflict_sectors": [
+      "healthcare",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "MSFT",
+      "UNH"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Health"
+    ]
+  },
+  "J000307": {
+    "conflict_sectors": [
+      "energy",
+      "healthcare",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ABBV",
+      "AMD",
+      "AMZN",
+      "AVGO",
+      "BMY",
+      "COP",
+      "CVX",
+      "EOG",
+      "GOOG",
+      "GOOGL",
+      "IBM",
+      "JNJ",
+      "META",
+      "MRK",
+      "MSFT",
+      "NVDA",
+      "UNH",
+      "VLO",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Energy",
+      "Commerce, Manufacturing, and Trade",
+      "Health"
+    ]
+  },
+  "L000601": {
+    "conflict_sectors": [
+      "energy",
+      "healthcare",
+      "media",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMZN",
+      "BMY",
+      "CRM",
+      "DIS",
+      "GOOGL",
+      "LLY",
+      "MSFT",
+      "NVDA",
+      "PFE",
+      "PSX",
+      "UNH",
+      "XOM"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Environment",
+      "Communications and Technology",
+      "Health"
+    ]
+  },
+  "M001227": {
+    "conflict_sectors": [
+      "media"
+    ],
+    "conflict_tickers": [
+      "VZ"
+    ],
+    "relevant_committees": [
+      "Communications and Technology"
+    ]
+  },
+  "K000398": {
+    "conflict_sectors": [
+      "healthcare",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "ADBE",
+      "AMZN",
+      "GOOG",
+      "JNJ",
+      "MSFT",
+      "ORCL"
+    ],
+    "relevant_committees": [
+      "House Committee on Energy and Commerce",
+      "Communications and Technology",
+      "Commerce, Manufacturing, and Trade",
+      "Health"
+    ]
+  },
+  "K000376": {
+    "conflict_sectors": [
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "UNH"
+    ],
+    "relevant_committees": [
+      "Health"
+    ]
+  },
+  "S001156": {
+    "conflict_sectors": [
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "PFE"
+    ],
+    "relevant_committees": [
+      "Health"
+    ]
+  },
+  "H001082": {
+    "conflict_sectors": [
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "JNJ",
+      "UNH"
+    ],
+    "relevant_committees": [
+      "Health"
+    ]
+  },
+  "M001205": {
+    "conflict_sectors": [
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "ABBV",
+      "AMGN",
+      "BMY",
+      "CVS",
+      "GILD",
+      "JNJ",
+      "MRK",
+      "PFE"
+    ],
+    "relevant_committees": [
+      "Health"
+    ]
+  },
+  "E000296": {
+    "conflict_sectors": [
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "ABBV",
+      "CVS",
+      "PFE"
+    ],
+    "relevant_committees": [
+      "Health",
+      "Work and Welfare"
+    ]
+  },
+  "M001213": {
+    "conflict_sectors": [
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "JNJ"
+    ],
+    "relevant_committees": [
+      "Health"
+    ]
+  },
+  "H001072": {
+    "conflict_sectors": [
+      "financials"
+    ],
+    "conflict_tickers": [
+      "SCHW",
+      "V",
+      "WFC"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services"
+    ]
+  },
+  "G000583": {
+    "conflict_sectors": [
+      "defense",
+      "financials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "ADBE",
+      "AMD",
+      "AMZN",
+      "AVGO",
+      "BA",
+      "BLK",
+      "COF",
+      "CRM",
+      "GD",
+      "GOOG",
+      "GOOGL",
+      "GS",
+      "IBM",
+      "INTC",
+      "JPM",
+      "MA",
+      "META",
+      "MS",
+      "MSFT",
+      "NOC",
+      "NVDA",
+      "ORCL",
+      "QCOM",
+      "RTX",
+      "SCHW",
+      "TSLA",
+      "V",
+      "WFC"
+    ],
+    "relevant_committees": [
+      "House Permanent Select Committee on Intelligence",
+      "House Committee on Financial Services",
+      "National Security, Illicit Finance, and International Financial Institutions",
+      "Digital Assets, Financial Technology, and Artificial Intelligence",
+      "Defense Intelligence and Overhead Architecture",
+      "National Security Agency and Cyber"
+    ]
+  },
+  "W000816": {
+    "conflict_sectors": [
+      "defense",
+      "financials"
+    ],
+    "conflict_tickers": [
+      "JPM",
+      "RTX",
+      "TFC"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services",
+      "National Security, Illicit Finance, and International Financial Institutions"
+    ]
+  },
+  "M001204": {
+    "conflict_sectors": [
+      "financials"
+    ],
+    "conflict_tickers": [
+      "JPM",
+      "V"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services"
+    ]
+  },
+  "T000486": {
+    "conflict_sectors": [
+      "defense",
+      "financials",
+      "realestate",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMT",
+      "AVGO",
+      "BAC",
+      "BLK",
+      "C",
+      "CRM",
+      "EQIX",
+      "GOOGL",
+      "GS",
+      "JPM",
+      "LMT",
+      "META",
+      "MS",
+      "MSFT",
+      "NOC",
+      "NVDA",
+      "ORCL",
+      "PLD",
+      "QCOM",
+      "USB"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services",
+      "National Security, Illicit Finance, and International Financial Institutions",
+      "Digital Assets, Financial Technology, and Artificial Intelligence",
+      "Housing and Insurance"
+    ]
+  },
+  "F000110": {
+    "conflict_sectors": [
+      "financials"
+    ],
+    "conflict_tickers": [
+      "JPM"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services"
+    ]
+  },
+  "M001136": {
+    "conflict_sectors": [
+      "defense",
+      "financials",
+      "healthcare"
+    ],
+    "conflict_tickers": [
+      "ABBV",
+      "AMGN",
+      "AXP",
+      "BAC",
+      "BLK",
+      "CVS",
+      "GS",
+      "JNJ",
+      "JPM",
+      "LLY",
+      "MA",
+      "MRK",
+      "NOC",
+      "PFE",
+      "SAIC",
+      "SCHW",
+      "UNH",
+      "V"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services",
+      "Health, Employment, Labor, and Pensions",
+      "National Security, Illicit Finance, and International Financial Institutions"
+    ]
+  },
+  "M001236": {
+    "conflict_sectors": [
+      "defense",
+      "financials",
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "BLK",
+      "GD",
+      "INTC"
+    ],
+    "relevant_committees": [
+      "House Committee on Financial Services",
+      "Digital Assets, Financial Technology, and Artificial Intelligence"
+    ]
+  },
+  "M001220": {
+    "conflict_sectors": [
+      "technology"
+    ],
+    "conflict_tickers": [
+      "AAPL",
+      "AMZN",
+      "MSFT",
+      "NVDA",
+      "TSLA"
+    ],
+    "relevant_committees": [
+      "Innovation, Entrepreneurship, and Workforce Development"
+    ]
+  },
+  "M001234": {
+    "conflict_sectors": [
+      "healthcare",
+      "industrials"
+    ],
+    "conflict_tickers": [
+      "JNJ",
+      "MRK",
+      "UPS"
+    ],
+    "relevant_committees": [
+      "Contracting and Infrastructure",
+      "Health"
+    ]
+  }
+}
