@@ -26,6 +26,7 @@ import {
 import { generatePersonSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 import { Container } from "@/components/ui";
 import { VerdictBanner } from "@/components/VerdictBanner";
+import { CareerTimeline } from "@/components/CareerTimeline";
 
 export async function generateMetadata({ params }: CabinetMemberPageProps): Promise<Metadata> {
   const { role } = await params;
@@ -296,22 +297,14 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
             </div>
           )}
           
-          {/* Prior Positions */}
+          {/* Career Timeline */}
           {official.prior_positions.length > 0 && (
-            <div className="bg-white rounded-2xl border border-slate-200 p-8 mb-12">
-              <h2 className="text-2xl font-black text-slate-900 mb-6">
-                Prior Experience
-              </h2>
-              <div className="space-y-4">
-                {official.prior_positions.map((position, idx) => (
-                  <div key={idx} className="border-l-4 border-blue-200 pl-4 py-2">
-                    <h3 className="font-bold text-slate-900">{position.title}</h3>
-                    <p className="text-slate-700">{position.organization}</p>
-                    <p className="text-sm text-slate-500">{position.years}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <CareerTimeline
+              priorPositions={official.prior_positions}
+              currentRole={member.role}
+              currentDepartment={member.department}
+              rdEntry={rdEntry}
+            />
           )}
           
           {/* Policy Positions */}
