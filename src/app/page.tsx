@@ -597,6 +597,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ══ FEATURED INVESTIGATION BANNER ══════════════════════════════════════ */}
+      <section className="border-b border-slate-800" style={{ backgroundColor: "#0F172A" }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <span
+                className="text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded"
+                style={{ backgroundColor: "#DC2626", color: "#FFF" }}
+              >
+                Investigation
+              </span>
+              <span className="text-slate-500 hidden sm:inline text-xs">FEATURED</span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p
+                className="text-sm font-semibold leading-snug"
+                style={{ fontFamily: "'Lora', Georgia, serif", color: "#F1F5F9" }}
+              >
+                The Epstein Files — Mapping the network, the cover-up, and the powerful people who knew
+              </p>
+              <p className="text-xs mt-0.5" style={{ color: "#64748B" }}>
+                Document explorer · Flight logs · Connection graph · 1,000+ pages released March 2026
+              </p>
+            </div>
+            <Link
+              href="/deep-dives"
+              className="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded border transition-colors whitespace-nowrap"
+              style={{ borderColor: "#DC2626", color: "#FCA5A5", backgroundColor: "transparent" }}
+            >
+              Read investigation →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ══ CONGRESSIONAL LEADERSHIP AT A GLANCE ══════════════════════════════ */}
       <section className="section-shell-tight border-b border-slate-200 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
