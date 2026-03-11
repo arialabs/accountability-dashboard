@@ -1,8 +1,14 @@
 /**
  * ConflictDataViz — Pure SVG data visualization for the homepage.
  * Shows real committee conflict + suspicious trading stats by party.
+ * Numbers are computed dynamically from the source JSON files so they
+ * never go stale when the data pipeline re-runs.
  * No charting library required.
  */
+
+import committeeConflictsData from "@/data/committee-conflicts.json";
+import tradingSummariesData from "@/data/trading-summaries.json";
+import membersData from "@/data/members.json";
 
 const W = 280;
 const BAR_H = 22;
@@ -18,6 +24,52 @@ interface BarDatum {
   color: string;
   textColor: string;
 }
+
+// ── Compute live stats from source data ──────────────────────────────────────
+
+type MemberRecord = { bioguide_id: string; party: string };
+const memberPartyMap = new Map<string, string>(
+  (membersData as MemberRecord[]).map((m) => [m.bioguide_id, m.party])
+);
+
+type TradingSummary = { overall_suspicion_level: string };
+const tradingSummaries = tradingSummariesData as Record<string, TradingSummary>;
+
+// Committee conflicts: members in committee-conflicts.json with a known party
+const conflictConflictsRaw = committeeConflictsData as Record<string, unknown>;
+const conflictByParty: Record<string, number> = {};
+for (const bid of Object.keys(conflictConflictsRaw)) {
+  const party = memberPartyMap.get(bid);
+  if (party) conflictByParty[party] = (conflictByParty[party] ?? 0) + 1;
+}
+const CONFLICT_TOTAL = Object.values(conflictByParty).reduce((s, n) => s + n, 0);
+
+// High suspicion traders: overall_suspicion_level === 'high', with a known party
+const suspicionByParty: Record<string, number> = {};
+for (const [bid, summary] of Object.entries(tradingSummaries)) {
+  if (summary.overall_suspicion_level === "high") {
+    const party = memberPartyMap.get(bid);
+    if (party) suspicionByParty[party] = (suspicionByParty[party] ?? 0) + 1;
+  }
+}
+const SUSPICION_TOTAL = Object.values(suspicionByParty).reduce((s, n) => s + n, 0);
+
+// Build BarDatum arrays ordered R → D → I
+function buildBarData(
+  byParty: Record<string, number>,
+  total: number
+): BarDatum[] {
+  return [
+    { label: "R", value: byParty["R"] ?? 0, max: total, color: "#EF4444", textColor: "#B91C1C" },
+    { label: "D", value: byParty["D"] ?? 0, max: total, color: "#3B82F6", textColor: "#1D4ED8" },
+    { label: "I", value: byParty["I"] ?? 0, max: total, color: "#8B5CF6", textColor: "#6D28D9" },
+  ].filter((d) => d.value > 0);
+}
+
+const CONFLICT_DATA = buildBarData(conflictByParty, CONFLICT_TOTAL);
+const SUSPICION_DATA = buildBarData(suspicionByParty, SUSPICION_TOTAL);
+
+// ── Components ───────────────────────────────────────────────────────────────
 
 function HorizBar({ datum, y }: { datum: BarDatum; y: number }) {
   const barW = Math.max(2, (datum.value / datum.max) * BAR_AREA);
@@ -55,20 +107,6 @@ function HorizBar({ datum, y }: { datum: BarDatum; y: number }) {
     </g>
   );
 }
-
-// ── Committee conflict data (pre-computed, updated when committee-conflicts.json changes)
-const CONFLICT_DATA: BarDatum[] = [
-  { label: "R", value: 64, max: 117, color: "#EF4444", textColor: "#B91C1C" },
-  { label: "D", value: 52, max: 117, color: "#3B82F6", textColor: "#1D4ED8" },
-  { label: "I", value:  1, max: 117, color: "#8B5CF6", textColor: "#6D28D9" },
-];
-
-// ── High suspicion traders
-const SUSPICION_DATA: BarDatum[] = [
-  { label: "R", value: 70, max: 133, color: "#EF4444", textColor: "#B91C1C" },
-  { label: "D", value: 62, max: 133, color: "#3B82F6", textColor: "#1D4ED8" },
-  { label: "I", value:  1, max: 133, color: "#8B5CF6", textColor: "#6D28D9" },
-];
 
 interface ChartPanelProps {
   title: string;
@@ -127,15 +165,15 @@ export default function ConflictDataViz() {
           title="Committee Conflicts"
           subtitle="Members trading in sectors they oversee"
           data={CONFLICT_DATA}
-          total={117}
+          total={CONFLICT_TOTAL}
           accentColor="#DC2626"
         />
         <div className="w-px bg-slate-100 self-stretch hidden sm:block" />
         <ChartPanel
           title="High Suspicion Traders"
-          subtitle="Members with ≥75% flagged trades"
+          subtitle="Members with high-suspicion trade patterns"
           data={SUSPICION_DATA}
-          total={133}
+          total={SUSPICION_TOTAL}
           accentColor="#DC2626"
         />
       </div>

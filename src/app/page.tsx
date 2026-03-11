@@ -225,10 +225,10 @@ const SPOTLIGHT_SUPPORTING = [
 
 // ── Stats Bar Data ───────────────────────────────────────────────────────────
 const SITE_STATS = [
-  { value: "535",   label: "Members of Congress tracked", indicator: "neutral" as const, featured: false },
-  { value: "26",    label: "Executive branch officials",  indicator: "up" as const,      featured: false, context: "Updated daily" },
-  { value: "81K+",  label: "Votes analyzed",              indicator: "up" as const,      featured: true,  context: "2.4M recorded total" },
-  { value: "66",    label: "Reps breaking with their party", indicator: "flag" as const, featured: false, context: "Voting independently" },
+  { value: "535",   label: "Members of Congress tracked",    indicator: "neutral" as const, featured: false, href: "/congress" },
+  { value: "26",    label: "Executive branch officials",     indicator: "up" as const,      featured: false, context: "Updated daily",        href: "/executive" },
+  { value: "81K+",  label: "Votes analyzed",                 indicator: "up" as const,      featured: true,  context: "2.4M recorded total",  href: "/bills" },
+  { value: "66",    label: "Reps breaking with their party", indicator: "flag" as const,    featured: false, context: "Voting independently",  href: "/congress/independence" },
 ];
 
 const TRUST_SIGNALS = [
@@ -592,6 +592,7 @@ export default function Home() {
                 indicator={stat.indicator}
                 context={stat.context}
                 featured={stat.featured}
+                href={stat.href}
               />
             ))}
           </div>

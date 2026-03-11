@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import AnimatedCounter from './AnimatedCounter';
 
@@ -14,6 +15,8 @@ interface AccountabilityDataCardProps {
   light?: boolean;
   /** Optional: make this stat visually dominant (larger number) */
   featured?: boolean;
+  /** Optional: when set, wraps the entire card in a Next.js Link */
+  href?: string;
   className?: string;
 }
 
@@ -48,6 +51,7 @@ export default function AccountabilityDataCard({
   context,
   light = false,
   featured = false,
+  href,
   className = '',
 }: AccountabilityDataCardProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -77,10 +81,10 @@ export default function AccountabilityDataCard({
     '';
 
   if (light) {
-    return (
+    const lightInner = (
       <div
         ref={ref}
-        className={`border-l-2 pl-4 py-2 ${className}`}
+        className={`border-l-2 pl-4 py-2 ${href ? 'hover:opacity-80 transition-opacity' : ''} ${className}`}
         style={{ borderColor: 'var(--accent)' }}
       >
         <div
@@ -102,12 +106,13 @@ export default function AccountabilityDataCard({
         )}
       </div>
     );
+    return href ? <Link href={href} className="block">{lightInner}</Link> : lightInner;
   }
 
-  return (
+  const cardInner = (
     <div
       ref={ref}
-      className={`relative overflow-hidden rounded-sm ${className}`}
+      className={`relative overflow-hidden rounded-sm ${href ? 'hover:brightness-125 transition-[filter] duration-150 cursor-pointer' : ''} ${className}`}
       style={{ backgroundColor: '#0F172A', padding: '1.5rem 1.25rem' }}
     >
       {/* Teal left-border brand mark */}
@@ -157,6 +162,23 @@ export default function AccountabilityDataCard({
       {!context && indicator === 'neutral' && (
         <div style={{ height: '1rem' }} />
       )}
+
+      {/* Clickable arrow hint */}
+      {href && (
+        <div
+          className="absolute bottom-2 right-3 text-xs opacity-40"
+          style={{ fontFamily: "'Inter', sans-serif", color: '#5EEAD4' }}
+          aria-hidden="true"
+        >
+          →
+        </div>
+      )}
     </div>
   );
+
+  return href ? (
+    <Link href={href} className="block focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-sm" aria-label={`${label}: ${value} — view details`}>
+      {cardInner}
+    </Link>
+  ) : cardInner;
 }
