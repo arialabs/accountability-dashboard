@@ -20,16 +20,22 @@ const LAST_SYNCED = formatSyncDate(
 export default function DevelopmentBanner() {
   return (
     <div
-      className="border-b py-1 px-4"
+      className="border-b px-4"
       style={{
         backgroundColor: "#F1F5F9",
         borderColor: "#E2E8F0",
         fontFamily: "'JetBrains Mono', monospace",
+        maxHeight: "36px",
+        lineHeight: "36px",
       }}
       role="status"
       aria-label="Site status and data freshness"
     >
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-3 gap-y-0.5 text-center">
+      <div className="max-w-7xl mx-auto flex items-center justify-center gap-x-2 text-center whitespace-nowrap overflow-hidden">
+        <span className="text-[11px]" style={{ color: "#64748B" }}>
+          🚧 Beta
+        </span>
+        <span className="text-slate-300" aria-hidden="true">·</span>
         <span className="text-[11px]" style={{ color: "#64748B" }}>
           Data synced <span className="font-semibold" style={{ color: "#334155" }}>{LAST_SYNCED}</span>
         </span>
