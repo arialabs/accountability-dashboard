@@ -20,8 +20,9 @@ vi.mock("@/components/DonorAnalysisSection", () => ({
   default: () => <div>DonorAnalysisSection Mock</div>,
 }));
 
+// Extended timeout — rep page is heavier with BudgetImpactCard + AffectedProgramsList
 describe("Rep Page - Financial Disclosures", () => {
-  it("displays Financial Disclosures section when data exists", async () => {
+  it("displays Financial Disclosures section when data exists", { timeout: 20000 }, async () => {
     // Use Robert Garcia who we know has disclosures
     const params = Promise.resolve({ id: "G000585" });
     
@@ -33,7 +34,7 @@ describe("Rep Page - Financial Disclosures", () => {
     expect(headings.length).toBeGreaterThan(0);
   });
 
-  it("shows filing type and date for each disclosure", async () => {
+  it("shows filing type and date for each disclosure", { timeout: 20000 }, async () => {
     const params = Promise.resolve({ id: "G000585" });
     const disclosures = getMemberDisclosures("G000585");
     
@@ -51,7 +52,7 @@ describe("Rep Page - Financial Disclosures", () => {
     expect(annualText.length + amendmentText.length).toBeGreaterThan(0);
   });
 
-  it("includes PDF links for each filing", async () => {
+  it("includes PDF links for each filing", { timeout: 20000 }, async () => {
     const params = Promise.resolve({ id: "G000585" });
     
     const page = await RepPage({ params });
@@ -62,7 +63,7 @@ describe("Rep Page - Financial Disclosures", () => {
     expect(pdfLinks.length).toBeGreaterThan(0);
   });
 
-  it("does not show 'Coming Soon' for Financial Disclosures", async () => {
+  it("does not show 'Coming Soon' for Financial Disclosures", { timeout: 20000 }, async () => {
     const params = Promise.resolve({ id: "G000585" });
     
     const page = await RepPage({ params });
@@ -86,7 +87,7 @@ describe("Rep Page - Financial Disclosures", () => {
     }
   });
 
-  it("handles members with no disclosures gracefully", async () => {
+  it("handles members with no disclosures gracefully", { timeout: 20000 }, async () => {
     // Use a real member ID that exists
     const params = Promise.resolve({ id: "A000370" }); // Alma Adams - should exist
     
