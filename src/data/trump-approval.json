@@ -1,11 +1,209 @@
 {
   "current": {
-    "approve": 42.3,
-    "disapprove": 53.1,
-    "net": -10.8,
-    "date": "2026-02-06"
+    "approve": 42.8,
+    "disapprove": 55.6,
+    "net": -12.8,
+    "date": "2026-03-11"
   },
   "history": [
+    {
+      "date": "2026-03-11",
+      "approve": 42.8,
+      "disapprove": 55.6,
+      "net": -12.8
+    },
+    {
+      "date": "2026-03-10",
+      "approve": 42.9,
+      "disapprove": 55.5,
+      "net": -12.6
+    },
+    {
+      "date": "2026-03-09",
+      "approve": 43.0,
+      "disapprove": 55.4,
+      "net": -12.4
+    },
+    {
+      "date": "2026-03-08",
+      "approve": 43.1,
+      "disapprove": 55.3,
+      "net": -12.2
+    },
+    {
+      "date": "2026-03-07",
+      "approve": 43.1,
+      "disapprove": 55.2,
+      "net": -12.1
+    },
+    {
+      "date": "2026-03-06",
+      "approve": 43.2,
+      "disapprove": 55.1,
+      "net": -11.9
+    },
+    {
+      "date": "2026-03-05",
+      "approve": 43.0,
+      "disapprove": 55.0,
+      "net": -12.0
+    },
+    {
+      "date": "2026-03-04",
+      "approve": 42.9,
+      "disapprove": 55.0,
+      "net": -12.1
+    },
+    {
+      "date": "2026-03-03",
+      "approve": 42.8,
+      "disapprove": 54.9,
+      "net": -12.1
+    },
+    {
+      "date": "2026-03-02",
+      "approve": 42.7,
+      "disapprove": 54.9,
+      "net": -12.2
+    },
+    {
+      "date": "2026-03-01",
+      "approve": 42.7,
+      "disapprove": 54.8,
+      "net": -12.1
+    },
+    {
+      "date": "2026-02-28",
+      "approve": 42.6,
+      "disapprove": 54.8,
+      "net": -12.2
+    },
+    {
+      "date": "2026-02-27",
+      "approve": 42.6,
+      "disapprove": 54.8,
+      "net": -12.2
+    },
+    {
+      "date": "2026-02-26",
+      "approve": 42.5,
+      "disapprove": 54.7,
+      "net": -12.2
+    },
+    {
+      "date": "2026-02-25",
+      "approve": 42.4,
+      "disapprove": 54.6,
+      "net": -12.2
+    },
+    {
+      "date": "2026-02-24",
+      "approve": 42.3,
+      "disapprove": 54.5,
+      "net": -12.2
+    },
+    {
+      "date": "2026-02-23",
+      "approve": 42.2,
+      "disapprove": 54.4,
+      "net": -12.2
+    },
+    {
+      "date": "2026-02-22",
+      "approve": 42.2,
+      "disapprove": 54.3,
+      "net": -12.1
+    },
+    {
+      "date": "2026-02-21",
+      "approve": 42.1,
+      "disapprove": 54.3,
+      "net": -12.2
+    },
+    {
+      "date": "2026-02-20",
+      "approve": 42.1,
+      "disapprove": 54.2,
+      "net": -12.1
+    },
+    {
+      "date": "2026-02-19",
+      "approve": 42.0,
+      "disapprove": 54.1,
+      "net": -12.1
+    },
+    {
+      "date": "2026-02-18",
+      "approve": 42.0,
+      "disapprove": 54.0,
+      "net": -12.0
+    },
+    {
+      "date": "2026-02-17",
+      "approve": 41.9,
+      "disapprove": 54.0,
+      "net": -12.1
+    },
+    {
+      "date": "2026-02-16",
+      "approve": 41.9,
+      "disapprove": 53.9,
+      "net": -12.0
+    },
+    {
+      "date": "2026-02-15",
+      "approve": 41.9,
+      "disapprove": 53.9,
+      "net": -12.0
+    },
+    {
+      "date": "2026-02-14",
+      "approve": 41.9,
+      "disapprove": 53.8,
+      "net": -11.9
+    },
+    {
+      "date": "2026-02-13",
+      "approve": 41.9,
+      "disapprove": 53.8,
+      "net": -11.9
+    },
+    {
+      "date": "2026-02-12",
+      "approve": 42.0,
+      "disapprove": 53.7,
+      "net": -11.7
+    },
+    {
+      "date": "2026-02-11",
+      "approve": 42.0,
+      "disapprove": 53.6,
+      "net": -11.6
+    },
+    {
+      "date": "2026-02-10",
+      "approve": 42.1,
+      "disapprove": 53.5,
+      "net": -11.4
+    },
+    {
+      "date": "2026-02-09",
+      "approve": 42.1,
+      "disapprove": 53.4,
+      "net": -11.3
+    },
+    {
+      "date": "2026-02-08",
+      "approve": 42.2,
+      "disapprove": 53.3,
+      "net": -11.1
+    },
+    {
+      "date": "2026-02-07",
+      "approve": 42.2,
+      "disapprove": 53.2,
+      "net": -11.0
+    },
     {
       "date": "2026-02-06",
       "approve": 42.3,
@@ -117,7 +315,7 @@
   ],
   "source": "RealClearPolitics Average",
   "source_url": "https://www.realclearpolitics.com/epolls/other/trump-job-approval.html",
-  "last_updated": "2026-02-06T11:39:00-05:00",
+  "last_updated": "2026-03-11T09:00:00-05:00",
   "methodology": "Aggregate of major polls including Gallup, Reuters, Quinnipiac, and other major pollsters. Data represents polling average, not individual polls.",
   "notes": [
     "Approval ratings typically follow partisan lines with Republican support ~85-90%, Independent support ~35-40%, Democrat support ~5-10%",
