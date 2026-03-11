@@ -13,11 +13,12 @@ describe("Deep Dive Investigation Detail Page", () => {
     it("returns params for all investigations", () => {
       const params = generateStaticParams();
       
-      expect(params).toEqual([
-        { slug: "congressional-stock-trading" },
-        { slug: "pharma-lobbying-drug-prices" },
-        { slug: "defense-contractor-revolving-door" },
-      ]);
+      // Expect all current investigations (order may vary)
+      expect(params).toContainEqual({ slug: "congressional-stock-trading" });
+      expect(params).toContainEqual({ slug: "pharma-lobbying-drug-prices" });
+      expect(params).toContainEqual({ slug: "defense-contractor-revolving-door" });
+      expect(params).toContainEqual({ slug: "covid-insider-trading" });
+      expect(params.length).toBe(4);
     });
   });
 

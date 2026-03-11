@@ -7,9 +7,11 @@ describe('Committees Data', () => {
     expect(Array.isArray(committeesData.committees)).toBe(true);
   });
 
-  it('has member_assignments array', () => {
+  it('has member_assignments object (keyed by bioguide_id)', () => {
     expect(committeesData).toHaveProperty('member_assignments');
-    expect(Array.isArray(committeesData.member_assignments)).toBe(true);
+    // member_assignments is a dict: { [bioguide_id]: assignment[] }
+    expect(typeof committeesData.member_assignments).toBe('object');
+    expect(Array.isArray(committeesData.member_assignments)).toBe(false);
   });
 
   describe('committees', () => {
@@ -41,25 +43,34 @@ describe('Committees Data', () => {
 
   describe('member_assignments', () => {
     it('each assignment has required fields', () => {
-      if (committeesData.member_assignments.length > 0) {
-        for (const assignment of committeesData.member_assignments) {
-          expect(assignment).toHaveProperty('bioguide_id');
-          expect(assignment).toHaveProperty('committee_id');
-          expect(assignment).toHaveProperty('role');
+      const entries = Object.entries(committeesData.member_assignments as Record<string, { committee_id: string; role: string }[]>);
+      if (entries.length > 0) {
+        for (const [bioguideId, assignments] of entries) {
+          expect(bioguideId).toMatch(/^[A-Z]\d{6}$/);
+          for (const assignment of assignments) {
+            expect(assignment).toHaveProperty('committee_id');
+            expect(assignment).toHaveProperty('role');
+          }
         }
       }
     });
 
     it('role values are valid', () => {
-      const validRoles = ['chair', 'ranking_member', 'vice_chair', 'member'];
-      for (const assignment of committeesData.member_assignments) {
-        expect(validRoles).toContain(assignment.role);
+      // Roles use full words (chairman, vice_chair, etc.)
+      const validRoles = ['chair', 'ranking_member', 'vice_chair', 'member',
+        'chairman', 'chairwoman', 'vice_chairman', 'vice_chairwoman',
+        'cochairman', 'cochairwoman', 'ex_officio', 'ranking_minority_member'];
+      const entries = Object.values(committeesData.member_assignments as Record<string, { role: string }[]>);
+      for (const assignments of entries) {
+        for (const assignment of assignments) {
+          expect(validRoles).toContain(assignment.role);
+        }
       }
     });
 
     it('bioguide IDs are valid format', () => {
-      for (const assignment of committeesData.member_assignments) {
-        expect(assignment.bioguide_id).toMatch(/^[A-Z]\d{6}$/);
+      for (const bioguideId of Object.keys(committeesData.member_assignments as Record<string, unknown>)) {
+        expect(bioguideId).toMatch(/^[A-Z]\d{6}$/);
       }
     });
   });
@@ -70,17 +81,19 @@ describe('Committees Data', () => {
       expect(committeesData.committees.length).toBeGreaterThan(20);
     });
 
-    it('has assignments array', () => {
-      // member_assignments may be empty when synced without assignment data
-      expect(Array.isArray(committeesData.member_assignments)).toBe(true);
+    it('has assignments object', () => {
+      // member_assignments is a dict keyed by bioguide_id
+      expect(typeof committeesData.member_assignments).toBe('object');
+      expect(Object.keys(committeesData.member_assignments as Record<string, unknown>).length).toBeGreaterThan(0);
     });
 
     it('has valid member assignments when present', () => {
-      // If assignments exist, they should have valid bioguide IDs
-      const uniqueMembers = new Set(
-        committeesData.member_assignments.map((a: { bioguide_id: string }) => a.bioguide_id)
-      );
-      expect(uniqueMembers.size).toBeGreaterThanOrEqual(0);
+      // Keys are bioguide IDs, values are arrays of assignments
+      const keys = Object.keys(committeesData.member_assignments as Record<string, unknown>);
+      expect(keys.length).toBeGreaterThanOrEqual(0);
+      if (keys.length > 0) {
+        expect(keys[0]).toMatch(/^[A-Z]\d{6}$/);
+      }
     });
   });
 

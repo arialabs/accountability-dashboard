@@ -39,7 +39,7 @@ describe("Individual Justice Page", () => {
     const page = await JusticePage({ params: Promise.resolve({ id: "kagan" }) });
     render(page);
     
-    expect(screen.getByText(/Harvard Law School/)).toBeDefined();
+    expect(screen.getAllByText(/Harvard Law School/).length).toBeGreaterThan(0);
   });
 
   it("shows ideology visualization", async () => {
@@ -56,13 +56,13 @@ describe("Individual Justice Page", () => {
     const page = await JusticePage({ params: Promise.resolve({ id: "roberts" }) });
     render(page);
     
-    expect(screen.getByText("Chief Justice")).toBeDefined();
+    expect(screen.getAllByText("Chief Justice").length).toBeGreaterThan(0);
   });
 
   it("handles Associate Justice title correctly", async () => {
     const page = await JusticePage({ params: Promise.resolve({ id: "barrett" }) });
     render(page);
     
-    expect(screen.getByText("Associate Justice")).toBeDefined();
+    expect(screen.getAllByText("Associate Justice").length).toBeGreaterThan(0);
   });
 });

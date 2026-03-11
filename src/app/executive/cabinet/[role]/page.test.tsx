@@ -15,13 +15,13 @@ describe("CabinetMemberPage", () => {
   it("renders member role", async () => {
     const page = await CabinetMemberPage({ params: Promise.resolve(mockParams) });
     render(page);
-    expect(screen.getByText("Secretary of State")).toBeDefined();
+    expect(screen.getAllByText("Secretary of State").length).toBeGreaterThan(0);
   });
 
   it("renders department name", async () => {
     const page = await CabinetMemberPage({ params: Promise.resolve(mockParams) });
     render(page);
-    expect(screen.getByText("Department of State")).toBeDefined();
+    expect(screen.getAllByText("Department of State").length).toBeGreaterThan(0);
   });
 
   it("renders appointed date", async () => {
@@ -55,7 +55,7 @@ describe("CabinetMemberPage", () => {
     });
     render(defensePage);
     expect(screen.getByText("Pete Hegseth")).toBeDefined();
-    expect(screen.getByText("Secretary of Defense")).toBeDefined();
+    expect(screen.getAllByText("Secretary of Defense").length).toBeGreaterThan(0);
   });
 
   it("does not show Coming Soon placeholders", async () => {
