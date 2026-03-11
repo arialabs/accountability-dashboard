@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-01",
+    "description": "State-level constituent polling data on key policy issues",
+    "methodology": "Compiled from nationally representative polls with state-level crosstabs. State estimates derived from multilevel regression and poststratification (MRP) models where direct state polling unavailable."
+  },
+  "policies": {
+    "aca_protection": {
+      "label": "Protect ACA / Pre-existing Conditions",
+      "category": "Healthcare",
+      "description": "Maintain Affordable Care Act protections including coverage for pre-existing conditions",
+      "source": "KFF Health Tracking Poll 2023",
+      "national_support_pct": 75,
+      "state_support": {
+        "AL": 58, "AK": 62, "AZ": 72, "AR": 56, "CA": 84,
+        "CO": 78, "CT": 82, "DE": 79, "FL": 71, "GA": 65,
+        "HI": 86, "ID": 54, "IL": 78, "IN": 63, "IA": 66,
+        "KS": 62, "KY": 60, "LA": 59, "ME": 76, "MD": 83,
+        "MA": 86, "MI": 74, "MN": 76, "MS": 56, "MO": 64,
+        "MT": 61, "NE": 60, "NV": 73, "NH": 76, "NJ": 80,
+        "NM": 77, "NY": 82, "NC": 68, "ND": 55, "OH": 68,
+        "OK": 55, "OR": 80, "PA": 73, "RI": 83, "SC": 60,
+        "SD": 56, "TN": 58, "TX": 66, "UT": 62, "VT": 84,
+        "VA": 75, "WA": 82, "WV": 54, "WI": 72, "WY": 50
+      },
+      "vote_mappings": [
+        {
+          "vote_id": "119-House-348",
+          "bill": "HR6703",
+          "short_label": "Lower Health Care Premiums Act",
+          "pro_constituent_vote": "Nay",
+          "explanation": "Repeals ACA premium subsidies and marketplace protections"
+        },
+        {
+          "vote_id": "119-House-361",
+          "bill": "HR498",
+          "short_label": "Do No Harm in Medicaid Act",
+          "pro_constituent_vote": "Nay",
+          "explanation": "Cuts Medicaid eligibility and benefits"
+        },
+        {
+          "vote_id": "119-Senate-667",
+          "bill": "SJRES84",
+          "short_label": "CRA: Overturn ACA Market Rule",
+          "pro_constituent_vote": "Nay",
+          "explanation": "Congressional Review Act resolution to overturn ACA marketplace integrity rules"
+        },
+        {
+          "vote_id": "119-Senate-677",
+          "bill": "HR7148",
+          "short_label": "Rescind Medicaid Funding",
+          "pro_constituent_vote": "Nay",
+          "explanation": "Amendment to rescind ICE and Medicaid appropriations"
+        }
+      ]
+    },
+    "climate_action": {
+      "label": "Federal Climate Legislation",
+      "category": "Climate & Environment",
+      "description": "Support federal action to address climate change including emission reduction targets",
+      "source": "Yale Climate Opinion Maps 2024",
+      "national_support_pct": 70,
+      "state_support": {
+        "AL": 50, "AK": 48, "AZ": 67, "AR": 48, "CA": 82,
+        "CO": 74, "CT": 79, "DE": 75, "FL": 66, "GA": 59,
+        "HI": 84, "ID": 46, "IL": 73, "IN": 56, "IA": 58,
+        "KS": 54, "KY": 49, "LA": 50, "ME": 76, "MD": 79,
+        "MA": 82, "MI": 68, "MN": 71, "MS": 49, "MO": 56,
+        "MT": 52, "NE": 52, "NV": 68, "NH": 74, "NJ": 77,
+        "NM": 72, "NY": 79, "NC": 63, "ND": 44, "OH": 61,
+        "OK": 45, "OR": 78, "PA": 67, "RI": 80, "SC": 54,
+        "SD": 46, "TN": 52, "TX": 60, "UT": 56, "VT": 82,
+        "VA": 71, "WA": 80, "WV": 43, "WI": 66, "WY": 38
+      },
+      "vote_mappings": [
+        {
+          "vote_id": "119-Senate-663",
+          "bill": "SJRES86",
+          "short_label": "CRA: Block EPA Haze Rule",
+          "pro_constituent_vote": "Nay",
+          "explanation": "CRA resolution to overturn EPA regional haze air quality rule"
+        },
+        {
+          "vote_id": "119-Senate-622",
+          "bill": "SJRES76",
+          "short_label": "CRA: Block EPA Methane Rule",
+          "pro_constituent_vote": "Nay",
+          "explanation": "CRA resolution to overturn EPA oil and gas methane emissions standards"
+        },
+        {
+          "vote_id": "119-House-365",
+          "bill": "HR6938",
+          "short_label": "Cut EPA/Interior Funding",
+          "pro_constituent_vote": "Nay",
+          "explanation": "Appropriations bill cutting EPA and Interior Department environmental programs"
+        },
+        {
+          "vote_id": "119-House-367",
+          "bill": "HR6938",
+          "short_label": "Environment Appropriations",
+          "pro_constituent_vote": "Nay",
+          "explanation": "Final passage of bill reducing environmental protection funding"
+        }
+      ]
+    },
+    "drug_price_negotiation": {
+      "label": "Medicare Drug Price Negotiation",
+      "category": "Healthcare",
+      "description": "Allow Medicare to negotiate prescription drug prices directly with pharmaceutical companies",
+      "source": "KFF Health Tracking Poll 2023",
+      "national_support_pct": 83,
+      "state_support": {
+        "AL": 74, "AK": 76, "AZ": 83, "AR": 73, "CA": 88,
+        "CO": 85, "CT": 87, "DE": 84, "FL": 82, "GA": 77,
+        "HI": 89, "ID": 72, "IL": 84, "IN": 77, "IA": 79,
+        "KS": 76, "KY": 75, "LA": 74, "ME": 85, "MD": 87,
+        "MA": 89, "MI": 83, "MN": 84, "MS": 73, "MO": 78,
+        "MT": 76, "NE": 75, "NV": 82, "NH": 84, "NJ": 86,
+        "NM": 83, "NY": 87, "NC": 79, "ND": 73, "OH": 81,
+        "OK": 73, "OR": 86, "PA": 83, "RI": 87, "SC": 75,
+        "SD": 74, "TN": 75, "TX": 79, "UT": 76, "VT": 88,
+        "VA": 83, "WA": 87, "WV": 73, "WI": 82, "WY": 70
+      },
+      "vote_mappings": [
+        {
+          "vote_id": "119-House-348",
+          "bill": "HR6703",
+          "short_label": "Repeal Drug Price Negotiation",
+          "pro_constituent_vote": "Nay",
+          "explanation": "Bill repeals Medicare drug price negotiation provisions from the Inflation Reduction Act"
+        }
+      ]
+    },
+    "government_transparency": {
+      "label": "Government Ethics & Transparency",
+      "category": "Government Ethics",
+      "description": "Support stronger ethics rules, financial disclosure requirements, and government transparency measures",
+      "source": "Pew Research Center 2023",
+      "national_support_pct": 82,
+      "state_support": {
+        "AL": 72, "AK": 78, "AZ": 82, "AR": 71, "CA": 86,
+        "CO": 84, "CT": 85, "DE": 82, "FL": 80, "GA": 76,
+        "HI": 87, "ID": 74, "IL": 82, "IN": 76, "IA": 78,
+        "KS": 76, "KY": 74, "LA": 73, "ME": 84, "MD": 86,
+        "MA": 88, "MI": 81, "MN": 83, "MS": 71, "MO": 77,
+        "MT": 78, "NE": 76, "NV": 80, "NH": 83, "NJ": 84,
+        "NM": 82, "NY": 85, "NC": 78, "ND": 74, "OH": 79,
+        "OK": 73, "OR": 85, "PA": 81, "RI": 86, "SC": 74,
+        "SD": 74, "TN": 74, "TX": 77, "UT": 78, "VT": 87,
+        "VA": 83, "WA": 86, "WV": 72, "WI": 81, "WY": 73
+      },
+      "vote_mappings": [
+        {
+          "vote_id": "119-House-288",
+          "bill": "HR4405",
+          "short_label": "Epstein Files Transparency Act",
+          "pro_constituent_vote": "Yea",
+          "explanation": "Release documents related to Jeffrey Epstein investigation"
+        }
+      ]
+    },
+    "lower_healthcare_costs": {
+      "label": "Lower Healthcare Costs",
+      "category": "Healthcare",
+      "description": "Support legislation to reduce healthcare premiums, out-of-pocket costs, and expand affordable coverage",
+      "source": "Gallup 2024",
+      "national_support_pct": 79,
+      "state_support": {
+        "AL": 68, "AK": 72, "AZ": 78, "AR": 67, "CA": 85,
+        "CO": 81, "CT": 83, "DE": 80, "FL": 77, "GA": 73,
+        "HI": 86, "ID": 66, "IL": 80, "IN": 72, "IA": 74,
+        "KS": 72, "KY": 70, "LA": 69, "ME": 81, "MD": 84,
+        "MA": 86, "MI": 78, "MN": 80, "MS": 67, "MO": 73,
+        "MT": 71, "NE": 70, "NV": 77, "NH": 80, "NJ": 83,
+        "NM": 79, "NY": 83, "NC": 75, "ND": 67, "OH": 76,
+        "OK": 67, "OR": 82, "PA": 78, "RI": 84, "SC": 70,
+        "SD": 68, "TN": 69, "TX": 74, "UT": 72, "VT": 85,
+        "VA": 79, "WA": 83, "WV": 66, "WI": 77, "WY": 63
+      },
+      "vote_mappings": [
+        {
+          "vote_id": "119-House-348",
+          "bill": "HR6703",
+          "short_label": "Lower Health Care Premiums Act",
+          "pro_constituent_vote": "Nay",
+          "explanation": "Despite its name, this bill repeals ACA premium subsidies that currently lower costs for millions"
+        },
+        {
+          "vote_id": "119-Senate-644",
+          "bill": "S3385",
+          "short_label": "Extend Premium Tax Credits",
+          "pro_constituent_vote": "Yea",
+          "explanation": "Extends enhanced health care premium tax credits that reduce insurance costs"
+        },
+        {
+          "vote_id": "119-Senate-643",
+          "bill": "S3386",
+          "short_label": "Health Savings Accounts Expansion",
+          "pro_constituent_vote": "Yea",
+          "explanation": "Provides health savings account contributions and reduces healthcare costs"
+        }
+      ]
+    },
+    "national_security": {
+      "label": "Strong National Defense",
+      "category": "National Security",
+      "description": "Support adequate defense funding and military readiness",
+      "source": "Gallup 2024",
+      "national_support_pct": 68,
+      "state_support": {
+        "AL": 78, "AK": 80, "AZ": 72, "AR": 77, "CA": 56,
+        "CO": 67, "CT": 60, "DE": 64, "FL": 74, "GA": 76,
+        "HI": 58, "ID": 78, "IL": 62, "IN": 74, "IA": 72,
+        "KS": 76, "KY": 76, "LA": 77, "ME": 63, "MD": 62,
+        "MA": 55, "MI": 68, "MN": 66, "MS": 79, "MO": 74,
+        "MT": 77, "NE": 76, "NV": 68, "NH": 66, "NJ": 63,
+        "NM": 67, "NY": 58, "NC": 74, "ND": 78, "OH": 71,
+        "OK": 80, "OR": 58, "PA": 69, "RI": 59, "SC": 78,
+        "SD": 78, "TN": 77, "TX": 76, "UT": 78, "VT": 54,
+        "VA": 74, "WA": 59, "WV": 77, "WI": 68, "WY": 80
+      },
+      "vote_mappings": [
+        {
+          "vote_id": "119-Senate-660",
+          "bill": "PN121",
+          "short_label": "Confirm Asst. Secretary of Defense",
+          "pro_constituent_vote": "Yea",
+          "explanation": "Confirmation of Assistant Secretary of Defense nominee"
+        }
+      ]
+    }
+  }
+}

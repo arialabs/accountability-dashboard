@@ -28,6 +28,8 @@ import { getRecentVotesForMember } from "@/lib/live-votes";
 import LatestNews from "@/components/LatestNews";
 import { getConflictCallouts } from "@/lib/conflict-callouts";
 import { loadDonorPercentiles } from "@/lib/donor-percentiles";
+import { getConstituentAlignment } from "@/lib/constituent-alignment";
+import RepresentsYouSection from "@/components/RepresentsYouSection";
 import { RepVerdictBadge } from "@/components/RepVerdictBadge";
 
 import keyVotesData from "@/data/key-votes.json";
@@ -208,6 +210,9 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
 
   // Alignment data (used for rating schema + social share text)
   const alignmentEnhanced = getMemberAlignmentEnhanced(id);
+
+  // Constituent alignment — "Represents You?" polling vs. voting comparison
+  const constituentAlignment = getConstituentAlignment(id);
 
   // Build list of sections that have no data yet for the subtle footer notice
   const emptySections: string[] = [];
@@ -424,6 +429,18 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
               finance={finance}
               memberName={member.full_name}
             />
+          </div>
+        )}
+
+        {/* Constituent Alignment — "Represents You?" section (#111) */}
+        {constituentAlignment && constituentAlignment.totalVotesScored > 0 && (
+          <div className="mb-8">
+            <ErrorBoundary context="constituent alignment">
+              <RepresentsYouSection
+                alignment={constituentAlignment}
+                memberName={member.full_name}
+              />
+            </ErrorBoundary>
           </div>
         )}
 
