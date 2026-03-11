@@ -28,6 +28,8 @@ import { Container } from "@/components/ui";
 import { VerdictBanner } from "@/components/VerdictBanner";
 import { CareerTimeline } from "@/components/CareerTimeline";
 import { AgencyBudget } from "@/components/AgencyBudget";
+import AffectedProgramsList from "@/components/AffectedProgramsList";
+import affectedProgramsData from "@/data/affected-programs.json";
 
 export async function generateMetadata({ params }: CabinetMemberPageProps): Promise<Metadata> {
   const { role } = await params;
@@ -298,6 +300,25 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
             </div>
           )}
           
+          {/* Affected Programs */}
+          {(() => {
+            const cabinetPrograms = affectedProgramsData.programs.filter(
+              (p) => p.cabinet_ids?.includes(role)
+            );
+            if (cabinetPrograms.length === 0) return null;
+            return (
+              <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 mb-12">
+                <h2 className="text-2xl font-black text-slate-900 mb-4">
+                  Affected Federal Programs
+                </h2>
+                <p className="text-sm text-slate-600 mb-4">
+                  Programs under {member.department} affected by executive orders.
+                </p>
+                <AffectedProgramsList programs={cabinetPrograms as Parameters<typeof AffectedProgramsList>[0]["programs"]} />
+              </div>
+            );
+          })()}
+
           {/* Career Timeline */}
           {official.prior_positions.length > 0 && (
             <CareerTimeline

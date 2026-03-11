@@ -3,9 +3,13 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import ordersData from "@/data/executive-orders.json";
+import budgetImpactsData from "@/data/budget-impacts.json";
+import affectedProgramsData from "@/data/affected-programs.json";
 import { getEODonorBenefits, getDonorBenefitStats, formatDonorAmount } from "@/lib/eo-donor-benefits";
 import type { EODonorTag } from "@/lib/eo-donor-benefits";
 import DonorAlertBadge from "@/components/DonorAlertBadge";
+import BudgetImpactCard from "@/components/BudgetImpactCard";
+import AffectedProgramsList from "@/components/AffectedProgramsList";
 
 interface ExecutiveOrder {
   document_number: string;
@@ -51,6 +55,21 @@ for (const order of orders) {
   const tag = getEODonorBenefits(order);
   if (tag) {
     donorTagMap.set(order.document_number, tag);
+  }
+}
+
+// Pre-compute budget impact map
+const budgetImpactMap = new Map<string, (typeof budgetImpactsData.by_eo_number)[keyof typeof budgetImpactsData.by_eo_number]>();
+for (const [, impact] of Object.entries(budgetImpactsData.by_eo_number)) {
+  budgetImpactMap.set(impact.eo_number, impact);
+}
+
+// Pre-compute affected programs by EO number
+const programsByEO = new Map<string, typeof affectedProgramsData.programs>();
+for (const program of affectedProgramsData.programs) {
+  for (const eoNum of program.eo_numbers) {
+    if (!programsByEO.has(eoNum)) programsByEO.set(eoNum, []);
+    programsByEO.get(eoNum)!.push(program);
   }
 }
 
@@ -375,6 +394,24 @@ export default function ExecutiveOrdersPage() {
                         {donorTag && isExpanded && (
                           <DonorAlertBadge tag={donorTag} />
                         )}
+
+                        {/* Budget impact inline badge */}
+                        {(() => {
+                          const eoNum = String(order.eo_number);
+                          const impact = budgetImpactMap.get(eoNum);
+                          const programs = programsByEO.get(eoNum);
+                          if (!impact && !programs) return null;
+                          return (
+                            <div onClick={(e) => e.preventDefault()}>
+                              {impact && <BudgetImpactCard impact={impact as Parameters<typeof BudgetImpactCard>[0]["impact"]} />}
+                              {programs && programs.length > 0 && (
+                                <div className="mt-2">
+                                  <AffectedProgramsList programs={programs as Parameters<typeof AffectedProgramsList>[0]["programs"]} maxItems={2} />
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })()}
                       </div>
 
                       <div className="flex-shrink-0 text-right">

@@ -1,0 +1,175 @@
+{
+  "last_updated": "2026-03-11",
+  "programs": [
+    {
+      "program_name": "USAID Foreign Assistance",
+      "agency": "U.S. Agency for International Development",
+      "annual_budget_usd": 42000000000,
+      "status": "eliminated",
+      "eo_numbers": ["14169"],
+      "description": "Global development and humanitarian assistance programs including PEPFAR (HIV/AIDS), food security, democracy promotion, and disaster relief across 100+ countries.",
+      "affected_beneficiaries_count": 300000000,
+      "cabinet_ids": ["secretary-of-state"]
+    },
+    {
+      "program_name": "Federal DEI Offices & Programs",
+      "agency": "Office of Personnel Management (all agencies)",
+      "annual_budget_usd": 680000000,
+      "status": "eliminated",
+      "eo_numbers": ["14151", "14173"],
+      "description": "Diversity, equity, and inclusion offices across all federal agencies, including training programs, reporting requirements, and dedicated staff positions.",
+      "affected_beneficiaries_count": 2200000,
+      "cabinet_ids": []
+    },
+    {
+      "program_name": "EPA Clean Air & Water Regulations",
+      "agency": "Environmental Protection Agency",
+      "annual_budget_usd": 4200000000,
+      "status": "reduced",
+      "eo_numbers": ["14154", "14162"],
+      "description": "Clean Air Act and Clean Water Act enforcement, emissions standards, and environmental monitoring programs. Reduced scope under energy deregulation orders.",
+      "affected_beneficiaries_count": 330000000,
+      "cabinet_ids": ["administrator-of-the-environmental-protection-agency"]
+    },
+    {
+      "program_name": "Border Security & Wall Construction",
+      "agency": "Department of Homeland Security",
+      "annual_budget_usd": 15800000000,
+      "status": "expanded",
+      "eo_numbers": ["14165", "14159"],
+      "description": "CBP operations, border wall construction, surveillance technology, and additional border patrol agent hiring. Significantly expanded under border security EOs.",
+      "affected_beneficiaries_count": 330000000,
+      "cabinet_ids": ["secretary-of-homeland-security"]
+    },
+    {
+      "program_name": "ICE Enforcement & Detention",
+      "agency": "Department of Homeland Security",
+      "annual_budget_usd": 18500000000,
+      "status": "expanded",
+      "eo_numbers": ["14159", "14165"],
+      "description": "Immigration and Customs Enforcement operations including interior enforcement, detention facilities (private and federal), and deportation flights. Detention costs ~$150/day per detainee.",
+      "affected_beneficiaries_count": 11000000,
+      "cabinet_ids": ["secretary-of-homeland-security"]
+    },
+    {
+      "program_name": "WHO Membership & Contributions",
+      "agency": "Department of State / HHS",
+      "annual_budget_usd": 693000000,
+      "status": "eliminated",
+      "eo_numbers": ["14155"],
+      "description": "US assessed and voluntary contributions to the World Health Organization for global health security, pandemic preparedness, and disease surveillance.",
+      "affected_beneficiaries_count": 7800000000,
+      "cabinet_ids": ["secretary-of-health-and-human-services", "secretary-of-state"]
+    },
+    {
+      "program_name": "Paris Agreement Climate Finance",
+      "agency": "Department of State / EPA",
+      "annual_budget_usd": 840000000,
+      "status": "eliminated",
+      "eo_numbers": ["14162"],
+      "description": "US commitments under the Paris Climate Agreement including Green Climate Fund contributions and bilateral climate finance to developing nations.",
+      "affected_beneficiaries_count": 7800000000,
+      "cabinet_ids": ["secretary-of-state"]
+    },
+    {
+      "program_name": "PEPFAR (HIV/AIDS Relief)",
+      "agency": "Department of State",
+      "annual_budget_usd": 6500000000,
+      "status": "at_risk",
+      "eo_numbers": ["14169"],
+      "description": "President's Emergency Plan for AIDS Relief — the largest global health program in history. Provides antiretroviral treatment to 20M+ people across 50+ countries. At risk under foreign aid review.",
+      "affected_beneficiaries_count": 20000000,
+      "cabinet_ids": ["secretary-of-state"]
+    },
+    {
+      "program_name": "Federal Workforce (Schedule F Reclassification)",
+      "agency": "Office of Personnel Management",
+      "annual_budget_usd": 0,
+      "status": "at_risk",
+      "eo_numbers": ["14171", "14170"],
+      "description": "Reclassification of up to 50,000 federal employees from career civil service to at-will 'Schedule F' positions, removing job protections for policy-influencing roles.",
+      "affected_beneficiaries_count": 50000,
+      "cabinet_ids": []
+    },
+    {
+      "program_name": "DOGE Government Efficiency Initiative",
+      "agency": "Executive Office of the President",
+      "annual_budget_usd": 450000000,
+      "status": "expanded",
+      "eo_numbers": ["14158"],
+      "description": "Department of Government Efficiency initiative to identify waste and reduce federal spending. Claims $2T in potential savings; independent estimates suggest $55B over 10 years is more realistic.",
+      "affected_beneficiaries_count": 330000000,
+      "cabinet_ids": []
+    },
+    {
+      "program_name": "Refugee Resettlement Program",
+      "agency": "Department of State / HHS",
+      "annual_budget_usd": 2800000000,
+      "status": "eliminated",
+      "eo_numbers": ["14163"],
+      "description": "Federal refugee admissions and resettlement program including housing, job training, and social services for legally admitted refugees. Admissions reduced from 125,000 to near zero.",
+      "affected_beneficiaries_count": 125000,
+      "cabinet_ids": ["secretary-of-state", "secretary-of-health-and-human-services"]
+    },
+    {
+      "program_name": "Federal Clean Energy Incentives",
+      "agency": "Department of Energy",
+      "annual_budget_usd": 8200000000,
+      "status": "reduced",
+      "eo_numbers": ["14154", "14156"],
+      "description": "IRA-funded clean energy tax credits, DOE loan programs, and renewable energy research grants. Some programs paused or defunded under energy emergency declaration.",
+      "affected_beneficiaries_count": 15000000,
+      "cabinet_ids": ["secretary-of-energy"]
+    },
+    {
+      "program_name": "Federal Affirmative Action Compliance",
+      "agency": "Department of Labor / EEOC",
+      "annual_budget_usd": 520000000,
+      "status": "eliminated",
+      "eo_numbers": ["14173"],
+      "description": "OFCCP contractor compliance, EEOC affirmative action enforcement, and federal contractor diversity requirements. Executive orders rescinded requirements dating to the 1960s.",
+      "affected_beneficiaries_count": 26000000,
+      "cabinet_ids": ["secretary-of-labor"]
+    },
+    {
+      "program_name": "Coal Power Plant Subsidies",
+      "agency": "Department of Energy",
+      "annual_budget_usd": 640000000,
+      "status": "expanded",
+      "eo_numbers": ["14386"],
+      "description": "New subsidies and regulatory relief for coal-fired power plants designated as critical to national defense. Includes exemptions from emissions standards and grid priority mandates.",
+      "affected_beneficiaries_count": 330000000,
+      "cabinet_ids": ["secretary-of-energy"]
+    },
+    {
+      "program_name": "Alaska Resource Development",
+      "agency": "Department of the Interior",
+      "annual_budget_usd": 160000000,
+      "status": "expanded",
+      "eo_numbers": ["14153"],
+      "description": "Expedited permitting for oil, gas, and mineral extraction on federal lands in Alaska including ANWR. Fast-tracks environmental reviews and opens previously protected areas.",
+      "affected_beneficiaries_count": 733000,
+      "cabinet_ids": ["secretary-of-the-interior"]
+    },
+    {
+      "program_name": "Cartel Counter-Terrorism Operations",
+      "agency": "Department of Defense / DOJ",
+      "annual_budget_usd": 2100000000,
+      "status": "expanded",
+      "eo_numbers": ["14157"],
+      "description": "Military and law enforcement operations against cartels designated as Foreign Terrorist Organizations. Includes expanded intelligence operations, sanctions enforcement, and cross-border operations.",
+      "affected_beneficiaries_count": 330000000,
+      "cabinet_ids": ["secretary-of-defense", "attorney-general"]
+    },
+    {
+      "program_name": "Birthright Citizenship Legal Defense",
+      "agency": "Department of Justice",
+      "annual_budget_usd": 640000000,
+      "status": "expanded",
+      "eo_numbers": ["14160"],
+      "description": "DOJ resources dedicated to defending birthright citizenship restrictions in federal courts. Multiple injunctions issued; cases heading to Supreme Court.",
+      "affected_beneficiaries_count": 4000000,
+      "cabinet_ids": ["attorney-general"]
+    }
+  ]
+}

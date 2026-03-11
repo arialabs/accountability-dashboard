@@ -1,0 +1,296 @@
+{
+  "last_updated": "2026-03-11",
+  "methodology_note": "Estimates compiled from CBO scores, OMB projections, GAO reports, and credible news analysis. All figures are approximate and represent projected costs/savings over the stated time horizon. Per-taxpayer figures based on ~153 million individual tax filers (IRS 2023).",
+  "us_taxpayer_count": 153000000,
+  "by_eo_number": {
+    "14148": {
+      "eo_number": "14148",
+      "title": "Initial Rescissions of Harmful Executive Orders and Actions",
+      "cost_estimate_usd": 0,
+      "savings_estimate_usd": 2100000000,
+      "time_horizon": "10 years",
+      "confidence": "low",
+      "source": "OMB estimate; regulatory rollback savings are speculative",
+      "methodology": "OMB projected savings from reversing Biden-era regulatory actions. Actual savings depend on which regulations are formally repealed vs. simply unenforced.",
+      "per_taxpayer_usd": -13.73
+    },
+    "14151": {
+      "eo_number": "14151",
+      "title": "Ending Radical and Wasteful Government DEI Programs and Preferencing",
+      "cost_estimate_usd": 350000000,
+      "savings_estimate_usd": 680000000,
+      "time_horizon": "annual",
+      "confidence": "medium",
+      "source": "OPM staffing data; GAO federal program analysis",
+      "methodology": "Savings from eliminating DEI offices across federal agencies (~$680M/yr in staffing and programs). Costs include severance, legal challenges, and reorganization ($350M one-time).",
+      "per_taxpayer_usd": -2.16
+    },
+    "14153": {
+      "eo_number": "14153",
+      "title": "Unleashing Alaska's Extraordinary Resource Potential",
+      "cost_estimate_usd": 800000000,
+      "savings_estimate_usd": 0,
+      "time_horizon": "5 years",
+      "confidence": "medium",
+      "source": "CBO energy development scoring; DOI lease estimates",
+      "methodology": "Federal costs for environmental review fast-tracking, infrastructure support for Arctic drilling. Revenue from lease sales ($1.2B projected) not counted as 'savings' — goes to general fund.",
+      "per_taxpayer_usd": 5.23
+    },
+    "14154": {
+      "eo_number": "14154",
+      "title": "Unleashing American Energy",
+      "cost_estimate_usd": 1200000000,
+      "savings_estimate_usd": 3500000000,
+      "time_horizon": "5 years",
+      "confidence": "medium",
+      "source": "CBO energy regulation scoring; EIA projections",
+      "methodology": "Savings from reduced regulatory compliance costs passed through to consumers. Costs include foregone environmental protections, increased health externalities (EPA estimates), and permitting infrastructure.",
+      "per_taxpayer_usd": -15.03
+    },
+    "14155": {
+      "eo_number": "14155",
+      "title": "Withdrawing the United States From the World Health Organization",
+      "cost_estimate_usd": 0,
+      "savings_estimate_usd": 693000000,
+      "time_horizon": "annual",
+      "confidence": "high",
+      "source": "WHO assessed contributions; State Dept budget",
+      "methodology": "US annual assessed contribution to WHO was ~$693M. Voluntary contributions (~$500M additional) were already frozen. Savings are direct and immediate.",
+      "per_taxpayer_usd": -4.53
+    },
+    "14156": {
+      "eo_number": "14156",
+      "title": "Declaring a National Energy Emergency",
+      "cost_estimate_usd": 2400000000,
+      "savings_estimate_usd": 0,
+      "time_horizon": "2 years",
+      "confidence": "low",
+      "source": "CRS emergency powers analysis; historical emergency spending",
+      "methodology": "Emergency declarations unlock discretionary spending authority. Estimated costs based on expedited permitting, emergency infrastructure projects, and military deployment for energy security. Highly uncertain — depends on how broadly emergency powers are exercised.",
+      "per_taxpayer_usd": 15.69
+    },
+    "14158": {
+      "eo_number": "14158",
+      "title": "Establishing and Implementing the President's \"Department of Government Efficiency\"",
+      "cost_estimate_usd": 450000000,
+      "savings_estimate_usd": 55000000000,
+      "time_horizon": "10 years",
+      "confidence": "low",
+      "source": "DOGE claimed $2T savings; CBO/GAO realistic estimate far lower",
+      "methodology": "DOGE claimed $2T in savings. Independent analysis suggests actual realizable savings of $55B over 10 years from contract renegotiations, IT modernization, and headcount reduction. Setup costs include new office infrastructure, staffing, and technology. The gap between claims and realistic projections is enormous.",
+      "per_taxpayer_usd": -356.86
+    },
+    "14159": {
+      "eo_number": "14159",
+      "title": "Protecting the American People Against Invasion",
+      "cost_estimate_usd": 18500000000,
+      "savings_estimate_usd": 0,
+      "time_horizon": "annual",
+      "confidence": "medium",
+      "source": "DHS budget analysis; ICE detention cost data",
+      "methodology": "Mass deportation operations: ICE detention at ~$150/day/person × projected 500,000 detainees = $27.4B. Offset by existing DHS budget allocation. Additional costs for expanded border patrol, military deployment, and legal proceedings.",
+      "per_taxpayer_usd": 120.92
+    },
+    "14160": {
+      "eo_number": "14160",
+      "title": "Protecting the Meaning and Value of American Citizenship",
+      "cost_estimate_usd": 3200000000,
+      "savings_estimate_usd": 0,
+      "time_horizon": "5 years",
+      "confidence": "medium",
+      "source": "DOJ litigation cost estimates; CRS birthright citizenship analysis",
+      "methodology": "Extensive legal challenges (multiple federal courts have blocked implementation). DOJ litigation costs, state compliance costs, and administrative restructuring of citizenship verification systems.",
+      "per_taxpayer_usd": 20.92
+    },
+    "14162": {
+      "eo_number": "14162",
+      "title": "Putting America First in International Environmental Agreements",
+      "cost_estimate_usd": 0,
+      "savings_estimate_usd": 4200000000,
+      "time_horizon": "5 years",
+      "confidence": "medium",
+      "source": "Paris Agreement contribution commitments; State Dept climate finance",
+      "methodology": "Withdrawing from Paris Agreement eliminates US climate finance commitments (~$4.2B pledged over 5 years). Does not account for potential trade retaliation, carbon border adjustments by EU, or long-term climate damage costs.",
+      "per_taxpayer_usd": -27.45
+    },
+    "14163": {
+      "eo_number": "14163",
+      "title": "Realigning the United States Refugee Admissions Program",
+      "cost_estimate_usd": 0,
+      "savings_estimate_usd": 2800000000,
+      "time_horizon": "annual",
+      "confidence": "medium",
+      "source": "State Dept refugee program budget; HHS refugee resettlement data",
+      "methodology": "Suspension of refugee admissions eliminates resettlement costs (~$2.8B/yr across State, HHS, and local grants). Does not account for economic contributions of refugees or diplomatic costs.",
+      "per_taxpayer_usd": -18.30
+    },
+    "14165": {
+      "eo_number": "14165",
+      "title": "Securing Our Borders",
+      "cost_estimate_usd": 12800000000,
+      "savings_estimate_usd": 0,
+      "time_horizon": "annual",
+      "confidence": "medium",
+      "source": "CBP budget; Army Corps of Engineers wall estimates",
+      "methodology": "Border wall construction ($4.2B/yr), additional CBP agents ($3.1B), military deployment to border ($2.8B), technology and surveillance systems ($2.7B). Based on DHS supplemental budget requests.",
+      "per_taxpayer_usd": 83.66
+    },
+    "14169": {
+      "eo_number": "14169",
+      "title": "Reevaluating and Realigning United States Foreign Aid",
+      "cost_estimate_usd": 0,
+      "savings_estimate_usd": 42000000000,
+      "time_horizon": "annual",
+      "confidence": "high",
+      "source": "USAID budget; State Dept foreign assistance data",
+      "methodology": "Freeze and review of all foreign aid programs. USAID annual budget ~$42B. Actual savings depend on which programs are permanently cut vs. temporarily paused. Global health programs (PEPFAR) particularly at risk.",
+      "per_taxpayer_usd": -274.51
+    },
+    "14170": {
+      "eo_number": "14170",
+      "title": "Reforming the Federal Hiring Process and Restoring Merit to Government Service",
+      "cost_estimate_usd": 580000000,
+      "savings_estimate_usd": 1900000000,
+      "time_horizon": "annual",
+      "confidence": "low",
+      "source": "OPM federal workforce data; CBO government efficiency scoring",
+      "methodology": "Savings from streamlined hiring and workforce reduction through attrition (~$1.9B/yr). Implementation costs include new hiring systems, legal compliance, and transition ($580M).",
+      "per_taxpayer_usd": -8.63
+    },
+    "14171": {
+      "eo_number": "14171",
+      "title": "Restoring Accountability to Policy-Influencing Positions Within the Federal Workforce",
+      "cost_estimate_usd": 250000000,
+      "savings_estimate_usd": 800000000,
+      "time_horizon": "annual",
+      "confidence": "low",
+      "source": "OPM Schedule F analysis; CRS federal workforce report",
+      "methodology": "Reclassifying federal employees as at-will (Schedule F revival). Projected savings from easier termination of high-salary positions. Costs include legal challenges, severance, and institutional knowledge loss.",
+      "per_taxpayer_usd": -3.59
+    },
+    "14173": {
+      "eo_number": "14173",
+      "title": "Ending Illegal Discrimination and Restoring Merit-Based Opportunity",
+      "cost_estimate_usd": 400000000,
+      "savings_estimate_usd": 520000000,
+      "time_horizon": "annual",
+      "confidence": "medium",
+      "source": "DOJ enforcement data; EEOC budget analysis",
+      "methodology": "Savings from reduced federal DEI/affirmative action compliance infrastructure. Costs include DOJ enforcement of new anti-DEI policies, litigation from affected parties, and contractor compliance restructuring.",
+      "per_taxpayer_usd": -0.78
+    },
+    "14174": {
+      "eo_number": "14174",
+      "title": "Revocation of Certain Executive Orders",
+      "cost_estimate_usd": 0,
+      "savings_estimate_usd": 8500000000,
+      "time_horizon": "10 years",
+      "confidence": "low",
+      "source": "Composite CBO analysis of revoked orders",
+      "methodology": "Aggregate savings from revoking 78 Biden-era executive orders. Highly uncertain — many revoked orders had minimal direct spending. Largest savings from halting unfunded climate and equity mandates.",
+      "per_taxpayer_usd": -5.56
+    },
+    "14386": {
+      "eo_number": "14386",
+      "title": "Strengthening United States National Defense With America's Beautiful Clean Coal Power Generation Fleet",
+      "cost_estimate_usd": 6400000000,
+      "savings_estimate_usd": 0,
+      "time_horizon": "10 years",
+      "confidence": "medium",
+      "source": "EIA coal plant analysis; DOE grid reliability data",
+      "methodology": "Subsidies and incentives to maintain aging coal fleet ($4.1B), grid reliability upgrades ($1.5B), and environmental compliance waivers resulting in future cleanup costs ($800M). Coal is currently the most expensive form of new generation per MWh.",
+      "per_taxpayer_usd": 41.83
+    },
+    "14166": {
+      "eo_number": "14166",
+      "title": "Application of Protecting Americans From Foreign Adversary Controlled Applications Act to TikTok",
+      "cost_estimate_usd": 150000000,
+      "savings_estimate_usd": 0,
+      "time_horizon": "2 years",
+      "confidence": "low",
+      "source": "DOJ enforcement estimates; FCC compliance data",
+      "methodology": "Federal enforcement and compliance monitoring costs. Does not account for economic impact on TikTok creators or advertising market shifts.",
+      "per_taxpayer_usd": 0.98
+    },
+    "14157": {
+      "eo_number": "14157",
+      "title": "Designating Cartels and Other Organizations as Foreign Terrorist Organizations",
+      "cost_estimate_usd": 2100000000,
+      "savings_estimate_usd": 0,
+      "time_horizon": "annual",
+      "confidence": "medium",
+      "source": "DOD/DOJ counter-terrorism operations budget; Treasury OFAC enforcement",
+      "methodology": "Expanded counter-terrorism operations targeting cartels: military operations ($1.2B), Treasury sanctions enforcement ($400M), DOJ prosecution ($500M). Triggers additional intelligence and surveillance spending.",
+      "per_taxpayer_usd": 13.73
+    },
+    "14147": {
+      "eo_number": "14147",
+      "title": "Ending the Weaponization of the Federal Government",
+      "cost_estimate_usd": 200000000,
+      "savings_estimate_usd": 0,
+      "time_horizon": "2 years",
+      "confidence": "low",
+      "source": "DOJ reorganization estimates; Inspector General reports",
+      "methodology": "Costs of restructuring federal law enforcement priorities, reassigning personnel, and establishing new oversight mechanisms. Indirect costs from reduced enforcement capacity not included.",
+      "per_taxpayer_usd": 1.31
+    }
+  },
+  "by_category": {
+    "Immigration & Border": {
+      "total_cost_estimate_usd": 34500000000,
+      "total_savings_estimate_usd": 2800000000,
+      "net_cost_usd": 31700000000,
+      "eo_count": 4,
+      "eo_numbers": ["14159", "14160", "14163", "14165"]
+    },
+    "Energy & Environment": {
+      "total_cost_estimate_usd": 10400000000,
+      "total_savings_estimate_usd": 7700000000,
+      "net_cost_usd": 2700000000,
+      "eo_count": 4,
+      "eo_numbers": ["14153", "14154", "14156", "14162"]
+    },
+    "Government Reform": {
+      "total_cost_estimate_usd": 2030000000,
+      "total_savings_estimate_usd": 58900000000,
+      "net_savings_usd": 56870000000,
+      "eo_count": 5,
+      "eo_numbers": ["14151", "14158", "14170", "14171", "14173"]
+    },
+    "National Security": {
+      "total_cost_estimate_usd": 2450000000,
+      "total_savings_estimate_usd": 0,
+      "net_cost_usd": 2450000000,
+      "eo_count": 2,
+      "eo_numbers": ["14147", "14157"]
+    },
+    "Healthcare": {
+      "total_cost_estimate_usd": 0,
+      "total_savings_estimate_usd": 693000000,
+      "net_savings_usd": 693000000,
+      "eo_count": 1,
+      "eo_numbers": ["14155"]
+    },
+    "Foreign Aid": {
+      "total_cost_estimate_usd": 0,
+      "total_savings_estimate_usd": 42000000000,
+      "net_savings_usd": 42000000000,
+      "eo_count": 1,
+      "eo_numbers": ["14169"]
+    },
+    "Technology": {
+      "total_cost_estimate_usd": 150000000,
+      "total_savings_estimate_usd": 0,
+      "net_cost_usd": 150000000,
+      "eo_count": 1,
+      "eo_numbers": ["14166"]
+    },
+    "Other": {
+      "total_cost_estimate_usd": 0,
+      "total_savings_estimate_usd": 10600000000,
+      "net_savings_usd": 10600000000,
+      "eo_count": 2,
+      "eo_numbers": ["14148", "14174"]
+    }
+  }
+}
