@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "prebuild": "node scripts/compute-party-loyalty.mjs && npm run icons:generate && npm run donor-percentiles",
+    "prebuild": "node scripts/compute-party-loyalty.mjs && node scripts/compute-party-breakdown.mjs && npm run icons:generate && npm run donor-percentiles",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",

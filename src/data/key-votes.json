@@ -113,6 +113,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -229,6 +237,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -345,6 +361,14 @@
       "42506": "Yea",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 22,
+      "dem_nay": 23,
+      "rep_yea": 48,
+      "rep_nay": 5,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -461,6 +485,14 @@
       "42506": "Nay",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 45,
+      "rep_nay": 8,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -908,6 +940,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 213,
+      "rep_yea": 215,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -1355,6 +1395,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 213,
+      "rep_yea": 214,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -1802,6 +1850,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 7,
+      "dem_nay": 206,
+      "rep_yea": 213,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -2249,6 +2305,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 149,
+      "dem_nay": 64,
+      "rep_yea": 192,
+      "rep_nay": 24,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -2365,6 +2429,14 @@
       "42506": "Yea",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 35,
+      "dem_nay": 9,
+      "rep_yea": 49,
+      "rep_nay": 4,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -2481,6 +2553,14 @@
       "42506": "Not Voting",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 35,
+      "dem_nay": 9,
+      "rep_yea": 46,
+      "rep_nay": 5,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -2928,6 +3008,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 209,
+      "rep_yea": 213,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -3375,6 +3463,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 210,
+      "rep_yea": 213,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -3822,6 +3918,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 153,
+      "dem_nay": 57,
+      "rep_yea": 188,
+      "rep_nay": 22,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -3938,6 +4042,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -4054,6 +4166,14 @@
       "42506": "Yea",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 35,
+      "dem_nay": 9,
+      "rep_yea": 44,
+      "rep_nay": 3,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -4501,6 +4621,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 204,
+      "dem_nay": 7,
+      "rep_yea": 171,
+      "rep_nay": 40,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -4948,6 +5076,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 209,
+      "dem_nay": 3,
+      "rep_yea": 210,
+      "rep_nay": 3,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -5395,6 +5531,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 206,
+      "dem_nay": 6,
+      "rep_yea": 191,
+      "rep_nay": 22,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -5842,6 +5986,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 211,
+      "rep_yea": 213,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -6289,6 +6441,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 212,
+      "rep_yea": 214,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 0
     }
   },
   {
@@ -6405,6 +6565,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 41,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 50,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -6521,6 +6689,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 6,
+      "dem_nay": 33,
+      "rep_yea": 43,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -6970,6 +7146,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 204,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 211,
+      "other_yea": 0,
+      "other_nay": 1
     }
   },
   {
@@ -7419,6 +7603,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 4,
+      "dem_nay": 201,
+      "rep_yea": 210,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 0
     }
   },
   {
@@ -7535,6 +7727,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 41,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -7651,6 +7851,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 6,
+      "dem_nay": 34,
+      "rep_yea": 51,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -8100,6 +8308,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 203,
+      "rep_yea": 202,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -8549,6 +8765,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 208,
+      "rep_yea": 211,
+      "rep_nay": 1,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -8998,6 +9222,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 210,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 216,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -9447,6 +9679,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 210,
+      "rep_yea": 214,
+      "rep_nay": 1,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -9563,6 +9803,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -9679,6 +9927,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 51,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -9795,6 +10051,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 4,
+      "rep_nay": 48,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -10243,6 +10507,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 205,
+      "rep_yea": 209,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 0
     }
   },
   {
@@ -10691,6 +10963,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 206,
+      "rep_yea": 209,
+      "rep_nay": 3,
+      "other_yea": 1,
+      "other_nay": 0
     }
   },
   {
@@ -10807,6 +11087,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 51,
+      "other_yea": 1,
+      "other_nay": 0
     }
   },
   {
@@ -11256,6 +11544,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 211,
+      "dem_nay": 0,
+      "rep_yea": 214,
+      "rep_nay": 1,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -11705,6 +12001,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 212,
+      "rep_yea": 214,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 1
     }
   },
   {
@@ -12154,6 +12458,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 208,
+      "rep_yea": 211,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 1
     }
   },
   {
@@ -12603,6 +12915,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 6,
+      "dem_nay": 206,
+      "rep_yea": 214,
+      "rep_nay": 2,
+      "other_yea": 2,
+      "other_nay": 1
     }
   },
   {
@@ -12719,6 +13039,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 7,
+      "dem_nay": 38,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -12835,6 +13163,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 7,
+      "dem_nay": 38,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -12951,6 +13287,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 7,
+      "dem_nay": 38,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -13067,6 +13411,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 7,
+      "dem_nay": 38,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -13183,6 +13535,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 3,
+      "dem_nay": 41,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -13299,6 +13659,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 42,
+      "rep_yea": 51,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -13415,6 +13783,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 43,
+      "rep_yea": 51,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -13531,6 +13907,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 3,
+      "dem_nay": 42,
+      "rep_yea": 51,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -13647,6 +14031,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 43,
+      "rep_yea": 51,
+      "rep_nay": 2,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -13763,6 +14155,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 1,
+      "dem_nay": 41,
+      "rep_yea": 48,
+      "rep_nay": 2,
+      "other_yea": 1,
+      "other_nay": 0
     }
   },
   {
@@ -13879,6 +14279,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 42,
+      "rep_yea": 48,
+      "rep_nay": 2,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -13995,6 +14403,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 3,
+      "dem_nay": 41,
+      "rep_yea": 47,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -14111,6 +14527,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 42,
+      "rep_yea": 48,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -14227,6 +14651,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 1,
+      "dem_nay": 42,
+      "rep_yea": 47,
+      "rep_nay": 2,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -14343,6 +14775,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 50,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -14459,6 +14899,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 43,
+      "rep_yea": 51,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -14575,6 +15023,14 @@
       "42506": "Nay",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 9,
+      "dem_nay": 35,
+      "rep_yea": 0,
+      "rep_nay": 52,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -14691,6 +15147,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 26,
+      "dem_nay": 18,
+      "rep_yea": 50,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -14807,6 +15271,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -14923,6 +15395,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 43,
+      "rep_yea": 51,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -15039,6 +15519,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -15155,6 +15643,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 43,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 50,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -15271,6 +15767,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 40,
+      "rep_yea": 49,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -15387,6 +15891,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 43,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -15503,6 +16015,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -15619,6 +16139,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 42,
+      "rep_yea": 51,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -15735,6 +16263,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -15851,6 +16387,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 43,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -15967,6 +16511,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -16083,6 +16635,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 43,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -16199,6 +16759,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 37,
+      "rep_nay": 14,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -16646,6 +17214,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 209,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 216,
+      "other_yea": 1,
+      "other_nay": 2
     }
   },
   {
@@ -17094,6 +17670,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 1,
+      "dem_nay": 209,
+      "rep_yea": 214,
+      "rep_nay": 2,
+      "other_yea": 2,
+      "other_nay": 1
     }
   },
   {
@@ -17210,6 +17794,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 45,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -17326,6 +17918,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 1,
+      "dem_nay": 44,
+      "rep_yea": 43,
+      "rep_nay": 2,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -17774,6 +18374,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 7,
+      "dem_nay": 203,
+      "rep_yea": 215,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -17890,6 +18498,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -18338,6 +18954,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 206,
+      "rep_yea": 212,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -18786,6 +19410,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 209,
+      "rep_yea": 214,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 1
     }
   },
   {
@@ -19234,6 +19866,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 209,
+      "dem_nay": 0,
+      "rep_yea": 4,
+      "rep_nay": 211,
+      "other_yea": 1,
+      "other_nay": 2
     }
   },
   {
@@ -19350,6 +19990,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 51,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -19466,6 +20114,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -19582,6 +20238,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -19698,6 +20362,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -19814,6 +20486,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -19930,6 +20610,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 36,
+      "rep_nay": 15,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -20378,6 +21066,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 209,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 211,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -20826,6 +21522,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 208,
+      "dem_nay": 1,
+      "rep_yea": 0,
+      "rep_nay": 216,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -21274,6 +21978,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 17,
+      "dem_nay": 192,
+      "rep_yea": 213,
+      "rep_nay": 3,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -21720,6 +22432,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 207,
+      "rep_yea": 211,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -22167,6 +22887,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 206,
+      "rep_yea": 208,
+      "rep_nay": 1,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -22614,6 +23342,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 209,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 216,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -23061,6 +23797,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 209,
+      "rep_yea": 212,
+      "rep_nay": 4,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -23177,6 +23921,14 @@
       "42506": "Yea",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 34,
+      "dem_nay": 11,
+      "rep_yea": 48,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -23624,6 +24376,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 209,
+      "rep_yea": 210,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -24071,6 +24831,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 208,
+      "rep_yea": 210,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -24517,6 +25285,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 184,
+      "dem_nay": 20,
+      "rep_yea": 209,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -24633,6 +25409,14 @@
       "42506": "Yea",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 34,
+      "dem_nay": 11,
+      "rep_yea": 49,
+      "rep_nay": 2,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -24749,6 +25533,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 43,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -24865,6 +25657,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 42,
+      "rep_yea": 14,
+      "rep_nay": 37,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -24981,6 +25781,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 43,
+      "rep_yea": 15,
+      "rep_nay": 36,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -25097,6 +25905,14 @@
       "42506": "Yea",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 37,
+      "dem_nay": 6,
+      "rep_yea": 49,
+      "rep_nay": 2,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -25213,6 +26029,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 25,
+      "dem_nay": 17,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -25329,6 +26153,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 22,
+      "dem_nay": 20,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -25445,6 +26277,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -25561,6 +26401,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 43,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -25677,6 +26525,14 @@
       "42506": "Yea",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 40,
+      "dem_nay": 5,
+      "rep_yea": 49,
+      "rep_nay": 2,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -25793,6 +26649,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 48,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -25909,6 +26773,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 49,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -26025,6 +26897,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 50,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -26141,6 +27021,14 @@
       "42506": "Yea",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 40,
+      "dem_nay": 5,
+      "rep_yea": 50,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -26257,6 +27145,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 11,
+      "dem_nay": 34,
+      "rep_yea": 49,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -26705,6 +27601,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 210,
+      "rep_yea": 214,
+      "rep_nay": 2,
+      "other_yea": 2,
+      "other_nay": 1
     }
   },
   {
@@ -27153,6 +28057,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 210,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 217,
+      "other_yea": 1,
+      "other_nay": 2
     }
   },
   {
@@ -27601,6 +28513,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 5,
+      "dem_nay": 205,
+      "rep_yea": 215,
+      "rep_nay": 2,
+      "other_yea": 1,
+      "other_nay": 2
     }
   },
   {
@@ -28049,6 +28969,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 210,
+      "rep_yea": 216,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 1
     }
   },
   {
@@ -28165,6 +29093,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 51,
+      "rep_nay": 2,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -28281,6 +29217,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 8,
+      "dem_nay": 30,
+      "rep_yea": 49,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 1
     }
   },
   {
@@ -28729,6 +29673,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 211,
+      "rep_yea": 213,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -29177,6 +30129,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 211,
+      "rep_yea": 216,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -29293,6 +30253,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -29409,6 +30377,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -29525,6 +30501,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -29641,6 +30625,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -29757,6 +30749,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -29873,6 +30873,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 43,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 50,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -29989,6 +30997,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -30437,6 +31453,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 209,
+      "rep_yea": 209,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 1
     }
   },
   {
@@ -30885,6 +31909,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 209,
+      "rep_yea": 195,
+      "rep_nay": 12,
+      "other_yea": 1,
+      "other_nay": 2
     }
   },
   {
@@ -31001,6 +32033,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -31117,6 +32157,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -31233,6 +32281,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -31349,6 +32405,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -31465,6 +32529,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 50,
+      "rep_nay": 3,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -31581,6 +32653,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 50,
+      "rep_nay": 3,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -31697,6 +32777,14 @@
       "42506": "Nay",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 3,
+      "dem_nay": 42,
+      "rep_yea": 18,
+      "rep_nay": 35,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -31813,6 +32901,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -31929,6 +33025,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -32045,6 +33149,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -32161,6 +33273,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -32277,6 +33397,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 3,
+      "rep_nay": 50,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -32393,6 +33521,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -32509,6 +33645,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 4,
+      "dem_nay": 41,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -32625,6 +33769,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -32741,6 +33893,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 32,
+      "dem_nay": 13,
+      "rep_yea": 8,
+      "rep_nay": 45,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -33189,6 +34349,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 208,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 214,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -33637,6 +34805,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 206,
+      "rep_yea": 214,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -33753,6 +34929,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 8,
+      "dem_nay": 34,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -33869,6 +35053,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 9,
+      "dem_nay": 32,
+      "rep_yea": 48,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -33985,6 +35177,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -34101,6 +35301,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -34549,6 +35757,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 204,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 212,
+      "other_yea": 1,
+      "other_nay": 3
     }
   },
   {
@@ -34997,6 +36213,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 11,
+      "dem_nay": 193,
+      "rep_yea": 210,
+      "rep_nay": 0,
+      "other_yea": 3,
+      "other_nay": 1
     }
   },
   {
@@ -35113,6 +36337,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 37,
+      "dem_nay": 5,
+      "rep_yea": 0,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -35229,6 +36461,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 37,
+      "dem_nay": 5,
+      "rep_yea": 0,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -35677,6 +36917,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 56,
+      "dem_nay": 148,
+      "rep_yea": 208,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -35793,6 +37041,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 39,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -35909,6 +37165,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 41,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -36357,6 +37621,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 197,
+      "dem_nay": 1,
+      "rep_yea": 205,
+      "rep_nay": 2,
+      "other_yea": 3,
+      "other_nay": 0
     }
   },
   {
@@ -36473,6 +37745,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -36589,6 +37869,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 16,
+      "dem_nay": 27,
+      "rep_yea": 49,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -36705,6 +37993,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 19,
+      "dem_nay": 25,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -36821,6 +38117,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 43,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -37269,6 +38573,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 210,
+      "rep_yea": 213,
+      "rep_nay": 1,
+      "other_yea": 3,
+      "other_nay": 1
     }
   },
   {
@@ -37385,6 +38697,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 1,
+      "dem_nay": 42,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -37501,6 +38821,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -37617,6 +38945,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 43,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -37733,6 +39069,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -37849,6 +39193,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 49,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -37965,6 +39317,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -38081,6 +39441,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -38197,6 +39565,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 42,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -38313,6 +39689,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 42,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -38429,6 +39813,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 43,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -38545,6 +39937,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 43,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -38661,6 +40061,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -38777,6 +40185,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 43,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -38893,6 +40309,14 @@
       "42506": "Yea",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 2,
+      "dem_nay": 41,
+      "rep_yea": 49,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -39009,6 +40433,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -39125,6 +40557,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 39,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 1
     }
   },
   {
@@ -39574,6 +41014,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 210,
+      "rep_yea": 213,
+      "rep_nay": 2,
+      "other_yea": 3,
+      "other_nay": 2
     }
   },
   {
@@ -40022,6 +41470,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 210,
+      "rep_yea": 215,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 2
     }
   },
   {
@@ -40471,6 +41927,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 210,
+      "rep_yea": 214,
+      "rep_nay": 3,
+      "other_yea": 2,
+      "other_nay": 2
     }
   },
   {
@@ -40587,6 +42051,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 3,
+      "dem_nay": 42,
+      "rep_yea": 51,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -40703,6 +42175,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 3,
+      "dem_nay": 38,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 1
     }
   },
   {
@@ -40819,6 +42299,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -40935,6 +42423,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 3,
+      "rep_nay": 50,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -41051,6 +42547,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 3,
+      "rep_nay": 50,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -41167,6 +42671,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 3,
+      "rep_nay": 50,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -41283,6 +42795,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -41399,6 +42919,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 3,
+      "rep_nay": 50,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -41515,6 +43043,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -41631,6 +43167,14 @@
       "42506": "Yea",
       "49308": "Not Voting",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 51,
+      "rep_nay": 2,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -41747,6 +43291,14 @@
       "42506": "Yea",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 51,
+      "rep_nay": 2,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -41863,6 +43415,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -41979,6 +43539,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -42095,6 +43663,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -42211,6 +43787,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -42327,6 +43911,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -42443,6 +44035,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 3,
+      "rep_nay": 50,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -42559,6 +44159,14 @@
       "42506": "Yea",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 1
     }
   },
   {
@@ -42675,6 +44283,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 14,
+      "dem_nay": 28,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -42791,6 +44407,14 @@
       "42506": "Nay",
       "49308": "Not Voting",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 14,
+      "dem_nay": 29,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -42907,6 +44531,14 @@
       "42506": "Yea",
       "49308": "Not Voting",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 43,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -43023,6 +44655,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -43469,6 +45109,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 193,
+      "dem_nay": 0,
+      "rep_yea": 191,
+      "rep_nay": 0,
+      "other_yea": 1,
+      "other_nay": 0
     }
   },
   {
@@ -43585,6 +45233,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 1
     }
   },
   {
@@ -43701,6 +45357,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -43817,6 +45481,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 6,
+      "dem_nay": 37,
+      "rep_yea": 50,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -43933,6 +45605,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 6,
+      "dem_nay": 38,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -44049,6 +45729,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 9,
+      "dem_nay": 36,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -44165,6 +45853,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 1,
+      "dem_nay": 44,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 1,
+      "other_nay": 1
     }
   },
   {
@@ -44613,6 +46309,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 211,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 213,
+      "other_yea": 2,
+      "other_nay": 3
     }
   },
   {
@@ -45061,6 +46765,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 1,
+      "dem_nay": 210,
+      "rep_yea": 213,
+      "rep_nay": 1,
+      "other_yea": 3,
+      "other_nay": 2
     }
   },
   {
@@ -45509,6 +47221,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 194,
+      "dem_nay": 1,
+      "rep_yea": 206,
+      "rep_nay": 0,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -45957,6 +47677,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 196,
+      "dem_nay": 7,
+      "rep_yea": 206,
+      "rep_nay": 2,
+      "other_yea": 4,
+      "other_nay": 0
     }
   },
   {
@@ -46405,6 +48133,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 7,
+      "dem_nay": 200,
+      "rep_yea": 207,
+      "rep_nay": 1,
+      "other_yea": 2,
+      "other_nay": 1
     }
   },
   {
@@ -46521,6 +48257,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -46970,6 +48714,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 6,
+      "dem_nay": 202,
+      "rep_yea": 211,
+      "rep_nay": 1,
+      "other_yea": 3,
+      "other_nay": 3
     }
   },
   {
@@ -47086,6 +48838,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -47535,6 +49295,14 @@
       "39301": "Nay",
       "39307": "Nay",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 211,
+      "rep_yea": 214,
+      "rep_nay": 1,
+      "other_yea": 3,
+      "other_nay": 3
     }
   },
   {
@@ -47651,6 +49419,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -47767,6 +49543,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -47883,6 +49667,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -47999,6 +49791,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 24,
+      "rep_nay": 29,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -48115,6 +49915,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -48231,6 +50039,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -48347,6 +50163,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -48463,6 +50287,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -48579,6 +50411,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -48695,6 +50535,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -48811,6 +50659,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -48927,6 +50783,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -49043,6 +50907,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -49159,6 +51031,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -49275,6 +51155,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -49391,6 +51279,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 53,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -49507,6 +51403,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -49623,6 +51527,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 1,
+      "rep_nay": 52,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -49739,6 +51651,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 51,
+      "rep_nay": 2,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -49855,6 +51775,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -49971,6 +51899,14 @@
       "42506": "Nay",
       "49308": "Yea",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 45,
+      "dem_nay": 0,
+      "rep_yea": 2,
+      "rep_nay": 51,
+      "other_yea": 2,
+      "other_nay": 0
     }
   },
   {
@@ -50087,6 +52023,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 50,
+      "rep_nay": 1,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -50536,6 +52480,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 190,
+      "dem_nay": 0,
+      "rep_yea": 194,
+      "rep_nay": 7,
+      "other_yea": 4,
+      "other_nay": 0
     }
   },
   {
@@ -50652,6 +52604,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -50768,6 +52728,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -50884,6 +52852,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -51000,6 +52976,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -51116,6 +53100,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 44,
+      "rep_yea": 51,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -51232,6 +53224,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 3,
+      "dem_nay": 40,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -51348,6 +53348,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 3,
+      "dem_nay": 40,
+      "rep_yea": 53,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -51464,6 +53472,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 50,
+      "rep_nay": 3,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -51580,6 +53596,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 51,
+      "rep_nay": 2,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -51696,6 +53720,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 0,
+      "dem_nay": 45,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -51812,6 +53844,14 @@
       "42506": "Yea",
       "49308": "Nay",
       "49703": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 1,
+      "dem_nay": 43,
+      "rep_yea": 52,
+      "rep_nay": 0,
+      "other_yea": 0,
+      "other_nay": 2
     }
   },
   {
@@ -52261,6 +54301,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 206,
+      "dem_nay": 0,
+      "rep_yea": 211,
+      "rep_nay": 0,
+      "other_yea": 6,
+      "other_nay": 0
     }
   },
   {
@@ -52710,6 +54758,14 @@
       "39301": "Yea",
       "39307": "Yea",
       "91980": "Yea"
+    },
+    "party_breakdown": {
+      "dem_yea": 207,
+      "dem_nay": 0,
+      "rep_yea": 210,
+      "rep_nay": 1,
+      "other_yea": 6,
+      "other_nay": 0
     }
   },
   {
@@ -52825,6 +54881,14 @@
       "42504": "Not Voting",
       "49308": "Yea",
       "49703": "Nay"
+    },
+    "party_breakdown": {
+      "dem_yea": 44,
+      "dem_nay": 0,
+      "rep_yea": 0,
+      "rep_nay": 48,
+      "other_yea": 2,
+      "other_nay": 1
     }
   }
 ]
