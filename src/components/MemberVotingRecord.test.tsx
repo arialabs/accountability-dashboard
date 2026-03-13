@@ -9,16 +9,16 @@ const mockKeyVotes = [
     chamber: "House" as const,
     rollnumber: 1,
     date: "2025-01-20",
-    bill: "H.R. 1",
+    bill: "HR1",
     title: "Healthcare Reform Act",
     description: "A major healthcare bill",
     category: "Healthcare",
     yea_count: 220,
     nay_count: 210,
-    result: "Passed" as const,
+    result: "Passed",
     votes: {
-      "B001234": "Yea",
-      "S005678": "Nay",
+      "99901": "Yea",
+      "99902": "Nay",
     },
   },
   {
@@ -27,16 +27,16 @@ const mockKeyVotes = [
     chamber: "House" as const,
     rollnumber: 2,
     date: "2025-01-21",
-    bill: "H.R. 2",
+    bill: "HR2",
     title: "Climate Action Now",
     description: "Climate legislation",
     category: "Climate & Environment",
     yea_count: 218,
     nay_count: 212,
-    result: "Passed" as const,
+    result: "Passed",
     votes: {
-      "B001234": "Nay",
-      "S005678": "Yea",
+      "99901": "Nay",
+      "99902": "Yea",
     },
   },
   {
@@ -45,16 +45,16 @@ const mockKeyVotes = [
     chamber: "Senate" as const,
     rollnumber: 1,
     date: "2025-01-22",
-    bill: "S. 1",
+    bill: "S1",
     title: "Tax Reform",
     description: "Tax changes",
     category: "Economy & Taxes",
     yea_count: 51,
     nay_count: 49,
-    result: "Passed" as const,
+    result: "Passed",
     votes: {
-      "B001234": "Yea", // House member shouldn't see this
-      "S005678": "Nay",
+      "99901": "Yea", // House member shouldn't see this
+      "99902": "Nay",
     },
   },
 ];
@@ -62,11 +62,12 @@ const mockKeyVotes = [
 describe("MemberVotingRecord", () => {
   it("renders the section title", () => {
     render(
-      <MemberVotingRecord 
-        bioguideId="B001234" 
-        memberName="John Smith" 
-        chamber="House" 
-        keyVotes={mockKeyVotes} 
+      <MemberVotingRecord
+        bioguideId="B001234"
+        icpsrId="99901"
+        memberName="John Smith"
+        chamber="House"
+        keyVotes={mockKeyVotes}
       />
     );
     expect(screen.getByText("🗳️ Key Vote Record")).toBeInTheDocument();
@@ -74,11 +75,12 @@ describe("MemberVotingRecord", () => {
 
   it("shows member's name in subtitle", () => {
     render(
-      <MemberVotingRecord 
-        bioguideId="B001234" 
-        memberName="John Smith" 
-        chamber="House" 
-        keyVotes={mockKeyVotes} 
+      <MemberVotingRecord
+        bioguideId="B001234"
+        icpsrId="99901"
+        memberName="John Smith"
+        chamber="House"
+        keyVotes={mockKeyVotes}
       />
     );
     expect(screen.getByText(/How John voted/)).toBeInTheDocument();
@@ -86,11 +88,12 @@ describe("MemberVotingRecord", () => {
 
   it("displays vote statistics", () => {
     render(
-      <MemberVotingRecord 
-        bioguideId="B001234" 
-        memberName="John Smith" 
-        chamber="House" 
-        keyVotes={mockKeyVotes} 
+      <MemberVotingRecord
+        bioguideId="B001234"
+        icpsrId="99901"
+        memberName="John Smith"
+        chamber="House"
+        keyVotes={mockKeyVotes}
       />
     );
     expect(screen.getByText("Key Votes")).toBeInTheDocument();
@@ -102,30 +105,32 @@ describe("MemberVotingRecord", () => {
 
   it("filters votes by member's chamber", () => {
     render(
-      <MemberVotingRecord 
-        bioguideId="B001234" 
-        memberName="John Smith" 
-        chamber="House" 
-        keyVotes={mockKeyVotes} 
+      <MemberVotingRecord
+        bioguideId="B001234"
+        icpsrId="99901"
+        memberName="John Smith"
+        chamber="House"
+        keyVotes={mockKeyVotes}
       />
     );
-    // Should show House votes only (H.R. 1 and H.R. 2)
-    expect(screen.getByText("H.R. 1")).toBeInTheDocument();
-    expect(screen.getByText("H.R. 2")).toBeInTheDocument();
+    // Should show House votes only (HR1 and HR2)
+    expect(screen.getByText("HR1")).toBeInTheDocument();
+    expect(screen.getByText("HR2")).toBeInTheDocument();
     // Should NOT show Senate vote
-    expect(screen.queryByText("S. 1")).not.toBeInTheDocument();
+    expect(screen.queryByText("S1")).not.toBeInTheDocument();
   });
 
   it("shows member's vote for each bill", () => {
     render(
-      <MemberVotingRecord 
-        bioguideId="B001234" 
-        memberName="John Smith" 
-        chamber="House" 
-        keyVotes={mockKeyVotes} 
+      <MemberVotingRecord
+        bioguideId="B001234"
+        icpsrId="99901"
+        memberName="John Smith"
+        chamber="House"
+        keyVotes={mockKeyVotes}
       />
     );
-    // Member voted Yea on H.R. 1 and Nay on H.R. 2
+    // Member voted Yea on HR1 and Nay on HR2
     const yeaBadges = screen.getAllByText("Yea");
     const nayBadges = screen.getAllByText("Nay");
     expect(yeaBadges.length).toBeGreaterThan(0);
@@ -134,11 +139,12 @@ describe("MemberVotingRecord", () => {
 
   it("displays category badges", () => {
     render(
-      <MemberVotingRecord 
-        bioguideId="B001234" 
-        memberName="John Smith" 
-        chamber="House" 
-        keyVotes={mockKeyVotes} 
+      <MemberVotingRecord
+        bioguideId="B001234"
+        icpsrId="99901"
+        memberName="John Smith"
+        chamber="House"
+        keyVotes={mockKeyVotes}
       />
     );
     expect(screen.getAllByText("Healthcare").length).toBeGreaterThan(0);
@@ -147,11 +153,12 @@ describe("MemberVotingRecord", () => {
 
   it("filters by category when clicked", () => {
     render(
-      <MemberVotingRecord 
-        bioguideId="B001234" 
-        memberName="John Smith" 
-        chamber="House" 
-        keyVotes={mockKeyVotes} 
+      <MemberVotingRecord
+        bioguideId="B001234"
+        icpsrId="99901"
+        memberName="John Smith"
+        chamber="House"
+        keyVotes={mockKeyVotes}
       />
     );
     // Click Healthcare category filter
@@ -161,19 +168,30 @@ describe("MemberVotingRecord", () => {
       fireEvent.click(filterButton);
     }
     // Should now only show Healthcare vote
-    expect(screen.getByText("H.R. 1")).toBeInTheDocument();
-    expect(screen.queryByText("H.R. 2")).not.toBeInTheDocument();
+    expect(screen.getByText("HR1")).toBeInTheDocument();
+    expect(screen.queryByText("HR2")).not.toBeInTheDocument();
   });
 
   it("shows empty state when no votes for member", () => {
     render(
-      <MemberVotingRecord 
-        bioguideId="UNKNOWN" 
-        memberName="Unknown Person" 
-        chamber="House" 
-        keyVotes={mockKeyVotes} 
+      <MemberVotingRecord
+        bioguideId="UNKNOWN"
+        memberName="Unknown Person"
+        chamber="House"
+        keyVotes={mockKeyVotes}
       />
     );
     expect(screen.getByText(/No key vote records available/)).toBeInTheDocument();
+  });
+
+  it("falls back to bioguideId when icpsrId not provided", () => {
+    const votesWithBioguideKeys = [{
+      ...mockKeyVotes[0],
+      votes: { "B001234": "Yea" },
+    }];
+    render(
+      <MemberVotingRecord bioguideId="B001234" memberName="John Smith" chamber="House" keyVotes={votesWithBioguideKeys} />
+    );
+    expect(screen.getByText("Healthcare Reform Act")).toBeInTheDocument();
   });
 });

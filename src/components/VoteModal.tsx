@@ -23,7 +23,7 @@ interface VoteDetails {
   category: string;
   yea_count: number;
   nay_count: number;
-  result: "Passed" | "Failed" | "Unknown";
+  result: string;
   summary?: string;
   beneficiaries?: BeneficiaryImpact[];
   publicBenefit?: "positive" | "negative" | "mixed";
@@ -224,7 +224,7 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
               {vote.plainEnglishSummary || vote.title}
             </h2>
             <div className="flex flex-wrap gap-2">
-              <span className={`px-2 py-1 rounded-lg text-xs font-semibold ${RESULT_STYLES[vote.result]}`}>
+              <span className={`px-2 py-1 rounded-lg text-xs font-semibold ${RESULT_STYLES[vote.result as keyof typeof RESULT_STYLES] ?? RESULT_STYLES.Unknown}`}>
                 {vote.result}
               </span>
               <span className="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700">

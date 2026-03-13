@@ -15,7 +15,7 @@ interface KeyVote {
   category: string;
   yea_count: number;
   nay_count: number;
-  result: "Passed" | "Failed" | "Unknown";
+  result: string;
   votes: Record<string, string>;
   summary?: string;
   beneficiaries?: Array<{
@@ -35,6 +35,7 @@ interface KeyVote {
 
 interface MemberVotingRecordProps {
   bioguideId: string;
+  icpsrId?: string;
   memberName: string;
   chamber: "House" | "Senate";
   keyVotes: KeyVote[];
@@ -58,11 +59,12 @@ const VOTE_STYLES = {
   "Not Voting": "bg-gray-100 text-gray-500 border-gray-200",
 };
 
-export function MemberVotingRecord({ 
-  bioguideId, 
-  memberName, 
-  chamber, 
-  keyVotes 
+export function MemberVotingRecord({
+  bioguideId,
+  icpsrId,
+  memberName,
+  chamber,
+  keyVotes
 }: MemberVotingRecordProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [expanded, setExpanded] = useState(false);
@@ -70,13 +72,14 @@ export function MemberVotingRecord({
   
   // Filter votes for this chamber and where this member has a vote record
   const memberVotes = useMemo(() => {
+    const voteKey = icpsrId || bioguideId;
     return keyVotes
-      .filter(v => v.chamber === chamber && v.votes[bioguideId])
+      .filter(v => v.chamber === chamber && v.votes[voteKey])
       .map(v => ({
         ...v,
-        memberVote: v.votes[bioguideId] as "Yea" | "Nay" | "Not Voting",
+        memberVote: v.votes[voteKey] as "Yea" | "Nay" | "Not Voting",
       }));
-  }, [keyVotes, chamber, bioguideId]);
+  }, [keyVotes, chamber, bioguideId, icpsrId]);
   
   // Get unique categories
   const categories = useMemo(() => {

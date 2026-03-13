@@ -4,7 +4,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import DonorAnalysisSection from "@/components/DonorAnalysisSection";
 import DonorCaptureScore from "@/components/DonorCaptureScore";
-import VotingRecordSection from "@/components/VotingRecordSection";
 import MemberVotingRecord from "@/components/MemberVotingRecord";
 import VoteHistorySection from "@/components/VoteHistorySection";
 import CommitteeMemberships from "@/components/CommitteeMemberships";
@@ -30,7 +29,6 @@ import { getMemberAlignmentEnhanced } from "@/lib/data-enhanced";
 import { getConstituentAlignment } from "@/lib/constituent-alignment";
 import RepresentsYouSection from "@/components/RepresentsYouSection";
 import { RepVerdictBadge } from "@/components/RepVerdictBadge";
-import ExpandableSection from "@/components/ExpandableSection";
 import InDevelopmentBanner from "@/components/InDevelopmentBanner";
 
 import keyVotesData from "@/data/key-votes.json";
@@ -123,6 +121,8 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
     explanation: string;
   }> = [];
 
+  const icpsrId = (bioguideToIcpsrData as Record<string, string>)[id];
+
   if (finance && finance.top_industries && finance.top_industries.length > 0) {
     try {
       // Map static finance.top_industries to IndustryTotal[] using INDUSTRIES constant
@@ -140,15 +140,15 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
         })
         .filter((ind) => ind.total > 0);
 
-      // Get member's votes from keyVotesData
+      // Get member's votes from keyVotesData using ICPSR ID (key-votes.json is keyed by ICPSR)
       const memberVotes = (keyVotesData as unknown as Array<{ bill: string; title: string; description: string; category: string; date: string; votes: Record<string, string> }>)
-        .filter(vote => vote.votes && vote.votes[id])
+        .filter(vote => vote.votes && (icpsrId ? vote.votes[icpsrId] : undefined))
         .map(vote => ({
           bill: vote.bill,
           title: vote.title,
           category: vote.category,
           date: vote.date,
-          vote: vote.votes[id] as "Yea" | "Nay" | "Present" | "Not Voting",
+          vote: vote.votes[icpsrId!] as "Yea" | "Nay" | "Present" | "Not Voting",
           description: vote.description,
         }));
 
@@ -159,7 +159,6 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
   }
 
   // Narrative conflict callouts — "say one thing, do another" insight (#109)
-  const icpsrId = (bioguideToIcpsrData as Record<string, string>)[id];
   const conflictCallouts = getConflictCallouts(
     id,
     finance,
@@ -184,17 +183,6 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
 
   // Track which sections have no data yet — used to show a subtle "data pending" footer
   // rather than prominent "coming soon" cards for each empty section.
-
-  // Key votes are now handled by MemberVotingRecord component using real VoteView data
-  // This empty array is just to satisfy VotingRecordSection's interface
-  const keyVotes: Array<{
-    date: string;
-    bill: string;
-    title: string;
-    vote: "Yea" | "Nay" | "Present" | "Not Voting";
-    partyPosition: "Yea" | "Nay";
-    aligned: boolean;
-  }> = [];
 
   const recentVotes = getRecentVotesForMember(id, 8);
 
@@ -465,6 +453,7 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
             <ErrorBoundary context="voting record">
               <MemberVotingRecord
                 bioguideId={member.bioguide_id}
+                icpsrId={icpsrId}
                 memberName={member.full_name}
                 chamber={member.chamber === "house" ? "House" : "Senate"}
                 keyVotes={keyVotesData as unknown as Array<{
@@ -479,7 +468,7 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
                   category: string;
                   yea_count: number;
                   nay_count: number;
-                  result: "Passed" | "Failed" | "Unknown";
+                  result: string;
                   votes: Record<string, string>;
                 }>}
               />
@@ -517,21 +506,6 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
                 memberName={member.full_name}
                 maxVisible={3}
               />
-            </ErrorBoundary>
-
-            {/* Voting Record (Party Loyalty & Ideology) — deprioritized, collapsed by default */}
-            <ErrorBoundary context="party loyalty and ideology data">
-              <ExpandableSection
-                title="Party Voting Statistics"
-                summary="Detailed party voting analysis and ideology positioning"
-                defaultExpanded={false}
-              >
-                <VotingRecordSection
-                  partyLoyalty={member.party_loyalty_pct}
-                  ideologyScore={member.ideology_score}
-                  keyVotes={keyVotes}
-                />
-              </ExpandableSection>
             </ErrorBoundary>
 
             {/* In Development Features */}
