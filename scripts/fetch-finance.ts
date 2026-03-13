@@ -164,13 +164,27 @@ async function main() {
   const members = JSON.parse(fs.readFileSync(MEMBERS_PATH, "utf-8"));
   console.log(`📋 Processing ${members.length} members...\n`);
 
-  const finance: Record<string, FinanceRecord> = {};
-  let found = 0, notFound = 0;
-  const batchSize = 2;
-  const batchDelay = 6000;
+  // Load existing data to merge (preserves records if script is interrupted)
+  let finance: Record<string, FinanceRecord> = {};
+  if (fs.existsSync(OUTPUT_PATH)) {
+    try {
+      finance = JSON.parse(fs.readFileSync(OUTPUT_PATH, "utf-8"));
+      console.log(`📂 Loaded ${Object.keys(finance).length} existing records (will merge)\n`);
+    } catch { /* start fresh */ }
+  }
 
-  for (let i = 0; i < members.length; i += batchSize) {
-    const batch = members.slice(i, i + batchSize);
+  let found = 0, skipped = 0, notFound = 0;
+  // Real API keys get 120 req/min; DEMO_KEY gets 1,000/hour
+  const batchSize = API_KEY === "DEMO_KEY" ? 2 : 5;
+  const batchDelay = API_KEY === "DEMO_KEY" ? 6000 : 3000;
+
+  // Skip members we already have data for
+  const membersToFetch = members.filter((m: any) => !finance[m.bioguide_id]);
+  skipped = members.length - membersToFetch.length;
+  if (skipped > 0) console.log(`⏭️  Skipping ${skipped} members with existing data\n`);
+
+  for (let i = 0; i < membersToFetch.length; i += batchSize) {
+    const batch = membersToFetch.slice(i, i + batchSize);
     await Promise.all(batch.map(async (member: any) => {
       const candidateId = await findCandidateId(member.full_name, member.state, member.chamber);
       if (!candidateId) { notFound++; return; }
@@ -180,8 +194,14 @@ async function main() {
       found++;
     }));
 
-    if (i % 20 === 0) {
-      console.log(`  ${Math.min(i + batchSize, members.length)}/${members.length} (found: ${found}, missing: ${notFound})`);
+    const processed = Math.min(i + batchSize, membersToFetch.length);
+    if (processed % 10 === 0 || processed === membersToFetch.length) {
+      console.log(`  ${processed}/${membersToFetch.length} (found: ${found}, missing: ${notFound})`);
+    }
+    // Save incrementally every 50 members
+    if (found > 0 && processed % 50 === 0) {
+      fs.writeFileSync(OUTPUT_PATH, JSON.stringify(finance, null, 2));
+      console.log(`  💾 Saved checkpoint (${Object.keys(finance).length} total records)`);
     }
     await new Promise(r => setTimeout(r, batchDelay));
   }
@@ -189,7 +209,8 @@ async function main() {
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(finance, null, 2));
 
   console.log(`\n✅ Wrote ${OUTPUT_PATH}`);
-  console.log(`   With data: ${found} | Missing: ${notFound}`);
+  console.log(`   Total records: ${Object.keys(finance).length}`);
+  console.log(`   New: ${found} | Skipped: ${skipped} | Not found: ${notFound}`);
   
   const records = Object.values(finance);
   if (records.length > 0) {

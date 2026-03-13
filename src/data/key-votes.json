@@ -11,7 +11,7 @@
     "category": "Healthcare",
     "yea_count": 49,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -127,7 +127,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -359,7 +359,7 @@
     "category": "Economy & Taxes",
     "yea_count": 45,
     "nay_count": 55,
-    "result": "Unknown",
+    "result": "Cloture Motion Rejected",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -2263,7 +2263,7 @@
     "category": "Economy & Taxes",
     "yea_count": 85,
     "nay_count": 14,
-    "result": "Unknown",
+    "result": "Cloture Motion Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -3836,7 +3836,7 @@
     "category": "Healthcare",
     "yea_count": 47,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -3952,7 +3952,7 @@
     "category": "Economy & Taxes",
     "yea_count": 80,
     "nay_count": 13,
-    "result": "Unknown",
+    "result": "Cloture Motion Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -6303,7 +6303,7 @@
     "category": "Climate & Environment",
     "yea_count": 43,
     "nay_count": 50,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -6419,7 +6419,7 @@
     "category": "National Security",
     "yea_count": 50,
     "nay_count": 35,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Not Voting",
@@ -7433,7 +7433,7 @@
     "category": "Healthcare",
     "yea_count": 53,
     "nay_count": 43,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -10705,7 +10705,7 @@
     "category": "Climate & Environment",
     "yea_count": 46,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Not Voting",
@@ -12617,7 +12617,7 @@
     "category": "Economy & Taxes",
     "yea_count": 60,
     "nay_count": 40,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -12733,7 +12733,7 @@
     "category": "Economy & Taxes",
     "yea_count": 60,
     "nay_count": 40,
-    "result": "Unknown",
+    "result": "Cloture Motion Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -12965,7 +12965,7 @@
     "category": "Economy & Taxes",
     "yea_count": 60,
     "nay_count": 40,
-    "result": "Unknown",
+    "result": "Cloture Motion Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -14241,7 +14241,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 50,
-    "result": "Unknown",
+    "result": "Cloture Motion Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -14473,7 +14473,7 @@
     "category": "Economy & Taxes",
     "yea_count": 10,
     "nay_count": 88,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -14705,7 +14705,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Cloture Motion Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -14937,7 +14937,7 @@
     "category": "Healthcare",
     "yea_count": 51,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -15053,7 +15053,7 @@
     "category": "Economy & Taxes",
     "yea_count": 45,
     "nay_count": 50,
-    "result": "Unknown",
+    "result": "Cloture Motion Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -15401,7 +15401,7 @@
     "category": "Economy & Taxes",
     "yea_count": 46,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Cloture Motion Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -15633,7 +15633,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 53,
-    "result": "Unknown",
+    "result": "Cloture Motion Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -15865,7 +15865,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 53,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -15981,7 +15981,7 @@
     "category": "Economy & Taxes",
     "yea_count": 55,
     "nay_count": 45,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -16097,7 +16097,7 @@
     "category": "Economy & Taxes",
     "yea_count": 37,
     "nay_count": 61,
-    "result": "Unknown",
+    "result": "Cloture Motion Rejected",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -17108,7 +17108,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 45,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -17224,7 +17224,7 @@
     "category": "Economy & Taxes",
     "yea_count": 44,
     "nay_count": 48,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -17788,7 +17788,7 @@
     "category": "Climate & Environment",
     "yea_count": 51,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -19364,7 +19364,7 @@
     "category": "Climate & Environment",
     "yea_count": 51,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -19480,7 +19480,7 @@
     "category": "Climate & Environment",
     "yea_count": 47,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -19712,7 +19712,7 @@
     "category": "Climate & Environment",
     "yea_count": 47,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -19828,7 +19828,7 @@
     "category": "Economy & Taxes",
     "yea_count": 36,
     "nay_count": 62,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -23075,7 +23075,7 @@
     "category": "Economy & Taxes",
     "yea_count": 83,
     "nay_count": 13,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -24531,7 +24531,7 @@
     "category": "Economy & Taxes",
     "yea_count": 84,
     "nay_count": 14,
-    "result": "Unknown",
+    "result": "Cloture Motion Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -24647,7 +24647,7 @@
     "category": "Climate & Environment",
     "yea_count": 50,
     "nay_count": 45,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -24763,7 +24763,7 @@
     "category": "Economy & Taxes",
     "yea_count": 14,
     "nay_count": 81,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Nay",
@@ -24879,7 +24879,7 @@
     "category": "Economy & Taxes",
     "yea_count": 15,
     "nay_count": 81,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Nay",
@@ -25111,7 +25111,7 @@
     "category": "National Security",
     "yea_count": 27,
     "nay_count": 70,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -25227,7 +25227,7 @@
     "category": "National Security",
     "yea_count": 24,
     "nay_count": 73,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -25343,7 +25343,7 @@
     "category": "National Security",
     "yea_count": 50,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -25575,7 +25575,7 @@
     "category": "Economy & Taxes",
     "yea_count": 90,
     "nay_count": 8,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -25807,7 +25807,7 @@
     "category": "Climate & Environment",
     "yea_count": 49,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -25923,7 +25923,7 @@
     "category": "Economy & Taxes",
     "yea_count": 50,
     "nay_count": 48,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -26039,7 +26039,7 @@
     "category": "Economy & Taxes",
     "yea_count": 91,
     "nay_count": 7,
-    "result": "Unknown",
+    "result": "Cloture Motion Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -26155,7 +26155,7 @@
     "category": "National Security",
     "yea_count": 61,
     "nay_count": 35,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -29191,7 +29191,7 @@
     "category": "Economy & Taxes",
     "yea_count": 48,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -29307,7 +29307,7 @@
     "category": "Economy & Taxes",
     "yea_count": 48,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -29423,7 +29423,7 @@
     "category": "Economy & Taxes",
     "yea_count": 48,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -29539,7 +29539,7 @@
     "category": "Economy & Taxes",
     "yea_count": 48,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -29655,7 +29655,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -29771,7 +29771,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 50,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -29887,7 +29887,7 @@
     "category": "Economy & Taxes",
     "yea_count": 48,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -31015,7 +31015,7 @@
     "category": "National Security",
     "yea_count": 52,
     "nay_count": 46,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -31247,7 +31247,7 @@
     "category": "Immigration",
     "yea_count": 52,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -31595,7 +31595,7 @@
     "category": "Healthcare",
     "yea_count": 22,
     "nay_count": 78,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Nay",
@@ -31711,7 +31711,7 @@
     "category": "Healthcare",
     "yea_count": 48,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -31827,7 +31827,7 @@
     "category": "Healthcare",
     "yea_count": 47,
     "nay_count": 53,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -31943,7 +31943,7 @@
     "category": "Climate & Environment",
     "yea_count": 48,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -32059,7 +32059,7 @@
     "category": "Climate & Environment",
     "yea_count": 49,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -32291,7 +32291,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 53,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -32407,7 +32407,7 @@
     "category": "Healthcare",
     "yea_count": 56,
     "nay_count": 44,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -32523,7 +32523,7 @@
     "category": "Healthcare",
     "yea_count": 53,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -32639,7 +32639,7 @@
     "category": "National Security",
     "yea_count": 42,
     "nay_count": 58,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -33651,7 +33651,7 @@
     "category": "National Security",
     "yea_count": 61,
     "nay_count": 35,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -33999,7 +33999,7 @@
     "category": "Immigration",
     "yea_count": 51,
     "nay_count": 46,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -35011,7 +35011,7 @@
     "category": "National Security",
     "yea_count": 39,
     "nay_count": 56,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -35127,7 +35127,7 @@
     "category": "National Security",
     "yea_count": 39,
     "nay_count": 56,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -35691,7 +35691,7 @@
     "category": "Climate & Environment",
     "yea_count": 53,
     "nay_count": 41,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -36371,7 +36371,7 @@
     "category": "National Security",
     "yea_count": 51,
     "nay_count": 46,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -36487,7 +36487,7 @@
     "category": "National Security",
     "yea_count": 66,
     "nay_count": 28,
-    "result": "Unknown",
+    "result": "Cloture Motion Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -36603,7 +36603,7 @@
     "category": "National Security",
     "yea_count": 72,
     "nay_count": 26,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -37399,7 +37399,7 @@
     "category": "Climate & Environment",
     "yea_count": 51,
     "nay_count": 46,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -37631,7 +37631,7 @@
     "category": "Climate & Environment",
     "yea_count": 51,
     "nay_count": 46,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -37863,7 +37863,7 @@
     "category": "Climate & Environment",
     "yea_count": 51,
     "nay_count": 46,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -37979,7 +37979,7 @@
     "category": "Climate & Environment",
     "yea_count": 51,
     "nay_count": 46,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -38211,7 +38211,7 @@
     "category": "National Security",
     "yea_count": 54,
     "nay_count": 43,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -38443,7 +38443,7 @@
     "category": "Economy & Taxes",
     "yea_count": 52,
     "nay_count": 45,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -38791,7 +38791,7 @@
     "category": "Climate & Environment",
     "yea_count": 51,
     "nay_count": 43,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -39023,7 +39023,7 @@
     "category": "Climate & Environment",
     "yea_count": 52,
     "nay_count": 40,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -40485,7 +40485,7 @@
     "category": "National Security",
     "yea_count": 54,
     "nay_count": 45,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -40717,7 +40717,7 @@
     "category": "Other",
     "yea_count": 48,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -40833,7 +40833,7 @@
     "category": "Other",
     "yea_count": 49,
     "nay_count": 50,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -40949,7 +40949,7 @@
     "category": "Healthcare",
     "yea_count": 49,
     "nay_count": 50,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -41065,7 +41065,7 @@
     "category": "Healthcare",
     "yea_count": 49,
     "nay_count": 50,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -41181,7 +41181,7 @@
     "category": "Healthcare",
     "yea_count": 48,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -41297,7 +41297,7 @@
     "category": "Healthcare",
     "yea_count": 49,
     "nay_count": 50,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -41413,7 +41413,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -41529,7 +41529,7 @@
     "category": "Economy & Taxes",
     "yea_count": 51,
     "nay_count": 48,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -41645,7 +41645,7 @@
     "category": "Healthcare",
     "yea_count": 51,
     "nay_count": 48,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -41761,7 +41761,7 @@
     "category": "Healthcare",
     "yea_count": 48,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -41877,7 +41877,7 @@
     "category": "National Security",
     "yea_count": 46,
     "nay_count": 53,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -41993,7 +41993,7 @@
     "category": "Other",
     "yea_count": 48,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -42109,7 +42109,7 @@
     "category": "Other",
     "yea_count": 46,
     "nay_count": 53,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -42225,7 +42225,7 @@
     "category": "National Security",
     "yea_count": 48,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -42341,7 +42341,7 @@
     "category": "Other",
     "yea_count": 49,
     "nay_count": 50,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -42573,7 +42573,7 @@
     "category": "National Security",
     "yea_count": 15,
     "nay_count": 82,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -42689,7 +42689,7 @@
     "category": "National Security",
     "yea_count": 15,
     "nay_count": 83,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -42805,7 +42805,7 @@
     "category": "Healthcare",
     "yea_count": 53,
     "nay_count": 45,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -42921,7 +42921,7 @@
     "category": "Economy & Taxes",
     "yea_count": 52,
     "nay_count": 48,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -43483,7 +43483,7 @@
     "category": "Economy & Taxes",
     "yea_count": 53,
     "nay_count": 45,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -43831,7 +43831,7 @@
     "category": "National Security",
     "yea_count": 59,
     "nay_count": 40,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -43947,7 +43947,7 @@
     "category": "Economy & Taxes",
     "yea_count": 62,
     "nay_count": 38,
-    "result": "Unknown",
+    "result": "Cloture Motion Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -46984,7 +46984,7 @@
     "category": "Climate & Environment",
     "yea_count": 52,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -47549,7 +47549,7 @@
     "category": "Healthcare",
     "yea_count": 48,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -47665,7 +47665,7 @@
     "category": "Healthcare",
     "yea_count": 49,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -47781,7 +47781,7 @@
     "category": "National Security",
     "yea_count": 47,
     "nay_count": 53,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -47897,7 +47897,7 @@
     "category": "Other",
     "yea_count": 24,
     "nay_count": 76,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Nay",
@@ -48013,7 +48013,7 @@
     "category": "Other",
     "yea_count": 47,
     "nay_count": 53,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -48129,7 +48129,7 @@
     "category": "Healthcare",
     "yea_count": 48,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -48245,7 +48245,7 @@
     "category": "Other",
     "yea_count": 48,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -48361,7 +48361,7 @@
     "category": "Other",
     "yea_count": 49,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -48477,7 +48477,7 @@
     "category": "Healthcare",
     "yea_count": 47,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -48593,7 +48593,7 @@
     "category": "Economy & Taxes",
     "yea_count": 53,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -48709,7 +48709,7 @@
     "category": "Other",
     "yea_count": 49,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -48825,7 +48825,7 @@
     "category": "Economy & Taxes",
     "yea_count": 52,
     "nay_count": 48,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -48941,7 +48941,7 @@
     "category": "Economy & Taxes",
     "yea_count": 47,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -49057,7 +49057,7 @@
     "category": "Economy & Taxes",
     "yea_count": 48,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -49173,7 +49173,7 @@
     "category": "Other",
     "yea_count": 48,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -49289,7 +49289,7 @@
     "category": "Immigration",
     "yea_count": 47,
     "nay_count": 53,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -49405,7 +49405,7 @@
     "category": "Other",
     "yea_count": 48,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -49521,7 +49521,7 @@
     "category": "Other",
     "yea_count": 48,
     "nay_count": 52,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -49637,7 +49637,7 @@
     "category": "Healthcare",
     "yea_count": 51,
     "nay_count": 49,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -49753,7 +49753,7 @@
     "category": "Healthcare",
     "yea_count": 49,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -49869,7 +49869,7 @@
     "category": "Healthcare",
     "yea_count": 49,
     "nay_count": 51,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
@@ -49985,7 +49985,7 @@
     "category": "Economy & Taxes",
     "yea_count": 50,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -50550,7 +50550,7 @@
     "category": "Economy & Taxes",
     "yea_count": 53,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -50666,7 +50666,7 @@
     "category": "Economy & Taxes",
     "yea_count": 52,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -50782,7 +50782,7 @@
     "category": "Economy & Taxes",
     "yea_count": 52,
     "nay_count": 47,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -51014,7 +51014,7 @@
     "category": "Economy & Taxes",
     "yea_count": 51,
     "nay_count": 46,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -51246,7 +51246,7 @@
     "category": "Climate & Environment",
     "yea_count": 56,
     "nay_count": 42,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Nay",
@@ -51710,7 +51710,7 @@
     "category": "National Security",
     "yea_count": 53,
     "nay_count": 45,
-    "result": "Unknown",
+    "result": "Agreed to",
     "votes": {
       "14226": "Yea",
       "14435": "Not Voting",
@@ -52724,7 +52724,7 @@
     "category": "Immigration",
     "yea_count": 46,
     "nay_count": 49,
-    "result": "Unknown",
+    "result": "Rejected",
     "votes": {
       "14226": "Nay",
       "14435": "Yea",
