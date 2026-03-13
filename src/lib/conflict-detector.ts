@@ -181,9 +181,18 @@ export function detectConflicts(
     }
   }
 
+  // Deduplicate: keep only the first (highest-signal) conflict per industry+bill
+  const seen = new Set<string>();
+  const deduped = conflicts.filter(c => {
+    const key = `${c.industry}|${c.voteBill}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
   // Sort by severity then donation amount
   const severityOrder = { high: 3, medium: 2, low: 1 };
-  return conflicts.sort((a, b) => {
+  return deduped.sort((a, b) => {
     if (a.conflictSeverity !== b.conflictSeverity) {
       return severityOrder[b.conflictSeverity] - severityOrder[a.conflictSeverity];
     }

@@ -3,79 +3,115 @@
 import { useState } from "react";
 import type { ConflictOfInterest } from "@/lib/conflict-detector";
 import { formatCurrencyShort, formatDate } from "@/lib/formatting";
-import { BodyText, Caption } from "@/components/ui";
+import { billToCongressGovUrl } from "@/lib/bill-urls";
 
 interface ConflictOfInterestSectionProps {
   conflicts: ConflictOfInterest[];
   memberName: string;
 }
 
-function ConflictCard({ conflict }: { conflict: ConflictOfInterest }) {
+interface IndustryGroup {
+  industry: string;
+  displayName: string;
+  icon: string;
+  donationAmount: number;
+  highestSeverity: "high" | "medium" | "low";
+  votes: ConflictOfInterest[];
+}
+
+function groupByIndustry(conflicts: ConflictOfInterest[]): IndustryGroup[] {
+  const map = new Map<string, IndustryGroup>();
+  const severityRank = { high: 3, medium: 2, low: 1 };
+
+  for (const c of conflicts) {
+    const existing = map.get(c.industry);
+    if (existing) {
+      existing.votes.push(c);
+      if (severityRank[c.conflictSeverity] > severityRank[existing.highestSeverity]) {
+        existing.highestSeverity = c.conflictSeverity;
+      }
+    } else {
+      map.set(c.industry, {
+        industry: c.industry,
+        displayName: c.industryDisplayName,
+        icon: c.icon,
+        donationAmount: c.donationAmount,
+        highestSeverity: c.conflictSeverity,
+        votes: [c],
+      });
+    }
+  }
+
+  return Array.from(map.values()).sort(
+    (a, b) => severityRank[b.highestSeverity] - severityRank[a.highestSeverity] || b.donationAmount - a.donationAmount
+  );
+}
+
+function IndustryConflictCard({ group }: { group: IndustryGroup }) {
+  const [expanded, setExpanded] = useState(false);
   const severityColors = {
     high: "bg-red-50 border-red-300",
     medium: "bg-orange-50 border-orange-300",
     low: "bg-yellow-50 border-yellow-300",
   };
 
-  const severityBadges = {
-    high: "bg-red-100 text-red-800",
-    medium: "bg-orange-100 text-orange-800",
-    low: "bg-yellow-100 text-yellow-800",
-  };
-
-  const severityIcons = {
-    high: "🚨",
-    medium: "⚠️",
-    low: "⚡",
-  };
-
   return (
-    <div className={`rounded-xl border-2 p-5 ${severityColors[conflict.conflictSeverity]} transition-all hover:shadow-lg`}>
+    <div className={`rounded-xl border-2 p-5 ${severityColors[group.highestSeverity]} transition-all`}>
       <div className="flex items-start justify-between mb-3">
-        <div className="flex items-center gap-2">
-          <span className="text-2xl">{conflict.icon}</span>
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">{group.icon}</span>
           <div>
             <h4 className="font-bold text-slate-900 text-lg">
-              {conflict.industryDisplayName}
+              {group.displayName}
             </h4>
-            <BodyText>
-              {formatCurrencyShort(conflict.donationAmount)} in donations
-            </BodyText>
-          </div>
-        </div>
-        <span className={`px-3 py-1 rounded-full text-xs font-bold ${severityBadges[conflict.conflictSeverity]}`}>
-          {severityIcons[conflict.conflictSeverity]} {conflict.conflictSeverity.toUpperCase()}
-        </span>
-      </div>
-
-      <div className="bg-white rounded-lg p-4 mb-3">
-        <div className="flex items-start gap-3">
-          <div className="flex-shrink-0 mt-1">
-            <span className={`inline-block px-2 py-1 rounded font-mono text-xs font-bold ${
-              conflict.votePosition === "Yea" 
-                ? "bg-green-100 text-green-700" 
-                : "bg-red-100 text-red-700"
-            }`}>
-              {conflict.votePosition}
-            </span>
-          </div>
-          <div className="flex-1">
-            <p className="font-semibold text-slate-900 mb-1">
-              {conflict.voteBill}
+            <p className="text-sm text-slate-600">
+              {formatCurrencyShort(group.donationAmount)} in donations → {group.votes.length} related vote{group.votes.length !== 1 ? "s" : ""}
             </p>
-            <p className="text-sm text-slate-600 mb-2">
-              {conflict.voteTitle}
-            </p>
-            <Caption as="p">
-              {formatDate(conflict.voteDate)} • {conflict.voteCategory}
-            </Caption>
           </div>
         </div>
       </div>
 
-      <p className="text-sm text-slate-700 leading-relaxed">
-        {conflict.explanation}
-      </p>
+      {/* Top 2 votes always visible */}
+      <div className="space-y-2">
+        {group.votes.slice(0, expanded ? undefined : 2).map((conflict, i) => {
+          const billUrl = billToCongressGovUrl(conflict.voteBill, 119);
+          return (
+            <div key={i} className="bg-white rounded-lg p-3 flex items-start gap-3">
+              <span className={`shrink-0 inline-block px-2 py-0.5 rounded font-mono text-xs font-bold mt-0.5 ${
+                conflict.votePosition === "Yea"
+                  ? "bg-green-100 text-green-700"
+                  : "bg-red-100 text-red-700"
+              }`}>
+                {conflict.votePosition}
+              </span>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm text-slate-900">
+                  Voted <strong>{conflict.votePosition}</strong> on{" "}
+                  {billUrl ? (
+                    <a href={billUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">
+                      {conflict.voteBill}
+                    </a>
+                  ) : (
+                    <span className="font-medium">{conflict.voteBill}</span>
+                  )}
+                  {" — "}{conflict.voteTitle}
+                </p>
+                <p className="text-xs text-slate-400 mt-0.5">{formatDate(conflict.voteDate)}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {group.votes.length > 2 && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          aria-expanded={expanded}
+          className="mt-2 text-xs font-medium text-blue-600 hover:text-blue-700"
+        >
+          {expanded ? "Show less" : `+ ${group.votes.length - 2} more votes`}
+        </button>
+      )}
     </div>
   );
 }
@@ -106,12 +142,10 @@ export default function ConflictOfInterestSection({
   }
 
   const [detailsExpanded, setDetailsExpanded] = useState(false);
+  const groups = groupByIndustry(conflicts);
 
-  const highSeverityCount = conflicts.filter(c => c.conflictSeverity === "high").length;
-  const mediumSeverityCount = conflicts.filter(c => c.conflictSeverity === "medium").length;
-
-  // Top conflict for summary lead
-  const topConflict = conflicts[0];
+  // Top conflict for the summary narrative
+  const topGroup = groups[0];
 
   return (
     <section className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm">
@@ -122,70 +156,47 @@ export default function ConflictOfInterestSection({
         </h3>
       </div>
 
-      {/* Summary layer — always visible */}
-      <p className="text-slate-600 mb-4">
-        {conflicts.length} potential conflict{conflicts.length !== 1 ? "s" : ""} detected ({highSeverityCount} high severity).
+      {/* Summary — plain language, always visible */}
+      <p className="text-slate-700 mb-4">
+        {groups.length} donor industr{groups.length !== 1 ? "ies" : "y"} overlap with {memberName}&apos;s voting record across {conflicts.length} vote{conflicts.length !== 1 ? "s" : ""}.
       </p>
 
-      {/* Plain-language lead for top conflict */}
-      {topConflict && (
-        <p className="text-slate-700 mb-4">
-          Received {formatCurrencyShort(topConflict.donationAmount)} from {topConflict.industryDisplayName}, then voted {topConflict.votePosition} on {topConflict.voteTitle}.
-        </p>
+      {/* Top conflict narrative */}
+      {topGroup && (
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
+          <p className="text-sm text-slate-800">
+            <span className="font-bold">{topGroup.displayName}</span> donated{" "}
+            <span className="font-bold">{formatCurrencyShort(topGroup.donationAmount)}</span>,
+            then {memberName.split(" ")[0]} voted in alignment with that industry on{" "}
+            <span className="font-bold">{topGroup.votes.length} key bill{topGroup.votes.length !== 1 ? "s" : ""}</span>.
+          </p>
+        </div>
       )}
 
-      {/* Summary Stats */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="bg-slate-50 rounded-xl p-4 text-center">
-          <p className="text-3xl font-black text-slate-900">{conflicts.length}</p>
-          <p className="text-sm text-slate-600 mt-1">Total Conflicts</p>
-        </div>
-        <div className="bg-red-50 rounded-xl p-4 text-center border border-red-200">
-          <p className="text-3xl font-black text-red-700">{highSeverityCount}</p>
-          <p className="text-sm text-red-600 mt-1">High Severity</p>
-        </div>
-        <div className="bg-orange-50 rounded-xl p-4 text-center border border-orange-200">
-          <p className="text-3xl font-black text-orange-700">{mediumSeverityCount}</p>
-          <p className="text-sm text-orange-600 mt-1">Medium Severity</p>
-        </div>
+      {/* Industry group cards — first 2 always visible */}
+      <div className="space-y-4">
+        {groups.slice(0, detailsExpanded ? undefined : 2).map((group) => (
+          <IndustryConflictCard key={group.industry} group={group} />
+        ))}
       </div>
 
-      {/* Details toggle */}
-      <button
-        onClick={() => setDetailsExpanded(!detailsExpanded)}
-        aria-expanded={detailsExpanded}
-        className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors mb-4"
-      >
-        {detailsExpanded ? "Hide conflict details" : "Show all conflicts"}
-      </button>
-
-      {/* Detail layer — expandable */}
-      {detailsExpanded && (
-        <>
-          {/* Conflict Cards */}
-          <div className="space-y-4 mt-4">
-            {conflicts.slice(0, 10).map((conflict, i) => (
-              <ConflictCard key={i} conflict={conflict} />
-            ))}
-          </div>
-
-          {conflicts.length > 10 && (
-            <div className="mt-6 text-center">
-              <p className="text-slate-500 text-sm">
-                Showing top 10 of {conflicts.length} potential conflicts
-              </p>
-            </div>
-          )}
-
-          {/* Disclaimer */}
-          <div className="mt-8 bg-slate-50 rounded-xl p-4 border border-slate-200">
-            <p className="text-xs text-slate-600 leading-relaxed">
-              <strong>Methodology:</strong> Conflicts are automatically detected by correlating top donor industries with votes on related legislation.
-              Severity is based on donation amounts. This analysis is not exhaustive and should be used as a starting point for further investigation.
-            </p>
-          </div>
-        </>
+      {groups.length > 2 && (
+        <button
+          onClick={() => setDetailsExpanded(!detailsExpanded)}
+          aria-expanded={detailsExpanded}
+          className="mt-4 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
+        >
+          {detailsExpanded ? "Show fewer" : `Show all ${groups.length} industries`}
+        </button>
       )}
+
+      {/* Methodology */}
+      <div className="mt-6 pt-4 border-t border-slate-100">
+        <p className="text-xs text-slate-400">
+          Conflicts detected by cross-referencing top donor industries (FEC data) with votes on related legislation (Congress.gov).
+          Severity based on donation amounts. Not exhaustive — use as a starting point.
+        </p>
+      </div>
     </section>
   );
 }
