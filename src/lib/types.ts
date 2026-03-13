@@ -746,3 +746,15 @@ export interface USASpendingDataStore {
   agencies: Record<string, AgencySpendingProfile>;
   officials: Record<string, OfficialAgencyMap>;
 }
+
+export interface BillSummary {
+  bill: string;
+  congress: number;
+  title: string;
+  crs_summary: string | null;
+  summary_date: string | null;
+  url: string;
+  benefits: string[] | null;
+  harms: string[] | null;
+  ai_analyzed: boolean;
+}
