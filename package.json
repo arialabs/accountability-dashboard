@@ -27,7 +27,8 @@
     "db:studio": "turso db shell accountability-dashboard",
     "research:fetch": "node scripts/fetch-news.mjs",
     "research:fetch:deep": "node scripts/fetch-news.mjs --deep",
-    "party-loyalty": "node scripts/compute-party-loyalty.mjs"
+    "party-loyalty": "node scripts/compute-party-loyalty.mjs",
+    "pipeline:bill-summaries": "tsx scripts/fetch-bill-summaries.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.75.0",
