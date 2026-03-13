@@ -1,0 +1,67 @@
+name: Weekly Data Refresh
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Sunday midnight UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Data pipelines (sequential — respect API rate limits)
+      - name: Sync votes
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+        run: npx tsx pipeline/sync-votes.ts
+
+      - name: Fetch campaign finance
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+        run: npx tsx scripts/fetch-finance.ts
+
+      - name: Fetch bill summaries + AI analysis
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/fetch-bill-summaries.ts
+
+      - name: Compute derived data
+        run: |
+          node scripts/compute-party-loyalty.mjs
+          node scripts/compute-party-breakdown.mjs
+          npx tsx scripts/compute-donor-percentiles.ts
+
+      # Commit and push if data changed
+      - name: Commit data updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/ public/data/
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "chore(data): weekly data refresh [skip ci]"
+            git push
+          fi
