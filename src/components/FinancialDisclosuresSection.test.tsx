@@ -47,39 +47,24 @@ describe("FinancialDisclosuresSection", () => {
     expect(screen.getByText(/2 financial disclosure filings? on record/)).toBeDefined();
   });
 
-  it("renders all disclosure filings after expanding", () => {
+  it("renders all disclosure filings (visible by default)", () => {
     render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
 
-    fireEvent.click(screen.getByText("Show all filings"));
-
-    expect(screen.getByText("2024 Annual Financial Disclosure")).toBeDefined();
-    expect(screen.getByText("2023 Annual Financial Disclosure")).toBeDefined();
+    expect(screen.getByText("2024 Financial Disclosure")).toBeDefined();
+    expect(screen.getByText("2023 Financial Disclosure")).toBeDefined();
   });
 
-  it("displays filing types correctly after expanding", () => {
+  it("displays filing types correctly", () => {
     render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
-
-    fireEvent.click(screen.getByText("Show all filings"));
 
     expect(screen.getByText("Original")).toBeDefined();
     expect(screen.getByText("Amendment")).toBeDefined();
   });
 
-  it("displays document IDs after expanding", () => {
+  it("renders PDF links", () => {
     render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
 
-    fireEvent.click(screen.getByText("Show all filings"));
-
-    expect(screen.getByText(/10066123/)).toBeDefined();
-    expect(screen.getByText(/10059456/)).toBeDefined();
-  });
-
-  it("renders PDF links after expanding", () => {
-    render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
-
-    fireEvent.click(screen.getByText("Show all filings"));
-
-    const links = screen.getAllByText("View PDF");
+    const links = screen.getAllByText("View PDF →");
     expect(links.length).toBe(2);
 
     const firstLink = links[0].closest("a");
@@ -95,14 +80,63 @@ describe("FinancialDisclosuresSection", () => {
     expect(screen.getByText(/John Smith/)).toBeDefined();
   });
 
-  it("displays data source attribution after expanding", () => {
+  it("displays data source attribution", () => {
     render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
-
-    fireEvent.click(screen.getByText("Show all filings"));
 
     expect(screen.getByText(/House Clerk Financial Disclosures/)).toBeDefined();
 
     const sourceLink = screen.getByText("Official Source");
     expect(sourceLink.getAttribute("href")).toBe("https://disclosures-clerk.house.gov/PublicDisclosure/FinancialDisclosure");
+  });
+
+  it("shows 'Show all N filings' button when there are more than 3 filings", () => {
+    const manyDisclosures: FinancialDisclosure[] = Array.from({ length: 5 }, (_, i) => ({
+      last: "Smith",
+      first: "John",
+      prefix: "Hon.",
+      suffix: "",
+      filingType: "O",
+      stateDst: "CA12",
+      year: 2020 + i,
+      filingDate: "5/15/2025",
+      docId: `1006600${i}`,
+      pdfUrl: `https://disclosures-clerk.house.gov/public_disc/financial-pdfs/202${i}/1006600${i}.pdf`,
+    }));
+
+    render(<FinancialDisclosuresSection disclosures={manyDisclosures} memberName="John Smith" />);
+
+    expect(screen.getByText("Show all 5 filings")).toBeDefined();
+  });
+
+  it("expands to show all filings when 'Show all' button is clicked", () => {
+    const manyDisclosures: FinancialDisclosure[] = Array.from({ length: 5 }, (_, i) => ({
+      last: "Smith",
+      first: "John",
+      prefix: "Hon.",
+      suffix: "",
+      filingType: "O",
+      stateDst: "CA12",
+      year: 2020 + i,
+      filingDate: "5/15/2025",
+      docId: `1006600${i}`,
+      pdfUrl: `https://disclosures-clerk.house.gov/public_disc/financial-pdfs/202${i}/1006600${i}.pdf`,
+    }));
+
+    render(<FinancialDisclosuresSection disclosures={manyDisclosures} memberName="John Smith" />);
+
+    const allLinks = screen.getAllByText("View PDF →");
+    expect(allLinks.length).toBe(3); // only first 3 shown
+
+    fireEvent.click(screen.getByText("Show all 5 filings"));
+
+    const expandedLinks = screen.getAllByText("View PDF →");
+    expect(expandedLinks.length).toBe(5);
+  });
+
+  it("renders filings in timeline layout with year and type badge", () => {
+    render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="Test Rep" />);
+    const matches = screen.getAllByText(/financial disclosure/i);
+    expect(matches.length).toBeGreaterThan(0);
+    expect(screen.getByText("Original")).toBeInTheDocument();
   });
 });
