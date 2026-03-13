@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import VoteModal from "./VoteModal";
 import { billToCongressGovUrl, rollCallUrl } from "@/lib/bill-urls";
+import type { BillSummary } from "@/lib/types";
 
 interface KeyVote {
   id: string;
@@ -18,12 +19,6 @@ interface KeyVote {
   nay_count: number;
   result: string;
   votes: Record<string, string>;
-  summary?: string;
-  beneficiaries?: Array<{
-    group: string;
-    impact: "benefits" | "harms" | "mixed";
-  }>;
-  publicBenefit?: "positive" | "negative" | "mixed";
   party_breakdown?: {
     dem_yea: number;
     dem_nay: number;
@@ -41,6 +36,7 @@ interface MemberVotingRecordProps {
   memberName: string;
   chamber: "House" | "Senate";
   keyVotes: KeyVote[];
+  billSummaries?: Record<string, BillSummary>;
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -67,7 +63,8 @@ export function MemberVotingRecord({
   memberParty,
   memberName,
   chamber,
-  keyVotes
+  keyVotes,
+  billSummaries,
 }: MemberVotingRecordProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [expanded, setExpanded] = useState(false);
@@ -247,20 +244,29 @@ export function MemberVotingRecord({
                 );
               })()}
 
-              {/* Who Benefits indicator */}
-              {vote.publicBenefit && vote.publicBenefit !== "mixed" && (
-                <div className={`inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-medium mb-2 ${
-                  vote.publicBenefit === "positive"
-                    ? "bg-emerald-50 text-emerald-700"
-                    : "bg-red-50 text-red-700"
-                }`}>
-                  {vote.publicBenefit === "positive" ? "👍" : "👎"}
-                  {vote.publicBenefit === "positive" 
-                    ? "Benefits working people" 
-                    : "Benefits special interests"}
+              {billSummaries?.[vote.bill]?.crs_summary && (
+                <div className="mt-2 pt-2 border-t border-slate-100 space-y-1">
+                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
+                    {billSummaries[vote.bill].crs_summary}
+                  </p>
+                  {billSummaries[vote.bill].benefits && (
+                    <p className="text-xs">
+                      <span className="font-medium text-green-700">Benefits:</span>{" "}
+                      <span className="text-slate-600">{billSummaries[vote.bill].benefits!.join(", ")}</span>
+                    </p>
+                  )}
+                  {billSummaries[vote.bill].harms && (
+                    <p className="text-xs">
+                      <span className="font-medium text-red-700">Harms:</span>{" "}
+                      <span className="text-slate-600">{billSummaries[vote.bill].harms!.join(", ")}</span>
+                    </p>
+                  )}
+                  {billSummaries[vote.bill].ai_analyzed && (
+                    <p className="text-[10px] text-slate-400 italic">AI analysis of CRS summary</p>
+                  )}
                 </div>
               )}
-              
+
               <div className="flex items-center gap-4 text-xs text-slate-400 mt-2">
                 <span>Result: {vote.yea_count} Yea - {vote.nay_count} Nay</span>
                 <a href={rollCallUrl(vote.chamber, vote.rollnumber, vote.date, vote.congress)}

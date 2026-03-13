@@ -28,6 +28,8 @@ import RepresentsYouSection from "@/components/RepresentsYouSection";
 import { RepVerdictBadge } from "@/components/RepVerdictBadge";
 import InDevelopmentBanner from "@/components/InDevelopmentBanner";
 
+import { loadBillSummaries } from "@/lib/bill-summaries";
+
 import keyVotesData from "@/data/key-votes.json";
 import bioguideToIcpsrData from "@/data/bioguide-to-icpsr.json";
 
@@ -89,6 +91,9 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
   if (!member) {
     notFound();
   }
+
+  // Load pre-computed bill summaries (CRS + AI beneficiary analysis)
+  const billSummaries = loadBillSummaries();
 
   // Get real finance data from OpenFEC API
   const finance = await getMemberFinance(id);
@@ -400,6 +405,7 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
               conflicts={conflicts}
               finance={finance}
               memberName={member.full_name}
+              billSummaries={billSummaries}
             />
           </div>
         )}
@@ -434,7 +440,7 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
             {/* Potential Conflicts of Interest */}
             <ErrorBoundary context="conflict of interest analysis">
               <div id="conflicts">
-                <ConflictOfInterestSection conflicts={conflicts} memberName={member.full_name} />
+                <ConflictOfInterestSection conflicts={conflicts} memberName={member.full_name} billSummaries={billSummaries} />
               </div>
             </ErrorBoundary>
 
@@ -461,6 +467,7 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
                   result: string;
                   votes: Record<string, string>;
                 }>}
+                billSummaries={billSummaries}
               />
             </ErrorBoundary>
 

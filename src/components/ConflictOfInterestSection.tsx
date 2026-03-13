@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import type { ConflictOfInterest } from "@/lib/conflict-detector";
+import type { BillSummary } from "@/lib/types";
 import { formatCurrencyShort, formatDate } from "@/lib/formatting";
 import { billToCongressGovUrl } from "@/lib/bill-urls";
 
 interface ConflictOfInterestSectionProps {
   conflicts: ConflictOfInterest[];
   memberName: string;
+  billSummaries?: Record<string, BillSummary>;
 }
 
 interface IndustryGroup {
@@ -47,7 +49,7 @@ function groupByIndustry(conflicts: ConflictOfInterest[]): IndustryGroup[] {
   );
 }
 
-function IndustryConflictCard({ group }: { group: IndustryGroup }) {
+function IndustryConflictCard({ group, billSummaries }: { group: IndustryGroup; billSummaries: Record<string, BillSummary> }) {
   const [expanded, setExpanded] = useState(false);
   const severityColors = {
     high: "bg-red-50 border-red-300",
@@ -97,6 +99,40 @@ function IndustryConflictCard({ group }: { group: IndustryGroup }) {
                   {" — "}{conflict.voteTitle}
                 </p>
                 <p className="text-xs text-slate-400 mt-0.5">{formatDate(conflict.voteDate)}</p>
+                {(() => {
+                  const summary = billSummaries[conflict.voteBill];
+                  if (!summary?.crs_summary) {
+                    const fallbackUrl = summary?.url || billUrl || "#";
+                    return (
+                      <p className="text-xs text-slate-400 mt-1">
+                        No summary available —{" "}
+                        <a href={fallbackUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                          view bill on Congress.gov →
+                        </a>
+                      </p>
+                    );
+                  }
+                  return (
+                    <div className="mt-1.5 space-y-1">
+                      <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">{summary.crs_summary}</p>
+                      {summary.benefits && (
+                        <p className="text-xs">
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-green-50 text-green-700 font-medium">Benefits:</span>{" "}
+                          <span className="text-slate-600">{summary.benefits.join(", ")}</span>
+                        </p>
+                      )}
+                      {summary.harms && (
+                        <p className="text-xs">
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-red-50 text-red-700 font-medium">Harms:</span>{" "}
+                          <span className="text-slate-600">{summary.harms.join(", ")}</span>
+                        </p>
+                      )}
+                      {summary.ai_analyzed && (
+                        <p className="text-[10px] text-slate-400 italic">AI analysis of CRS summary</p>
+                      )}
+                    </div>
+                  );
+                })()}
               </div>
             </div>
           );
@@ -119,6 +155,7 @@ function IndustryConflictCard({ group }: { group: IndustryGroup }) {
 export default function ConflictOfInterestSection({
   conflicts,
   memberName,
+  billSummaries = {},
 }: ConflictOfInterestSectionProps) {
   if (conflicts.length === 0) {
     return (
@@ -176,7 +213,7 @@ export default function ConflictOfInterestSection({
       {/* Industry group cards — first 2 always visible */}
       <div className="space-y-4">
         {groups.slice(0, detailsExpanded ? undefined : 2).map((group) => (
-          <IndustryConflictCard key={group.industry} group={group} />
+          <IndustryConflictCard key={group.industry} group={group} billSummaries={billSummaries} />
         ))}
       </div>
 

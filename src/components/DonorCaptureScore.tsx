@@ -1,13 +1,14 @@
 "use client";
 
 import type { ConflictOfInterest } from "@/lib/conflict-detector";
-import type { CampaignFinance } from "@/lib/types";
+import type { CampaignFinance, BillSummary } from "@/lib/types";
 import { billToCongressGovUrl } from "@/lib/bill-urls";
 
 interface DonorCaptureScoreProps {
   conflicts: ConflictOfInterest[];
   finance: CampaignFinance | null;
   memberName: string;
+  billSummaries?: Record<string, BillSummary>;
 }
 
 type CaptureVerdict = "captured" | "mixed" | "independent";
@@ -85,6 +86,7 @@ export default function DonorCaptureScore({
   conflicts,
   finance,
   memberName,
+  billSummaries,
 }: DonorCaptureScoreProps) {
   // Only render if we have some data to base the score on
   const hasConflictData = conflicts.length > 0;
@@ -194,6 +196,11 @@ export default function DonorCaptureScore({
                   )}
                   {conflict.voteTitle && (
                     <span className="text-slate-500"> ({conflict.voteTitle})</span>
+                  )}
+                  {billSummaries?.[conflict.voteBill]?.crs_summary && (
+                    <span className="block text-xs text-slate-500 mt-0.5 line-clamp-1">
+                      {billSummaries[conflict.voteBill].crs_summary}
+                    </span>
                   )}
                 </p>
               </div>
