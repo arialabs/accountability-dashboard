@@ -34,7 +34,7 @@ describe("Rep Page - Financial Disclosures", () => {
     expect(headings.length).toBeGreaterThan(0);
   });
 
-  it("shows filing type and date for each disclosure after expanding", { timeout: 20000 }, async () => {
+  it("shows filing type for disclosures", { timeout: 20000 }, async () => {
     const params = Promise.resolve({ id: "G000585" });
     const disclosures = getMemberDisclosures("G000585");
 
@@ -44,29 +44,22 @@ describe("Rep Page - Financial Disclosures", () => {
     const page = await RepPage({ params });
     render(page);
 
-    // Expand the financial disclosures detail section
-    const expandButton = screen.getByText("Show all filings");
-    fireEvent.click(expandButton);
-
-    // Should show the filing type (Annual or Amendment)
-    const annualText = screen.queryAllByText(/Annual/i);
+    // Timeline shows first 3 filings immediately (no expand needed)
+    // Should show the filing type (Original or Amendment)
+    const originalText = screen.queryAllByText(/Original/i);
     const amendmentText = screen.queryAllByText(/Amendment/i);
 
     // At least one should exist
-    expect(annualText.length + amendmentText.length).toBeGreaterThan(0);
+    expect(originalText.length + amendmentText.length).toBeGreaterThan(0);
   });
 
-  it("includes PDF links for each filing after expanding", { timeout: 20000 }, async () => {
+  it("includes PDF links for filings", { timeout: 20000 }, async () => {
     const params = Promise.resolve({ id: "G000585" });
 
     const page = await RepPage({ params });
     render(page);
 
-    // Expand the financial disclosures detail section
-    const expandButton = screen.getByText("Show all filings");
-    fireEvent.click(expandButton);
-
-    // Look for PDF link text
+    // Timeline shows first 3 filings immediately with PDF links
     const pdfLinks = screen.getAllByText(/View PDF/i);
     expect(pdfLinks.length).toBeGreaterThan(0);
   });
