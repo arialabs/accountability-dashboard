@@ -304,7 +304,7 @@ async function analyzeBeneficiaries(
   console.log(`Phase 2: Analyzing ${toAnalyze.length} bills with AI\n`);
 
   // Try preferred model first, fall back if it fails
-  let model = "claude-sonnet-4-5-20250514";
+  let model = "claude-haiku-4-5-20251001";
   let modelVerified = false;
 
   let analyzed = 0;
@@ -372,11 +372,11 @@ ${bill.crs_summary}`,
       await new Promise((r) => setTimeout(r, 1000));
     } catch (err: unknown) {
       // If preferred model fails on first call, try fallback
-      if (!modelVerified && model === "claude-sonnet-4-5-20250514") {
+      if (!modelVerified && model === "claude-haiku-4-5-20251001") {
         console.log(
           `  Model ${model} failed, trying fallback...`
         );
-        model = "claude-3-5-sonnet-20241022";
+        model = "claude-3-haiku-20240307";
         // Retry this bill with fallback model
         try {
           const response = await anthropic.messages.create({

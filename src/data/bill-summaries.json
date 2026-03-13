@@ -28,9 +28,21 @@
     "crs_summary": "This bill provides FY2026 appropriations for the Department of Homeland Security (DHS).Specifically, the bill provides appropriations to DHS for Departmental Management, Intelligence, Situational Awareness, and Oversight, includingthe Office of the Secretary and Executive Management;the Management Directorate;Intelligence, Analysis, and Situational Awareness; andthe Office of Inspector General.In addition, the bill provides appropriations for Security, Enforcement, and Investigations, includingU.S. Customs and Border Protection,U.S. Immigration and Customs Enforcement,the Transportation Security Administration,the U.S. Coast Guard, andthe U.S. Secret Service.The bill provides appropriations for Protection, Preparedness, Response, and Recovery, includingthe Cybersecurity and Infrastructure Security Agency, andthe Federal Emergency Management Agency (FEMA).The bill provides appropriations for Research, Development, Training, and Services, includingU.S. Citizenship and Immigration Services,the Federal Law Enforcement Training Centers, andthe Science and Technology Directorate.The bill also sets forth requirements and restrictions for using funds provided by this and other appropriations acts.",
     "summary_date": "2026-01-21T13:32:01Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/7147",
-    "benefits": null,
+    "benefits": [
+      "Department of Homeland Security agencies and departments",
+      "U.S. Customs and Border Protection",
+      "U.S. Immigration and Customs Enforcement",
+      "Transportation Security Administration",
+      "U.S. Coast Guard",
+      "U.S. Secret Service",
+      "Cybersecurity and Infrastructure Security Agency",
+      "Federal Emergency Management Agency",
+      "U.S. Citizenship and Immigration Services",
+      "Federal Law Enforcement Training Centers",
+      "DHS contractors and service providers"
+    ],
     "harms": null,
-    "ai_analyzed": false
+    "ai_analyzed": true
   },
   "HR6938": {
     "bill": "HR6938",
@@ -39,9 +51,27 @@
     "crs_summary": "Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026This bill provides FY2026 appropriations to several federal departments and agencies for activities and programs related to commerce, law enforcement, science, energy and water development, public lands, and the environment.Specifically, the bill includes 3 of the 12 regular FY2026 appropriations bills:the Commerce, Justice, Science, and Related Agencies Appropriations Act, 2026;the Energy and Water Development and Related Agencies Appropriations Act, 2026; andthe Department of the Interior, Environment, and Related Agencies Appropriations Act, 2026.The departments, agencies, and activities funded in the bill includethe Department of Commerce,the Department of Justice,the National Aeronautics and Space Administration (NASA),the National Science Foundation,U.S. Army Corps of Engineers civil works projects,the Department of Energy,the Department of the Interior,the Environmental Protection Agency,the Forest Service,the Indian Health Service, andseveral related and independent agencies.The bill also sets forth requirements and restrictions for using funds provided by this and other appropriations acts.",
     "summary_date": "2026-01-07T13:24:02Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/6938",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Department of Commerce",
+      "Department of Justice",
+      "NASA",
+      "National Science Foundation",
+      "Department of Energy",
+      "Department of Interior",
+      "Environmental Protection Agency",
+      "Forest Service",
+      "Indian Health Service",
+      "U.S. Army Corps of Engineers",
+      "Federal agencies and their contractors",
+      "Scientific research institutions",
+      "Environmental conservation programs"
+    ],
+    "harms": [
+      "Taxpayers funding appropriations",
+      "Federal agencies with reduced or frozen budgets if appropriations are lower than requested",
+      "Industries subject to EPA regulations and enforcement"
+    ],
+    "ai_analyzed": true
   },
   "HRES992": {
     "bill": "HRES992",
@@ -63,7 +93,7 @@
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/7006",
     "benefits": null,
     "harms": null,
-    "ai_analyzed": false
+    "ai_analyzed": true
   },
   "SJRES84": {
     "bill": "SJRES84",
@@ -72,9 +102,19 @@
     "crs_summary": "This joint resolution nullifies the rule titled Patient Protection and Affordable Care Act; Marketplace Integrity and Affordability, which was issued by the Centers for Medicare & Medicaid Services on June 25, 2025. The rule makes several changes to enrollment requirements for health insurance exchanges, including (1) requiring annual open enrollment periods for all exchanges to begin by November 1 and end by December 31, (2) requiring all exchanges to conduct pre-enrollment verification of eligibility for at least 75% of new enrollments through special enrollment periods, and (3) prohibiting Deferred Action for Childhood Arrivals (DACA) recipients from enrolling in plans through exchanges or in state Basic Health Programs (state programs for certain low-income residents).The rule also prohibits individual and small group health insurers from covering certain sex-trait modification procedures as an essential health benefit.",
     "summary_date": "2026-01-13T17:45:13Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/84",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Health insurers (reduced coverage obligations and potential cost savings)",
+      "Individuals opposed to coverage of sex-trait modification procedures",
+      "States seeking to restrict DACA recipient access to health insurance"
+    ],
+    "harms": [
+      "DACA recipients (loss of health insurance exchange access)",
+      "Low-income individuals in state Basic Health Programs (reduced enrollment access)",
+      "Individuals seeking sex-trait modification procedures (reduced insurance coverage)",
+      "People relying on special enrollment periods (increased verification requirements)",
+      "Uninsured populations (reduced enrollment flexibility)"
+    ],
+    "ai_analyzed": true
   },
   "HRES977": {
     "bill": "HRES977",
@@ -94,9 +134,18 @@
     "crs_summary": "This joint resolution nullifies the Environmental Protection Agency (EPA) final rule titled Air Plan Approval; South Dakota; Regional Haze Plan for the Second Implementation Period (90 Fed. Reg. 41893) and published on August 28, 2025. The final rule approved South Dakota’s revision to its state implementation plan to satisfy the requirements of the EPA’s regional haze rule. (The regional haze rule requires states to take actions to improve visibility in national parks and wilderness areas.)",
     "summary_date": "2026-01-07T21:38:12Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/86",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "South Dakota industrial facilities subject to regional haze requirements",
+      "Coal-fired power plants in South Dakota",
+      "Industries avoiding visibility improvement compliance costs"
+    ],
+    "harms": [
+      "National park and wilderness area visitors",
+      "Public health advocates concerned with air quality",
+      "States downwind of South Dakota experiencing haze pollution",
+      "Environmental protection objectives for visibility in protected areas"
+    ],
+    "ai_analyzed": true
   },
   "HR498": {
     "bill": "HR498",
@@ -105,9 +154,18 @@
     "crs_summary": "Do No Harm in Medicaid ActThis bill prohibits federal Medicaid payment for specified gender transition procedures for individuals under the age of 18. The bill defines these procedures to mean those that are intended to change the body of an individual to no longer correspond to the individual's biological sex (male or female), including specified surgeries, implants, and medications (e.g., hormones).The bill excludes procedures that are provided to an individual under the age of 18 with the consent of a parent or legal guardian and that are intended to (1) rectify early puberty, genetic disorders, or chromosomal abnormalities; (2) reverse prior gender transition procedures; or (3) prevent imminent death or impairment of a major bodily function.",
     "summary_date": "2025-02-25T19:57:47Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/498",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "States seeking to restrict gender transition procedures for minors",
+      "Conservative advocacy groups opposed to gender transition treatments",
+      "Parents who prefer to prevent their children from accessing gender transition procedures"
+    ],
+    "harms": [
+      "Transgender and non-binary youth seeking gender transition procedures",
+      "Healthcare providers offering gender transition services to minors",
+      "Medicaid programs in states that would lose federal reimbursement for these procedures",
+      "Families with lower incomes who rely on Medicaid coverage for medical care"
+    ],
+    "ai_analyzed": true
   },
   "HRES953": {
     "bill": "HRES953",
@@ -149,9 +207,18 @@
     "crs_summary": "Lower Health Care Costs ActThis bill extends for three years, through 2028, temporary changes enacted by the American Rescue Plan Act of 2021 (ARPA) and the Inflation Reduction Act of 2022 (IRA) that generally expand eligibility for and increase the amount of the premium tax credit. Currently, eligible taxpayers may be able to claim the premium tax credit, which applies toward the cost of obtaining health insurance through health insurance exchanges. To be eligible for the premium tax credit, a taxpayer’s household income must meet or exceed 100% of the federal poverty level (FPL) and, after 2025, may not exceed 400% of the FPL (maximum income limit). For 2021-2025, the ARPA and IRA eliminated the maximum income limit, which generally expands eligibility for the premium tax credit.Further, under current law, the amount of the premium tax credit is (1) generally the plan premium (conditions apply), minus (2) the taxpayer’s household income multiplied by the applicable percentage. The applicable percentage is a specific percentage that varies depending on which of six income ranges (adjusted for inflation after 2025) the taxpayer’s household income falls within. For 2021-2025, the ARPA and IRA lowered the applicable percentages and eliminated the adjustment of the applicable percentages for inflation, which generally increases the amount of the premium tax credit.The bill extends for three years, through 2028, the elimination of the 400% maximum income limit, the lower applicable percentages, and the elimination of the inflation adjustment for the applicable percentages.",
     "summary_date": "2025-12-10T15:26:21Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3385",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Individuals and families with household incomes above 400% of federal poverty level",
+      "Lower-income and middle-income taxpayers seeking health insurance",
+      "Health insurance exchange enrollees",
+      "Health insurance companies (through expanded enrollment and subsidized customers)"
+    ],
+    "harms": [
+      "Federal government (increased spending on premium tax credits)",
+      "Taxpayers funding these subsidies through general revenue",
+      "Future beneficiaries if deficit spending reduces resources for other programs"
+    ],
+    "ai_analyzed": true
   },
   "HRES916": {
     "bill": "HRES916",
@@ -171,9 +238,18 @@
     "crs_summary": "This joint resolution nullifies the rule issued by Environmental Protection Agency titled Extension of Deadlines in Standards of Performance for New, Reconstructed, and Modified Sources and Emissions Guidelines for Existing Sources: Oil and Natural Gas Sector Climate Review Final Rule and published on July 31, 2025. The rule extended (1) certain deadlines for performance standards concerning control devices, equipment leaks, storage vessels, process controllers, and vent systems at crude oil and natural gas facilities; (2) the date for future implementation of the Methane Super Emitter Program; and (3) a state plan submittal deadline. Thus, the joint resolution restores the original deadlines that were applicable before the extensions made by the rule.",
     "summary_date": "2025-11-19T15:24:07Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/76",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Oil and natural gas companies",
+      "Crude oil and natural gas facility operators",
+      "Natural gas producers"
+    ],
+    "harms": [
+      "Environmental protection advocates",
+      "Public health interests",
+      "Climate change mitigation efforts",
+      "State environmental agencies with compressed timelines"
+    ],
+    "ai_analyzed": true
   },
   "HR4405": {
     "bill": "HR4405",
@@ -182,9 +258,19 @@
     "crs_summary": "Epstein Files Transparency ActThis bill requires the Department of Justice (DOJ) to publish (in a searchable and downloadable format) all unclassified records, documents, communications, and investigative materials in DOJ's possession that relate to the investigation and prosecution of Jeffrey Epstein.This includes (1) materials that relate to Ghislaine Maxwell, (2) flight logs and travel records, and (3) individuals named or referenced (including government officials) in connection with the investigation and prosecution of Jeffrey Epstein.DOJ is permitted to withhold certain information such as the personal information of victims and materials that would jeopardize an active federal investigation.Additionally, not later than 15 days after the required publication, DOJ must report to Congress (1) all categories of information released and withheld, (2) a summary of any redactions made, and (3) a list of all government officials and politically exposed individuals named or referenced in the published materials.",
     "summary_date": "2025-09-08T17:37:36Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/4405",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Public transparency and access to information about the Epstein investigation",
+      "Congress and oversight bodies",
+      "Journalists and researchers investigating the case",
+      "Potential victims seeking information about the investigation"
+    ],
+    "harms": [
+      "Individuals named or referenced in the materials (potential reputational harm)",
+      "Government officials implicated in the investigation",
+      "Victims whose personal information could be exposed if redactions are insufficient",
+      "Ongoing federal investigations that could be compromised by disclosure"
+    ],
+    "ai_analyzed": true
   },
   "HRES873": {
     "bill": "HRES873",
@@ -195,7 +281,7 @@
     "url": "https://www.congress.gov/bill/119th-congress/house-resolution/873",
     "benefits": null,
     "harms": null,
-    "ai_analyzed": false
+    "ai_analyzed": true
   },
   "HR5371": {
     "bill": "HR5371",
@@ -215,9 +301,17 @@
     "crs_summary": "Shutdown Fairness ActThis bill provides appropriations to pay federal employees who work during a government shutdown.Specifically, the bill provides appropriations for federal agencies to provide standard rates of pay, allowances, pay differentials, benefits, and other payments to excepted employees for work performed during any period in which interim continuing appropriations or full-year appropriations are not in effect for a fiscal year (i.e., a government shutdown). An excepted employee is an employee who is required to work during a government shutdown.Under current law, excepted employees are not paid until the government shutdown is over. This bill provides appropriations to pay excepted employees during a government shutdown. The bill also specifies that the term excepted employee includes certain contractors who support federal employees during a government shutdown and members of the Armed Forces who are on active duty. A federal agency may not use the funds provided by this bill during any period in which continuing appropriations are in effect for the purpose of paying excepted employees of the agency.The bill must take effect as if it had been enacted on September 30, 2025.",
     "summary_date": "2025-10-20T19:23:02Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3012",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Federal employees required to work during government shutdowns",
+      "Contractors supporting federal employees during shutdowns",
+      "Active duty members of the Armed Forces",
+      "Federal agencies (reduced administrative burden of managing unpaid staff)"
+    ],
+    "harms": [
+      "Federal taxpayers (increased appropriations during shutdowns)",
+      "Non-excepted federal employees (potential inequity if they remain unpaid while excepted employees are paid)"
+    ],
+    "ai_analyzed": true
   },
   "HR4016": {
     "bill": "HR4016",
@@ -226,9 +320,20 @@
     "crs_summary": "Department of Defense Appropriations Act, 2026This bill provides FY2026 appropriations to the Department of Defense (DOD) for military activities.(The bill excludes military construction, military family housing, civil works projects of the Army Corps of Engineers, and nuclear warheads, which are all included in other appropriations bills.)Within the DOD budget, the bill provides appropriations forMilitary Personnel;Operation and Maintenance;Procurement;Research, Development, Test and Evaluation; andRevolving and Management Funds.The bill provides appropriations for Other Department of Defense Programs, includingthe Defense Health Program,Chemical Agents and Munitions Destruction,Drug Interdiction and Counter-Drug Activities, andthe Office of the Inspector General.In addition, the bill provides appropriations for Related Agencies, including (1) the Central Intelligence Agency Retirement and Disability System Fund, and (2) the Intelligence Community Management Account.The bill also sets forth requirements and restrictions for using funds provided by this and other appropriations acts.",
     "summary_date": "2025-07-01T19:40:05Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/4016",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Department of Defense contractors and suppliers",
+      "Military personnel",
+      "Defense industry manufacturers",
+      "Research and development organizations",
+      "Intelligence agencies",
+      "Military healthcare providers"
+    ],
+    "harms": [
+      "Non-defense federal programs competing for limited appropriations",
+      "Domestic social spending priorities",
+      "Taxpayers funding increased military expenditures"
+    ],
+    "ai_analyzed": true
   },
   "S2882": {
     "bill": "S2882",
@@ -237,9 +342,22 @@
     "crs_summary": "Continuing Appropriations and Extensions and Other Matters Act, 2026This bill provides continuing FY2026 appropriations for federal agencies, permanently extends the expanded premium tax credit for purchasing health insurance, provides additional funding for Medicaid and security for federal officials, and extends various expiring programs.Specifically, the bill provides continuing FY2026 appropriations to federal agencies through the earlier of October 31, 2025, or the enactment of the applicable appropriations act. It is known as a continuing resolution (CR) and prevents a government shutdown that would otherwise occur if the FY2026 appropriations bills have not been enacted when FY2026 begins on October 1, 2025.The CR funds most programs and activities at the FY2025 levels with several exceptions that provide funding flexibility and additional appropriations for various programs. For example, the CR provides additional funding for the Corporation for Public Broadcasting and security for federal officials.In addition, the CRpermanently extends provisions that expanded the premium tax credit, which generally reduces premiums for health insurance purchased through a health insurance exchange;repeals health care provisions that were included in the One Big Beautiful Bill Act, including provisions that reduced Medicaid funding; authorizes the District of Columbia to spend local funds at the rates included in its FY2026 local budget;extends the availability of certain funds that are being withheld by the Office of Management and Budget (OMB); andlimits the authority of OMB to withhold appropriations.Finally, the bill extends several expiring programs and authorities, including programs related to health care, veterans, homeland security, and agriculture.",
     "summary_date": "2025-09-19T17:49:52Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2882",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Health insurance purchasers through expanded premium tax credits",
+      "Medicaid beneficiaries (through repeal of funding reductions)",
+      "Corporation for Public Broadcasting",
+      "Federal officials (through enhanced security funding)",
+      "Veterans programs",
+      "Homeland security programs",
+      "Agriculture programs",
+      "District of Columbia (local budget spending authority)",
+      "Federal agencies (continued operations funding)"
+    ],
+    "harms": [
+      "Taxpayers (through continued federal spending and tax credits)",
+      "Fiscal deficit reduction efforts (through permanent extension of tax credits)"
+    ],
+    "ai_analyzed": true
   },
   "S2296": {
     "bill": "S2296",
@@ -248,9 +366,24 @@
     "crs_summary": "National Defense Authorization Act for Fiscal Year 2026This bill sets forth policies and authorities for FY2026 for Department of Defense (DOD) programs and activities, military construction, and the national security programs of the Department of Energy (DOE). It also authorizes the Defense Nuclear Facilities Safety Board for FY2026. The bill authorizes appropriations but it does not provide budget authority, which is provided by appropriations legislation.Among other elements, the billauthorizes the procurement of various items, including aircraft, ships, and missiles;authorizes active duty and reserve component personnel strength levels;authorizes specified military construction projects and extends the authorization of certain projects from previous fiscal years;requires DOD to develop a strategy on the national security implications of emerging biotechnologies;requires the Navy to implement certain processes to improve the material condition and combat readiness of Navy surface ships maintained and repaired at private shipyards; extends the Pacific Deterrence Initiative (an initiative to enhance U.S. deterrence and defense posture, assure allies and partners, and increase capability and readiness in the Indo-Pacific region) through FY2026; andrepeals various statutory provisions related to diversity, equity, and inclusion within DOD, including a provision establishing the position of Chief Diversity Officer of DOD.For additional information on the National Defense Authorization Act (NDAA) seeIn Focus IF10516, Defense Primer: Navigating the NDAA, andIn Focus IF10515, Defense Primer: The NDAA Process.",
     "summary_date": "2025-09-18T20:22:42Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2296",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Department of Defense",
+      "Department of Energy national security programs",
+      "Defense Nuclear Facilities Safety Board",
+      "Aircraft manufacturers and defense contractors",
+      "Shipbuilders and naval contractors",
+      "Missile manufacturers",
+      "Private shipyards",
+      "Military personnel (active duty and reserve)",
+      "U.S. allies and partners in Indo-Pacific region",
+      "Defense industry supply chain"
+    ],
+    "harms": [
+      "DOD diversity, equity, and inclusion programs",
+      "Chief Diversity Officer position at DOD",
+      "Employees in DOD diversity and inclusion roles"
+    ],
+    "ai_analyzed": true
   },
   "S2806": {
     "bill": "S2806",
@@ -259,9 +392,19 @@
     "crs_summary": "Eliminate Shutdowns ActThis bill provides continuing appropriations to prevent a government shutdown if the appropriations bills for a fiscal year have not been enacted before the fiscal year begins and continuing appropriations are not in effect.Specifically, the bill provides appropriations at the rate of operations that was provided for the prior fiscal year to continue programs, projects, and activities that were funded in the preceding fiscal year.",
     "summary_date": "2025-10-06T14:07:05Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2806",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Federal employees (continued pay and employment)",
+      "Federal contractors and vendors (continued payments)",
+      "Beneficiaries of federal programs (continued services)",
+      "General public (uninterrupted federal services)",
+      "Congress (reduced pressure to pass budgets on time)"
+    ],
+    "harms": [
+      "Fiscal conservatives (removes shutdown leverage for budget negotiations)",
+      "Congress members seeking budget reforms (eliminates shutdown as negotiating tool)",
+      "Taxpayers concerned about spending (reduces incentive for fiscal discipline)"
+    ],
+    "ai_analyzed": true
   },
   "HR3062": {
     "bill": "HR3062",
@@ -270,9 +413,21 @@
     "crs_summary": "Promoting Cross-border Energy Infrastructure ActThis bill establishes a new process for approving or revoking permits for the construction and operation of energy infrastructure across an international border of the United States. Thus, it replaces the existing process established under specified executive orders.The bill requires a person to obtain a certificate of crossing before constructing, connecting, operating, or maintaining a border-crossing facility for the import or export of oil or natural gas, or the transmission of electricity, across a U.S. border with Canada or Mexico. A certificate must be obtained from the Federal Energy Regulatory Commission (FERC) for a facility consisting of oil or natural gas pipelines or the Department of Energy (DOE) for an electric transmission facility. As a condition of issuing a certificate, DOE must require that an electric transmission facility be constructed, connected, operated, or maintained consistent with specified policies and standards.FERC and DOE must meet a deadline for issuing a certificate as set forth by this bill. The bill also requires FERC to meet a deadline for approving applications to import or export natural gas to or from Canada or Mexico.The bill also requires the President to obtain the approval of Congress before revoking a permit issued under executive orders for constructing, connecting, operating, or maintaining an oil or natural gas pipeline, an electric transmission facility, or a related border-crossing facility.",
     "summary_date": "2025-07-08T19:37:36Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/3062",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Oil and natural gas pipeline companies",
+      "Electric transmission facility operators",
+      "Energy infrastructure developers",
+      "Energy exporters (oil, natural gas, electricity)",
+      "Canadian and Mexican energy trading partners",
+      "Consumers in regions receiving imported energy"
+    ],
+    "harms": [
+      "Environmental advocates and conservation groups",
+      "Communities near border-crossing facilities",
+      "Future administrations seeking to revoke permits on environmental grounds",
+      "Domestic energy producers competing with imports"
+    ],
+    "ai_analyzed": true
   },
   "HRES722": {
     "bill": "HRES722",
@@ -292,9 +447,15 @@
     "crs_summary": "This resolution censures Representative Ilhan Omar of Minnesota and removes her from the Committee on Education and Workforce and the Committee on the Budget.",
     "summary_date": "2025-09-18T18:32:54Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-resolution/713",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Republican Party members (political advantage)",
+      "Other House members opposed to Omar's positions"
+    ],
+    "harms": [
+      "Representative Ilhan Omar (loss of committee assignments and official censure)",
+      "Democratic Party (loss of committee representation and political standing)"
+    ],
+    "ai_analyzed": true
   },
   "SJRES60": {
     "bill": "SJRES60",
@@ -303,9 +464,18 @@
     "crs_summary": "This joint resolution nullifies the Environmental Protection Agency interim final rule titled Emissions Budget and Allowance Allocations for Indiana Under the Revised Cross-State Air Pollution Rule Update published on May 20, 2025 (90 Federal Register 21423).The interim final rule increases the permissible nitrogen oxides (NOX) emissions from Indiana electricity generating units (EGUs) from May through September during 2024 and subsequent years.",
     "summary_date": "2025-09-17T14:22:16Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/60",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Indiana electricity generating units (EGUs)",
+      "Indiana power plants and fossil fuel energy producers",
+      "Industries with high electricity consumption in Indiana"
+    ],
+    "harms": [
+      "States downwind of Indiana affected by cross-state air pollution",
+      "Public health advocates and environmental groups",
+      "Individuals with respiratory conditions in affected regions",
+      "States required to meet stricter NOX emissions standards under the Cross-State Air Pollution Rule"
+    ],
+    "ai_analyzed": true
   },
   "SCONRES22": {
     "bill": "SCONRES22",
@@ -316,7 +486,7 @@
     "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/22",
     "benefits": null,
     "harms": null,
-    "ai_analyzed": false
+    "ai_analyzed": true
   },
   "HR3944": {
     "bill": "HR3944",
@@ -325,9 +495,20 @@
     "crs_summary": "Military Construction and Veterans Affairs, Agriculture, and Legislative Branch Appropriations Act, 2026This bill provides FY2026 appropriations to several federal departments and agencies for activities and programs related to military construction, veterans, agriculture, and the legislative branch.Specifically, the bill includes 3 of the 12 regular FY2026 appropriations bills:the Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, 2026;the Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act, 2026; andthe Legislative Branch Appropriations Act, 2026.The departments, agencies, and activities funded in the bill includeDepartment of Defense military construction and family housing activities,the Department of Veterans Affairs,the Department of Agriculture,the Food and Drug Administration,the Senate,various agencies that support Congress, andseveral related and independent agencies.(Pursuant to the longstanding practice of each chamber of Congress determining its own requirements, funds for the House of Representatives are not included in the Senate bill.)The bill also sets forth requirements and restrictions for using funds provided by this and other appropriations acts.",
     "summary_date": "2025-09-15T18:31:22Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/3944",
-    "benefits": null,
+    "benefits": [
+      "Department of Defense",
+      "Department of Veterans Affairs",
+      "Veterans",
+      "Department of Agriculture",
+      "Food and Drug Administration",
+      "Senate",
+      "Congressional support agencies",
+      "Rural development programs",
+      "Military construction contractors",
+      "Agricultural sector"
+    ],
     "harms": null,
-    "ai_analyzed": false
+    "ai_analyzed": true
   },
   "HR3838": {
     "bill": "HR3838",
@@ -336,9 +517,18 @@
     "crs_summary": "Streamlining Procurement for Effective Execution and Delivery and National Defense Authorization Act for Fiscal Year 2026This bill sets forth policies and authorities for FY2026 for Department of Defense (DOD) programs and activities, military construction, and the national security programs of the Department of Energy and the Maritime Administration. It also authorizes appropriations for the Defense Nuclear Facilities Safety Board and the Naval Petroleum Reserves, and modifies the defense acquisition system to expedite delivery of capabilities to the Armed Forces.Among other elements, the billauthorizes the acquisition or modification of various military items (e.g., aircraft) and sets policy for certain procurement programs;authorizes research, development, test, and evaluation and sets policy for such activities;sets active component and reserve component end-strength levels;sets policy regarding various aspects of military health care and military compensation;sets policy regarding acquisitions and acquisition management, including contracting authorities and small businesses;sets policy for various matters related to DOD interactions with foreign nations, including matters concerning Israel;sets policy for various matters related to DOD cyber activities, cyber workforce and training, cybersecurity, and artificial intelligence matters; andauthorizes the activities of the National Nuclear Security Administration, defense environmental cleanup, nuclear energy, and other defense activities.For additional information on the National Defense Authorization Act (NDAA) seeCRS In Focus IF10516, Defense Primer: Navigating the NDAA, andCRS In Focus IF10515, Defense Primer: The NDAA Process.",
     "summary_date": "2025-09-11T13:20:33Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/3838",
-    "benefits": null,
+    "benefits": [
+      "Department of Defense",
+      "Department of Energy",
+      "Maritime Administration",
+      "Defense contractors and military equipment manufacturers",
+      "Small businesses in defense contracting",
+      "Armed Forces personnel",
+      "National Nuclear Security Administration",
+      "Defense Nuclear Facilities Safety Board"
+    ],
     "harms": null,
-    "ai_analyzed": false
+    "ai_analyzed": true
   },
   "HRES682": {
     "bill": "HRES682",
@@ -358,9 +548,26 @@
     "crs_summary": "Energy and Water Development and Related Agencies Appropriations Act, 2026This bill provides FY2026 appropriations for U.S. Army Corps of Engineers civil works projects, the Department of the Interior's Bureau of Reclamation, the Department of Energy (DOE), and several independent agencies.The bill provides appropriations for U.S. Army Corps of Engineers civil works projects, including forInvestigations,Construction,Mississippi River and Tributaries,Operation and Maintenance,the Regulatory Program,Flood Control and Coastal Emergencies,Expenses,the Office of the Assistant Secretary of the Army for Civil Works, andthe Water Infrastructure Finance and Innovation Program.The bill provides appropriations to the Department of the Interior for the Central Utah Project and the Bureau of Reclamation.The bill provides appropriations to DOE for energy programs, includingEnergy Efficiency and Renewable Energy;Cybersecurity, Energy Security, and Emergency Response;Electricity;Grid Deployment;Nuclear Energy;Fossil Energy;Naval Petroleum and Oil Shale Reserves;the Strategic Petroleum Reserve;the Northeast Home Heating Oil Reserve;the Energy Information Administration;Non-Defense Environmental Cleanup;the Uranium Enrichment Decontamination and Decommissioning Fund;Science;Nuclear Waste Disposal;the Advanced Research Projects Agency—Energy;the Title 17 Innovative Technology Loan Guarantee Program;the Advanced Technology Vehicles Manufacturing Loan Program;the Tribal Energy Loan Guarantee Program;Indian Energy Policy and Programs;Departmental Administration; andthe Office of the Inspector General.The bill also provides appropriations to DOE forAtomic Energy Defense Activities of the National Nuclear Security Administration,Environmental and Other Defense Activities, andthe Power Marketing Administrations.The bill provides appropriations to several independent agencies, including the Federal Energy Regulatory Commission and the Nuclear Regulatory Commission.The bill also sets forth requirements and restrictions for using funds provided by this and other appropriations acts.",
     "summary_date": "2025-08-22T13:19:51Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/4553",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "U.S. Army Corps of Engineers",
+      "Department of the Interior Bureau of Reclamation",
+      "Department of Energy",
+      "Renewable energy sector",
+      "Nuclear energy industry",
+      "Fossil fuel industry",
+      "Grid infrastructure companies",
+      "Federal Energy Regulatory Commission",
+      "Nuclear Regulatory Commission",
+      "Water infrastructure projects",
+      "Flood control and coastal protection entities",
+      "Advanced technology and innovation companies receiving loan guarantees",
+      "Tribal energy programs"
+    ],
+    "harms": [
+      "Taxpayers funding appropriations",
+      "Non-prioritized federal programs competing for limited budget resources"
+    ],
+    "ai_analyzed": true
   },
   "HRES672": {
     "bill": "HRES672",
@@ -380,9 +587,16 @@
     "crs_summary": "FMS-Only List Review ActThis bill requires the Department of State to conduct an annual review to identify defense articles and services eligible to be sold only through Foreign Military Sales (FMS) (i.e., U.S. government to foreign government sales) that should also be eligible to be sold through Direct Commercial Sales (DCS) (i.e., U.S. company to foreign government sales).For each article or service identified, the review must address (1) the length of time to complete a transfer of the article or service through the FMS program as compared to the DCS process; (2) the impact of a transfer of the article or service through the DCS process on the workload of the State Department and the Department of Defense; and (3) the benefits of the transfer of the article or service through the DCS process to U.S. national security and competitiveness. Within 30 days of the completion of each annual review, the State Department must report to Congress on the results of the review.",
     "summary_date": "2025-09-02T14:20:21Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/4216",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "U.S. defense contractors and commercial arms manufacturers",
+      "Foreign governments seeking faster arms procurement",
+      "U.S. competitiveness in global defense markets"
+    ],
+    "harms": [
+      "State Department and Department of Defense (increased workload analysis burden)",
+      "Government oversight and control of arms sales (potential reduction in direct government-to-government sales)"
+    ],
+    "ai_analyzed": true
   },
   "SJRES41": {
     "bill": "SJRES41",
@@ -402,9 +616,19 @@
     "crs_summary": "This joint resolution prohibits a proposed foreign military sale of certain defense articles and services to Israel.",
     "summary_date": "2025-05-22T14:09:06Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/34",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Advocacy groups opposing military aid to Israel",
+      "Countries or entities critical of Israeli military operations",
+      "Domestic defense contractors not involved in Israel sales (relative competitive advantage)"
+    ],
+    "harms": [
+      "U.S. defense contractors and manufacturers producing the defense articles",
+      "U.S. military suppliers and service providers to Israel",
+      "Israel's military capabilities and defense preparedness",
+      "U.S.-Israel military cooperation and alliance relationship",
+      "Jobs in U.S. defense industry sectors involved in Israel sales"
+    ],
+    "ai_analyzed": true
   },
   "HRES590": {
     "bill": "HRES590",
@@ -424,9 +648,25 @@
     "crs_summary": "Rescissions Act of 2025This bill rescinds $9.4 billion in unobligated funds that were provided to the Department of State, the U.S. Agency for International Development (USAID), various independent and related agencies, and the Corporation for Public Broadcasting. The rescissions were proposed by the President under procedures included in the Congressional Budget and Impoundment Control Act of 1974. Under current law, the President may propose rescissions to Congress using specified procedures, and the rescissions must be enacted into law to take effect. Specifically, the bill rescinds funds that were provided to the State Department or the President forContributions to International Organizations;Contributions for International Peacekeeping Activities;Global Health Programs;Migration and Refugee Assistance;the Complex Crises Fund;the Democracy Fund;the Economic Support Fund;Contributions to the Clean Technology Fund;International Organization and Programs;Development Assistance;Assistance for Europe, Eurasia, and Central Asia;International Disaster Assistance; andTransition Initiatives.The bill also rescinds funds that were provided for USAID Operating Expenses,the Inter-American Foundation,the U.S. African Development Foundation,the U.S. Institute of Peace, andthe Corporation for Public Broadcasting.",
     "summary_date": "2025-06-13T18:27:57Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/4",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "U.S. federal government (reduces spending/deficit)",
+      "Taxpayers (through reduced federal expenditures)"
+    ],
+    "harms": [
+      "International organizations and peacekeeping operations",
+      "Global health programs and disease prevention efforts",
+      "Refugee and migration assistance recipients",
+      "Democracy promotion initiatives abroad",
+      "International disaster relief programs",
+      "Development assistance recipients in Africa, Europe, Eurasia, and Central Asia",
+      "Clean technology and climate initiatives",
+      "U.S. Institute of Peace",
+      "Inter-American Foundation",
+      "U.S. African Development Foundation",
+      "Corporation for Public Broadcasting",
+      "USAID operations and staff"
+    ],
+    "ai_analyzed": true
   },
   "HRES580": {
     "bill": "HRES580",
@@ -457,9 +697,20 @@
     "crs_summary": "District of Columbia Federal Immigration Compliance ActThis bill prohibits the District of Columbia (DC) from limiting its cooperation with federal immigration enforcement activities, except for certain instances involving witnesses and victims of crime. Specifically, the bill bars DC from adopting a law, policy, or practice prohibiting DC governmental entities from sending, receiving, maintaining, or exchanging information regarding the citizenship or immigration status of any individual with a federal, state, or local government entity.Further, DC may not adopt a law, policy, or practice of not complying with lawful requests from the Department of Homeland Security (DHS) to comply with a detainer for, or notify about the release of, an individual from custody. (A detainer is a formal request from DHS that a state or locality hold an individual in custody for up to 48 hours after the individual would otherwise be released so that DHS may facilitate the individual's removal.)The bill provides exceptions allowing DC to adopt policies of not sharing information or complying with a detainer request regarding an individual who comes forward as a victim or a witness of a crime.",
     "summary_date": "2025-06-10T15:11:50Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/2056",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Federal immigration enforcement agencies (DHS)",
+      "Immigration and Customs Enforcement (ICE)",
+      "States and localities seeking immigration enforcement cooperation",
+      "Those supporting stricter immigration enforcement"
+    ],
+    "harms": [
+      "Undocumented immigrants in DC",
+      "Immigrant communities and advocacy groups",
+      "DC's ability to set independent local immigration policies",
+      "Crime victims and witnesses who are undocumented (reduced trust in reporting crimes)",
+      "DC governmental entities' operational autonomy"
+    ],
+    "ai_analyzed": true
   },
   "SJRES53": {
     "bill": "SJRES53",
@@ -468,9 +719,17 @@
     "crs_summary": "This joint resolution prohibits a proposed foreign military sale of certain defense articles and services to Qatar.",
     "summary_date": "2025-06-11T18:55:08Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/53",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "U.S. foreign policy interests opposed to the Qatar sale",
+      "Congressional oversight advocates",
+      "Groups concerned about defense technology proliferation"
+    ],
+    "harms": [
+      "Qatar (blocked from acquiring defense articles and services)",
+      "U.S. defense contractors (lost sales opportunity)",
+      "U.S.-Qatar military relationship and cooperation"
+    ],
+    "ai_analyzed": true
   },
   "SJRES54": {
     "bill": "SJRES54",
@@ -479,9 +738,19 @@
     "crs_summary": "This joint resolution prohibits a proposed foreign military sale of certain defense articles and services to the United Arab Emirates.",
     "summary_date": "2025-06-11T18:55:46Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/54",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Advocacy groups opposing arms sales to the UAE",
+      "Countries or entities in regional competition with the UAE",
+      "Domestic critics of UAE's foreign policy or human rights record"
+    ],
+    "harms": [
+      "U.S. defense contractors and manufacturers",
+      "U.S. military-industrial complex suppliers",
+      "The United Arab Emirates",
+      "U.S. government foreign policy objectives in the Middle East",
+      "U.S. diplomatic relations with the UAE"
+    ],
+    "ai_analyzed": true
   },
   "HR884": {
     "bill": "HR884",
@@ -490,9 +759,16 @@
     "crs_summary": "This bill prohibits a non-U.S. citizen from voting in a District of Columbia (DC) election and repeals relevant provisions of DC law.Federal law prohibits noncitizens from voting in a federal election; however, in 2022, DC enacted a law allowing noncitizens who meet residency and other requirements to vote in local elections. This bill repeals the DC law, which went into effect on February 23, 2023.",
     "summary_date": "2025-06-09T15:35:27Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/884",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "U.S. citizens in DC (exclusive voting rights)",
+      "Those opposed to noncitizen voting rights"
+    ],
+    "harms": [
+      "Noncitizen DC residents (loss of voting rights)",
+      "Immigrant advocacy groups",
+      "DC local government (reduced electorate)"
+    ],
+    "ai_analyzed": true
   },
   "HR1804": {
     "bill": "HR1804",
@@ -501,9 +777,16 @@
     "crs_summary": "7(a) Loan Agent Oversight ActThis bill requires the Small Business Administration (SBA) to submit an annual report containing specified information related to 7(a) loan agents. These agents provide fee-based referral and loan application services related to the SBA's 7(a) Program. Under the 7(a) Program, the SBA provides loans and loan guarantees to small business borrowers who cannot obtain credit elsewhere on reasonable terms and conditions.The required report must include (1) the number and type of agents assisting applicants for 7(a) loans, (2) the number of fraudulent loans made for which an applicant used the services of a 7(a) agent, (3) the purchase rate of loans for which an applicant used the services of a 7(a) agent, and (4) the number and aggregate dollar value of referral fees paid to 7(a) agents.",
     "summary_date": "2025-05-30T21:19:16Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/1804",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Congress and oversight bodies (increased transparency and accountability data)",
+      "Small Business Administration (enhanced monitoring capabilities)",
+      "Legitimate 7(a) loan agents (ability to demonstrate compliance and distinguish from fraudulent actors)"
+    ],
+    "harms": [
+      "7(a) loan agents (increased regulatory scrutiny and reporting burden)",
+      "Fraudulent or problematic loan agents (exposure through fraud reporting)"
+    ],
+    "ai_analyzed": true
   },
   "SJRES31": {
     "bill": "SJRES31",
@@ -512,9 +795,17 @@
     "crs_summary": "This joint resolution nullifies the Environmental Protection Agency rule titled Review of Final Rule Reclassification of Major Sources as Area Sources Under Section 112 of the Clean Air Act (89 Fed. Reg. 73293) and published on September 10, 2024. Among other elements, the rule requires sources of persistent and bioaccumulative hazardous air pollutants to continue to comply with certain major source emission standards under the Clean Air Act even if the sources reclassify as area sources.",
     "summary_date": "2025-04-07T22:00:26Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/31",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Industrial facilities and manufacturers that emit persistent and bioaccumulative hazardous air pollutants",
+      "Sources seeking to reclassify from major to area source status to avoid stricter emission standards",
+      "Industries subject to major source emission standards under Section 112 of the Clean Air Act"
+    ],
+    "harms": [
+      "Public health and communities exposed to persistent and bioaccumulative hazardous air pollutants",
+      "Environmental protection and air quality standards",
+      "Individuals with respiratory conditions and vulnerable populations in areas with industrial emissions"
+    ],
+    "ai_analyzed": true
   },
   "HJRES88": {
     "bill": "HJRES88",
@@ -523,9 +814,20 @@
     "crs_summary": "This joint resolution nullifies the Environmental Protection Agency notice titled California State Motor Vehicle and Engine Pollution Control Standards; Advanced Clean Cars II; Waiver of Preemption; Notice of Decision (90 Fed. Reg. 642) and published on January 6, 2025. Among other elements, the notice grants the California Air Resources Board request for a waiver for its Advanced Clean Cars II (ACC II) regulations. (Under the Clean Air Act, California may seek waivers of the preemption prohibiting states from enacting certain emission standards.)",
     "summary_date": "2025-04-25T14:51:06Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/88",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Automobile manufacturers",
+      "Oil and gas industry",
+      "States seeking to maintain less stringent emission standards",
+      "Consumers preferring lower-cost vehicles without advanced emission controls"
+    ],
+    "harms": [
+      "California Air Resources Board",
+      "States adopting California's emission standards",
+      "Electric vehicle manufacturers",
+      "Environmental groups and clean air advocates",
+      "Public health interests in air quality improvement"
+    ],
+    "ai_analyzed": true
   },
   "HJRES87": {
     "bill": "HJRES87",
@@ -534,9 +836,20 @@
     "crs_summary": "This joint resolution nullifies the Environmental Protection Agency notice titled California State Motor Vehicle and Engine Pollution Control Standards; Heavy-Duty Vehicle and Engine Emission Warranty and Maintenance Provisions; Advanced Clean Trucks; Zero Emission Airport Shuttle; Zero-Emission Power Train Certification; Waiver of Preemption; Notice of Decision (88 Fed. Reg. 20688) and published on April 6, 2023. Among other elements, the notice grants the California Air Resources Board request for a waiver several of its regulations, including the Heavy-Duty Vehicle and Engine Emission Warranty Regulations and Maintenance Provisions. (Under the Clean Air Act, California may seek waivers of the preemption prohibiting states from enacting certain emission standards.)",
     "summary_date": "2025-04-28T15:26:32Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/87",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Heavy-duty vehicle manufacturers",
+      "Engine manufacturers",
+      "Fossil fuel industry",
+      "Trucking companies avoiding emission compliance costs"
+    ],
+    "harms": [
+      "California Air Resources Board",
+      "States seeking to implement stricter emission standards",
+      "Electric vehicle manufacturers",
+      "Public health advocates",
+      "Communities affected by air pollution"
+    ],
+    "ai_analyzed": true
   },
   "HJRES89": {
     "bill": "HJRES89",
@@ -545,9 +858,19 @@
     "crs_summary": "This joint resolution nullifies the Environmental Protection Agency notice titled California State Motor Vehicle and Engine and Nonroad Engine Pollution Control Standards; The ‘Omnibus’ Low NOX Regulation; Waiver of Preemption; Notice of Decision (90 Fed. Reg. 643) and published on January 6, 2025. Among other elements, the notice grants the California Air Resources Board request for a waiver for its Heavy-Duty Vehicle and Engine Omnibus Low NOX regulations. (Under the Clean Air Act, California may seek waivers of the preemption prohibiting states from enacting certain emission standards.)",
     "summary_date": "2025-04-25T00:59:09Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/89",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Heavy-duty vehicle and engine manufacturers",
+      "Diesel engine producers",
+      "Trucking and transportation companies",
+      "Industries subject to California's Low NOX regulations"
+    ],
+    "harms": [
+      "California Air Resources Board",
+      "States seeking to adopt California emission standards",
+      "Public health advocates",
+      "Air quality improvement efforts in California and adopting states"
+    ],
+    "ai_analyzed": true
   },
   "HJRES61": {
     "bill": "HJRES61",
@@ -556,9 +879,18 @@
     "crs_summary": "This joint resolution nullifies the Environmental Protection Agency rule titled National Emission Standards for Hazardous Air Pollutants: Rubber Tire Manufacturing (89 Fed. Reg. 94886) and published on November 29, 2024. The rule addresses the decision in Louisiana Environmental Action Network v. EPA (D.C. Cir. 2020) by implementing emissions standards for the rubber processing subcategory of the rubber tire manufacturing industry to ensure all emissions of hazardous air pollutants from sources in the source category are regulated.",
     "summary_date": "2025-03-03T20:30:14Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/61",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Rubber tire manufacturers",
+      "Rubber processing facilities",
+      "Industries avoiding compliance costs with new emissions standards"
+    ],
+    "harms": [
+      "Public health from hazardous air pollutant exposure",
+      "Communities near rubber tire manufacturing facilities",
+      "Environmental protection objectives",
+      "EPA regulatory authority"
+    ],
+    "ai_analyzed": true
   },
   "HCONRES14": {
     "bill": "HCONRES14",
@@ -569,7 +901,7 @@
     "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/14",
     "benefits": null,
     "harms": null,
-    "ai_analyzed": false
+    "ai_analyzed": true
   },
   "HRES313": {
     "bill": "HRES313",
@@ -589,9 +921,18 @@
     "crs_summary": "This joint resolution prohibits a proposed foreign military sale of certain defense articles and services to Israel.",
     "summary_date": "2025-05-22T14:08:39Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/33",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Advocacy groups opposing military aid to Israel",
+      "Countries or entities critical of Israeli military operations",
+      "Domestic defense contractors competing for alternative contracts"
+    ],
+    "harms": [
+      "Israel (blocked military sale)",
+      "U.S. defense contractors (lost sale revenue)",
+      "U.S. military-industrial suppliers",
+      "U.S. government (reduced foreign military sales leverage in Middle East)"
+    ],
+    "ai_analyzed": true
   },
   "SJRES26": {
     "bill": "SJRES26",
@@ -600,9 +941,18 @@
     "crs_summary": "This joint resolution prohibits a proposed foreign military sale of certain defense articles and services to Israel.",
     "summary_date": "2025-05-21T16:47:37Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/26",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Advocacy groups opposing military aid to Israel",
+      "Countries or entities critical of Israeli military operations",
+      "Domestic defense contractors not involved in Israel sales (relative competitive advantage)"
+    ],
+    "harms": [
+      "U.S. defense contractors and manufacturers producing the defense articles",
+      "Israel (recipient of the blocked military sale)",
+      "U.S. military-industrial supply chain dependent on foreign military sales",
+      "U.S. government (loss of foreign military sales revenue and diplomatic leverage)"
+    ],
+    "ai_analyzed": true
   },
   "HR997": {
     "bill": "HR997",
@@ -611,9 +961,17 @@
     "crs_summary": "National Taxpayer Advocate Enhancement Act of 2025 This bill authorizes the National Taxpayer Advocate to appoint legal counsel within the Taxpayer Advocate Service (TAS) to report directly to the National Taxpayer Advocate. The bill also expands the authority of the National Taxpayer Advocate to take personnel actions with respect to local taxpayer advocates (located in each state) to include actions with respect to any employee of TAS.Currently, pursuant to a Department of the Treasury order, all legal counsel whose duties include providing legal advice to any official in any office or bureau of Treasury are part of the Legal Division within Treasury and under the supervision of the General Counsel, with limited exceptions. TAS assists taxpayers in matters involving the Internal Revenue Service (IRS) and is part of the IRS, within Treasury.",
     "summary_date": "2025-03-27T15:54:42Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/997",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "National Taxpayer Advocate",
+      "Taxpayer Advocate Service (TAS)",
+      "Taxpayers seeking IRS dispute resolution",
+      "Local taxpayer advocates"
+    ],
+    "harms": [
+      "Treasury Department General Counsel's office (reduced supervisory authority)",
+      "IRS management (reduced control over TAS legal counsel)"
+    ],
+    "ai_analyzed": true
   },
   "HR1968": {
     "bill": "HR1968",
@@ -622,9 +980,22 @@
     "crs_summary": "Full-Year Continuing Appropriations and Extensions Act, 2025This bill provides continuing FY2025 appropriations for federal agencies and extends various expiring programs and authorities. Specifically, the bill provides continuing FY2025 appropriations to federal agencies for the remainder of FY2025. It is known as a continuing resolution (CR) and prevents a government shutdown that would otherwise occur if the FY2025 appropriations bills have not been enacted when the existing CR expires on March 14, 2025. The CR funds most programs and activities at the FY2024 levels. It also includes several additional provisions that increase or decrease funding for various programs compared to FY2024 levels. In addition, the bill extends several expiring programs and authorities, includingseveral public health, Medicare, and Medicaid authorities and programs;the National Flood Insurance Program;authorities related to the Commodity Futures Trading Commission whistleblower program;the Department of Homeland Security (DHS) National Cybersecurity Protection System;authorities for DHS and the Department of Justice to take certain actions to mitigate a credible threat from an unmanned aircraft system;the Temporary Assistance for Needy Families (TANF) program;several immigration-related programs and authorities; the special assessment on nonindigent persons or entities convicted of certain offenses involving sexual abuse or human trafficking;the temporary scheduling order issued by the Drug Enforcement Administration to place fentanyl-related substances in Schedule I of the Controlled Substances Act;the authorization for the U.S. Parole Commission; andthe Department of Agriculture livestock mandatory price reporting program.",
     "summary_date": "2025-03-11T21:50:59Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/1968",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Federal agencies (continued funding at FY2024 levels)",
+      "Medicare and Medicaid beneficiaries (extended authorities)",
+      "Public health programs (extended authorities)",
+      "National Flood Insurance Program participants",
+      "TANF recipients (Temporary Assistance for Needy Families)",
+      "Commodity Futures Trading Commission whistleblowers",
+      "DHS cybersecurity operations",
+      "Livestock producers (mandatory price reporting program)",
+      "General public (prevents government shutdown)"
+    ],
+    "harms": [
+      "Programs with decreased funding compared to FY2024 levels",
+      "Entities subject to special assessments for sexual abuse and human trafficking convictions"
+    ],
+    "ai_analyzed": true
   },
   "HR495": {
     "bill": "HR495",
@@ -633,9 +1004,17 @@
     "crs_summary": "Subterranean Border Defense ActThis bill requires recurring annual reporting by U.S. Customs and Border Protection (CBP) on the implementation of a strategic plan to counter illicit cross-border tunnel operations. Currently, CBP is only required to report once no later than one year after the plan's development.",
     "summary_date": "2025-03-05T16:27:15Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/495",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "U.S. Customs and Border Protection (CBP)",
+      "Border security agencies",
+      "Communities near the U.S.-Mexico border"
+    ],
+    "harms": [
+      "Drug trafficking organizations",
+      "Human smuggling networks",
+      "Entities engaged in illicit cross-border tunnel operations"
+    ],
+    "ai_analyzed": true
   },
   "HR993": {
     "bill": "HR993",
@@ -644,9 +1023,17 @@
     "crs_summary": "Emerging Innovative Border Technologies ActThis bill requires U.S. Customs and Border Protection (CBP) and the Science and Technology Directorate of the Department of Homeland Security to develop a plan to identify, integrate, and deploy emerging and innovative technologies to improve border security operations. Such technologies may incorporate artificial intelligence, machine-learning, automation, fiber-optic sensing technology, nanotechnology, optical and cognitive radar, modeling and simulation technology, hyperspectral and LIDAR sensors, and imaging, identification, and categorization systems. The bill authorizes CBP to establish one or more Innovation Teams to research and adapt commercial technologies that may be used by CBP.The plan must describe how the Innovation Teams have been implemented and also detailgoals and timelines for adoption of qualifying technologies,metrics and key performance parameters for determining the plan's effectiveness,which technologies used by other federal agencies CBP may also utilize,which existing authorities CBP may use to procure technologies,how CBP legacy border technology programs may be replaced,the expected privacy and security impact of security-related technology on border communities, andrecent technological advancements in specified technologies.CBP must provide the plan to Congress within 180 days of the bill’s enactment. The bill also requires CBP to annually report to Congress regarding the activities of the Innovation Teams.",
     "summary_date": "2025-03-14T16:25:46Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/993",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Technology companies and defense contractors (AI, machine learning, sensor, and imaging system providers)",
+      "U.S. Customs and Border Protection (CBP) - enhanced operational capabilities and modernized systems",
+      "Department of Homeland Security Science and Technology Directorate",
+      "Border security operations and personnel"
+    ],
+    "harms": [
+      "Border communities (potential privacy and security impacts from surveillance technologies)",
+      "Individuals crossing borders (increased surveillance and monitoring capabilities)"
+    ],
+    "ai_analyzed": true
   },
   "HJRES35": {
     "bill": "HJRES35",
@@ -655,9 +1042,18 @@
     "crs_summary": "This joint resolution nullifies the Environmental Protection Agency (EPA) rule titled Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions and published on November 18, 2024. The rule outlines compliance requirements under the Methane Emissions Reduction Program. Under the program, the EPA collects an annual charge on emissions of methane and other greenhouse gases from the oil and gas sector if the emissions exceed specified waste emissions thresholds.",
     "summary_date": "2025-02-24T15:19:29Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/35",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Oil and gas companies",
+      "Petroleum and natural gas systems operators",
+      "Entities with high methane emissions"
+    ],
+    "harms": [
+      "Environmental protection efforts",
+      "Climate change mitigation initiatives",
+      "Public health from reduced air quality",
+      "Federal government revenue from emissions charges"
+    ],
+    "ai_analyzed": true
   },
   "SJRES12": {
     "bill": "SJRES12",
@@ -666,9 +1062,18 @@
     "crs_summary": "This joint resolution nullifies the Environmental Protection Agency (EPA) rule titled Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions and published on November 18, 2024. The rule outlines compliance requirements under the Methane Emissions Reduction Program. Under the program, the EPA collects an annual charge on emissions of methane and other greenhouse gases from entities in the oil and gas sector if their emissions exceed specified waste emissions thresholds.",
     "summary_date": "2025-02-26T21:52:51Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/12",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Oil and gas companies",
+      "Petroleum and natural gas systems operators",
+      "Entities with high methane emissions"
+    ],
+    "harms": [
+      "Environmental protection efforts",
+      "Climate change mitigation initiatives",
+      "Public health from reduced air quality",
+      "Federal government revenue from emissions charges"
+    ],
+    "ai_analyzed": true
   },
   "SCONRES7": {
     "bill": "SCONRES7",
@@ -679,7 +1084,7 @@
     "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/7",
     "benefits": null,
     "harms": null,
-    "ai_analyzed": false
+    "ai_analyzed": true
   },
   "HR692": {
     "bill": "HR692",
@@ -688,9 +1093,19 @@
     "crs_summary": "China Exchange Rate Transparency Act of 2023This bill requires the U.S. Executive Director at the International Monetary Fund (IMF) to use the voice and vote of the United States to advocate for increased exchange rate transparency from China.Some areas of focus for this advocacy are (1) Chinese exchange rate arrangements, including any indirect foreign exchange market intervention through Chinese financial institutions or state-owned enterprises; (2) enhanced multilateral and bilateral surveillance by the IMF; and (3) stronger consideration of China's performance as a responsible stakeholder in the international monetary system when evaluating quota and voting shares at the IMF.The requirements of the bill expire seven years and 30 days after the date of the bill's enactment or earlier if China meets certain conditions regarding its exchange rate policies.",
     "summary_date": "2025-02-10T14:43:52Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/692",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "U.S. exporters and manufacturers competing against Chinese imports",
+      "U.S. workers in trade-sensitive industries",
+      "U.S. financial institutions and investors",
+      "Countries disadvantaged by Chinese currency manipulation"
+    ],
+    "harms": [
+      "China's government and state-owned enterprises",
+      "Chinese exporters relying on exchange rate advantages",
+      "U.S. importers and consumers of Chinese goods",
+      "Companies with supply chains dependent on China"
+    ],
+    "ai_analyzed": true
   },
   "S6": {
     "bill": "S6",
@@ -699,9 +1114,19 @@
     "crs_summary": "Born-Alive Abortion Survivors Protection ActThis bill establishes requirements for the degree of care a health care practitioner must provide in the case of a child born alive following an abortion or attempted abortion.Specifically, a health care practitioner who is present must (1) exercise the same degree of care as would reasonably be provided to any other child born alive at the same gestational age, and (2) ensure the child is immediately admitted to a hospital. Additionally, a health care practitioner or other employee who has knowledge of a failure to comply with the degree-of-care requirements must immediately report such failure to law enforcement.A health care practitioner who fails to provide the required degree of care, or a health care practitioner or other employee who fails to report such failure, is subject to criminal penalties—a fine, up to five years in prison, or both.An individual who intentionally kills or attempts to kill a child born alive is subject to prosecution for murder.The bill bars the criminal prosecution of a mother of a child born alive under this bill and allows her to bring a civil action against a health care practitioner or other employee for violations.",
     "summary_date": "2025-01-30T15:53:09Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-bill/6",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Pro-life advocacy groups",
+      "Religious organizations opposing abortion",
+      "Infants born alive after abortion attempts",
+      "Law enforcement agencies (expanded jurisdiction)"
+    ],
+    "harms": [
+      "Abortion providers and clinics",
+      "Healthcare practitioners in abortion care settings",
+      "Women seeking abortion services (potential chilling effect)",
+      "Healthcare workers (criminal liability and reporting requirements)"
+    ],
+    "ai_analyzed": true
   },
   "HR144": {
     "bill": "HR144",
@@ -710,9 +1135,16 @@
     "crs_summary": "Tennessee Valley Authority Salary Transparency ActThis bill expands reporting requirements for the Tennessee Valley Authority (TVA). TVA is a government corporation that provides electricity in Tennessee and in portions of several surrounding states. It also provides flood control, navigation, and land management services for the Tennessee River system.The bill reinstates the requirement for TVA to file an annual financial statement and report with Congress in March. (The requirement was terminated by the Federal Reports Elimination and Sunset Act of 1995.)The bill also modifies the requirement that the report include the names, salaries, and duties of employees earning more than $1,500 a year. Under the bill, this information is only required for employees earning more than the maximum rate of basic pay for grade GS-13 of the General Schedule.",
     "summary_date": "2025-01-16T21:13:06Z",
     "url": "https://www.congress.gov/bill/119th-congress/house-bill/144",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "Congress and legislative oversight bodies",
+      "Public transparency advocates",
+      "Taxpayers seeking accountability of government corporations"
+    ],
+    "harms": [
+      "TVA employees earning above GS-13 level (reduced privacy)",
+      "TVA administration (increased reporting burden and compliance costs)"
+    ],
+    "ai_analyzed": true
   },
   "HR33": {
     "bill": "HR33",
@@ -732,8 +1164,19 @@
     "crs_summary": "Laken Riley ActThis bill requires the Department of Homeland Security (DHS) to detain certain non-U.S. nationals (aliens under federal law) who have been arrested for burglary, theft, larceny, or shoplifting. The bill also authorizes states to sue the federal government for decisions or alleged failures related to immigration enforcement.Under this bill, DHS must detain an individual who (1) is unlawfully present in the United States or did not possess the necessary documents when applying for admission; and (2) has been charged with, arrested for, convicted of, or admits to having committed acts that constitute the essential elements of burglary, theft, larceny, or shoplifting.The bill also authorizes state governments to sue for injunctive relief over certain immigration-related decisions or alleged failures by the federal government if the decision or failure caused the state or its residents harm, including financial harm of more than $100. Specifically, the state government may sue the federal government over adecision to release a non-U.S. national from custody;failure to fulfill requirements relating to inspecting individuals seeking admission into the United States, including requirements related to asylum interviews;failure to fulfill a requirement to stop issuing visas to nationals of a country that unreasonably denies or delays acceptance of nationals of that country;violation of limitations on immigration parole, such as the requirement that parole be granted only on a case-by-case basis; orfailure to detain an individual who has been ordered removed from the United States.",
     "summary_date": "2025-01-13T16:21:37Z",
     "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5",
-    "benefits": null,
-    "harms": null,
-    "ai_analyzed": false
+    "benefits": [
+      "State governments (ability to sue federal government for immigration enforcement failures)",
+      "Law enforcement agencies (mandatory detention requirements reduce discretion needed)",
+      "Retail businesses and property owners (potential reduction in theft/shoplifting)",
+      "Communities concerned about property crime"
+    ],
+    "harms": [
+      "Non-U.S. nationals arrested for property crimes (mandatory detention regardless of circumstances)",
+      "Individuals awaiting trial (presumption of detention before conviction)",
+      "Federal government (increased litigation exposure and mandatory detention costs)",
+      "Immigration courts and DHS (increased administrative burden and detention facility capacity demands)",
+      "Due process advocates (mandatory detention limits judicial discretion)"
+    ],
+    "ai_analyzed": true
   }
 }
