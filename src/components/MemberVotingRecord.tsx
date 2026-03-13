@@ -37,6 +37,7 @@ interface KeyVote {
 interface MemberVotingRecordProps {
   bioguideId: string;
   icpsrId?: string;
+  memberParty?: string;
   memberName: string;
   chamber: "House" | "Senate";
   keyVotes: KeyVote[];
@@ -63,6 +64,7 @@ const VOTE_STYLES = {
 export function MemberVotingRecord({
   bioguideId,
   icpsrId,
+  memberParty,
   memberName,
   chamber,
   keyVotes
@@ -101,9 +103,26 @@ export function MemberVotingRecord({
     const notVoting = memberVotes.filter(v => v.memberVote === "Not Voting").length;
     const total = memberVotes.length;
     const participationRate = total > 0 ? ((yeas + nays) / total * 100) : 0;
-    
-    return { yeas, nays, notVoting, total, participationRate };
-  }, [memberVotes]);
+
+    let breaksWithParty = 0;
+    let scorableVotes = 0;
+    if (memberParty) {
+      for (const v of memberVotes) {
+        if (!v.party_breakdown) continue;
+        if (v.memberVote !== "Yea" && v.memberVote !== "Nay") continue;
+        const pb = v.party_breakdown;
+        const partyYea = memberParty === "D" ? pb.dem_yea : memberParty === "R" ? pb.rep_yea : pb.other_yea;
+        const partyNay = memberParty === "D" ? pb.dem_nay : memberParty === "R" ? pb.rep_nay : pb.other_nay;
+        if (partyYea === 0 && partyNay === 0) continue;
+        const partyMajority = partyYea > partyNay ? "Yea" : "Nay";
+        scorableVotes++;
+        if (v.memberVote !== partyMajority) breaksWithParty++;
+      }
+    }
+    const breaksPct = scorableVotes > 0 ? Math.round((breaksWithParty / scorableVotes) * 100) : null;
+
+    return { yeas, nays, notVoting, total, participationRate, breaksPct };
+  }, [memberVotes, memberParty]);
   
   const displayVotes = expanded ? filteredVotes : filteredVotes.slice(0, 5);
   
@@ -135,7 +154,7 @@ export function MemberVotingRecord({
         </p>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-4 mb-8">
           <div className="bg-slate-50 rounded-xl p-4 text-center">
             <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Key Votes</p>
             <p className="text-2xl font-black text-slate-900">{stats.total}</p>
@@ -152,6 +171,12 @@ export function MemberVotingRecord({
             <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Participation</p>
             <p className="text-2xl font-black text-blue-700">{stats.participationRate.toFixed(0)}%</p>
           </div>
+          {stats.breaksPct !== null && (
+            <div className="bg-slate-50 rounded-xl p-4 text-center">
+              <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Breaks w/ Party</p>
+              <p className="text-2xl font-black text-slate-700">{stats.breaksPct}%</p>
+            </div>
+          )}
         </div>
         
         {/* Category filter */}

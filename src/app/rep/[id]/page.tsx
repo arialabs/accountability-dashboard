@@ -454,6 +454,7 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
               <MemberVotingRecord
                 bioguideId={member.bioguide_id}
                 icpsrId={icpsrId}
+                memberParty={member.party}
                 memberName={member.full_name}
                 chamber={member.chamber === "house" ? "House" : "Senate"}
                 keyVotes={keyVotesData as unknown as Array<{

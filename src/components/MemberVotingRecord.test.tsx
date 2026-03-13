@@ -20,6 +20,7 @@ const mockKeyVotes = [
       "99901": "Yea",
       "99902": "Nay",
     },
+    party_breakdown: { dem_yea: 0, dem_nay: 200, rep_yea: 220, rep_nay: 10, other_yea: 0, other_nay: 0 },
   },
   {
     id: "119-House-2",
@@ -38,6 +39,7 @@ const mockKeyVotes = [
       "99901": "Nay",
       "99902": "Yea",
     },
+    party_breakdown: { dem_yea: 200, dem_nay: 0, rep_yea: 18, rep_nay: 212, other_yea: 0, other_nay: 0 },
   },
   {
     id: "119-Senate-1",
@@ -218,5 +220,26 @@ describe("MemberVotingRecord", () => {
     );
     const fullRecordLink = screen.getByRole("link", { name: /Full voting record/i });
     expect(fullRecordLink).toHaveAttribute("href", "https://www.congress.gov/member/B001234");
+  });
+
+  it("shows 'Breaks w/ Party' stat", () => {
+    render(
+      <MemberVotingRecord bioguideId="B001234" icpsrId="99901" memberParty="R" memberName="John Smith" chamber="House" keyVotes={mockKeyVotes} />
+    );
+    expect(screen.getByText("Breaks w/ Party")).toBeInTheDocument();
+    // Member voted Yea on vote 1 (R majority Yea: 220>10) — aligned
+    // Member voted Nay on vote 2 (R majority Nay: 212>18) — aligned
+    expect(screen.getByText("0%")).toBeInTheDocument();
+  });
+
+  it("shows non-zero 'Breaks w/ Party' when member dissents", () => {
+    const dissenterVotes = mockKeyVotes.map((v, i) => i === 0
+      ? { ...v, votes: { ...v.votes, "99901": "Nay" } }
+      : v
+    );
+    render(
+      <MemberVotingRecord bioguideId="B001234" icpsrId="99901" memberParty="R" memberName="John Smith" chamber="House" keyVotes={dissenterVotes} />
+    );
+    expect(screen.getByText("50%")).toBeInTheDocument();
   });
 });
