@@ -111,7 +111,7 @@ function transformMember(raw: RawMember): Member {
     bills_sponsored: raw.bills_sponsored || 0,
     bills_cosponsored: raw.bills_cosponsored || 0,
     committees: raw.committees || [],
-    party_alignment_pct: raw.party_loyalty_pct ?? 0,
+    party_loyalty_pct: raw.party_loyalty_pct ?? 0,
     ideology_score: raw.ideology_score ?? null,
     votes_cast: raw.votes_cast || 0,
   };

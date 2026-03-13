@@ -1,5 +1,4 @@
 import { getMember, getMembers, getMemberFinance, getMemberDisclosures } from "@/lib/data";
-import { getMemberAlignmentEnhanced } from "@/lib/data-enhanced";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -12,10 +11,6 @@ import CommitteeMemberships from "@/components/CommitteeMemberships";
 import StockTradesSection from "@/components/StockTradesSection";
 import FinancialDisclosuresSection from "@/components/FinancialDisclosuresSection";
 import ScandalsSection from "@/components/ScandalsSection";
-// Alignment components removed from live site per #84 (Say vs Do scoring paused)
-// import VoteBasedPositions from "@/components/VoteBasedPositions";
-// import AlignmentScoreCard from "@/components/AlignmentScoreCard";
-// import AlignmentScoreCardEnhanced from "@/components/AlignmentScoreCardEnhanced";
 import RepresentativeImage from "@/components/RepresentativeImage";
 import SocialShare from "@/components/SocialShare";
 import ConflictOfInterestSection from "@/components/ConflictOfInterestSection";
@@ -27,10 +22,16 @@ import { isLeader } from "@/lib/leadership";
 import { getRecentVotesForMember } from "@/lib/live-votes";
 import LatestNews from "@/components/LatestNews";
 import { getConflictCallouts } from "@/lib/conflict-callouts";
+import { detectConflicts } from "@/lib/conflict-detector";
+import { INDUSTRIES } from "@/lib/industry-classifier";
+import type { IndustryTotal } from "@/lib/industry-classifier";
 import { loadDonorPercentiles } from "@/lib/donor-percentiles";
+import { getMemberAlignmentEnhanced } from "@/lib/data-enhanced";
 import { getConstituentAlignment } from "@/lib/constituent-alignment";
 import RepresentsYouSection from "@/components/RepresentsYouSection";
 import { RepVerdictBadge } from "@/components/RepVerdictBadge";
+import ExpandableSection from "@/components/ExpandableSection";
+import InDevelopmentBanner from "@/components/InDevelopmentBanner";
 
 import keyVotesData from "@/data/key-votes.json";
 import bioguideToIcpsrData from "@/data/bioguide-to-icpsr.json";
@@ -75,7 +76,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       description: ogDescription,
       images: [
         {
-          url: `/api/og/rep?id=${id}`,
+          url: "/og-image.png",
           width: 1200,
           height: 630,
           alt: `${member.full_name} accountability profile`,
@@ -86,7 +87,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       card: "summary_large_image",
       title: ogTitle,
       description: ogDescription,
-      images: [`/api/og/rep?id=${id}`],
+      images: ["/og-image.png"],
     },
   };
 }
@@ -121,44 +122,38 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
     conflictSeverity: "high" | "medium" | "low";
     explanation: string;
   }> = [];
-  
-  const isBuildTime =
-    process.env.NEXT_PHASE === "phase-production-build" ||
-    process.env.NEXT_PHASE === "phase-export";
 
-  if (!isBuildTime && finance && finance.top_industries && finance.top_industries.length > 0) {
-    const { detectConflicts } = await import("@/lib/conflict-detector");
-    const { aggregateByIndustry } = await import("@/lib/industry-classifier");
-    const { getScheduleAContributions, searchCandidateByName } = await import("@/lib/fec");
-    
-    // Fetch detailed contribution data for industry classification
+  if (finance && finance.top_industries && finance.top_industries.length > 0) {
     try {
-      const office = member.chamber === 'house' ? 'H' : 'S';
-      const candidate = await searchCandidateByName(
-        member.first_name,
-        member.last_name,
-        office
-      );
-      
-      if (candidate) {
-        const scheduleAData = await getScheduleAContributions(candidate.candidate_id, undefined, 500);
-        const industries = aggregateByIndustry(scheduleAData);
-        
-        // Get member's votes from keyVotesData
-        const memberVotes = (keyVotesData as unknown as Array<{ bill: string; title: string; description: string; category: string; date: string; votes: Record<string, string> }>)
-          .filter(vote => vote.votes && vote.votes[id])
-          .map(vote => ({
-            bill: vote.bill,
-            title: vote.title,
-            category: vote.category,
-            date: vote.date,
-            vote: vote.votes[id] as "Yea" | "Nay" | "Present" | "Not Voting",
-            description: vote.description,
-          }));
-        
-        conflicts = detectConflicts(industries, memberVotes);
-      }
-    } catch (error) {
+      // Map static finance.top_industries to IndustryTotal[] using INDUSTRIES constant
+      const industries: IndustryTotal[] = finance.top_industries
+        .map((ind) => {
+          const config = INDUSTRIES[ind.industry];
+          return {
+            industry: ind.industry,
+            displayName: config?.name ?? ind.industry,
+            icon: config?.icon ?? "📊",
+            total: ind.total,
+            count: 0,
+            topContributors: [],
+          };
+        })
+        .filter((ind) => ind.total > 0);
+
+      // Get member's votes from keyVotesData
+      const memberVotes = (keyVotesData as unknown as Array<{ bill: string; title: string; description: string; category: string; date: string; votes: Record<string, string> }>)
+        .filter(vote => vote.votes && vote.votes[id])
+        .map(vote => ({
+          bill: vote.bill,
+          title: vote.title,
+          category: vote.category,
+          date: vote.date,
+          vote: vote.votes[id] as "Yea" | "Nay" | "Present" | "Not Voting",
+          description: vote.description,
+        }));
+
+      conflicts = detectConflicts(industries, memberVotes);
+    } catch {
       // Conflicts remain empty array on error
     }
   }
@@ -217,8 +212,7 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
   // Build list of sections that have no data yet for the subtle footer notice
   const emptySections: string[] = [];
   if (committees.length === 0) emptySections.push("Committee Memberships");
-  // Stock trades: loaded client-side, always show the section (component handles empty state)
-  if (financialDisclosures.length === 0) emptySections.push("Financial Disclosures");
+  // Stock trades + financial disclosures: components handle their own empty states
 
   const getPartyBadgeClass = (party: string) => {
     switch (party) {
@@ -499,15 +493,6 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
             />
 
             {/* Policy Positions: Says vs Does — REMOVED: Scoring needs redesign (issue #84) */}
-            
-            {/* Voting Record (Party Loyalty & Ideology) */}
-            <ErrorBoundary context="party loyalty and ideology data">
-              <VotingRecordSection
-                partyLoyalty={member.party_alignment_pct}
-                ideologyScore={member.ideology_score}
-                keyVotes={keyVotes}
-              />
-            </ErrorBoundary>
 
             {/* Stock Trades — loaded client-side from /data/trades/[bioguideId].json */}
             <ErrorBoundary context="stock trades">
@@ -517,15 +502,13 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
               />
             </ErrorBoundary>
 
-            {/* Financial Disclosures — only render the card when there's actual data */}
-            {financialDisclosures.length > 0 && (
-              <ErrorBoundary context="financial disclosures">
-                <FinancialDisclosuresSection 
-                  disclosures={financialDisclosures} 
-                  memberName={member.full_name} 
-                />
-              </ErrorBoundary>
-            )}
+            {/* Financial Disclosures */}
+            <ErrorBoundary context="financial disclosures">
+              <FinancialDisclosuresSection
+                disclosures={financialDisclosures}
+                memberName={member.full_name}
+              />
+            </ErrorBoundary>
 
             {/* Scandals & Controversies */}
             <ErrorBoundary context="scandals">
@@ -535,6 +518,39 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
                 maxVisible={3}
               />
             </ErrorBoundary>
+
+            {/* Voting Record (Party Loyalty & Ideology) — deprioritized, collapsed by default */}
+            <ErrorBoundary context="party loyalty and ideology data">
+              <ExpandableSection
+                title="Party Voting Statistics"
+                summary="Detailed party voting analysis and ideology positioning"
+                defaultExpanded={false}
+              >
+                <VotingRecordSection
+                  partyLoyalty={member.party_loyalty_pct}
+                  ideologyScore={member.ideology_score}
+                  keyVotes={keyVotes}
+                />
+              </ExpandableSection>
+            </ErrorBoundary>
+
+            {/* In Development Features */}
+            <InDevelopmentBanner
+              features={[
+                {
+                  name: "Say vs Do Analysis",
+                  description: "Track whether representatives follow through on their campaign promises",
+                },
+                {
+                  name: "Net Worth Tracking",
+                  description: "Monitor changes in representatives' wealth during their time in office",
+                },
+                {
+                  name: "Dark Money Tracking",
+                  description: "Identify undisclosed and hard-to-trace campaign funding sources",
+                },
+              ]}
+            />
 
             {/* Data Pending Notice — subtle footer instead of prominent "coming soon" cards */}
             {emptySections.length > 0 && (

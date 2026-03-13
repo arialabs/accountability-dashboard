@@ -1,0 +1,5 @@
+/house /congress?chamber=house 301
+/senate /congress?chamber=senate 301
+/legislative /congress 301
+/judicial/supreme-court /judicial/scotus 301
+/executive/doge /executive/agencies/doge 301

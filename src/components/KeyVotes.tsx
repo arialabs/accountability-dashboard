@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import VoteModal from "./VoteModal";
 
 interface BeneficiaryImpact {
@@ -24,13 +24,6 @@ interface KeyVote {
   result: "Passed" | "Failed" | "Unknown";
   beneficiaries?: BeneficiaryImpact[];
   publicBenefit?: "positive" | "negative" | "mixed";
-}
-
-interface BillSummary {
-  billId: string;
-  summary: string;
-  impactTags: string[];
-  generatedAt: string;
 }
 
 interface KeyVotesProps {
@@ -67,7 +60,6 @@ export function KeyVotes({ votes, chamber, limit = 10, showFilters = true }: Key
   const [selectedChamber, setSelectedChamber] = useState<string>(chamber || "All");
   const [expanded, setExpanded] = useState(false);
   const [selectedVote, setSelectedVote] = useState<KeyVote | null>(null);
-  const [summaries, setSummaries] = useState<Record<string, BillSummary>>({});
   const [expandedDescriptions, setExpandedDescriptions] = useState<Record<string, boolean>>({});
 
   // Get unique categories
@@ -87,45 +79,6 @@ export function KeyVotes({ votes, chamber, limit = 10, showFilters = true }: Key
   // Apply limit unless expanded
   const displayVotes = expanded ? filteredVotes : filteredVotes.slice(0, limit);
 
-  // Load summaries for visible votes
-  useEffect(() => {
-    const loadSummaries = async () => {
-      const votesToLoad = displayVotes.filter(v => !summaries[v.id]);
-      
-      for (const vote of votesToLoad) {
-        try {
-          // Try to get from cache first
-          const response = await fetch(`/api/bills/summary?billId=${vote.id}`);
-          
-          if (response.ok) {
-            const summary = await response.json();
-            setSummaries(prev => ({ ...prev, [vote.id]: summary }));
-          } else {
-            // Generate new summary
-            const generateResponse = await fetch('/api/bills/summary', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                billId: vote.id,
-                title: vote.title,
-                description: vote.description,
-                category: vote.category,
-              }),
-            });
-            
-            if (generateResponse.ok) {
-              const summary = await generateResponse.json();
-              setSummaries(prev => ({ ...prev, [vote.id]: summary }));
-            }
-          }
-        } catch (error) {
-          // Silently fail - summaries are optional enhancement
-        }
-      }
-    };
-
-    loadSummaries();
-  }, [displayVotes, summaries]);
 
   const toggleDescription = (voteId: string) => {
     setExpandedDescriptions(prev => ({
@@ -219,6 +172,8 @@ export function KeyVotes({ votes, chamber, limit = 10, showFilters = true }: Key
                     e.stopPropagation();
                     toggleDescription(vote.id);
                   }}
+                  aria-expanded={!!expandedDescriptions[vote.id]}
+                  aria-label={`${expandedDescriptions[vote.id] ? "Hide" : "Show"} legislative title for ${vote.bill || "vote"}`}
                   className="text-xs text-slate-500 hover:text-slate-700 font-medium"
                 >
                   {expandedDescriptions[vote.id] ? "Hide" : "Show"} legislative title →
@@ -243,57 +198,11 @@ export function KeyVotes({ votes, chamber, limit = 10, showFilters = true }: Key
               </div>
             )}
             
-            {/* AI Summary or Description (only if no plain English summary) */}
-            {!vote.plainEnglishSummary && (
+            {!vote.plainEnglishSummary && vote.description && (
               <div className="mb-2">
-                {summaries[vote.id] ? (
-                  <>
-                    <p className="text-sm text-slate-700 leading-relaxed mb-2">
-                      {summaries[vote.id].summary}
-                    </p>
-                    
-                    {/* Impact Tags */}
-                    {summaries[vote.id].impactTags.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 mb-2">
-                        {summaries[vote.id].impactTags.map(tag => (
-                          <span
-                            key={tag}
-                            className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                              CATEGORY_COLORS[tag] || CATEGORY_COLORS.Other
-                            }`}
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                    
-                    {/* Expandable full text */}
-                    {vote.description && (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleDescription(vote.id);
-                        }}
-                        className="text-xs text-blue-600 hover:text-blue-700 font-medium"
-                      >
-                        {expandedDescriptions[vote.id] ? "Hide" : "Show"} full legislative text →
-                      </button>
-                    )}
-                    
-                    {expandedDescriptions[vote.id] && vote.description && (
-                      <div className="mt-2 p-3 bg-slate-50 rounded border border-slate-200">
-                        <p className="text-xs text-slate-600 leading-relaxed">
-                          {vote.description}
-                        </p>
-                      </div>
-                    )}
-                  </>
-                ) : vote.description ? (
-                  <p className="text-sm text-slate-600 line-clamp-2">
-                    {vote.description}
-                  </p>
-                ) : null}
+                <p className="text-sm text-slate-600 line-clamp-2">
+                  {vote.description}
+                </p>
               </div>
             )}
             
@@ -330,10 +239,12 @@ export function KeyVotes({ votes, chamber, limit = 10, showFilters = true }: Key
       {filteredVotes.length > limit && (
         <button
           onClick={() => setExpanded(!expanded)}
+          aria-expanded={expanded}
+          aria-label={expanded ? "Show fewer votes" : `Show ${filteredVotes.length - limit} more votes`}
           className="w-full py-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
         >
-          {expanded 
-            ? `Show Less ↑` 
+          {expanded
+            ? `Show Less ↑`
             : `Show ${filteredVotes.length - limit} More Votes ↓`
           }
         </button>

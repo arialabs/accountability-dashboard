@@ -33,7 +33,7 @@ export default function PartyLoyaltyChart({ members, selectedParty }: PartyLoyal
     
     const bucketCounts = ranges.map(range => {
       const count = filtered.filter(m => 
-        m.party_alignment_pct >= range.min && m.party_alignment_pct < range.max
+        m.party_loyalty_pct >= range.min && m.party_loyalty_pct < range.max
       ).length;
       return { ...range, count };
     });
@@ -106,7 +106,7 @@ export default function PartyLoyaltyChart({ members, selectedParty }: PartyLoyal
           </div>
           <div className="text-3xl font-black text-slate-900">
             {members.length > 0 
-              ? (members.reduce((sum, m) => sum + (m.party_alignment_pct || 0), 0) / members.length).toFixed(1)
+              ? (members.reduce((sum, m) => sum + (m.party_loyalty_pct || 0), 0) / members.length).toFixed(1)
               : 0}%
           </div>
         </div>

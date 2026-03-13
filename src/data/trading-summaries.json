@@ -2,10 +2,10 @@
   "M001232": {
     "total_trades": 171,
     "flagged_trades": 129,
-    "flag_rate": "75.4",
+    "flag_rate": 75.4,
     "total_risk_score": 555,
-    "avg_risk_per_trade": "3.25",
-    "avg_excess_return": "-2.10",
+    "avg_risk_per_trade": 3.25,
+    "avg_excess_return": -2.1,
     "suspicious_patterns": {
       "rapid_trading": 69,
       "suspicious_timing": 42,
@@ -17,10 +17,10 @@
   "T000490": {
     "total_trades": 119,
     "flagged_trades": 95,
-    "flag_rate": "79.8",
+    "flag_rate": 79.8,
     "total_risk_score": 407,
-    "avg_risk_per_trade": "3.42",
-    "avg_excess_return": "5.51",
+    "avg_risk_per_trade": 3.42,
+    "avg_excess_return": 5.51,
     "suspicious_patterns": {
       "unusual_return": 49,
       "suspicious_timing": 42,
@@ -32,10 +32,10 @@
   "C001047": {
     "total_trades": 535,
     "flagged_trades": 465,
-    "flag_rate": "86.9",
+    "flag_rate": 86.9,
     "total_risk_score": 1807,
-    "avg_risk_per_trade": "3.38",
-    "avg_excess_return": "-28.38",
+    "avg_risk_per_trade": 3.38,
+    "avg_excess_return": -28.38,
     "suspicious_patterns": {
       "unusual_return": 430,
       "suspicious_timing": 51,
@@ -48,10 +48,10 @@
   "B001319": {
     "total_trades": 24,
     "flagged_trades": 23,
-    "flag_rate": "95.8",
+    "flag_rate": 95.8,
     "total_risk_score": 132,
-    "avg_risk_per_trade": "5.50",
-    "avg_excess_return": "-2.94",
+    "avg_risk_per_trade": 5.5,
+    "avg_excess_return": -2.94,
     "suspicious_patterns": {
       "late_disclosure": 22,
       "unusual_return": 15,
@@ -62,10 +62,10 @@
   "S001220": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 3,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "-31.22",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": -31.22,
     "suspicious_patterns": {
       "unusual_return": 1
     },
@@ -74,10 +74,10 @@
   "S001203": {
     "total_trades": 35,
     "flagged_trades": 35,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 199,
-    "avg_risk_per_trade": "5.69",
-    "avg_excess_return": "-27.41",
+    "avg_risk_per_trade": 5.69,
+    "avg_excess_return": -27.41,
     "suspicious_patterns": {
       "large_trade": 30,
       "unusual_return": 23,
@@ -90,10 +90,10 @@
   "F000110": {
     "total_trades": 211,
     "flagged_trades": 200,
-    "flag_rate": "94.8",
+    "flag_rate": 94.8,
     "total_risk_score": 1154,
-    "avg_risk_per_trade": "5.47",
-    "avg_excess_return": "-5.01",
+    "avg_risk_per_trade": 5.47,
+    "avg_excess_return": -5.01,
     "suspicious_patterns": {
       "large_trade": 117,
       "suspicious_timing": 60,
@@ -106,10 +106,10 @@
   "L000566": {
     "total_trades": 20,
     "flagged_trades": 14,
-    "flag_rate": "70.0",
+    "flag_rate": 70,
     "total_risk_score": 41,
-    "avg_risk_per_trade": "2.05",
-    "avg_excess_return": "-23.48",
+    "avg_risk_per_trade": 2.05,
+    "avg_excess_return": -23.48,
     "suspicious_patterns": {
       "suspicious_timing": 4,
       "unusual_return": 11
@@ -119,10 +119,10 @@
   "P000197": {
     "total_trades": 182,
     "flagged_trades": 180,
-    "flag_rate": "98.9",
+    "flag_rate": 98.9,
     "total_risk_score": 1307,
-    "avg_risk_per_trade": "7.18",
-    "avg_excess_return": "53.01",
+    "avg_risk_per_trade": 7.18,
+    "avg_excess_return": 53.01,
     "suspicious_patterns": {
       "large_trade": 163,
       "suspicious_timing": 70,
@@ -135,10 +135,10 @@
   "P000595": {
     "total_trades": 84,
     "flagged_trades": 78,
-    "flag_rate": "92.9",
+    "flag_rate": 92.9,
     "total_risk_score": 256,
-    "avg_risk_per_trade": "3.05",
-    "avg_excess_return": "-85.00",
+    "avg_risk_per_trade": 3.05,
+    "avg_excess_return": -85,
     "suspicious_patterns": {
       "suspicious_timing": 8,
       "unusual_return": 75,
@@ -150,10 +150,10 @@
   "W000802": {
     "total_trades": 743,
     "flagged_trades": 695,
-    "flag_rate": "93.5",
+    "flag_rate": 93.5,
     "total_risk_score": 3120,
-    "avg_risk_per_trade": "4.20",
-    "avg_excess_return": "150.37",
+    "avg_risk_per_trade": 4.2,
+    "avg_excess_return": 150.37,
     "suspicious_patterns": {
       "unusual_return": 660,
       "rapid_trading": 203,
@@ -166,10 +166,10 @@
   "M001236": {
     "total_trades": 175,
     "flagged_trades": 170,
-    "flag_rate": "97.1",
+    "flag_rate": 97.1,
     "total_risk_score": 1219,
-    "avg_risk_per_trade": "6.97",
-    "avg_excess_return": "3.86",
+    "avg_risk_per_trade": 6.97,
+    "avg_excess_return": 3.86,
     "suspicious_patterns": {
       "unusual_return": 149,
       "suspicious_timing": 89,
@@ -182,10 +182,10 @@
   "L000560": {
     "total_trades": 69,
     "flagged_trades": 64,
-    "flag_rate": "92.8",
+    "flag_rate": 92.8,
     "total_risk_score": 326,
-    "avg_risk_per_trade": "4.72",
-    "avg_excess_return": "-22.28",
+    "avg_risk_per_trade": 4.72,
+    "avg_excess_return": -22.28,
     "suspicious_patterns": {
       "unusual_return": 58,
       "suspicious_timing": 27,
@@ -196,10 +196,10 @@
   "M001222": {
     "total_trades": 42,
     "flagged_trades": 11,
-    "flag_rate": "26.2",
+    "flag_rate": 26.2,
     "total_risk_score": 44,
-    "avg_risk_per_trade": "1.05",
-    "avg_excess_return": "-4.34",
+    "avg_risk_per_trade": 1.05,
+    "avg_excess_return": -4.34,
     "suspicious_patterns": {
       "rapid_trading": 6,
       "late_disclosure": 2,
@@ -211,10 +211,10 @@
   "M001190": {
     "total_trades": 379,
     "flagged_trades": 348,
-    "flag_rate": "91.8",
+    "flag_rate": 91.8,
     "total_risk_score": 1520,
-    "avg_risk_per_trade": "4.01",
-    "avg_excess_return": "-2.67",
+    "avg_risk_per_trade": 4.01,
+    "avg_excess_return": -2.67,
     "suspicious_patterns": {
       "unusual_return": 286,
       "rapid_trading": 108,
@@ -227,10 +227,10 @@
   "D000624": {
     "total_trades": 227,
     "flagged_trades": 213,
-    "flag_rate": "93.8",
+    "flag_rate": 93.8,
     "total_risk_score": 911,
-    "avg_risk_per_trade": "4.01",
-    "avg_excess_return": "-18.05",
+    "avg_risk_per_trade": 4.01,
+    "avg_excess_return": -18.05,
     "suspicious_patterns": {
       "unusual_return": 207,
       "large_trade": 5,
@@ -243,10 +243,10 @@
   "B001236": {
     "total_trades": 279,
     "flagged_trades": 201,
-    "flag_rate": "72.0",
+    "flag_rate": 72,
     "total_risk_score": 732,
-    "avg_risk_per_trade": "2.62",
-    "avg_excess_return": "0.20",
+    "avg_risk_per_trade": 2.62,
+    "avg_excess_return": 0.2,
     "suspicious_patterns": {
       "suspicious_timing": 30,
       "unusual_return": 143,
@@ -258,10 +258,10 @@
   "H001072": {
     "total_trades": 63,
     "flagged_trades": 60,
-    "flag_rate": "95.2",
+    "flag_rate": 95.2,
     "total_risk_score": 279,
-    "avg_risk_per_trade": "4.43",
-    "avg_excess_return": "0.50",
+    "avg_risk_per_trade": 4.43,
+    "avg_excess_return": 0.5,
     "suspicious_patterns": {
       "large_trade": 13,
       "unusual_return": 48,
@@ -274,10 +274,10 @@
   "N000189": {
     "total_trades": 169,
     "flagged_trades": 161,
-    "flag_rate": "95.3",
+    "flag_rate": 95.3,
     "total_risk_score": 883,
-    "avg_risk_per_trade": "5.22",
-    "avg_excess_return": "0.10",
+    "avg_risk_per_trade": 5.22,
+    "avg_excess_return": 0.1,
     "suspicious_patterns": {
       "unusual_return": 139,
       "suspicious_timing": 73,
@@ -288,10 +288,10 @@
   "C001123": {
     "total_trades": 1914,
     "flagged_trades": 1740,
-    "flag_rate": "90.9",
+    "flag_rate": 90.9,
     "total_risk_score": 8613,
-    "avg_risk_per_trade": "4.50",
-    "avg_excess_return": "-7.06",
+    "avg_risk_per_trade": 4.5,
+    "avg_excess_return": -7.06,
     "suspicious_patterns": {
       "large_trade": 19,
       "unusual_return": 1554,
@@ -304,10 +304,10 @@
   "G000359": {
     "total_trades": 12,
     "flagged_trades": 7,
-    "flag_rate": "58.3",
+    "flag_rate": 58.3,
     "total_risk_score": 20,
-    "avg_risk_per_trade": "1.67",
-    "avg_excess_return": "-21.13",
+    "avg_risk_per_trade": 1.67,
+    "avg_excess_return": -21.13,
     "suspicious_patterns": {
       "large_trade": 2,
       "unusual_return": 5
@@ -317,10 +317,10 @@
   "F000450": {
     "total_trades": 963,
     "flagged_trades": 906,
-    "flag_rate": "94.1",
+    "flag_rate": 94.1,
     "total_risk_score": 4349,
-    "avg_risk_per_trade": "4.52",
-    "avg_excess_return": "-65.45",
+    "avg_risk_per_trade": 4.52,
+    "avg_excess_return": -65.45,
     "suspicious_patterns": {
       "rapid_trading": 238,
       "unusual_return": 829,
@@ -333,10 +333,10 @@
   "C001068": {
     "total_trades": 110,
     "flagged_trades": 102,
-    "flag_rate": "92.7",
+    "flag_rate": 92.7,
     "total_risk_score": 542,
-    "avg_risk_per_trade": "4.93",
-    "avg_excess_return": "-23.28",
+    "avg_risk_per_trade": 4.93,
+    "avg_excess_return": -23.28,
     "suspicious_patterns": {
       "unusual_return": 97,
       "rapid_trading": 18,
@@ -349,10 +349,10 @@
   "K000383": {
     "total_trades": 68,
     "flagged_trades": 60,
-    "flag_rate": "88.2",
+    "flag_rate": 88.2,
     "total_risk_score": 240,
-    "avg_risk_per_trade": "3.53",
-    "avg_excess_return": "-53.55",
+    "avg_risk_per_trade": 3.53,
+    "avg_excess_return": -53.55,
     "suspicious_patterns": {
       "unusual_return": 57,
       "suspicious_timing": 11,
@@ -363,10 +363,10 @@
   "M000355": {
     "total_trades": 38,
     "flagged_trades": 34,
-    "flag_rate": "89.5",
+    "flag_rate": 89.5,
     "total_risk_score": 167,
-    "avg_risk_per_trade": "4.39",
-    "avg_excess_return": "-0.98",
+    "avg_risk_per_trade": 4.39,
+    "avg_excess_return": -0.98,
     "suspicious_patterns": {
       "suspicious_timing": 20,
       "unusual_return": 30,
@@ -378,10 +378,10 @@
   "Y000067": {
     "total_trades": 28,
     "flagged_trades": 13,
-    "flag_rate": "46.4",
+    "flag_rate": 46.4,
     "total_risk_score": 32,
-    "avg_risk_per_trade": "1.14",
-    "avg_excess_return": "0.00",
+    "avg_risk_per_trade": 1.14,
+    "avg_excess_return": 0,
     "suspicious_patterns": {
       "large_trade": 10,
       "rapid_trading": 4,
@@ -392,10 +392,10 @@
   "H001082": {
     "total_trades": 690,
     "flagged_trades": 666,
-    "flag_rate": "96.5",
+    "flag_rate": 96.5,
     "total_risk_score": 3381,
-    "avg_risk_per_trade": "4.90",
-    "avg_excess_return": "-26.64",
+    "avg_risk_per_trade": 4.9,
+    "avg_excess_return": -26.64,
     "suspicious_patterns": {
       "unusual_return": 591,
       "large_trade": 120,
@@ -408,10 +408,10 @@
   "J000309": {
     "total_trades": 153,
     "flagged_trades": 145,
-    "flag_rate": "94.8",
+    "flag_rate": 94.8,
     "total_risk_score": 791,
-    "avg_risk_per_trade": "5.17",
-    "avg_excess_return": "-7.21",
+    "avg_risk_per_trade": 5.17,
+    "avg_excess_return": -7.21,
     "suspicious_patterns": {
       "unusual_return": 122,
       "suspicious_timing": 61,
@@ -424,10 +424,10 @@
   "W000816": {
     "total_trades": 25,
     "flagged_trades": 24,
-    "flag_rate": "96.0",
+    "flag_rate": 96,
     "total_risk_score": 161,
-    "avg_risk_per_trade": "6.44",
-    "avg_excess_return": "189.35",
+    "avg_risk_per_trade": 6.44,
+    "avg_excess_return": 189.35,
     "suspicious_patterns": {
       "unusual_return": 21,
       "suspicious_timing": 11,
@@ -439,10 +439,10 @@
   "J000310": {
     "total_trades": 501,
     "flagged_trades": 386,
-    "flag_rate": "77.0",
+    "flag_rate": 77,
     "total_risk_score": 1800,
-    "avg_risk_per_trade": "3.59",
-    "avg_excess_return": "2.52",
+    "avg_risk_per_trade": 3.59,
+    "avg_excess_return": 2.52,
     "suspicious_patterns": {
       "unusual_return": 307,
       "suspicious_timing": 194,
@@ -454,10 +454,10 @@
   "D000399": {
     "total_trades": 217,
     "flagged_trades": 208,
-    "flag_rate": "95.9",
+    "flag_rate": 95.9,
     "total_risk_score": 761,
-    "avg_risk_per_trade": "3.51",
-    "avg_excess_return": "-49.36",
+    "avg_risk_per_trade": 3.51,
+    "avg_excess_return": -49.36,
     "suspicious_patterns": {
       "suspicious_timing": 33,
       "unusual_return": 199,
@@ -469,10 +469,10 @@
   "D000032": {
     "total_trades": 265,
     "flagged_trades": 262,
-    "flag_rate": "98.9",
+    "flag_rate": 98.9,
     "total_risk_score": 1812,
-    "avg_risk_per_trade": "6.84",
-    "avg_excess_return": "-23.20",
+    "avg_risk_per_trade": 6.84,
+    "avg_excess_return": -23.2,
     "suspicious_patterns": {
       "unusual_return": 215,
       "large_trade": 6,
@@ -485,10 +485,10 @@
   "T000278": {
     "total_trades": 1202,
     "flagged_trades": 1170,
-    "flag_rate": "97.3",
+    "flag_rate": 97.3,
     "total_risk_score": 6275,
-    "avg_risk_per_trade": "5.22",
-    "avg_excess_return": "-19.18",
+    "avg_risk_per_trade": 5.22,
+    "avg_excess_return": -19.18,
     "suspicious_patterns": {
       "suspicious_timing": 130,
       "large_trade": 156,
@@ -501,10 +501,10 @@
   "G000583": {
     "total_trades": 3456,
     "flagged_trades": 3252,
-    "flag_rate": "94.1",
+    "flag_rate": 94.1,
     "total_risk_score": 18218,
-    "avg_risk_per_trade": "5.27",
-    "avg_excess_return": "1.45",
+    "avg_risk_per_trade": 5.27,
+    "avg_excess_return": 1.45,
     "suspicious_patterns": {
       "unusual_return": 2876,
       "suspicious_timing": 1599,
@@ -517,10 +517,10 @@
   "K000398": {
     "total_trades": 125,
     "flagged_trades": 118,
-    "flag_rate": "94.4",
+    "flag_rate": 94.4,
     "total_risk_score": 551,
-    "avg_risk_per_trade": "4.41",
-    "avg_excess_return": "-10.19",
+    "avg_risk_per_trade": 4.41,
+    "avg_excess_return": -10.19,
     "suspicious_patterns": {
       "late_disclosure": 67,
       "unusual_return": 82,
@@ -532,10 +532,10 @@
   "L000595": {
     "total_trades": 196,
     "flagged_trades": 195,
-    "flag_rate": "99.5",
+    "flag_rate": 99.5,
     "total_risk_score": 1152,
-    "avg_risk_per_trade": "5.88",
-    "avg_excess_return": "1.83",
+    "avg_risk_per_trade": 5.88,
+    "avg_excess_return": 1.83,
     "suspicious_patterns": {
       "unusual_return": 137,
       "suspicious_timing": 69,
@@ -547,10 +547,10 @@
   "P000048": {
     "total_trades": 25,
     "flagged_trades": 25,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 169,
-    "avg_risk_per_trade": "6.76",
-    "avg_excess_return": "-37.26",
+    "avg_risk_per_trade": 6.76,
+    "avg_excess_return": -37.26,
     "suspicious_patterns": {
       "late_disclosure": 22,
       "unusual_return": 23,
@@ -562,10 +562,10 @@
   "A000372": {
     "total_trades": 220,
     "flagged_trades": 211,
-    "flag_rate": "95.9",
+    "flag_rate": 95.9,
     "total_risk_score": 1386,
-    "avg_risk_per_trade": "6.30",
-    "avg_excess_return": "-36.18",
+    "avg_risk_per_trade": 6.3,
+    "avg_excess_return": -36.18,
     "suspicious_patterns": {
       "unusual_return": 163,
       "suspicious_timing": 94,
@@ -578,10 +578,10 @@
   "B001327": {
     "total_trades": 607,
     "flagged_trades": 557,
-    "flag_rate": "91.8",
+    "flag_rate": 91.8,
     "total_risk_score": 2567,
-    "avg_risk_per_trade": "4.23",
-    "avg_excess_return": "7.93",
+    "avg_risk_per_trade": 4.23,
+    "avg_excess_return": 7.93,
     "suspicious_patterns": {
       "large_trade": 3,
       "rapid_trading": 142,
@@ -594,10 +594,10 @@
   "M001234": {
     "total_trades": 61,
     "flagged_trades": 59,
-    "flag_rate": "96.7",
+    "flag_rate": 96.7,
     "total_risk_score": 330,
-    "avg_risk_per_trade": "5.41",
-    "avg_excess_return": "-3.29",
+    "avg_risk_per_trade": 5.41,
+    "avg_excess_return": -3.29,
     "suspicious_patterns": {
       "rapid_trading": 55,
       "late_disclosure": 13,
@@ -610,10 +610,10 @@
   "H000273": {
     "total_trades": 113,
     "flagged_trades": 113,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 690,
-    "avg_risk_per_trade": "6.11",
-    "avg_excess_return": "-53.58",
+    "avg_risk_per_trade": 6.11,
+    "avg_excess_return": -53.58,
     "suspicious_patterns": {
       "rapid_trading": 54,
       "large_trade": 67,
@@ -625,10 +625,10 @@
   "R000603": {
     "total_trades": 17,
     "flagged_trades": 16,
-    "flag_rate": "94.1",
+    "flag_rate": 94.1,
     "total_risk_score": 74,
-    "avg_risk_per_trade": "4.35",
-    "avg_excess_return": "137.45",
+    "avg_risk_per_trade": 4.35,
+    "avg_excess_return": 137.45,
     "suspicious_patterns": {
       "unusual_return": 16,
       "suspicious_timing": 4,
@@ -640,10 +640,10 @@
   "M001217": {
     "total_trades": 382,
     "flagged_trades": 380,
-    "flag_rate": "99.5",
+    "flag_rate": 99.5,
     "total_risk_score": 2394,
-    "avg_risk_per_trade": "6.27",
-    "avg_excess_return": "-10.35",
+    "avg_risk_per_trade": 6.27,
+    "avg_excess_return": -10.35,
     "suspicious_patterns": {
       "unusual_return": 300,
       "rapid_trading": 233,
@@ -656,10 +656,10 @@
   "C001055": {
     "total_trades": 9,
     "flagged_trades": 8,
-    "flag_rate": "88.9",
+    "flag_rate": 88.9,
     "total_risk_score": 26,
-    "avg_risk_per_trade": "2.89",
-    "avg_excess_return": "15.29",
+    "avg_risk_per_trade": 2.89,
+    "avg_excess_return": 15.29,
     "suspicious_patterns": {
       "large_trade": 4,
       "rapid_trading": 2,
@@ -671,10 +671,10 @@
   "M001243": {
     "total_trades": 25,
     "flagged_trades": 24,
-    "flag_rate": "96.0",
+    "flag_rate": 96,
     "total_risk_score": 142,
-    "avg_risk_per_trade": "5.68",
-    "avg_excess_return": "-35.52",
+    "avg_risk_per_trade": 5.68,
+    "avg_excess_return": -35.52,
     "suspicious_patterns": {
       "unusual_return": 24,
       "large_trade": 12,
@@ -685,10 +685,10 @@
   "M001157": {
     "total_trades": 24439,
     "flagged_trades": 24210,
-    "flag_rate": "99.1",
+    "flag_rate": 99.1,
     "total_risk_score": 171067,
-    "avg_risk_per_trade": "7.00",
-    "avg_excess_return": "-22.45",
+    "avg_risk_per_trade": 7,
+    "avg_excess_return": -22.45,
     "suspicious_patterns": {
       "large_trade": 5894,
       "unusual_return": 18054,
@@ -701,10 +701,10 @@
   "K000389": {
     "total_trades": 26449,
     "flagged_trades": 25174,
-    "flag_rate": "95.2",
+    "flag_rate": 95.2,
     "total_risk_score": 140223,
-    "avg_risk_per_trade": "5.30",
-    "avg_excess_return": "-12.22",
+    "avg_risk_per_trade": 5.3,
+    "avg_excess_return": -12.22,
     "suspicious_patterns": {
       "unusual_return": 22153,
       "suspicious_timing": 11120,
@@ -717,10 +717,10 @@
   "W000797": {
     "total_trades": 124,
     "flagged_trades": 121,
-    "flag_rate": "97.6",
+    "flag_rate": 97.6,
     "total_risk_score": 749,
-    "avg_risk_per_trade": "6.04",
-    "avg_excess_return": "34.65",
+    "avg_risk_per_trade": 6.04,
+    "avg_excess_return": 34.65,
     "suspicious_patterns": {
       "unusual_return": 112,
       "suspicious_timing": 46,
@@ -733,10 +733,10 @@
   "E000296": {
     "total_trades": 171,
     "flagged_trades": 161,
-    "flag_rate": "94.2",
+    "flag_rate": 94.2,
     "total_risk_score": 939,
-    "avg_risk_per_trade": "5.49",
-    "avg_excess_return": "-20.01",
+    "avg_risk_per_trade": 5.49,
+    "avg_excess_return": -20.01,
     "suspicious_patterns": {
       "unusual_return": 143,
       "suspicious_timing": 85,
@@ -746,27 +746,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "G000596": {
-    "total_trades": 509,
-    "flagged_trades": 440,
-    "flag_rate": "86.4",
-    "total_risk_score": 2000,
-    "avg_risk_per_trade": "3.93",
-    "avg_excess_return": "7.06",
-    "suspicious_patterns": {
-      "unusual_return": 402,
-      "suspicious_timing": 235,
-      "rapid_trading": 92
-    },
-    "overall_suspicion_level": "high"
-  },
   "A000148": {
     "total_trades": 6,
     "flagged_trades": 5,
-    "flag_rate": "83.3",
+    "flag_rate": 83.3,
     "total_risk_score": 11,
-    "avg_risk_per_trade": "1.83",
-    "avg_excess_return": "17.75",
+    "avg_risk_per_trade": 1.83,
+    "avg_excess_return": 17.75,
     "suspicious_patterns": {
       "unusual_return": 5
     },
@@ -775,10 +761,10 @@
   "C001098": {
     "total_trades": 11,
     "flagged_trades": 10,
-    "flag_rate": "90.9",
+    "flag_rate": 90.9,
     "total_risk_score": 46,
-    "avg_risk_per_trade": "4.18",
-    "avg_excess_return": "-42.76",
+    "avg_risk_per_trade": 4.18,
+    "avg_excess_return": -42.76,
     "suspicious_patterns": {
       "unusual_return": 10,
       "large_trade": 6,
@@ -789,10 +775,10 @@
   "M001218": {
     "total_trades": 63,
     "flagged_trades": 63,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 323,
-    "avg_risk_per_trade": "5.13",
-    "avg_excess_return": "-10.00",
+    "avg_risk_per_trade": 5.13,
+    "avg_excess_return": -10,
     "suspicious_patterns": {
       "unusual_return": 38,
       "suspicious_timing": 24,
@@ -803,10 +789,10 @@
   "M001136": {
     "total_trades": 1394,
     "flagged_trades": 1336,
-    "flag_rate": "95.8",
+    "flag_rate": 95.8,
     "total_risk_score": 7291,
-    "avg_risk_per_trade": "5.23",
-    "avg_excess_return": "2.24",
+    "avg_risk_per_trade": 5.23,
+    "avg_excess_return": 2.24,
     "suspicious_patterns": {
       "rapid_trading": 723,
       "unusual_return": 888,
@@ -819,10 +805,10 @@
   "G000603": {
     "total_trades": 3,
     "flagged_trades": 3,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 11,
-    "avg_risk_per_trade": "3.67",
-    "avg_excess_return": "-32.73",
+    "avg_risk_per_trade": 3.67,
+    "avg_excess_return": -32.73,
     "suspicious_patterns": {
       "unusual_return": 2,
       "large_trade": 1,
@@ -833,10 +819,10 @@
   "D000616": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 5,
-    "avg_risk_per_trade": "2.50",
-    "avg_excess_return": "16.29",
+    "avg_risk_per_trade": 2.5,
+    "avg_excess_return": 16.29,
     "suspicious_patterns": {
       "unusual_return": 2
     },
@@ -845,10 +831,10 @@
   "S001156": {
     "total_trades": 14,
     "flagged_trades": 13,
-    "flag_rate": "92.9",
+    "flag_rate": 92.9,
     "total_risk_score": 79,
-    "avg_risk_per_trade": "5.64",
-    "avg_excess_return": "-78.06",
+    "avg_risk_per_trade": 5.64,
+    "avg_excess_return": -78.06,
     "suspicious_patterns": {
       "unusual_return": 13,
       "late_disclosure": 7,
@@ -859,10 +845,10 @@
   "W000829": {
     "total_trades": 12,
     "flagged_trades": 12,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 68,
-    "avg_risk_per_trade": "5.67",
-    "avg_excess_return": "15.02",
+    "avg_risk_per_trade": 5.67,
+    "avg_excess_return": 15.02,
     "suspicious_patterns": {
       "large_trade": 10,
       "unusual_return": 10,
@@ -873,10 +859,10 @@
   "S001212": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 2,
-    "avg_risk_per_trade": "2.00",
-    "avg_excess_return": "-11.42",
+    "avg_risk_per_trade": 2,
+    "avg_excess_return": -11.42,
     "suspicious_patterns": {
       "unusual_return": 1
     },
@@ -885,10 +871,10 @@
   "J000289": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 5,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "0.00",
+    "avg_risk_per_trade": 5,
+    "avg_excess_return": 0,
     "suspicious_patterns": {
       "large_trade": 1,
       "late_disclosure": 1
@@ -898,10 +884,10 @@
   "F000459": {
     "total_trades": 120,
     "flagged_trades": 97,
-    "flag_rate": "80.8",
+    "flag_rate": 80.8,
     "total_risk_score": 251,
-    "avg_risk_per_trade": "2.09",
-    "avg_excess_return": "-0.66",
+    "avg_risk_per_trade": 2.09,
+    "avg_excess_return": -0.66,
     "suspicious_patterns": {
       "rapid_trading": 78,
       "unusual_return": 16,
@@ -914,10 +900,10 @@
   "G000591": {
     "total_trades": 64,
     "flagged_trades": 53,
-    "flag_rate": "82.8",
+    "flag_rate": 82.8,
     "total_risk_score": 243,
-    "avg_risk_per_trade": "3.80",
-    "avg_excess_return": "-4.91",
+    "avg_risk_per_trade": 3.8,
+    "avg_excess_return": -4.91,
     "suspicious_patterns": {
       "suspicious_timing": 21,
       "unusual_return": 49,
@@ -930,10 +916,10 @@
   "F000472": {
     "total_trades": 245,
     "flagged_trades": 235,
-    "flag_rate": "95.9",
+    "flag_rate": 95.9,
     "total_risk_score": 1347,
-    "avg_risk_per_trade": "5.50",
-    "avg_excess_return": "-8.60",
+    "avg_risk_per_trade": 5.5,
+    "avg_excess_return": -8.6,
     "suspicious_patterns": {
       "rapid_trading": 142,
       "suspicious_timing": 93,
@@ -946,10 +932,10 @@
   "N000147": {
     "total_trades": 7,
     "flagged_trades": 6,
-    "flag_rate": "85.7",
+    "flag_rate": 85.7,
     "total_risk_score": 37,
-    "avg_risk_per_trade": "5.29",
-    "avg_excess_return": "-1.03",
+    "avg_risk_per_trade": 5.29,
+    "avg_excess_return": -1.03,
     "suspicious_patterns": {
       "unusual_return": 6,
       "suspicious_timing": 5,
@@ -962,10 +948,10 @@
   "S001201": {
     "total_trades": 635,
     "flagged_trades": 628,
-    "flag_rate": "98.9",
+    "flag_rate": 98.9,
     "total_risk_score": 4644,
-    "avg_risk_per_trade": "7.31",
-    "avg_excess_return": "74.65",
+    "avg_risk_per_trade": 7.31,
+    "avg_excess_return": 74.65,
     "suspicious_patterns": {
       "suspicious_timing": 299,
       "unusual_return": 590,
@@ -978,10 +964,10 @@
   "H001094": {
     "total_trades": 388,
     "flagged_trades": 343,
-    "flag_rate": "88.4",
+    "flag_rate": 88.4,
     "total_risk_score": 1812,
-    "avg_risk_per_trade": "4.67",
-    "avg_excess_return": "0.40",
+    "avg_risk_per_trade": 4.67,
+    "avg_excess_return": 0.4,
     "suspicious_patterns": {
       "unusual_return": 261,
       "suspicious_timing": 143,
@@ -994,10 +980,10 @@
   "M000934": {
     "total_trades": 229,
     "flagged_trades": 229,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 1393,
-    "avg_risk_per_trade": "6.08",
-    "avg_excess_return": "2.31",
+    "avg_risk_per_trade": 6.08,
+    "avg_excess_return": 2.31,
     "suspicious_patterns": {
       "late_disclosure": 149,
       "unusual_return": 198,
@@ -1009,10 +995,10 @@
   "S001150": {
     "total_trades": 3,
     "flagged_trades": 2,
-    "flag_rate": "66.7",
+    "flag_rate": 66.7,
     "total_risk_score": 6,
-    "avg_risk_per_trade": "2.00",
-    "avg_excess_return": "19.32",
+    "avg_risk_per_trade": 2,
+    "avg_excess_return": 19.32,
     "suspicious_patterns": {
       "unusual_return": 2
     },
@@ -1021,10 +1007,10 @@
   "C001101": {
     "total_trades": 658,
     "flagged_trades": 649,
-    "flag_rate": "98.6",
+    "flag_rate": 98.6,
     "total_risk_score": 4814,
-    "avg_risk_per_trade": "7.32",
-    "avg_excess_return": "-24.64",
+    "avg_risk_per_trade": 7.32,
+    "avg_excess_return": -24.64,
     "suspicious_patterns": {
       "rapid_trading": 372,
       "suspicious_timing": 305,
@@ -1037,10 +1023,10 @@
   "F000483": {
     "total_trades": 3,
     "flagged_trades": 3,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 15,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "-23.10",
+    "avg_risk_per_trade": 5,
+    "avg_excess_return": -23.1,
     "suspicious_patterns": {
       "unusual_return": 3,
       "suspicious_timing": 2,
@@ -1051,10 +1037,10 @@
   "J000312": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 5,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "2.88",
+    "avg_risk_per_trade": 5,
+    "avg_excess_return": 2.88,
     "suspicious_patterns": {
       "large_trade": 1,
       "late_disclosure": 1
@@ -1064,10 +1050,10 @@
   "G000597": {
     "total_trades": 11,
     "flagged_trades": 11,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 58,
-    "avg_risk_per_trade": "5.27",
-    "avg_excess_return": "-47.36",
+    "avg_risk_per_trade": 5.27,
+    "avg_excess_return": -47.36,
     "suspicious_patterns": {
       "unusual_return": 10,
       "suspicious_timing": 4,
@@ -1078,10 +1064,10 @@
   "C001080": {
     "total_trades": 14,
     "flagged_trades": 14,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 79,
-    "avg_risk_per_trade": "5.64",
-    "avg_excess_return": "7.08",
+    "avg_risk_per_trade": 5.64,
+    "avg_excess_return": 7.08,
     "suspicious_patterns": {
       "unusual_return": 12,
       "large_trade": 6,
@@ -1093,10 +1079,10 @@
   "S000510": {
     "total_trades": 7,
     "flagged_trades": 7,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 20,
-    "avg_risk_per_trade": "2.86",
-    "avg_excess_return": "14.11",
+    "avg_risk_per_trade": 2.86,
+    "avg_excess_return": 14.11,
     "suspicious_patterns": {
       "unusual_return": 6,
       "suspicious_timing": 2
@@ -1106,10 +1092,10 @@
   "A000055": {
     "total_trades": 3,
     "flagged_trades": 2,
-    "flag_rate": "66.7",
+    "flag_rate": 66.7,
     "total_risk_score": 8,
-    "avg_risk_per_trade": "2.67",
-    "avg_excess_return": "31.92",
+    "avg_risk_per_trade": 2.67,
+    "avg_excess_return": 31.92,
     "suspicious_patterns": {
       "unusual_return": 2,
       "late_disclosure": 1
@@ -1119,10 +1105,10 @@
   "L000590": {
     "total_trades": 1280,
     "flagged_trades": 1250,
-    "flag_rate": "97.7",
+    "flag_rate": 97.7,
     "total_risk_score": 7545,
-    "avg_risk_per_trade": "5.89",
-    "avg_excess_return": "-34.70",
+    "avg_risk_per_trade": 5.89,
+    "avg_excess_return": -34.7,
     "suspicious_patterns": {
       "unusual_return": 1179,
       "large_trade": 3,
@@ -1135,10 +1121,10 @@
   "L000597": {
     "total_trades": 13,
     "flagged_trades": 13,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 65,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "-3.09",
+    "avg_risk_per_trade": 5,
+    "avg_excess_return": -3.09,
     "suspicious_patterns": {
       "unusual_return": 9,
       "large_trade": 4,
@@ -1151,10 +1137,10 @@
   "T000486": {
     "total_trades": 125,
     "flagged_trades": 125,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 714,
-    "avg_risk_per_trade": "5.71",
-    "avg_excess_return": "-7.93",
+    "avg_risk_per_trade": 5.71,
+    "avg_excess_return": -7.93,
     "suspicious_patterns": {
       "suspicious_timing": 43,
       "late_disclosure": 125,
@@ -1166,10 +1152,10 @@
   "S001214": {
     "total_trades": 19,
     "flagged_trades": 17,
-    "flag_rate": "89.5",
+    "flag_rate": 89.5,
     "total_risk_score": 90,
-    "avg_risk_per_trade": "4.74",
-    "avg_excess_return": "-44.49",
+    "avg_risk_per_trade": 4.74,
+    "avg_excess_return": -44.49,
     "suspicious_patterns": {
       "unusual_return": 15,
       "suspicious_timing": 5,
@@ -1181,10 +1167,10 @@
   "B001325": {
     "total_trades": 78,
     "flagged_trades": 78,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 491,
-    "avg_risk_per_trade": "6.29",
-    "avg_excess_return": "-0.29",
+    "avg_risk_per_trade": 6.29,
+    "avg_excess_return": -0.29,
     "suspicious_patterns": {
       "unusual_return": 55,
       "large_trade": 1,
@@ -1196,10 +1182,10 @@
   "C001108": {
     "total_trades": 44,
     "flagged_trades": 38,
-    "flag_rate": "86.4",
+    "flag_rate": 86.4,
     "total_risk_score": 179,
-    "avg_risk_per_trade": "4.07",
-    "avg_excess_return": "-12.96",
+    "avg_risk_per_trade": 4.07,
+    "avg_excess_return": -12.96,
     "suspicious_patterns": {
       "unusual_return": 32,
       "suspicious_timing": 19,
@@ -1211,10 +1197,10 @@
   "M001239": {
     "total_trades": 5,
     "flagged_trades": 5,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 20,
-    "avg_risk_per_trade": "4.00",
-    "avg_excess_return": "-54.87",
+    "avg_risk_per_trade": 4,
+    "avg_excess_return": -54.87,
     "suspicious_patterns": {
       "unusual_return": 5,
       "suspicious_timing": 1,
@@ -1225,10 +1211,10 @@
   "R000612": {
     "total_trades": 21,
     "flagged_trades": 20,
-    "flag_rate": "95.2",
+    "flag_rate": 95.2,
     "total_risk_score": 123,
-    "avg_risk_per_trade": "5.86",
-    "avg_excess_return": "29.95",
+    "avg_risk_per_trade": 5.86,
+    "avg_excess_return": 29.95,
     "suspicious_patterns": {
       "large_trade": 18,
       "late_disclosure": 11,
@@ -1240,10 +1226,10 @@
   "K000376": {
     "total_trades": 13,
     "flagged_trades": 12,
-    "flag_rate": "92.3",
+    "flag_rate": 92.3,
     "total_risk_score": 72,
-    "avg_risk_per_trade": "5.54",
-    "avg_excess_return": "-9.56",
+    "avg_risk_per_trade": 5.54,
+    "avg_excess_return": -9.56,
     "suspicious_patterns": {
       "large_trade": 2,
       "late_disclosure": 11,
@@ -1255,10 +1241,10 @@
   "S001189": {
     "total_trades": 99,
     "flagged_trades": 99,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 602,
-    "avg_risk_per_trade": "6.08",
-    "avg_excess_return": "-6.96",
+    "avg_risk_per_trade": 6.08,
+    "avg_excess_return": -6.96,
     "suspicious_patterns": {
       "unusual_return": 96,
       "late_disclosure": 56,
@@ -1270,10 +1256,10 @@
   "S000250": {
     "total_trades": 392,
     "flagged_trades": 382,
-    "flag_rate": "97.4",
+    "flag_rate": 97.4,
     "total_risk_score": 2232,
-    "avg_risk_per_trade": "5.69",
-    "avg_excess_return": "14.71",
+    "avg_risk_per_trade": 5.69,
+    "avg_excess_return": 14.71,
     "suspicious_patterns": {
       "large_trade": 19,
       "suspicious_timing": 184,
@@ -1286,10 +1272,10 @@
   "B000668": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 11,
-    "avg_risk_per_trade": "5.50",
-    "avg_excess_return": "-3.01",
+    "avg_risk_per_trade": 5.5,
+    "avg_excess_return": -3.01,
     "suspicious_patterns": {
       "unusual_return": 2,
       "suspicious_timing": 1,
@@ -1300,10 +1286,10 @@
   "W000779": {
     "total_trades": 246,
     "flagged_trades": 242,
-    "flag_rate": "98.4",
+    "flag_rate": 98.4,
     "total_risk_score": 1341,
-    "avg_risk_per_trade": "5.45",
-    "avg_excess_return": "109.06",
+    "avg_risk_per_trade": 5.45,
+    "avg_excess_return": 109.06,
     "suspicious_patterns": {
       "large_trade": 68,
       "unusual_return": 236,
@@ -1316,10 +1302,10 @@
   "F000479": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 12,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "17.48",
+    "avg_risk_per_trade": 6,
+    "avg_excess_return": 17.48,
     "suspicious_patterns": {
       "unusual_return": 2,
       "suspicious_timing": 1,
@@ -1327,27 +1313,13 @@
     },
     "overall_suspicion_level": "low"
   },
-  "C001078": {
-    "total_trades": 70,
-    "flagged_trades": 64,
-    "flag_rate": "91.4",
-    "total_risk_score": 301,
-    "avg_risk_per_trade": "4.30",
-    "avg_excess_return": "-95.58",
-    "suspicious_patterns": {
-      "unusual_return": 62,
-      "suspicious_timing": 28,
-      "late_disclosure": 12
-    },
-    "overall_suspicion_level": "high"
-  },
   "S001229": {
     "total_trades": 558,
     "flagged_trades": 533,
-    "flag_rate": "95.5",
+    "flag_rate": 95.5,
     "total_risk_score": 3128,
-    "avg_risk_per_trade": "5.61",
-    "avg_excess_return": "6.34",
+    "avg_risk_per_trade": 5.61,
+    "avg_excess_return": 6.34,
     "suspicious_patterns": {
       "suspicious_timing": 252,
       "late_disclosure": 372,
@@ -1360,20 +1332,20 @@
   "R000610": {
     "total_trades": 6,
     "flagged_trades": 0,
-    "flag_rate": "0.0",
+    "flag_rate": 0,
     "total_risk_score": 0,
-    "avg_risk_per_trade": "0.00",
-    "avg_excess_return": "0.00",
+    "avg_risk_per_trade": 0,
+    "avg_excess_return": 0,
     "suspicious_patterns": {},
     "overall_suspicion_level": "low"
   },
   "K000403": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 5,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "-23.27",
+    "avg_risk_per_trade": 5,
+    "avg_excess_return": -23.27,
     "suspicious_patterns": {
       "unusual_return": 1,
       "late_disclosure": 1
@@ -1383,10 +1355,10 @@
   "L000601": {
     "total_trades": 167,
     "flagged_trades": 158,
-    "flag_rate": "94.6",
+    "flag_rate": 94.6,
     "total_risk_score": 923,
-    "avg_risk_per_trade": "5.53",
-    "avg_excess_return": "15.96",
+    "avg_risk_per_trade": 5.53,
+    "avg_excess_return": 15.96,
     "suspicious_patterns": {
       "unusual_return": 127,
       "large_trade": 3,
@@ -1399,10 +1371,10 @@
   "W000821": {
     "total_trades": 208,
     "flagged_trades": 188,
-    "flag_rate": "90.4",
+    "flag_rate": 90.4,
     "total_risk_score": 906,
-    "avg_risk_per_trade": "4.36",
-    "avg_excess_return": "6.25",
+    "avg_risk_per_trade": 4.36,
+    "avg_excess_return": 6.25,
     "suspicious_patterns": {
       "unusual_return": 164,
       "suspicious_timing": 92,
@@ -1413,10 +1385,10 @@
   "K000393": {
     "total_trades": 2,
     "flagged_trades": 1,
-    "flag_rate": "50.0",
+    "flag_rate": 50,
     "total_risk_score": 6,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "-12.21",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": -12.21,
     "suspicious_patterns": {
       "unusual_return": 1,
       "late_disclosure": 1
@@ -1426,10 +1398,10 @@
   "S001185": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 15,
-    "avg_risk_per_trade": "7.50",
-    "avg_excess_return": "23.95",
+    "avg_risk_per_trade": 7.5,
+    "avg_excess_return": 23.95,
     "suspicious_patterns": {
       "unusual_return": 2,
       "suspicious_timing": 2,
@@ -1440,10 +1412,10 @@
   "M001244": {
     "total_trades": 23,
     "flagged_trades": 23,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 147,
-    "avg_risk_per_trade": "6.39",
-    "avg_excess_return": "24.21",
+    "avg_risk_per_trade": 6.39,
+    "avg_excess_return": 24.21,
     "suspicious_patterns": {
       "unusual_return": 22,
       "late_disclosure": 6,
@@ -1456,10 +1428,10 @@
   "S000929": {
     "total_trades": 26,
     "flagged_trades": 20,
-    "flag_rate": "76.9",
+    "flag_rate": 76.9,
     "total_risk_score": 106,
-    "avg_risk_per_trade": "4.08",
-    "avg_excess_return": "-8.31",
+    "avg_risk_per_trade": 4.08,
+    "avg_excess_return": -8.31,
     "suspicious_patterns": {
       "large_trade": 8,
       "late_disclosure": 5,
@@ -1472,10 +1444,10 @@
   "W000830": {
     "total_trades": 35,
     "flagged_trades": 33,
-    "flag_rate": "94.3",
+    "flag_rate": 94.3,
     "total_risk_score": 181,
-    "avg_risk_per_trade": "5.17",
-    "avg_excess_return": "15.10",
+    "avg_risk_per_trade": 5.17,
+    "avg_excess_return": 15.1,
     "suspicious_patterns": {
       "unusual_return": 25,
       "large_trade": 25,
@@ -1488,10 +1460,10 @@
   "M001241": {
     "total_trades": 2,
     "flagged_trades": 1,
-    "flag_rate": "50.0",
+    "flag_rate": 50,
     "total_risk_score": 3,
-    "avg_risk_per_trade": "1.50",
-    "avg_excess_return": "30.31",
+    "avg_risk_per_trade": 1.5,
+    "avg_excess_return": 30.31,
     "suspicious_patterns": {
       "unusual_return": 1
     },
@@ -1500,10 +1472,10 @@
   "M001242": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 5,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "-40.09",
+    "avg_risk_per_trade": 5,
+    "avg_excess_return": -40.09,
     "suspicious_patterns": {
       "unusual_return": 1,
       "late_disclosure": 1
@@ -1513,10 +1485,10 @@
   "M001205": {
     "total_trades": 117,
     "flagged_trades": 116,
-    "flag_rate": "99.1",
+    "flag_rate": 99.1,
     "total_risk_score": 679,
-    "avg_risk_per_trade": "5.80",
-    "avg_excess_return": "-31.52",
+    "avg_risk_per_trade": 5.8,
+    "avg_excess_return": -31.52,
     "suspicious_patterns": {
       "unusual_return": 97,
       "suspicious_timing": 39,
@@ -1526,29 +1498,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "S001207": {
-    "total_trades": 295,
-    "flagged_trades": 287,
-    "flag_rate": "97.3",
-    "total_risk_score": 1644,
-    "avg_risk_per_trade": "5.57",
-    "avg_excess_return": "-8.94",
-    "suspicious_patterns": {
-      "unusual_return": 198,
-      "large_trade": 15,
-      "rapid_trading": 58,
-      "late_disclosure": 249,
-      "suspicious_timing": 131
-    },
-    "overall_suspicion_level": "high"
-  },
   "K000375": {
     "total_trades": 104,
     "flagged_trades": 96,
-    "flag_rate": "92.3",
+    "flag_rate": 92.3,
     "total_risk_score": 476,
-    "avg_risk_per_trade": "4.58",
-    "avg_excess_return": "-11.73",
+    "avg_risk_per_trade": 4.58,
+    "avg_excess_return": -11.73,
     "suspicious_patterns": {
       "unusual_return": 91,
       "suspicious_timing": 37,
@@ -1556,29 +1512,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "G000590": {
-    "total_trades": 629,
-    "flagged_trades": 625,
-    "flag_rate": "99.4",
-    "total_risk_score": 4596,
-    "avg_risk_per_trade": "7.31",
-    "avg_excess_return": "62.95",
-    "suspicious_patterns": {
-      "unusual_return": 566,
-      "large_trade": 341,
-      "rapid_trading": 401,
-      "suspicious_timing": 406,
-      "late_disclosure": 52
-    },
-    "overall_suspicion_level": "high"
-  },
   "B001299": {
     "total_trades": 55,
     "flagged_trades": 53,
-    "flag_rate": "96.4",
+    "flag_rate": 96.4,
     "total_risk_score": 284,
-    "avg_risk_per_trade": "5.16",
-    "avg_excess_return": "-42.15",
+    "avg_risk_per_trade": 5.16,
+    "avg_excess_return": -42.15,
     "suspicious_patterns": {
       "unusual_return": 34,
       "rapid_trading": 39,
@@ -1590,10 +1530,10 @@
   "M001204": {
     "total_trades": 70,
     "flagged_trades": 70,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 505,
-    "avg_risk_per_trade": "7.21",
-    "avg_excess_return": "54.50",
+    "avg_risk_per_trade": 7.21,
+    "avg_excess_return": 54.5,
     "suspicious_patterns": {
       "unusual_return": 57,
       "late_disclosure": 60,
@@ -1606,10 +1546,10 @@
   "G000599": {
     "total_trades": 1185,
     "flagged_trades": 1158,
-    "flag_rate": "97.7",
+    "flag_rate": 97.7,
     "total_risk_score": 7206,
-    "avg_risk_per_trade": "6.08",
-    "avg_excess_return": "-25.91",
+    "avg_risk_per_trade": 6.08,
+    "avg_excess_return": -25.91,
     "suspicious_patterns": {
       "unusual_return": 1062,
       "suspicious_timing": 637,
@@ -1622,10 +1562,10 @@
   "K000405": {
     "total_trades": 3,
     "flagged_trades": 3,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 26,
-    "avg_risk_per_trade": "8.67",
-    "avg_excess_return": "48.93",
+    "avg_risk_per_trade": 8.67,
+    "avg_excess_return": 48.93,
     "suspicious_patterns": {
       "unusual_return": 3,
       "rapid_trading": 2,
@@ -1634,25 +1574,13 @@
     },
     "overall_suspicion_level": "medium"
   },
-  "R000595": {
-    "total_trades": 2,
-    "flagged_trades": 2,
-    "flag_rate": "100.0",
-    "total_risk_score": 5,
-    "avg_risk_per_trade": "2.50",
-    "avg_excess_return": "18.70",
-    "suspicious_patterns": {
-      "unusual_return": 2
-    },
-    "overall_suspicion_level": "low"
-  },
   "R000621": {
     "total_trades": 11,
     "flagged_trades": 11,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 53,
-    "avg_risk_per_trade": "4.82",
-    "avg_excess_return": "6.39",
+    "avg_risk_per_trade": 4.82,
+    "avg_excess_return": 6.39,
     "suspicious_patterns": {
       "unusual_return": 8,
       "late_disclosure": 11,
@@ -1663,10 +1591,10 @@
   "H000601": {
     "total_trades": 32,
     "flagged_trades": 27,
-    "flag_rate": "84.4",
+    "flag_rate": 84.4,
     "total_risk_score": 130,
-    "avg_risk_per_trade": "4.06",
-    "avg_excess_return": "-28.00",
+    "avg_risk_per_trade": 4.06,
+    "avg_excess_return": -28,
     "suspicious_patterns": {
       "late_disclosure": 8,
       "unusual_return": 24,
@@ -1675,45 +1603,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "C000174": {
-    "total_trades": 781,
-    "flagged_trades": 673,
-    "flag_rate": "86.2",
-    "total_risk_score": 2559,
-    "avg_risk_per_trade": "3.28",
-    "avg_excess_return": "-35.48",
-    "suspicious_patterns": {
-      "unusual_return": 626,
-      "rapid_trading": 139,
-      "suspicious_timing": 79,
-      "large_trade": 2,
-      "late_disclosure": 100
-    },
-    "overall_suspicion_level": "high"
-  },
-  "B000574": {
-    "total_trades": 381,
-    "flagged_trades": 356,
-    "flag_rate": "93.4",
-    "total_risk_score": 1673,
-    "avg_risk_per_trade": "4.39",
-    "avg_excess_return": "-34.48",
-    "suspicious_patterns": {
-      "unusual_return": 333,
-      "suspicious_timing": 121,
-      "rapid_trading": 57,
-      "late_disclosure": 105,
-      "large_trade": 6
-    },
-    "overall_suspicion_level": "high"
-  },
   "G000589": {
     "total_trades": 3,
     "flagged_trades": 3,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 14,
-    "avg_risk_per_trade": "4.67",
-    "avg_excess_return": "9.30",
+    "avg_risk_per_trade": 4.67,
+    "avg_excess_return": 9.3,
     "suspicious_patterns": {
       "unusual_return": 2,
       "large_trade": 1,
@@ -1725,10 +1621,10 @@
   "M001220": {
     "total_trades": 26,
     "flagged_trades": 24,
-    "flag_rate": "92.3",
+    "flag_rate": 92.3,
     "total_risk_score": 122,
-    "avg_risk_per_trade": "4.69",
-    "avg_excess_return": "76.20",
+    "avg_risk_per_trade": 4.69,
+    "avg_excess_return": 76.2,
     "suspicious_patterns": {
       "rapid_trading": 12,
       "unusual_return": 17,
@@ -1740,10 +1636,10 @@
   "S000168": {
     "total_trades": 26,
     "flagged_trades": 25,
-    "flag_rate": "96.2",
+    "flag_rate": 96.2,
     "total_risk_score": 165,
-    "avg_risk_per_trade": "6.35",
-    "avg_excess_return": "-43.90",
+    "avg_risk_per_trade": 6.35,
+    "avg_excess_return": -43.9,
     "suspicious_patterns": {
       "unusual_return": 23,
       "suspicious_timing": 13,
@@ -1756,10 +1652,10 @@
   "J000307": {
     "total_trades": 266,
     "flagged_trades": 250,
-    "flag_rate": "94.0",
+    "flag_rate": 94,
     "total_risk_score": 1443,
-    "avg_risk_per_trade": "5.42",
-    "avg_excess_return": "1.13",
+    "avg_risk_per_trade": 5.42,
+    "avg_excess_return": 1.13,
     "suspicious_patterns": {
       "unusual_return": 219,
       "suspicious_timing": 126,
@@ -1768,29 +1664,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "B001248": {
-    "total_trades": 134,
-    "flagged_trades": 121,
-    "flag_rate": "90.3",
-    "total_risk_score": 694,
-    "avg_risk_per_trade": "5.18",
-    "avg_excess_return": "-23.46",
-    "suspicious_patterns": {
-      "unusual_return": 111,
-      "rapid_trading": 63,
-      "suspicious_timing": 76,
-      "late_disclosure": 13,
-      "large_trade": 2
-    },
-    "overall_suspicion_level": "high"
-  },
   "D000617": {
     "total_trades": 223,
     "flagged_trades": 203,
-    "flag_rate": "91.0",
+    "flag_rate": 91,
     "total_risk_score": 1261,
-    "avg_risk_per_trade": "5.65",
-    "avg_excess_return": "-2.53",
+    "avg_risk_per_trade": 5.65,
+    "avg_excess_return": -2.53,
     "suspicious_patterns": {
       "unusual_return": 179,
       "large_trade": 43,
@@ -1800,29 +1680,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "M001135": {
-    "total_trades": 741,
-    "flagged_trades": 713,
-    "flag_rate": "96.2",
-    "total_risk_score": 3956,
-    "avg_risk_per_trade": "5.34",
-    "avg_excess_return": "0.20",
-    "suspicious_patterns": {
-      "unusual_return": 634,
-      "suspicious_timing": 308,
-      "rapid_trading": 342,
-      "late_disclosure": 222,
-      "large_trade": 7
-    },
-    "overall_suspicion_level": "high"
-  },
   "C001035": {
     "total_trades": 350,
     "flagged_trades": 329,
-    "flag_rate": "94.0",
+    "flag_rate": 94,
     "total_risk_score": 1203,
-    "avg_risk_per_trade": "3.44",
-    "avg_excess_return": "-72.02",
+    "avg_risk_per_trade": 3.44,
+    "avg_excess_return": -72.02,
     "suspicious_patterns": {
       "unusual_return": 309,
       "late_disclosure": 40,
@@ -1835,10 +1699,10 @@
   "C001103": {
     "total_trades": 18,
     "flagged_trades": 6,
-    "flag_rate": "33.3",
+    "flag_rate": 33.3,
     "total_risk_score": 33,
-    "avg_risk_per_trade": "1.83",
-    "avg_excess_return": "4.18",
+    "avg_risk_per_trade": 1.83,
+    "avg_excess_return": 4.18,
     "suspicious_patterns": {
       "unusual_return": 4,
       "large_trade": 4,
@@ -1850,10 +1714,10 @@
   "C001066": {
     "total_trades": 74,
     "flagged_trades": 72,
-    "flag_rate": "97.3",
+    "flag_rate": 97.3,
     "total_risk_score": 427,
-    "avg_risk_per_trade": "5.77",
-    "avg_excess_return": "-24.05",
+    "avg_risk_per_trade": 5.77,
+    "avg_excess_return": -24.05,
     "suspicious_patterns": {
       "suspicious_timing": 48,
       "unusual_return": 69,
@@ -1866,10 +1730,10 @@
   "R000606": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 11,
-    "avg_risk_per_trade": "5.50",
-    "avg_excess_return": "49.32",
+    "avg_risk_per_trade": 5.5,
+    "avg_excess_return": 49.32,
     "suspicious_patterns": {
       "large_trade": 2,
       "unusual_return": 1,
@@ -1880,10 +1744,10 @@
   "T000488": {
     "total_trades": 51,
     "flagged_trades": 51,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 310,
-    "avg_risk_per_trade": "6.08",
-    "avg_excess_return": "8.37",
+    "avg_risk_per_trade": 6.08,
+    "avg_excess_return": 8.37,
     "suspicious_patterns": {
       "unusual_return": 39,
       "late_disclosure": 18,
@@ -1893,26 +1757,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "S001209": {
-    "total_trades": 3,
-    "flagged_trades": 3,
-    "flag_rate": "100.0",
-    "total_risk_score": 9,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "-2.57",
-    "suspicious_patterns": {
-      "unusual_return": 2,
-      "suspicious_timing": 1
-    },
-    "overall_suspicion_level": "low"
-  },
   "N000188": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "41.08",
+    "avg_risk_per_trade": 6,
+    "avg_excess_return": 41.08,
     "suspicious_patterns": {
       "unusual_return": 1,
       "late_disclosure": 1
@@ -1922,10 +1773,10 @@
   "L000562": {
     "total_trades": 3,
     "flagged_trades": 3,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 15,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "-42.61",
+    "avg_risk_per_trade": 5,
+    "avg_excess_return": -42.61,
     "suspicious_patterns": {
       "unusual_return": 2,
       "suspicious_timing": 1,
@@ -1936,10 +1787,10 @@
   "R000614": {
     "total_trades": 8,
     "flagged_trades": 7,
-    "flag_rate": "87.5",
+    "flag_rate": 87.5,
     "total_risk_score": 40,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "-18.82",
+    "avg_risk_per_trade": 5,
+    "avg_excess_return": -18.82,
     "suspicious_patterns": {
       "unusual_return": 7,
       "large_trade": 2,
@@ -1950,10 +1801,10 @@
   "R000305": {
     "total_trades": 28,
     "flagged_trades": 26,
-    "flag_rate": "92.9",
+    "flag_rate": 92.9,
     "total_risk_score": 124,
-    "avg_risk_per_trade": "4.43",
-    "avg_excess_return": "-12.13",
+    "avg_risk_per_trade": 4.43,
+    "avg_excess_return": -12.13,
     "suspicious_patterns": {
       "unusual_return": 23,
       "suspicious_timing": 15,
@@ -1966,39 +1817,23 @@
   "R000395": {
     "total_trades": 3,
     "flagged_trades": 2,
-    "flag_rate": "66.7",
+    "flag_rate": 66.7,
     "total_risk_score": 9,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "11.78",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": 11.78,
     "suspicious_patterns": {
       "unusual_return": 2,
       "suspicious_timing": 1
     },
     "overall_suspicion_level": "low"
   },
-  "L000564": {
-    "total_trades": 20,
-    "flagged_trades": 18,
-    "flag_rate": "90.0",
-    "total_risk_score": 103,
-    "avg_risk_per_trade": "5.15",
-    "avg_excess_return": "33.34",
-    "suspicious_patterns": {
-      "unusual_return": 15,
-      "suspicious_timing": 8,
-      "late_disclosure": 2,
-      "rapid_trading": 7,
-      "large_trade": 6
-    },
-    "overall_suspicion_level": "high"
-  },
   "M001199": {
     "total_trades": 87,
     "flagged_trades": 85,
-    "flag_rate": "97.7",
+    "flag_rate": 97.7,
     "total_risk_score": 524,
-    "avg_risk_per_trade": "6.02",
-    "avg_excess_return": "-108.46",
+    "avg_risk_per_trade": 6.02,
+    "avg_excess_return": -108.46,
     "suspicious_patterns": {
       "unusual_return": 82,
       "rapid_trading": 34,
@@ -2011,10 +1846,10 @@
   "S001198": {
     "total_trades": 118,
     "flagged_trades": 104,
-    "flag_rate": "88.1",
+    "flag_rate": 88.1,
     "total_risk_score": 460,
-    "avg_risk_per_trade": "3.90",
-    "avg_excess_return": "30.84",
+    "avg_risk_per_trade": 3.9,
+    "avg_excess_return": 30.84,
     "suspicious_patterns": {
       "unusual_return": 96,
       "large_trade": 8,
@@ -2027,10 +1862,10 @@
   "M001213": {
     "total_trades": 149,
     "flagged_trades": 149,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 976,
-    "avg_risk_per_trade": "6.55",
-    "avg_excess_return": "29.16",
+    "avg_risk_per_trade": 6.55,
+    "avg_excess_return": 29.16,
     "suspicious_patterns": {
       "unusual_return": 122,
       "rapid_trading": 112,
@@ -2040,28 +1875,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "G000577": {
-    "total_trades": 13,
-    "flagged_trades": 12,
-    "flag_rate": "92.3",
-    "total_risk_score": 56,
-    "avg_risk_per_trade": "4.31",
-    "avg_excess_return": "-44.52",
-    "suspicious_patterns": {
-      "unusual_return": 12,
-      "suspicious_timing": 5,
-      "rapid_trading": 2,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "high"
-  },
   "S001217": {
     "total_trades": 6,
     "flagged_trades": 6,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 36,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-72.18",
+    "avg_risk_per_trade": 6,
+    "avg_excess_return": -72.18,
     "suspicious_patterns": {
       "unusual_return": 3,
       "rapid_trading": 6,
@@ -2073,10 +1893,10 @@
   "C001114": {
     "total_trades": 286,
     "flagged_trades": 271,
-    "flag_rate": "94.8",
+    "flag_rate": 94.8,
     "total_risk_score": 1224,
-    "avg_risk_per_trade": "4.28",
-    "avg_excess_return": "-6.16",
+    "avg_risk_per_trade": 4.28,
+    "avg_excess_return": -6.16,
     "suspicious_patterns": {
       "unusual_return": 255,
       "suspicious_timing": 137,
@@ -2086,28 +1906,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "T000483": {
-    "total_trades": 5,
-    "flagged_trades": 5,
-    "flag_rate": "100.0",
-    "total_risk_score": 44,
-    "avg_risk_per_trade": "8.80",
-    "avg_excess_return": "26.03",
-    "suspicious_patterns": {
-      "unusual_return": 5,
-      "large_trade": 2,
-      "suspicious_timing": 4,
-      "late_disclosure": 5
-    },
-    "overall_suspicion_level": "medium"
-  },
   "S001211": {
     "total_trades": 187,
     "flagged_trades": 183,
-    "flag_rate": "97.9",
+    "flag_rate": 97.9,
     "total_risk_score": 938,
-    "avg_risk_per_trade": "5.02",
-    "avg_excess_return": "-0.74",
+    "avg_risk_per_trade": 5.02,
+    "avg_excess_return": -0.74,
     "suspicious_patterns": {
       "unusual_return": 171,
       "suspicious_timing": 88,
@@ -2115,26 +1920,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "V000137": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 5,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "80.69",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "large_trade": 1
-    },
-    "overall_suspicion_level": "low"
-  },
   "W000804": {
     "total_trades": 225,
     "flagged_trades": 206,
-    "flag_rate": "91.6",
+    "flag_rate": 91.6,
     "total_risk_score": 1025,
-    "avg_risk_per_trade": "4.56",
-    "avg_excess_return": "-29.37",
+    "avg_risk_per_trade": 4.56,
+    "avg_excess_return": -29.37,
     "suspicious_patterns": {
       "unusual_return": 192,
       "suspicious_timing": 93,
@@ -2146,10 +1938,10 @@
   "B000740": {
     "total_trades": 4,
     "flagged_trades": 4,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 12,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "8.12",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": 8.12,
     "suspicious_patterns": {
       "late_disclosure": 3,
       "unusual_return": 1
@@ -2159,10 +1951,10 @@
   "R000618": {
     "total_trades": 25,
     "flagged_trades": 25,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 126,
-    "avg_risk_per_trade": "5.04",
-    "avg_excess_return": "-32.43",
+    "avg_risk_per_trade": 5.04,
+    "avg_excess_return": -32.43,
     "suspicious_patterns": {
       "unusual_return": 22,
       "large_trade": 25
@@ -2172,10 +1964,10 @@
   "F000462": {
     "total_trades": 1535,
     "flagged_trades": 1487,
-    "flag_rate": "96.9",
+    "flag_rate": 96.9,
     "total_risk_score": 8277,
-    "avg_risk_per_trade": "5.39",
-    "avg_excess_return": "-49.83",
+    "avg_risk_per_trade": 5.39,
+    "avg_excess_return": -49.83,
     "suspicious_patterns": {
       "unusual_return": 1392,
       "suspicious_timing": 757,
@@ -2184,27 +1976,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "D000615": {
-    "total_trades": 2,
-    "flagged_trades": 2,
-    "flag_rate": "100.0",
-    "total_risk_score": 18,
-    "avg_risk_per_trade": "9.00",
-    "avg_excess_return": "-48.92",
-    "suspicious_patterns": {
-      "unusual_return": 2,
-      "suspicious_timing": 2,
-      "late_disclosure": 2
-    },
-    "overall_suspicion_level": "low"
-  },
   "M001196": {
     "total_trades": 11,
     "flagged_trades": 11,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 71,
-    "avg_risk_per_trade": "6.45",
-    "avg_excess_return": "-4.34",
+    "avg_risk_per_trade": 6.45,
+    "avg_excess_return": -4.34,
     "suspicious_patterns": {
       "large_trade": 4,
       "unusual_return": 8,
@@ -2216,10 +1994,10 @@
   "W000805": {
     "total_trades": 9,
     "flagged_trades": 9,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 63,
-    "avg_risk_per_trade": "7.00",
-    "avg_excess_return": "60.56",
+    "avg_risk_per_trade": 7,
+    "avg_excess_return": 60.56,
     "suspicious_patterns": {
       "unusual_return": 9,
       "large_trade": 9,
@@ -2231,10 +2009,10 @@
   "J000295": {
     "total_trades": 145,
     "flagged_trades": 145,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 1009,
-    "avg_risk_per_trade": "6.96",
-    "avg_excess_return": "-33.15",
+    "avg_risk_per_trade": 6.96,
+    "avg_excess_return": -33.15,
     "suspicious_patterns": {
       "unusual_return": 111,
       "suspicious_timing": 54,
@@ -2244,29 +2022,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "G000061": {
-    "total_trades": 51,
-    "flagged_trades": 49,
-    "flag_rate": "96.1",
-    "total_risk_score": 249,
-    "avg_risk_per_trade": "4.88",
-    "avg_excess_return": "25.17",
-    "suspicious_patterns": {
-      "large_trade": 4,
-      "rapid_trading": 12,
-      "unusual_return": 44,
-      "late_disclosure": 6,
-      "suspicious_timing": 24
-    },
-    "overall_suspicion_level": "high"
-  },
   "L000397": {
     "total_trades": 414,
     "flagged_trades": 392,
-    "flag_rate": "94.7",
+    "flag_rate": 94.7,
     "total_risk_score": 2031,
-    "avg_risk_per_trade": "4.91",
-    "avg_excess_return": "-34.73",
+    "avg_risk_per_trade": 4.91,
+    "avg_excess_return": -34.73,
     "suspicious_patterns": {
       "unusual_return": 378,
       "suspicious_timing": 189,
@@ -2279,10 +2041,10 @@
   "S001205": {
     "total_trades": 8,
     "flagged_trades": 8,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 51,
-    "avg_risk_per_trade": "6.38",
-    "avg_excess_return": "-26.24",
+    "avg_risk_per_trade": 6.38,
+    "avg_excess_return": -26.24,
     "suspicious_patterns": {
       "unusual_return": 7,
       "suspicious_timing": 4,
@@ -2293,10 +2055,10 @@
   "M001227": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 8,
-    "avg_risk_per_trade": "8.00",
-    "avg_excess_return": "-42.75",
+    "avg_risk_per_trade": 8,
+    "avg_excess_return": -42.75,
     "suspicious_patterns": {
       "unusual_return": 1,
       "large_trade": 1,
@@ -2307,10 +2069,10 @@
   "D000622": {
     "total_trades": 53,
     "flagged_trades": 52,
-    "flag_rate": "98.1",
+    "flag_rate": 98.1,
     "total_risk_score": 310,
-    "avg_risk_per_trade": "5.85",
-    "avg_excess_return": "-113.11",
+    "avg_risk_per_trade": 5.85,
+    "avg_excess_return": -113.11,
     "suspicious_patterns": {
       "unusual_return": 50,
       "late_disclosure": 40,
@@ -2322,10 +2084,10 @@
   "C001120": {
     "total_trades": 33,
     "flagged_trades": 31,
-    "flag_rate": "93.9",
+    "flag_rate": 93.9,
     "total_risk_score": 182,
-    "avg_risk_per_trade": "5.52",
-    "avg_excess_return": "17.99",
+    "avg_risk_per_trade": 5.52,
+    "avg_excess_return": 17.99,
     "suspicious_patterns": {
       "late_disclosure": 16,
       "unusual_return": 28,
@@ -2337,10 +2099,10 @@
   "S001148": {
     "total_trades": 139,
     "flagged_trades": 111,
-    "flag_rate": "79.9",
+    "flag_rate": 79.9,
     "total_risk_score": 545,
-    "avg_risk_per_trade": "3.92",
-    "avg_excess_return": "-51.73",
+    "avg_risk_per_trade": 3.92,
+    "avg_excess_return": -51.73,
     "suspicious_patterns": {
       "unusual_return": 69,
       "late_disclosure": 69,
@@ -2352,10 +2114,10 @@
   "H001086": {
     "total_trades": 1008,
     "flagged_trades": 999,
-    "flag_rate": "99.1",
+    "flag_rate": 99.1,
     "total_risk_score": 6434,
-    "avg_risk_per_trade": "6.38",
-    "avg_excess_return": "-1.87",
+    "avg_risk_per_trade": 6.38,
+    "avg_excess_return": -1.87,
     "suspicious_patterns": {
       "unusual_return": 825,
       "rapid_trading": 867,
@@ -2368,10 +2130,10 @@
   "B001316": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-74.96",
+    "avg_risk_per_trade": 6,
+    "avg_excess_return": -74.96,
     "suspicious_patterns": {
       "unusual_return": 1,
       "suspicious_timing": 1
@@ -2381,10 +2143,10 @@
   "R000608": {
     "total_trades": 26,
     "flagged_trades": 22,
-    "flag_rate": "84.6",
+    "flag_rate": 84.6,
     "total_risk_score": 96,
-    "avg_risk_per_trade": "3.69",
-    "avg_excess_return": "52.99",
+    "avg_risk_per_trade": 3.69,
+    "avg_excess_return": 52.99,
     "suspicious_patterns": {
       "unusual_return": 22,
       "rapid_trading": 7,
@@ -2395,185 +2157,45 @@
   "C000127": {
     "total_trades": 6,
     "flagged_trades": 5,
-    "flag_rate": "83.3",
+    "flag_rate": 83.3,
     "total_risk_score": 23,
-    "avg_risk_per_trade": "3.83",
-    "avg_excess_return": "-154.06",
+    "avg_risk_per_trade": 3.83,
+    "avg_excess_return": -154.06,
     "suspicious_patterns": {
       "unusual_return": 5,
       "rapid_trading": 4
     },
     "overall_suspicion_level": "medium"
   },
-  "A000378": {
-    "total_trades": 203,
-    "flagged_trades": 199,
-    "flag_rate": "98.0",
-    "total_risk_score": 1490,
-    "avg_risk_per_trade": "7.34",
-    "avg_excess_return": "-39.30",
-    "suspicious_patterns": {
-      "unusual_return": 187,
-      "rapid_trading": 156,
-      "suspicious_timing": 76,
-      "late_disclosure": 153
-    },
-    "overall_suspicion_level": "high"
-  },
-  "S001180": {
-    "total_trades": 120,
-    "flagged_trades": 109,
-    "flag_rate": "90.8",
-    "total_risk_score": 560,
-    "avg_risk_per_trade": "4.67",
-    "avg_excess_return": "-16.75",
-    "suspicious_patterns": {
-      "unusual_return": 86,
-      "large_trade": 47,
-      "suspicious_timing": 33,
-      "late_disclosure": 17,
-      "rapid_trading": 23
-    },
-    "overall_suspicion_level": "high"
-  },
-  "G000563": {
-    "total_trades": 174,
-    "flagged_trades": 169,
-    "flag_rate": "97.1",
-    "total_risk_score": 765,
-    "avg_risk_per_trade": "4.40",
-    "avg_excess_return": "-30.31",
-    "suspicious_patterns": {
-      "unusual_return": 164,
-      "suspicious_timing": 83,
-      "rapid_trading": 12,
-      "large_trade": 3
-    },
-    "overall_suspicion_level": "high"
-  },
-  "L000559": {
-    "total_trades": 439,
-    "flagged_trades": 437,
-    "flag_rate": "99.5",
-    "total_risk_score": 3040,
-    "avg_risk_per_trade": "6.92",
-    "avg_excess_return": "17.50",
-    "suspicious_patterns": {
-      "unusual_return": 426,
-      "rapid_trading": 281,
-      "suspicious_timing": 223,
-      "late_disclosure": 155,
-      "large_trade": 89
-    },
-    "overall_suspicion_level": "high"
-  },
-  "L000579": {
-    "total_trades": 1279,
-    "flagged_trades": 1262,
-    "flag_rate": "98.7",
-    "total_risk_score": 7512,
-    "avg_risk_per_trade": "5.87",
-    "avg_excess_return": "-40.33",
-    "suspicious_patterns": {
-      "unusual_return": 1185,
-      "rapid_trading": 928,
-      "suspicious_timing": 699,
-      "late_disclosure": 26
-    },
-    "overall_suspicion_level": "high"
-  },
-  "J000020": {
-    "total_trades": 243,
-    "flagged_trades": 243,
-    "flag_rate": "100.0",
-    "total_risk_score": 1521,
-    "avg_risk_per_trade": "6.26",
-    "avg_excess_return": "-40.33",
-    "suspicious_patterns": {
-      "unusual_return": 213,
-      "suspicious_timing": 110,
-      "late_disclosure": 243,
-      "rapid_trading": 10,
-      "large_trade": 2
-    },
-    "overall_suspicion_level": "high"
-  },
-  "T000479": {
-    "total_trades": 406,
-    "flagged_trades": 360,
-    "flag_rate": "88.7",
-    "total_risk_score": 2138,
-    "avg_risk_per_trade": "5.27",
-    "avg_excess_return": "-24.41",
-    "suspicious_patterns": {
-      "unusual_return": 336,
-      "large_trade": 14,
-      "suspicious_timing": 250,
-      "late_disclosure": 73,
-      "rapid_trading": 106
-    },
-    "overall_suspicion_level": "high"
-  },
   "S000344": {
     "total_trades": 1,
     "flagged_trades": 0,
-    "flag_rate": "0.0",
+    "flag_rate": 0,
     "total_risk_score": 0,
-    "avg_risk_per_trade": "0.00",
-    "avg_excess_return": "0.00",
+    "avg_risk_per_trade": 0,
+    "avg_excess_return": 0,
     "suspicious_patterns": {},
     "overall_suspicion_level": "low"
-  },
-  "N000192": {
-    "total_trades": 298,
-    "flagged_trades": 297,
-    "flag_rate": "99.7",
-    "total_risk_score": 1973,
-    "avg_risk_per_trade": "6.62",
-    "avg_excess_return": "-58.27",
-    "suspicious_patterns": {
-      "unusual_return": 277,
-      "late_disclosure": 151,
-      "suspicious_timing": 145,
-      "rapid_trading": 175,
-      "large_trade": 22
-    },
-    "overall_suspicion_level": "high"
   },
   "L000585": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 3,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "0.00",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": 0,
     "suspicious_patterns": {
       "late_disclosure": 1
     },
     "overall_suspicion_level": "low"
   },
-  "P000593": {
-    "total_trades": 91,
-    "flagged_trades": 91,
-    "flag_rate": "100.0",
-    "total_risk_score": 607,
-    "avg_risk_per_trade": "6.67",
-    "avg_excess_return": "-3.11",
-    "suspicious_patterns": {
-      "unusual_return": 86,
-      "late_disclosure": 81,
-      "suspicious_timing": 47,
-      "rapid_trading": 6
-    },
-    "overall_suspicion_level": "high"
-  },
   "F000246": {
     "total_trades": 200,
     "flagged_trades": 199,
-    "flag_rate": "99.5",
+    "flag_rate": 99.5,
     "total_risk_score": 1592,
-    "avg_risk_per_trade": "7.96",
-    "avg_excess_return": "-39.65",
+    "avg_risk_per_trade": 7.96,
+    "avg_excess_return": -39.65,
     "suspicious_patterns": {
       "large_trade": 84,
       "late_disclosure": 140,
@@ -2586,10 +2208,10 @@
   "K000009": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 3,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "5.37",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": 5.37,
     "suspicious_patterns": {
       "late_disclosure": 1
     },
@@ -2598,39 +2220,23 @@
   "E000298": {
     "total_trades": 12,
     "flagged_trades": 11,
-    "flag_rate": "91.7",
+    "flag_rate": 91.7,
     "total_risk_score": 48,
-    "avg_risk_per_trade": "4.00",
-    "avg_excess_return": "-36.78",
+    "avg_risk_per_trade": 4,
+    "avg_excess_return": -36.78,
     "suspicious_patterns": {
       "unusual_return": 11,
       "suspicious_timing": 5
     },
     "overall_suspicion_level": "medium"
   },
-  "M001180": {
-    "total_trades": 472,
-    "flagged_trades": 466,
-    "flag_rate": "98.7",
-    "total_risk_score": 2532,
-    "avg_risk_per_trade": "5.36",
-    "avg_excess_return": "-57.79",
-    "suspicious_patterns": {
-      "unusual_return": 447,
-      "suspicious_timing": 223,
-      "large_trade": 6,
-      "rapid_trading": 201,
-      "late_disclosure": 53
-    },
-    "overall_suspicion_level": "high"
-  },
   "S001190": {
     "total_trades": 134,
     "flagged_trades": 133,
-    "flag_rate": "99.3",
+    "flag_rate": 99.3,
     "total_risk_score": 1085,
-    "avg_risk_per_trade": "8.10",
-    "avg_excess_return": "-40.53",
+    "avg_risk_per_trade": 8.1,
+    "avg_excess_return": -40.53,
     "suspicious_patterns": {
       "unusual_return": 128,
       "large_trade": 123,
@@ -2643,10 +2249,10 @@
   "T000476": {
     "total_trades": 98,
     "flagged_trades": 93,
-    "flag_rate": "94.9",
+    "flag_rate": 94.9,
     "total_risk_score": 276,
-    "avg_risk_per_trade": "2.82",
-    "avg_excess_return": "-75.49",
+    "avg_risk_per_trade": 2.82,
+    "avg_excess_return": -75.49,
     "suspicious_patterns": {
       "unusual_return": 91,
       "late_disclosure": 2,
@@ -2657,10 +2263,10 @@
   "B001291": {
     "total_trades": 7,
     "flagged_trades": 7,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 43,
-    "avg_risk_per_trade": "6.14",
-    "avg_excess_return": "346.83",
+    "avg_risk_per_trade": 6.14,
+    "avg_excess_return": 346.83,
     "suspicious_patterns": {
       "unusual_return": 7,
       "suspicious_timing": 3,
@@ -2668,100 +2274,26 @@
     },
     "overall_suspicion_level": "medium"
   },
-  "B001274": {
-    "total_trades": 102,
-    "flagged_trades": 101,
-    "flag_rate": "99.0",
-    "total_risk_score": 514,
-    "avg_risk_per_trade": "5.04",
-    "avg_excess_return": "-102.57",
-    "suspicious_patterns": {
-      "unusual_return": 96,
-      "suspicious_timing": 46,
-      "late_disclosure": 26,
-      "rapid_trading": 13
-    },
-    "overall_suspicion_level": "high"
-  },
-  "G000588": {
-    "total_trades": 10,
-    "flagged_trades": 10,
-    "flag_rate": "100.0",
-    "total_risk_score": 51,
-    "avg_risk_per_trade": "5.10",
-    "avg_excess_return": "-21.61",
-    "suspicious_patterns": {
-      "unusual_return": 10,
-      "large_trade": 5,
-      "suspicious_timing": 3
-    },
-    "overall_suspicion_level": "high"
-  },
-  "M001186": {
-    "total_trades": 276,
-    "flagged_trades": 230,
-    "flag_rate": "83.3",
-    "total_risk_score": 1195,
-    "avg_risk_per_trade": "4.33",
-    "avg_excess_return": "-14.38",
-    "suspicious_patterns": {
-      "large_trade": 10,
-      "unusual_return": 217,
-      "suspicious_timing": 149,
-      "rapid_trading": 23,
-      "late_disclosure": 22
-    },
-    "overall_suspicion_level": "high"
-  },
   "F000463": {
     "total_trades": 4,
     "flagged_trades": 4,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 15,
-    "avg_risk_per_trade": "3.75",
-    "avg_excess_return": "32.07",
+    "avg_risk_per_trade": 3.75,
+    "avg_excess_return": 32.07,
     "suspicious_patterns": {
       "unusual_return": 4,
       "large_trade": 2
     },
     "overall_suspicion_level": "low"
   },
-  "H001074": {
-    "total_trades": 18,
-    "flagged_trades": 18,
-    "flag_rate": "100.0",
-    "total_risk_score": 115,
-    "avg_risk_per_trade": "6.39",
-    "avg_excess_return": "28.44",
-    "suspicious_patterns": {
-      "unusual_return": 14,
-      "large_trade": 8,
-      "rapid_trading": 17,
-      "suspicious_timing": 7
-    },
-    "overall_suspicion_level": "high"
-  },
-  "B000575": {
-    "total_trades": 6,
-    "flagged_trades": 6,
-    "flag_rate": "100.0",
-    "total_risk_score": 29,
-    "avg_risk_per_trade": "4.83",
-    "avg_excess_return": "-125.45",
-    "suspicious_patterns": {
-      "unusual_return": 6,
-      "large_trade": 3,
-      "late_disclosure": 2
-    },
-    "overall_suspicion_level": "medium"
-  },
   "T000250": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 3,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "-96.33",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": -96.33,
     "suspicious_patterns": {
       "unusual_return": 1
     },
@@ -2770,10 +2302,10 @@
   "K000392": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 5,
-    "avg_risk_per_trade": "2.50",
-    "avg_excess_return": "-31.02",
+    "avg_risk_per_trade": 2.5,
+    "avg_excess_return": -31.02,
     "suspicious_patterns": {
       "unusual_return": 2
     },
@@ -2782,10 +2314,10 @@
   "C001069": {
     "total_trades": 116,
     "flagged_trades": 110,
-    "flag_rate": "94.8",
+    "flag_rate": 94.8,
     "total_risk_score": 603,
-    "avg_risk_per_trade": "5.20",
-    "avg_excess_return": "-36.39",
+    "avg_risk_per_trade": 5.2,
+    "avg_excess_return": -36.39,
     "suspicious_patterns": {
       "unusual_return": 101,
       "suspicious_timing": 49,
@@ -2796,10 +2328,10 @@
   "R000609": {
     "total_trades": 330,
     "flagged_trades": 299,
-    "flag_rate": "90.6",
+    "flag_rate": 90.6,
     "total_risk_score": 1654,
-    "avg_risk_per_trade": "5.01",
-    "avg_excess_return": "-37.90",
+    "avg_risk_per_trade": 5.01,
+    "avg_excess_return": -37.9,
     "suspicious_patterns": {
       "unusual_return": 242,
       "suspicious_timing": 109,
@@ -2811,10 +2343,10 @@
   "S001216": {
     "total_trades": 41,
     "flagged_trades": 38,
-    "flag_rate": "92.7",
+    "flag_rate": 92.7,
     "total_risk_score": 240,
-    "avg_risk_per_trade": "5.85",
-    "avg_excess_return": "69.93",
+    "avg_risk_per_trade": 5.85,
+    "avg_excess_return": 69.93,
     "suspicious_patterns": {
       "unusual_return": 37,
       "large_trade": 20,
@@ -2824,27 +2356,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "P000523": {
-    "total_trades": 89,
-    "flagged_trades": 86,
-    "flag_rate": "96.6",
-    "total_risk_score": 395,
-    "avg_risk_per_trade": "4.44",
-    "avg_excess_return": "-45.54",
-    "suspicious_patterns": {
-      "unusual_return": 83,
-      "suspicious_timing": 27,
-      "late_disclosure": 26
-    },
-    "overall_suspicion_level": "high"
-  },
   "F000469": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 3,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "0.00",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": 0,
     "suspicious_patterns": {
       "late_disclosure": 1
     },
@@ -2853,10 +2371,10 @@
   "B001292": {
     "total_trades": 659,
     "flagged_trades": 594,
-    "flag_rate": "90.1",
+    "flag_rate": 90.1,
     "total_risk_score": 2925,
-    "avg_risk_per_trade": "4.44",
-    "avg_excess_return": "-1.18",
+    "avg_risk_per_trade": 4.44,
+    "avg_excess_return": -1.18,
     "suspicious_patterns": {
       "unusual_return": 547,
       "suspicious_timing": 283,
@@ -2869,10 +2387,10 @@
   "G000559": {
     "total_trades": 6,
     "flagged_trades": 6,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 24,
-    "avg_risk_per_trade": "4.00",
-    "avg_excess_return": "6.98",
+    "avg_risk_per_trade": 4,
+    "avg_excess_return": 6.98,
     "suspicious_patterns": {
       "unusual_return": 4,
       "suspicious_timing": 2,
@@ -2883,10 +2401,10 @@
   "S000185": {
     "total_trades": 23,
     "flagged_trades": 23,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 135,
-    "avg_risk_per_trade": "5.87",
-    "avg_excess_return": "-64.72",
+    "avg_risk_per_trade": 5.87,
+    "avg_excess_return": -64.72,
     "suspicious_patterns": {
       "unusual_return": 19,
       "suspicious_timing": 18,
@@ -2898,64 +2416,22 @@
   "T000482": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 3,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "376.04",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": 376.04,
     "suspicious_patterns": {
       "unusual_return": 1
     },
     "overall_suspicion_level": "low"
   },
-  "P000096": {
-    "total_trades": 3,
-    "flagged_trades": 3,
-    "flag_rate": "100.0",
-    "total_risk_score": 18,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "102.84",
-    "suspicious_patterns": {
-      "unusual_return": 3,
-      "late_disclosure": 2,
-      "suspicious_timing": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "M001200": {
-    "total_trades": 6,
-    "flagged_trades": 6,
-    "flag_rate": "100.0",
-    "total_risk_score": 21,
-    "avg_risk_per_trade": "3.50",
-    "avg_excess_return": "-39.15",
-    "suspicious_patterns": {
-      "unusual_return": 6,
-      "suspicious_timing": 1
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "G000551": {
-    "total_trades": 168,
-    "flagged_trades": 164,
-    "flag_rate": "97.6",
-    "total_risk_score": 795,
-    "avg_risk_per_trade": "4.73",
-    "avg_excess_return": "-62.46",
-    "suspicious_patterns": {
-      "unusual_return": 161,
-      "suspicious_timing": 85,
-      "late_disclosure": 20,
-      "rapid_trading": 10
-    },
-    "overall_suspicion_level": "high"
-  },
   "W000800": {
     "total_trades": 102,
     "flagged_trades": 89,
-    "flag_rate": "87.3",
+    "flag_rate": 87.3,
     "total_risk_score": 457,
-    "avg_risk_per_trade": "4.48",
-    "avg_excess_return": "-34.51",
+    "avg_risk_per_trade": 4.48,
+    "avg_excess_return": -34.51,
     "suspicious_patterns": {
       "unusual_return": 85,
       "suspicious_timing": 48,
@@ -2965,95 +2441,23 @@
     },
     "overall_suspicion_level": "high"
   },
-  "B001275": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 3,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "-54.57",
-    "suspicious_patterns": {
-      "unusual_return": 1
-    },
-    "overall_suspicion_level": "low"
-  },
   "M001212": {
     "total_trades": 1,
     "flagged_trades": 0,
-    "flag_rate": "0.0",
+    "flag_rate": 0,
     "total_risk_score": 0,
-    "avg_risk_per_trade": "0.00",
-    "avg_excess_return": "0.00",
+    "avg_risk_per_trade": 0,
+    "avg_excess_return": 0,
     "suspicious_patterns": {},
     "overall_suspicion_level": "low"
-  },
-  "Y000062": {
-    "total_trades": 360,
-    "flagged_trades": 357,
-    "flag_rate": "99.2",
-    "total_risk_score": 2295,
-    "avg_risk_per_trade": "6.38",
-    "avg_excess_return": "-35.37",
-    "suspicious_patterns": {
-      "unusual_return": 330,
-      "suspicious_timing": 186,
-      "late_disclosure": 291,
-      "rapid_trading": 20,
-      "large_trade": 13
-    },
-    "overall_suspicion_level": "high"
-  },
-  "T000461": {
-    "total_trades": 150,
-    "flagged_trades": 135,
-    "flag_rate": "90.0",
-    "total_risk_score": 585,
-    "avg_risk_per_trade": "3.90",
-    "avg_excess_return": "-99.21",
-    "suspicious_patterns": {
-      "unusual_return": 116,
-      "late_disclosure": 49,
-      "rapid_trading": 44,
-      "suspicious_timing": 7,
-      "large_trade": 4
-    },
-    "overall_suspicion_level": "high"
-  },
-  "C001104": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-23.46",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "suspicious_timing": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "B001297": {
-    "total_trades": 77,
-    "flagged_trades": 72,
-    "flag_rate": "93.5",
-    "total_risk_score": 374,
-    "avg_risk_per_trade": "4.86",
-    "avg_excess_return": "-84.61",
-    "suspicious_patterns": {
-      "unusual_return": 66,
-      "suspicious_timing": 32,
-      "late_disclosure": 39,
-      "rapid_trading": 2
-    },
-    "overall_suspicion_level": "high"
   },
   "L000571": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 10,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "-23.00",
+    "avg_risk_per_trade": 5,
+    "avg_excess_return": -23,
     "suspicious_patterns": {
       "unusual_return": 1,
       "late_disclosure": 2,
@@ -3064,10 +2468,10 @@
   "P000034": {
     "total_trades": 12,
     "flagged_trades": 11,
-    "flag_rate": "91.7",
+    "flag_rate": 91.7,
     "total_risk_score": 58,
-    "avg_risk_per_trade": "4.83",
-    "avg_excess_return": "93.97",
+    "avg_risk_per_trade": 4.83,
+    "avg_excess_return": 93.97,
     "suspicious_patterns": {
       "unusual_return": 11,
       "rapid_trading": 4,
@@ -3075,29 +2479,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "P000616": {
-    "total_trades": 842,
-    "flagged_trades": 823,
-    "flag_rate": "97.7",
-    "total_risk_score": 4881,
-    "avg_risk_per_trade": "5.80",
-    "avg_excess_return": "-13.58",
-    "suspicious_patterns": {
-      "unusual_return": 767,
-      "late_disclosure": 512,
-      "suspicious_timing": 404,
-      "rapid_trading": 184,
-      "large_trade": 1
-    },
-    "overall_suspicion_level": "high"
-  },
   "J000305": {
     "total_trades": 52,
     "flagged_trades": 52,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 390,
-    "avg_risk_per_trade": "7.50",
-    "avg_excess_return": "-18.07",
+    "avg_risk_per_trade": 7.5,
+    "avg_excess_return": -18.07,
     "suspicious_patterns": {
       "unusual_return": 48,
       "large_trade": 17,
@@ -3106,29 +2494,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "M001203": {
-    "total_trades": 327,
-    "flagged_trades": 327,
-    "flag_rate": "100.0",
-    "total_risk_score": 2386,
-    "avg_risk_per_trade": "7.30",
-    "avg_excess_return": "-51.76",
-    "suspicious_patterns": {
-      "unusual_return": 287,
-      "suspicious_timing": 148,
-      "late_disclosure": 310,
-      "rapid_trading": 100,
-      "large_trade": 5
-    },
-    "overall_suspicion_level": "high"
-  },
   "H001091": {
     "total_trades": 13,
     "flagged_trades": 12,
-    "flag_rate": "92.3",
+    "flag_rate": 92.3,
     "total_risk_score": 61,
-    "avg_risk_per_trade": "4.69",
-    "avg_excess_return": "-51.46",
+    "avg_risk_per_trade": 4.69,
+    "avg_excess_return": -51.46,
     "suspicious_patterns": {
       "unusual_return": 10,
       "suspicious_timing": 8,
@@ -3137,41 +2509,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "L000591": {
-    "total_trades": 4,
-    "flagged_trades": 3,
-    "flag_rate": "75.0",
-    "total_risk_score": 18,
-    "avg_risk_per_trade": "4.50",
-    "avg_excess_return": "-73.52",
-    "suspicious_patterns": {
-      "unusual_return": 3,
-      "large_trade": 2,
-      "suspicious_timing": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "G000579": {
-    "total_trades": 38,
-    "flagged_trades": 37,
-    "flag_rate": "97.4",
-    "total_risk_score": 200,
-    "avg_risk_per_trade": "5.26",
-    "avg_excess_return": "-29.31",
-    "suspicious_patterns": {
-      "unusual_return": 36,
-      "suspicious_timing": 28,
-      "late_disclosure": 5
-    },
-    "overall_suspicion_level": "high"
-  },
   "M001210": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 8,
-    "avg_risk_per_trade": "8.00",
-    "avg_excess_return": "-106.42",
+    "avg_risk_per_trade": 8,
+    "avg_excess_return": -106.42,
     "suspicious_patterns": {
       "unusual_return": 1,
       "large_trade": 1,
@@ -3182,10 +2526,10 @@
   "L000273": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 9,
-    "avg_risk_per_trade": "9.00",
-    "avg_excess_return": "-91.39",
+    "avg_risk_per_trade": 9,
+    "avg_excess_return": -91.39,
     "suspicious_patterns": {
       "unusual_return": 1,
       "suspicious_timing": 1,
@@ -3193,61 +2537,13 @@
     },
     "overall_suspicion_level": "low"
   },
-  "I000024": {
-    "total_trades": 217,
-    "flagged_trades": 206,
-    "flag_rate": "94.9",
-    "total_risk_score": 887,
-    "avg_risk_per_trade": "4.09",
-    "avg_excess_return": "-59.42",
-    "suspicious_patterns": {
-      "unusual_return": 195,
-      "large_trade": 111,
-      "late_disclosure": 15,
-      "suspicious_timing": 15,
-      "rapid_trading": 2
-    },
-    "overall_suspicion_level": "high"
-  },
-  "R000307": {
-    "total_trades": 424,
-    "flagged_trades": 416,
-    "flag_rate": "98.1",
-    "total_risk_score": 2133,
-    "avg_risk_per_trade": "5.03",
-    "avg_excess_return": "160.30",
-    "suspicious_patterns": {
-      "unusual_return": 395,
-      "rapid_trading": 193,
-      "suspicious_timing": 103,
-      "large_trade": 55,
-      "late_disclosure": 64
-    },
-    "overall_suspicion_level": "high"
-  },
-  "G000584": {
-    "total_trades": 1331,
-    "flagged_trades": 1118,
-    "flag_rate": "84.0",
-    "total_risk_score": 6203,
-    "avg_risk_per_trade": "4.66",
-    "avg_excess_return": "-31.15",
-    "suspicious_patterns": {
-      "large_trade": 560,
-      "suspicious_timing": 402,
-      "unusual_return": 812,
-      "rapid_trading": 168,
-      "late_disclosure": 423
-    },
-    "overall_suspicion_level": "high"
-  },
   "L000557": {
     "total_trades": 29,
     "flagged_trades": 29,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 204,
-    "avg_risk_per_trade": "7.03",
-    "avg_excess_return": "-40.28",
+    "avg_risk_per_trade": 7.03,
+    "avg_excess_return": -40.28,
     "suspicious_patterns": {
       "unusual_return": 28,
       "suspicious_timing": 22,
@@ -3255,29 +2551,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "C001062": {
-    "total_trades": 1078,
-    "flagged_trades": 1024,
-    "flag_rate": "95.0",
-    "total_risk_score": 5801,
-    "avg_risk_per_trade": "5.38",
-    "avg_excess_return": "-42.81",
-    "suspicious_patterns": {
-      "unusual_return": 979,
-      "large_trade": 56,
-      "late_disclosure": 283,
-      "rapid_trading": 328,
-      "suspicious_timing": 488
-    },
-    "overall_suspicion_level": "high"
-  },
   "J000294": {
     "total_trades": 10,
     "flagged_trades": 9,
-    "flag_rate": "90.0",
+    "flag_rate": 90,
     "total_risk_score": 43,
-    "avg_risk_per_trade": "4.30",
-    "avg_excess_return": "-84.68",
+    "avg_risk_per_trade": 4.3,
+    "avg_excess_return": -84.68,
     "suspicious_patterns": {
       "unusual_return": 9,
       "suspicious_timing": 4,
@@ -3288,10 +2568,10 @@
   "M001206": {
     "total_trades": 19,
     "flagged_trades": 16,
-    "flag_rate": "84.2",
+    "flag_rate": 84.2,
     "total_risk_score": 80,
-    "avg_risk_per_trade": "4.21",
-    "avg_excess_return": "-12.40",
+    "avg_risk_per_trade": 4.21,
+    "avg_excess_return": -12.4,
     "suspicious_patterns": {
       "unusual_return": 15,
       "suspicious_timing": 10,
@@ -3299,27 +2579,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "M001156": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 9,
-    "avg_risk_per_trade": "9.00",
-    "avg_excess_return": "-112.68",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "suspicious_timing": 1,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
   "C001075": {
     "total_trades": 170,
     "flagged_trades": 166,
-    "flag_rate": "97.6",
+    "flag_rate": 97.6,
     "total_risk_score": 723,
-    "avg_risk_per_trade": "4.25",
-    "avg_excess_return": "-55.58",
+    "avg_risk_per_trade": 4.25,
+    "avg_excess_return": -55.58,
     "suspicious_patterns": {
       "unusual_return": 164,
       "late_disclosure": 79,
@@ -3327,41 +2593,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "D000598": {
-    "total_trades": 67,
-    "flagged_trades": 67,
-    "flag_rate": "100.0",
-    "total_risk_score": 334,
-    "avg_risk_per_trade": "4.99",
-    "avg_excess_return": "-26.95",
-    "suspicious_patterns": {
-      "unusual_return": 64,
-      "late_disclosure": 33,
-      "suspicious_timing": 25,
-      "large_trade": 1
-    },
-    "overall_suspicion_level": "high"
-  },
-  "V000108": {
-    "total_trades": 8,
-    "flagged_trades": 8,
-    "flag_rate": "100.0",
-    "total_risk_score": 39,
-    "avg_risk_per_trade": "4.88",
-    "avg_excess_return": "-73.21",
-    "suspicious_patterns": {
-      "unusual_return": 8,
-      "suspicious_timing": 5
-    },
-    "overall_suspicion_level": "medium"
-  },
   "S001199": {
     "total_trades": 23,
     "flagged_trades": 23,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 147,
-    "avg_risk_per_trade": "6.39",
-    "avg_excess_return": "105.15",
+    "avg_risk_per_trade": 6.39,
+    "avg_excess_return": 105.15,
     "suspicious_patterns": {
       "unusual_return": 23,
       "late_disclosure": 17,
@@ -3370,29 +2608,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "L000594": {
-    "total_trades": 276,
-    "flagged_trades": 275,
-    "flag_rate": "99.6",
-    "total_risk_score": 1772,
-    "avg_risk_per_trade": "6.42",
-    "avg_excess_return": "18.06",
-    "suspicious_patterns": {
-      "unusual_return": 264,
-      "large_trade": 150,
-      "rapid_trading": 151,
-      "suspicious_timing": 47,
-      "late_disclosure": 72
-    },
-    "overall_suspicion_level": "high"
-  },
   "D000626": {
     "total_trades": 7,
     "flagged_trades": 7,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 51,
-    "avg_risk_per_trade": "7.29",
-    "avg_excess_return": "-70.97",
+    "avg_risk_per_trade": 7.29,
+    "avg_excess_return": -70.97,
     "suspicious_patterns": {
       "unusual_return": 7,
       "late_disclosure": 7,
@@ -3404,10 +2626,10 @@
   "M001198": {
     "total_trades": 151,
     "flagged_trades": 151,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 1120,
-    "avg_risk_per_trade": "7.42",
-    "avg_excess_return": "188.79",
+    "avg_risk_per_trade": 7.42,
+    "avg_excess_return": 188.79,
     "suspicious_patterns": {
       "unusual_return": 145,
       "suspicious_timing": 70,
@@ -3417,27 +2639,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "H001038": {
-    "total_trades": 3,
-    "flagged_trades": 3,
-    "flag_rate": "100.0",
-    "total_risk_score": 24,
-    "avg_risk_per_trade": "8.00",
-    "avg_excess_return": "529.11",
-    "suspicious_patterns": {
-      "unusual_return": 3,
-      "late_disclosure": 3,
-      "suspicious_timing": 2
-    },
-    "overall_suspicion_level": "medium"
-  },
   "M001163": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-174.66",
+    "avg_risk_per_trade": 6,
+    "avg_excess_return": -174.66,
     "suspicious_patterns": {
       "unusual_return": 1,
       "late_disclosure": 1
@@ -3447,10 +2655,10 @@
   "P000608": {
     "total_trades": 416,
     "flagged_trades": 416,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 3397,
-    "avg_risk_per_trade": "8.17",
-    "avg_excess_return": "-76.77",
+    "avg_risk_per_trade": 8.17,
+    "avg_excess_return": -76.77,
     "suspicious_patterns": {
       "unusual_return": 398,
       "rapid_trading": 410,
@@ -3460,28 +2668,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "K000378": {
-    "total_trades": 46,
-    "flagged_trades": 45,
-    "flag_rate": "97.8",
-    "total_risk_score": 255,
-    "avg_risk_per_trade": "5.54",
-    "avg_excess_return": "10.86",
-    "suspicious_patterns": {
-      "unusual_return": 38,
-      "suspicious_timing": 18,
-      "rapid_trading": 27,
-      "late_disclosure": 15
-    },
-    "overall_suspicion_level": "high"
-  },
   "M001184": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 3,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "173.27",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": 173.27,
     "suspicious_patterns": {
       "unusual_return": 1
     },
@@ -3490,10 +2683,10 @@
   "T000480": {
     "total_trades": 18,
     "flagged_trades": 18,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 119,
-    "avg_risk_per_trade": "6.61",
-    "avg_excess_return": "-39.68",
+    "avg_risk_per_trade": 6.61,
+    "avg_excess_return": -39.68,
     "suspicious_patterns": {
       "unusual_return": 15,
       "suspicious_timing": 11,
@@ -3501,160 +2694,26 @@
     },
     "overall_suspicion_level": "high"
   },
-  "M001185": {
-    "total_trades": 8,
-    "flagged_trades": 8,
-    "flag_rate": "100.0",
-    "total_risk_score": 48,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "30.90",
-    "suspicious_patterns": {
-      "unusual_return": 5,
-      "late_disclosure": 8,
-      "suspicious_timing": 3
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "S001206": {
-    "total_trades": 560,
-    "flagged_trades": 560,
-    "flag_rate": "100.0",
-    "total_risk_score": 3897,
-    "avg_risk_per_trade": "6.96",
-    "avg_excess_return": "-36.37",
-    "suspicious_patterns": {
-      "unusual_return": 451,
-      "large_trade": 5,
-      "suspicious_timing": 265,
-      "rapid_trading": 60,
-      "late_disclosure": 552
-    },
-    "overall_suspicion_level": "high"
-  },
   "W000437": {
     "total_trades": 6,
     "flagged_trades": 4,
-    "flag_rate": "66.7",
+    "flag_rate": 66.7,
     "total_risk_score": 21,
-    "avg_risk_per_trade": "3.50",
-    "avg_excess_return": "-62.26",
+    "avg_risk_per_trade": 3.5,
+    "avg_excess_return": -62.26,
     "suspicious_patterns": {
       "unusual_return": 4,
       "late_disclosure": 3
     },
     "overall_suspicion_level": "medium"
   },
-  "P000612": {
-    "total_trades": 2273,
-    "flagged_trades": 2247,
-    "flag_rate": "98.9",
-    "total_risk_score": 11269,
-    "avg_risk_per_trade": "4.96",
-    "avg_excess_return": "-39.22",
-    "suspicious_patterns": {
-      "unusual_return": 2123,
-      "large_trade": 105,
-      "rapid_trading": 1535,
-      "suspicious_timing": 305,
-      "late_disclosure": 319
-    },
-    "overall_suspicion_level": "high"
-  },
-  "B001284": {
-    "total_trades": 12,
-    "flagged_trades": 12,
-    "flag_rate": "100.0",
-    "total_risk_score": 47,
-    "avg_risk_per_trade": "3.92",
-    "avg_excess_return": "24.97",
-    "suspicious_patterns": {
-      "unusual_return": 12,
-      "suspicious_timing": 4
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "B001286": {
-    "total_trades": 41,
-    "flagged_trades": 40,
-    "flag_rate": "97.6",
-    "total_risk_score": 210,
-    "avg_risk_per_trade": "5.12",
-    "avg_excess_return": "-77.03",
-    "suspicious_patterns": {
-      "unusual_return": 36,
-      "suspicious_timing": 21,
-      "late_disclosure": 16,
-      "rapid_trading": 2
-    },
-    "overall_suspicion_level": "high"
-  },
-  "O000171": {
-    "total_trades": 3,
-    "flagged_trades": 3,
-    "flag_rate": "100.0",
-    "total_risk_score": 14,
-    "avg_risk_per_trade": "4.67",
-    "avg_excess_return": "297.64",
-    "suspicious_patterns": {
-      "unusual_return": 3,
-      "suspicious_timing": 1,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "R000597": {
-    "total_trades": 16,
-    "flagged_trades": 16,
-    "flag_rate": "100.0",
-    "total_risk_score": 83,
-    "avg_risk_per_trade": "5.19",
-    "avg_excess_return": "147.55",
-    "suspicious_patterns": {
-      "unusual_return": 16,
-      "rapid_trading": 6,
-      "late_disclosure": 2,
-      "suspicious_timing": 7
-    },
-    "overall_suspicion_level": "high"
-  },
-  "A000367": {
-    "total_trades": 19,
-    "flagged_trades": 17,
-    "flag_rate": "89.5",
-    "total_risk_score": 93,
-    "avg_risk_per_trade": "4.89",
-    "avg_excess_return": "-40.36",
-    "suspicious_patterns": {
-      "unusual_return": 17,
-      "rapid_trading": 11,
-      "suspicious_timing": 7,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "high"
-  },
-  "R000616": {
-    "total_trades": 8,
-    "flagged_trades": 8,
-    "flag_rate": "100.0",
-    "total_risk_score": 60,
-    "avg_risk_per_trade": "7.50",
-    "avg_excess_return": "-19.63",
-    "suspicious_patterns": {
-      "unusual_return": 6,
-      "suspicious_timing": 5,
-      "late_disclosure": 6,
-      "large_trade": 5,
-      "rapid_trading": 2
-    },
-    "overall_suspicion_level": "high"
-  },
   "B001309": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-174.38",
+    "avg_risk_per_trade": 6,
+    "avg_excess_return": -174.38,
     "suspicious_patterns": {
       "unusual_return": 1,
       "suspicious_timing": 1
@@ -3664,10 +2723,10 @@
   "H001061": {
     "total_trades": 184,
     "flagged_trades": 183,
-    "flag_rate": "99.5",
+    "flag_rate": 99.5,
     "total_risk_score": 1023,
-    "avg_risk_per_trade": "5.56",
-    "avg_excess_return": "-38.11",
+    "avg_risk_per_trade": 5.56,
+    "avg_excess_return": -38.11,
     "suspicious_patterns": {
       "unusual_return": 172,
       "large_trade": 162,
@@ -3677,71 +2736,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "M001193": {
-    "total_trades": 2758,
-    "flagged_trades": 2641,
-    "flag_rate": "95.8",
-    "total_risk_score": 15522,
-    "avg_risk_per_trade": "5.63",
-    "avg_excess_return": "-63.67",
-    "suspicious_patterns": {
-      "unusual_return": 2221,
-      "suspicious_timing": 1106,
-      "rapid_trading": 1427,
-      "large_trade": 307,
-      "late_disclosure": 970
-    },
-    "overall_suspicion_level": "high"
-  },
-  "F000461": {
-    "total_trades": 919,
-    "flagged_trades": 906,
-    "flag_rate": "98.6",
-    "total_risk_score": 5529,
-    "avg_risk_per_trade": "6.02",
-    "avg_excess_return": "-45.62",
-    "suspicious_patterns": {
-      "unusual_return": 879,
-      "late_disclosure": 333,
-      "suspicious_timing": 518,
-      "large_trade": 110,
-      "rapid_trading": 213
-    },
-    "overall_suspicion_level": "high"
-  },
-  "G000578": {
-    "total_trades": 2,
-    "flagged_trades": 1,
-    "flag_rate": "50.0",
-    "total_risk_score": 3,
-    "avg_risk_per_trade": "1.50",
-    "avg_excess_return": "0.00",
-    "suspicious_patterns": {
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "L000581": {
-    "total_trades": 22,
-    "flagged_trades": 22,
-    "flag_rate": "100.0",
-    "total_risk_score": 144,
-    "avg_risk_per_trade": "6.55",
-    "avg_excess_return": "413.25",
-    "suspicious_patterns": {
-      "unusual_return": 20,
-      "suspicious_timing": 10,
-      "late_disclosure": 18
-    },
-    "overall_suspicion_level": "high"
-  },
   "S001213": {
     "total_trades": 7,
     "flagged_trades": 7,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 41,
-    "avg_risk_per_trade": "5.86",
-    "avg_excess_return": "-92.55",
+    "avg_risk_per_trade": 5.86,
+    "avg_excess_return": -92.55,
     "suspicious_patterns": {
       "unusual_return": 7,
       "suspicious_timing": 6,
@@ -3752,10 +2753,10 @@
   "F000468": {
     "total_trades": 101,
     "flagged_trades": 98,
-    "flag_rate": "97.0",
+    "flag_rate": 97,
     "total_risk_score": 641,
-    "avg_risk_per_trade": "6.35",
-    "avg_excess_return": "-48.20",
+    "avg_risk_per_trade": 6.35,
+    "avg_excess_return": -48.2,
     "suspicious_patterns": {
       "unusual_return": 97,
       "suspicious_timing": 67,
@@ -3767,10 +2768,10 @@
   "M001188": {
     "total_trades": 22,
     "flagged_trades": 22,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 104,
-    "avg_risk_per_trade": "4.73",
-    "avg_excess_return": "-1.03",
+    "avg_risk_per_trade": 4.73,
+    "avg_excess_return": -1.03,
     "suspicious_patterns": {
       "unusual_return": 2,
       "late_disclosure": 21,
@@ -3780,26 +2781,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "D000610": {
-    "total_trades": 3,
-    "flagged_trades": 3,
-    "flag_rate": "100.0",
-    "total_risk_score": 13,
-    "avg_risk_per_trade": "4.33",
-    "avg_excess_return": "0.00",
-    "suspicious_patterns": {
-      "rapid_trading": 2,
-      "late_disclosure": 3
-    },
-    "overall_suspicion_level": "low"
-  },
   "C001088": {
     "total_trades": 7,
     "flagged_trades": 7,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 35,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "89.34",
+    "avg_risk_per_trade": 5,
+    "avg_excess_return": 89.34,
     "suspicious_patterns": {
       "unusual_return": 5,
       "late_disclosure": 6,
@@ -3810,10 +2798,10 @@
   "K000384": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 12,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "55.64",
+    "avg_risk_per_trade": 6,
+    "avg_excess_return": 55.64,
     "suspicious_patterns": {
       "unusual_return": 2,
       "late_disclosure": 2
@@ -3823,10 +2811,10 @@
   "R000122": {
     "total_trades": 214,
     "flagged_trades": 207,
-    "flag_rate": "96.7",
+    "flag_rate": 96.7,
     "total_risk_score": 870,
-    "avg_risk_per_trade": "4.07",
-    "avg_excess_return": "-4.49",
+    "avg_risk_per_trade": 4.07,
+    "avg_excess_return": -4.49,
     "suspicious_patterns": {
       "unusual_return": 203,
       "rapid_trading": 94,
@@ -3835,229 +2823,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "W000810": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 8,
-    "avg_risk_per_trade": "8.00",
-    "avg_excess_return": "-193.61",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "suspicious_timing": 1,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "S000583": {
-    "total_trades": 640,
-    "flagged_trades": 620,
-    "flag_rate": "96.9",
-    "total_risk_score": 3327,
-    "avg_risk_per_trade": "5.20",
-    "avg_excess_return": "-36.50",
-    "suspicious_patterns": {
-      "unusual_return": 602,
-      "suspicious_timing": 293,
-      "rapid_trading": 64,
-      "late_disclosure": 268
-    },
-    "overall_suspicion_level": "high"
-  },
-  "K000352": {
-    "total_trades": 11,
-    "flagged_trades": 11,
-    "flag_rate": "100.0",
-    "total_risk_score": 70,
-    "avg_risk_per_trade": "6.36",
-    "avg_excess_return": "418.51",
-    "suspicious_patterns": {
-      "unusual_return": 10,
-      "late_disclosure": 11,
-      "suspicious_timing": 3
-    },
-    "overall_suspicion_level": "high"
-  },
-  "R000583": {
-    "total_trades": 625,
-    "flagged_trades": 622,
-    "flag_rate": "99.5",
-    "total_risk_score": 4057,
-    "avg_risk_per_trade": "6.49",
-    "avg_excess_return": "4.46",
-    "suspicious_patterns": {
-      "unusual_return": 605,
-      "large_trade": 54,
-      "rapid_trading": 76,
-      "suspicious_timing": 259,
-      "late_disclosure": 462
-    },
-    "overall_suspicion_level": "high"
-  },
-  "C001105": {
-    "total_trades": 88,
-    "flagged_trades": 85,
-    "flag_rate": "96.6",
-    "total_risk_score": 511,
-    "avg_risk_per_trade": "5.81",
-    "avg_excess_return": "38.86",
-    "suspicious_patterns": {
-      "unusual_return": 85,
-      "large_trade": 15,
-      "suspicious_timing": 65,
-      "rapid_trading": 13,
-      "late_disclosure": 3
-    },
-    "overall_suspicion_level": "high"
-  },
-  "H001069": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 2,
-    "avg_risk_per_trade": "2.00",
-    "avg_excess_return": "0.00",
-    "suspicious_patterns": {
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "R000598": {
-    "total_trades": 4,
-    "flagged_trades": 4,
-    "flag_rate": "100.0",
-    "total_risk_score": 20,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "329.08",
-    "suspicious_patterns": {
-      "late_disclosure": 4,
-      "unusual_return": 2,
-      "suspicious_timing": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "T000475": {
-    "total_trades": 281,
-    "flagged_trades": 274,
-    "flag_rate": "97.5",
-    "total_risk_score": 1516,
-    "avg_risk_per_trade": "5.40",
-    "avg_excess_return": "-84.85",
-    "suspicious_patterns": {
-      "rapid_trading": 188,
-      "unusual_return": 236,
-      "late_disclosure": 40,
-      "large_trade": 38,
-      "suspicious_timing": 87
-    },
-    "overall_suspicion_level": "high"
-  },
-  "U000039": {
-    "total_trades": 2,
-    "flagged_trades": 2,
-    "flag_rate": "100.0",
-    "total_risk_score": 9,
-    "avg_risk_per_trade": "4.50",
-    "avg_excess_return": "267.44",
-    "suspicious_patterns": {
-      "unusual_return": 2,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "B001294": {
-    "total_trades": 6,
-    "flagged_trades": 6,
-    "flag_rate": "100.0",
-    "total_risk_score": 36,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-112.79",
-    "suspicious_patterns": {
-      "unusual_return": 6,
-      "large_trade": 6,
-      "suspicious_timing": 1
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "M001201": {
-    "total_trades": 4,
-    "flagged_trades": 4,
-    "flag_rate": "100.0",
-    "total_risk_score": 30,
-    "avg_risk_per_trade": "7.50",
-    "avg_excess_return": "-63.00",
-    "suspicious_patterns": {
-      "unusual_return": 4,
-      "large_trade": 3,
-      "suspicious_timing": 3
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "L000554": {
-    "total_trades": 75,
-    "flagged_trades": 75,
-    "flag_rate": "100.0",
-    "total_risk_score": 491,
-    "avg_risk_per_trade": "6.55",
-    "avg_excess_return": "-68.72",
-    "suspicious_patterns": {
-      "unusual_return": 75,
-      "suspicious_timing": 51,
-      "rapid_trading": 28,
-      "late_disclosure": 27
-    },
-    "overall_suspicion_level": "high"
-  },
-  "H001041": {
-    "total_trades": 69,
-    "flagged_trades": 61,
-    "flag_rate": "88.4",
-    "total_risk_score": 213,
-    "avg_risk_per_trade": "3.09",
-    "avg_excess_return": "22.47",
-    "suspicious_patterns": {
-      "unusual_return": 60,
-      "large_trade": 1,
-      "suspicious_timing": 6,
-      "late_disclosure": 5
-    },
-    "overall_suspicion_level": "high"
-  },
-  "M001170": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 7,
-    "avg_risk_per_trade": "7.00",
-    "avg_excess_return": "-16.19",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "large_trade": 1,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "S001175": {
-    "total_trades": 9,
-    "flagged_trades": 9,
-    "flag_rate": "100.0",
-    "total_risk_score": 45,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "14.36",
-    "suspicious_patterns": {
-      "unusual_return": 9,
-      "suspicious_timing": 5,
-      "large_trade": 1
-    },
-    "overall_suspicion_level": "medium"
-  },
   "P000609": {
     "total_trades": 260,
     "flagged_trades": 259,
-    "flag_rate": "99.6",
+    "flag_rate": 99.6,
     "total_risk_score": 1788,
-    "avg_risk_per_trade": "6.88",
-    "avg_excess_return": "-16.45",
+    "avg_risk_per_trade": 6.88,
+    "avg_excess_return": -16.45,
     "suspicious_patterns": {
       "unusual_return": 235,
       "rapid_trading": 60,
@@ -4066,140 +2838,13 @@
     },
     "overall_suspicion_level": "high"
   },
-  "M001187": {
-    "total_trades": 9,
-    "flagged_trades": 7,
-    "flag_rate": "77.8",
-    "total_risk_score": 34,
-    "avg_risk_per_trade": "3.78",
-    "avg_excess_return": "-85.78",
-    "suspicious_patterns": {
-      "unusual_return": 7,
-      "suspicious_timing": 3,
-      "rapid_trading": 2
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "C001107": {
-    "total_trades": 368,
-    "flagged_trades": 360,
-    "flag_rate": "97.8",
-    "total_risk_score": 2007,
-    "avg_risk_per_trade": "5.45",
-    "avg_excess_return": "-23.98",
-    "suspicious_patterns": {
-      "unusual_return": 351,
-      "suspicious_timing": 180,
-      "late_disclosure": 113,
-      "rapid_trading": 59,
-      "large_trade": 2
-    },
-    "overall_suspicion_level": "high"
-  },
-  "R000591": {
-    "total_trades": 6,
-    "flagged_trades": 5,
-    "flag_rate": "83.3",
-    "total_risk_score": 27,
-    "avg_risk_per_trade": "4.50",
-    "avg_excess_return": "-5.31",
-    "suspicious_patterns": {
-      "unusual_return": 5,
-      "suspicious_timing": 4
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "K000387": {
-    "total_trades": 6,
-    "flagged_trades": 2,
-    "flag_rate": "33.3",
-    "total_risk_score": 4,
-    "avg_risk_per_trade": "0.67",
-    "avg_excess_return": "0.00",
-    "suspicious_patterns": {
-      "late_disclosure": 2
-    },
-    "overall_suspicion_level": "low"
-  },
-  "Y000063": {
-    "total_trades": 26,
-    "flagged_trades": 24,
-    "flag_rate": "92.3",
-    "total_risk_score": 133,
-    "avg_risk_per_trade": "5.12",
-    "avg_excess_return": "-114.99",
-    "suspicious_patterns": {
-      "unusual_return": 23,
-      "suspicious_timing": 11,
-      "late_disclosure": 12
-    },
-    "overall_suspicion_level": "high"
-  },
-  "C000567": {
-    "total_trades": 523,
-    "flagged_trades": 507,
-    "flag_rate": "96.9",
-    "total_risk_score": 2372,
-    "avg_risk_per_trade": "4.54",
-    "avg_excess_return": "-73.98",
-    "suspicious_patterns": {
-      "unusual_return": 474,
-      "suspicious_timing": 65,
-      "late_disclosure": 271,
-      "rapid_trading": 67,
-      "large_trade": 4
-    },
-    "overall_suspicion_level": "high"
-  },
-  "S000480": {
-    "total_trades": 17,
-    "flagged_trades": 17,
-    "flag_rate": "100.0",
-    "total_risk_score": 54,
-    "avg_risk_per_trade": "3.18",
-    "avg_excess_return": "-131.97",
-    "suspicious_patterns": {
-      "unusual_return": 17,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "high"
-  },
-  "M001202": {
-    "total_trades": 4,
-    "flagged_trades": 4,
-    "flag_rate": "100.0",
-    "total_risk_score": 38,
-    "avg_risk_per_trade": "9.50",
-    "avg_excess_return": "-88.67",
-    "suspicious_patterns": {
-      "unusual_return": 4,
-      "suspicious_timing": 4,
-      "late_disclosure": 4,
-      "rapid_trading": 2
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "F000444": {
-    "total_trades": 19,
-    "flagged_trades": 19,
-    "flag_rate": "100.0",
-    "total_risk_score": 92,
-    "avg_risk_per_trade": "4.84",
-    "avg_excess_return": "492.30",
-    "suspicious_patterns": {
-      "unusual_return": 19,
-      "suspicious_timing": 6,
-      "late_disclosure": 6
-    },
-    "overall_suspicion_level": "high"
-  },
   "B001267": {
     "total_trades": 3,
     "flagged_trades": 3,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 17,
-    "avg_risk_per_trade": "5.67",
-    "avg_excess_return": "2816.24",
+    "avg_risk_per_trade": 5.67,
+    "avg_excess_return": 2816.24,
     "suspicious_patterns": {
       "unusual_return": 2,
       "large_trade": 3,
@@ -4207,42 +2852,13 @@
     },
     "overall_suspicion_level": "low"
   },
-  "H001051": {
-    "total_trades": 364,
-    "flagged_trades": 353,
-    "flag_rate": "97.0",
-    "total_risk_score": 2284,
-    "avg_risk_per_trade": "6.27",
-    "avg_excess_return": "-60.89",
-    "suspicious_patterns": {
-      "unusual_return": 338,
-      "large_trade": 142,
-      "suspicious_timing": 165,
-      "rapid_trading": 66,
-      "late_disclosure": 150
-    },
-    "overall_suspicion_level": "high"
-  },
-  "C001070": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-132.06",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
   "H001047": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 18,
-    "avg_risk_per_trade": "9.00",
-    "avg_excess_return": "-86.63",
+    "avg_risk_per_trade": 9,
+    "avg_excess_return": -86.63,
     "suspicious_patterns": {
       "unusual_return": 2,
       "large_trade": 2,
@@ -4254,10 +2870,10 @@
   "R000599": {
     "total_trades": 12,
     "flagged_trades": 12,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 57,
-    "avg_risk_per_trade": "4.75",
-    "avg_excess_return": "146.24",
+    "avg_risk_per_trade": 4.75,
+    "avg_excess_return": 146.24,
     "suspicious_patterns": {
       "unusual_return": 11,
       "suspicious_timing": 4,
@@ -4269,10 +2885,10 @@
   "D000628": {
     "total_trades": 3,
     "flagged_trades": 3,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 13,
-    "avg_risk_per_trade": "4.33",
-    "avg_excess_return": "-99.92",
+    "avg_risk_per_trade": 4.33,
+    "avg_excess_return": -99.92,
     "suspicious_patterns": {
       "unusual_return": 3,
       "rapid_trading": 2
@@ -4282,39 +2898,23 @@
   "M001111": {
     "total_trades": 161,
     "flagged_trades": 160,
-    "flag_rate": "99.4",
+    "flag_rate": 99.4,
     "total_risk_score": 499,
-    "avg_risk_per_trade": "3.10",
-    "avg_excess_return": "-101.25",
+    "avg_risk_per_trade": 3.1,
+    "avg_excess_return": -101.25,
     "suspicious_patterns": {
       "unusual_return": 160,
       "suspicious_timing": 8
     },
     "overall_suspicion_level": "high"
   },
-  "G000535": {
-    "total_trades": 14,
-    "flagged_trades": 14,
-    "flag_rate": "100.0",
-    "total_risk_score": 98,
-    "avg_risk_per_trade": "7.00",
-    "avg_excess_return": "271.97",
-    "suspicious_patterns": {
-      "unusual_return": 13,
-      "large_trade": 5,
-      "suspicious_timing": 7,
-      "late_disclosure": 4,
-      "rapid_trading": 7
-    },
-    "overall_suspicion_level": "high"
-  },
   "D000600": {
     "total_trades": 3,
     "flagged_trades": 3,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 24,
-    "avg_risk_per_trade": "8.00",
-    "avg_excess_return": "-60.47",
+    "avg_risk_per_trade": 8,
+    "avg_excess_return": -60.47,
     "suspicious_patterns": {
       "unusual_return": 3,
       "suspicious_timing": 2,
@@ -4322,26 +2922,13 @@
     },
     "overall_suspicion_level": "medium"
   },
-  "M001183": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 5,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "-141.72",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "large_trade": 1
-    },
-    "overall_suspicion_level": "low"
-  },
   "M000312": {
     "total_trades": 3,
     "flagged_trades": 3,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 24,
-    "avg_risk_per_trade": "8.00",
-    "avg_excess_return": "-77.29",
+    "avg_risk_per_trade": 8,
+    "avg_excess_return": -77.29,
     "suspicious_patterns": {
       "unusual_return": 3,
       "suspicious_timing": 3,
@@ -4349,26 +2936,13 @@
     },
     "overall_suspicion_level": "medium"
   },
-  "K000381": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "333.18",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
   "T000463": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 16,
-    "avg_risk_per_trade": "8.00",
-    "avg_excess_return": "165.23",
+    "avg_risk_per_trade": 8,
+    "avg_excess_return": 165.23,
     "suspicious_patterns": {
       "unusual_return": 2,
       "large_trade": 2,
@@ -4376,82 +2950,25 @@
     },
     "overall_suspicion_level": "low"
   },
-  "B001269": {
-    "total_trades": 95,
-    "flagged_trades": 93,
-    "flag_rate": "97.9",
-    "total_risk_score": 577,
-    "avg_risk_per_trade": "6.07",
-    "avg_excess_return": "-45.53",
-    "suspicious_patterns": {
-      "unusual_return": 93,
-      "suspicious_timing": 50,
-      "rapid_trading": 41,
-      "late_disclosure": 24
-    },
-    "overall_suspicion_level": "high"
-  },
-  "C001111": {
-    "total_trades": 12,
-    "flagged_trades": 12,
-    "flag_rate": "100.0",
-    "total_risk_score": 64,
-    "avg_risk_per_trade": "5.33",
-    "avg_excess_return": "-7.53",
-    "suspicious_patterns": {
-      "unusual_return": 12,
-      "large_trade": 3,
-      "suspicious_timing": 6,
-      "rapid_trading": 2
-    },
-    "overall_suspicion_level": "high"
-  },
   "V000128": {
     "total_trades": 7,
     "flagged_trades": 7,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 21,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "-124.42",
+    "avg_risk_per_trade": 3,
+    "avg_excess_return": -124.42,
     "suspicious_patterns": {
       "unusual_return": 7
     },
     "overall_suspicion_level": "medium"
   },
-  "F000464": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-78.97",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "suspicious_timing": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "R000570": {
-    "total_trades": 2,
-    "flagged_trades": 2,
-    "flag_rate": "100.0",
-    "total_risk_score": 11,
-    "avg_risk_per_trade": "5.50",
-    "avg_excess_return": "-9.67",
-    "suspicious_patterns": {
-      "unusual_return": 2,
-      "late_disclosure": 1,
-      "large_trade": 1
-    },
-    "overall_suspicion_level": "low"
-  },
   "C001056": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 11,
-    "avg_risk_per_trade": "5.50",
-    "avg_excess_return": "631.23",
+    "avg_risk_per_trade": 5.5,
+    "avg_excess_return": 631.23,
     "suspicious_patterns": {
       "unusual_return": 2,
       "suspicious_timing": 1,
@@ -4459,376 +2976,52 @@
     },
     "overall_suspicion_level": "low"
   },
-  "M001182": {
-    "total_trades": 42,
-    "flagged_trades": 37,
-    "flag_rate": "88.1",
-    "total_risk_score": 196,
-    "avg_risk_per_trade": "4.67",
-    "avg_excess_return": "-60.25",
-    "suspicious_patterns": {
-      "unusual_return": 36,
-      "suspicious_timing": 22,
-      "rapid_trading": 12
-    },
-    "overall_suspicion_level": "high"
-  },
-  "F000030": {
-    "total_trades": 4,
-    "flagged_trades": 4,
-    "flag_rate": "100.0",
-    "total_risk_score": 30,
-    "avg_risk_per_trade": "7.50",
-    "avg_excess_return": "-428.31",
-    "suspicious_patterns": {
-      "unusual_return": 3,
-      "suspicious_timing": 2,
-      "late_disclosure": 4,
-      "rapid_trading": 2
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "H000636": {
-    "total_trades": 199,
-    "flagged_trades": 199,
-    "flag_rate": "100.0",
-    "total_risk_score": 1322,
-    "avg_risk_per_trade": "6.64",
-    "avg_excess_return": "-30.59",
-    "suspicious_patterns": {
-      "unusual_return": 186,
-      "rapid_trading": 126,
-      "late_disclosure": 70,
-      "suspicious_timing": 116
-    },
-    "overall_suspicion_level": "high"
-  },
-  "R000589": {
-    "total_trades": 81,
-    "flagged_trades": 81,
-    "flag_rate": "100.0",
-    "total_risk_score": 545,
-    "avg_risk_per_trade": "6.73",
-    "avg_excess_return": "-61.46",
-    "suspicious_patterns": {
-      "unusual_return": 76,
-      "late_disclosure": 70,
-      "suspicious_timing": 32,
-      "rapid_trading": 18,
-      "large_trade": 6
-    },
-    "overall_suspicion_level": "high"
-  },
-  "C000754": {
-    "total_trades": 4,
-    "flagged_trades": 3,
-    "flag_rate": "75.0",
-    "total_risk_score": 21,
-    "avg_risk_per_trade": "5.25",
-    "avg_excess_return": "-100.93",
-    "suspicious_patterns": {
-      "unusual_return": 2,
-      "suspicious_timing": 2,
-      "late_disclosure": 3
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "A000373": {
-    "total_trades": 31,
-    "flagged_trades": 31,
-    "flag_rate": "100.0",
-    "total_risk_score": 158,
-    "avg_risk_per_trade": "5.10",
-    "avg_excess_return": "-58.98",
-    "suspicious_patterns": {
-      "unusual_return": 30,
-      "suspicious_timing": 19,
-      "late_disclosure": 1,
-      "rapid_trading": 4,
-      "large_trade": 1
-    },
-    "overall_suspicion_level": "high"
-  },
-  "N000182": {
-    "total_trades": 32,
-    "flagged_trades": 32,
-    "flag_rate": "100.0",
-    "total_risk_score": 170,
-    "avg_risk_per_trade": "5.31",
-    "avg_excess_return": "-69.93",
-    "suspicious_patterns": {
-      "unusual_return": 30,
-      "suspicious_timing": 16,
-      "rapid_trading": 15,
-      "large_trade": 1
-    },
-    "overall_suspicion_level": "high"
-  },
   "V000131": {
     "total_trades": 2,
     "flagged_trades": 2,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 14,
-    "avg_risk_per_trade": "7.00",
-    "avg_excess_return": "-35.43",
+    "avg_risk_per_trade": 7,
+    "avg_excess_return": -35.43,
     "suspicious_patterns": {
       "unusual_return": 2,
       "late_disclosure": 2,
       "suspicious_timing": 1
     },
     "overall_suspicion_level": "low"
-  },
-  "W000413": {
-    "total_trades": 145,
-    "flagged_trades": 142,
-    "flag_rate": "97.9",
-    "total_risk_score": 757,
-    "avg_risk_per_trade": "5.22",
-    "avg_excess_return": "-12.03",
-    "suspicious_patterns": {
-      "unusual_return": 129,
-      "suspicious_timing": 55,
-      "late_disclosure": 66,
-      "rapid_trading": 36
-    },
-    "overall_suspicion_level": "high"
-  },
-  "C001071": {
-    "total_trades": 930,
-    "flagged_trades": 895,
-    "flag_rate": "96.2",
-    "total_risk_score": 5071,
-    "avg_risk_per_trade": "5.45",
-    "avg_excess_return": "-30.10",
-    "suspicious_patterns": {
-      "unusual_return": 792,
-      "large_trade": 31,
-      "rapid_trading": 282,
-      "late_disclosure": 615,
-      "suspicious_timing": 115
-    },
-    "overall_suspicion_level": "high"
-  },
-  "G000560": {
-    "total_trades": 3,
-    "flagged_trades": 3,
-    "flag_rate": "100.0",
-    "total_risk_score": 12,
-    "avg_risk_per_trade": "4.00",
-    "avg_excess_return": "122.85",
-    "suspicious_patterns": {
-      "unusual_return": 3,
-      "suspicious_timing": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "J000292": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-279.17",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "suspicious_timing": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "E000285": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 5,
-    "avg_risk_per_trade": "5.00",
-    "avg_excess_return": "-154.40",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "M000404": {
-    "total_trades": 10,
-    "flagged_trades": 8,
-    "flag_rate": "80.0",
-    "total_risk_score": 44,
-    "avg_risk_per_trade": "4.40",
-    "avg_excess_return": "82.77",
-    "suspicious_patterns": {
-      "unusual_return": 7,
-      "large_trade": 1,
-      "suspicious_timing": 3,
-      "late_disclosure": 6
-    },
-    "overall_suspicion_level": "medium"
   },
   "C001059": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-112.41",
+    "avg_risk_per_trade": 6,
+    "avg_excess_return": -112.41,
     "suspicious_patterns": {
       "unusual_return": 1,
       "late_disclosure": 1
     },
     "overall_suspicion_level": "low"
   },
-  "B000589": {
-    "total_trades": 37,
-    "flagged_trades": 32,
-    "flag_rate": "86.5",
-    "total_risk_score": 144,
-    "avg_risk_per_trade": "3.89",
-    "avg_excess_return": "-53.43",
-    "suspicious_patterns": {
-      "unusual_return": 31,
-      "suspicious_timing": 16,
-      "large_trade": 1,
-      "rapid_trading": 2
-    },
-    "overall_suspicion_level": "high"
-  },
   "B001260": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 2,
-    "avg_risk_per_trade": "2.00",
-    "avg_excess_return": "0.00",
+    "avg_risk_per_trade": 2,
+    "avg_excess_return": 0,
     "suspicious_patterns": {
       "large_trade": 1
     },
-    "overall_suspicion_level": "low"
-  },
-  "C000266": {
-    "total_trades": 15,
-    "flagged_trades": 15,
-    "flag_rate": "100.0",
-    "total_risk_score": 69,
-    "avg_risk_per_trade": "4.60",
-    "avg_excess_return": "-101.71",
-    "suspicious_patterns": {
-      "unusual_return": 15,
-      "suspicious_timing": 8
-    },
-    "overall_suspicion_level": "high"
-  },
-  "F000451": {
-    "total_trades": 35,
-    "flagged_trades": 35,
-    "flag_rate": "100.0",
-    "total_risk_score": 192,
-    "avg_risk_per_trade": "5.49",
-    "avg_excess_return": "-113.46",
-    "suspicious_patterns": {
-      "unusual_return": 35,
-      "suspicious_timing": 15,
-      "late_disclosure": 21
-    },
-    "overall_suspicion_level": "high"
-  },
-  "H001065": {
-    "total_trades": 2,
-    "flagged_trades": 2,
-    "flag_rate": "100.0",
-    "total_risk_score": 12,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "254.52",
-    "suspicious_patterns": {
-      "late_disclosure": 2,
-      "unusual_return": 1,
-      "large_trade": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "R000011": {
-    "total_trades": 54,
-    "flagged_trades": 54,
-    "flag_rate": "100.0",
-    "total_risk_score": 323,
-    "avg_risk_per_trade": "5.98",
-    "avg_excess_return": "68.18",
-    "suspicious_patterns": {
-      "unusual_return": 54,
-      "rapid_trading": 20,
-      "suspicious_timing": 30,
-      "late_disclosure": 17
-    },
-    "overall_suspicion_level": "high"
-  },
-  "D000355": {
-    "total_trades": 7,
-    "flagged_trades": 7,
-    "flag_rate": "100.0",
-    "total_risk_score": 27,
-    "avg_risk_per_trade": "3.86",
-    "avg_excess_return": "-174.47",
-    "suspicious_patterns": {
-      "unusual_return": 7,
-      "suspicious_timing": 2
-    },
-    "overall_suspicion_level": "medium"
-  },
-  "C000141": {
-    "total_trades": 3,
-    "flagged_trades": 3,
-    "flag_rate": "100.0",
-    "total_risk_score": 9,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "-215.13",
-    "suspicious_patterns": {
-      "unusual_return": 3
-    },
-    "overall_suspicion_level": "low"
-  },
-  "O000169": {
-    "total_trades": 53,
-    "flagged_trades": 49,
-    "flag_rate": "92.5",
-    "total_risk_score": 251,
-    "avg_risk_per_trade": "4.74",
-    "avg_excess_return": "-70.79",
-    "suspicious_patterns": {
-      "unusual_return": 44,
-      "suspicious_timing": 37,
-      "rapid_trading": 4
-    },
-    "overall_suspicion_level": "high"
-  },
-  "O000170": {
-    "total_trades": 12,
-    "flagged_trades": 12,
-    "flag_rate": "100.0",
-    "total_risk_score": 68,
-    "avg_risk_per_trade": "5.67",
-    "avg_excess_return": "-339.48",
-    "suspicious_patterns": {
-      "unusual_return": 11,
-      "late_disclosure": 8,
-      "suspicious_timing": 4
-    },
-    "overall_suspicion_level": "high"
-  },
-  "W000815": {
-    "total_trades": 1,
-    "flagged_trades": 0,
-    "flag_rate": "0.0",
-    "total_risk_score": 0,
-    "avg_risk_per_trade": "0.00",
-    "avg_excess_return": "0.00",
-    "suspicious_patterns": {},
     "overall_suspicion_level": "low"
   },
   "B001288": {
     "total_trades": 13,
     "flagged_trades": 13,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 49,
-    "avg_risk_per_trade": "3.77",
-    "avg_excess_return": "201.76",
+    "avg_risk_per_trade": 3.77,
+    "avg_excess_return": 201.76,
     "suspicious_patterns": {
       "unusual_return": 13,
       "rapid_trading": 2,
@@ -4840,52 +3033,14 @@
   "W000809": {
     "total_trades": 1,
     "flagged_trades": 1,
-    "flag_rate": "100.0",
+    "flag_rate": 100,
     "total_risk_score": 9,
-    "avg_risk_per_trade": "9.00",
-    "avg_excess_return": "-198.39",
+    "avg_risk_per_trade": 9,
+    "avg_excess_return": -198.39,
     "suspicious_patterns": {
       "unusual_return": 1,
       "large_trade": 1,
       "late_disclosure": 1
-    },
-    "overall_suspicion_level": "low"
-  },
-  "M000725": {
-    "total_trades": 2,
-    "flagged_trades": 2,
-    "flag_rate": "100.0",
-    "total_risk_score": 6,
-    "avg_risk_per_trade": "3.00",
-    "avg_excess_return": "-303.49",
-    "suspicious_patterns": {
-      "unusual_return": 2
-    },
-    "overall_suspicion_level": "low"
-  },
-  "C001046": {
-    "total_trades": 10,
-    "flagged_trades": 10,
-    "flag_rate": "100.0",
-    "total_risk_score": 51,
-    "avg_risk_per_trade": "5.10",
-    "avg_excess_return": "-201.99",
-    "suspicious_patterns": {
-      "unusual_return": 9,
-      "suspicious_timing": 8
-    },
-    "overall_suspicion_level": "high"
-  },
-  "A000210": {
-    "total_trades": 1,
-    "flagged_trades": 1,
-    "flag_rate": "100.0",
-    "total_risk_score": 6,
-    "avg_risk_per_trade": "6.00",
-    "avg_excess_return": "-117.02",
-    "suspicious_patterns": {
-      "unusual_return": 1,
-      "suspicious_timing": 1
     },
     "overall_suspicion_level": "low"
   }

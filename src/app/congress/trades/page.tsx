@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import tradingSummaries from "@/data/trading-summaries.json";
-import membersData from "@/data/members.json";
+import { getMembers } from "@/lib/data";
 import committeeConflictsData from "@/data/committee-conflicts.json";
 
 type Chamber = "all" | "house" | "senate";
@@ -12,10 +12,10 @@ type SortField = "total_trades" | "flagged_trades" | "flag_rate" | "total_risk_s
 interface TradingSummary {
   total_trades: number;
   flagged_trades: number;
-  flag_rate: string;
+  flag_rate: number;
   total_risk_score: number;
-  avg_risk_per_trade: string;
-  avg_excess_return: string;
+  avg_risk_per_trade: number;
+  avg_excess_return: number;
   suspicious_patterns: {
     rapid_trading?: number;
     suspicious_timing?: number;
@@ -44,7 +44,7 @@ interface CommitteeConflict {
 }
 
 const memberMap = new Map<string, Member>();
-for (const m of membersData as Member[]) {
+for (const m of getMembers() as Member[]) {
   memberMap.set(m.bioguide_id, m);
 }
 
@@ -155,10 +155,7 @@ export default function TradesLeaderboard() {
           case "flagged_trades":
             return b.summary.flagged_trades - a.summary.flagged_trades;
           case "flag_rate":
-            return (
-              parseFloat(b.summary.flag_rate) -
-              parseFloat(a.summary.flag_rate)
-            );
+            return b.summary.flag_rate - a.summary.flag_rate;
           case "total_risk_score":
           default:
             return b.summary.total_risk_score - a.summary.total_risk_score;

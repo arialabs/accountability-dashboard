@@ -41,7 +41,7 @@ describe('data utilities', () => {
       expect(first).toHaveProperty('bills_sponsored');
       expect(first).toHaveProperty('bills_cosponsored');
       expect(first).toHaveProperty('committees');
-      expect(first).toHaveProperty('party_alignment_pct');
+      expect(first).toHaveProperty('party_loyalty_pct');
       expect(first).toHaveProperty('votes_cast');
     });
 
@@ -215,8 +215,8 @@ describe('data utilities', () => {
     it('party alignment is within valid range', () => {
       const members = getMembers();
       for (const member of members) {
-        expect(member.party_alignment_pct).toBeGreaterThanOrEqual(0);
-        expect(member.party_alignment_pct).toBeLessThanOrEqual(100);
+        expect(member.party_loyalty_pct).toBeGreaterThanOrEqual(0);
+        expect(member.party_loyalty_pct).toBeLessThanOrEqual(100);
       }
     });
 

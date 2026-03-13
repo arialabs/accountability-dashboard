@@ -24,7 +24,7 @@ type MemberWithLoyalty = {
   district: number | null;
   chamber: string;
   photo_url: string | null;
-  party_alignment_pct: number;
+  party_loyalty_pct: number;
   votes_cast: number;
   independence_score: number;
 };
@@ -59,7 +59,7 @@ export default function IndependencePage() {
   const rawMembers = getMembers();
 
   // Filter to members with meaningful loyalty data (votes_cast ≥ MIN_VOTES)
-  // party_alignment_pct defaults to 0 when no data — exclude those via votes_cast check
+  // party_loyalty_pct defaults to 0 when no data — exclude those via votes_cast check
   const members: MemberWithLoyalty[] = rawMembers
     .filter((m) => m.votes_cast >= MIN_VOTES)
     .map((m) => ({
@@ -70,15 +70,15 @@ export default function IndependencePage() {
       district: m.district,
       chamber: m.chamber,
       photo_url: m.photo_url,
-      party_alignment_pct: m.party_alignment_pct,
+      party_loyalty_pct: m.party_loyalty_pct,
       votes_cast: m.votes_cast,
-      independence_score: parseFloat((100 - m.party_alignment_pct).toFixed(1)),
+      independence_score: parseFloat((100 - m.party_loyalty_pct).toFixed(1)),
     }))
     .sort((a, b) => b.independence_score - a.independence_score);
 
   const totalTracked = members.length;
   const avgLoyalty =
-    members.reduce((sum, m) => sum + m.party_alignment_pct, 0) / members.length;
+    members.reduce((sum, m) => sum + m.party_loyalty_pct, 0) / members.length;
   const highlyIndependent = members.filter((m) => m.independence_score >= 10).length;
   const purePartyLine = members.filter((m) => m.independence_score === 0).length;
 

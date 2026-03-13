@@ -1,8 +1,13 @@
 import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import DonorAnalysisSection from "./DonorAnalysisSection";
 import type { CampaignFinance } from "@/lib/types";
 import type { DonorPercentilesData } from "@/lib/donor-percentiles";
+
+/** Helper to expand the funding details section */
+function expandDetails() {
+  fireEvent.click(screen.getByText("Show funding details"));
+}
 
 describe("DonorAnalysisSection", () => {
   const mockFinance: CampaignFinance = {
@@ -59,8 +64,9 @@ describe("DonorAnalysisSection", () => {
     expect(screen.getByText("💰 Campaign Finance")).toBeInTheDocument();
   });
 
-  it("displays funding source labels", () => {
+  it("displays funding source labels after expanding details", () => {
     render(<DonorAnalysisSection finance={mockFinance} />);
+    expandDetails();
     expect(screen.getByText("PAC Contributions")).toBeInTheDocument();
     expect(screen.getByText(/Large Individual Donors/)).toBeInTheDocument();
     expect(screen.getByText(/Small Individual Donors/)).toBeInTheDocument();
@@ -80,14 +86,16 @@ describe("DonorAnalysisSection", () => {
     expect(screen.getByText("$2.5M")).toBeInTheDocument();
   });
 
-  it("displays percentage breakdown", () => {
+  it("displays percentage breakdown after expanding details", () => {
     render(<DonorAnalysisSection finance={mockFinance} />);
+    expandDetails();
     expect(screen.getByText("42.9%")).toBeInTheDocument();
     expect(screen.getByText("32.5%")).toBeInTheDocument();
   });
 
-  it("renders pie chart", () => {
+  it("renders pie chart after expanding details", () => {
     const { container } = render(<DonorAnalysisSection finance={mockFinance} />);
+    expandDetails();
     const svg = container.querySelector("svg");
     expect(svg).toBeInTheDocument();
   });
@@ -104,8 +112,9 @@ describe("DonorAnalysisSection", () => {
 
   // ── Peer-comparison percentile tests ────────────────────────────────────────
 
-  it("shows top industries when present", () => {
+  it("shows top industries when present after expanding details", () => {
     render(<DonorAnalysisSection finance={mockFinanceWithIndustries} />);
+    expandDetails();
     expect(screen.getByText("Top Industries")).toBeInTheDocument();
     expect(screen.getByText("Finance/Securities")).toBeInTheDocument();
     expect(screen.getByText("Health")).toBeInTheDocument();
@@ -121,6 +130,7 @@ describe("DonorAnalysisSection", () => {
         percentilesData={mockPercentilesData}
       />
     );
+    expandDetails();
     // Should show chamber label for Finance/Securities (89th percentile)
     expect(screen.getByText("More than 89% of House members")).toBeInTheDocument();
     // Should show state leader callout
@@ -170,7 +180,7 @@ describe("DonorAnalysisSection", () => {
     expect(screen.queryByText(/More than .* of House members/)).not.toBeInTheDocument();
   });
 
-  it("shows percentile note when percentiles are available", () => {
+  it("shows percentile note when percentiles are available after expanding", () => {
     render(
       <DonorAnalysisSection
         finance={mockFinanceWithIndustries}
@@ -180,6 +190,7 @@ describe("DonorAnalysisSection", () => {
         percentilesData={mockPercentilesData}
       />
     );
+    expandDetails();
     expect(
       screen.getByText(/Percentile context compares this member to peers in the same chamber/)
     ).toBeInTheDocument();

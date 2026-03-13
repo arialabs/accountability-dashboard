@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
-import membersData from "@/data/members.json";
+import { getMembers } from "@/lib/data";
 import { BodyText, Caption } from "@/components/ui";
 
 interface BeneficiaryImpact {
@@ -97,9 +97,9 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
   const [rollCallSearch, setRollCallSearch] = useState("");
   const [rollCallTab, setRollCallTab] = useState<"yea" | "nay">("yea");
 
-  // Load members data
+  // Load members data (normalized via getMembers)
   const members = useMemo(() => {
-    return membersData as Member[];
+    return getMembers() as Member[];
   }, []);
 
   // Parse roll call votes
@@ -208,6 +208,9 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fadeIn"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="vote-modal-title"
     >
       <div
         className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-slideUp"
@@ -216,7 +219,7 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
         {/* Header */}
         <div className="sticky top-0 bg-white border-b border-slate-200 p-6 flex items-start justify-between">
           <div className="flex-1 pr-4">
-            <h2 className="text-2xl font-bold text-slate-900 mb-2">
+            <h2 id="vote-modal-title" className="text-2xl font-bold text-slate-900 mb-2">
               {vote.bill && <span className="text-blue-600">{vote.bill}: </span>}
               {vote.plainEnglishSummary || vote.title}
             </h2>
@@ -239,7 +242,7 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
           <button
             onClick={onClose}
             className="text-slate-400 hover:text-slate-600 transition-colors p-2"
-            aria-label="Close modal"
+            aria-label="Close"
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -402,6 +405,8 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
             <div className="border-t border-slate-200 pt-6">
               <button
                 onClick={() => setShowRollCall(!showRollCall)}
+                aria-expanded={showRollCall}
+                aria-label={showRollCall ? "Hide roll call" : "View roll call"}
                 className="w-full flex items-center justify-between p-3 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors"
               >
                 <span className="font-semibold text-slate-900">
@@ -423,6 +428,7 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
                   <input
                     type="text"
                     placeholder="Search by name, state, or party..."
+                    aria-label="Search roll call by name, state, or party"
                     value={rollCallSearch}
                     onChange={(e) => setRollCallSearch(e.target.value)}
                     className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -432,6 +438,8 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
                   <div className="flex gap-2 border-b border-slate-200">
                     <button
                       onClick={() => setRollCallTab("yea")}
+                      aria-pressed={rollCallTab === "yea"}
+                      aria-label={`Show yea votes (${filteredRollCall.yea.length})`}
                       className={`px-4 py-2 text-sm font-semibold transition-colors ${
                         rollCallTab === "yea"
                           ? "border-b-2 border-emerald-500 text-emerald-600"
@@ -442,6 +450,8 @@ export default function VoteModal({ vote, onClose }: VoteModalProps) {
                     </button>
                     <button
                       onClick={() => setRollCallTab("nay")}
+                      aria-pressed={rollCallTab === "nay"}
+                      aria-label={`Show nay votes (${filteredRollCall.nay.length})`}
                       className={`px-4 py-2 text-sm font-semibold transition-colors ${
                         rollCallTab === "nay"
                           ? "border-b-2 border-red-500 text-red-600"

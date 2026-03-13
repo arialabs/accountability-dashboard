@@ -50,6 +50,8 @@ export default function CommitteeMemberships({
           {committees.map((committee, idx) => (
             <div
               key={idx}
+              role="group"
+              aria-label={`${committee.name} — ${committee.role}`}
               className={`p-5 rounded-2xl border-2 transition-all duration-300 ${
                 isLeadership(committee.role)
                   ? "bg-blue-50 border-blue-200 hover:border-blue-300"

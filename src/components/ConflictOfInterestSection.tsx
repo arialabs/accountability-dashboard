@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import type { ConflictOfInterest } from "@/lib/conflict-detector";
 import { formatCurrencyShort, formatDate } from "@/lib/formatting";
 import { BodyText, Caption } from "@/components/ui";
@@ -104,8 +105,13 @@ export default function ConflictOfInterestSection({
     );
   }
 
+  const [detailsExpanded, setDetailsExpanded] = useState(false);
+
   const highSeverityCount = conflicts.filter(c => c.conflictSeverity === "high").length;
   const mediumSeverityCount = conflicts.filter(c => c.conflictSeverity === "medium").length;
+
+  // Top conflict for summary lead
+  const topConflict = conflicts[0];
 
   return (
     <section className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm">
@@ -115,13 +121,21 @@ export default function ConflictOfInterestSection({
           Potential Conflicts of Interest
         </h3>
       </div>
-      
-      <p className="text-slate-600 mb-6">
-        Instances where {memberName}&apos;s votes appear to align with top donor interests.
+
+      {/* Summary layer — always visible */}
+      <p className="text-slate-600 mb-4">
+        {conflicts.length} potential conflict{conflicts.length !== 1 ? "s" : ""} detected ({highSeverityCount} high severity).
       </p>
 
+      {/* Plain-language lead for top conflict */}
+      {topConflict && (
+        <p className="text-slate-700 mb-4">
+          Received {formatCurrencyShort(topConflict.donationAmount)} from {topConflict.industryDisplayName}, then voted {topConflict.votePosition} on {topConflict.voteTitle}.
+        </p>
+      )}
+
       {/* Summary Stats */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="bg-slate-50 rounded-xl p-4 text-center">
           <p className="text-3xl font-black text-slate-900">{conflicts.length}</p>
           <p className="text-sm text-slate-600 mt-1">Total Conflicts</p>
@@ -136,28 +150,42 @@ export default function ConflictOfInterestSection({
         </div>
       </div>
 
-      {/* Conflict Cards */}
-      <div className="space-y-4">
-        {conflicts.slice(0, 10).map((conflict, i) => (
-          <ConflictCard key={i} conflict={conflict} />
-        ))}
-      </div>
+      {/* Details toggle */}
+      <button
+        onClick={() => setDetailsExpanded(!detailsExpanded)}
+        aria-expanded={detailsExpanded}
+        className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors mb-4"
+      >
+        {detailsExpanded ? "Hide conflict details" : "Show all conflicts"}
+      </button>
 
-      {conflicts.length > 10 && (
-        <div className="mt-6 text-center">
-          <p className="text-slate-500 text-sm">
-            Showing top 10 of {conflicts.length} potential conflicts
-          </p>
-        </div>
+      {/* Detail layer — expandable */}
+      {detailsExpanded && (
+        <>
+          {/* Conflict Cards */}
+          <div className="space-y-4 mt-4">
+            {conflicts.slice(0, 10).map((conflict, i) => (
+              <ConflictCard key={i} conflict={conflict} />
+            ))}
+          </div>
+
+          {conflicts.length > 10 && (
+            <div className="mt-6 text-center">
+              <p className="text-slate-500 text-sm">
+                Showing top 10 of {conflicts.length} potential conflicts
+              </p>
+            </div>
+          )}
+
+          {/* Disclaimer */}
+          <div className="mt-8 bg-slate-50 rounded-xl p-4 border border-slate-200">
+            <p className="text-xs text-slate-600 leading-relaxed">
+              <strong>Methodology:</strong> Conflicts are automatically detected by correlating top donor industries with votes on related legislation.
+              Severity is based on donation amounts. This analysis is not exhaustive and should be used as a starting point for further investigation.
+            </p>
+          </div>
+        </>
       )}
-
-      {/* Disclaimer */}
-      <div className="mt-8 bg-slate-50 rounded-xl p-4 border border-slate-200">
-        <p className="text-xs text-slate-600 leading-relaxed">
-          <strong>Methodology:</strong> Conflicts are automatically detected by correlating top donor industries with votes on related legislation. 
-          Severity is based on donation amounts. This analysis is not exhaustive and should be used as a starting point for further investigation.
-        </p>
-      </div>
     </section>
   );
 }

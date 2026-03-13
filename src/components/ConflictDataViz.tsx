@@ -8,7 +8,7 @@
 
 import committeeConflictsData from "@/data/committee-conflicts.json";
 import tradingSummariesData from "@/data/trading-summaries.json";
-import membersData from "@/data/members.json";
+import { getMembers } from "@/lib/data";
 
 const W = 280;
 const BAR_H = 22;
@@ -27,9 +27,8 @@ interface BarDatum {
 
 // ── Compute live stats from source data ──────────────────────────────────────
 
-type MemberRecord = { bioguide_id: string; party: string };
 const memberPartyMap = new Map<string, string>(
-  (membersData as MemberRecord[]).map((m) => [m.bioguide_id, m.party])
+  getMembers().map((m) => [m.bioguide_id, m.party])
 );
 
 type TradingSummary = { overall_suspicion_level: string };

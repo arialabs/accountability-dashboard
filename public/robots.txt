@@ -6,6 +6,7 @@ Allow: /
 User-agent: *
 Disallow: /api/*
 Disallow: /test/*
+Disallow: /admin/*
 
 # Host
 Host: https://accountability-dashboard.pages.dev

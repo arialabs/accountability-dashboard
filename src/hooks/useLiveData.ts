@@ -2,6 +2,7 @@
 
 import { useApi } from "./useApi";
 import { fetchMembers, type ApiMember } from "../lib/api-client";
+import { getMembers as getStaticMembers } from "../lib/data";
 import type { Member } from "../lib/types";
 
 // State name to abbreviation mapping
@@ -42,7 +43,7 @@ function transformApiMember(raw: ApiMember): Member {
     bills_sponsored: raw.bills_sponsored || 0,
     bills_cosponsored: raw.bills_cosponsored || 0,
     committees: raw.committees || [],
-    party_alignment_pct: raw.party_loyalty_pct ?? 0,
+    party_loyalty_pct: raw.party_loyalty_pct ?? 0,
     ideology_score: raw.ideology_score ?? null,
     votes_cast: raw.votes_cast || 0,
   };
@@ -76,14 +77,19 @@ function computeStates(members: Member[]): Array<{ abbrev: string; name: string;
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-/** Hook that fetches members from API and provides the same interface as the static data functions */
+/** Hook that fetches members from API and provides the same interface as the static data functions.
+ *  Falls back to static member data (from getMembers()) when the live API is down. */
 export function useLiveMembers() {
   const { data: rawMembers, loading, error, refetch } = useApi<ApiMember[]>(
     (signal) => fetchMembers(signal),
     []
   );
 
-  const members = rawMembers ? rawMembers.map(transformApiMember) : [];
+  // If the API returned data, transform it; otherwise fall back to static data
+  // so the Congress page still renders when the live API is unreachable.
+  const members = rawMembers
+    ? rawMembers.map(transformApiMember)
+    : (!loading ? getStaticMembers() : []);
   const stats = computePartyBreakdown(members);
   const states = computeStates(members);
 

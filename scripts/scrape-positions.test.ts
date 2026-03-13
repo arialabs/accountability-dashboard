@@ -25,7 +25,7 @@ describe('OnTheIssues Scraper', () => {
         bills_sponsored: 0,
         bills_cosponsored: 0,
         committees: [],
-        party_alignment_pct: 0,
+        party_loyalty_pct: 0,
         ideology_score: null,
         votes_cast: 0,
       };
@@ -51,7 +51,7 @@ describe('OnTheIssues Scraper', () => {
         bills_sponsored: 0,
         bills_cosponsored: 0,
         committees: [],
-        party_alignment_pct: 0,
+        party_loyalty_pct: 0,
         ideology_score: null,
         votes_cast: 0,
       };

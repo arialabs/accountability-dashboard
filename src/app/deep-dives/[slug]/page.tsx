@@ -10,11 +10,7 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  try {
-    return getAllDeepDives()
-      .filter(d => d.sections && d.keyFindings) // Only prerender pages with complete data
-      .map(d => ({ slug: d.slug }));
-  } catch { return []; }
+  return getAllDeepDives().map(d => ({ slug: d.slug }));
 }
 
 

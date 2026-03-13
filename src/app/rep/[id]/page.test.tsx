@@ -1,6 +1,6 @@
 import React from "react";
 import { describe, it, expect, vi } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import RepPage from "./page";
 import { getMemberDisclosures } from "@/lib/data";
 
@@ -34,30 +34,38 @@ describe("Rep Page - Financial Disclosures", () => {
     expect(headings.length).toBeGreaterThan(0);
   });
 
-  it("shows filing type and date for each disclosure", { timeout: 20000 }, async () => {
+  it("shows filing type and date for each disclosure after expanding", { timeout: 20000 }, async () => {
     const params = Promise.resolve({ id: "G000585" });
     const disclosures = getMemberDisclosures("G000585");
-    
+
     // Verify we have test data
     expect(disclosures.length).toBeGreaterThan(0);
-    
+
     const page = await RepPage({ params });
     render(page);
-    
+
+    // Expand the financial disclosures detail section
+    const expandButton = screen.getByText("Show all filings");
+    fireEvent.click(expandButton);
+
     // Should show the filing type (Annual or Amendment)
     const annualText = screen.queryAllByText(/Annual/i);
     const amendmentText = screen.queryAllByText(/Amendment/i);
-    
+
     // At least one should exist
     expect(annualText.length + amendmentText.length).toBeGreaterThan(0);
   });
 
-  it("includes PDF links for each filing", { timeout: 20000 }, async () => {
+  it("includes PDF links for each filing after expanding", { timeout: 20000 }, async () => {
     const params = Promise.resolve({ id: "G000585" });
-    
+
     const page = await RepPage({ params });
     render(page);
-    
+
+    // Expand the financial disclosures detail section
+    const expandButton = screen.getByText("Show all filings");
+    fireEvent.click(expandButton);
+
     // Look for PDF link text
     const pdfLinks = screen.getAllByText(/View PDF/i);
     expect(pdfLinks.length).toBeGreaterThan(0);

@@ -173,6 +173,8 @@ export default function VoteHistorySection({
         <span className="text-sm text-slate-600 font-medium">Sort by:</span>
         <button
           onClick={() => setSortBy("date")}
+          aria-label="Sort by date"
+          aria-pressed={sortBy === "date"}
           className={`px-3 py-1.5 min-h-[44px] rounded-lg text-sm font-medium transition ${
             sortBy === "date"
               ? "bg-blue-600 text-white"
@@ -183,6 +185,8 @@ export default function VoteHistorySection({
         </button>
         <button
           onClick={() => setSortBy("bill")}
+          aria-label="Sort by bill number"
+          aria-pressed={sortBy === "bill"}
           className={`px-3 py-1.5 min-h-[44px] rounded-lg text-sm font-medium transition ${
             sortBy === "bill"
               ? "bg-blue-600 text-white"
@@ -307,6 +311,7 @@ export default function VoteHistorySection({
       {hasMore && (
         <button
           onClick={() => setDisplayCount((prev) => prev + 20)}
+          aria-label={`Load ${Math.min(20, sortedVotes.length - displayCount)} more votes`}
           className="w-full mt-6 py-3 min-h-[44px] bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl transition"
         >
           Load {Math.min(20, sortedVotes.length - displayCount)} More Votes ↓

@@ -118,20 +118,20 @@ function DonorPieChart({
 }
 
 function ContributorRow({ contributor, rank }: { contributor: Contributor; rank: number }) {
-  const typeColors = {
+  const typeColors: Record<string, string> = {
     pac: "bg-red-100 text-red-700",
     individual: "bg-blue-100 text-blue-700",
     party: "bg-purple-100 text-purple-700",
     committee: "bg-orange-100 text-orange-700",
   };
-  
+
   return (
     <div className="flex items-center justify-between py-3 border-b border-slate-100 last:border-0">
       <div className="flex items-center gap-3">
         <span className="text-slate-400 font-mono text-sm w-6">{rank}.</span>
         <div>
           <p className="font-semibold text-slate-900">{contributor.name}</p>
-          <span className={`text-xs px-2 py-0.5 rounded-full ${typeColors[contributor.type]}`}>
+          <span className={`text-xs px-2 py-0.5 rounded-full ${typeColors[contributor.type.toLowerCase()] || "bg-slate-100 text-slate-700"}`}>
             {contributor.type.toUpperCase()}
           </span>
         </div>
@@ -199,11 +199,12 @@ export default function DonorAnalysisSection({
 }: DonorAnalysisSectionProps) {
   const [showPacTooltip, setShowPacTooltip] = useState(false);
   const [chartView, setChartView] = useState<"pie" | "bar">("pie");
+  const [detailsExpanded, setDetailsExpanded] = useState(false);
 
   // Look up pre-computed percentile context for this member
   const memberPercentiles =
     percentilesData && memberId ? percentilesData.members[memberId] ?? null : null;
-  
+
   if (!finance) {
     return (
       <section className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm">
@@ -221,20 +222,69 @@ export default function DonorAnalysisSection({
       </section>
     );
   }
-  
+
   const otherPct = 100 - finance.pac_percentage - finance.large_donor_percentage - finance.small_donor_percentage;
-  
+
+  // Determine PAC-dependent vs grassroots indicator
+  const fundingCharacter = finance.pac_percentage >= 50
+    ? "Heavily PAC-funded"
+    : finance.small_donor_percentage >= 30
+      ? "Strong grassroots support"
+      : "Mixed funding sources";
+
+  // Top 3 contributors for compact summary
+  const topThreeContributors = finance.top_contributors?.slice(0, 3) ?? [];
+
   return (
     <section className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm hover:shadow-xl transition-all duration-300">
       <h3 className="text-2xl font-black uppercase tracking-tight text-slate-900 mb-2">
         💰 Campaign Finance
       </h3>
-      <p className="text-slate-500 mb-8">
+      <p className="text-slate-500 mb-4">
         {finance.cycle} Election Cycle • Source: Federal Election Commission
       </p>
-      
+
+      {/* Summary layer — always visible */}
+      <div className="mb-6">
+        {/* Narrative summary */}
+        <p className="text-slate-700 mb-3">
+          Raised {formatCurrencyShort(finance.total_raised)} this cycle. {fundingCharacter} — {formatPercent(finance.pac_percentage)} from PACs, {formatPercent(finance.small_donor_percentage)} from small donors.
+        </p>
+
+        {/* PAC-dependent vs grassroots indicator */}
+        {finance.pac_percentage >= 50 && (
+          <div className="mb-3 bg-red-50 border border-red-200 rounded-lg p-3">
+            <p className="text-red-800 text-sm">
+              ⚠️ <strong>Heavily PAC-funded</strong> — {formatPercent(finance.pac_percentage)} from political action committees
+            </p>
+          </div>
+        )}
+        {finance.small_donor_percentage >= 30 && (
+          <div className="mb-3 bg-green-50 border border-green-200 rounded-lg p-3">
+            <p className="text-green-800 text-sm">
+              ✓ <strong>Strong grassroots support</strong> — {formatPercent(finance.small_donor_percentage)} from small donors
+            </p>
+          </div>
+        )}
+
+        {/* Top 3 donors in compact format */}
+        {topThreeContributors.length > 0 && (
+          <div className="mt-3">
+            <p className="text-sm font-semibold text-slate-700 mb-2">Top donors:</p>
+            <div className="flex flex-wrap gap-2">
+              {topThreeContributors.map((c, i) => (
+                <span key={i} className="inline-flex items-center gap-1 bg-slate-100 rounded-lg px-3 py-1.5 text-sm">
+                  <span className="font-semibold text-slate-800">{c.name}</span>
+                  <span className="text-slate-500">{formatCurrencyShort(c.total)}</span>
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
       {/* Summary Stats */}
-      <div className="grid grid-cols-2 gap-4 mb-10">
+      <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-slate-50 rounded-xl p-4 text-center">
           <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Total Raised</p>
           <p className="font-mono text-2xl font-black text-slate-900">{formatCurrencyShort(finance.total_raised)}</p>
@@ -244,145 +294,142 @@ export default function DonorAnalysisSection({
           <p className="font-mono text-2xl font-black text-slate-900">{formatCurrencyShort(finance.total_spent)}</p>
         </div>
       </div>
-      
-      <div className="grid md:grid-cols-2 gap-10">
-        {/* Pie Chart & Breakdown */}
-        <div>
-          <div className="flex items-center justify-between mb-6">
-            <h4 className="text-lg font-bold text-slate-900">Funding Sources</h4>
-            <div className="flex gap-2">
-              <button
-                onClick={() => setChartView("pie")}
-                className={`px-3 py-1 text-xs font-medium rounded-lg transition-colors ${
-                  chartView === "pie"
-                    ? "bg-blue-600 text-white"
-                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-                }`}
-                aria-label="Pie chart view"
-              >
-                Pie
-              </button>
-              <button
-                onClick={() => setChartView("bar")}
-                className={`px-3 py-1 text-xs font-medium rounded-lg transition-colors ${
-                  chartView === "bar"
-                    ? "bg-blue-600 text-white"
-                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-                }`}
-                aria-label="Bar chart view"
-              >
-                Bar
-              </button>
-            </div>
-          </div>
-          
-          {chartView === "pie" ? (
-            <DonorPieChart 
-              pacPct={finance.pac_percentage}
-              largeDonorPct={finance.large_donor_percentage}
-              smallDonorPct={finance.small_donor_percentage}
-              otherPct={otherPct}
-            />
-          ) : (
-            <DonorBreakdownBarChart finance={finance} />
-          )}
-          
-          {/* Percentage breakdown */}
-          <div className="mt-6 space-y-3">
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
-              <span className="text-slate-600 flex items-center text-sm sm:text-base">
-                PAC Contributions
-                <InfoTooltip text="Political Action Committees pool money from corporations, unions, or interest groups to donate to campaigns. High PAC funding may indicate special interest influence." />
-              </span>
-              <div className="flex items-center gap-2">
-                <span className="font-mono font-bold text-red-600">{formatPercent(finance.pac_percentage)}</span>
-                <span className="text-slate-400 text-sm">({formatCurrencyShort(finance.pac_contributions)})</span>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
-              <span className="text-slate-600 text-sm sm:text-base">Large Individual Donors (&gt;$200)</span>
-              <div className="flex items-center gap-2">
-                <span className="font-mono font-bold text-orange-600">{formatPercent(finance.large_donor_percentage)}</span>
-                <span className="text-slate-400 text-sm">({formatCurrencyShort(finance.large_donors)})</span>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
-              <span className="text-slate-600 text-sm sm:text-base">Small Individual Donors (≤$200)</span>
-              <div className="flex items-center gap-2">
-                <span className="font-mono font-bold text-green-600">{formatPercent(finance.small_donor_percentage)}</span>
-                <span className="text-slate-400 text-sm">({formatCurrencyShort(finance.small_donors)})</span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Grassroots indicator */}
-          {finance.small_donor_percentage >= 30 && (
-            <div className="mt-4 bg-green-50 border border-green-200 rounded-lg p-3">
-              <p className="text-green-800 text-sm">
-                ✓ <strong>Strong grassroots support</strong> — {formatPercent(finance.small_donor_percentage)} from small donors
-              </p>
-            </div>
-          )}
-          
-          {finance.pac_percentage >= 50 && (
-            <div className="mt-4 bg-red-50 border border-red-200 rounded-lg p-3">
-              <p className="text-red-800 text-sm">
-                ⚠️ <strong>Heavily PAC-funded</strong> — {formatPercent(finance.pac_percentage)} from political action committees
-              </p>
-            </div>
-          )}
-        </div>
-        
-        {/* Top Contributors */}
-        <div>
-          <h4 className="text-lg font-bold text-slate-900 mb-6">Top Contributors</h4>
-          
-          {finance.top_contributors && finance.top_contributors.length > 0 ? (
-            <div className="bg-slate-50 rounded-xl p-4">
-              {finance.top_contributors.slice(0, 10).map((contributor, i) => (
-                <ContributorRow key={i} contributor={contributor} rank={i + 1} />
-              ))}
-            </div>
-          ) : (
-            <div className="bg-slate-50 rounded-xl p-6 text-center text-slate-500">
-              Detailed contributor data not available
-            </div>
-          )}
-          
-          <p className="text-xs text-slate-400 mt-4">
-            Note: Contributions from individuals are attributed to their employer/organization when available.
-          </p>
-        </div>
-      </div>
-      
-      {/* Industry Breakdown (if available) */}
-      {finance.top_industries && finance.top_industries.length > 0 && (
-        <div className="mt-10 pt-8 border-t border-slate-200">
-          <h4 className="text-lg font-bold text-slate-900 mb-2">Top Industries</h4>
-          {memberPercentiles && (
-            <p className="text-xs text-slate-400 mb-6">
-              Percentile context compares this member to peers in the same chamber.
-            </p>
-          )}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {finance.top_industries.slice(0, 5).map((industry, i) => {
-              const ctx = memberPercentiles?.[industry.industry] ?? null;
-              return (
-                <div key={i} className="bg-slate-50 rounded-xl p-4">
-                  <p className="font-semibold text-slate-900 text-sm mb-1">{industry.industry}</p>
-                  <p className="font-mono font-bold text-lg">{formatCurrencyShort(industry.total)}</p>
-                  {ctx && (
-                    <PercentileBadge
-                      context={ctx}
-                      chamber={memberChamber}
-                      state={memberState}
-                    />
-                  )}
+
+      {/* Details toggle */}
+      <button
+        onClick={() => setDetailsExpanded(!detailsExpanded)}
+        aria-expanded={detailsExpanded}
+        className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors mb-6"
+      >
+        {detailsExpanded ? "Hide funding details" : "Show funding details"}
+      </button>
+
+      {/* Detail layer — expandable */}
+      {detailsExpanded && (
+        <>
+          <div className="grid md:grid-cols-2 gap-10">
+            {/* Pie Chart & Breakdown */}
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <h4 className="text-lg font-bold text-slate-900">Funding Sources</h4>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setChartView("pie")}
+                    className={`px-3 py-1 text-xs font-medium rounded-lg transition-colors ${
+                      chartView === "pie"
+                        ? "bg-blue-600 text-white"
+                        : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    }`}
+                    aria-label="Pie chart view"
+                  >
+                    Pie
+                  </button>
+                  <button
+                    onClick={() => setChartView("bar")}
+                    className={`px-3 py-1 text-xs font-medium rounded-lg transition-colors ${
+                      chartView === "bar"
+                        ? "bg-blue-600 text-white"
+                        : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    }`}
+                    aria-label="Bar chart view"
+                  >
+                    Bar
+                  </button>
                 </div>
-              );
-            })}
+              </div>
+
+              {chartView === "pie" ? (
+                <DonorPieChart
+                  pacPct={finance.pac_percentage}
+                  largeDonorPct={finance.large_donor_percentage}
+                  smallDonorPct={finance.small_donor_percentage}
+                  otherPct={otherPct}
+                />
+              ) : (
+                <DonorBreakdownBarChart finance={finance} />
+              )}
+
+              {/* Percentage breakdown */}
+              <div className="mt-6 space-y-3">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
+                  <span className="text-slate-600 flex items-center text-sm sm:text-base">
+                    PAC Contributions
+                    <InfoTooltip text="Political Action Committees pool money from corporations, unions, or interest groups to donate to campaigns. High PAC funding may indicate special interest influence." />
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono font-bold text-red-600">{formatPercent(finance.pac_percentage)}</span>
+                    <span className="text-slate-400 text-sm">({formatCurrencyShort(finance.pac_contributions)})</span>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
+                  <span className="text-slate-600 text-sm sm:text-base">Large Individual Donors (&gt;$200)</span>
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono font-bold text-orange-600">{formatPercent(finance.large_donor_percentage)}</span>
+                    <span className="text-slate-400 text-sm">({formatCurrencyShort(finance.large_donors)})</span>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-2">
+                  <span className="text-slate-600 text-sm sm:text-base">Small Individual Donors (≤$200)</span>
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono font-bold text-green-600">{formatPercent(finance.small_donor_percentage)}</span>
+                    <span className="text-slate-400 text-sm">({formatCurrencyShort(finance.small_donors)})</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Top Contributors — full list */}
+            <div>
+              <h4 className="text-lg font-bold text-slate-900 mb-6">Top Contributors</h4>
+
+              {finance.top_contributors && finance.top_contributors.length > 0 ? (
+                <div className="bg-slate-50 rounded-xl p-4">
+                  {finance.top_contributors.slice(0, 10).map((contributor, i) => (
+                    <ContributorRow key={i} contributor={contributor} rank={i + 1} />
+                  ))}
+                </div>
+              ) : (
+                <div className="bg-slate-50 rounded-xl p-6 text-center text-slate-500">
+                  Detailed contributor data not available
+                </div>
+              )}
+
+              <p className="text-xs text-slate-400 mt-4">
+                Note: Contributions from individuals are attributed to their employer/organization when available.
+              </p>
+            </div>
           </div>
-        </div>
+
+          {/* Industry Breakdown (if available) */}
+          {finance.top_industries && finance.top_industries.length > 0 && (
+            <div className="mt-10 pt-8 border-t border-slate-200">
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Top Industries</h4>
+              {memberPercentiles && (
+                <p className="text-xs text-slate-400 mb-6">
+                  Percentile context compares this member to peers in the same chamber.
+                </p>
+              )}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                {finance.top_industries.slice(0, 5).map((industry, i) => {
+                  const ctx = memberPercentiles?.[industry.industry] ?? null;
+                  return (
+                    <div key={i} className="bg-slate-50 rounded-xl p-4">
+                      <p className="font-semibold text-slate-900 text-sm mb-1">{industry.industry}</p>
+                      <p className="font-mono font-bold text-lg">{formatCurrencyShort(industry.total)}</p>
+                      {ctx && (
+                        <PercentileBadge
+                          context={ctx}
+                          chamber={memberChamber}
+                          state={memberState}
+                        />
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </>
       )}
     </section>
   );

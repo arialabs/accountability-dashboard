@@ -24,7 +24,7 @@ export interface Member {
   committees: Committee[];
   
   // Voting behavior (Voteview)
-  party_alignment_pct: number;
+  party_loyalty_pct: number;
   ideology_score: number | null;
   votes_cast: number;
   
@@ -90,8 +90,8 @@ export interface CampaignFinance {
 export interface Contributor {
   name: string;
   total: number;
-  count: number;
-  type: 'individual' | 'pac' | 'party' | 'committee';
+  count?: number;
+  type: string;
   employer?: string;
   occupation?: string;
 }
@@ -116,36 +116,25 @@ export interface RedFlag {
 // ==================== Stock Trading ====================
 
 export interface StockTrade {
-  disclosure_date: string;
-  transaction_date: string;
   ticker: string;
-  company_name: string;
-  asset_type: 'stock' | 'bond' | 'fund' | 'option' | 'other';
-  transaction_type: 'purchase' | 'sale' | 'exchange';
-  amount_range: string;  // e.g., "$15,001 - $50,000"
-  
-  // Parsed amounts
-  amount_min?: number;
-  amount_max?: number;
+  tradedDate: string;
+  filedDate: string;
+  transaction: string;
+  tradeSizeUsd: number;
+  company: string | null;
+  excessReturn: number | null;
+  suspicious_flags?: string[];
+  risk_score?: number;
 }
 
 export interface TradingProfile {
   total_trades: number;
-  total_value_min: number;
-  total_value_max: number;
-  
-  // Conflict of interest analysis
-  committee_related_trades: number;
-  days_to_disclosure_avg: number;
-  
-  // Flagged trades
-  flagged_trades: FlaggedTrade[];
-}
-
-export interface FlaggedTrade extends StockTrade {
-  flag_reason: string;
-  related_committee?: string;
-  related_legislation?: string;
+  total_risk_score: number;
+  avg_risk_per_trade: number;
+  avg_excess_return: number;
+  suspicious_patterns: string[];
+  overall_suspicion_level: string;
+  flag_rate: string | number;
 }
 
 // ==================== Scandals & Controversies ====================
@@ -165,7 +154,7 @@ export interface Source {
   url: string;
   published_date: string;
   archived_url?: string;
-  credibility_rating?: "high" | "medium";
+  credibility_rating?: "high" | "medium" | "low";
 }
 
 export interface ScandalEntry {
@@ -579,8 +568,9 @@ export interface BillVote {
   chamber: "House" | "Senate";
   rollnumber: number;
   date: string;
+  bill?: string;
   title: string;
-  plainEnglishSummary?: string;  // Short, plain English summary (1 sentence, <20 words)
+  plainEnglishSummary?: string;
   description: string;
   category: string;
   yea_count: number;
@@ -623,6 +613,7 @@ export interface DeepDiveInvestigation {
   subtitle: string;
   description: string;
   publishedDate: string;
+  updatedDate?: string;
   readTimeMinutes: number;
   tags: string[];
   summary: string;

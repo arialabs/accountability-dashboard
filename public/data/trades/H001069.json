@@ -1,1 +1,0 @@
-[{"ticker":"ESRX","company":null,"tradedDate":"2018-12-24","filedDate":"2019-02-01","transaction":"Exchange","tradeSizeUsd":1001,"excessReturn":null,"suspicious_flags":[{"type":"late_disclosure","severity":"medium","description":"Filed 39 days after trade (STOCK Act requires 45 days)","days_late":-6}],"risk_score":2}]

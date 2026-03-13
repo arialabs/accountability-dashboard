@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { isZipCode, fetchRepsByZip, enrichRepsWithVerdicts, type EnrichedRep } from '@/lib/find-reps';
 import { RepVerdictBadge } from '@/components/RepVerdictBadge';
-import financeData from '@/data/finance.json';
+import { getMemberFinanceStatic } from '@/lib/data';
 
 // Notable reps for autocomplete suggestions — party + photo
 const NOTABLE_REPS = [
@@ -72,8 +72,15 @@ interface RepSearchProps {
   size?: 'default' | 'large';
 }
 
-// Cast the imported finance JSON to a workable type
-const financeMap = financeData as Record<string, { pac_percentage: number }>;
+// Build finance lookup for enrichRepsWithVerdicts from canonical data loader
+function buildFinanceMap(bioguideIds: string[]): Record<string, { pac_percentage: number }> {
+  const map: Record<string, { pac_percentage: number }> = {};
+  for (const id of bioguideIds) {
+    const f = getMemberFinanceStatic(id);
+    if (f) map[id] = { pac_percentage: f.pac_percentage };
+  }
+  return map;
+}
 
 export default function RepSearch({
   placeholder = "Search by name, state, or ZIP code",
@@ -155,7 +162,8 @@ export default function RepSearch({
         setZipError(true);
         setZipReps([]);
       } else {
-        const enriched = enrichRepsWithVerdicts(result.reps, financeMap);
+        const repFinanceMap = buildFinanceMap(result.reps.map(r => r.bioguide_id));
+        const enriched = enrichRepsWithVerdicts(result.reps, repFinanceMap);
         setZipReps(enriched);
         setZipState(result.state ?? null);
       }

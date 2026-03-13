@@ -1,6 +1,6 @@
 import React from "react";
 import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import FinancialDisclosuresSection, { FinancialDisclosure } from "./FinancialDisclosuresSection";
 
 const mockDisclosures: FinancialDisclosure[] = [
@@ -42,33 +42,46 @@ describe("FinancialDisclosuresSection", () => {
     expect(screen.getByText("2 filings")).toBeDefined();
   });
 
-  it("renders all disclosure filings", () => {
+  it("shows summary with filing count", () => {
     render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
-    
+    expect(screen.getByText(/2 financial disclosure filings? on record/)).toBeDefined();
+  });
+
+  it("renders all disclosure filings after expanding", () => {
+    render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
+
+    fireEvent.click(screen.getByText("Show all filings"));
+
     expect(screen.getByText("2024 Annual Financial Disclosure")).toBeDefined();
     expect(screen.getByText("2023 Annual Financial Disclosure")).toBeDefined();
   });
 
-  it("displays filing types correctly", () => {
+  it("displays filing types correctly after expanding", () => {
     render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
-    
+
+    fireEvent.click(screen.getByText("Show all filings"));
+
     expect(screen.getByText("Original")).toBeDefined();
     expect(screen.getByText("Amendment")).toBeDefined();
   });
 
-  it("displays document IDs", () => {
+  it("displays document IDs after expanding", () => {
     render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
-    
+
+    fireEvent.click(screen.getByText("Show all filings"));
+
     expect(screen.getByText(/10066123/)).toBeDefined();
     expect(screen.getByText(/10059456/)).toBeDefined();
   });
 
-  it("renders PDF links", () => {
+  it("renders PDF links after expanding", () => {
     render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
-    
+
+    fireEvent.click(screen.getByText("Show all filings"));
+
     const links = screen.getAllByText("View PDF");
     expect(links.length).toBe(2);
-    
+
     const firstLink = links[0].closest("a");
     expect(firstLink?.getAttribute("href")).toContain("10066123.pdf");
     expect(firstLink?.getAttribute("target")).toBe("_blank");
@@ -82,11 +95,13 @@ describe("FinancialDisclosuresSection", () => {
     expect(screen.getByText(/John Smith/)).toBeDefined();
   });
 
-  it("displays data source attribution", () => {
+  it("displays data source attribution after expanding", () => {
     render(<FinancialDisclosuresSection disclosures={mockDisclosures} memberName="John Smith" />);
-    
+
+    fireEvent.click(screen.getByText("Show all filings"));
+
     expect(screen.getByText(/House Clerk Financial Disclosures/)).toBeDefined();
-    
+
     const sourceLink = screen.getByText("Official Source");
     expect(sourceLink.getAttribute("href")).toBe("https://disclosures-clerk.house.gov/PublicDisclosure/FinancialDisclosure");
   });

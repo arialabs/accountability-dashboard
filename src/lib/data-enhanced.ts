@@ -20,7 +20,7 @@ export function getMemberAlignmentEnhanced(bioguideId: string): EnhancedAlignmen
   return calculateEnhancedAlignment(
     baseAlignment,
     finance || undefined,
-    member?.party_alignment_pct,
+    member?.party_loyalty_pct,
     member?.votes_cast
   );
 }
@@ -39,7 +39,7 @@ export async function getAllAlignmentScoresEnhanced(): Promise<EnhancedAlignment
     return calculateEnhancedAlignment(
       score,
       finance || undefined,
-      member?.party_alignment_pct,
+      member?.party_loyalty_pct,
       member?.votes_cast
     );
   }).filter((s: EnhancedAlignmentScore | null): s is EnhancedAlignmentScore => s !== null);
@@ -60,7 +60,7 @@ export function getAlignmentRankingEnhanced(bioguideId: string): { rank: number;
     return calculateEnhancedAlignment(
       score,
       finance || undefined,
-      member?.party_alignment_pct,
+      member?.party_loyalty_pct,
       member?.votes_cast
     );
   });

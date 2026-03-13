@@ -90,6 +90,8 @@ export default function BudgetImpactCard({ impact, compact = false }: BudgetImpa
             e.stopPropagation();
             setExpanded(!expanded);
           }}
+          aria-expanded={expanded}
+          aria-label={expanded ? "Hide budget impact methodology" : "Show budget impact methodology"}
           className="text-[11px] text-slate-500 hover:text-slate-700 underline decoration-dotted transition-colors"
         >
           {expanded ? "Hide methodology ▴" : "How was this calculated? ▾"}

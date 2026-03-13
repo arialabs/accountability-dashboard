@@ -122,10 +122,14 @@ export function MemberVotingRecord({
         <h3 className="text-2xl font-black uppercase tracking-tight text-slate-900 mb-2">
           🗳️ Key Vote Record
         </h3>
+        {/* Summary layer — plain-language overview, always visible */}
+        <p className="text-slate-600 mb-4">
+          Voted on {stats.total} key issue{stats.total !== 1 ? "s" : ""}: {stats.yeas} Yea, {stats.nays} Nay{stats.notVoting > 0 ? `, ${stats.notVoting} absent` : ""}.
+        </p>
         <p className="text-slate-500 mb-6">
           How {memberName.split(" ")[0]} voted on important legislation
         </p>
-        
+
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-slate-50 rounded-xl p-4 text-center">
@@ -152,6 +156,8 @@ export function MemberVotingRecord({
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
+              aria-label={`Filter by ${cat} category`}
+              aria-pressed={selectedCategory === cat}
               className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition-colors ${
                 selectedCategory === cat
                   ? "bg-blue-600 text-white"
@@ -189,17 +195,18 @@ export function MemberVotingRecord({
                 </span>
               </div>
               
-              <h4 className="font-semibold text-slate-900 mb-1">
-                {vote.bill && (
-                  <span className="text-blue-600 mr-2">{vote.bill}</span>
-                )}
-                {vote.title || "Vote"}
-              </h4>
-              
+              {/* Description first for plain-language readability */}
               {vote.description && (
-                <p className="text-sm text-slate-600 line-clamp-2 mb-2">
+                <p className="text-sm text-slate-700 mb-2">
                   {vote.description}
                 </p>
+              )}
+
+              <h4 className="font-semibold text-slate-900 mb-1">
+                {vote.title || "Vote"}
+              </h4>
+              {vote.bill && (
+                <p className="text-xs text-slate-400 mb-1">{vote.bill}</p>
               )}
 
               {/* Who Benefits indicator */}
@@ -228,10 +235,12 @@ export function MemberVotingRecord({
         {filteredVotes.length > 5 && (
           <button
             onClick={() => setExpanded(!expanded)}
+            aria-expanded={expanded}
+            aria-label={expanded ? "Show fewer votes" : `Show ${filteredVotes.length - 5} more votes`}
             className="w-full mt-4 py-3 min-h-[44px] text-sm text-blue-600 hover:text-blue-700 font-medium"
           >
-            {expanded 
-              ? "Show Less ↑" 
+            {expanded
+              ? "Show Less ↑"
               : `Show ${filteredVotes.length - 5} More Votes ↓`
             }
           </button>

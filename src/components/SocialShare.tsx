@@ -94,6 +94,7 @@ export default function SocialShare({ title, text, url }: SocialShareProps) {
         {/* Copy Link */}
         <button
           onClick={copyToClipboard}
+          aria-label="Copy link to clipboard"
           className="w-full flex items-center gap-3 p-3 rounded-xl bg-slate-50 hover:bg-green-50 border border-slate-200 hover:border-green-300 transition-all group"
         >
           {copied ? (
@@ -101,7 +102,7 @@ export default function SocialShare({ title, text, url }: SocialShareProps) {
               <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span className="text-sm font-semibold text-green-600">Copied!</span>
+              <span className="text-sm font-semibold text-green-600" aria-live="polite">Copied!</span>
             </>
           ) : (
             <>

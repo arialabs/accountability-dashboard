@@ -6,7 +6,7 @@ module.exports = {
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ['/api/*', '/test/*'],
+  exclude: ['/api/*', '/test/*', '/admin/*'],
   robotsTxtOptions: {
     policies: [
       {
@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         userAgent: '*',
-        disallow: ['/api/*', '/test/*'],
+        disallow: ['/api/*', '/test/*', '/admin/*'],
       },
     ],
   },

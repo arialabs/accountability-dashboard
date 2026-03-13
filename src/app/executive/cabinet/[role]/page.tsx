@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: CabinetMemberPageProps): Prom
       description: ogDescription,
       images: [
         {
-          url: `/api/og/cabinet?id=${role}`,
+          url: "/og-image.png",
           width: 1200,
           height: 630,
           alt: `${member.name} accountability profile`,
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: CabinetMemberPageProps): Prom
       card: "summary_large_image",
       title: ogTitle,
       description: ogDescription,
-      images: [`/api/og/cabinet?id=${role}`],
+      images: ["/og-image.png"],
     },
   };
 }

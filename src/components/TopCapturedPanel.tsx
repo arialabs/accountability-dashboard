@@ -155,6 +155,7 @@ function CapturedRow({
   return (
     <Link
       href={`/rep/${entry.bioguide_id}`}
+      aria-label={`View profile for ${entry.name}, ${entry.party}-${stateAbbrev}, ${entry.pac_percentage.toFixed(1)}% PAC funded`}
       className={`flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 transition-colors group ${isHighlighted ? "bg-orange-50/40" : ""}`}
     >
       {/* Rank */}

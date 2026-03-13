@@ -4,7 +4,7 @@
 
 type JsonLdSchema = Record<string, unknown>;
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reps.arialabs.ai";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://accountability-dashboard.pages.dev";
 
 /**
  * Generate Person schema for government officials
