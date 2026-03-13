@@ -150,8 +150,8 @@ describe('StockTradesSection', () => {
 
       render(<StockTradesSection trades={trades} memberName="Test Member" />);
 
-      // Component now shows a "Being Compiled" message instead of "No Stock Trades Found"
-      expect(screen.getByText('Stock Trade Data Being Compiled')).toBeInTheDocument();
+      // Component shows clear messaging about no disclosures found
+      expect(screen.getByText(/No stock trade disclosures found for Test Member/)).toBeInTheDocument();
     });
 
     it('zero purchases or sales should display as 0, not hide the counter', () => {

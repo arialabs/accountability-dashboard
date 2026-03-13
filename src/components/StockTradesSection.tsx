@@ -75,11 +75,9 @@ export default function StockTradesSection(props: StockTradesProps) {
 
   if (trades.length === 0) {
     return (
-      <div className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-6 text-center">
-        <p className="text-sm font-semibold text-slate-600">Stock Trade Data Being Compiled</p>
-        <p className="mt-1 text-xs text-slate-400">
-          Trade records are sourced from STOCK Act disclosures and may take time to process.
-        </p>
+      <div className="text-center py-8">
+        <p className="text-slate-500">No stock trade disclosures found for {memberName}.</p>
+        <p className="text-xs text-slate-400 mt-1">Not all members of Congress are required to report stock trades.</p>
       </div>
     );
   }
