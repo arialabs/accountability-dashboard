@@ -2,6 +2,7 @@
 
 import type { ConflictOfInterest } from "@/lib/conflict-detector";
 import type { CampaignFinance } from "@/lib/types";
+import { billToCongressGovUrl } from "@/lib/bill-urls";
 
 interface DonorCaptureScoreProps {
   conflicts: ConflictOfInterest[];
@@ -165,6 +166,54 @@ export default function DonorCaptureScore({
       <p className="text-sm text-slate-700 leading-relaxed">
         {cfg.description(memberName, highConflicts, pacPct)}
       </p>
+
+      {/* Top conflict evidence — show your work */}
+      {conflicts.length > 0 && (
+        <div className="mt-4 space-y-2">
+          {conflicts.slice(0, 2).map((conflict, idx) => {
+            const billUrl = billToCongressGovUrl(conflict.voteBill, 119);
+            return (
+              <div
+                key={idx}
+                className={`flex items-start gap-3 rounded-xl p-3 text-sm border ${
+                  conflict.conflictSeverity === "high"
+                    ? "bg-red-50 border-red-200"
+                    : "bg-amber-50 border-amber-200"
+                }`}
+              >
+                <span className="text-lg shrink-0" aria-hidden="true">{conflict.icon}</span>
+                <p className="text-slate-700">
+                  Received <span className="font-bold">${(conflict.donationAmount / 1000).toFixed(0)}K</span> from {conflict.industryDisplayName}, then voted <span className="font-bold">{conflict.votePosition}</span> on{" "}
+                  {billUrl ? (
+                    <a href={billUrl} target="_blank" rel="noopener noreferrer"
+                       className="text-blue-600 hover:underline font-medium">
+                      {conflict.voteBill}
+                    </a>
+                  ) : (
+                    <span className="font-medium">{conflict.voteBill}</span>
+                  )}
+                  {conflict.voteTitle && (
+                    <span className="text-slate-500"> ({conflict.voteTitle})</span>
+                  )}
+                </p>
+              </div>
+            );
+          })}
+          {conflicts.length > 2 && (
+            <a
+              href="#conflicts"
+              className="text-sm text-blue-600 hover:underline font-medium inline-block mt-1"
+            >
+              See all {conflicts.length} conflicts ↓
+            </a>
+          )}
+        </div>
+      )}
+      {conflicts.length === 0 && hasFinanceData && (
+        <p className="mt-3 text-sm text-slate-500 italic">
+          {pacPct.toFixed(0)}% PAC-funded. No direct conflicts detected between top donor industries and key votes.
+        </p>
+      )}
 
       {/* Methodology note */}
       <p className="text-xs text-slate-400 mt-3 font-mono">

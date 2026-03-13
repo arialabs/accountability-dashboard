@@ -148,4 +148,28 @@ describe("DonorCaptureScore", () => {
     );
     expect(screen.getByLabelText("Donor Capture Score")).toBeInTheDocument();
   });
+
+  it("shows top conflict evidence when conflicts exist", () => {
+    const conflicts = [makeConflict("high")];
+    render(
+      <DonorCaptureScore conflicts={conflicts} finance={makeFinance(40, 20)} memberName="Rep Test" />
+    );
+    expect(screen.getByText(/Pharmaceuticals/)).toBeInTheDocument();
+    expect(screen.getByText(/H\.R\. 3/i)).toBeInTheDocument();
+  });
+
+  it("shows 'See all N conflicts' link when more than 2", () => {
+    const conflicts = [makeConflict("high"), makeConflict("medium"), makeConflict("low")];
+    render(
+      <DonorCaptureScore conflicts={conflicts} finance={makeFinance(40, 20)} memberName="Rep Test" />
+    );
+    expect(screen.getByText(/See all 3 conflicts/i)).toBeInTheDocument();
+  });
+
+  it("shows PAC-only explanation when 0 conflicts but PAC funding", () => {
+    render(
+      <DonorCaptureScore conflicts={[]} finance={makeFinance(35, 20)} memberName="Rep Test" />
+    );
+    expect(screen.getByText(/No direct conflicts detected/i)).toBeInTheDocument();
+  });
 });

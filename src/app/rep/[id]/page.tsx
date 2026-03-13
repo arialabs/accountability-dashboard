@@ -443,7 +443,9 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
 
             {/* Potential Conflicts of Interest */}
             <ErrorBoundary context="conflict of interest analysis">
-              <ConflictOfInterestSection conflicts={conflicts} memberName={member.full_name} />
+              <div id="conflicts">
+                <ConflictOfInterestSection conflicts={conflicts} memberName={member.full_name} />
+              </div>
             </ErrorBoundary>
 
             {/* Key Votes Record */}
