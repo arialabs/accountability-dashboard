@@ -3,9 +3,10 @@ import { detectConflicts, INDUSTRY_VOTE_MAPPING } from "./conflict-detector";
 import type { IndustryTotal } from "./industry-classifier";
 
 describe("Conflict Detector", () => {
+  // Industry keys must match finance.json values (not INDUSTRIES classifier keys)
   const sampleIndustries: IndustryTotal[] = [
     {
-      industry: "pharma",
+      industry: "Health",
       displayName: "Pharmaceuticals & Health",
       icon: "💊",
       total: 150000,
@@ -13,15 +14,15 @@ describe("Conflict Detector", () => {
       topContributors: [],
     },
     {
-      industry: "tech",
-      displayName: "Tech & Internet",
-      icon: "💻",
+      industry: "Finance/Securities",
+      displayName: "Finance & Banking",
+      icon: "💰",
       total: 80000,
       count: 15,
       topContributors: [],
     },
     {
-      industry: "defense",
+      industry: "Defense",
       displayName: "Defense & Aerospace",
       icon: "🛡️",
       total: 120000,
@@ -46,10 +47,10 @@ describe("Conflict Detector", () => {
       const conflicts = detectConflicts(sampleIndustries, votes);
 
       expect(conflicts.length).toBeGreaterThan(0);
-      const pharmaConflict = conflicts.find(c => c.industry === "pharma");
-      expect(pharmaConflict).toBeDefined();
-      expect(pharmaConflict?.votePosition).toBe("Nay");
-      expect(pharmaConflict?.benefitsIndustry).toBe(true);
+      const healthConflict = conflicts.find(c => c.industry === "Health");
+      expect(healthConflict).toBeDefined();
+      expect(healthConflict?.votePosition).toBe("Nay");
+      expect(healthConflict?.benefitsIndustry).toBe(true);
     });
 
     it("should detect defense industry conflicts on defense spending", () => {
@@ -57,7 +58,7 @@ describe("Conflict Detector", () => {
         {
           bill: "H.R. 456",
           title: "Defense Authorization Act",
-          category: "Defense",
+          category: "National Security",
           date: "2024-02-10",
           vote: "Yea" as const,
           description: "Funding for military programs",
@@ -66,7 +67,7 @@ describe("Conflict Detector", () => {
 
       const conflicts = detectConflicts(sampleIndustries, votes);
 
-      const defenseConflict = conflicts.find(c => c.industry === "defense");
+      const defenseConflict = conflicts.find(c => c.industry === "Defense");
       expect(defenseConflict).toBeDefined();
       expect(defenseConflict?.votePosition).toBe("Yea");
       expect(defenseConflict?.benefitsIndustry).toBe(true);
@@ -86,8 +87,8 @@ describe("Conflict Detector", () => {
 
       const conflicts = detectConflicts(sampleIndustries, votes);
 
-      const pharmaConflict = conflicts.find(c => c.industry === "pharma");
-      expect(pharmaConflict).toBeUndefined(); // Should not flag this as a conflict
+      const healthConflict = conflicts.find(c => c.industry === "Health");
+      expect(healthConflict).toBeUndefined(); // Should not flag this as a conflict
     });
 
     it("should ignore Present and Not Voting votes", () => {
@@ -136,15 +137,15 @@ describe("Conflict Detector", () => {
       const manyIndustries: IndustryTotal[] = [
         ...sampleIndustries,
         {
-          industry: "retail",
-          displayName: "Retail",
-          icon: "🛒",
+          industry: "Real Estate",
+          displayName: "Real Estate",
+          icon: "🏗️",
           total: 10000,
           count: 5,
           topContributors: [],
         },
         {
-          industry: "agriculture",
+          industry: "Agriculture",
           displayName: "Agriculture",
           icon: "🌾",
           total: 8000,
@@ -152,7 +153,7 @@ describe("Conflict Detector", () => {
           topContributors: [],
         },
         {
-          industry: "labor",
+          industry: "Labor/Unions",
           displayName: "Labor Unions",
           icon: "👷",
           total: 5000,
@@ -164,34 +165,34 @@ describe("Conflict Detector", () => {
       const votes = [
         {
           bill: "H.R. 200",
-          title: "Labor Protection Act",
-          category: "Labor",
+          title: "Ethics Reform Act",
+          category: "Government Ethics",
           date: "2024-01-01",
-          vote: "Yea" as const,
-          description: "Protects workers",
+          vote: "Nay" as const,
+          description: "Ethics oversight",
         },
       ];
 
       const conflicts = detectConflicts(manyIndustries, votes);
 
-      // Labor is 6th by donation amount, so should not be checked
+      // Government Ethics maps to Lawyers/Law Firms, which is not in the top 5
       expect(conflicts.length).toBe(0);
     });
 
     it("should assign severity based on donation amount", () => {
       const highDonorIndustries: IndustryTotal[] = [
         {
-          industry: "pharma",
-          displayName: "Pharmaceuticals",
+          industry: "Health",
+          displayName: "Health",
           icon: "💊",
           total: 150000, // High: >100k
           count: 10,
           topContributors: [],
         },
         {
-          industry: "tech",
-          displayName: "Tech",
-          icon: "💻",
+          industry: "Finance/Securities",
+          displayName: "Finance",
+          icon: "💰",
           total: 75000, // Medium: 50k-100k
           count: 10,
           topContributors: [],
@@ -208,8 +209,8 @@ describe("Conflict Detector", () => {
         },
         {
           bill: "H.R. 2",
-          title: "Tech Regulation",
-          category: "Technology",
+          title: "Tax Reform",
+          category: "Economy & Taxes",
           date: "2024-01-01",
           vote: "Nay" as const,
         },
@@ -217,27 +218,27 @@ describe("Conflict Detector", () => {
 
       const conflicts = detectConflicts(highDonorIndustries, votes);
 
-      const pharmaConflict = conflicts.find(c => c.industry === "pharma");
-      expect(pharmaConflict?.conflictSeverity).toBe("high");
+      const healthConflict = conflicts.find(c => c.industry === "Health");
+      expect(healthConflict?.conflictSeverity).toBe("high");
 
-      const techConflict = conflicts.find(c => c.industry === "tech");
-      expect(techConflict?.conflictSeverity).toBe("medium");
+      const financeConflict = conflicts.find(c => c.industry === "Finance/Securities");
+      expect(financeConflict?.conflictSeverity).toBe("medium");
     });
 
     it("should sort conflicts by severity then donation amount", () => {
       const industries: IndustryTotal[] = [
         {
-          industry: "pharma",
-          displayName: "Pharma",
+          industry: "Health",
+          displayName: "Health",
           icon: "💊",
           total: 90000, // Medium severity
           count: 10,
           topContributors: [],
         },
         {
-          industry: "tech",
-          displayName: "Tech",
-          icon: "💻",
+          industry: "Finance/Securities",
+          displayName: "Finance",
+          icon: "💰",
           total: 150000, // High severity
           count: 10,
           topContributors: [],
@@ -254,8 +255,8 @@ describe("Conflict Detector", () => {
         },
         {
           bill: "H.R. 2",
-          title: "Tech Regulation",
-          category: "Technology",
+          title: "Tax Regulation",
+          category: "Economy & Taxes",
           date: "2024-01-01",
           vote: "Nay" as const,
         },
@@ -263,12 +264,12 @@ describe("Conflict Detector", () => {
 
       const conflicts = detectConflicts(industries, votes);
 
-      // Tech should be first (high severity, $150k)
-      expect(conflicts[0].industry).toBe("tech");
+      // Finance should be first (high severity, $150k)
+      expect(conflicts[0].industry).toBe("Finance/Securities");
       expect(conflicts[0].conflictSeverity).toBe("high");
-      
-      // Pharma should be second (medium severity)
-      expect(conflicts[1].industry).toBe("pharma");
+
+      // Health should be second (medium severity)
+      expect(conflicts[1].industry).toBe("Health");
       expect(conflicts[1].conflictSeverity).toBe("medium");
     });
 
@@ -303,11 +304,11 @@ describe("Conflict Detector", () => {
       }
     });
 
-    it("should map relevant categories", () => {
+    it("should map actual key-votes.json categories", () => {
       expect(INDUSTRY_VOTE_MAPPING["Healthcare"]).toBeDefined();
-      expect(INDUSTRY_VOTE_MAPPING["Technology"]).toBeDefined();
-      expect(INDUSTRY_VOTE_MAPPING["Defense"]).toBeDefined();
-      expect(INDUSTRY_VOTE_MAPPING["Finance"]).toBeDefined();
+      expect(INDUSTRY_VOTE_MAPPING["Economy & Taxes"]).toBeDefined();
+      expect(INDUSTRY_VOTE_MAPPING["Climate & Environment"]).toBeDefined();
+      expect(INDUSTRY_VOTE_MAPPING["National Security"]).toBeDefined();
     });
   });
 });

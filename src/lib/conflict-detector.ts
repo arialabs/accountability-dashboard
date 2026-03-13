@@ -21,46 +21,38 @@ export interface ConflictOfInterest {
   explanation: string;
 }
 
-// Map vote categories to related industries
+// Map vote categories (from key-votes.json) to related industries (from finance.json)
+// Vote categories: Economy & Taxes, Climate & Environment, Healthcare, Government Ethics,
+//   Immigration, National Security, Voting Rights, Other
+// Finance industry keys: Finance/Securities, Agriculture, Health, Defense, Labor/Unions,
+//   Lawyers/Law Firms, Oil & Gas, Real Estate, Telecom
 export const INDUSTRY_VOTE_MAPPING: Record<string, {
   industries: string[];
   proIndustryVote: "Yea" | "Nay"; // Which vote benefits the industry
 }> = {
   "Healthcare": {
-    industries: ["pharma"],
-    proIndustryVote: "Nay", // Voting "Nay" on regulations benefits pharma
+    industries: ["Health"],
+    proIndustryVote: "Nay", // Voting "Nay" on healthcare reform benefits health industry
   },
-  "Technology": {
-    industries: ["tech"],
-    proIndustryVote: "Nay", // Voting "Nay" on tech regulations benefits tech
+  "Economy & Taxes": {
+    industries: ["Finance/Securities", "Real Estate"],
+    proIndustryVote: "Nay", // Voting "Nay" on financial regulations benefits banks/RE
   },
-  "Climate": {
-    industries: ["energy"],
+  "Climate & Environment": {
+    industries: ["Oil & Gas"],
     proIndustryVote: "Nay", // Voting "Nay" on climate action benefits fossil fuel
   },
-  "Environment": {
-    industries: ["energy"],
-    proIndustryVote: "Nay",
-  },
-  "Defense": {
-    industries: ["defense"],
+  "National Security": {
+    industries: ["Defense"],
     proIndustryVote: "Yea", // Voting "Yea" on defense spending benefits defense industry
   },
-  "Finance": {
-    industries: ["finance"],
-    proIndustryVote: "Nay", // Voting "Nay" on financial regulations benefits banks
+  "Immigration": {
+    industries: ["Agriculture", "Labor/Unions"],
+    proIndustryVote: "Nay", // Complex — agriculture benefits from immigrant labor
   },
-  "Telecommunications": {
-    industries: ["telecom"],
-    proIndustryVote: "Nay", // Voting "Nay" on telecom regulations benefits telecom
-  },
-  "Labor": {
-    industries: ["labor"],
-    proIndustryVote: "Yea", // Voting "Yea" on labor protections benefits unions
-  },
-  "Agriculture": {
-    industries: ["agriculture"],
-    proIndustryVote: "Yea", // Depends on the bill, but often "Yea" on farm subsidies
+  "Government Ethics": {
+    industries: ["Lawyers/Law Firms"],
+    proIndustryVote: "Nay", // Voting "Nay" on ethics/transparency benefits lobbying
   },
 };
 
