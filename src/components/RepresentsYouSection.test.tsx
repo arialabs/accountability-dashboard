@@ -148,4 +148,14 @@ describe("RepresentsYouSection", () => {
       screen.getByText(/Constituent preferences from nationally representative polls/)
     ).toBeInTheDocument();
   });
+
+  it("renders vote labels as Congress.gov links", () => {
+    render(
+      <RepresentsYouSection alignment={mockAlignment} memberName="Dan Crenshaw" />
+    );
+    const link = screen.getByRole("link", { name: "Lower Health Care Premiums Act" });
+    expect(link).toHaveAttribute("href", expect.stringContaining("congress.gov"));
+    const link2 = screen.getByRole("link", { name: "Epstein Files Transparency Act" });
+    expect(link2).toHaveAttribute("href", expect.stringContaining("congress.gov"));
+  });
 });

@@ -1,4 +1,5 @@
 import type { ConstituentAlignmentResult } from "@/lib/constituent-alignment";
+import { billToCongressGovUrl } from "@/lib/bill-urls";
 
 interface RepresentsYouSectionProps {
   alignment: ConstituentAlignmentResult;
@@ -124,7 +125,18 @@ export default function RepresentsYouSection({
                     {vote.aligned ? "✓" : "✗"}
                   </span>
                   <span className="text-slate-700">
-                    <span className="font-medium">{vote.shortLabel}</span>
+                    <span className="font-medium">
+                    {(() => {
+                      const url = billToCongressGovUrl(vote.bill, 119);
+                      return url ? (
+                        <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                          {vote.shortLabel}
+                        </a>
+                      ) : (
+                        vote.shortLabel
+                      );
+                    })()}
+                  </span>
                     <span className="text-slate-400 mx-1">—</span>
                     Voted {vote.memberVote}
                     {!vote.aligned && (
