@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import VoteModal from "./VoteModal";
+import { billToCongressGovUrl, rollCallUrl } from "@/lib/bill-urls";
 
 interface KeyVote {
   id: string;
@@ -208,9 +209,18 @@ export function MemberVotingRecord({
               <h4 className="font-semibold text-slate-900 mb-1">
                 {vote.title || "Vote"}
               </h4>
-              {vote.bill && (
-                <p className="text-xs text-slate-400 mb-1">{vote.bill}</p>
-              )}
+              {vote.bill && (() => {
+                const billUrl = billToCongressGovUrl(vote.bill, vote.congress);
+                return billUrl ? (
+                  <a href={billUrl} target="_blank" rel="noopener noreferrer"
+                     className="text-xs text-blue-500 hover:text-blue-700 hover:underline mb-1 inline-block"
+                     onClick={(e) => e.stopPropagation()}>
+                    {vote.bill}
+                  </a>
+                ) : (
+                  <p className="text-xs text-slate-400 mb-1">{vote.bill}</p>
+                );
+              })()}
 
               {/* Who Benefits indicator */}
               {vote.publicBenefit && vote.publicBenefit !== "mixed" && (
@@ -228,7 +238,13 @@ export function MemberVotingRecord({
               
               <div className="flex items-center gap-4 text-xs text-slate-400 mt-2">
                 <span>Result: {vote.yea_count} Yea - {vote.nay_count} Nay</span>
-                <span>Roll #{vote.rollnumber}</span>
+                <a href={rollCallUrl(vote.chamber, vote.rollnumber, vote.date, vote.congress)}
+                   target="_blank" rel="noopener noreferrer"
+                   className="text-blue-500 hover:text-blue-700 hover:underline"
+                   aria-label={`Roll #${vote.rollnumber}`}
+                   onClick={(e) => e.stopPropagation()}>
+                  Roll #{vote.rollnumber}
+                </a>
               </div>
             </div>
           ))}
@@ -248,6 +264,18 @@ export function MemberVotingRecord({
             }
           </button>
         )}
+
+        <div className="mt-4 pt-3 border-t border-slate-100">
+          <a
+            href={`https://www.congress.gov/member/${bioguideId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Full voting record on Congress.gov"
+            className="text-sm text-slate-500 hover:text-blue-600 hover:underline transition-colors"
+          >
+            Full voting record on Congress.gov →
+          </a>
+        </div>
       </section>
 
       {/* Vote Modal */}

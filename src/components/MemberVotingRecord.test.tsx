@@ -194,4 +194,29 @@ describe("MemberVotingRecord", () => {
     );
     expect(screen.getByText("Healthcare Reform Act")).toBeInTheDocument();
   });
+
+  it("renders bill link to Congress.gov", () => {
+    render(
+      <MemberVotingRecord bioguideId="B001234" icpsrId="99901" memberName="John Smith" chamber="House" keyVotes={mockKeyVotes} />
+    );
+    const billLink = screen.getByRole("link", { name: /HR1/i });
+    expect(billLink).toHaveAttribute("href", "https://www.congress.gov/bill/119th-congress/house-bill/1");
+    expect(billLink).toHaveAttribute("target", "_blank");
+  });
+
+  it("renders roll call link", () => {
+    render(
+      <MemberVotingRecord bioguideId="B001234" icpsrId="99901" memberName="John Smith" chamber="House" keyVotes={mockKeyVotes} />
+    );
+    const rollCallLink = screen.getByRole("link", { name: /Roll #1/i });
+    expect(rollCallLink).toHaveAttribute("href", expect.stringContaining("clerk.house.gov"));
+  });
+
+  it("renders Congress.gov full record link", () => {
+    render(
+      <MemberVotingRecord bioguideId="B001234" icpsrId="99901" memberName="John Smith" chamber="House" keyVotes={mockKeyVotes} />
+    );
+    const fullRecordLink = screen.getByRole("link", { name: /Full voting record/i });
+    expect(fullRecordLink).toHaveAttribute("href", "https://www.congress.gov/member/B001234");
+  });
 });
