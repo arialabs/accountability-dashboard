@@ -1,8 +1,73 @@
 {
-  "total": 243,
+  "total": 248,
   "source": "Federal Register API",
-  "last_updated": "2026-03-10",
+  "last_updated": "2026-03-19",
   "orders": [
+    {
+      "document_number": "2026-05388",
+      "eo_number": "14394",
+      "title": "Removing Regulatory Barriers to Affordable Home Construction",
+      "signing_date": "2026-03-13",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/03/18/2026-05388/removing-regulatory-barriers-to-affordable-home-construction",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
+    {
+      "document_number": "2026-05384",
+      "eo_number": "14393",
+      "title": "Promoting Access to Mortgage Credit",
+      "signing_date": "2026-03-13",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/03/18/2026-05384/promoting-access-to-mortgage-credit",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
+    {
+      "document_number": "2026-05383",
+      "eo_number": "14392",
+      "title": "Ensuring Truthful Advertising of Products Claiming To Be Made in America",
+      "signing_date": "2026-03-13",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/03/18/2026-05383/ensuring-truthful-advertising-of-products-claiming-to-be-made-in-america",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
+    {
+      "document_number": "2026-05382",
+      "eo_number": "14391",
+      "title": "Adjusting Certain Delegations Under the Defense Production Act",
+      "signing_date": "2026-03-13",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/03/18/2026-05382/adjusting-certain-delegations-under-the-defense-production-act",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "National Security"
+    },
+    {
+      "document_number": "2026-04826",
+      "eo_number": "14390",
+      "title": "Combating Cybercrime, Fraud, and Predatory Schemes Against American Citizens",
+      "signing_date": "2026-03-06",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/03/11/2026-04826/combating-cybercrime-fraud-and-predatory-schemes-against-american-citizens",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Technology"
+    },
     {
       "document_number": "2026-03832",
       "eo_number": "14389",
