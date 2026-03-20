@@ -1,8 +1,21 @@
 {
-  "total": 248,
+  "total": 249,
   "source": "Federal Register API",
-  "last_updated": "2026-03-19",
+  "last_updated": "2026-03-20",
   "orders": [
+    {
+      "document_number": "2026-05497",
+      "eo_number": "14395",
+      "title": "Establishing the Task Force To Eliminate Fraud",
+      "signing_date": "2026-03-16",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/03/19/2026-05497/establishing-the-task-force-to-eliminate-fraud",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-05388",
       "eo_number": "14394",
