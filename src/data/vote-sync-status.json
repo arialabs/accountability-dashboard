@@ -1,6 +1,6 @@
 {
-  "last_attempt_at": "2026-03-29T02:33:05.160Z",
-  "last_success_at": "2026-03-29T02:33:13.133Z",
+  "last_attempt_at": "2026-03-29T10:53:47.914Z",
+  "last_success_at": "2026-03-29T10:53:55.775Z",
   "status": "partial",
   "lookback_days": 7,
   "total_roll_calls_fetched": 0,
@@ -9,7 +9,7 @@
   "deduped_member_votes": 0,
   "errors": [
     {
-      "at": "2026-03-29T02:33:13.125Z",
+      "at": "2026-03-29T10:53:55.768Z",
       "stage": "senate-list",
       "message": "Congress API error: 404 Not Found"
     }
