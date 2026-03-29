@@ -9993,5 +9993,25 @@
     "top_industries": [],
     "data_source": "openfec",
     "last_fetched": "2026-03-22T02:28:46.773Z"
+  },
+  "B001300": {
+    "candidate_id": "H6CA44103",
+    "cycle": 2024,
+    "total_raised": 1269280.49,
+    "total_spent": 1291497.72,
+    "cash_on_hand": 1481553.91,
+    "individual_contributions": 305371.3,
+    "pac_contributions": 952538.63,
+    "party_contributions": 0,
+    "candidate_self_funding": 0,
+    "small_donors": 15673.71,
+    "large_donors": 289697.59,
+    "pac_percentage": 75,
+    "small_donor_percentage": 1.2,
+    "large_donor_percentage": 22.8,
+    "top_contributors": [],
+    "top_industries": [],
+    "data_source": "openfec",
+    "last_fetched": "2026-03-29T02:34:00.272Z"
   }
 }
