@@ -1,8 +1,21 @@
 {
-  "total": 251,
+  "total": 252,
   "source": "Federal Register API",
-  "last_updated": "2026-03-30",
+  "last_updated": "2026-03-31",
   "orders": [
+    {
+      "document_number": "2026-06286",
+      "eo_number": "14398",
+      "title": "Addressing DEI Discrimination by Federal Contractors",
+      "signing_date": "2026-03-26",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06286/addressing-dei-discrimination-by-federal-contractors",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Civil Rights"
+    },
     {
       "document_number": "2026-06075",
       "eo_number": "14397",
