@@ -1,8 +1,21 @@
 {
-  "total": 252,
+  "total": 253,
   "source": "Federal Register API",
-  "last_updated": "2026-04-02",
+  "last_updated": "2026-04-03",
   "orders": [
+    {
+      "document_number": "2026-06601",
+      "eo_number": "14399",
+      "title": "Ensuring Citizenship Verification and Integrity in Federal Elections",
+      "signing_date": "2026-03-31",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06601/ensuring-citizenship-verification-and-integrity-in-federal-elections",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-06286",
       "eo_number": "14398",
