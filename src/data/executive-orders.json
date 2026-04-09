@@ -1,8 +1,34 @@
 {
-  "total": 253,
+  "total": 255,
   "source": "Federal Register API",
-  "last_updated": "2026-04-08",
+  "last_updated": "2026-04-09",
   "orders": [
+    {
+      "document_number": "R1-2026-03829",
+      "eo_number": "14388",
+      "title": "Continuing the Suspension of Duty-Free De Minimis Treatment for All Countries",
+      "signing_date": "2026-02-20",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/04/09/R1-2026-03829/continuing-the-suspension-of-duty-free-de-minimis-treatment-for-all-countries",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Trade & Tariffs"
+    },
+    {
+      "document_number": "2026-06961",
+      "eo_number": "14400",
+      "title": "Urgent National Action To Save College Sports",
+      "signing_date": "2026-04-03",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/04/09/2026-06961/urgent-national-action-to-save-college-sports",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-06601",
       "eo_number": "14399",
