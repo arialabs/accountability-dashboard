@@ -1,8 +1,21 @@
 {
-  "total": 258,
+  "total": 259,
   "source": "Federal Register API",
-  "last_updated": "2026-05-06",
+  "last_updated": "2026-05-07",
   "orders": [
+    {
+      "document_number": "2026-09173",
+      "eo_number": "14404",
+      "title": "Imposing Sanctions on Those Responsible for Repression in Cuba and for Threats to United States National Security and Foreign Policy",
+      "signing_date": "2026-05-01",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/05/07/2026-09173/imposing-sanctions-on-those-responsible-for-repression-in-cuba-and-for-threats-to-united-states",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "National Security"
+    },
     {
       "document_number": "2026-08908",
       "eo_number": "14403",
