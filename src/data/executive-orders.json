@@ -1,8 +1,21 @@
 {
-  "total": 263,
+  "total": 264,
   "source": "Federal Register API",
-  "last_updated": "2026-06-04",
+  "last_updated": "2026-06-05",
   "orders": [
+    {
+      "document_number": "2026-11415",
+      "eo_number": "14409",
+      "title": "Promoting Advanced Artificial Intelligence Innovation and Security",
+      "signing_date": "2026-06-02",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/06/05/2026-11415/promoting-advanced-artificial-intelligence-innovation-and-security",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "National Security"
+    },
     {
       "document_number": "2026-11181",
       "eo_number": "14408",
