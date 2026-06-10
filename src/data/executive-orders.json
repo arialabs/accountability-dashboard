@@ -1,8 +1,34 @@
 {
-  "total": 264,
+  "total": 266,
   "source": "Federal Register API",
-  "last_updated": "2026-06-09",
+  "last_updated": "2026-06-10",
   "orders": [
+    {
+      "document_number": "2026-11595",
+      "eo_number": "14411",
+      "title": "Strengthening Customs Enforcement",
+      "signing_date": "2026-06-03",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/06/10/2026-11595/strengthening-customs-enforcement",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
+    {
+      "document_number": "2026-11594",
+      "eo_number": "14410",
+      "title": "Implementing Schedule Policy/Career in the Excepted Service",
+      "signing_date": "2026-06-03",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/06/10/2026-11594/implementing-schedule-policycareer-in-the-excepted-service",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-11415",
       "eo_number": "14409",
