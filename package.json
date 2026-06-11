@@ -17,7 +17,6 @@
     "donor-percentiles": "tsx scripts/compute-donor-percentiles.ts",
     "pipeline": "tsx pipeline/index.ts",
     "pipeline:members": "tsx pipeline/sources/congress-members.ts",
-    "pipeline:votes": "tsx pipeline/sources/propublica-votes.ts",
     "votes:sync": "tsx pipeline/sync-votes.ts",
     "votes:sync:test": "tsx pipeline/sync-votes.ts --test",
     "usaspending:sync": "tsx pipeline/sync-usaspending.ts",

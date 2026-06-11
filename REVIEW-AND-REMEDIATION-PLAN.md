@@ -4,6 +4,32 @@
 **Scope:** Full-application audit — data integrity, scoring logic, displays, pipeline, links, and content sourcing.
 **Goal:** Make this a trustworthy source for accountability of elected representatives.
 
+## Status
+
+**Phase 0 implemented in this branch (2026-06-11):**
+- ✅ 0.1 Alignment scores regenerated with v3 methodology (fixed ICPSR→bioguide vote-key
+  mapping bug in `scripts/compute-scores.ts` that made v3 produce zero comparisons);
+  wired into weekly data refresh. Spot-check: Ben Cline went from a nonsensical 2%/58%
+  to 97% — consistent with his 98.3% party loyalty.
+- ✅ 0.2 Deleted broken v2 scorer + dead ProPublica votes source; README sources updated.
+- ✅ 0.3 Trade counts now include "Sale (Full)"/"Sale (Partial)" as sales; exchanges shown
+  as "other" so the stat cards add up.
+- ✅ 0.4 Methodology page now renders factor weights from the same constants the scoring
+  code uses (`FACTOR_WEIGHTS`), with the no-bipartisan redistribution documented; guard
+  test added (`src/lib/data-integrity.test.ts`).
+- ✅ 0.5 Executive actions with placeholder (`example.com`) citations are filtered out at
+  render time with an honest empty state; dead import of fabricated presidential-promises
+  data removed (file retained for future re-sourcing, no longer referenced).
+- ✅ 0.6 Approval card: removed false "updated weekly" claim, shows real last-updated date,
+  adds a staleness warning past 14 days, and shows the undecided remainder so bars sum to 100%.
+- ✅ 0.7 Top-captured panel regenerated from current FEC data via new
+  `scripts/compute-top-captured.ts` (with provenance metadata); footer cycle label now
+  comes from the data. Previous file disagreed with current finance data for 48/50 entries.
+- ✅ P3.4 Navigation now links Supreme Court directly to the live `/judicial/scotus` page
+  (removed incorrect "Coming Soon" badge).
+
+**Remaining:** Phases 1-3 below.
+
 ---
 
 ## 1. What the application is

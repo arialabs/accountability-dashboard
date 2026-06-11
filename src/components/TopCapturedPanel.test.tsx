@@ -40,7 +40,7 @@ describe("TopCapturedPanel", () => {
 
   it("shows source attribution in footer", () => {
     render(<TopCapturedPanel />);
-    expect(screen.getByText(/FEC 2022 cycle/i)).toBeTruthy();
+    expect(screen.getByText(/Source: FEC.*Leadership excluded/i)).toBeTruthy();
   });
 
   it("handles geolocation failure gracefully", async () => {

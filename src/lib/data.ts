@@ -28,7 +28,7 @@ interface NotableMisalignment {
   topic: string;
   stated_stance: string;
   actual_vote: string;
-  expected_vote: string;
+  expected_direction: string;
 }
 
 export interface AlignmentScore {
@@ -427,7 +427,9 @@ export function getMemberDisclosures(bioguideId: string): FinancialDisclosure[] 
 
 // Get alignment score for a member
 export function getMemberAlignment(bioguideId: string): AlignmentScore | null {
-  const alignment = (alignmentData as AlignmentScore[]).find(
+  // Cast through unknown: members with insufficient data have an empty
+  // category_breakdown, so the JSON's inferred type doesn't match directly.
+  const alignment = (alignmentData as unknown as AlignmentScore[]).find(
     a => a.bioguide_id === bioguideId
   );
   return alignment || null;
@@ -435,12 +437,12 @@ export function getMemberAlignment(bioguideId: string): AlignmentScore | null {
 
 // Get all alignment scores
 export function getAllAlignmentScores(): AlignmentScore[] {
-  return alignmentData as AlignmentScore[];
+  return alignmentData as unknown as AlignmentScore[];
 }
 
 // Get alignment score ranking for a member
 export function getAlignmentRanking(bioguideId: string): { rank: number; total: number } | null {
-  const scores = alignmentData as AlignmentScore[];
+  const scores = alignmentData as unknown as AlignmentScore[];
   const index = scores.findIndex(a => a.bioguide_id === bioguideId);
   if (index === -1) return null;
   return { rank: index + 1, total: scores.length };

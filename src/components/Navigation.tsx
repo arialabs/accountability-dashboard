@@ -35,7 +35,7 @@ const dropdowns: NavDropdown[] = [
     label: 'Judicial',
     href: '/judicial',
     items: [
-      { href: '/judicial/supreme-court', label: 'Supreme Court', badge: 'Coming Soon' },
+      { href: '/judicial/scotus', label: 'Supreme Court' },
       { href: '/judicial/federal-courts', label: 'Federal Courts', badge: 'Coming Soon' },
     ],
   },

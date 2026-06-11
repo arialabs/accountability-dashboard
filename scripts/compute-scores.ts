@@ -51,6 +51,9 @@ async function main() {
   const posData = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "positions.json"), "utf-8"));
   const rawVotes = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "key-votes.json"), "utf-8"));
   const rawMembers = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "members.json"), "utf-8"));
+  const icpsrToBioguide: Record<string, string> = JSON.parse(
+    fs.readFileSync(path.join(DATA_DIR, "icpsr-to-bioguide.json"), "utf-8")
+  );
 
   const memberPositions = (posData.members ?? posData).map((m: any) => ({
     bioguide_id: m.bioguide_id,
@@ -62,11 +65,18 @@ async function main() {
     })),
   }));
 
+  // key-votes.json keys each vote record by ICPSR (Voteview) ID; positions and
+  // members are keyed by bioguide ID, so remap before scoring.
   const keyVotes = rawVotes.map((v: any) => ({
     id: v.id,
     category: v.category,
     date: v.date,
-    votes: v.votes,
+    votes: Object.fromEntries(
+      Object.entries(v.votes as Record<string, string>).flatMap(([icpsr, vote]) => {
+        const bioguideId = icpsrToBioguide[icpsr];
+        return bioguideId ? [[bioguideId, vote]] : [];
+      })
+    ),
   }));
 
   const allMembers = rawMembers.map((m: any) => ({

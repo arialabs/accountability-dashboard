@@ -25,7 +25,7 @@ Built for citizens who demand transparency from their elected representatives.
 | Source | What We Get |
 |--------|-------------|
 | [Congress.gov API](https://api.congress.gov/) | Members, votes, bills |
-| [ProPublica Congress API](https://www.propublica.org/datastore/api/propublica-congress-api) | Voting records, bill details |
+| [Voteview](https://voteview.com/) | Historical roll calls, ideology scores |
 | [OpenSecrets](https://www.opensecrets.org/open-data) | Campaign finance (bulk data) |
 | [FEC API](https://api.open.fec.gov/) | Detailed contributions |
 | [USASpending.gov API](https://api.usaspending.gov/) | Agency FY budgets, program changes, contracts/grants awards |
