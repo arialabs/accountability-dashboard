@@ -113,7 +113,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://reps.arialabs.ai";
 
 export const metadata: Metadata = {
   title: { absolute: "Rep Accountability Dashboard | Track What Politicians Say vs Do" },
-  description: "Follow the money. Expose the votes. Track campaign finance, voting records, and financial disclosures for all 535 members of Congress and 26 executive branch officials — with data from official government sources.",
+  description: `Follow the money. Expose the votes. Track campaign finance, voting records, and financial disclosures for all ${homeStatsData.site_stats.members_total} members of Congress and ${homeStatsData.site_stats.executive_officials} executive branch officials — with data from official government sources.`,
   openGraph: {
     title: "Rep Accountability Dashboard | Track What Politicians Say vs Do",
     description: "Follow the money. Expose the votes. Track Congress and the Executive branch with official government data.",
@@ -280,7 +280,7 @@ const DATA_INSIGHTS = [
   {
     title: "Votes and policy outcomes",
     description: "Congress votes connected to bill topics so users can track consistency over time.",
-    metric: "2.4M+ vote records tracked",
+    metric: `${Math.floor(homeStatsData.site_stats.votes_analyzed / 1000)}K+ vote records analyzed`,
   },
   {
     title: "Disclosures and conflicts",
@@ -297,7 +297,7 @@ const ADDITIONAL_DEEP_DIVES = [
     title: "Dark Money: PAC Flows 2020–2024",
     description:
       "Tracing undisclosed political contributions through Super PACs, 501(c)(4)s, and shell LLCs across four election cycles.",
-    stats: [{ value: "$3.8B", label: "Total tracked", indicator: "flag" as const }, { value: "1,200+", label: "PAC entities", indicator: "neutral" as const }],
+    stats: [] as { value: string; label: string; indicator: "flag" | "neutral" | "up" }[],
     badge: "Coming Soon",
     badgeStyle: "stamp-trending" as const,
   },
@@ -307,7 +307,7 @@ const ADDITIONAL_DEEP_DIVES = [
     title: "Congressional Trades Database",
     description:
       "Every stock trade disclosed under the STOCK Act — cross-referenced against legislation the member voted on within 90 days.",
-    stats: [{ value: "72K+", label: "Trades logged", indicator: "up" as const }, { value: "535", label: "Members covered", indicator: "neutral" as const }],
+    stats: [] as { value: string; label: string; indicator: "flag" | "neutral" | "up" }[],
     badge: "Coming Soon",
     badgeStyle: "stamp-filed" as const,
   },
@@ -469,7 +469,7 @@ export default function Home() {
                     className="text-2xl font-bold"
                     style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)" }}
                   >
-                    570
+                    {siteStatsData.officials_total}
                   </span>
                   <span
                     className="text-sm"
@@ -484,7 +484,7 @@ export default function Home() {
                     className="text-2xl font-bold"
                     style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)" }}
                   >
-                    2.4M+
+                    {`${Math.floor(siteStatsData.votes_analyzed / 1000)}K+`}
                   </span>
                   <span
                     className="text-sm"
@@ -672,7 +672,7 @@ export default function Home() {
                 className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold"
                 style={{ color: "var(--accent)", fontFamily: "'JetBrains Mono', monospace" }}
               >
-                All 535 members <ArrowRightIcon />
+                All {siteStatsData.members_total} members <ArrowRightIcon />
               </Link>
             </div>
           </ScrollFadeIn>
@@ -758,7 +758,7 @@ export default function Home() {
               className="inline-flex items-center gap-1.5 text-sm font-semibold"
               style={{ color: "var(--accent)", fontFamily: "'JetBrains Mono', monospace" }}
             >
-              All 535 members <ArrowRightIcon />
+              All {siteStatsData.members_total} members <ArrowRightIcon />
             </Link>
           </div>
         </div>
@@ -1267,7 +1267,7 @@ export default function Home() {
                   style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
                 >
                   Congress makes the laws. Track voting records, campaign finance, and donor influence
-                  for all 535 members.
+                  for all {siteStatsData.members_total} members.
                 </p>
 
                 <span className="card-cta">
@@ -1530,19 +1530,21 @@ export default function Home() {
                       {dive.description}
                     </p>
 
-                    {/* AccountabilityDataCard stats row */}
-                    <div className="flex gap-4 pt-4 border-t border-slate-100">
-                      {dive.stats.map((s) => (
-                        <AccountabilityDataCard
-                          key={s.label}
-                          value={s.value}
-                          label={s.label}
-                          indicator={s.indicator}
-                          light
-                          className="flex-1"
-                        />
-                      ))}
-                    </div>
+                    {/* AccountabilityDataCard stats row — only when real stats exist */}
+                    {dive.stats.length > 0 && (
+                      <div className="flex gap-4 pt-4 border-t border-slate-100">
+                        {dive.stats.map((s) => (
+                          <AccountabilityDataCard
+                            key={s.label}
+                            value={s.value}
+                            label={s.label}
+                            indicator={s.indicator}
+                            light
+                            className="flex-1"
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </ScrollFadeIn>

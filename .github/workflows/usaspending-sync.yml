@@ -16,25 +16,32 @@ on:
         required: false
         default: '30'
 
+concurrency:
+  group: data-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
 jobs:
   sync-usaspending:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 45
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 9
+          node-version: '22'
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -52,15 +59,46 @@ jobs:
           echo "$CMD"
           eval "$CMD"
 
+      - name: Report sync status
+        run: |
+          STATUS=$(jq -r '.status' src/data/usaspending-sync-status.json)
+          ERRORS=$(jq -r '[.errors[] | "\(.stage): \(.message)"] | join("; ")' src/data/usaspending-sync-status.json)
+          {
+            echo "## USASpending sync: $STATUS"
+            jq -r '"- Agencies with data: \(.total_agencies_with_data)/\(.total_agencies_processed)\n- Awards stored: \(.total_awards_stored)\n- Errors: \(.errors | length)"' src/data/usaspending-sync-status.json
+            if [ -n "$ERRORS" ]; then echo "- Details: $ERRORS"; fi
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$STATUS" = "partial" ]; then
+            echo "::warning::USASpending sync completed partially: $ERRORS"
+          elif [ "$STATUS" = "error" ]; then
+            echo "::error::USASpending sync failed: $ERRORS"
+            exit 1
+          fi
+
       - name: Commit updated USASpending store
+        id: commit
         run: |
           if git diff --quiet src/data/usaspending.json src/data/usaspending-sync-status.json; then
             echo "No USASpending changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/data/usaspending.json src/data/usaspending-sync-status.json
           git commit -m "chore(data): sync USASpending agency budgets"
+          git pull --rebase origin main
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger deploy with fresh data
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main --repo "$GITHUB_REPOSITORY"
+
+      - name: Notify on failure
+        if: failure()
+        uses: ./.github/actions/notify-failure
+        with:
+          workflow-name: USASpending Sync

@@ -24,8 +24,12 @@ const members: Array<{
   party_loyalty_pct?: number | null;
   votes_cast?: number;
 }> = read("members.json");
-const keyVotes: Array<{ votes: Record<string, string> }> = read("key-votes.json");
+const keyVotes: Array<{ date?: string; votes: Record<string, string> }> =
+  read("key-votes.json");
 const cabinet: { members: unknown[] } = read("cabinet.json");
+const scotus: unknown[] = read("scotus.json");
+const liveVotes: { roll_calls: Array<{ roll_call_id: string; vote_date: string }> } =
+  read("live-votes.json");
 const leadershipFinance: Array<{
   bioguide_id: string;
   name: string;
@@ -55,6 +59,34 @@ const votesAnalyzed = keyVotes.reduce(
   (sum, v) => sum + Object.keys(v.votes).length,
   0
 );
+
+// Roll-call activity for the hero sparkline: count of roll calls per month
+// over the trailing 12 months, normalized to 0-100 for rendering.
+function activitySparkline(): number[] {
+  const counts = new Array(12).fill(0);
+  const now = new Date();
+
+  // key-votes (Voteview) lags by months; live-votes covers recent weeks.
+  // Combine both for a complete trailing-12-month picture.
+  const allDates = [
+    ...keyVotes.map((v) => v.date),
+    ...liveVotes.roll_calls.map((rc) => rc.vote_date),
+  ];
+
+  for (const date of allDates) {
+    if (!date) continue;
+    const d = new Date(date);
+    if (Number.isNaN(d.getTime())) continue;
+    const monthsAgo =
+      (now.getFullYear() - d.getFullYear()) * 12 + (now.getMonth() - d.getMonth());
+    if (monthsAgo >= 0 && monthsAgo < 12) {
+      counts[11 - monthsAgo] += 1;
+    }
+  }
+
+  const max = Math.max(...counts, 1);
+  return counts.map((c) => Math.round((c / max) * 100));
+}
 
 // ── Leadership spotlight stats ───────────────────────────────────────────────
 
@@ -127,9 +159,13 @@ const output = {
   site_stats: {
     members_total: members.length,
     executive_officials: (cabinet.members?.length ?? 0) + 2, // + President, VP
+    scotus_justices: scotus.length,
+    officials_total:
+      members.length + (cabinet.members?.length ?? 0) + 2 + scotus.length,
     votes_analyzed: votesAnalyzed,
     independent_reps: independentReps.length,
     independence_loyalty_cutoff: INDEPENDENCE_LOYALTY_CUTOFF,
+    activity_sparkline: activitySparkline(),
   },
   spotlight: {
     featured: {

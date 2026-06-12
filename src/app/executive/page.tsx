@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui";
 import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
 import cabinetData from "@/data/cabinet.json";
+import { dogeData } from "@/data/doge";
 import { calculateConflictScore, getConflictSeverityLabel } from "@/lib/executive-data";
 
 /** Pre-compute conflict score labels keyed by member id */
@@ -263,7 +264,9 @@ export default function ExecutiveBranch() {
                   Elon Musk
                 </h3>
                 <p className="text-slate-600 mt-1">
-                  352K workers affected · 65+ lawsuits · $206B claimed savings
+                  {Math.round(dogeData.overview.totalWorkersAffected / 1000)}K workers affected
+                  {" · "}{dogeData.overview.lawsuitsFiled}+ lawsuits
+                  {" · "}{dogeData.keyStats.find((s) => s.label === "Claimed Savings")?.value ?? "—"} claimed savings
                 </p>
               </div>
 

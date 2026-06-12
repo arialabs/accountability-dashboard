@@ -5,27 +5,32 @@ on:
     - cron: '0 0 * * 0'  # Sunday midnight UTC
   workflow_dispatch:
 
+concurrency:
+  group: data-sync
+  cancel-in-progress: false
+
 permissions:
   contents: write
+  actions: write
+  issues: write
 
 jobs:
   refresh-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 9
+        uses: pnpm/action-setup@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'pnpm'
+          node-version: '22'
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -47,6 +52,8 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: npx tsx scripts/fetch-bill-summaries.ts
 
+      # Derived data — order matters: scores/top-captured/home-stats read the
+      # files refreshed above.
       - name: Compute derived data
         run: |
           node scripts/compute-party-loyalty.mjs
@@ -56,15 +63,30 @@ jobs:
           npx tsx scripts/compute-top-captured.ts
           npx tsx scripts/compute-home-stats.ts
 
-      # Commit and push if data changed
       - name: Commit data updates
+        id: commit
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/data/ public/data/
           if git diff --cached --quiet; then
             echo "No data changes"
-          else
-            git commit -m "chore(data): weekly data refresh [skip ci]"
-            git push
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(data): weekly data refresh"
+          git pull --rebase origin main
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger deploy with fresh data
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main --repo "$GITHUB_REPOSITORY"
+
+      - name: Notify on failure
+        if: failure()
+        uses: ./.github/actions/notify-failure
+        with:
+          workflow-name: Weekly Data Refresh

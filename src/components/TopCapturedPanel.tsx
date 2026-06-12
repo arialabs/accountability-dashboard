@@ -99,7 +99,7 @@ export default function TopCapturedPanel() {
           className="text-xs font-semibold shrink-0 flex items-center gap-1"
           style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-secondary)" }}
         >
-          All 535 →
+          All members →
         </Link>
       </div>
 

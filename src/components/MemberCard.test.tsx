@@ -68,6 +68,9 @@ const baseMember: Member = {
   bills_cosponsored: 20,
   votes_cast: 400,
   photo_url: null,
+  committees: [],
+  party_loyalty_pct: 0,
+  ideology_score: null,
 };
 
 describe('MemberCard — Donor Verdict Badge', () => {

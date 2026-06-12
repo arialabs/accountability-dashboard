@@ -50,8 +50,38 @@
   "2024 cycle" labels on 2026-cycle data; Emmer's donor-sector chart ranked Banking
   first when Telecom/Defense now lead).
 
-**Remaining:** 1.4-1.7 (provenance metadata + staleness UI, top-contributor
-generalization, orphan-file triage), Phases 2-3 below.
+**Hardcoded-value elimination + CI/CD rebuild (2026-06-12):**
+- ✅ Eliminated every remaining hardcoded data value found by an exhaustive UI
+  sweep: hero "2.4M+ votes / 535 members / 570 officials" (actual computed:
+  48.7K votes, 538 members, 565 officials), DevelopmentBanner counts,
+  "330 million Americans" population claim, the DOGE impact line on /executive
+  (now interpolated from `src/data/doge.ts`), homepage metadata description,
+  "All 535 members" links, and the fabricated stats ("$3.8B", "1,200+",
+  "72K+") on Coming-Soon deep-dive cards (numbers removed; cards keep their
+  Coming-Soon framing). The hero sparkline now plots real monthly roll-call
+  activity instead of a simulated array.
+- ✅ Deleted dead `VoteHistorySection` + `getMemberVotesClient` and removed the
+  `NEXT_PUBLIC_CONGRESS_API_KEY`/`NEXT_PUBLIC_FEC_API_KEY` build args that were
+  embedding secret API keys into the public client bundle.
+- ✅ CI/CD rebuilt:
+  - New `ci.yml` — typecheck + 733 tests + full static-export build on every
+    PR and push to main (the repo previously had **no** CI at all).
+  - `deploy.yml` — frozen lockfile, concurrency guard, no secret leakage.
+  - All five data-sync workflows rebuilt on one pattern: rebase-before-push,
+    job summaries with sync status (warn on partial, fail on error), an
+    explicit deploy dispatch after committing (GITHUB_TOKEN pushes never
+    trigger workflows, so synced data previously sat undeployed on the static
+    site), and automatic GitHub-issue alerting on failure
+    (`.github/actions/notify-failure`, label `pipeline-failure`).
+  - EO sync's inline Python moved to `scripts/fetch-executive-orders.py`
+    (verified against the live Federal Register API).
+  - `packageManager: pnpm@10.33.0` pinned (workflows were forcing pnpm 9);
+    Node 22 across all workflows; broken `next lint` script (removed in
+    Next 16) replaced with a `typecheck` script; pre-existing test-file type
+    errors fixed so `tsc --noEmit` is clean.
+
+**Remaining:** 1.4-1.5 (provenance metadata + staleness UI), 1.6
+(top-contributor generalization), 1.7 (orphan-file triage), Phases 2-3 below.
 
 ---
 

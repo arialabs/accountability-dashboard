@@ -2,15 +2,27 @@
 
 /**
  * HeroSparkline — CSS-only animated sparkline for the hero section.
- * Shows a simulated voting trend line with an animated draw-on effect.
+ * Stats and the activity trend come from home-stats.json, generated at build
+ * time by scripts/compute-home-stats.ts from the real vote datasets.
  * Pure SVG + CSS, no runtime JS required.
  */
 
-// Simulated 12-session voting activity data (normalized 0–100)
-const POINTS = [32, 48, 41, 67, 58, 72, 63, 85, 71, 88, 79, 94];
+import homeStatsData from '@/data/home-stats.json';
+
+// Monthly roll-call activity over the trailing 12 months (normalized 0–100)
+const POINTS: number[] = homeStatsData.site_stats.activity_sparkline;
+const VOTES_ANALYZED: number = homeStatsData.site_stats.votes_analyzed;
+const MEMBERS_TOTAL: number = homeStatsData.site_stats.members_total;
+
 const W = 200;
 const H = 48;
 const PAD = 4;
+
+function formatCompact(value: number): string {
+  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1)}M`;
+  if (value >= 1_000) return `${Math.round(value / 1_000)}K+`;
+  return String(value);
+}
 
 function toPath(points: number[]): string {
   const xs = points.map((_, i) => PAD + (i / (points.length - 1)) * (W - PAD * 2));
@@ -48,10 +60,10 @@ export default function HeroSparkline() {
           className="text-3xl font-bold leading-none"
           style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--accent)" }}
         >
-          2.4M+
+          {formatCompact(VOTES_ANALYZED)}
         </div>
         <div className="text-xs uppercase tracking-widest mt-1" style={{ color: "var(--text-secondary)" }}>
-          Votes tracked
+          Votes analyzed
         </div>
       </div>
 
@@ -87,13 +99,13 @@ export default function HeroSparkline() {
           {/* End dot */}
           <circle
             cx={PAD + (W - PAD * 2)}
-            cy={PAD + (1 - (POINTS[POINTS.length - 1] - Math.min(...POINTS)) / (Math.max(...POINTS) - Math.min(...POINTS))) * (H - PAD * 2)}
+            cy={PAD + (1 - (POINTS[POINTS.length - 1] - Math.min(...POINTS)) / ((Math.max(...POINTS) - Math.min(...POINTS)) || 1)) * (H - PAD * 2)}
             r={3.5}
             fill="var(--accent)"
           />
         </svg>
         <div className="text-xs" style={{ color: "var(--text-secondary)" }}>
-          Voting activity — 119th Congress
+          Roll calls per month — trailing 12 months
         </div>
       </div>
 
@@ -104,7 +116,7 @@ export default function HeroSparkline() {
           className="text-xl font-bold leading-none"
           style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--text-primary)" }}
         >
-          535
+          {MEMBERS_TOTAL}
         </div>
         <div className="text-xs uppercase tracking-widest mt-1" style={{ color: "var(--text-secondary)" }}>
           Members

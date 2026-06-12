@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-12T18:23:37.541Z",
+    "generated_at": "2026-06-12T18:49:43.388Z",
     "sources": [
       "members.json (Congress.gov / Voteview)",
       "key-votes.json (Voteview)",
@@ -12,9 +12,25 @@
   "site_stats": {
     "members_total": 538,
     "executive_officials": 18,
+    "scotus_justices": 9,
+    "officials_total": 565,
     "votes_analyzed": 48700,
     "independent_reps": 18,
-    "independence_loyalty_cutoff": 90
+    "independence_loyalty_cutoff": 90,
+    "activity_sparkline": [
+      100,
+      10,
+      77,
+      56,
+      28,
+      33,
+      56,
+      18,
+      0,
+      0,
+      0,
+      18
+    ]
   },
   "spotlight": {
     "featured": {

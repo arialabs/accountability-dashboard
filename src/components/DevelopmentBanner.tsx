@@ -1,6 +1,16 @@
 'use client';
 
 import voteSyncStatus from '@/data/vote-sync-status.json';
+import homeStatsData from '@/data/home-stats.json';
+
+const MEMBERS_TOTAL = homeStatsData.site_stats.members_total;
+const VOTES_ANALYZED = homeStatsData.site_stats.votes_analyzed;
+
+function formatCompact(value: number): string {
+  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1)}M`;
+  if (value >= 1_000) return `${Math.round(value / 1_000)}K+`;
+  return String(value);
+}
 
 // Format the last success date as "Mar 5, 2026"
 function formatSyncDate(isoDate: string): string {
@@ -45,7 +55,7 @@ export default function DevelopmentBanner() {
         </span>
         <span className="text-slate-300 hidden sm:inline" aria-hidden="true">·</span>
         <span className="text-[11px] hidden sm:inline" style={{ color: "#64748B" }}>
-          535 members · 2.4M+ votes
+          {MEMBERS_TOTAL} members · {formatCompact(VOTES_ANALYZED)} votes analyzed
         </span>
       </div>
     </div>
