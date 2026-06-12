@@ -1,5 +1,10 @@
 /**
- * Fetch and normalize voting records from Congress.gov API.
+ * Fetch and normalize voting records.
+ *
+ * House votes come from the Congress.gov API (house-vote beta endpoint).
+ * Senate votes come from senate.gov roll-call XML — the Congress.gov API
+ * does not publish Senate roll calls (the old /senate-vote endpoint never
+ * existed and returned 404 on every nightly sync).
  *
  * This module powers a lightweight JSON store in src/data/live-votes.json,
  * with sync status persisted in src/data/vote-sync-status.json.
@@ -10,6 +15,9 @@ import * as path from 'path';
 import { parseStringPromise } from 'xml2js';
 
 const CONGRESS_API_BASE = 'https://api.congress.gov/v3';
+const SENATE_GOV_BASE = 'https://www.senate.gov/legislative/LIS';
+const LEGISLATORS_CURRENT_URL =
+  'https://unitedstates.github.io/congress-legislators/legislators-current.json';
 const CURRENT_CONGRESS = 119;
 
 type VotePosition = 'Yea' | 'Nay' | 'Present' | 'Not Voting' | 'Unknown';
@@ -56,7 +64,7 @@ export interface VoteSyncStatus {
 export interface LiveVotesStore {
   meta: {
     generated_at: string;
-    source: 'congress.gov';
+    source: string; // 'congress.gov + senate.gov'
     congress: number;
     lookback_days: number;
     total_roll_calls: number;
@@ -84,8 +92,7 @@ interface SenateVote {
   session: number;
   result?: string;
   question?: string;
-  billNumber?: string;
-  billType?: string;
+  issue?: string;
   voteUrl?: string;
   date?: string;
 }
@@ -234,14 +241,136 @@ export async function fetchRecentHouseVotes(
   return data.houseRollCallVotes || [];
 }
 
+/** First calendar year of a given Congress (119th → 2025). */
+function congressFirstYear(congress: number): number {
+  return (congress - 1) * 2 + 1789;
+}
+
+/** Senate session (1 or 2) for a calendar year within a Congress. */
+function senateSessionForYear(congress: number, year: number): 1 | 2 {
+  return year > congressFirstYear(congress) ? 2 : 1;
+}
+
+/** Parse senate.gov vote-menu dates like "11-Jun" using the menu's congress_year. */
+function parseSenateMenuDate(raw: string, year: number): string {
+  const parsed = new Date(`${raw.trim()}-${year}`);
+  if (Number.isNaN(parsed.getTime())) return todayIsoDate();
+  // Avoid timezone shifting the date by formatting the parts directly
+  const month = String(parsed.getMonth() + 1).padStart(2, '0');
+  const day = String(parsed.getDate()).padStart(2, '0');
+  return `${parsed.getFullYear()}-${month}-${day}`;
+}
+
+/** Coerce an xml2js node (string, or {_: text} when attributes exist) to text. */
+function xmlText(node: unknown): string {
+  if (typeof node === 'string') return node;
+  if (node && typeof node === 'object' && typeof (node as { _?: unknown })._ === 'string') {
+    return (node as { _: string })._;
+  }
+  return '';
+}
+
+export function senateVoteXmlUrl(congress: number, session: number, voteNumber: number): string {
+  const padded = String(voteNumber).padStart(5, '0');
+  return `${SENATE_GOV_BASE}/roll_call_votes/vote${congress}${session}/vote_${congress}_${session}_${padded}.xml`;
+}
+
+async function fetchXmlWithRetry(url: string, attempts = 3): Promise<string> {
+  let lastError: Error | null = null;
+  for (let i = 0; i < attempts; i += 1) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        if (response.status >= 500 || response.status === 429) {
+          await new Promise((resolve) => setTimeout(resolve, (i + 1) * 1000));
+          continue;
+        }
+        throw new Error(`senate.gov error: ${response.status} ${response.statusText}`);
+      }
+      return await response.text();
+    } catch (error) {
+      lastError = error as Error;
+      await new Promise((resolve) => setTimeout(resolve, (i + 1) * 1000));
+    }
+  }
+  throw lastError ?? new Error('Failed to fetch senate.gov response');
+}
+
+/**
+ * Fetch recent Senate roll calls from the senate.gov vote menu XML.
+ * Covers both sessions of the Congress when the lookback window spans a
+ * year boundary.
+ */
 export async function fetchRecentSenateVotes(
   congress = CURRENT_CONGRESS,
-  limit = 50,
-  offset = 0
+  lookbackDays = 7
 ): Promise<SenateVote[]> {
-  const url = `${CONGRESS_API_BASE}/senate-vote/${congress}?offset=${offset}&limit=${limit}&format=json`;
-  const data = await fetchJsonWithRetry<{ senateRollCallVotes?: SenateVote[] }>(url);
-  return data.senateRollCallVotes || [];
+  const now = new Date();
+  const cutoff = new Date(now.getTime() - lookbackDays * 24 * 60 * 60 * 1000);
+
+  const sessions = new Set<1 | 2>([
+    senateSessionForYear(congress, now.getFullYear()),
+    senateSessionForYear(congress, cutoff.getFullYear()),
+  ]);
+
+  const votes: SenateVote[] = [];
+
+  for (const session of sessions) {
+    const menuUrl = `${SENATE_GOV_BASE}/roll_call_lists/vote_menu_${congress}_${session}.xml`;
+    const menuXml = await fetchXmlWithRetry(menuUrl);
+    const parsed = await parseStringPromise(menuXml);
+
+    const summary = parsed?.vote_summary;
+    const year = parseInt(summary?.congress_year?.[0], 10) || congressFirstYear(congress) + session - 1;
+    const menuVotes = summary?.votes?.[0]?.vote || [];
+
+    for (const v of menuVotes) {
+      const voteNumber = parseInt(xmlText(v.vote_number?.[0]), 10);
+      if (!voteNumber) continue;
+
+      votes.push({
+        congress,
+        session,
+        rollCallNumber: voteNumber,
+        date: parseSenateMenuDate(xmlText(v.vote_date?.[0]), year),
+        question: xmlText(v.question?.[0]).trim(),
+        result: xmlText(v.result?.[0]).trim(),
+        issue: xmlText(v.issue?.[0]).trim(),
+        voteUrl: senateVoteXmlUrl(congress, session, voteNumber),
+      });
+    }
+  }
+
+  return votes.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+}
+
+/**
+ * Build a Senate LIS member ID → bioguide ID map from the maintained
+ * unitedstates/congress-legislators dataset. Senate roll-call XML
+ * identifies members only by LIS ID (e.g. "S428"), so last-name matching
+ * alone is unsafe (Tim Scott vs. Rick Scott).
+ */
+export async function fetchLisToBioguideMap(): Promise<Map<string, string>> {
+  const map = new Map<string, string>();
+  try {
+    const response = await fetch(LEGISLATORS_CURRENT_URL);
+    if (!response.ok) {
+      throw new Error(`legislators-current fetch failed: ${response.status}`);
+    }
+    const legislators = (await response.json()) as Array<{
+      id?: { bioguide?: string; lis?: string };
+    }>;
+    for (const legislator of legislators) {
+      const lis = legislator.id?.lis;
+      const bioguide = legislator.id?.bioguide;
+      if (lis && bioguide) map.set(lis, bioguide);
+    }
+  } catch (error) {
+    log('WARN', 'Could not fetch LIS→bioguide map; will fall back to name matching', {
+      message: error instanceof Error ? error.message : String(error),
+    });
+  }
+  return map;
 }
 
 export async function parseHouseRollCallXmlText(xmlText: string): Promise<NormalizedMemberVote[]> {
@@ -271,14 +400,22 @@ export async function parseHouseRollCallXML(xmlUrl: string): Promise<NormalizedM
   return parseHouseRollCallXmlText(await response.text());
 }
 
-export async function parseSenateRollCallXmlText(xmlText: string): Promise<NormalizedMemberVote[]> {
+export async function parseSenateRollCallXmlText(
+  xmlText: string,
+  lisToBioguide?: Map<string, string>
+): Promise<NormalizedMemberVote[]> {
   const parsed = await parseStringPromise(xmlText);
   const members = parsed['roll_call_vote']?.members?.[0]?.member || [];
 
   return members.map((m: any) => {
     const firstName = m.first_name?.[0] || '';
     const lastName = m.last_name?.[0] || '';
-    const bioguideId = m.bioguide_id?.[0] || m.lis_member_id?.[0] || '';
+    const lisId = m.lis_member_id?.[0] || '';
+    // senate.gov XML identifies members by LIS ID, not bioguide. Resolve via
+    // the supplied map; an unresolved member keeps an empty bioguide_id so the
+    // name-based fallback in syncRecentVotes can try (never store an LIS ID
+    // in the bioguide field).
+    const bioguideId = m.bioguide_id?.[0] || (lisId && lisToBioguide?.get(lisId)) || '';
 
     return {
       bioguide_id: bioguideId,
@@ -290,12 +427,12 @@ export async function parseSenateRollCallXmlText(xmlText: string): Promise<Norma
   });
 }
 
-export async function parseSenateRollCallXML(xmlUrl: string): Promise<NormalizedMemberVote[]> {
-  const response = await fetch(xmlUrl);
-  if (!response.ok) {
-    throw new Error(`Failed to fetch Senate XML: ${response.status} ${response.statusText}`);
-  }
-  return parseSenateRollCallXmlText(await response.text());
+export async function parseSenateRollCallXML(
+  xmlUrl: string,
+  lisToBioguide?: Map<string, string>
+): Promise<NormalizedMemberVote[]> {
+  const xmlText = await fetchXmlWithRetry(xmlUrl);
+  return parseSenateRollCallXmlText(xmlText, lisToBioguide);
 }
 
 function toHouseRollCall(vote: HouseVote, memberVotes: NormalizedMemberVote[]): NormalizedRollCall {
@@ -319,8 +456,11 @@ function toHouseRollCall(vote: HouseVote, memberVotes: NormalizedMemberVote[]): 
 }
 
 function toSenateRollCall(vote: SenateVote, memberVotes: NormalizedMemberVote[]): NormalizedRollCall {
-  const billId = vote.billNumber && vote.billType
-    ? `${vote.billType.toLowerCase()}${vote.billNumber}-${vote.congress}`
+  // The senate.gov menu "issue" field looks like "H.R. 7148", "S. 123", or
+  // "PN851-7" (nominations). Only legislation gets a bill_id.
+  const issueMatch = (vote.issue || '').match(/^(H\.?\s?R\.?|S\.?|H\.?\s?J\.?\s?Res\.?|S\.?\s?J\.?\s?Res\.?|H\.?\s?Con\.?\s?Res\.?|S\.?\s?Con\.?\s?Res\.?|H\.?\s?Res\.?|S\.?\s?Res\.?)\s*(\d+)$/i);
+  const billId = issueMatch
+    ? `${issueMatch[1].replace(/[.\s]/g, '').toLowerCase()}${issueMatch[2]}-${vote.congress}`
     : null;
 
   return {
@@ -407,7 +547,7 @@ export async function syncRecentVotes(options: SyncOptions = {}): Promise<SyncRe
   const existingStore = safeReadJson<LiveVotesStore>(outputPath, {
     meta: {
       generated_at: new Date(0).toISOString(),
-      source: 'congress.gov',
+      source: 'congress.gov + senate.gov',
       congress,
       lookback_days: lookbackDays,
       total_roll_calls: 0,
@@ -472,21 +612,19 @@ export async function syncRecentVotes(options: SyncOptions = {}): Promise<SyncRe
   }
 
   try {
-    log('INFO', 'Fetching recent Senate votes', { congress, lookbackDays });
-    const senateVotes = await fetchRecentSenateVotes(congress, 75);
+    log('INFO', 'Fetching recent Senate votes from senate.gov', { congress, lookbackDays });
+    const [senateVotes, lisToBioguide] = await Promise.all([
+      fetchRecentSenateVotes(congress, lookbackDays),
+      fetchLisToBioguideMap(),
+    ]);
 
     for (const vote of senateVotes) {
       try {
         const voteDate = parseIsoDate(vote.date);
         if (!isWithinLookback(voteDate, lookbackDays)) continue;
+        if (!vote.voteUrl) continue;
 
-        const voteUrl = vote.voteUrl || '';
-        const xmlUrl = voteUrl.includes('/vote/')
-          ? voteUrl.replace('/vote/', '/vote/vote_xml/')
-          : '';
-        if (!xmlUrl) continue;
-
-        const parsedVotes = await parseSenateRollCallXML(xmlUrl);
+        const parsedVotes = await parseSenateRollCallXML(vote.voteUrl, lisToBioguide);
         const withResolvedIds = resolveMissingBioguideIds(parsedVotes, membersByLastName);
         const deduped = dedupeMemberVotes(withResolvedIds);
 
@@ -510,7 +648,7 @@ export async function syncRecentVotes(options: SyncOptions = {}): Promise<SyncRe
   const store: LiveVotesStore = {
     meta: {
       generated_at: new Date().toISOString(),
-      source: 'congress.gov',
+      source: 'congress.gov + senate.gov',
       congress,
       lookback_days: lookbackDays,
       total_roll_calls: mergedRollCalls.length,

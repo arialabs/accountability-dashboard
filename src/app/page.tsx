@@ -10,6 +10,7 @@ import { generateGovernmentOrgSchema, generateBreadcrumbSchema, structuredDataSc
 import LeadershipSpotlight from "@/components/LeadershipSpotlight";
 import TopCapturedPanel from "@/components/TopCapturedPanel";
 import leadershipFinanceData from "@/data/leadership-finance.json";
+import homeStatsData from "@/data/home-stats.json";
 import scandalsData from "@/data/scandals.json";
 import keyVotesData from "@/data/key-votes.json";
 import bioguideToIcpsrData from "@/data/bioguide-to-icpsr.json";
@@ -167,31 +168,40 @@ function ArrowRightIcon({ className = "w-4 h-4" }: { className?: string }) {
 }
 
 // ── Trending Spotlight Data ──────────────────────────────────────────────────
-// Sourced from leadership-scrutiny.json + leadership-donors.json (FEC data)
-// Featured: Tom Emmer — House Majority Whip, top PAC donors are the industries he regulates
-// Supporting: John Thune (most caucus breaks) + Katherine Clark (highest PAC%)
+// Editorial framing is authored here; every number is interpolated from
+// home-stats.json (generated at build time by scripts/compute-home-stats.ts
+// from FEC + Voteview data) so the figures can't silently go stale.
+const SPOTLIGHT_BAR_COLORS = ["#B91C1C", "#D97706", "#64748B", "#64748B", "#64748B"];
+
+const fmtMillions = (v: number | null) =>
+  v === null ? "—" : `$${(v / 1_000_000).toFixed(1)}M`;
+
+const featuredStats = homeStatsData.spotlight.featured;
+const [thuneStats, clarkStats] = homeStatsData.spotlight.supporting;
+
 const SPOTLIGHT_FEATURED = {
   party: "R" as const,
   name: "Tom Emmer",
   role: "House Majority Whip · MN-6",
-  headline: "Raised $6.8M while Banking, Telecom, and Defense PACs dominate his donor list — the same industries his caucus oversees",
-  subhead: "FEC records show Emmer's top donors are American Bankers Association, Comcast, and Raytheon PACs. He has voted with his party 100% of the time.",
-  stat: "$6.8M",
-  statLabel: "Total raised (2024 cycle)",
+  headline: `Raised ${fmtMillions(featuredStats.total_raised)} while ${featuredStats.donor_sectors
+    .slice(0, 3)
+    .map((s) => s.label)
+    .join(", ")} PACs dominate his donor list — the same industries his caucus oversees`,
+  subhead: `FEC records show Emmer's top donors are PACs from the ${featuredStats.donor_sectors[0]?.label ?? ""} and ${featuredStats.donor_sectors[1]?.label ?? ""} sectors. He has voted with his party ${featuredStats.party_loyalty_pct}% of the time.`,
+  stat: fmtMillions(featuredStats.total_raised),
+  statLabel: `Total raised (${featuredStats.cycle} cycle)`,
   statIndicator: "flag" as const,
-  statContext: "Flagged: 19.4% PAC-funded",
+  statContext: `Flagged: ${featuredStats.pac_percentage}% PAC-funded`,
   tag: "Campaign Finance",
   tagStyle: "stamp-trending" as const,
   editorialMark: "FLAGGED" as const,
   href: "/rep/E000294",
   // Mini bar-chart: top donor sectors (relative to largest)
-  barData: [
-    { label: "Banking", pct: 100, color: "#B91C1C" },
-    { label: "Telecom",  pct: 89,  color: "#D97706" },
-    { label: "Defense",  pct: 65,  color: "#64748B" },
-    { label: "Alcohol",  pct: 58,  color: "#64748B" },
-    { label: "Real Est", pct: 57,  color: "#64748B" },
-  ],
+  barData: featuredStats.donor_sectors.map((s, i) => ({
+    label: s.label,
+    pct: s.pct,
+    color: SPOTLIGHT_BAR_COLORS[i] ?? "#64748B",
+  })),
 };
 
 const SPOTLIGHT_SUPPORTING = [
@@ -199,8 +209,8 @@ const SPOTLIGHT_SUPPORTING = [
     party: "R" as const,
     name: "John Thune",
     role: "Senate Majority Leader · SD",
-    headline: "Broke from his own party 9 times in 189 votes — more than any other congressional leader in our dataset",
-    stat: "9",
+    headline: `Broke from his own party ${thuneStats.caucus?.breaks ?? 0} times in ${thuneStats.caucus?.votes_cast ?? 0} votes — more than any other congressional leader in our dataset`,
+    stat: String(thuneStats.caucus?.breaks ?? 0),
     statLabel: "Caucus breaks recorded",
     statIndicator: "flag" as const,
     tag: "Voting Record",
@@ -212,8 +222,8 @@ const SPOTLIGHT_SUPPORTING = [
     party: "D" as const,
     name: "Katherine Clark",
     role: "House Minority Whip · MA-5",
-    headline: "40.7% of her $2.7M raised came from PACs — the highest PAC-funded rate among all House and Senate leaders tracked",
-    stat: "40.7%",
+    headline: `${clarkStats.pac_percentage}% of her ${fmtMillions(clarkStats.total_raised)} raised came from PACs — the highest PAC-funded rate among all House and Senate leaders tracked`,
+    stat: `${clarkStats.pac_percentage}%`,
     statLabel: "PAC-funded share",
     statIndicator: "flag" as const,
     tag: "Campaign Finance",
@@ -224,11 +234,13 @@ const SPOTLIGHT_SUPPORTING = [
 ];
 
 // ── Stats Bar Data ───────────────────────────────────────────────────────────
+// Computed from data files at build time (scripts/compute-home-stats.ts).
+const siteStatsData = homeStatsData.site_stats;
 const SITE_STATS = [
-  { value: "535",   label: "Members of Congress tracked",    indicator: "neutral" as const, featured: false, href: "/congress" },
-  { value: "26",    label: "Executive branch officials",     indicator: "up" as const,      featured: false, context: "Updated daily",        href: "/executive" },
-  { value: "81K+",  label: "Votes analyzed",                 indicator: "up" as const,      featured: true,  context: "2.4M recorded total",  href: "/bills" },
-  { value: "66",    label: "Reps breaking with their party", indicator: "flag" as const,    featured: false, context: "Voting independently",  href: "/congress/independence" },
+  { value: String(siteStatsData.members_total), label: "Members of Congress tracked", indicator: "neutral" as const, featured: false, href: "/congress" },
+  { value: String(siteStatsData.executive_officials), label: "Executive branch officials", indicator: "up" as const, featured: false, href: "/executive" },
+  { value: `${Math.floor(siteStatsData.votes_analyzed / 1000)}K+`, label: "Votes analyzed", indicator: "up" as const, featured: true, context: "Across key roll calls", href: "/bills" },
+  { value: String(siteStatsData.independent_reps), label: "Reps breaking with their party", indicator: "flag" as const, featured: false, context: `Party loyalty under ${siteStatsData.independence_loyalty_cutoff}%`, href: "/congress/independence" },
 ];
 
 const TRUST_SIGNALS = [

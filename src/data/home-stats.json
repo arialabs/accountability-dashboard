@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "generated_at": "2026-06-12T18:23:37.541Z",
+    "sources": [
+      "members.json (Congress.gov / Voteview)",
+      "key-votes.json (Voteview)",
+      "leadership-finance.json (FEC)",
+      "leadership-donors.json (FEC Schedule A)",
+      "cabinet.json"
+    ]
+  },
+  "site_stats": {
+    "members_total": 538,
+    "executive_officials": 18,
+    "votes_analyzed": 48700,
+    "independent_reps": 18,
+    "independence_loyalty_cutoff": 90
+  },
+  "spotlight": {
+    "featured": {
+      "bioguide_id": "E000294",
+      "total_raised": 6763926.56,
+      "pac_percentage": 19.4,
+      "cycle": 2026,
+      "party_loyalty_pct": 100,
+      "donor_sectors": [
+        {
+          "label": "Telecom",
+          "total": 132500,
+          "pct": 100
+        },
+        {
+          "label": "Defense",
+          "total": 127418,
+          "pct": 96
+        },
+        {
+          "label": "Banking",
+          "total": 95000,
+          "pct": 72
+        },
+        {
+          "label": "Alcohol",
+          "total": 55000,
+          "pct": 42
+        },
+        {
+          "label": "Real Est",
+          "total": 54000,
+          "pct": 41
+        }
+      ]
+    },
+    "supporting": [
+      {
+        "bioguide_id": "T000250",
+        "total_raised": 6957116.08,
+        "pac_percentage": 16.2,
+        "cycle": 2028,
+        "caucus": {
+          "votes_cast": 189,
+          "party_loyalty_pct": 95.2,
+          "breaks": 9
+        }
+      },
+      {
+        "bioguide_id": "C001101",
+        "total_raised": 2722263.37,
+        "pac_percentage": 40.7,
+        "cycle": 2026,
+        "caucus": {
+          "votes_cast": 69,
+          "party_loyalty_pct": 100,
+          "breaks": 0
+        }
+      }
+    ]
+  }
+}

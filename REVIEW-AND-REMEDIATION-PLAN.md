@@ -28,7 +28,30 @@
 - ✅ P3.4 Navigation now links Supreme Court directly to the live `/judicial/scotus` page
   (removed incorrect "Coming Soon" badge).
 
-**Remaining:** Phases 1-3 below.
+**Phase 1 (partial) implemented 2026-06-12:**
+- ✅ 1.1 Senate vote sync fixed. Root cause: the code called
+  `api.congress.gov/v3/senate-vote/…`, an endpoint that does not exist (Congress.gov
+  only offers `house-vote`). Senate roll calls now come from senate.gov vote-menu +
+  roll-call XML, with member identification via the LIS→bioguide map from
+  unitedstates/congress-legislators (last-name matching alone would confuse
+  Tim Scott / Rick Scott). Verified live: both chambers now sync (7 + 7 roll calls
+  this week).
+- ✅ 1.2 USASpending sync fixed — it had never worked. Three root causes:
+  (a) `spending_by_category` takes the category in the URL path, not the body (404);
+  (b) `spending_by_award` rejects mixed award-type groups, so contracts (A-D) and
+  grants (02-05) are now fetched separately and merged (422);
+  (c) the award-type constants were mislabeled — 02-05 are grants, not contracts,
+  and 06-11 span direct payments/loans/insurance. Retries raised to 6 attempts for
+  the API's intermittent 503s, and error messages now include the response body.
+  Verified live: 16/16 agencies, 480 awards, real budget totals with YoY changes.
+- ✅ 1.3 Homepage stats and leadership-spotlight numbers are now generated at build
+  time by `scripts/compute-home-stats.ts` (the hardcoded values had already drifted:
+  "81K+ votes analyzed" vs. actual 48.7K; "66 reps breaking with party" vs. actual 18;
+  "2024 cycle" labels on 2026-cycle data; Emmer's donor-sector chart ranked Banking
+  first when Telecom/Defense now lead).
+
+**Remaining:** 1.4-1.7 (provenance metadata + staleness UI, top-contributor
+generalization, orphan-file triage), Phases 2-3 below.
 
 ---
 

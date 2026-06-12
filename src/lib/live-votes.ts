@@ -34,7 +34,7 @@ interface StoredRollCall {
 interface LiveVotesStore {
   meta: {
     generated_at: string;
-    source: 'congress.gov';
+    source: string; // 'congress.gov + senate.gov'
     congress: number;
     lookback_days: number;
     total_roll_calls: number;

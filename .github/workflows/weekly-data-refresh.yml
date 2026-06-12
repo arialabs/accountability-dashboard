@@ -54,6 +54,7 @@ jobs:
           npx tsx scripts/compute-donor-percentiles.ts
           npx tsx scripts/compute-scores.ts
           npx tsx scripts/compute-top-captured.ts
+          npx tsx scripts/compute-home-stats.ts
 
       # Commit and push if data changed
       - name: Commit data updates
