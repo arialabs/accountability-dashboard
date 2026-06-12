@@ -28,7 +28,60 @@
 - ✅ P3.4 Navigation now links Supreme Court directly to the live `/judicial/scotus` page
   (removed incorrect "Coming Soon" badge).
 
-**Remaining:** Phases 1-3 below.
+**Phase 1 (partial) implemented 2026-06-12:**
+- ✅ 1.1 Senate vote sync fixed. Root cause: the code called
+  `api.congress.gov/v3/senate-vote/…`, an endpoint that does not exist (Congress.gov
+  only offers `house-vote`). Senate roll calls now come from senate.gov vote-menu +
+  roll-call XML, with member identification via the LIS→bioguide map from
+  unitedstates/congress-legislators (last-name matching alone would confuse
+  Tim Scott / Rick Scott). Verified live: both chambers now sync (7 + 7 roll calls
+  this week).
+- ✅ 1.2 USASpending sync fixed — it had never worked. Three root causes:
+  (a) `spending_by_category` takes the category in the URL path, not the body (404);
+  (b) `spending_by_award` rejects mixed award-type groups, so contracts (A-D) and
+  grants (02-05) are now fetched separately and merged (422);
+  (c) the award-type constants were mislabeled — 02-05 are grants, not contracts,
+  and 06-11 span direct payments/loans/insurance. Retries raised to 6 attempts for
+  the API's intermittent 503s, and error messages now include the response body.
+  Verified live: 16/16 agencies, 480 awards, real budget totals with YoY changes.
+- ✅ 1.3 Homepage stats and leadership-spotlight numbers are now generated at build
+  time by `scripts/compute-home-stats.ts` (the hardcoded values had already drifted:
+  "81K+ votes analyzed" vs. actual 48.7K; "66 reps breaking with party" vs. actual 18;
+  "2024 cycle" labels on 2026-cycle data; Emmer's donor-sector chart ranked Banking
+  first when Telecom/Defense now lead).
+
+**Hardcoded-value elimination + CI/CD rebuild (2026-06-12):**
+- ✅ Eliminated every remaining hardcoded data value found by an exhaustive UI
+  sweep: hero "2.4M+ votes / 535 members / 570 officials" (actual computed:
+  48.7K votes, 538 members, 565 officials), DevelopmentBanner counts,
+  "330 million Americans" population claim, the DOGE impact line on /executive
+  (now interpolated from `src/data/doge.ts`), homepage metadata description,
+  "All 535 members" links, and the fabricated stats ("$3.8B", "1,200+",
+  "72K+") on Coming-Soon deep-dive cards (numbers removed; cards keep their
+  Coming-Soon framing). The hero sparkline now plots real monthly roll-call
+  activity instead of a simulated array.
+- ✅ Deleted dead `VoteHistorySection` + `getMemberVotesClient` and removed the
+  `NEXT_PUBLIC_CONGRESS_API_KEY`/`NEXT_PUBLIC_FEC_API_KEY` build args that were
+  embedding secret API keys into the public client bundle.
+- ✅ CI/CD rebuilt:
+  - New `ci.yml` — typecheck + 733 tests + full static-export build on every
+    PR and push to main (the repo previously had **no** CI at all).
+  - `deploy.yml` — frozen lockfile, concurrency guard, no secret leakage.
+  - All five data-sync workflows rebuilt on one pattern: rebase-before-push,
+    job summaries with sync status (warn on partial, fail on error), an
+    explicit deploy dispatch after committing (GITHUB_TOKEN pushes never
+    trigger workflows, so synced data previously sat undeployed on the static
+    site), and automatic GitHub-issue alerting on failure
+    (`.github/actions/notify-failure`, label `pipeline-failure`).
+  - EO sync's inline Python moved to `scripts/fetch-executive-orders.py`
+    (verified against the live Federal Register API).
+  - `packageManager: pnpm@10.33.0` pinned (workflows were forcing pnpm 9);
+    Node 22 across all workflows; broken `next lint` script (removed in
+    Next 16) replaced with a `typecheck` script; pre-existing test-file type
+    errors fixed so `tsc --noEmit` is clean.
+
+**Remaining:** 1.4-1.5 (provenance metadata + staleness UI), 1.6
+(top-contributor generalization), 1.7 (orphan-file triage), Phases 2-3 below.
 
 ---
 

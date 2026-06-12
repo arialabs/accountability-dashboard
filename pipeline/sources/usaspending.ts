@@ -10,8 +10,12 @@ import cabinetData from '../../src/data/cabinet.json';
 const USASPENDING_API_BASE = 'https://api.usaspending.gov/api/v2';
 const REQUEST_TIMEOUT_MS = 30_000;
 
-const CONTRACT_AWARD_TYPE_CODES = ['02', '03', '04', '05'];
-const GRANT_AWARD_TYPE_CODES = ['06', '07', '08', '09', '10', '11'];
+// USASpending award-type taxonomy: contracts are A-D (BPA Call, Purchase
+// Order, Delivery Order, Definitive Contract); grants are 02-05 (Block,
+// Formula, Project, Cooperative Agreement). The API rejects requests that
+// mix codes from different groups in spending_by_award.
+const CONTRACT_AWARD_TYPE_CODES = ['A', 'B', 'C', 'D'];
+const GRANT_AWARD_TYPE_CODES = ['02', '03', '04', '05'];
 
 interface UsaSpendingResponse {
   results?: any[];
@@ -189,10 +193,12 @@ function buildAwardFilters(agencyName: string, fiscalYearStart: number, fiscalYe
   };
 }
 
+// The USASpending search API intermittently returns 503 "upstream connect
+// error"; observed failure rates make 3 attempts insufficient.
 async function postUsaSpending<T>(
   endpoint: string,
   body: Record<string, unknown>,
-  attempts = 3
+  attempts = 6
 ): Promise<T> {
   let lastError: Error | null = null;
 
@@ -211,12 +217,14 @@ async function postUsaSpending<T>(
       });
 
       if (!response.ok) {
-        const message = `USASpending API error ${response.status} ${response.statusText}`;
         if (response.status === 429 || response.status >= 500) {
           await new Promise((resolve) => setTimeout(resolve, (i + 1) * 1000));
           continue;
         }
-        throw new Error(message);
+        const bodyText = await response.text().catch(() => '');
+        throw new Error(
+          `USASpending API error ${response.status} ${response.statusText} at ${endpoint}: ${bodyText.slice(0, 300)}`
+        );
       }
 
       const payload = (await response.json()) as T;
@@ -370,7 +378,10 @@ export function normalizeProgramFundingChanges(
     .slice(0, 20);
 }
 
-export function normalizeAwardsResponse(response: UsaSpendingResponse): AgencyAward[] {
+export function normalizeAwardsResponse(
+  response: UsaSpendingResponse,
+  knownType?: AwardType
+): AgencyAward[] {
   return (response.results || [])
     .map((row) => {
       const awardTypeLabel = pickString(row, ['Award Type', 'award_type', 'award_type_name', 'type'], 'Unknown');
@@ -381,7 +392,9 @@ export function normalizeAwardsResponse(response: UsaSpendingResponse): AgencyAw
         generated_internal_id: pickString(row, ['generated_internal_id', 'internal_id'], '') || null,
         recipient_name: pickString(row, ['Recipient Name', 'recipient_name', 'recipient'], 'Unknown Recipient'),
         amount,
-        award_type: classifyAwardType(awardTypeLabel),
+        // Contract rows come back with a null "Award Type" label, so prefer
+        // the award group the request was scoped to.
+        award_type: knownType ?? classifyAwardType(awardTypeLabel),
         award_type_label: awardTypeLabel,
         awarding_agency: pickString(row, ['Awarding Agency', 'awarding_agency'], ''),
         awarding_sub_agency: pickString(row, ['Awarding Sub Agency', 'awarding_sub_agency'], '') || null,
@@ -416,48 +429,56 @@ async function fetchProgramFundingChanges(
   agencyName: string,
   fiscalYear: number
 ): Promise<ProgramFundingChange[]> {
-  const currentYear = await postUsaSpending<UsaSpendingResponse>('/search/spending_by_category/', {
-    category: 'federal_account',
-    limit: 50,
-    page: 1,
-    filters: {
-      agencies: [
-        {
-          type: 'awarding',
-          tier: 'toptier',
-          name: agencyName,
-        },
-      ],
-      time_period: [dateRangeForFiscalYear(fiscalYear)],
-      award_type_codes: [...CONTRACT_AWARD_TYPE_CODES, ...GRANT_AWARD_TYPE_CODES],
-    },
-  });
+  // The category belongs in the URL path, not the request body — the old
+  // body-based form 404s.
+  const currentYear = await postUsaSpending<UsaSpendingResponse>(
+    '/search/spending_by_category/federal_account/',
+    {
+      limit: 50,
+      page: 1,
+      filters: {
+        agencies: [
+          {
+            type: 'awarding',
+            tier: 'toptier',
+            name: agencyName,
+          },
+        ],
+        time_period: [dateRangeForFiscalYear(fiscalYear)],
+        award_type_codes: [...CONTRACT_AWARD_TYPE_CODES, ...GRANT_AWARD_TYPE_CODES],
+      },
+    }
+  );
 
-  const previousYear = await postUsaSpending<UsaSpendingResponse>('/search/spending_by_category/', {
-    category: 'federal_account',
-    limit: 50,
-    page: 1,
-    filters: {
-      agencies: [
-        {
-          type: 'awarding',
-          tier: 'toptier',
-          name: agencyName,
-        },
-      ],
-      time_period: [dateRangeForFiscalYear(fiscalYear - 1)],
-      award_type_codes: [...CONTRACT_AWARD_TYPE_CODES, ...GRANT_AWARD_TYPE_CODES],
-    },
-  });
+  const previousYear = await postUsaSpending<UsaSpendingResponse>(
+    '/search/spending_by_category/federal_account/',
+    {
+      limit: 50,
+      page: 1,
+      filters: {
+        agencies: [
+          {
+            type: 'awarding',
+            tier: 'toptier',
+            name: agencyName,
+          },
+        ],
+        time_period: [dateRangeForFiscalYear(fiscalYear - 1)],
+        award_type_codes: [...CONTRACT_AWARD_TYPE_CODES, ...GRANT_AWARD_TYPE_CODES],
+      },
+    }
+  );
 
   return normalizeProgramFundingChanges(currentYear.results || [], previousYear.results || [], fiscalYear);
 }
 
-async function fetchTopAwards(
+async function fetchTopAwardsForCodes(
   agencyName: string,
   fiscalYearStart: number,
   fiscalYearEnd: number,
-  limit: number
+  limit: number,
+  awardTypeCodes: string[],
+  knownType: AwardType
 ): Promise<AgencyAward[]> {
   const response = await postUsaSpending<UsaSpendingResponse>('/search/spending_by_award/', {
     fields: [
@@ -474,10 +495,38 @@ async function fetchTopAwards(
     limit,
     sort: 'Award Amount',
     order: 'desc',
-    filters: buildAwardFilters(agencyName, fiscalYearStart, fiscalYearEnd),
+    filters: {
+      ...buildAwardFilters(agencyName, fiscalYearStart, fiscalYearEnd),
+      award_type_codes: awardTypeCodes,
+    },
   });
 
-  return normalizeAwardsResponse(response);
+  return normalizeAwardsResponse(response, knownType);
+}
+
+async function fetchTopAwards(
+  agencyName: string,
+  fiscalYearStart: number,
+  fiscalYearEnd: number,
+  limit: number
+): Promise<AgencyAward[]> {
+  // spending_by_award rejects mixed award-type groups ("'award_type_codes'
+  // must only contain types from one group"), so contracts and grants are
+  // fetched separately and merged.
+  const [contracts, grants] = await Promise.all([
+    fetchTopAwardsForCodes(
+      agencyName, fiscalYearStart, fiscalYearEnd, limit,
+      [...CONTRACT_AWARD_TYPE_CODES], 'contract'
+    ),
+    fetchTopAwardsForCodes(
+      agencyName, fiscalYearStart, fiscalYearEnd, limit,
+      [...GRANT_AWARD_TYPE_CODES], 'grant'
+    ),
+  ]);
+
+  return [...contracts, ...grants]
+    .sort((a, b) => b.amount - a.amount)
+    .slice(0, limit);
 }
 
 export async function syncUsaSpendingData(options: SyncOptions = {}): Promise<SyncResult> {

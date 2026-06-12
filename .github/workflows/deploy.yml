@@ -3,11 +3,19 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches: [main]
+  # Data-sync workflows dispatch this after committing fresh data — pushes
+  # made with GITHUB_TOKEN do not trigger workflows on their own, so without
+  # the explicit dispatch, synced data would never reach the live site.
   workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: read
       deployments: write
@@ -16,25 +24,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 9
+          node-version: '22'
+          cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
+      # API keys are build-time only (prebuild data scripts). They must NEVER
+      # be exposed as NEXT_PUBLIC_* variables — those are embedded into the
+      # public client bundle.
       - name: Build
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
-          NEXT_PUBLIC_CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
-          NEXT_PUBLIC_FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
           NEXT_PUBLIC_SITE_URL: https://reps.arialabs.ai
         run: pnpm build
 

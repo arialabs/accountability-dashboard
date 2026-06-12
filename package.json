@@ -7,9 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "prebuild": "node scripts/compute-party-loyalty.mjs && node scripts/compute-party-breakdown.mjs && npm run icons:generate && npm run donor-percentiles",
+    "prebuild": "node scripts/compute-party-loyalty.mjs && node scripts/compute-party-breakdown.mjs && npm run icons:generate && npm run donor-percentiles && tsx scripts/compute-home-stats.ts",
     "start": "next start",
-    "lint": "next lint",
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
@@ -27,7 +26,8 @@
     "research:fetch": "node scripts/fetch-news.mjs",
     "research:fetch:deep": "node scripts/fetch-news.mjs --deep",
     "party-loyalty": "node scripts/compute-party-loyalty.mjs",
-    "pipeline:bill-summaries": "tsx scripts/fetch-bill-summaries.ts"
+    "pipeline:bill-summaries": "tsx scripts/fetch-bill-summaries.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.75.0",
@@ -66,5 +66,6 @@
   "overrides": {
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3"
-  }
+  },
+  "packageManager": "pnpm@10.33.0"
 }

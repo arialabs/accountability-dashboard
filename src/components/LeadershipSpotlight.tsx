@@ -334,7 +334,7 @@ export default function LeadershipSpotlight() {
           className="mt-2 text-sm max-w-2xl"
           style={{ fontFamily: "'Source Sans 3', sans-serif", color: "var(--text-secondary)" }}
         >
-          These 8 people set the legislative agenda for 330 million Americans.
+          These {leaders.length} people set the legislative agenda for the entire country.
           Are they leading their party — or their donors? We track every vote, every dollar.
         </p>
       </div>

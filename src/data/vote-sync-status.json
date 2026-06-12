@@ -1,17 +1,17 @@
 {
-  "last_attempt_at": "2026-06-12T13:43:33.870Z",
-  "last_success_at": "2026-06-12T13:43:41.173Z",
+  "last_attempt_at": "2026-06-12T18:22:19.950Z",
+  "last_success_at": "2026-06-12T18:22:29.391Z",
   "status": "partial",
   "lookback_days": 7,
-  "total_roll_calls_fetched": 0,
-  "total_roll_calls_stored": 7,
-  "total_member_votes_stored": 3024,
+  "total_roll_calls_fetched": 7,
+  "total_roll_calls_stored": 14,
+  "total_member_votes_stored": 3724,
   "deduped_member_votes": 0,
   "errors": [
     {
-      "at": "2026-06-12T13:43:41.165Z",
-      "stage": "senate-list",
-      "message": "Congress API error: 404 Not Found"
+      "at": "2026-06-12T18:22:25.961Z",
+      "stage": "house-list",
+      "message": "CONGRESS_API_KEY environment variable required"
     }
   ]
 }

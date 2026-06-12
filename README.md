@@ -1,5 +1,6 @@
 # Accountability Dashboard
 
+[![CI](https://github.com/arialabs/accountability-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/arialabs/accountability-dashboard/actions/workflows/ci.yml)
 [![Deploy](https://github.com/arialabs/accountability-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/arialabs/accountability-dashboard/actions/workflows/deploy.yml)
 
 **Track what politicians say vs what they do.**

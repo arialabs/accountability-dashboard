@@ -9,7 +9,7 @@ import type { CampaignFinance } from "@/lib/types";
 // ─── Helper factories ────────────────────────────────────────────────────────
 
 function makeFinance(
-  topContributors: Array<{ name: string; total: number }>
+  topContributors: Array<{ name: string; total: number; type?: string }>
 ): CampaignFinance {
   return {
     candidate_id: "TEST001",
@@ -26,7 +26,7 @@ function makeFinance(
     pac_percentage: 0,
     small_donor_percentage: 0,
     large_donor_percentage: 0,
-    top_contributors: topContributors,
+    top_contributors: topContributors.map((c) => ({ ...c, type: c.type ?? 'PAC' })),
     top_industries: [],
   };
 }

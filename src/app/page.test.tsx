@@ -2,6 +2,7 @@ import React from "react";
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Home from "./page";
+import homeStats from "@/data/home-stats.json";
 
 // Mock next/navigation for RepSearch component
 vi.mock("next/navigation", () => ({
@@ -136,8 +137,9 @@ describe("Home Page", () => {
   it("renders quick stats labels", () => {
     render(<Home />);
     // AnimatedCounter is mocked to render the value string directly.
-    // "535" may appear in both the stats bar and deep dive cards, so use getAllByText.
-    expect(screen.getAllByText("535").length).toBeGreaterThan(0);
+    // The member count comes from home-stats.json (computed at build time).
+    const membersTotal = String(homeStats.site_stats.members_total);
+    expect(screen.getAllByText(membersTotal).length).toBeGreaterThan(0);
     expect(screen.getByText("Members of Congress tracked")).toBeDefined();
   });
 
