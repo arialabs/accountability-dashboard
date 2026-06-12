@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import DataProvenance from "@/components/DataProvenance";
 import Link from "next/link";
 import tradingSummaries from "@/data/trading-summaries.json";
 import { getMembers } from "@/lib/data";
@@ -190,6 +191,7 @@ export default function TradesLeaderboard() {
           <h1 className="text-4xl font-black tracking-tight mb-3">
             📊 Stock Trade Leaderboard
           </h1>
+          <DataProvenance dataset="trading-summaries.json" className="mb-3" />
           <p className="text-slate-300 text-lg max-w-3xl">
             Members of Congress ranked by suspicious trading activity. STOCK Act
             requires disclosure of trades, but enforcement is inconsistent and

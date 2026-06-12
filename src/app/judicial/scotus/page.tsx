@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DataProvenance from "@/components/DataProvenance";
 import { getSupremeCourtJustices } from "@/lib/data";
 import { BodyText, Caption } from "@/components/ui";
 
@@ -17,6 +18,7 @@ export default function ScotusPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900 mb-4">
               Supreme Court Justices
             </h1>
+          <DataProvenance dataset="scotus.json" className="mb-3" />
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
               All nine justices of the Supreme Court of the United States, 
               with ideology scores based on Martin-Quinn analysis.

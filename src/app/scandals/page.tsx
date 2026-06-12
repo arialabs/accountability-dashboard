@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect, Suspense } from "react";
+import DataProvenance from "@/components/DataProvenance";
 import { useSearchParams } from "next/navigation";
 import { getAllScandals, getMember } from "@/lib/data";
 import ScandalCard from "@/components/ScandalCard";
@@ -148,6 +149,7 @@ function ScandalsPageContent() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 mb-3">
             Scandals & Controversies
           </h1>
+          <DataProvenance dataset="scandals.json" className="mb-3" />
           <p className="text-lg text-slate-600 leading-relaxed max-w-3xl">
             Verified incidents with sources. Every entry includes citations from credible news outlets, 
             court documents, or official reports. Non-partisan accountability tracking.

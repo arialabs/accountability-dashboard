@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import DataProvenance from "@/components/DataProvenance";
 import Link from "next/link";
 import ordersData from "@/data/executive-orders.json";
 import budgetImpactsData from "@/data/budget-impacts.json";
@@ -157,6 +158,7 @@ export default function ExecutiveOrdersPage() {
           <h1 className="text-4xl font-black tracking-tight mb-3">
             📋 Executive Orders
           </h1>
+          <DataProvenance dataset="executive-orders.json" className="mb-3" />
           <p className="text-slate-300 text-lg max-w-3xl">
             Every executive order signed since January 20, 2025 — now with donor accountability tracking.
             Which orders benefit the industries that funded the campaign?

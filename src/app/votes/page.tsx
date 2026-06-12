@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import DataProvenance from "@/components/DataProvenance";
 import KeyVotes from "@/components/KeyVotes";
 import keyVotesData from "@/data/key-votes.json";
 import Link from "next/link";
@@ -60,6 +61,7 @@ export default function VotesPage() {
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-3 sm:mb-4">
             Key Congressional Votes
           </h1>
+          <DataProvenance dataset="key-votes.json" className="mb-3" />
           <p className="text-base sm:text-lg text-slate-600 max-w-3xl">
             Track how your representatives vote on the issues that matter most. 
             Data sourced from VoteView (UCLA/Berkeley) and updated regularly.

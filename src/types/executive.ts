@@ -55,7 +55,6 @@ export interface ExecutiveOfficial {
   education?: Education[];
   
   // Financial
-  net_worth: string;
   financial_disclosures: FinancialDisclosure[];
   
   // Conflicts & controversies

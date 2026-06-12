@@ -36,7 +36,6 @@ export function getExecutiveOfficials(): ExecutiveOfficial[] {
     tenure_start: member.appointed_date,
     bio: member.bio,
     prior_positions: member.prior_positions || [],
-    net_worth: member.net_worth || "Unknown",
     financial_disclosures: [],
     conflicts_of_interest: (member.conflicts_of_interest || []) as ConflictOfInterest[],
     policy_positions: member.policy_positions || [],

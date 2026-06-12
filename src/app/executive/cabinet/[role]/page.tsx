@@ -229,18 +229,6 @@ export default async function CabinetMemberPage({ params }: CabinetMemberPagePro
             </div>
           </div>
           
-          {/* Net Worth */}
-          {official.net_worth && (
-            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 mb-12">
-              <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">
-                Estimated Net Worth
-              </h2>
-              <p className="text-2xl font-bold text-slate-900">
-                {official.net_worth}
-              </p>
-            </div>
-          )}
-
           {/* Revolving Door Analysis */}
           {(() => {
             const rdEntry = getRevolvingDoorEntry(role);

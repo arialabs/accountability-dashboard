@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import DataProvenance from "@/components/DataProvenance";
 import Link from "next/link";
 import { getAllBills, getBillCategoryBreakdown, getBillStatusBreakdown } from "@/lib/bills";
 import { getMember } from "@/lib/data";
@@ -196,6 +197,7 @@ export default function BillsPage() {
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-4">
             Bill Tracker
           </h1>
+          <DataProvenance dataset="bill-summaries.json" className="mb-3" />
           <p className="text-lg text-slate-600 max-w-3xl">
             Follow legislation through Congress. See which bills are progressing, who supports them, 
             and track their journey from introduction to law.
