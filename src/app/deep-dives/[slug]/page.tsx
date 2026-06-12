@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import DataProvenance from "@/components/DataProvenance";
 import { getAllDeepDives, getDeepDiveBySlug } from "@/data/deep-dives";
 import type { Metadata } from "next";
 import { generateArticleSchema, generateBreadcrumbSchema, structuredDataScript } from "@/lib/schema";
@@ -89,6 +90,7 @@ export default function DeepDiveInvestigationPage({ params }: Props) {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             {investigation.title}
           </h1>
+          <DataProvenance dataset="deep-dives.json" className="mb-3 text-slate-300" />
           <p className="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6">
             {investigation.subtitle}
           </p>

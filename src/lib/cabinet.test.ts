@@ -46,10 +46,9 @@ describe('Cabinet Data', () => {
       }
     });
 
-    it('each member has net_worth field', () => {
+    it('members carry no unsourced net_worth field', () => {
       for (const member of cabinetData.members) {
-        expect(member).toHaveProperty('net_worth');
-        expect(typeof member.net_worth).toBe('string');
+        expect(member).not.toHaveProperty('net_worth');
       }
     });
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import DataProvenance from "@/components/DataProvenance";
 import Link from "next/link";
 import Image from "next/image";
 import cabinetData from "@/data/cabinet.json";
@@ -43,7 +44,6 @@ interface CabinetMemberData {
     years: string;
   }>;
   conflicts_of_interest: ConflictOfInterest[];
-  net_worth: string;
   policy_positions: Array<{
     topic: string;
     stance: string;
@@ -158,6 +158,7 @@ export default function CabinetPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900 mb-4">
               Cabinet Members
             </h1>
+          <DataProvenance dataset="cabinet.json" className="mb-3" />
             <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
               The President's Cabinet advises on matters related to the duties of their respective offices. 
               Track conflicts of interest, policy positions, and accountability metrics.

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import voteSyncStatus from '@/data/vote-sync-status.json';
 import homeStatsData from '@/data/home-stats.json';
 
@@ -47,12 +48,12 @@ export default function DevelopmentBanner() {
         </span>
         <span className="text-slate-300" aria-hidden="true">·</span>
         <span className="text-[11px]" style={{ color: "#64748B" }}>
-          Data synced <span className="font-semibold" style={{ color: "#334155" }}>{LAST_SYNCED}</span>
+          Votes synced <span className="font-semibold" style={{ color: "#334155" }}>{LAST_SYNCED}</span>
         </span>
         <span className="text-slate-300 hidden sm:inline" aria-hidden="true">·</span>
-        <span className="text-[11px] hidden sm:inline" style={{ color: "#64748B" }}>
-          Sources: Congress.gov · OpenFEC · Voteview
-        </span>
+        <Link href="/data-status" className="text-[11px] hidden sm:inline underline decoration-dotted" style={{ color: "#64748B" }}>
+          All data sources & freshness
+        </Link>
         <span className="text-slate-300 hidden sm:inline" aria-hidden="true">·</span>
         <span className="text-[11px] hidden sm:inline" style={{ color: "#64748B" }}>
           {MEMBERS_TOTAL} members · {formatCompact(VOTES_ANALYZED)} votes analyzed

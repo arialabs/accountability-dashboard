@@ -1,4 +1,5 @@
 import { getMember, getMembers, getMemberFinance, getMemberDisclosures } from "@/lib/data";
+import DataProvenance from "@/components/DataProvenance";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -23,8 +24,6 @@ import { INDUSTRIES } from "@/lib/industry-classifier";
 import type { IndustryTotal } from "@/lib/industry-classifier";
 import { loadDonorPercentiles } from "@/lib/donor-percentiles";
 import { getMemberAlignmentEnhanced } from "@/lib/data-enhanced";
-import { getConstituentAlignment } from "@/lib/constituent-alignment";
-import RepresentsYouSection from "@/components/RepresentsYouSection";
 import { RepVerdictBadge } from "@/components/RepVerdictBadge";
 import InDevelopmentBanner from "@/components/InDevelopmentBanner";
 
@@ -188,9 +187,6 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
 
   // Alignment data (used for rating schema + social share text)
   const alignmentEnhanced = getMemberAlignmentEnhanced(id);
-
-  // Constituent alignment — "Represents You?" polling vs. voting comparison
-  const constituentAlignment = getConstituentAlignment(id);
 
   // Build list of sections that have no data yet for the subtle footer notice
   const emptySections: string[] = [];
@@ -410,31 +406,22 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
           </div>
         )}
 
-        {/* Constituent Alignment — "Represents You?" section (#111) */}
-        {constituentAlignment && constituentAlignment.totalVotesScored > 0 && (
-          <div className="mb-8">
-            <ErrorBoundary context="constituent alignment">
-              <RepresentsYouSection
-                alignment={constituentAlignment}
-                memberName={member.full_name}
-              />
-            </ErrorBoundary>
-          </div>
-        )}
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content (2/3 width) */}
           <div className="lg:col-span-2 space-y-8">
 
             {/* Campaign Finance - Now the main focus */}
             <ErrorBoundary context="campaign finance data">
-              <DonorAnalysisSection
-                finance={finance}
-                memberId={member.bioguide_id}
-                memberChamber={member.chamber}
-                memberState={member.state}
-                percentilesData={donorPercentiles}
-              />
+              <div>
+                <DonorAnalysisSection
+                  finance={finance}
+                  memberId={member.bioguide_id}
+                  memberChamber={member.chamber}
+                  memberState={member.state}
+                  percentilesData={donorPercentiles}
+                />
+                <DataProvenance dataset="finance.json" className="mt-2" />
+              </div>
             </ErrorBoundary>
 
             {/* Potential Conflicts of Interest */}
@@ -470,23 +457,30 @@ export default async function RepPage({ params }: { params: Promise<{ id: string
                 billSummaries={billSummaries}
               />
             </ErrorBoundary>
+            <DataProvenance dataset="key-votes.json" className="-mt-6" />
 
             {/* Policy Positions: Says vs Does — REMOVED: Scoring needs redesign (issue #84) */}
 
             {/* Stock Trades — loaded client-side from /data/trades/[bioguideId].json */}
             <ErrorBoundary context="stock trades">
-              <StockTradesSection
-                bioguideId={id}
-                memberName={member.full_name}
-              />
+              <div>
+                <StockTradesSection
+                  bioguideId={id}
+                  memberName={member.full_name}
+                />
+                <DataProvenance dataset="trades-by-member.json" className="mt-2" />
+              </div>
             </ErrorBoundary>
 
             {/* Financial Disclosures */}
             <ErrorBoundary context="financial disclosures">
-              <FinancialDisclosuresSection
-                disclosures={financialDisclosures}
-                memberName={member.full_name}
-              />
+              <div>
+                <FinancialDisclosuresSection
+                  disclosures={financialDisclosures}
+                  memberName={member.full_name}
+                />
+                <DataProvenance dataset="house-disclosures.json" className="mt-2" />
+              </div>
             </ErrorBoundary>
 
             {/* Scandals & Controversies */}

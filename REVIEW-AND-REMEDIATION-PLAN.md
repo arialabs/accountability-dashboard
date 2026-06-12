@@ -80,8 +80,29 @@
     Next 16) replaced with a `typecheck` script; pre-existing test-file type
     errors fixed so `tsc --noEmit` is clean.
 
-**Remaining:** 1.4-1.5 (provenance metadata + staleness UI), 1.6
-(top-contributor generalization), 1.7 (orphan-file triage), Phases 2-3 below.
+**Provenance + staleness + orphan triage (1.4, 1.5, 1.7) implemented 2026-06-12:**
+- ✅ 1.4 New provenance registry (`scripts/compute-data-provenance.ts` →
+  `src/data/data-provenance.json`): every dataset's source, source URL, refresh
+  mode (auto-daily / auto-weekly / manual / editorial), and last-updated date
+  (embedded timestamps where present, git history otherwise — the weekly
+  refresh runs with full history and commits the result).
+- ✅ 1.5 `<DataProvenance>` component renders "Source: X · updated <date>" with
+  an automatic staleness warning (auto-daily > 3 days, auto-weekly > 14 days);
+  integrated on /scandals, /votes, /bills, /judicial/scotus, /congress/trades,
+  /executive/orders, /executive/cabinet, deep-dive articles, and the rep page's
+  finance / voting / trades / disclosures sections. New `/data-status` page
+  lists every dataset with freshness badges, linked from the site banner.
+- ✅ 1.7 Orphan triage (owner-approved):
+  - Presidential approval card removed (data frozen at 2026-03-11 with no
+    refreshable source; component was already unused by any page).
+  - "Represents You?" constituent-alignment section removed (Dec 2025 polling,
+    no refresh path) along with its lib and data file.
+  - Unsourced cabinet net-worth estimates removed from data and UI.
+  - All editorial datasets (scandals, deep-dives, DOGE, SCOTUS, cabinet, VP,
+    promises, conflicts) registered as editorial with last-reviewed dates.
+  - `scotus.json.backup` deleted.
+
+**Remaining:** 1.6 (top-contributor generalization), Phases 2-3 below.
 
 ---
 
