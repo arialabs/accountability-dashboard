@@ -32,12 +32,15 @@ type StockTradesProps = StockTradesBaseProps | StockTradesByIdProps;
 // Warren Buffett's average annual return (Berkshire Hathaway benchmark)
 const BUFFETT_ANNUAL_RETURN = 19.8;
 
-/** Normalize transaction type — case-insensitive, trimmed */
+/** Normalize transaction type — case-insensitive, trimmed.
+ * Disclosure data uses variants like "Sale (Full)" and "Sale (Partial)";
+ * anything that is neither a purchase nor a sale (e.g. "Exchange") is
+ * counted separately so the summary cards always add up to the total. */
 function isPurchase(tx: string): boolean {
-  return tx.trim().toLowerCase() === "purchase";
+  return tx.trim().toLowerCase().startsWith("purchase");
 }
 function isSale(tx: string): boolean {
-  return tx.trim().toLowerCase() === "sale";
+  return tx.trim().toLowerCase().startsWith("sale");
 }
 
 export default function StockTradesSection(props: StockTradesProps) {
@@ -85,6 +88,7 @@ export default function StockTradesSection(props: StockTradesProps) {
   // Calculate summary stats — normalize transaction types for robustness
   const purchases = trades.filter(t => isPurchase(t.transaction as string));
   const sales = trades.filter(t => isSale(t.transaction as string));
+  const otherTrades = trades.length - purchases.length - sales.length;
   const totalVolume = trades.reduce((sum, t) => sum + (t.tradeSizeUsd || 0), 0);
   const tradesWithReturn = trades.filter(t => t.excessReturn !== null);
   const avgExcessReturn = tradesWithReturn.length > 0
@@ -115,6 +119,9 @@ export default function StockTradesSection(props: StockTradesProps) {
         <div className="rounded-lg border border-red-100 bg-red-50 px-3 py-2.5">
           <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">Sales</p>
           <p className="mt-0.5 text-xl font-mono font-black text-red-700">{sales.length}</p>
+          {otherTrades > 0 && (
+            <p className="text-[10px] text-slate-400">+{otherTrades} other (exchanges)</p>
+          )}
         </div>
         {avgExcessReturn !== null ? (
           <div className={`rounded-lg border px-3 py-2.5 ${avgExcessReturn > 0 ? "border-red-200 bg-red-50" : "border-slate-200 bg-slate-50"}`}>

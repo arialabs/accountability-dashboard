@@ -59,6 +59,25 @@ export interface ScoreFactor {
   dataPoints: number;
 }
 
+/**
+ * Factor weights for the composite score. Single source of truth — the
+ * methodology page renders these values, so changing them here updates the
+ * public documentation automatically.
+ */
+export const FACTOR_WEIGHTS = {
+  voting: 0.6,
+  finance: 0.15,
+  consistency: 0.15,
+  bipartisan: 0.1,
+} as const;
+
+/** Weights used when no bipartisan voting data is available for a member. */
+export const FACTOR_WEIGHTS_NO_BIPARTISAN = {
+  voting: 0.65,
+  finance: 0.2,
+  consistency: 0.15,
+} as const;
+
 export interface EnhancedAlignmentScore extends AlignmentScore {
   // Enhanced scoring
   weighted_score: number;
@@ -112,7 +131,7 @@ function calculateFinanceAlignmentFactor(
     return {
       name: 'Campaign Finance Influence',
       score: 50,
-      weight: 0.15,
+      weight: FACTOR_WEIGHTS.finance,
       description: 'No finance data available',
       dataPoints: 0,
     };
@@ -145,7 +164,7 @@ function calculateFinanceAlignmentFactor(
   return {
     name: 'Campaign Finance Influence',
     score: clampedScore,
-    weight: 0.15,
+    weight: FACTOR_WEIGHTS.finance,
     description,
     dataPoints: 1,
   };
@@ -195,7 +214,7 @@ function calculateBipartisanScore(
   return {
     name: 'Bipartisan Cooperation',
     score: clampedScore,
-    weight: 0.10,
+    weight: FACTOR_WEIGHTS.bipartisan,
     description,
     dataPoints: totalVotes,
   };
@@ -225,7 +244,7 @@ export function calculateEnhancedAlignment(
   factors.push({
     name: 'Position-to-Vote Alignment',
     score: baseAlignment.alignment_score,
-    weight: 0.60, // 60% weight
+    weight: FACTOR_WEIGHTS.voting,
     description: insufficientData 
       ? `Only ${baseAlignment.total_votes_analyzed} vote${baseAlignment.total_votes_analyzed === 1 ? '' : 's'} analyzed - score may not be reliable`
       : 'How well votes match stated positions',
@@ -244,7 +263,7 @@ export function calculateEnhancedAlignment(
   factors.push({
     name: 'Voting Consistency',
     score: consistencyScore,
-    weight: 0.15,
+    weight: FACTOR_WEIGHTS.consistency,
     description: 'How consistent votes are across categories',
     dataPoints: Object.keys(baseAlignment.category_breakdown).length,
   });
@@ -258,9 +277,9 @@ export function calculateEnhancedAlignment(
     factors.push(bipartisanFactor);
   } else {
     // Redistribute weight to other factors if no bipartisan data
-    factors[0].weight = 0.65; // Voting alignment
-    factors[1].weight = 0.20; // Finance
-    factors[2].weight = 0.15; // Consistency
+    factors[0].weight = FACTOR_WEIGHTS_NO_BIPARTISAN.voting;
+    factors[1].weight = FACTOR_WEIGHTS_NO_BIPARTISAN.finance;
+    factors[2].weight = FACTOR_WEIGHTS_NO_BIPARTISAN.consistency;
   }
   
   // Calculate weighted score

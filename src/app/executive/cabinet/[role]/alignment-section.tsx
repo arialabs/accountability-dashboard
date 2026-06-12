@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import promisesData from '@/data/presidential-promises.json';
 
 interface AlignmentScore {
   promise_id: number;

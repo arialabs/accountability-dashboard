@@ -56,7 +56,7 @@ if [ "$QUICK" = false ]; then
   echo ""
 
   echo "📥 Step 6/6: Recalculating alignment scores..."
-  npx tsx scripts/calculate-alignment.ts
+  npx tsx scripts/compute-scores.ts
   echo ""
 else
   echo "⏩ Skipping finance + alignment (--quick mode)"

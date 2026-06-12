@@ -2,6 +2,34 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DataSourceBadge from "@/components/credibility/DataSourceBadge";
 import { BodyText, Caption } from "@/components/ui";
+import { FACTOR_WEIGHTS, FACTOR_WEIGHTS_NO_BIPARTISAN } from "@/lib/alignment-enhanced";
+
+// Rendered from the same constants the scoring code uses, so the published
+// methodology can never drift from the actual computation.
+const pct = (w: number) => `${Math.round(w * 100)}%`;
+
+const WEIGHTED_FACTORS = [
+  {
+    name: "Position-to-Vote Alignment",
+    weight: pct(FACTOR_WEIGHTS.voting),
+    description: "Core metric: do votes match stated positions?",
+  },
+  {
+    name: "Campaign Finance Independence",
+    weight: pct(FACTOR_WEIGHTS.finance),
+    description: "Higher small-donor % = higher score",
+  },
+  {
+    name: "Voting Consistency",
+    weight: pct(FACTOR_WEIGHTS.consistency),
+    description: "Consistency within policy categories over time",
+  },
+  {
+    name: "Bipartisan Cooperation",
+    weight: pct(FACTOR_WEIGHTS.bipartisan),
+    description: "Moderate cross-party voting suggests independence",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Methodology",
@@ -122,62 +150,38 @@ export default function MethodologyPage() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200">
-                    <tr>
-                      <td className="px-4 py-3 font-medium text-slate-900">Position-to-Vote Alignment</td>
-                      <td className="px-4 py-3 text-slate-600">50%</td>
-                      <td className="px-4 py-3 text-slate-600">Core metric: do votes match stated positions?</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3 font-medium text-slate-900">Voting Consistency</td>
-                      <td className="px-4 py-3 text-slate-600">20%</td>
-                      <td className="px-4 py-3 text-slate-600">Consistency within policy categories over time</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3 font-medium text-slate-900">Campaign Finance Independence</td>
-                      <td className="px-4 py-3 text-slate-600">15%</td>
-                      <td className="px-4 py-3 text-slate-600">Higher small-donor % = higher score</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3 font-medium text-slate-900">Bipartisan Cooperation</td>
-                      <td className="px-4 py-3 text-slate-600">15%</td>
-                      <td className="px-4 py-3 text-slate-600">Moderate cross-party voting suggests independence</td>
-                    </tr>
+                    {WEIGHTED_FACTORS.map((factor) => (
+                      <tr key={factor.name}>
+                        <td className="px-4 py-3 font-medium text-slate-900">{factor.name}</td>
+                        <td className="px-4 py-3 text-slate-600">{factor.weight}</td>
+                        <td className="px-4 py-3 text-slate-600">{factor.description}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
               
               {/* Mobile Card Layout */}
               <div className="md:hidden divide-y divide-slate-200">
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-bold text-slate-900">Position-to-Vote Alignment</span>
-                    <span className="text-lg font-black text-blue-600">50%</span>
+                {WEIGHTED_FACTORS.map((factor) => (
+                  <div className="p-4" key={factor.name}>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-bold text-slate-900">{factor.name}</span>
+                      <span className="text-lg font-black text-blue-600">{factor.weight}</span>
+                    </div>
+                    <BodyText>{factor.description}</BodyText>
                   </div>
-                  <BodyText>Core metric: do votes match stated positions?</BodyText>
-                </div>
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-bold text-slate-900">Voting Consistency</span>
-                    <span className="text-lg font-black text-blue-600">20%</span>
-                  </div>
-                  <BodyText>Consistency within policy categories over time</BodyText>
-                </div>
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-bold text-slate-900">Campaign Finance Independence</span>
-                    <span className="text-lg font-black text-blue-600">15%</span>
-                  </div>
-                  <BodyText>Higher small-donor % = higher score</BodyText>
-                </div>
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-bold text-slate-900">Bipartisan Cooperation</span>
-                    <span className="text-lg font-black text-blue-600">15%</span>
-                  </div>
-                  <BodyText>Moderate cross-party voting suggests independence</BodyText>
-                </div>
+                ))}
               </div>
             </div>
+
+            <p className="mt-4 text-sm text-slate-600">
+              When a member has fewer than 10 party-line votes on record, the Bipartisan
+              Cooperation factor is dropped and its weight is redistributed:
+              Position-to-Vote Alignment {pct(FACTOR_WEIGHTS_NO_BIPARTISAN.voting)},
+              Campaign Finance Independence {pct(FACTOR_WEIGHTS_NO_BIPARTISAN.finance)},
+              Voting Consistency {pct(FACTOR_WEIGHTS_NO_BIPARTISAN.consistency)}.
+            </p>
           </section>
 
           {/* Confidence Scoring */}

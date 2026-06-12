@@ -52,6 +52,8 @@ jobs:
           node scripts/compute-party-loyalty.mjs
           node scripts/compute-party-breakdown.mjs
           npx tsx scripts/compute-donor-percentiles.ts
+          npx tsx scripts/compute-scores.ts
+          npx tsx scripts/compute-top-captured.ts
 
       # Commit and push if data changed
       - name: Commit data updates

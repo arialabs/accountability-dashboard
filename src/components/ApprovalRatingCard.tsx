@@ -45,12 +45,22 @@ function NetSparkline({ history }: { history: { net: number; date: string }[] })
   );
 }
 
+const STALE_AFTER_DAYS = 14;
+
 export default function ApprovalRatingCard() {
   const { current, history, source, last_updated } = approvalData;
   const isNegative = current.net < 0;
 
   const approveWidth = `${current.approve}%`;
   const disapproveWidth = `${current.disapprove}%`;
+
+  const daysSinceUpdate = Math.floor(
+    (Date.now() - new Date(last_updated).getTime()) / (1000 * 60 * 60 * 24)
+  );
+  const isStale = Number.isFinite(daysSinceUpdate) && daysSinceUpdate > STALE_AFTER_DAYS;
+
+  // Approve + disapprove rarely sum to 100 — the remainder is undecided/unsure.
+  const undecided = Math.max(0, 100 - current.approve - current.disapprove);
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
@@ -111,8 +121,33 @@ export default function ApprovalRatingCard() {
               {current.disapprove.toFixed(1)}%
             </span>
           </div>
+
+          {/* Undecided remainder, so the segments account for 100% */}
+          {undecided > 0 && (
+            <div className="flex items-center gap-3">
+              <span className="text-sm text-slate-600 w-24">Unsure</span>
+              <div className="flex-1 h-4 bg-slate-100 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-slate-300 rounded-full transition-all"
+                  style={{ width: `${undecided}%` }}
+                />
+              </div>
+              <span className="text-sm font-semibold text-slate-500 w-14 text-right tabular-nums">
+                {undecided.toFixed(1)}%
+              </span>
+            </div>
+          )}
         </div>
       </div>
+
+      {/* Staleness warning */}
+      {isStale && (
+        <div className="bg-amber-50 border-t border-amber-200 px-6 py-2">
+          <Caption as="p" className="text-amber-700">
+            ⚠️ This data was last updated {daysSinceUpdate} days ago and may be outdated.
+          </Caption>
+        </div>
+      )}
 
       {/* Footer */}
       <div className="bg-slate-50 border-t border-slate-100 px-6 py-3 flex items-center justify-between">
@@ -120,7 +155,7 @@ export default function ApprovalRatingCard() {
           Source: {source} · As of {formatDate(current.date)}
         </Caption>
         <Caption as="p" className="text-slate-400">
-          Coverage unavailable — data updated weekly
+          Last updated {formatDate(last_updated.slice(0, 10))}
         </Caption>
       </div>
     </div>

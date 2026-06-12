@@ -44,7 +44,12 @@ export default function TimelinePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState<"newest" | "oldest" | "impact">("newest");
 
-  const actions = actionsData.actions as ExecutiveAction[];
+  // Only show actions backed by at least one verifiable source. Entries whose
+  // citations are placeholders (example.com) are hidden until re-sourced.
+  const actions = (actionsData.actions as ExecutiveAction[]).filter(action => {
+    const sources = (action as { sources?: Array<{ url?: string }> }).sources ?? [];
+    return sources.some(s => s.url && !s.url.includes("example.com"));
+  });
 
   // Get unique departments and types
   const departments = useMemo(() => {
@@ -255,7 +260,16 @@ export default function TimelinePage() {
       {/* Timeline */}
       <section className="py-12">
         <Container>
-          {filteredActions.length === 0 ? (
+          {actions.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-slate-500 text-lg">
+                No verified executive actions to display yet.
+              </p>
+              <p className="mt-2 text-sm text-slate-400">
+                Actions appear here once they are backed by verifiable public sources.
+              </p>
+            </div>
+          ) : filteredActions.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-slate-500 text-lg">No actions found matching your criteria.</p>
               <button

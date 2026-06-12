@@ -18,7 +18,14 @@ type CapturedEntry = {
   scandals: number;
 };
 
-const ALL_CAPTURED = topCapturedData as CapturedEntry[];
+type TopCapturedFile = {
+  meta?: { generated_at?: string; source?: string; cycles?: number[] };
+  entries: CapturedEntry[];
+};
+
+const CAPTURED_FILE = topCapturedData as TopCapturedFile;
+const ALL_CAPTURED = CAPTURED_FILE.entries;
+const DATA_CYCLES = CAPTURED_FILE.meta?.cycles?.join("/") ?? "";
 
 // State full name → abbreviation
 const STATE_TO_ABBREV: Record<string, string> = {
@@ -125,7 +132,7 @@ export default function TopCapturedPanel() {
           className="text-[10px]"
           style={{ fontFamily: "'Inter', sans-serif", color: "var(--text-secondary)" }}
         >
-          Source: FEC 2022 cycle · Leadership excluded · Click any rep to see full profile
+          Source: FEC{DATA_CYCLES ? ` ${DATA_CYCLES} cycle` : ""} · Leadership excluded · Click any rep to see full profile
         </p>
       </div>
     </div>
