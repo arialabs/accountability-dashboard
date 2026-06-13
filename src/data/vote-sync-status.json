@@ -1,17 +1,11 @@
 {
-  "last_attempt_at": "2026-06-12T18:22:19.950Z",
-  "last_success_at": "2026-06-12T18:22:29.391Z",
-  "status": "partial",
+  "last_attempt_at": "2026-06-13T12:02:51.949Z",
+  "last_success_at": "2026-06-13T12:02:55.996Z",
+  "status": "ok",
   "lookback_days": 7,
   "total_roll_calls_fetched": 7,
   "total_roll_calls_stored": 14,
   "total_member_votes_stored": 3724,
   "deduped_member_votes": 0,
-  "errors": [
-    {
-      "at": "2026-06-12T18:22:25.961Z",
-      "stage": "house-list",
-      "message": "CONGRESS_API_KEY environment variable required"
-    }
-  ]
+  "errors": []
 }
