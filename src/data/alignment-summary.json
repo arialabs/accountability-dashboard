@@ -1832,14 +1832,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "E000299",
-    "name": "Veronica Escobar",
-    "alignment_score": 77,
-    "votes_analyzed": 180,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "M001153",
     "name": "Lisa Murkowski",
     "alignment_score": 76,
@@ -1856,14 +1848,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "K000401",
-    "name": "Kevin Kiley",
-    "alignment_score": 76,
-    "votes_analyzed": 20,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "A000371",
     "name": "Pete Aguilar",
     "alignment_score": 76,
@@ -1872,10 +1856,26 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "E000299",
+    "name": "Veronica Escobar",
+    "alignment_score": 76,
+    "votes_analyzed": 180,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "N000188",
     "name": "Donald Norcross",
     "alignment_score": 76,
     "votes_analyzed": 161,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "K000401",
+    "name": "Kevin Kiley",
+    "alignment_score": 75,
+    "votes_analyzed": 20,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -2002,7 +2002,7 @@
   {
     "bioguide_id": "G000597",
     "name": "Andrew Garbarino",
-    "alignment_score": 46,
+    "alignment_score": 45,
     "votes_analyzed": 90,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
