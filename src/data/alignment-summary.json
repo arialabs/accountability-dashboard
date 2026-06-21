@@ -1280,14 +1280,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "G000574",
-    "name": "Ruben Gallego",
-    "alignment_score": 95,
-    "votes_analyzed": 506,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "C001098",
     "name": "Ted Cruz",
     "alignment_score": 95,
@@ -1360,6 +1352,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "G000574",
+    "name": "Ruben Gallego",
+    "alignment_score": 94,
+    "votes_analyzed": 506,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "G000555",
     "name": "Kirsten Gillibrand",
     "alignment_score": 94,
@@ -1424,14 +1424,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "S000148",
-    "name": "Charles Schumer",
-    "alignment_score": 93,
-    "votes_analyzed": 534,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "C001059",
     "name": "Jim Costa",
     "alignment_score": 93,
@@ -1472,10 +1464,10 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "H001089",
-    "name": "Josh Hawley",
-    "alignment_score": 91,
-    "votes_analyzed": 427,
+    "bioguide_id": "S000148",
+    "name": "Charles Schumer",
+    "alignment_score": 92,
+    "votes_analyzed": 534,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1532,6 +1524,14 @@
     "name": "Amy Klobuchar",
     "alignment_score": 90,
     "votes_analyzed": 530,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "H001089",
+    "name": "Josh Hawley",
+    "alignment_score": 90,
+    "votes_analyzed": 427,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
