@@ -1,8 +1,34 @@
 {
-  "total": 266,
+  "total": 268,
   "source": "Federal Register API",
-  "last_updated": "2026-06-24",
+  "last_updated": "2026-06-25",
   "orders": [
+    {
+      "document_number": "2026-12910",
+      "eo_number": "14413",
+      "title": "Ushering in the Next Frontier of Quantum Innovation",
+      "signing_date": "2026-06-22",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/06/25/2026-12910/ushering-in-the-next-frontier-of-quantum-innovation",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
+    {
+      "document_number": "2026-12909",
+      "eo_number": "14412",
+      "title": "Securing the Nation Against Advanced Cryptographic Attacks",
+      "signing_date": "2026-06-22",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/06/25/2026-12909/securing-the-nation-against-advanced-cryptographic-attacks",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Finance & Economy"
+    },
     {
       "document_number": "2026-11595",
       "eo_number": "14411",
