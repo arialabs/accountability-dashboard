@@ -752,14 +752,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "G000593",
-    "name": "Carlos Gimenez",
-    "alignment_score": 99,
-    "votes_analyzed": 84,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "C001126",
     "name": "Mike Carey",
     "alignment_score": 99,
@@ -976,6 +968,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "G000593",
+    "name": "Carlos Gimenez",
+    "alignment_score": 98,
+    "votes_analyzed": 84,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "M001194",
     "name": "John Moolenaar",
     "alignment_score": 98,
@@ -1112,14 +1112,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "M001214",
-    "name": "Frank Mrvan",
-    "alignment_score": 97,
-    "votes_analyzed": 83,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "R000614",
     "name": "Chip Roy",
     "alignment_score": 97,
@@ -1244,6 +1236,14 @@
     "name": "Erin Houchin",
     "alignment_score": 96,
     "votes_analyzed": 63,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "M001214",
+    "name": "Frank Mrvan",
+    "alignment_score": 96,
+    "votes_analyzed": 83,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1424,14 +1424,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "C001059",
-    "name": "Jim Costa",
-    "alignment_score": 93,
-    "votes_analyzed": 176,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "P000595",
     "name": "Gary Peters",
     "alignment_score": 93,
@@ -1468,6 +1460,14 @@
     "name": "Charles Schumer",
     "alignment_score": 92,
     "votes_analyzed": 534,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "C001059",
+    "name": "Jim Costa",
+    "alignment_score": 92,
+    "votes_analyzed": 176,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1832,6 +1832,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "E000299",
+    "name": "Veronica Escobar",
+    "alignment_score": 77,
+    "votes_analyzed": 180,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "M001153",
     "name": "Lisa Murkowski",
     "alignment_score": 76,
@@ -1852,14 +1860,6 @@
     "name": "Pete Aguilar",
     "alignment_score": 76,
     "votes_analyzed": 177,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "E000299",
-    "name": "Veronica Escobar",
-    "alignment_score": 76,
-    "votes_analyzed": 180,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
