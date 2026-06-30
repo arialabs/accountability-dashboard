@@ -1,8 +1,21 @@
 {
-  "total": 268,
+  "total": 269,
   "source": "Federal Register API",
-  "last_updated": "2026-06-29",
+  "last_updated": "2026-06-30",
   "orders": [
+    {
+      "document_number": "2026-13254",
+      "eo_number": "14414",
+      "title": "Advancing Regenerative Agriculture and Strengthening American Farm Resilience",
+      "signing_date": "2026-06-25",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/06/30/2026-13254/advancing-regenerative-agriculture-and-strengthening-american-farm-resilience",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-12910",
       "eo_number": "14413",
