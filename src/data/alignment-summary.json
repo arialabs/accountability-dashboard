@@ -1632,14 +1632,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "R000619",
-    "name": "Michael Rulli",
-    "alignment_score": 86,
-    "votes_analyzed": 9,
-    "confidence": "low",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "D000618",
     "name": "Steve Daines",
     "alignment_score": 86,
@@ -1669,6 +1661,14 @@
     "alignment_score": 86,
     "votes_analyzed": 184,
     "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "R000619",
+    "name": "Michael Rulli",
+    "alignment_score": 85,
+    "votes_analyzed": 9,
+    "confidence": "low",
     "methodology": "say-vs-do-v3"
   },
   {
@@ -2018,7 +2018,7 @@
   {
     "bioguide_id": "S001223",
     "name": "Emilia Sykes",
-    "alignment_score": 14,
+    "alignment_score": 15,
     "votes_analyzed": 9,
     "confidence": "low",
     "methodology": "say-vs-do-v3"
