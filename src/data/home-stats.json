@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-12T02:51:41.511Z",
+    "generated_at": "2026-07-19T02:46:24.759Z",
     "sources": [
       "members.json (Congress.gov / Voteview)",
       "key-votes.json (Voteview)",
@@ -29,7 +29,7 @@
       0,
       0,
       93,
-      0
+      23
     ]
   },
   "spotlight": {
