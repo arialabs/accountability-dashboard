@@ -1,8 +1,21 @@
 {
-  "total": 269,
+  "total": 270,
   "source": "Federal Register API",
-  "last_updated": "2026-07-22",
+  "last_updated": "2026-07-23",
   "orders": [
+    {
+      "document_number": "2026-15003",
+      "eo_number": "14415",
+      "title": "Securing America's Defense Supply Chains and Ensuring Domestic Acquisition of Critical Materials",
+      "signing_date": "2026-07-20",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/07/23/2026-15003/securing-americas-defense-supply-chains-and-ensuring-domestic-acquisition-of-critical-materials",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "National Security"
+    },
     {
       "document_number": "2026-13254",
       "eo_number": "14414",
