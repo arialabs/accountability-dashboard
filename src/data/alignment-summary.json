@@ -824,6 +824,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "G000585",
+    "name": "Jimmy Gomez",
+    "alignment_score": 99,
+    "votes_analyzed": 180,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "M001196",
     "name": "Seth Moulton",
     "alignment_score": 99,
@@ -852,14 +860,6 @@
     "name": "Rick Scott",
     "alignment_score": 98,
     "votes_analyzed": 534,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "M001242",
-    "name": "Bernie Moreno",
-    "alignment_score": 98,
-    "votes_analyzed": 468,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1032,14 +1032,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "G000585",
-    "name": "Jimmy Gomez",
-    "alignment_score": 98,
-    "votes_analyzed": 180,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "C001112",
     "name": "Salud Carbajal",
     "alignment_score": 98,
@@ -1060,6 +1052,14 @@
     "name": "Markwayne Mullin",
     "alignment_score": 97,
     "votes_analyzed": 516,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "M001242",
+    "name": "Bernie Moreno",
+    "alignment_score": 97,
+    "votes_analyzed": 468,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1304,14 +1304,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "L000601",
-    "name": "Greg Landsman",
-    "alignment_score": 95,
-    "votes_analyzed": 13,
-    "confidence": "medium",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "S000929",
     "name": "Victoria Spartz",
     "alignment_score": 95,
@@ -1392,10 +1384,10 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "J000309",
-    "name": "Jonathan Jackson",
+    "bioguide_id": "L000601",
+    "name": "Greg Landsman",
     "alignment_score": 94,
-    "votes_analyzed": 12,
+    "votes_analyzed": 13,
     "confidence": "medium",
     "methodology": "say-vs-do-v3"
   },
@@ -1429,6 +1421,14 @@
     "alignment_score": 93,
     "votes_analyzed": 486,
     "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "J000309",
+    "name": "Jonathan Jackson",
+    "alignment_score": 93,
+    "votes_analyzed": 12,
+    "confidence": "medium",
     "methodology": "say-vs-do-v3"
   },
   {
@@ -1914,7 +1914,7 @@
   {
     "bioguide_id": "H001104",
     "name": "Jon Husted",
-    "alignment_score": 71,
+    "alignment_score": 72,
     "votes_analyzed": 416,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
