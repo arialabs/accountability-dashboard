@@ -1,8 +1,21 @@
 {
-  "total": 270,
+  "total": 271,
   "source": "Federal Register API",
-  "last_updated": "2026-07-28",
+  "last_updated": "2026-07-29",
   "orders": [
+    {
+      "document_number": "2026-15357",
+      "eo_number": "14416",
+      "title": "Restoring Trust in the Smithsonian Institution",
+      "signing_date": "2026-07-24",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/07/29/2026-15357/restoring-trust-in-the-smithsonian-institution",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-15003",
       "eo_number": "14415",
