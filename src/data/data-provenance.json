@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T02:50:14.159Z",
+  "generated_at": "2026-08-02T02:49:35.379Z",
   "git_history_available": true,
   "datasets": [
     {
@@ -9,7 +9,7 @@
       "source_url": "https://www.congress.gov/roll-call-votes",
       "refresh": "auto-daily",
       "stale_after_days": 3,
-      "last_updated": "2026-07-26T02:49:21.307Z",
+      "last_updated": "2026-08-02T02:48:28.128Z",
       "exists": true,
       "hidden": false,
       "notes": null
@@ -21,7 +21,7 @@
       "source_url": "https://www.federalregister.gov/",
       "refresh": "auto-daily",
       "stale_after_days": 3,
-      "last_updated": "2026-07-25T00:00:00.000Z",
+      "last_updated": "2026-08-01T00:00:00.000Z",
       "exists": true,
       "hidden": false,
       "notes": null
@@ -81,7 +81,7 @@
       "source_url": "/methodology",
       "refresh": "auto-weekly",
       "stale_after_days": 14,
-      "last_updated": "2026-07-26T02:50:08.683Z",
+      "last_updated": "2026-08-02T02:49:30.003Z",
       "exists": true,
       "hidden": false,
       "notes": null
@@ -93,7 +93,7 @@
       "source_url": "https://api.open.fec.gov/",
       "refresh": "auto-weekly",
       "stale_after_days": 14,
-      "last_updated": "2026-07-26T02:50:12.533Z",
+      "last_updated": "2026-08-02T02:49:33.790Z",
       "exists": true,
       "hidden": false,
       "notes": null
@@ -105,7 +105,7 @@
       "source_url": "/methodology",
       "refresh": "auto-weekly",
       "stale_after_days": 14,
-      "last_updated": "2026-07-26T02:50:13.225Z",
+      "last_updated": "2026-08-02T02:49:34.456Z",
       "exists": true,
       "hidden": false,
       "notes": null
@@ -117,7 +117,7 @@
       "source_url": "https://api.open.fec.gov/",
       "refresh": "auto-weekly",
       "stale_after_days": 14,
-      "last_updated": "2026-07-26T02:50:07.789Z",
+      "last_updated": "2026-08-02T02:49:29.119Z",
       "exists": true,
       "hidden": false,
       "notes": null
@@ -129,7 +129,7 @@
       "source_url": "https://api.usaspending.gov/",
       "refresh": "auto-weekly",
       "stale_after_days": 14,
-      "last_updated": "2026-07-20T12:27:24.539Z",
+      "last_updated": "2026-07-27T13:22:55.034Z",
       "exists": true,
       "hidden": false,
       "notes": null
