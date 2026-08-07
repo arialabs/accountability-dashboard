@@ -1,8 +1,21 @@
 {
-  "total": 271,
+  "total": 272,
   "source": "Federal Register API",
-  "last_updated": "2026-08-06",
+  "last_updated": "2026-08-07",
   "orders": [
+    {
+      "document_number": "2026-16125",
+      "eo_number": "14417",
+      "title": "Establishing the President's Military Spouse Commission",
+      "signing_date": "2026-08-03",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/08/06/2026-16125/establishing-the-presidents-military-spouse-commission",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "National Security"
+    },
     {
       "document_number": "2026-15357",
       "eo_number": "14416",
