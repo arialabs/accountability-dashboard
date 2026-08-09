@@ -1144,14 +1144,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "C001115",
-    "name": "Michael Cloud",
-    "alignment_score": 97,
-    "votes_analyzed": 146,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "B001301",
     "name": "Jack Bergman",
     "alignment_score": 97,
@@ -1252,6 +1244,14 @@
     "name": "Lori Trahan",
     "alignment_score": 96,
     "votes_analyzed": 180,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "C001115",
+    "name": "Michael Cloud",
+    "alignment_score": 96,
+    "votes_analyzed": 146,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1872,18 +1872,18 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "K000401",
-    "name": "Kevin Kiley",
+    "bioguide_id": "K000383",
+    "name": "Angus King",
     "alignment_score": 75,
-    "votes_analyzed": 20,
+    "votes_analyzed": 491,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "K000383",
-    "name": "Angus King",
-    "alignment_score": 74,
-    "votes_analyzed": 491,
+    "bioguide_id": "K000401",
+    "name": "Kevin Kiley",
+    "alignment_score": 75,
+    "votes_analyzed": 20,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
