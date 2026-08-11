@@ -1,8 +1,34 @@
 {
-  "total": 272,
+  "total": 274,
   "source": "Federal Register API",
-  "last_updated": "2026-08-10",
+  "last_updated": "2026-08-11",
   "orders": [
+    {
+      "document_number": "2026-16404",
+      "eo_number": "14419",
+      "title": "Ending Birth Tourism",
+      "signing_date": "2026-08-06",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/08/11/2026-16404/ending-birth-tourism",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
+    {
+      "document_number": "2026-16403",
+      "eo_number": "14418",
+      "title": "Continuing To Protect the Meaning and Value of American Citizenship",
+      "signing_date": "2026-08-06",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/08/11/2026-16403/continuing-to-protect-the-meaning-and-value-of-american-citizenship",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-16125",
       "eo_number": "14417",
