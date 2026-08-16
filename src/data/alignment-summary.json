@@ -1416,6 +1416,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "T000250",
+    "name": "John Thune",
+    "alignment_score": 93,
+    "votes_analyzed": 534,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "P000595",
     "name": "Gary Peters",
     "alignment_score": 93,
@@ -1436,14 +1444,6 @@
     "name": "Barry Loudermilk",
     "alignment_score": 93,
     "votes_analyzed": 132,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "T000250",
-    "name": "John Thune",
-    "alignment_score": 92,
-    "votes_analyzed": 534,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1602,7 +1602,7 @@
   {
     "bioguide_id": "H000273",
     "name": "John Hickenlooper",
-    "alignment_score": 88,
+    "alignment_score": 87,
     "votes_analyzed": 534,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
@@ -1628,14 +1628,6 @@
     "name": "Jeanne Shaheen",
     "alignment_score": 86,
     "votes_analyzed": 528,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "A000382",
-    "name": "Angela Alsobrooks",
-    "alignment_score": 86,
-    "votes_analyzed": 414,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1676,6 +1668,14 @@
     "name": "Steve Daines",
     "alignment_score": 85,
     "votes_analyzed": 524,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "A000382",
+    "name": "Angela Alsobrooks",
+    "alignment_score": 85,
+    "votes_analyzed": 414,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
