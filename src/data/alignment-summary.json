@@ -1576,14 +1576,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "M001233",
-    "name": "Mark Messmer",
-    "alignment_score": 89,
-    "votes_analyzed": 12,
-    "confidence": "medium",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "M001217",
     "name": "Jared Moskowitz",
     "alignment_score": 89,
@@ -1597,6 +1589,14 @@
     "alignment_score": 88,
     "votes_analyzed": 513,
     "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "M001233",
+    "name": "Mark Messmer",
+    "alignment_score": 88,
+    "votes_analyzed": 12,
+    "confidence": "medium",
     "methodology": "say-vs-do-v3"
   },
   {
@@ -1840,18 +1840,18 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "E000299",
-    "name": "Veronica Escobar",
+    "bioguide_id": "C001113",
+    "name": "Catherine Cortez Masto",
     "alignment_score": 77,
-    "votes_analyzed": 180,
+    "votes_analyzed": 484,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "C001113",
-    "name": "Catherine Cortez Masto",
-    "alignment_score": 76,
-    "votes_analyzed": 484,
+    "bioguide_id": "E000299",
+    "name": "Veronica Escobar",
+    "alignment_score": 77,
+    "votes_analyzed": 180,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -2002,7 +2002,7 @@
   {
     "bioguide_id": "G000597",
     "name": "Andrew Garbarino",
-    "alignment_score": 45,
+    "alignment_score": 46,
     "votes_analyzed": 90,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
