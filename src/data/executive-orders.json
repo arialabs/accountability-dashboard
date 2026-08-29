@@ -1,8 +1,21 @@
 {
-  "total": 275,
+  "total": 276,
   "source": "Federal Register API",
-  "last_updated": "2026-08-28",
+  "last_updated": "2026-08-29",
   "orders": [
+    {
+      "document_number": "2026-17843",
+      "eo_number": "14421",
+      "title": "Declaring a National Emergency To Secure the United States Bulk-Power System",
+      "signing_date": "2026-08-26",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/08/31/2026-17843/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-16730",
       "eo_number": "14420",
