@@ -1,8 +1,21 @@
 {
-  "total": 277,
+  "total": 278,
   "source": "Federal Register API",
-  "last_updated": "2026-09-02",
+  "last_updated": "2026-09-03",
   "orders": [
+    {
+      "document_number": "2026-18141",
+      "eo_number": "14423",
+      "title": "Establishing the United States Space Academy",
+      "signing_date": "2026-08-28",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/09/03/2026-18141/establishing-the-united-states-space-academy",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-18020",
       "eo_number": "14422",
