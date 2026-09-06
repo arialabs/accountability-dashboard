@@ -1008,14 +1008,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "R000614",
-    "name": "Chip Roy",
-    "alignment_score": 98,
-    "votes_analyzed": 184,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "H001085",
     "name": "Chrissy Houlahan",
     "alignment_score": 98,
@@ -1116,6 +1108,14 @@
     "name": "Sheila Cherfilus-McCormick",
     "alignment_score": 97,
     "votes_analyzed": 173,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "R000614",
+    "name": "Chip Roy",
+    "alignment_score": 97,
+    "votes_analyzed": 184,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1632,27 +1632,11 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "G000581",
-    "name": "Vicente Gonzalez",
-    "alignment_score": 86,
-    "votes_analyzed": 180,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "T000478",
     "name": "Claudia Tenney",
     "alignment_score": 86,
     "votes_analyzed": 184,
     "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "R000619",
-    "name": "Michael Rulli",
-    "alignment_score": 85,
-    "votes_analyzed": 9,
-    "confidence": "low",
     "methodology": "say-vs-do-v3"
   },
   {
@@ -1680,6 +1664,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "G000581",
+    "name": "Vicente Gonzalez",
+    "alignment_score": 85,
+    "votes_analyzed": 180,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "J000307",
     "name": "John James",
     "alignment_score": 85,
@@ -1701,6 +1693,14 @@
     "alignment_score": 85,
     "votes_analyzed": 179,
     "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "R000619",
+    "name": "Michael Rulli",
+    "alignment_score": 84,
+    "votes_analyzed": 9,
+    "confidence": "low",
     "methodology": "say-vs-do-v3"
   },
   {
@@ -1888,18 +1888,18 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "B001306",
-    "name": "Troy Balderson",
-    "alignment_score": 74,
-    "votes_analyzed": 177,
+    "bioguide_id": "K000391",
+    "name": "Raja Krishnamoorthi",
+    "alignment_score": 75,
+    "votes_analyzed": 174,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "K000391",
-    "name": "Raja Krishnamoorthi",
+    "bioguide_id": "B001306",
+    "name": "Troy Balderson",
     "alignment_score": 74,
-    "votes_analyzed": 174,
+    "votes_analyzed": 177,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -2018,7 +2018,7 @@
   {
     "bioguide_id": "S001223",
     "name": "Emilia Sykes",
-    "alignment_score": 15,
+    "alignment_score": 16,
     "votes_analyzed": 9,
     "confidence": "low",
     "methodology": "say-vs-do-v3"
