@@ -1,8 +1,34 @@
 {
-  "total": 278,
+  "total": 280,
   "source": "Federal Register API",
-  "last_updated": "2026-09-09",
+  "last_updated": "2026-09-10",
   "orders": [
+    {
+      "document_number": "2026-18571",
+      "eo_number": "14425",
+      "title": "Supporting America's Ranchers",
+      "signing_date": "2026-09-04",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/09/10/2026-18571/supporting-americas-ranchers",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
+    {
+      "document_number": "2026-18567",
+      "eo_number": "14424",
+      "title": "Promoting Fair Competition in Livestock Markets and Expanding Market Access for American Meat Producers",
+      "signing_date": "2026-09-04",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/09/10/2026-18567/promoting-fair-competition-in-livestock-markets-and-expanding-market-access-for-american-meat",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-18141",
       "eo_number": "14423",
