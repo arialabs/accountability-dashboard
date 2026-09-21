@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-14T16:46:58.206Z",
+    "generated_at": "2026-09-21T16:34:01.461Z",
     "source": "usaspending.gov",
     "fiscal_year_start": 2023,
     "fiscal_year_end": 2025,
@@ -24,17 +24,17 @@
         },
         {
           "fiscal_year": 2024,
-          "total_obligations": 14910869200.3,
+          "total_obligations": 14910919717.73,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -3.72
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 11108688359.34,
+          "total_obligations": 11110054804.54,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -25.5
+          "yoy_change_pct": -25.49
         }
       ],
       "program_funding_changes": [
@@ -65,10 +65,10 @@
         {
           "program_name": "Diplomatic and Consular Programs, State",
           "fiscal_year": 2025,
-          "current_amount": 3555437093.29,
+          "current_amount": 3556795878.7,
           "previous_amount": 4246696272.51,
-          "change_amount": -691259179.2200003,
-          "change_pct": -16.28
+          "change_amount": -689900393.8100004,
+          "change_pct": -16.25
         },
         {
           "program_name": "Emergencies in the Diplomatic and Consular Service, State",
@@ -97,9 +97,9 @@
         {
           "program_name": "Working Capital Fund, State",
           "fiscal_year": 2025,
-          "current_amount": 2365430595.25,
-          "previous_amount": 2749217258.34,
-          "change_amount": -383786663.09000015,
+          "current_amount": 2365435612.54,
+          "previous_amount": 2749267775.77,
+          "change_amount": -383832163.23,
           "change_pct": -13.96
         },
         {
@@ -129,10 +129,10 @@
         {
           "program_name": "Consular and Border Security Programs, Administration of Foreign Affairs, State",
           "fiscal_year": 2025,
-          "current_amount": 1956252975.11,
+          "current_amount": 1957606743.23,
           "previous_amount": 2112030536.46,
-          "change_amount": -155777561.35000014,
-          "change_pct": -7.38
+          "change_amount": -154423793.23000002,
+          "change_pct": -7.31
         },
         {
           "program_name": "Peacekeeping Operations, Funds Appropriated to the President",
@@ -230,7 +230,7 @@
           "award_id": "19AQMM18C0185",
           "generated_internal_id": "CONT_AWD_19AQMM18C0185_1900_-NONE-_-NONE-",
           "recipient_name": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
-          "amount": 1778907102.93,
+          "amount": 1793388682.08,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of State",
@@ -308,7 +308,7 @@
           "award_id": "SAQMMA17C0079",
           "generated_internal_id": "CONT_AWD_SAQMMA17C0079_1900_-NONE-_-NONE-",
           "recipient_name": "BL HARBERT INTERNATIONAL LLC",
-          "amount": 733516127,
+          "amount": 737530435,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of State",
@@ -347,7 +347,7 @@
           "award_id": "19AQMM22C0162",
           "generated_internal_id": "CONT_AWD_19AQMM22C0162_1900_-NONE-_-NONE-",
           "recipient_name": "CADDELL CONSTRUCTION CO. (DE), LLC",
-          "amount": 698875764.99,
+          "amount": 698267032.99,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of State",
@@ -373,7 +373,7 @@
           "award_id": "19AQMM21C0066",
           "generated_internal_id": "CONT_AWD_19AQMM21C0066_1900_-NONE-_-NONE-",
           "recipient_name": "INTER-CON SECURITY SYSTEMS, INC.",
-          "amount": 652453207.22,
+          "amount": 654420943.97,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of State",
@@ -412,7 +412,7 @@
           "award_id": "SAQMMA17F3765",
           "generated_internal_id": "CONT_AWD_SAQMMA17F3765_1900_SAQMMA17D0109_1900",
           "recipient_name": "CGI FEDERAL INC.",
-          "amount": 619973465.14,
+          "amount": 619973279.58,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of State",
@@ -591,10 +591,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 22727293013.84,
+      "contracts_obligated": 22747147720.18,
       "grants_obligated": 1000000000,
-      "total_awards_obligated": 23727293013.84,
-      "last_updated": "2026-09-14T16:25:11.535Z",
+      "total_awards_obligated": 23747147720.18,
+      "last_updated": "2026-09-21T16:30:21.151Z",
       "source": "usaspending.gov"
     },
     "department-of-defense": {
@@ -605,24 +605,24 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2023,
-          "total_obligations": 466936544148.43,
+          "total_obligations": 466936824331.48004,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2024,
-          "total_obligations": 456165698500,
+          "total_obligations": 456162119250.93,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -2.31
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 501190085011.79004,
+          "total_obligations": 501217521590.72003,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": 9.87
+          "yoy_change_pct": 9.88
         }
       ],
       "program_funding_changes": [
@@ -630,8 +630,8 @@
           "program_name": "Defense Working Capital Fund, Defense",
           "fiscal_year": 2025,
           "current_amount": 29240282845.93,
-          "previous_amount": 56599417787.81,
-          "change_amount": -27359134941.879997,
+          "previous_amount": 56599417486.98,
+          "change_amount": -27359134641.050003,
           "change_pct": -48.34
         },
         {
@@ -661,25 +661,25 @@
         {
           "program_name": "Operation and Maintenance, Air Force",
           "fiscal_year": 2025,
-          "current_amount": 26107166795.48,
+          "current_amount": 26106595745.48,
           "previous_amount": 31124644558.7,
-          "change_amount": -5017477763.220001,
+          "change_amount": -5018048813.220001,
           "change_pct": -16.12
         },
         {
           "program_name": "Procurement, Defense-Wide",
           "fiscal_year": 2025,
-          "current_amount": 11958477790.77,
+          "current_amount": 11985477790.77,
           "previous_amount": 16637202853.55,
-          "change_amount": -4678725062.779999,
-          "change_pct": -28.12
+          "change_amount": -4651725062.779999,
+          "change_pct": -27.96
         },
         {
           "program_name": "Operation and Maintenance, Army",
           "fiscal_year": 2025,
           "current_amount": 23597133707.17,
-          "previous_amount": 27057369041.61,
-          "change_amount": -3460235334.4400024,
+          "previous_amount": 27057319225.32,
+          "change_amount": -3460185518.1500015,
           "change_pct": -12.79
         },
         {
@@ -701,9 +701,9 @@
         {
           "program_name": "Defense Health Program, Defense",
           "fiscal_year": 2025,
-          "current_amount": 9763178232.46,
-          "previous_amount": 12395520337.19,
-          "change_amount": -2632342104.7300014,
+          "current_amount": 9762716336.37,
+          "previous_amount": 12395569172.9,
+          "change_amount": -2632852836.529999,
           "change_pct": -21.24
         },
         {
@@ -733,10 +733,10 @@
         {
           "program_name": "Military Construction, Army",
           "fiscal_year": 2025,
-          "current_amount": 2164617571.62,
-          "previous_amount": 4301641613.2,
-          "change_amount": -2137024041.58,
-          "change_pct": -49.68
+          "current_amount": 2164633043.81,
+          "previous_amount": 4298397639.11,
+          "change_amount": -2133764595.2999997,
+          "change_pct": -49.64
         },
         {
           "program_name": "Procurement, Marine Corps",
@@ -870,11 +870,11 @@
           "award_id": "N0001920C0009",
           "generated_internal_id": "CONT_AWD_N0001920C0009_9700_-NONE-_-NONE-",
           "recipient_name": "LOCKHEED MARTIN CORPORATION",
-          "amount": 30140182630.06,
+          "amount": 30154748689.06,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Defense",
-          "awarding_sub_agency": "Defense Contract Management Agency",
+          "awarding_sub_agency": "Department of the Navy",
           "action_date": null,
           "description": "THE PURPOSE OF THIS MODIFICATION IS TO AWARD F-35A LRIP 15 USAF  AIRCRAFT* LONG LEAD FUNDING",
           "source_url": null
@@ -896,7 +896,7 @@
           "award_id": "HT940216C0002",
           "generated_internal_id": "CONT_AWD_HT940216C0002_9700_-NONE-_-NONE-",
           "recipient_name": "HEALTH NET FEDERAL SERVICES, LLC",
-          "amount": 23482808066.07,
+          "amount": 23484451360.07,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Defense",
@@ -922,7 +922,7 @@
           "award_id": "N0002412C2115",
           "generated_internal_id": "CONT_AWD_N0002412C2115_9700_-NONE-_-NONE-",
           "recipient_name": "ELECTRIC BOAT CORPORATION",
-          "amount": 20212225804,
+          "amount": 20212290145,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Defense",
@@ -987,7 +987,7 @@
           "award_id": "N0002418C2130",
           "generated_internal_id": "CONT_AWD_N0002418C2130_9700_-NONE-_-NONE-",
           "recipient_name": "FLUOR MARINE PROPULSION, LLC",
-          "amount": 14925550269.48,
+          "amount": 14961089932.48,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Defense",
@@ -1026,7 +1026,7 @@
           "award_id": "N0002416C2116",
           "generated_internal_id": "CONT_AWD_N0002416C2116_9700_-NONE-_-NONE-",
           "recipient_name": "HUNTINGTON INGALLS INC",
-          "amount": 12797497563.85,
+          "amount": 12797608563.85,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Defense",
@@ -1179,10 +1179,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 590190706033.1099,
+      "contracts_obligated": 590242630390.1099,
       "grants_obligated": 0,
-      "total_awards_obligated": 590190706033.1099,
-      "last_updated": "2026-09-14T16:27:50.860Z",
+      "total_awards_obligated": 590242630390.1099,
+      "last_updated": "2026-09-21T16:30:36.584Z",
       "source": "usaspending.gov"
     },
     "department-of-justice": {
@@ -1200,17 +1200,17 @@
         },
         {
           "fiscal_year": 2024,
-          "total_obligations": 14129103208.22,
+          "total_obligations": 14129101108.22,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -9.91
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 11213824641.39,
+          "total_obligations": 11213210570.03,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -20.63
+          "yoy_change_pct": -20.64
         }
       ],
       "program_funding_changes": [
@@ -1273,10 +1273,10 @@
         {
           "program_name": "Working Capital Fund, Justice",
           "fiscal_year": 2025,
-          "current_amount": 975266350.55,
-          "previous_amount": 1064989830.41,
-          "change_amount": -89723479.86000001,
-          "change_pct": -8.42
+          "current_amount": 975248958.55,
+          "previous_amount": 1064987730.41,
+          "change_amount": -89738771.86000001,
+          "change_pct": -8.43
         },
         {
           "program_name": "Buildings and Facilities, Federal Prison System, Justice",
@@ -1289,10 +1289,10 @@
         {
           "program_name": "Salaries and Expenses, United States Attorneys, Justice",
           "fiscal_year": 2025,
-          "current_amount": 206518473.88,
+          "current_amount": 207295055.66,
           "previous_amount": 269181651.53,
-          "change_amount": -62663177.649999976,
-          "change_pct": -23.28
+          "change_amount": -61886595.869999975,
+          "change_pct": -22.99
         },
         {
           "program_name": "Prison Industries Fund, Justice",
@@ -1305,9 +1305,9 @@
         {
           "program_name": "Salaries and Expenses, Federal Prison System, Justice",
           "fiscal_year": 2025,
-          "current_amount": 1919363646.03,
+          "current_amount": 1919445353.25,
           "previous_amount": 1863269607.49,
-          "change_amount": 56094038.53999996,
+          "change_amount": 56175745.75999999,
           "change_pct": 3.01
         },
         {
@@ -1337,10 +1337,10 @@
         {
           "program_name": "Fees and Expenses of Witnesses, Justice",
           "fiscal_year": 2025,
-          "current_amount": 106706729.21,
+          "current_amount": 106639499.71,
           "previous_amount": 147641408.99,
-          "change_amount": -40934679.780000016,
-          "change_pct": -27.73
+          "change_amount": -41001909.280000016,
+          "change_pct": -27.77
         },
         {
           "program_name": "Diversion Control Fee Account, Justice",
@@ -1354,8 +1354,8 @@
           "program_name": "Assets Forfeiture Fund, Justice",
           "fiscal_year": 2025,
           "current_amount": 500540971.3,
-          "previous_amount": 527168302.28,
-          "change_amount": -26627330.97999996,
+          "previous_amount": 527178302.28,
+          "change_amount": -26637330.97999996,
           "change_pct": -5.05
         },
         {
@@ -1393,7 +1393,7 @@
           "award_id": "15JPSS19F00000507",
           "generated_internal_id": "CONT_AWD_15JPSS19F00000507_1501_GS00Q17NSD3000_4732",
           "recipient_name": "AT&T ENTERPRISES, LLC",
-          "amount": 670647981.42,
+          "amount": 674330549.1,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Justice",
@@ -1406,7 +1406,7 @@
           "award_id": "15A00020FAQA00189",
           "generated_internal_id": "CONT_AWD_15A00020FAQA00189_1560_47QTCK18D0008_4732",
           "recipient_name": "LEIDOS, INC.",
-          "amount": 626808951.08,
+          "amount": 630424326.5,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Justice",
@@ -1445,7 +1445,7 @@
           "award_id": "15F06724F0000733",
           "generated_internal_id": "CONT_AWD_15F06724F0000733_1549_15F06719D0003691_1549",
           "recipient_name": "BRASFIELD & GORRIE LLC",
-          "amount": 519685432,
+          "amount": 519905661,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Justice",
@@ -1718,7 +1718,7 @@
           "award_id": "15F06720F0003326",
           "generated_internal_id": "CONT_AWD_15F06720F0003326_1549_GS35F0142W_4730",
           "recipient_name": "MANTECH ADVANCED SYSTEMS INTERNATIONAL, INC.",
-          "amount": 125101119.69,
+          "amount": 125280718.09,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Justice",
@@ -1767,10 +1767,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 7629318980.88,
+      "contracts_obligated": 7637016751.380001,
       "grants_obligated": 723278520.1,
-      "total_awards_obligated": 8352597500.9800005,
-      "last_updated": "2026-09-14T16:28:45.893Z",
+      "total_awards_obligated": 8360295271.480001,
+      "last_updated": "2026-09-21T16:30:44.028Z",
       "source": "usaspending.gov"
     },
     "department-of-the-treasury": {
@@ -1781,24 +1781,24 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2023,
-          "total_obligations": 12630751558.15,
+          "total_obligations": 12631025656.68,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2024,
-          "total_obligations": 10345819052.89,
+          "total_obligations": 10345160891.449999,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -18.09
+          "yoy_change_pct": -18.1
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 9204060109.9,
+          "total_obligations": 9207364244.49,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -11.04
+          "yoy_change_pct": -11
         }
       ],
       "program_funding_changes": [
@@ -1813,10 +1813,10 @@
         {
           "program_name": "Treasury Franchise Fund, Treasury",
           "fiscal_year": 2025,
-          "current_amount": 1251855769.38,
+          "current_amount": 1255310025.38,
           "previous_amount": 816432244.84,
-          "change_amount": 435423524.5400001,
-          "change_pct": 53.33
+          "change_amount": 438877780.5400001,
+          "change_pct": 53.76
         },
         {
           "program_name": "Community Development Financial Institutions Fund, Program Account, Treasury",
@@ -1981,7 +1981,7 @@
           "award_id": "2032H521F00050",
           "generated_internal_id": "CONT_AWD_2032H521F00050_2050_GS00Q17NSD3000_4732",
           "recipient_name": "AT&T ENTERPRISES, LLC",
-          "amount": 365995133.44,
+          "amount": 371656558.28,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of the Treasury",
@@ -1994,13 +1994,26 @@
           "award_id": "2032H325F00032",
           "generated_internal_id": "CONT_AWD_2032H325F00032_2001_NNG15SD29B_8000",
           "recipient_name": "LANCER INFORMATION SOLUTIONS, LLC",
-          "amount": 344100561.5,
+          "amount": 352353496.68,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of the Treasury",
           "awarding_sub_agency": "Departmental Offices",
           "action_date": null,
           "description": "SALESFORCE SEWP CATALOG NNG15SD29B",
+          "source_url": null
+        },
+        {
+          "award_id": "2032H523F00493",
+          "generated_internal_id": "CONT_AWD_2032H523F00493_2050_NNG15SC71B_8000",
+          "recipient_name": "FCN, INC.",
+          "amount": 309336447.78,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of the Treasury",
+          "awarding_sub_agency": "Internal Revenue Service",
+          "action_date": null,
+          "description": "BASE AWARD FOR IRS CISCO CATALOG. BASE YEAR 12 MONTHS WITH FOUR 12-MONTH OPTION PERIODS.",
           "source_url": null
         },
         {
@@ -2092,19 +2105,6 @@
           "awarding_sub_agency": "Internal Revenue Service",
           "action_date": null,
           "description": "NEW IPAA SOFTWARE   SUBSTITUTION FIXED Q NEW IPAA SOFTWARE  SUBSTITUTION FIXED QUANTITY JUNE 30, 2018 THRU JUNE 29, 2019.",
-          "source_url": null
-        },
-        {
-          "award_id": "2032H523F00493",
-          "generated_internal_id": "CONT_AWD_2032H523F00493_2050_NNG15SC71B_8000",
-          "recipient_name": "FCN, INC.",
-          "amount": 233051576.07,
-          "award_type": "contract",
-          "award_type_label": "Unknown",
-          "awarding_agency": "Department of the Treasury",
-          "awarding_sub_agency": "Internal Revenue Service",
-          "action_date": null,
-          "description": "BASE AWARD FOR IRS CISCO CATALOG. BASE YEAR 12 MONTHS WITH FOUR 12-MONTH OPTION PERIODS.",
           "source_url": null
         },
         {
@@ -2355,10 +2355,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 6050563421.17,
+      "contracts_obligated": 6140762652.900001,
       "grants_obligated": 320098385,
-      "total_awards_obligated": 6370661806.17,
-      "last_updated": "2026-09-14T16:30:16.085Z",
+      "total_awards_obligated": 6460861037.900001,
+      "last_updated": "2026-09-21T16:30:55.782Z",
       "source": "usaspending.gov"
     },
     "department-of-health-and-human-services": {
@@ -2383,7 +2383,7 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 846833406465.73,
+          "total_obligations": 846833467965.73,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 4.75
@@ -2946,7 +2946,7 @@
       "contracts_obligated": 0,
       "grants_obligated": 1340202702514,
       "total_awards_obligated": 1340202702514,
-      "last_updated": "2026-09-14T16:30:47.546Z",
+      "last_updated": "2026-09-21T16:31:06.063Z",
       "source": "usaspending.gov"
     },
     "department-of-homeland-security": {
@@ -2957,24 +2957,24 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2023,
-          "total_obligations": 54528615045.240005,
+          "total_obligations": 54528619140.16,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2024,
-          "total_obligations": 58671843427.45,
+          "total_obligations": 58674283274.850006,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 7.6
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 61088326455.009995,
+          "total_obligations": 61097659295.66,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": 4.12
+          "yoy_change_pct": 4.13
         }
       ],
       "program_funding_changes": [
@@ -3144,7 +3144,7 @@
           "award_id": "4339DRPRP00000001",
           "generated_internal_id": "ASST_NON_4339DRPRP00000001_070",
           "recipient_name": "GOVERNOR'S AUTHORIZED REPRESENTATIVE",
-          "amount": 35344198915.43,
+          "amount": 35334862760.16,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3157,7 +3157,7 @@
           "award_id": "4340DRVIP00000001",
           "generated_internal_id": "ASST_NON_4340DRVIP00000001_070",
           "recipient_name": "GOVERNMENT OF THE VIRGIN ISLANDS",
-          "amount": 22008859629.26,
+          "amount": 22008133143.45,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3170,7 +3170,7 @@
           "award_id": "4480DRNYP00000001",
           "generated_internal_id": "ASST_NON_4480DRNYP00000001_070",
           "recipient_name": "NEW YORK STATE DIVISION OF HOMELAND SECURITY & EMERGENCY SERVICES",
-          "amount": 17386438917.27,
+          "amount": 17352222808.66,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3196,7 +3196,7 @@
           "award_id": "4485DRTXP00000001",
           "generated_internal_id": "ASST_NON_4485DRTXP00000001_070",
           "recipient_name": "TEXAS DIVISION OF EMERGENCY MANAGEMENT",
-          "amount": 14376988083.18,
+          "amount": 14375868392.69,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3209,7 +3209,7 @@
           "award_id": "4085DRNYP0000001",
           "generated_internal_id": "ASST_NON_4085DRNYP0000001_070",
           "recipient_name": "NEW YORK STATE DIVISION OF HOMELAND SECURITY & EMERGENCY SERVICES",
-          "amount": 13373411150.28,
+          "amount": 13373399634.54,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3222,7 +3222,7 @@
           "award_id": "4486DRFLP00000001",
           "generated_internal_id": "ASST_NON_4486DRFLP00000001_070",
           "recipient_name": "STATE OF FLORIDA DIVISION OF EMERGENCY MANAGEMENT",
-          "amount": 4928689738.07,
+          "amount": 4902307896.91,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3235,7 +3235,7 @@
           "award_id": "4611DRLAP00000001",
           "generated_internal_id": "ASST_NON_4611DRLAP00000001_070",
           "recipient_name": "HOMELAND SECURITY & EMERGENCY",
-          "amount": 3623936768.3,
+          "amount": 3623924677.05,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3248,7 +3248,7 @@
           "award_id": "4496DRMAP00000001",
           "generated_internal_id": "ASST_NON_4496DRMAP00000001_070",
           "recipient_name": "EMERGENCY MANAGEMENT AGENCY MASSACHUSETTS",
-          "amount": 3488602090.74,
+          "amount": 3488023167.87,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3274,7 +3274,7 @@
           "award_id": "4488DRNJP00000001",
           "generated_internal_id": "ASST_NON_4488DRNJP00000001_070",
           "recipient_name": "LAW & PUBLIC SAFETY, NEW JERSEY DEPARTMENT OF",
-          "amount": 3241628926.43,
+          "amount": 3237156045.94,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3287,7 +3287,7 @@
           "award_id": "4559DRLAP00000001",
           "generated_internal_id": "ASST_NON_4559DRLAP00000001_070",
           "recipient_name": "HOMELAND SECURITY & EMERGENCY",
-          "amount": 3209970500.06,
+          "amount": 3209955430.85,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3299,8 +3299,8 @@
         {
           "award_id": "4332DRTXP00000001",
           "generated_internal_id": "ASST_NON_4332DRTXP00000001_070",
-          "recipient_name": "TEXAS DIVISION OF EMERGENCY MANAGEMENT",
-          "amount": 2987738914.49,
+          "recipient_name": "TEXAS DEPARTMENT OF PUBLIC SAFETY",
+          "amount": 2987350749.6,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3313,7 +3313,7 @@
           "award_id": "4481DRWAP00000001",
           "generated_internal_id": "ASST_NON_4481DRWAP00000001_070",
           "recipient_name": "MILITARY DEPARTMENT, WASHINGTON STATE",
-          "amount": 2981067399.74,
+          "amount": 2981145933.17,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3326,7 +3326,7 @@
           "award_id": "4673DRFLP00000001",
           "generated_internal_id": "ASST_NON_4673DRFLP00000001_070",
           "recipient_name": "STATE OF FLORIDA DIVISION OF EMERGENCY MANAGEMENT",
-          "amount": 2944317464.84,
+          "amount": 2944650277.04,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3339,7 +3339,7 @@
           "award_id": "4827DRNCP00000001",
           "generated_internal_id": "ASST_NON_4827DRNCP00000001_070",
           "recipient_name": "NORTH CAROLINA DEPARTMENT OF PUBLIC SAFETY",
-          "amount": 2497360058.02,
+          "amount": 2496994905.44,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3352,7 +3352,7 @@
           "award_id": "4337DRFLP00000001",
           "generated_internal_id": "ASST_NON_4337DRFLP00000001_070",
           "recipient_name": "STATE OF FLORIDA DIVISION OF EMERGENCY MANAGEMENT",
-          "amount": 2413903330.52,
+          "amount": 2412688151.21,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3365,20 +3365,7 @@
           "award_id": "1603DRLAP0000001",
           "generated_internal_id": "ASST_NON_1603DRLAP0000001_070",
           "recipient_name": "HOMELAND SECURITY & EMERGENCY",
-          "amount": 2388252646.06,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4399DRFLP00000001",
-          "generated_internal_id": "ASST_NON_4399DRFLP00000001_070",
-          "recipient_name": "STATE OF FLORIDA DIVISION OF EMERGENCY MANAGEMENT",
-          "amount": 2349027141.69,
+          "amount": 2390215653.15,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3392,6 +3379,19 @@
           "generated_internal_id": "ASST_NON_4506DRPAP00000001_070",
           "recipient_name": "PENNSYLVANIA EMERGENCY MANAGEMENT AGENCY",
           "amount": 2348912521.49,
+          "award_type": "grant",
+          "award_type_label": "PROJECT GRANT (B)",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "Federal Emergency Management Agency",
+          "action_date": null,
+          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
+          "source_url": null
+        },
+        {
+          "award_id": "4399DRFLP00000001",
+          "generated_internal_id": "ASST_NON_4399DRFLP00000001_070",
+          "recipient_name": "STATE OF FLORIDA DIVISION OF EMERGENCY MANAGEMENT",
+          "amount": 2348721912.3,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3456,7 +3456,7 @@
           "award_id": "4487DRNCP00000001",
           "generated_internal_id": "ASST_NON_4487DRNCP00000001_070",
           "recipient_name": "NORTH CAROLINA DEPARTMENT OF PUBLIC SAFETY",
-          "amount": 2068969438.58,
+          "amount": 2068926154.39,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3469,7 +3469,7 @@
           "award_id": "4499DRORP00000001",
           "generated_internal_id": "ASST_NON_4499DRORP00000001_070",
           "recipient_name": "OREGON MILITARY DEPARTMENT",
-          "amount": 1980491638.26,
+          "amount": 1980374214.55,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3508,7 +3508,7 @@
           "award_id": "4671DRPRP00000001",
           "generated_internal_id": "ASST_NON_4671DRPRP00000001_070",
           "recipient_name": "GOVERNOR'S AUTHORIZED REPRESENTATIVE",
-          "amount": 1823385029.67,
+          "amount": 1823462508.79,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3532,9 +3532,9 @@
         }
       ],
       "contracts_obligated": 2089442660.08,
-      "grants_obligated": 178039443491.51996,
-      "total_awards_obligated": 180128886151.59995,
-      "last_updated": "2026-09-14T16:33:16.817Z",
+      "grants_obligated": 177962590128.38998,
+      "total_awards_obligated": 180052032788.46997,
+      "last_updated": "2026-09-21T16:31:13.472Z",
       "source": "usaspending.gov"
     },
     "environmental-protection-agency": {
@@ -4090,7 +4090,7 @@
       "contracts_obligated": 0,
       "grants_obligated": 27309780972,
       "total_awards_obligated": 27309780972,
-      "last_updated": "2026-09-14T16:34:51.601Z",
+      "last_updated": "2026-09-21T16:31:22.207Z",
       "source": "usaspending.gov"
     },
     "department-of-the-interior": {
@@ -4327,7 +4327,7 @@
           "award_id": "INR17PC00023",
           "generated_internal_id": "CONT_AWD_INR17PC00023_1425_-NONE-_-NONE-",
           "recipient_name": "CDM CONSTRUCTORS INC",
-          "amount": 361628040,
+          "amount": 361716315,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of the Interior",
@@ -4353,7 +4353,7 @@
           "award_id": "140D0423F0030",
           "generated_internal_id": "CONT_AWD_140D0423F0030_1406_GS02Q16DCR0076_4732",
           "recipient_name": "DEEP MILE NETWORKS LLC",
-          "amount": 334904478.96,
+          "amount": 334904396.86,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of the Interior",
@@ -4675,10 +4675,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 6018377017.43,
+      "contracts_obligated": 6018465210.33,
       "grants_obligated": 2135744746.3,
-      "total_awards_obligated": 8154121763.7300005,
-      "last_updated": "2026-09-14T16:35:39.001Z",
+      "total_awards_obligated": 8154209956.63,
+      "last_updated": "2026-09-21T16:31:39.763Z",
       "source": "usaspending.gov"
     },
     "department-of-agriculture": {
@@ -4689,7 +4689,7 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2023,
-          "total_obligations": 65886895256.46,
+          "total_obligations": 65886845451.15,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
@@ -4703,7 +4703,7 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 67751355673.14,
+          "total_obligations": 67751524889.06,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -1.37
@@ -5266,7 +5266,7 @@
       "contracts_obligated": 0,
       "grants_obligated": 55377991009.15,
       "total_awards_obligated": 55377991009.15,
-      "last_updated": "2026-09-14T16:38:21.996Z",
+      "last_updated": "2026-09-21T16:31:50.566Z",
       "source": "usaspending.gov"
     },
     "department-of-commerce": {
@@ -5291,7 +5291,7 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 25188297129.809998,
+          "total_obligations": 25188982471.86,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -27.46
@@ -5309,10 +5309,10 @@
         {
           "program_name": "Operations, Research and Facilities, National Oceanic and Atmospheric Administration, Commerce",
           "fiscal_year": 2025,
-          "current_amount": 3380626621.94,
+          "current_amount": 3381311963.99,
           "previous_amount": 4614047041.43,
-          "change_amount": -1233420419.4900002,
-          "change_pct": -26.73
+          "change_amount": -1232735077.4400005,
+          "change_pct": -26.72
         },
         {
           "program_name": "Digital Equity, National Telecommunications and Information Administration, Commerce",
@@ -5854,7 +5854,7 @@
       "contracts_obligated": 5137496740.69,
       "grants_obligated": 31467830357.58,
       "total_awards_obligated": 36605327098.270004,
-      "last_updated": "2026-09-14T16:39:53.799Z",
+      "last_updated": "2026-09-21T16:32:12.976Z",
       "source": "usaspending.gov"
     },
     "department-of-labor": {
@@ -6442,7 +6442,7 @@
       "contracts_obligated": 298814105.88,
       "grants_obligated": 7852906810.869999,
       "total_awards_obligated": 8151720916.749999,
-      "last_updated": "2026-09-14T16:40:56.862Z",
+      "last_updated": "2026-09-21T16:32:34.261Z",
       "source": "usaspending.gov"
     },
     "department-of-transportation": {
@@ -6702,19 +6702,6 @@
           "source_url": null
         },
         {
-          "award_id": "69A36524420700FSPNY",
-          "generated_internal_id": "ASST_NON_69A36524420700FSPNY_069",
-          "recipient_name": "GATEWAY DEVELOPMENT COMMISSION",
-          "amount": 2849999869,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Transportation",
-          "awarding_sub_agency": "Federal Railroad Administration",
-          "action_date": null,
-          "description": "THE PURPOSE OF THIS AWARD IS TO FUND A FY 2022-2023 FEDERAL STATE PARTNERSHIP NORTHEAST CORRIDOR PROGRAM GRANT FOR THE HUDSON TUNNEL PROJECT (THE PROJECT OR HTP) TO HELP ACHIEVE THE GOALS IDENTIFIED IN THE NOTICE OF FUNDING OPPORTUNITY FOR PROJECTS LOCATED ON THE NORTHEAST CORRIDOR FOR THE FEDERAL-STATE PARTNERSHIP FOR INTERCITY PASSENGER RAIL GRANTS PROGRAM, 87 FED. REG. 79421, DECEMBER 27, 2022 THAT SOLICITED APPLICATIONS FOR FEDERAL FINANCIAL ASSISTANCE. THE FSP-NEC PROJECT CONSISTS OF THREE ELEMENTS: 1) THE CONSTRUCTION OF A NEW HUDSON RIVER TUNNEL BETWEEN NEW YORK AND NEW JERSEY  2) THE REHABILITATION OF THE EXISTING NORTH RIVER TUNNEL UNDER THE HUDSON RIVER  AND 3) LONG ISLAND RAIL ROAD (LIRR) EMERGENCY SERVICES BUILDING (ESB) UTILITY RELOCATION EARLY WORK ASSOCIATED WITH THE SEPARATELY FUNDED HUDSON YARDS CONCRETE CASING SECTION THREE (3) PROJECT. DELIVERABLES FOR THE PROJECT INCLUDE A PROJECT MANAGEMENT PLAN (PMP), FINAL DESIGN SET(S), A REAL ESTATE ACQUISITION MANAGEMENT PLAN (RAMP), CONTRACTOR PROPOSALS AND EXECUTED CONTRACTS, CONTRACTOR BUY AMERICA CERTIFICATION, AND A CONTRACTOR SAFETY PLAN.THE INTENDED BENEFICIARY AS A RESULT OF THIS PROJECT IS THE NATIONAL RAILROAD PASSENGER CORPORATION (AMTRAK).",
-          "source_url": null
-        },
-        {
           "award_id": "69A36524521060FSPNV",
           "generated_internal_id": "ASST_NON_69A36524521060FSPNV_069",
           "recipient_name": "NV DEPARTMENT OF TRANSPORTATION",
@@ -6741,6 +6728,19 @@
           "source_url": null
         },
         {
+          "award_id": "693KA821F00222",
+          "generated_internal_id": "CONT_AWD_693KA821F00222_6920_DTFA0102D03006_6920",
+          "recipient_name": "HARRIS CORPORATION",
+          "amount": 2310023723.18,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Transportation",
+          "awarding_sub_agency": "Federal Aviation Administration",
+          "action_date": null,
+          "description": "THE PURPOSE OF THIS DELIVERY ORDER AWARD IS TO ADD FUNDING FOR FTI TELECOMMUNICATIONS SERVICES.",
+          "source_url": null
+        },
+        {
           "award_id": "NY-2024-057",
           "generated_internal_id": "ASST_NON_NY-2024-057_069",
           "recipient_name": "METROPOLITAN TRANSPORTATION AUTHORITY",
@@ -6764,19 +6764,6 @@
           "awarding_sub_agency": "Federal Transit Administration",
           "action_date": null,
           "description": "APPLICATION PURPOSE: THE PURPOSE IS TO CONSTRUCT THE HUDSON TUNNEL PROJECT (HTP).; ACTIVITIES PERFORMED: THE HTP INCLUDES THREE ELEMENTS: 1) THE CONSTRUCTION OF A NEW HUDSON RIVER TUNNEL BETWEEN NEW YORK AND NEW JERSEY; 2) THE REHABILITATION OF THE EXISTING NORTH RIVER TUNNEL UNDER THE HUDSON RIVER; AND 3) LONG ISLAND RAIL ROAD (LIRR) EMERGENCY SERVICES BUILDING (ESB) UTILITY RELOCATION EARLY WORK ASSOCIATED WITH THE SEPARATELY FUNDED HUDSON YARDS CONCRETE CASING SECTION 3 PROJECT.; EXPECTED OUTCOMES: THE PURPOSE OF THE HTP IS TO PRESERVE THE CURRENT FUNCTIONALITY OF AMTRAKS NORTHEAST CORRIDOR (NEC) SERVICE AND NJ TRANSITS COMMUTER RAIL SERVICE BETWEEN NEW JERSEY AND PSNY BY REPAIRING THE DETERIORATING NORTH RIVER TUNNEL; AND TO STRENGTHEN THE NECS RESILIENCY TO SUPPORT RELIABLE SERVICE BY PROVIDING REDUNDANT CAPABILITY UNDER THE HUDSON RIVER FOR AMTRAK AND NJ TRANSIT NEC TRAINS BETWEEN NEW JERSEY AND PSNY. THESE IMPROVEMENTS MUST BE ACHIEVED WHILE MAINTAINING UNINTERRUPTED COMMUTER AND INTERCITY RAIL SERVICE AND BY OPTIMIZING THE USE OF EXISTING INFRASTRUCTURE. AT THE COMPLETION OF THE HTP THE NEC WOULD HAVE FOUR TRACKS (TWO IN THE NEW HUDSON TUNNEL AND TWO IN THE NORTH RIVER TUNNEL) BETWEEN NEW YORK AND NEW JERSEY UNDER THE HUDSON RIVER. NO CHANGES TO PSNY PLATFORMS OR PLATFORM TRACKS ARE PROPOSED AS PART OF THE HTP SINCE PSNY IS OUTSIDE OF THE HTP PROJECT AREA THEREFORE THE CURRENT OPERATIONAL CAPACITY OF PSNY WILL BE MAINTAINED AT THE LEVEL IT IS TODAY.; INTENDED BENEFICIARIES: THE HTP WILL ALLOW MULTIPLE NJ TRANSIT RAIL SERVICES THROUGHOUT THE STATE TO FEED INTO AND UTILIZE THE TUNNEL AND PSNY. THESE IMPORTANT RAIL CONNECTIONS FACILITATE THE MOVEMENT OF OVER 200000 TRAIN PASSENGERS TRIPS PER DAY BETWEEN NEW YORK AND NEW JERSEY.; SUBRECIPIENT ACTIVITIES: GDC DOES NOT HAVE ANY SUB-RECIPIENTS.",
-          "source_url": null
-        },
-        {
-          "award_id": "693KA821F00222",
-          "generated_internal_id": "CONT_AWD_693KA821F00222_6920_DTFA0102D03006_6920",
-          "recipient_name": "HARRIS CORPORATION",
-          "amount": 2193106299.53,
-          "award_type": "contract",
-          "award_type_label": "Unknown",
-          "awarding_agency": "Department of Transportation",
-          "awarding_sub_agency": "Federal Aviation Administration",
-          "action_date": null,
-          "description": "THE PURPOSE OF THIS DELIVERY ORDER AWARD IS TO ADD FUNDING FOR FTI TELECOMMUNICATIONS SERVICES.",
           "source_url": null
         },
         {
@@ -6822,7 +6809,7 @@
           "award_id": "DTFA0102D03006CALL0001",
           "generated_internal_id": "CONT_AWD_DTFA0102D03006CALL0001_6920_DTFA0102D03006_6920",
           "recipient_name": "HARRIS CORPORATION",
-          "amount": 1583956786.32,
+          "amount": 1590352857.43,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Transportation",
@@ -6881,19 +6868,6 @@
           "awarding_sub_agency": "Federal Railroad Administration",
           "action_date": null,
           "description": "THE GENERAL OBJECTIVE OF THE PROGRAM FUNDED THROUGH THIS AGREEMENT IS FOR AMTRAK TO MAINTAIN CONTINUED SAFE NATIONAL PASSENGER RAIL OPERATIONS, TO PURSUE ACTIVITIES THAT SUPPORT EFFICIENT SERVICE TO INTERCITY PASSENGER RAIL RIDERSHIP, AND TO ADDRESS AND COMPLY WITH ALL SPECIFIED FEDERAL OPERATING REQUIREMENTS AND MANDATES ON REGIONS OUTSIDE THE NEC, KNOWN AS THE ?NATIONAL NETWORK? (NN). THIS INCLUDES ROUTES FOR BOTH STATE SUPPORTED AND LONG DISTANCE LINES, AND IN MANY CASES, THIS WILL INCLUDE WORK THAT PROVIDES A SHARED BENEFIT ACROSS THE NEC AND NATIONAL NETWORK.",
-          "source_url": null
-        },
-        {
-          "award_id": "69A36525421080FSPNY",
-          "generated_internal_id": "ASST_NON_69A36525421080FSPNY_069",
-          "recipient_name": "METROPOLITAN TRANSPORTATION AUTHORITY",
-          "amount": 1415132582,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Transportation",
-          "awarding_sub_agency": "Federal Railroad Administration",
-          "action_date": null,
-          "description": "THE PROJECT INCLUDES FINAL DESIGN AND CONSTRUCTION TO COMPREHENSIVELY REHABILITATE 19 MILES OF THE AMTRAK-OWNED HELL GATE LINE CONNECTING NEW YORK PENN STATION AND NEW ROCHELLE, NEW YORK. BENEFITS TO AMTRAKS INTERCITY SERVICES FROM THE PROJECT INCLUDE UPGRADED SIGNAL SYSTEMS, REHABILITATION OF FOUR BRIDGES, CONSTRUCTION OF FOUR NEW INTERLOCKINGS AND FIVE NEW POWER SUBSTATIONS, AND UPGRADES TO TWO EXISTING SUBSTATIONS, AND TRACK REHABILITATION. ADDITIONAL PROJECT COMPONENTS INCLUDE AN EXPANSION TO THE NEW ROCHELLE YARD. THE PROJECT WILL RESTORE THE HELL GATE LINE TO A STATE OF GOOD REPAIR AND ALLOW THE INTRODUCTION OF NEW METRO-NORTH RAILROAD (MNR) COMMUTER RAIL SERVICE OVER THE HELL GATE LINE CONNECTING TO PENN STATION NEW YORK. THE REHABILITATION AND REPLACEMENT OF ASSETS ON THE HELL GATE LINE WILL REVERSE DECADES-LONG UNDERINVESTMENT IN INTERCITY PASSENGER RAIL INFRASTRUCTURE. THE PROJECT WILL INSTALL A MODERN SIGNAL SYSTEM, REHABILITATE BRIDGES, INCREASE POWER, AND UPGRADE SIX MILES OF THE LINE INTO A FOUR-TRACK RAILROAD, IMPROVING OPERATIONAL FLEXIBILITY AS WELL AS ON-TIME PERFORMANCE AND RELIABILITY FOR 40,000 INTERCITY RAIL PASSENGERS THAT RELY ON THE LINE TODAY WHILE ALSO PREPARING THE NORTHEAST CORRIDOR (NEC) FOR INCREASED SERVICE LEVELS AND HIGH-SPEED RAIL SERVICE.",
           "source_url": null
         },
         {
@@ -7025,12 +6999,38 @@
           "action_date": null,
           "description": "THE GENERAL OBJECTIVE OF THE PROGRAM FUNDED THROUGH THIS AGREEMENT IS FOR AMTRAK TO MAINTAIN CONTINUED SAFE NATIONAL PASSENGER RAIL OPERATIONS, TO PURSUE ACTIVITIES THAT SUPPORT EFFICIENT SERVICE TO INTERCITY PASSENGER RAIL RIDERSHIP, AND TO ADDRESS AND COMPLY WITH ALL SPECIFIED FEDERAL OPERATING REQUIREMENTS AND MANDATES ON REGIONS OUTSIDE THE NATIONAL NETWORK (NN), KNOWN AS THE NORTHEAST CORRIDOR  (NEC). THIS INCLUDES NEC INTERCITY OPERATIONS, AND IN MANY CASES, THIS WILL INCLUDE WORK THAT PROVIDES A SHARED BENEFIT ACROSS THE NEC AND NATIONAL NETWORK.",
           "source_url": null
+        },
+        {
+          "award_id": "69A36524520000AMTDC",
+          "generated_internal_id": "ASST_NON_69A36524520000AMTDC_069",
+          "recipient_name": "NATIONAL RAILROAD PASSENGER CORPORATION",
+          "amount": 1130734790,
+          "award_type": "grant",
+          "award_type_label": "COOPERATIVE AGREEMENT (B)",
+          "awarding_agency": "Department of Transportation",
+          "awarding_sub_agency": "Federal Railroad Administration",
+          "action_date": null,
+          "description": "THE GENERAL OBJECTIVE OF THE PROGRAM FUNDED THROUGH THIS AGREEMENT IS FOR AMTRAKTO MAINTAIN CONTINUED SAFE NATIONAL PASSENGER RAIL OPERATIONS, TO PURSUE ACTIVITIESTHAT SUPPORT EFFICIENT SERVICE TO INTERCITY PASSENGER RAIL RIDERSHIP, AND TO ADDRESS ANDCOMPLY WITH ALL SPECIFIED FEDERAL OPERATING REQUIREMENTS AND MANDATES ON REGIONSOUTSIDE THE NATIONAL NETWORK (NN), KNOWN AS THE NORTHEAST CORRIDOR  (NEC). THISINCLUDES NEC INTERCITY OPERATIONS, AND IN MANY CASES, THIS WILL INCLUDE WORK THATPROVIDES A SHARED BENEFIT ACROSS THE NEC AND NATIONAL NETWORK.",
+          "source_url": null
+        },
+        {
+          "award_id": "NJ-2021-004",
+          "generated_internal_id": "ASST_NON_NJ-2021-004_069",
+          "recipient_name": "NEW JERSEY TRANSIT CORPORATION",
+          "amount": 1129571090,
+          "award_type": "grant",
+          "award_type_label": "FORMULA GRANT (A)",
+          "awarding_agency": "Department of Transportation",
+          "awarding_sub_agency": "Federal Transit Administration",
+          "action_date": null,
+          "description": "NJ TRANSIT SECTION 5307 CRRSAA OPERATING ASSISTANCE",
+          "source_url": null
         }
       ],
-      "contracts_obligated": 8220186226.440001,
-      "grants_obligated": 69236958103.58,
-      "total_awards_obligated": 77457144330.02,
-      "last_updated": "2026-09-14T16:42:02.973Z",
+      "contracts_obligated": 8343499721.200001,
+      "grants_obligated": 67232131532.58,
+      "total_awards_obligated": 75575631253.78,
+      "last_updated": "2026-09-21T16:32:50.118Z",
       "source": "usaspending.gov"
     },
     "department-of-energy": {
@@ -7319,7 +7319,7 @@
           "award_id": "DEAC0576RL01830",
           "generated_internal_id": "CONT_AWD_DEAC0576RL01830_8900_-NONE-_-NONE-",
           "recipient_name": "BATTELLE MEMORIAL INSTITUTE",
-          "amount": 30853836006.83,
+          "amount": 30912550571.06,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Energy",
@@ -7407,6 +7407,19 @@
           "source_url": null
         },
         {
+          "award_id": "DEAC2701RV14136",
+          "generated_internal_id": "CONT_AWD_DEAC2701RV14136_8900_-NONE-_-NONE-",
+          "recipient_name": "BECHTEL NATIONAL, INC.",
+          "amount": 17827524132.9,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Energy",
+          "awarding_sub_agency": "Department of Energy",
+          "action_date": null,
+          "description": "No description",
+          "source_url": null
+        },
+        {
           "award_id": "DENA0002839",
           "generated_internal_id": "CONT_AWD_DENA0002839_8900_-NONE-_-NONE-",
           "recipient_name": "HONEYWELL FEDERAL MANUFACTURING & TECHNOLOGIES, LLC",
@@ -7423,7 +7436,7 @@
           "award_id": "DEAC0206CH11357",
           "generated_internal_id": "CONT_AWD_DEAC0206CH11357_8900_-NONE-_-NONE-",
           "recipient_name": "UCHICAGO ARGONNE, LLC",
-          "amount": 17482971699.99,
+          "amount": 17507033619.58,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Energy",
@@ -7433,23 +7446,10 @@
           "source_url": null
         },
         {
-          "award_id": "DEAC2701RV14136",
-          "generated_internal_id": "CONT_AWD_DEAC2701RV14136_8900_-NONE-_-NONE-",
-          "recipient_name": "BECHTEL NATIONAL, INC.",
-          "amount": 17319586105.74,
-          "award_type": "contract",
-          "award_type_label": "Unknown",
-          "awarding_agency": "Department of Energy",
-          "awarding_sub_agency": "Department of Energy",
-          "action_date": null,
-          "description": "No description",
-          "source_url": null
-        },
-        {
           "award_id": "DEAC0276SF00515",
           "generated_internal_id": "CONT_AWD_DEAC0276SF00515_8900_-NONE-_-NONE-",
           "recipient_name": "THE LELAND STANFORD JUNIOR UNIVERSITY",
-          "amount": 14945793492.77,
+          "amount": 14950328527.01,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Energy",
@@ -7475,7 +7475,7 @@
           "award_id": "DEAC3608GO28308",
           "generated_internal_id": "CONT_AWD_DEAC3608GO28308_8900_-NONE-_-NONE-",
           "recipient_name": "ALLIANCE FOR ENERGY INNOVATION, LLC",
-          "amount": 11030452829.7,
+          "amount": 11031752636.15,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Energy",
@@ -7615,10 +7615,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 620997128666.7799,
+      "contracts_obligated": 621593678018.45,
       "grants_obligated": 0,
-      "total_awards_obligated": 620997128666.7799,
-      "last_updated": "2026-09-14T16:43:51.697Z",
+      "total_awards_obligated": 621593678018.45,
+      "last_updated": "2026-09-21T16:33:08.439Z",
       "source": "usaspending.gov"
     },
     "department-of-education": {
@@ -8206,7 +8206,7 @@
       "contracts_obligated": 1507684723.07,
       "grants_obligated": 45696947036.59999,
       "total_awards_obligated": 47204631759.66999,
-      "last_updated": "2026-09-14T16:45:19.746Z",
+      "last_updated": "2026-09-21T16:33:28.729Z",
       "source": "usaspending.gov"
     },
     "department-of-veterans-affairs": {
@@ -8217,7 +8217,7 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2023,
-          "total_obligations": 65234405447.24,
+          "total_obligations": 65234443943.29,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
@@ -8231,7 +8231,7 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 81434370754.84,
+          "total_obligations": 81435170657.17,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 17.86
@@ -8335,14 +8335,6 @@
           "change_pct": 88.31
         },
         {
-          "program_name": "National Cemetery Administration, Veterans Health Administration, Veterans Affair",
-          "fiscal_year": 2025,
-          "current_amount": 370334203.04,
-          "previous_amount": 340957621.65,
-          "change_amount": 29376581.390000045,
-          "change_pct": 8.62
-        },
-        {
           "program_name": "Office of Inspector General, Departmental Administration, Veterans Affairs",
           "fiscal_year": 2025,
           "current_amount": 875270183.01,
@@ -8365,6 +8357,22 @@
           "previous_amount": 26940099.08,
           "change_amount": -20377464.72,
           "change_pct": -75.64
+        },
+        {
+          "program_name": "National Cemetery Administration, Veterans Health Administration, Veterans Affairs",
+          "fiscal_year": 2025,
+          "current_amount": 136844446.43,
+          "previous_amount": 120463294.28,
+          "change_amount": 16381152.150000006,
+          "change_pct": 13.6
+        },
+        {
+          "program_name": "National Cemetery Administration, Veterans Health Administration, Veterans Affair",
+          "fiscal_year": 2025,
+          "current_amount": 233489756.61,
+          "previous_amount": 220494327.37,
+          "change_amount": 12995429.24000001,
+          "change_pct": 5.89
         },
         {
           "program_name": "Board of Veterans Appeals, Departmental Administration, Veterans Affairs",
@@ -8406,6 +8414,19 @@
           "source_url": null
         },
         {
+          "award_id": "36C10B22N0051EHRM",
+          "generated_internal_id": "CONT_AWD_36C10B22N0051EHRM_3600_36C10B18D5000_3600",
+          "recipient_name": "ORACLE HEALTH GOVERNMENT SERVICES, INC.",
+          "amount": 2120623737.86,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Veterans Affairs",
+          "awarding_sub_agency": "Department of Veterans Affairs",
+          "action_date": null,
+          "description": "EHRM WAVES K, L, M (VISN 23) AND N, O (VISN 15) DEPLOYMENTS",
+          "source_url": null
+        },
+        {
           "award_id": "36C10G23K0051",
           "generated_internal_id": "CONT_AWD_36C10G23K0051_3600_36C10G19D0038_3600",
           "recipient_name": "TRIWEST HEALTHCARE ALLIANCE CORP",
@@ -8442,19 +8463,6 @@
           "awarding_sub_agency": "Department of Veterans Affairs",
           "action_date": null,
           "description": "THE PURPOSE OF THIS ACQUISITION IS TO PROVIDE THE DEPARTMENT OF VETERANS AFFAIRS WITH AN ENTERPRISE AGREEMENT FOR BRAND NAME MICROSOFT SOFTWARE PRODUCTS AND SERVICES.  THIS ENTERPRISE AGREEMENT WILL PROVIDE 1) SUPPORT SERVICES 2) OPERATIONAL SUPPORT AND 3) ADDITIONAL LICENSES OF MICROSOFT PRODUCTS, CURRENT AND PLANNED, TO SUPPORT THE VA ENTERPRISE.  SUBJECT PROCUREMENT WAS COMPETED AMONG MICROSOFT'S EIGHT AUTHORIZED FEDERAL GOVERNMENT LICENSE SOLUTION PROVIDERS.  IGF::OT::IGF",
-          "source_url": null
-        },
-        {
-          "award_id": "36C10B22N0051EHRM",
-          "generated_internal_id": "CONT_AWD_36C10B22N0051EHRM_3600_36C10B18D5000_3600",
-          "recipient_name": "ORACLE HEALTH GOVERNMENT SERVICES, INC.",
-          "amount": 1680767128.41,
-          "award_type": "contract",
-          "award_type_label": "Unknown",
-          "awarding_agency": "Department of Veterans Affairs",
-          "awarding_sub_agency": "Department of Veterans Affairs",
-          "action_date": null,
-          "description": "EHRM WAVES K, L, M (VISN 23) AND N, O (VISN 15) DEPLOYMENTS",
           "source_url": null
         },
         {
@@ -8783,10 +8791,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 39965453482.95999,
+      "contracts_obligated": 40405310092.409996,
       "grants_obligated": 0,
-      "total_awards_obligated": 39965453482.95999,
-      "last_updated": "2026-09-14T16:46:23.031Z",
+      "total_awards_obligated": 40405310092.409996,
+      "last_updated": "2026-09-21T16:33:45.100Z",
       "source": "usaspending.gov"
     },
     "department-of-housing-and-urban-development": {
@@ -8804,17 +8812,17 @@
         },
         {
           "fiscal_year": 2024,
-          "total_obligations": 28513378624.350002,
+          "total_obligations": 28526228624.350002,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -9.8
+          "yoy_change_pct": -9.76
         },
         {
           "fiscal_year": 2025,
           "total_obligations": 26991846167.7,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -5.34
+          "yoy_change_pct": -5.38
         }
       ],
       "program_funding_changes": [
@@ -8830,9 +8838,9 @@
           "program_name": "Community Development Fund, Community Planning and Development, Housing and Urban Development",
           "fiscal_year": 2025,
           "current_amount": 12025313861.27,
-          "previous_amount": 9755345184.36,
-          "change_amount": 2269968676.91,
-          "change_pct": 23.27
+          "previous_amount": 9768195184.36,
+          "change_amount": 2257118676.91,
+          "change_pct": 23.11
         },
         {
           "program_name": "Green and Resilient Retrofit Program for Multifamily Housing, Housing Programs, Housing and Urban Development",
@@ -8902,9 +8910,9 @@
           "program_name": "Administrative Support Offices, Management and Administration, Housing and Urban Development",
           "fiscal_year": 2025,
           "current_amount": 60361045.24,
-          "previous_amount": 161878565.31,
-          "change_amount": -101517520.07,
-          "change_pct": -62.71
+          "previous_amount": 159744900.89,
+          "change_amount": -99383855.64999998,
+          "change_pct": -62.21
         },
         {
           "program_name": "Self-Help and Assisted Homeownership Opportunity Program, Community Planning and Development, Housing and Urban Development",
@@ -9374,7 +9382,7 @@
       "contracts_obligated": 1416647220.91,
       "grants_obligated": 23541631498,
       "total_awards_obligated": 24958278718.91,
-      "last_updated": "2026-09-14T16:46:58.206Z",
+      "last_updated": "2026-09-21T16:34:01.461Z",
       "source": "usaspending.gov"
     }
   },
