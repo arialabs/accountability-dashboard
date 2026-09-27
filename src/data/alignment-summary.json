@@ -312,14 +312,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "M001199",
-    "name": "Brian Mast",
-    "alignment_score": 100,
-    "votes_analyzed": 184,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "R000609",
     "name": "John Rutherford",
     "alignment_score": 100,
@@ -746,6 +738,14 @@
   {
     "bioguide_id": "M001226",
     "name": "Robert Menendez",
+    "alignment_score": 99,
+    "votes_analyzed": 184,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "M001199",
+    "name": "Brian Mast",
     "alignment_score": 99,
     "votes_analyzed": 184,
     "confidence": "high",
@@ -1640,14 +1640,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "D000624",
-    "name": "Debbie Dingell",
-    "alignment_score": 86,
-    "votes_analyzed": 173,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "K000384",
     "name": "Tim Kaine",
     "alignment_score": 85,
@@ -1682,6 +1674,14 @@
   {
     "bioguide_id": "J000307",
     "name": "John James",
+    "alignment_score": 85,
+    "votes_analyzed": 173,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "D000624",
+    "name": "Debbie Dingell",
     "alignment_score": 85,
     "votes_analyzed": 173,
     "confidence": "high",
