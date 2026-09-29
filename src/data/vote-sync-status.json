@@ -1,11 +1,17 @@
 {
-  "last_attempt_at": "2026-09-28T18:09:57.615Z",
-  "last_success_at": "2026-09-28T18:10:01.528Z",
-  "status": "ok",
+  "last_attempt_at": "2026-09-29T16:30:44.521Z",
+  "last_success_at": "2026-09-29T16:30:53.396Z",
+  "status": "partial",
   "lookback_days": 7,
-  "total_roll_calls_fetched": 6,
+  "total_roll_calls_fetched": 0,
   "total_roll_calls_stored": 87,
   "total_member_votes_stored": 11022,
   "deduped_member_votes": 0,
-  "errors": []
+  "errors": [
+    {
+      "at": "2026-09-29T16:30:53.389Z",
+      "stage": "senate-list",
+      "message": "senate.gov error: 403 Forbidden"
+    }
+  ]
 }
