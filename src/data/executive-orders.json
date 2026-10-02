@@ -1,8 +1,47 @@
 {
-  "total": 286,
+  "total": 289,
   "source": "Federal Register API",
-  "last_updated": "2026-10-01",
+  "last_updated": "2026-10-02",
   "orders": [
+    {
+      "document_number": "2026-20321",
+      "eo_number": "14434",
+      "title": "Inaugurating the Era of Super Intelligence",
+      "signing_date": "2026-09-29",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20321/inaugurating-the-era-of-super-intelligence",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "National Security"
+    },
+    {
+      "document_number": "2026-20320",
+      "eo_number": "14433",
+      "title": "Eliminating Disease-Carrying Pests and Restoring Enjoyment of the Great Outdoors",
+      "signing_date": "2026-09-29",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20320/eliminating-disease-carrying-pests-and-restoring-enjoyment-of-the-great-outdoors",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
+    {
+      "document_number": "2026-20319",
+      "eo_number": "14432",
+      "title": "Streamlining Access to Government Services Through America.gov",
+      "signing_date": "2026-09-29",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/10/02/2026-20319/streamlining-access-to-government-services-through-americagov",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Government Reform"
+    },
     {
       "document_number": "2026-19555",
       "eo_number": "14431",
