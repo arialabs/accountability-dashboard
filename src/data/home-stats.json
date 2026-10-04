@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-27T04:03:39.888Z",
+    "generated_at": "2026-10-04T04:40:24.483Z",
     "sources": [
       "members.json (Congress.gov / Voteview)",
       "key-votes.json (Voteview)",
@@ -18,7 +18,6 @@
     "independent_reps": 18,
     "independence_loyalty_cutoff": 90,
     "activity_sparkline": [
-      79,
       39,
       46,
       79,
@@ -29,7 +28,8 @@
       100,
       89,
       50,
-      46
+      89,
+      0
     ]
   },
   "spotlight": {

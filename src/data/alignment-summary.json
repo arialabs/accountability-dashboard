@@ -1296,14 +1296,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "M001230",
-    "name": "Ryan Mackenzie",
-    "alignment_score": 95,
-    "votes_analyzed": 16,
-    "confidence": "medium",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "H001093",
     "name": "Erin Houchin",
     "alignment_score": 95,
@@ -1360,19 +1352,19 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "D000622",
-    "name": "Tammy Duckworth",
-    "alignment_score": 94,
-    "votes_analyzed": 506,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "D000563",
     "name": "Richard Durbin",
     "alignment_score": 94,
     "votes_analyzed": 485,
     "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "M001230",
+    "name": "Ryan Mackenzie",
+    "alignment_score": 94,
+    "votes_analyzed": 16,
+    "confidence": "medium",
     "methodology": "say-vs-do-v3"
   },
   {
@@ -1420,6 +1412,14 @@
     "name": "Jim Costa",
     "alignment_score": 93,
     "votes_analyzed": 176,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "D000622",
+    "name": "Tammy Duckworth",
+    "alignment_score": 93,
+    "votes_analyzed": 506,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1512,6 +1512,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "R000605",
+    "name": "Mike Rounds",
+    "alignment_score": 90,
+    "votes_analyzed": 468,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "M001198",
     "name": "Roger Marshall",
     "alignment_score": 90,
@@ -1556,14 +1564,6 @@
     "name": "Dan Sullivan",
     "alignment_score": 89,
     "votes_analyzed": 451,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "R000605",
-    "name": "Mike Rounds",
-    "alignment_score": 89,
-    "votes_analyzed": 468,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1632,18 +1632,18 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "T000478",
-    "name": "Claudia Tenney",
+    "bioguide_id": "G000581",
+    "name": "Vicente Gonzalez",
     "alignment_score": 86,
-    "votes_analyzed": 184,
+    "votes_analyzed": 180,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "K000384",
-    "name": "Tim Kaine",
-    "alignment_score": 85,
-    "votes_analyzed": 534,
+    "bioguide_id": "T000478",
+    "name": "Claudia Tenney",
+    "alignment_score": 86,
+    "votes_analyzed": 184,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1660,14 +1660,6 @@
     "name": "Angela Alsobrooks",
     "alignment_score": 85,
     "votes_analyzed": 414,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "G000581",
-    "name": "Vicente Gonzalez",
-    "alignment_score": 85,
-    "votes_analyzed": 180,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1701,6 +1693,14 @@
     "alignment_score": 84,
     "votes_analyzed": 9,
     "confidence": "low",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "K000384",
+    "name": "Tim Kaine",
+    "alignment_score": 84,
+    "votes_analyzed": 534,
+    "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
   {
@@ -2002,7 +2002,7 @@
   {
     "bioguide_id": "G000597",
     "name": "Andrew Garbarino",
-    "alignment_score": 45,
+    "alignment_score": 46,
     "votes_analyzed": 90,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
