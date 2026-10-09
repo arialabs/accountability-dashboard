@@ -1,8 +1,21 @@
 {
-  "total": 289,
+  "total": 290,
   "source": "Federal Register API",
-  "last_updated": "2026-10-08",
+  "last_updated": "2026-10-09",
   "orders": [
+    {
+      "document_number": "2026-20855",
+      "eo_number": "14435",
+      "title": "Emergency Tax Relief on Diesel Fuel",
+      "signing_date": "2026-10-05",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/10/09/2026-20855/emergency-tax-relief-on-diesel-fuel",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Finance & Economy"
+    },
     {
       "document_number": "2026-20321",
       "eo_number": "14434",
