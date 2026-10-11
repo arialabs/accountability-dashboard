@@ -1256,6 +1256,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "W000802",
+    "name": "Sheldon Whitehouse",
+    "alignment_score": 95,
+    "votes_analyzed": 484,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "M000355",
     "name": "Mitch McConnell",
     "alignment_score": 95,
@@ -1308,14 +1316,6 @@
     "name": "Victoria Spartz",
     "alignment_score": 95,
     "votes_analyzed": 67,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "W000802",
-    "name": "Sheldon Whitehouse",
-    "alignment_score": 94,
-    "votes_analyzed": 484,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
