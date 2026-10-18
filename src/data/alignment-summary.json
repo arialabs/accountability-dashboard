@@ -680,14 +680,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "M001176",
-    "name": "Jeff Merkley",
-    "alignment_score": 99,
-    "votes_analyzed": 519,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "G000386",
     "name": "Chuck Grassley",
     "alignment_score": 99,
@@ -888,6 +880,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "M001176",
+    "name": "Jeff Merkley",
+    "alignment_score": 98,
+    "votes_analyzed": 519,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "M000934",
     "name": "Jerry Moran",
     "alignment_score": 98,
@@ -948,14 +948,6 @@
     "name": "Keith Self",
     "alignment_score": 98,
     "votes_analyzed": 100,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "S001221",
-    "name": "Hillary Scholten",
-    "alignment_score": 98,
-    "votes_analyzed": 37,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1064,18 +1056,18 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "J000293",
-    "name": "Ron Johnson",
-    "alignment_score": 97,
-    "votes_analyzed": 483,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "C001075",
     "name": "Bill Cassidy",
     "alignment_score": 97,
     "votes_analyzed": 504,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "S001221",
+    "name": "Hillary Scholten",
+    "alignment_score": 97,
+    "votes_analyzed": 37,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1200,6 +1192,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "J000293",
+    "name": "Ron Johnson",
+    "alignment_score": 96,
+    "votes_analyzed": 483,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "H001042",
     "name": "Mazie Hirono",
     "alignment_score": 96,
@@ -1256,14 +1256,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "W000802",
-    "name": "Sheldon Whitehouse",
-    "alignment_score": 95,
-    "votes_analyzed": 484,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "M000355",
     "name": "Mitch McConnell",
     "alignment_score": 95,
@@ -1316,6 +1308,14 @@
     "name": "Victoria Spartz",
     "alignment_score": 95,
     "votes_analyzed": 67,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "W000802",
+    "name": "Sheldon Whitehouse",
+    "alignment_score": 94,
+    "votes_analyzed": 484,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1472,6 +1472,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "M001198",
+    "name": "Roger Marshall",
+    "alignment_score": 91,
+    "votes_analyzed": 462,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "C001096",
     "name": "Kevin Cramer",
     "alignment_score": 91,
@@ -1484,6 +1492,14 @@
     "name": "Katie Britt",
     "alignment_score": 91,
     "votes_analyzed": 458,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "B001288",
+    "name": "Cory Booker",
+    "alignment_score": 91,
+    "votes_analyzed": 477,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1520,14 +1536,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "M001198",
-    "name": "Roger Marshall",
-    "alignment_score": 90,
-    "votes_analyzed": 462,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "K000367",
     "name": "Amy Klobuchar",
     "alignment_score": 90,
@@ -1540,14 +1548,6 @@
     "name": "Josh Hawley",
     "alignment_score": 90,
     "votes_analyzed": 427,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "B001288",
-    "name": "Cory Booker",
-    "alignment_score": 90,
-    "votes_analyzed": 477,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1576,14 +1576,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "M001217",
-    "name": "Jared Moskowitz",
-    "alignment_score": 89,
-    "votes_analyzed": 7,
-    "confidence": "low",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "R000608",
     "name": "Jacky Rosen",
     "alignment_score": 88,
@@ -1597,6 +1589,14 @@
     "alignment_score": 88,
     "votes_analyzed": 12,
     "confidence": "medium",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "M001217",
+    "name": "Jared Moskowitz",
+    "alignment_score": 88,
+    "votes_analyzed": 7,
+    "confidence": "low",
     "methodology": "say-vs-do-v3"
   },
   {
@@ -1752,9 +1752,17 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "F000479",
+    "name": "John Fetterman",
+    "alignment_score": 81,
+    "votes_analyzed": 312,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "W000790",
     "name": "Raphael Warnock",
-    "alignment_score": 81,
+    "alignment_score": 80,
     "votes_analyzed": 530,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
@@ -1764,14 +1772,6 @@
     "name": "John Hoeven",
     "alignment_score": 80,
     "votes_analyzed": 531,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "F000479",
-    "name": "John Fetterman",
-    "alignment_score": 80,
-    "votes_analyzed": 312,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1808,6 +1808,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "C001113",
+    "name": "Catherine Cortez Masto",
+    "alignment_score": 78,
+    "votes_analyzed": 484,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "P000613",
     "name": "Jimmy Panetta",
     "alignment_score": 78,
@@ -1832,26 +1840,26 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "E000299",
+    "name": "Veronica Escobar",
+    "alignment_score": 77,
+    "votes_analyzed": 180,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "M001153",
     "name": "Lisa Murkowski",
-    "alignment_score": 77,
+    "alignment_score": 76,
     "votes_analyzed": 450,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "C001113",
-    "name": "Catherine Cortez Masto",
-    "alignment_score": 77,
-    "votes_analyzed": 484,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "E000299",
-    "name": "Veronica Escobar",
-    "alignment_score": 77,
-    "votes_analyzed": 180,
+    "bioguide_id": "K000383",
+    "name": "Angus King",
+    "alignment_score": 76,
+    "votes_analyzed": 491,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1868,14 +1876,6 @@
     "name": "Donald Norcross",
     "alignment_score": 76,
     "votes_analyzed": 161,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "K000383",
-    "name": "Angus King",
-    "alignment_score": 75,
-    "votes_analyzed": 491,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
