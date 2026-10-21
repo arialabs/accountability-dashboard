@@ -1,8 +1,21 @@
 {
-  "total": 290,
+  "total": 291,
   "source": "Federal Register API",
-  "last_updated": "2026-10-20",
+  "last_updated": "2026-10-21",
   "orders": [
+    {
+      "document_number": "2026-21599",
+      "eo_number": "14436",
+      "title": "Implementing the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+      "signing_date": "2026-10-16",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/10/21/2026-21599/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-20855",
       "eo_number": "14435",
