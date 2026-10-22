@@ -1,8 +1,21 @@
 {
-  "total": 291,
+  "total": 292,
   "source": "Federal Register API",
-  "last_updated": "2026-10-21",
+  "last_updated": "2026-10-22",
   "orders": [
+    {
+      "document_number": "2026-21666",
+      "eo_number": "14437",
+      "title": "Advancing Women's Health To Improve Outcomes in All Phases of Life",
+      "signing_date": "2026-10-19",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/10/22/2026-21666/advancing-womens-health-to-improve-outcomes-in-all-phases-of-life",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Healthcare"
+    },
     {
       "document_number": "2026-21599",
       "eo_number": "14436",
