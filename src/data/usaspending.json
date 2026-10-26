@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-19T17:01:06.708Z",
+    "generated_at": "2026-10-26T16:49:32.637Z",
     "source": "usaspending.gov",
     "fiscal_year_start": 2024,
     "fiscal_year_end": 2026,
@@ -17,21 +17,21 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2024,
-          "total_obligations": 14888882445.119999,
+          "total_obligations": 14917493389.119999,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 11082256786.04,
+          "total_obligations": 11107185730.86,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -25.57
+          "yoy_change_pct": -25.54
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 18176563494.45,
+          "total_obligations": 18217622586.42,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 64.02
@@ -57,9 +57,9 @@
         {
           "program_name": "Global Health Programs, State",
           "fiscal_year": 2026,
-          "current_amount": 908890169.53,
+          "current_amount": 908888378.46,
           "previous_amount": 45434053.49,
-          "change_amount": 863456116.04,
+          "change_amount": 863454324.97,
           "change_pct": 1900.46
         },
         {
@@ -89,26 +89,26 @@
         {
           "program_name": "Diplomatic and Consular Programs, State",
           "fiscal_year": 2026,
-          "current_amount": 3284501728.31,
-          "previous_amount": 3548481405.06,
-          "change_amount": -263979676.75,
-          "change_pct": -7.44
+          "current_amount": 3309626184.92,
+          "previous_amount": 3573285531.03,
+          "change_amount": -263659346.11000013,
+          "change_pct": -7.38
         },
         {
           "program_name": "Embassy Security, Construction, and Maintenance, State",
           "fiscal_year": 2026,
-          "current_amount": 1083894380.58,
+          "current_amount": 1083992672.22,
           "previous_amount": 1331277759.93,
-          "change_amount": -247383379.35000014,
+          "change_amount": -247285087.71000004,
           "change_pct": -18.58
         },
         {
           "program_name": "Working Capital Fund, State",
           "fiscal_year": 2026,
-          "current_amount": 2127257573.01,
-          "previous_amount": 2365928895.71,
-          "change_amount": -238671322.70000005,
-          "change_pct": -10.09
+          "current_amount": 2129308965.21,
+          "previous_amount": 2366848621.95,
+          "change_amount": -237539656.73999977,
+          "change_pct": -10.04
         },
         {
           "program_name": "Economic Support Fund, Funds Appropriated to the President",
@@ -121,10 +121,10 @@
         {
           "program_name": "Assistance for Europe, Eurasia, and Central Asia, Funds Appropriated to the President, US Agency for International Development",
           "fiscal_year": 2026,
-          "current_amount": 403146057.89,
+          "current_amount": 403132389.55,
           "previous_amount": 196993029.77,
-          "change_amount": 206153028.11999997,
-          "change_pct": 104.65
+          "change_amount": 206139359.78,
+          "change_pct": 104.64
         },
         {
           "program_name": "National Security Investment Programs, State",
@@ -137,26 +137,26 @@
         {
           "program_name": "Consular and Border Security Programs, Administration of Foreign Affairs, State",
           "fiscal_year": 2026,
-          "current_amount": 1773501687.36,
-          "previous_amount": 1949163143,
-          "change_amount": -175661455.6400001,
-          "change_pct": -9.01
+          "current_amount": 1789968179.85,
+          "previous_amount": 1972922683.73,
+          "change_amount": -182954503.8800001,
+          "change_pct": -9.27
         },
         {
           "program_name": "Capital Investment Fund, State",
           "fiscal_year": 2026,
-          "current_amount": 907312335.64,
-          "previous_amount": 1001987514.73,
-          "change_amount": -94675179.09000003,
-          "change_pct": -9.45
+          "current_amount": 936899815.98,
+          "previous_amount": 1025747055.46,
+          "change_amount": -88847239.48000002,
+          "change_pct": -8.66
         },
         {
           "program_name": "Office of the Inspector General, State",
           "fiscal_year": 2026,
-          "current_amount": 415465361.78,
-          "previous_amount": 324902884.38,
-          "change_amount": 90562477.39999998,
-          "change_pct": 27.87
+          "current_amount": 416088876.98,
+          "previous_amount": 327565804.38,
+          "change_amount": 88523072.60000002,
+          "change_pct": 27.02
         },
         {
           "program_name": "H-1B and L Fraud Prevention and Detection Account, State",
@@ -177,10 +177,10 @@
         {
           "program_name": "Peacekeeping Operations, Funds Appropriated to the President",
           "fiscal_year": 2026,
-          "current_amount": -6001858.6,
+          "current_amount": -7491619.86,
           "previous_amount": 68281220.2,
-          "change_amount": -74283078.8,
-          "change_pct": -108.79
+          "change_amount": -75772840.06,
+          "change_pct": -110.97
         },
         {
           "program_name": "Migration and Refugee Assistance, State",
@@ -193,9 +193,9 @@
         {
           "program_name": "Non-Proliferation, Anti-Terrorism, Demining and Related Programs, International Security Assistance, State",
           "fiscal_year": 2026,
-          "current_amount": 661298169.58,
+          "current_amount": 661322906.81,
           "previous_amount": 711691078.54,
-          "change_amount": -50392908.95999992,
+          "change_amount": -50368171.73000002,
           "change_pct": -7.08
         }
       ],
@@ -230,7 +230,7 @@
           "award_id": "19AQMM18C0185",
           "generated_internal_id": "CONT_AWD_19AQMM18C0185_1900_-NONE-_-NONE-",
           "recipient_name": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
-          "amount": 1842641185.01,
+          "amount": 1842639352.42,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of State",
@@ -591,10 +591,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 22063981950.940002,
+      "contracts_obligated": 22063980118.350002,
       "grants_obligated": 2198073000,
-      "total_awards_obligated": 24262054950.940002,
-      "last_updated": "2026-10-19T17:00:45.231Z",
+      "total_awards_obligated": 24262053118.350002,
+      "last_updated": "2026-10-26T16:49:13.242Z",
       "source": "usaspending.gov"
     },
     "department-of-defense": {
@@ -605,186 +605,186 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2024,
-          "total_obligations": 456155714185.24,
+          "total_obligations": 456154122633.70996,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 501269272808.68,
+          "total_obligations": 501611849281.72003,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": 9.89
+          "yoy_change_pct": 9.97
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 404007198290.19,
+          "total_obligations": 413227331826.10004,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -19.4
+          "yoy_change_pct": -17.62
         }
       ],
       "program_funding_changes": [
         {
           "program_name": "Operation and Maintenance, Navy",
           "fiscal_year": 2026,
-          "current_amount": 12595432340.15,
-          "previous_amount": 34544663737.95,
-          "change_amount": -21949231397.799995,
-          "change_pct": -63.54
+          "current_amount": 12829194166.63,
+          "previous_amount": 34544653100.37,
+          "change_amount": -21715458933.740005,
+          "change_pct": -62.86
         },
         {
           "program_name": "Defense Working Capital Fund, Defense",
           "fiscal_year": 2026,
-          "current_amount": 10776272366.59,
-          "previous_amount": 29240349161.08,
-          "change_amount": -18464076794.49,
-          "change_pct": -63.15
+          "current_amount": 10844991606.76,
+          "previous_amount": 29248567045.91,
+          "change_amount": -18403575439.15,
+          "change_pct": -62.92
         },
         {
           "program_name": "Operation and Maintenance, Defense-Wide, Defense",
           "fiscal_year": 2026,
-          "current_amount": 12343398906.29,
-          "previous_amount": 24183842143.38,
-          "change_amount": -11840443237.09,
-          "change_pct": -48.96
+          "current_amount": 12560897280.69,
+          "previous_amount": 24183874610.95,
+          "change_amount": -11622977330.26,
+          "change_pct": -48.06
         },
         {
           "program_name": "Shipbuilding and Conversion, Navy",
           "fiscal_year": 2026,
-          "current_amount": 8645240765.74,
-          "previous_amount": 18848518784.56,
-          "change_amount": -10203278018.820002,
-          "change_pct": -54.13
+          "current_amount": 8626442438.77,
+          "previous_amount": 18848508146.98,
+          "change_amount": -10222065708.21,
+          "change_pct": -54.23
         },
         {
           "program_name": "Operation and Maintenance, Air Force",
           "fiscal_year": 2026,
-          "current_amount": 16583400538.23,
-          "previous_amount": 26108719855.13,
-          "change_amount": -9525319316.900002,
-          "change_pct": -36.48
+          "current_amount": 16827998068.47,
+          "previous_amount": 26107253083.63,
+          "change_amount": -9279255015.160002,
+          "change_pct": -35.54
         },
         {
           "program_name": "Operation and Maintenance, Army",
           "fiscal_year": 2026,
-          "current_amount": 15480628195.48,
+          "current_amount": 15603395038.32,
           "previous_amount": 23596004314.71,
-          "change_amount": -8115376119.23,
-          "change_pct": -34.39
-        },
-        {
-          "program_name": "Research, Development, Test, and Evaluation, Defense-Wide",
-          "fiscal_year": 2026,
-          "current_amount": 36437112209.4,
-          "previous_amount": 42940013101.42,
-          "change_amount": -6502900892.019997,
-          "change_pct": -15.14
+          "change_amount": -7992609276.389999,
+          "change_pct": -33.87
         },
         {
           "program_name": "Research, Development, Test and Evaluation, Army",
           "fiscal_year": 2026,
-          "current_amount": 17374708054.4,
+          "current_amount": 17542531973.38,
           "previous_amount": 23608794810.95,
-          "change_amount": -6234086756.549999,
-          "change_pct": -26.41
+          "change_amount": -6066262837.57,
+          "change_pct": -25.69
         },
         {
           "program_name": "Other Procurement, Army",
           "fiscal_year": 2026,
-          "current_amount": 4457690702.76,
+          "current_amount": 4485247665.06,
           "previous_amount": 9559161159.64,
-          "change_amount": -5101470456.879999,
-          "change_pct": -53.37
+          "change_amount": -5073913494.579999,
+          "change_pct": -53.08
         },
         {
-          "program_name": "Defense Health Program, Defense",
+          "program_name": "Research, Development, Test, and Evaluation, Defense-Wide",
           "fiscal_year": 2026,
-          "current_amount": 5173124176.87,
-          "previous_amount": 9763125260.37,
-          "change_amount": -4590001083.500001,
-          "change_pct": -47.01
+          "current_amount": 38125738238.48,
+          "previous_amount": 42940047763.73,
+          "change_amount": -4814309525.25,
+          "change_pct": -11.21
         },
         {
           "program_name": "Aircraft Procurement, Army",
           "fiscal_year": 2026,
-          "current_amount": 2723309445.09,
+          "current_amount": 2730217531.37,
           "previous_amount": 7282173245.75,
-          "change_amount": -4558863800.66,
-          "change_pct": -62.6
+          "change_amount": -4551955714.38,
+          "change_pct": -62.51
+        },
+        {
+          "program_name": "Defense Health Program, Defense",
+          "fiscal_year": 2026,
+          "current_amount": 5259955350.98,
+          "previous_amount": 9763660383.38,
+          "change_amount": -4503705032.4,
+          "change_pct": -46.13
         },
         {
           "program_name": "Operation and Maintenance, Marine Corps",
           "fiscal_year": 2026,
-          "current_amount": 3476516862.94,
+          "current_amount": 3536878956.97,
           "previous_amount": 7465780548.42,
-          "change_amount": -3989263685.48,
-          "change_pct": -53.43
+          "change_amount": -3928901591.4500003,
+          "change_pct": -52.63
         },
         {
           "program_name": "Other Procurement, Navy",
           "fiscal_year": 2026,
-          "current_amount": 7906142875.41,
-          "previous_amount": 11082177279.72,
-          "change_amount": -3176034404.3099995,
-          "change_pct": -28.66
-        },
-        {
-          "program_name": "Procurement, Defense-Wide",
-          "fiscal_year": 2026,
-          "current_amount": 8827819317.01,
-          "previous_amount": 11985477790.77,
-          "change_amount": -3157658473.76,
-          "change_pct": -26.35
+          "current_amount": 7981802289.27,
+          "previous_amount": 11082166642.14,
+          "change_amount": -3100364352.869999,
+          "change_pct": -27.98
         },
         {
           "program_name": "Procurement of Ammunition, Army",
           "fiscal_year": 2026,
-          "current_amount": 1060043588.32,
+          "current_amount": 1062769655.45,
           "previous_amount": 3956285183.66,
-          "change_amount": -2896241595.3399997,
-          "change_pct": -73.21
+          "change_amount": -2893515528.21,
+          "change_pct": -73.14
         },
         {
           "program_name": "Procurement, Marine Corps",
           "fiscal_year": 2026,
-          "current_amount": 4515684897.19,
+          "current_amount": 4534913906.77,
           "previous_amount": 7405584983.69,
-          "change_amount": -2889900086.5,
-          "change_pct": -39.02
+          "change_amount": -2870671076.919999,
+          "change_pct": -38.76
         },
         {
           "program_name": "Procurement of Weapons and Tracked Combat Vehicles, Army",
           "fiscal_year": 2026,
-          "current_amount": 3432759273.38,
+          "current_amount": 3449057552.33,
           "previous_amount": 6185831934.17,
-          "change_amount": -2753072660.79,
-          "change_pct": -44.51
+          "change_amount": -2736774381.84,
+          "change_pct": -44.24
         },
         {
           "program_name": "Operation and Maintenance, Air National Guard",
           "fiscal_year": 2026,
-          "current_amount": 1075464842.96,
+          "current_amount": 1115203200.69,
           "previous_amount": 3426364307.78,
-          "change_amount": -2350899464.82,
-          "change_pct": -68.61
+          "change_amount": -2311161107.09,
+          "change_pct": -67.45
         },
         {
           "program_name": "Construction, Corps of Engineers - Civil",
           "fiscal_year": 2026,
-          "current_amount": 3557957379.09,
+          "current_amount": 3548780774.27,
           "previous_amount": 1385396986.04,
-          "change_amount": 2172560393.05,
-          "change_pct": 156.82
+          "change_amount": 2163383788.23,
+          "change_pct": 156.16
         },
         {
-          "program_name": "Research, Development, Test, and Evaluation, Air Force",
+          "program_name": "Procurement, Defense-Wide",
           "fiscal_year": 2026,
-          "current_amount": 16897078266.34,
-          "previous_amount": 18870984714.41,
-          "change_amount": -1973906448.0699997,
-          "change_pct": -10.46
+          "current_amount": 10360244904.85,
+          "previous_amount": 12356654796.19,
+          "change_amount": -1996409891.3400002,
+          "change_pct": -16.16
+        },
+        {
+          "program_name": "Operation and Maintenance, Space Force",
+          "fiscal_year": 2026,
+          "current_amount": 3638927251,
+          "previous_amount": 5562188652.27,
+          "change_amount": -1923261401.2700005,
+          "change_pct": -34.58
         }
       ],
       "awards": [
@@ -857,7 +857,7 @@
           "award_id": "N0002417C2117",
           "generated_internal_id": "CONT_AWD_N0002417C2117_9700_-NONE-_-NONE-",
           "recipient_name": "ELECTRIC BOAT CORPORATION",
-          "amount": 31491519039,
+          "amount": 31505020631,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Defense",
@@ -922,7 +922,7 @@
           "award_id": "N0002412C2115",
           "generated_internal_id": "CONT_AWD_N0002412C2115_9700_-NONE-_-NONE-",
           "recipient_name": "ELECTRIC BOAT CORPORATION",
-          "amount": 20394165895,
+          "amount": 20395165895,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Defense",
@@ -1000,7 +1000,7 @@
           "award_id": "FA821920C0006",
           "generated_internal_id": "CONT_AWD_FA821920C0006_9700_-NONE-_-NONE-",
           "recipient_name": "NORTHROP GRUMMAN SYSTEMS CORP",
-          "amount": 13720293923.19,
+          "amount": 14379062923.19,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Defense",
@@ -1140,6 +1140,19 @@
           "source_url": null
         },
         {
+          "award_id": "HQ014717C0032",
+          "generated_internal_id": "CONT_AWD_HQ014717C0032_9700_-NONE-_-NONE-",
+          "recipient_name": "LOCKHEED MARTIN CORPORATION",
+          "amount": 10449417335.07,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Defense",
+          "awarding_sub_agency": "Missile Defense Agency",
+          "action_date": null,
+          "description": "HQ0147-17-C-0032 UNDEFINITIZED CONTRACT ACTION (UCA) FOR THAAD INTERCEPTOR LOT 9 PRODUCTION - QTY OF 23",
+          "source_url": null
+        },
+        {
           "award_id": "W31P4Q24C0022",
           "generated_internal_id": "CONT_AWD_W31P4Q24C0022_9700_-NONE-_-NONE-",
           "recipient_name": "LOCKHEED MARTIN CORPORATION",
@@ -1164,25 +1177,12 @@
           "action_date": null,
           "description": "200506!000026!5700!FA8214!OO-ALC/PKME/LMKE                !F4261098C0001  !A!N! !Y!             !P01502!20041213!20050701!001563738!004179453!016435559!N!NORTHROP GRUMMAN SPACE & MISSI!888 S 2000 E              !CLEARFIELD          !UT!84015!13850!011!49!CLEARFIELD          !DAVIS                 !UTAH      !-000001960000!N!N!000000000000!L014!TECH REP SVCS/GUIDED MISSILES                     !A2 !MISSILE AND SPACE SYSTEMS           !302 !MINUTEMAN III GRP             !541330!E! !3! ! !C! ! !20200930!B! ! !A! !A!N!L!2!002!B!  !Z!Y!Z! !  !N!C!N! ! ! !A!A!A!A!000!A!C!N! ! ! ! !    !      !0001! !",
           "source_url": null
-        },
-        {
-          "award_id": "W58RGZ08C0003",
-          "generated_internal_id": "CONT_AWD_W58RGZ08C0003_9700_-NONE-_-NONE-",
-          "recipient_name": "SIKORSKY AIRCRAFT CORPORATION",
-          "amount": 9971022710.49,
-          "award_type": "contract",
-          "award_type_label": "Unknown",
-          "awarding_agency": "Department of Defense",
-          "awarding_sub_agency": "Department of the Army",
-          "action_date": null,
-          "description": "PROCUREMENT OF 54 EACH ARMY UH-60M BLACK HAWK HELICOPTERS; 18 EACH NAVY MH-60S SEA HAWK HELICOPTERS; 25 EACH NAVY NH-60R SEA HAWK HELICOPTERS; 9 EACH UH-60M BLACK HAWK HELICOPTER FOR BAHRAIN DEFENSE FORCE; TOOLING; PROGRAM SYSTEMS MANAGEMENT; TECHNICAL PUBLICATIONS.",
-          "source_url": null
         }
       ],
-      "contracts_obligated": 587252307601.9199,
+      "contracts_obligated": 588403972818.4999,
       "grants_obligated": 0,
-      "total_awards_obligated": 587252307601.9199,
-      "last_updated": "2026-10-19T17:00:48.472Z",
+      "total_awards_obligated": 588403972818.4999,
+      "last_updated": "2026-10-26T16:49:16.095Z",
       "source": "usaspending.gov"
     },
     "department-of-justice": {
@@ -1193,24 +1193,24 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2024,
-          "total_obligations": 14041064868.52,
+          "total_obligations": 14041011431.94,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 11217679415.61,
+          "total_obligations": 11178461332.77,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -20.11
+          "yoy_change_pct": -20.39
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 11109021277.61,
+          "total_obligations": 11133843745.28,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -0.97
+          "yoy_change_pct": -0.4
         }
       ],
       "program_funding_changes": [
@@ -1249,18 +1249,18 @@
         {
           "program_name": "Salaries and Expenses, Federal Prison System, Justice",
           "fiscal_year": 2026,
-          "current_amount": 2166652293.36,
+          "current_amount": 2166651023.06,
           "previous_amount": 1920500433.89,
-          "change_amount": 246151859.47000003,
+          "change_amount": 246150589.16999984,
           "change_pct": 12.82
         },
         {
           "program_name": "Section 100054 Activities, One Big Beautiful Bill Act, General Legal Activities, Justice",
           "fiscal_year": 2026,
-          "current_amount": 459121005.29,
+          "current_amount": 467125015.95,
           "previous_amount": 230555178.95,
-          "change_amount": 228565826.34000003,
-          "change_pct": 99.14
+          "change_amount": 236569837,
+          "change_pct": 102.61
         },
         {
           "program_name": "Buildings and Facilities, Federal Prison System, Justice",
@@ -1289,26 +1289,26 @@
         {
           "program_name": "Salaries and Expenses, Federal Bureau of Investigation, Justice",
           "fiscal_year": 2026,
-          "current_amount": 1756107049.92,
-          "previous_amount": 1845240312.71,
-          "change_amount": -89133262.78999996,
-          "change_pct": -4.83
+          "current_amount": 1757443146.17,
+          "previous_amount": 1845289612.71,
+          "change_amount": -87846466.53999996,
+          "change_pct": -4.76
         },
         {
           "program_name": "Salaries and Expenses, Drug Enforcement Administration, Justice",
           "fiscal_year": 2026,
-          "current_amount": 356584705.97,
+          "current_amount": 356840755.52,
           "previous_amount": 422294852.42,
-          "change_amount": -65710146.44999999,
-          "change_pct": -15.56
+          "change_amount": -65454096.900000036,
+          "change_pct": -15.5
         },
         {
           "program_name": "Fees and Expenses of Witnesses, Justice",
           "fiscal_year": 2026,
-          "current_amount": 204090778.68,
+          "current_amount": 204290778.68,
           "previous_amount": 141703489.12,
-          "change_amount": 62387289.56,
-          "change_pct": 44.03
+          "change_amount": 62587289.56,
+          "change_pct": 44.17
         },
         {
           "program_name": "Justice Prisoner and Alien Transportation System Fund, United States Marshals Service, Justice",
@@ -1321,10 +1321,10 @@
         {
           "program_name": "Salaries and Expenses, United States Attorneys, Justice",
           "fiscal_year": 2026,
-          "current_amount": 266597923.61,
+          "current_amount": 267316734.57,
           "previous_amount": 208218464.58,
-          "change_amount": 58379459.03,
-          "change_pct": 28.04
+          "change_amount": 59098269.98999998,
+          "change_pct": 28.38
         },
         {
           "program_name": "Salaries and Expenses, United States Marshals Service, Justice",
@@ -1345,10 +1345,10 @@
         {
           "program_name": "Diversion Control Fee Account, Justice",
           "fiscal_year": 2026,
-          "current_amount": 400681741.07,
+          "current_amount": 401165978.24,
           "previous_amount": 454793181.23,
-          "change_amount": -54111440.160000026,
-          "change_pct": -11.9
+          "change_amount": -53627202.99000001,
+          "change_pct": -11.79
         },
         {
           "program_name": "Court Security, Court of Appeals, District Courts, and Other Judicial Services, The Judiciary",
@@ -1361,18 +1361,18 @@
         {
           "program_name": "Assets Forfeiture Fund, Justice",
           "fiscal_year": 2026,
-          "current_amount": 590372153.99,
-          "previous_amount": 539422490.12,
-          "change_amount": 50949663.870000005,
-          "change_pct": 9.45
+          "current_amount": 590406813.16,
+          "previous_amount": 540220501.56,
+          "change_amount": 50186311.600000024,
+          "change_pct": 9.29
         },
         {
-          "program_name": "Public Safety Officers Benefits, Office of Justice Programs, Justice",
+          "program_name": "Salaries and Expenses, Bureau of Alcohol, Tobacco, Firearms and Explosives, Justice",
           "fiscal_year": 2026,
-          "current_amount": 5673054.45,
-          "previous_amount": 46436955.52,
-          "change_amount": -40763901.07,
-          "change_pct": -87.78
+          "current_amount": 345621447.93,
+          "previous_amount": 303276646.16,
+          "change_amount": 42344801.76999998,
+          "change_pct": 13.96
         }
       ],
       "awards": [
@@ -1523,7 +1523,7 @@
           "award_id": "15A00021FAQ000087",
           "generated_internal_id": "CONT_AWD_15A00021FAQ000087_1560_15A00021DAQA00135_1560",
           "recipient_name": "EAGLE HARBOR, LLC",
-          "amount": 206730189.07,
+          "amount": 214734199.73,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Justice",
@@ -1767,10 +1767,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 7673847875.48,
+      "contracts_obligated": 7681851886.139999,
       "grants_obligated": 586183715,
-      "total_awards_obligated": 8260031590.48,
-      "last_updated": "2026-10-19T17:00:49.810Z",
+      "total_awards_obligated": 8268035601.139999,
+      "last_updated": "2026-10-26T16:49:17.456Z",
       "source": "usaspending.gov"
     },
     "department-of-the-treasury": {
@@ -1795,7 +1795,7 @@
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 7091335001.240001,
+          "total_obligations": 7091368526.34,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -22.98
@@ -1837,9 +1837,9 @@
         {
           "program_name": "United States Mint Public Enterprise Fund, Treasury",
           "fiscal_year": 2026,
-          "current_amount": 2351003736.8,
+          "current_amount": 2351015549.12,
           "previous_amount": 2552834255.33,
-          "change_amount": -201830518.52999973,
+          "change_amount": -201818706.21000004,
           "change_pct": -7.91
         },
         {
@@ -2358,7 +2358,7 @@
       "contracts_obligated": 6294861903.500001,
       "grants_obligated": 0,
       "total_awards_obligated": 6294861903.500001,
-      "last_updated": "2026-10-19T17:00:50.535Z",
+      "last_updated": "2026-10-26T16:49:18.320Z",
       "source": "usaspending.gov"
     },
     "department-of-health-and-human-services": {
@@ -2369,34 +2369,50 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2024,
-          "total_obligations": 808414646001.4,
+          "total_obligations": 808414675993.43,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 846833468055.73,
+          "total_obligations": 846833439513.61,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 4.75
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 889233146691.25,
+          "total_obligations": 67265156609.92,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": 5.01
+          "yoy_change_pct": -92.06
         }
       ],
       "program_funding_changes": [
         {
           "program_name": "Grants to States for Medicaid, Centers for Medicare and Medicaid Services, Health and Human Services",
           "fiscal_year": 2026,
-          "current_amount": 722034217322.1,
+          "current_amount": 872694855.1,
           "previous_amount": 666768760508.38,
-          "change_amount": 55265456813.71997,
-          "change_pct": 8.29
+          "change_amount": -665896065653.28,
+          "change_pct": -99.87
+        },
+        {
+          "program_name": "State Children's Health Insurance Fund, Centers for Medicare and Medicaid Services, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 1290756883.33,
+          "previous_amount": 20408517637.65,
+          "change_amount": -19117760754.32,
+          "change_pct": -93.68
+        },
+        {
+          "program_name": "Temporary Assistance for Needy Families, Administration for Children and Families, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 17166891389.44,
+          "change_amount": -17166891389.44,
+          "change_pct": -100
         },
         {
           "program_name": "Refundable Premium Assistance Tax Credit, Internal Revenue Service, Treasury",
@@ -2407,11 +2423,75 @@
           "change_pct": -100
         },
         {
+          "program_name": "Children and Families Services Programs, Administration for Children and Families, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 14010649966.45,
+          "change_amount": -14010649966.45,
+          "change_pct": -100
+        },
+        {
+          "program_name": "Payment to States for the Child Care and Development Block Grant, Administration for Children and Families, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 8632608091.62,
+          "change_amount": -8632608091.62,
+          "change_pct": -100
+        },
+        {
+          "program_name": "Payments for Foster Care and Permanency, Administration for Children and Families, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 7659479730.1,
+          "change_amount": -7659479730.1,
+          "change_pct": -100
+        },
+        {
+          "program_name": "Contingency Fund for State Welfare Programs, Administration for Children and Families, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 5819345059.22,
+          "change_amount": -5819345059.22,
+          "change_pct": -100
+        },
+        {
+          "program_name": "Primary Health Care, Health Resources and Services Administration, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 5773908328.06,
+          "change_amount": -5773908328.06,
+          "change_pct": -100
+        },
+        {
+          "program_name": "Payments to States for Child Support Enforcement and Family Support Programs, Administration for Children and Families, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 4659224479.27,
+          "change_amount": -4659224479.27,
+          "change_pct": -100
+        },
+        {
+          "program_name": "Low Income Home Energy Assistance, Administration for Children and Families, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 4120137726.83,
+          "change_amount": -4120137726.83,
+          "change_pct": -100
+        },
+        {
+          "program_name": "Refugee and Entrant Assistance, Administration for Children and Families, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 4105881597.06,
+          "change_amount": -4105881597.06,
+          "change_pct": -100
+        },
+        {
           "program_name": "Public Health and Social Services Emergency Fund, Office of the Secretary, Health and Human Services",
           "fiscal_year": 2026,
-          "current_amount": 3213243555.06,
+          "current_amount": 3310738226.75,
           "previous_amount": 0,
-          "change_amount": 3213243555.06,
+          "change_amount": 3310738226.75,
           "change_pct": null
         },
         {
@@ -2423,20 +2503,12 @@
           "change_pct": -100
         },
         {
-          "program_name": "State Children's Health Insurance Fund, Centers for Medicare and Medicaid Services, Health and Human Services",
+          "program_name": "Ryan White HIV/AIDS Program, Health Resources and Services Administration, Health and Human Services",
           "fiscal_year": 2026,
-          "current_amount": 23469125657.33,
-          "previous_amount": 20408517637.65,
-          "change_amount": 3060608019.6800003,
-          "change_pct": 15
-        },
-        {
-          "program_name": "Payments for Foster Care and Permanency, Administration for Children and Families, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 10619150105.69,
-          "previous_amount": 7659479730.1,
-          "change_amount": 2959670375.59,
-          "change_pct": 38.64
+          "current_amount": 0,
+          "previous_amount": 2537021674.9,
+          "change_amount": -2537021674.9,
+          "change_pct": -100
         },
         {
           "program_name": "Aging and Disability Services Programs, Administration for Community Living, Health and Human Services",
@@ -2449,10 +2521,26 @@
         {
           "program_name": "Program Management, Centers for Medicare and Medicaid Services, Health and Human Services",
           "fiscal_year": 2026,
-          "current_amount": 6569380100.55,
+          "current_amount": 6573610546.74,
           "previous_amount": 4174487873.68,
-          "change_amount": 2394892226.8700004,
-          "change_pct": 57.37
+          "change_amount": 2399122673.06,
+          "change_pct": 57.47
+        },
+        {
+          "program_name": "Child Care Entitlement to States, Administration for Children and Families, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 2343539118.03,
+          "change_amount": -2343539118.03,
+          "change_pct": -100
+        },
+        {
+          "program_name": "Social Services Block Grant, Administration for Children and Families, Health and Human Services",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 1614995776.88,
+          "change_amount": -1614995776.88,
+          "change_pct": -100
         },
         {
           "program_name": "Chronic Disease Prevention and Health Promotion, Centers for Disease Control and Prevention, Health and Human Services",
@@ -2461,162 +2549,9 @@
           "previous_amount": 1502412921.33,
           "change_amount": -1502412921.33,
           "change_pct": -100
-        },
-        {
-          "program_name": "Refugee and Entrant Assistance, Administration for Children and Families, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 2894675676.85,
-          "previous_amount": 4105881597.06,
-          "change_amount": -1211205920.21,
-          "change_pct": -29.5
-        },
-        {
-          "program_name": "Global Health Programs, State",
-          "fiscal_year": 2026,
-          "current_amount": 0,
-          "previous_amount": 1210354202.95,
-          "change_amount": -1210354202.95,
-          "change_pct": -100
-        },
-        {
-          "program_name": "National Institute of Arthritis and Musculoskeletal and Skin Diseases, National Institutes of Health, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 1158799556.18,
-          "previous_amount": 0,
-          "change_amount": 1158799556.18,
-          "change_pct": null
-        },
-        {
-          "program_name": "Child Care Entitlement to States, Administration for Children and Families, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 3493264073.63,
-          "previous_amount": 2343539118.03,
-          "change_amount": 1149724955.6,
-          "change_pct": 49.06
-        },
-        {
-          "program_name": "National Institute on Alcohol Abuse and Alcoholism, National Institutes of Health, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 1146610244.15,
-          "previous_amount": 0,
-          "change_amount": 1146610244.15,
-          "change_pct": null
-        },
-        {
-          "program_name": "National Institute of Dental and Craniofacial Research, National Institutes of Health, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 1116698171.91,
-          "previous_amount": 0,
-          "change_amount": 1116698171.91,
-          "change_pct": null
-        },
-        {
-          "program_name": "National Institute of Biomedical Imaging and Bioengineering, National Institutes of Health, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 923365031.83,
-          "previous_amount": 0,
-          "change_amount": 923365031.83,
-          "change_pct": null
-        },
-        {
-          "program_name": "National Cancer Institute, National Institutes of Health, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 5695701083.12,
-          "previous_amount": 6363280301.62,
-          "change_amount": -667579218.5,
-          "change_pct": -10.49
-        },
-        {
-          "program_name": "Office of the Director, National Institutes of Health, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 4434317374.24,
-          "previous_amount": 5030037091.46,
-          "change_amount": -595719717.2200003,
-          "change_pct": -11.84
-        },
-        {
-          "program_name": "Indian Health Services, Indian Health Service, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 891564729.77,
-          "previous_amount": 1439948362.16,
-          "change_amount": -548383632.3900001,
-          "change_pct": -38.08
-        },
-        {
-          "program_name": "Quality Improvements Organizations, Centers for Medicare and Medicaid, Health and Human Services",
-          "fiscal_year": 2026,
-          "current_amount": 1245864274.3,
-          "previous_amount": 1765416283.26,
-          "change_amount": -519552008.96000004,
-          "change_pct": -29.43
         }
       ],
       "awards": [
-        {
-          "award_id": "2605CA5MAP",
-          "generated_internal_id": "ASST_NON_2605CA5MAP_075",
-          "recipient_name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
-          "amount": 110435264806,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 7 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2505CA5MAP",
-          "generated_internal_id": "ASST_NON_2505CA5MAP_075",
-          "recipient_name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
-          "amount": 100102111132,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 7 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2405CA5MAP",
-          "generated_internal_id": "ASST_NON_2405CA5MAP_075",
-          "recipient_name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
-          "amount": 91989754968,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 7 - FY 2025 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2305CA5MAP",
-          "generated_internal_id": "ASST_NON_2305CA5MAP_075",
-          "recipient_name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
-          "amount": 80547538707,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 7 - FY 2024 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2205CA5MAP",
-          "generated_internal_id": "ASST_NON_2205CA5MAP_075",
-          "recipient_name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
-          "amount": 80533569865,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 7 - FY 2023 - T19",
-          "source_url": null
-        },
         {
           "award_id": "2105CA5MAP",
           "generated_internal_id": "ASST_NON_2105CA5MAP_075",
@@ -2644,19 +2579,6 @@
           "source_url": null
         },
         {
-          "award_id": "2605NY5MAP",
-          "generated_internal_id": "ASST_NON_2605NY5MAP_075",
-          "recipient_name": "NYS DEPARTMENT OF HEALTH",
-          "amount": 61254491401,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 42 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
           "award_id": "2305NY5MAP",
           "generated_internal_id": "ASST_NON_2305NY5MAP_075",
           "recipient_name": "NYS DEPARTMENT OF HEALTH",
@@ -2667,32 +2589,6 @@
           "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
           "action_date": null,
           "description": "MEDICAID ENTITLEMENT FOR 42 - FY 2024 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2505NY5MAP",
-          "generated_internal_id": "ASST_NON_2505NY5MAP_075",
-          "recipient_name": "NYS DEPARTMENT OF HEALTH",
-          "amount": 56707390396,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 42 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2405NY5MAP",
-          "generated_internal_id": "ASST_NON_2405NY5MAP_075",
-          "recipient_name": "NYS DEPARTMENT OF HEALTH",
-          "amount": 54306306498,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 42 - FY 2025 - T19",
           "source_url": null
         },
         {
@@ -2735,19 +2631,6 @@
           "source_url": null
         },
         {
-          "award_id": "2605TX5MAP",
-          "generated_internal_id": "ASST_NON_2605TX5MAP_075",
-          "recipient_name": "HEALTH & HUMAN SVC COMMN TX",
-          "amount": 36919308770,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 54 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
           "award_id": "2305TX5MAP",
           "generated_internal_id": "ASST_NON_2305TX5MAP_075",
           "recipient_name": "HEALTH & HUMAN SVC COMMN TX",
@@ -2758,45 +2641,6 @@
           "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
           "action_date": null,
           "description": "MEDICAID ENTITLEMENT FOR 54 - FY 2024 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2605PA5MAP",
-          "generated_internal_id": "ASST_NON_2605PA5MAP_075",
-          "recipient_name": "PA DEPARTMENT OF HUMAN SERVICES",
-          "amount": 31836342627,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 46 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2505TX5MAP",
-          "generated_internal_id": "ASST_NON_2505TX5MAP_075",
-          "recipient_name": "HEALTH & HUMAN SVC COMMN TX",
-          "amount": 31616515180,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 54 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2505PA5MAP",
-          "generated_internal_id": "ASST_NON_2505PA5MAP_075",
-          "recipient_name": "PA DEPARTMENT OF HUMAN SERVICES",
-          "amount": 29024953484,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 46 - FY 2026 - T19",
           "source_url": null
         },
         {
@@ -2813,19 +2657,6 @@
           "source_url": null
         },
         {
-          "award_id": "2605OH5MAP",
-          "generated_internal_id": "ASST_NON_2605OH5MAP_075",
-          "recipient_name": "OHIO DEPARTMENT OF MEDICAID",
-          "amount": 28221678997,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 43 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
           "award_id": "2305PA5MAP",
           "generated_internal_id": "ASST_NON_2305PA5MAP_075",
           "recipient_name": "PA DEPARTMENT OF HUMAN SERVICES",
@@ -2839,19 +2670,6 @@
           "source_url": null
         },
         {
-          "award_id": "2605FL5MAP",
-          "generated_internal_id": "ASST_NON_2605FL5MAP_075",
-          "recipient_name": "FLORIDA AGENCY FOR HEALTH CARE ADMINISTRATION",
-          "amount": 27056912163,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 14 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
           "award_id": "2405PA5MAP",
           "generated_internal_id": "ASST_NON_2405PA5MAP_075",
           "recipient_name": "PA DEPARTMENT OF HUMAN SERVICES",
@@ -2862,45 +2680,6 @@
           "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
           "action_date": null,
           "description": "MEDICAID ENTITLEMENT FOR 46 - FY 2025 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2505OH5MAP",
-          "generated_internal_id": "ASST_NON_2505OH5MAP_075",
-          "recipient_name": "OHIO DEPARTMENT OF MEDICAID",
-          "amount": 26062737878,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 43 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2605NC5MAP",
-          "generated_internal_id": "ASST_NON_2605NC5MAP_075",
-          "recipient_name": "NORTH CAROLINA DEPARTMENT OF HEALTH & HUMAN SERVICES",
-          "amount": 25895802402,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 35 - FY 2026 - T19",
-          "source_url": null
-        },
-        {
-          "award_id": "2505NC5MAP",
-          "generated_internal_id": "ASST_NON_2505NC5MAP_075",
-          "recipient_name": "NORTH CAROLINA DEPARTMENT OF HEALTH & HUMAN SERVICES",
-          "amount": 24819288393,
-          "award_type": "grant",
-          "award_type_label": "BLOCK GRANT (A)",
-          "awarding_agency": "Department of Health and Human Services",
-          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
-          "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 35 - FY 2026 - T19",
           "source_url": null
         },
         {
@@ -2930,23 +2709,244 @@
           "source_url": null
         },
         {
-          "award_id": "2605IL5MAP",
-          "generated_internal_id": "ASST_NON_2605IL5MAP_075",
-          "recipient_name": "ILLINOIS DEPARTMENT OF HEALTHCARE & FAMILY SERVICES",
-          "amount": 23176705108,
+          "award_id": "2305FL5MAP",
+          "generated_internal_id": "ASST_NON_2305FL5MAP_075",
+          "recipient_name": "FLORIDA AGENCY FOR HEALTH CARE ADMINISTRATION",
+          "amount": 22288129279,
           "award_type": "grant",
           "award_type_label": "BLOCK GRANT (A)",
           "awarding_agency": "Department of Health and Human Services",
           "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
           "action_date": null,
-          "description": "MEDICAID ENTITLEMENT FOR 20 - FY 2026 - T19",
+          "description": "MEDICAID ENTITLEMENT FOR 14 - FY 2024 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2005PA5MAP",
+          "generated_internal_id": "ASST_NON_2005PA5MAP_075",
+          "recipient_name": "PA DEPARTMENT OF HUMAN SERVICES",
+          "amount": 21988508674,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 46 - FY 2020 QUARTER 4 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2405NC5MAP",
+          "generated_internal_id": "ASST_NON_2405NC5MAP_075",
+          "recipient_name": "NORTH CAROLINA DEPARTMENT OF HEALTH & HUMAN SERVICES",
+          "amount": 21227895746,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 35 - FY 2025 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2405FL5MAP",
+          "generated_internal_id": "ASST_NON_2405FL5MAP_075",
+          "recipient_name": "FLORIDA AGENCY FOR HEALTH CARE ADMINISTRATION",
+          "amount": 20328728730,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 14 - FY 2025 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2305IL5MAP",
+          "generated_internal_id": "ASST_NON_2305IL5MAP_075",
+          "recipient_name": "ILLINOIS DEPARTMENT OF HEALTHCARE & FAMILY SERVICES",
+          "amount": 20222679588,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 20 - FY 2024 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2405IL5MAP",
+          "generated_internal_id": "ASST_NON_2405IL5MAP_075",
+          "recipient_name": "ILLINOIS DEPARTMENT OF HEALTHCARE & FAMILY SERVICES",
+          "amount": 19064022090,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 20 - FY 2025 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2305AZ5MAP",
+          "generated_internal_id": "ASST_NON_2305AZ5MAP_075",
+          "recipient_name": "ARIZONA HEALTH CARE COST CONTAINMENT SYSTEM",
+          "amount": 17905737083,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 6 - FY 2024 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2405MI5MAP",
+          "generated_internal_id": "ASST_NON_2405MI5MAP_075",
+          "recipient_name": "MICHIGAN DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+          "amount": 17587850907,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 30 - FY 2025 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2305MI5MAP",
+          "generated_internal_id": "ASST_NON_2305MI5MAP_075",
+          "recipient_name": "MICHIGAN DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+          "amount": 17484408584,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 30 - FY 2024 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2405AZ5MAP",
+          "generated_internal_id": "ASST_NON_2405AZ5MAP_075",
+          "recipient_name": "ARIZONA HEALTH CARE COST CONTAINMENT SYSTEM",
+          "amount": 15075060908,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 6 - FY 2025 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2305NJ5MAP",
+          "generated_internal_id": "ASST_NON_2305NJ5MAP_075",
+          "recipient_name": "HUMAN SERVICES, NEW JERSEY DEPARTMENT OF",
+          "amount": 14300935350,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 39 - FY 2024 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2305MA5MAP",
+          "generated_internal_id": "ASST_NON_2305MA5MAP_075",
+          "recipient_name": "THE COMMONWEALTH OF MASSACHUSETTS",
+          "amount": 14117831073,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 26 - FY 2024 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2305NC5MAP",
+          "generated_internal_id": "ASST_NON_2305NC5MAP_075",
+          "recipient_name": "NORTH CAROLINA DEPARTMENT OF HEALTH & HUMAN SERVICES",
+          "amount": 14081466592,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 35 - FY 2024 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2305VA5MAP",
+          "generated_internal_id": "ASST_NON_2305VA5MAP_075",
+          "recipient_name": "VA DEPARTMENT OF MEDICAL ASSISTANCE SERVICE",
+          "amount": 14067193474,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 56 - FY 2023 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2405KY5MAP",
+          "generated_internal_id": "ASST_NON_2405KY5MAP_075",
+          "recipient_name": "HEALTH SERVICES KENTUCKY CABINET FOR",
+          "amount": 14023045572,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 24 - FY 2025 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2405VA5MAP",
+          "generated_internal_id": "ASST_NON_2405VA5MAP_075",
+          "recipient_name": "VA DEPARTMENT OF MEDICAL ASSISTANCE SERVICE",
+          "amount": 13939596966,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 56 - FY 2025 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2405NJ5MAP",
+          "generated_internal_id": "ASST_NON_2405NJ5MAP_075",
+          "recipient_name": "HUMAN SERVICES, NEW JERSEY DEPARTMENT OF",
+          "amount": 13909577426,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 39 - FY 2025 - T19",
+          "source_url": null
+        },
+        {
+          "award_id": "2405MA5MAP",
+          "generated_internal_id": "ASST_NON_2405MA5MAP_075",
+          "recipient_name": "THE COMMONWEALTH OF MASSACHUSETTS",
+          "amount": 13894033179,
+          "award_type": "grant",
+          "award_type_label": "BLOCK GRANT (A)",
+          "awarding_agency": "Department of Health and Human Services",
+          "awarding_sub_agency": "Centers for Medicare and Medicaid Services",
+          "action_date": null,
+          "description": "MEDICAID ENTITLEMENT FOR 26 - FY 2025 - T19",
           "source_url": null
         }
       ],
       "contracts_obligated": 0,
-      "grants_obligated": 1419970597880,
-      "total_awards_obligated": 1419970597880,
-      "last_updated": "2026-10-19T17:00:52.024Z",
+      "grants_obligated": 804970626326,
+      "total_awards_obligated": 804970626326,
+      "last_updated": "2026-10-26T16:49:19.714Z",
       "source": "usaspending.gov"
     },
     "department-of-homeland-security": {
@@ -2964,14 +2964,14 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 61095515832.13,
+          "total_obligations": 61095515852.13,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 4.14
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 103756142325.42001,
+          "total_obligations": 103756381380.07999,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 69.83
@@ -3005,9 +3005,9 @@
         {
           "program_name": "Operations and Support, U.S. Immigration and Customs Enforcement, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 8037711782.43,
+          "current_amount": 8037692199.93,
           "previous_amount": 3937629023.6,
-          "change_amount": 4100082758.8300004,
+          "change_amount": 4100063176.3300004,
           "change_pct": 104.13
         },
         {
@@ -3045,10 +3045,10 @@
         {
           "program_name": "Operations and Support, Coast Guard, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 2511772836.66,
+          "current_amount": 2511585639.63,
           "previous_amount": 1867311432.57,
-          "change_amount": 644461404.0899999,
-          "change_pct": 34.51
+          "change_amount": 644274207.0600002,
+          "change_pct": 34.5
         },
         {
           "program_name": "Office of the Under Secretary for Management, Departmental Management and Operations, Homeland Security",
@@ -3091,6 +3091,14 @@
           "change_pct": -12.58
         },
         {
+          "program_name": "H-1B and L Fraud Prevention and Detection Account, Citizenship and Immigration Services, Homeland Security",
+          "fiscal_year": 2026,
+          "current_amount": 0,
+          "previous_amount": 143590443.41,
+          "change_amount": -143590443.41,
+          "change_pct": -100
+        },
+        {
           "program_name": "Operations and Support, Transportation Security Administration, Homeland Security",
           "fiscal_year": 2026,
           "current_amount": 2008021781.21,
@@ -3123,14 +3131,6 @@
           "change_pct": 90.76
         },
         {
-          "program_name": "National Flood Insurance Fund, Federal Emergency Management Agency, Homeland Security",
-          "fiscal_year": 2026,
-          "current_amount": 472826375.44,
-          "previous_amount": 346674166.94,
-          "change_amount": 126152208.5,
-          "change_pct": 36.39
-        },
-        {
           "program_name": "Oil Spill Recovery, USCG, Homeland Security",
           "fiscal_year": 2026,
           "current_amount": 117279572.43,
@@ -3141,75 +3141,10 @@
       ],
       "awards": [
         {
-          "award_id": "4339DRPRP00000001",
-          "generated_internal_id": "ASST_NON_4339DRPRP00000001_070",
-          "recipient_name": "GOVERNOR'S AUTHORIZED REPRESENTATIVE",
-          "amount": 35334862760.16,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4340DRVIP00000001",
-          "generated_internal_id": "ASST_NON_4340DRVIP00000001_070",
-          "recipient_name": "GOVERNMENT OF THE VIRGIN ISLANDS",
-          "amount": 22008133143.45,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4480DRNYP00000001",
-          "generated_internal_id": "ASST_NON_4480DRNYP00000001_070",
-          "recipient_name": "NEW YORK STATE DIVISION OF HOMELAND SECURITY & EMERGENCY SERVICES",
-          "amount": 17352222808.66,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4482DRCAP00000001",
-          "generated_internal_id": "ASST_NON_4482DRCAP00000001_070",
-          "recipient_name": "OFFICE OF EMERGENCY SERVICES",
-          "amount": 14736219684.81,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
           "award_id": "4485DRTXP00000001",
           "generated_internal_id": "ASST_NON_4485DRTXP00000001_070",
           "recipient_name": "TEXAS DIVISION OF EMERGENCY MANAGEMENT",
           "amount": 14375868392.69,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4085DRNYP0000001",
-          "generated_internal_id": "ASST_NON_4085DRNYP0000001_070",
-          "recipient_name": "NEW YORK STATE DIVISION OF HOMELAND SECURITY & EMERGENCY SERVICES",
-          "amount": 13373399634.54,
           "award_type": "grant",
           "award_type_label": "PROJECT GRANT (B)",
           "awarding_agency": "Department of Homeland Security",
@@ -3229,32 +3164,6 @@
           "awarding_sub_agency": "Federal Emergency Management Agency",
           "action_date": null,
           "description": "STATE BORDER SECURITY REINFORCEMENT FUND",
-          "source_url": null
-        },
-        {
-          "award_id": "4486DRFLP00000001",
-          "generated_internal_id": "ASST_NON_4486DRFLP00000001_070",
-          "recipient_name": "STATE OF FLORIDA DIVISION OF EMERGENCY MANAGEMENT",
-          "amount": 4902307896.91,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4611DRLAP00000001",
-          "generated_internal_id": "ASST_NON_4611DRLAP00000001_070",
-          "recipient_name": "HOMELAND SECURITY & EMERGENCY",
-          "amount": 3623924677.05,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "PROVIDE REIMBURSEMENT TO STATE, LOCAL, TRIBAL, AND TERRITORIAL GOVERNMENT ENTITIES AND CERTAIN PRIVATE NON-PROFIT ORGANIZATIONS FOR EMERGENCY PROTECTIVE MEASURES TAKEN DURING THE PANDEMIC. EMERGENCY PROTECTIVE MEASURES NECESSARY TO SAVE LIVES AND PROTECT PUBLIC HEALTH AND SAFETY. MANAGEMENT, CONTROL, AND REDUCTION OF IMMEDIATE THREATS TO PUBLIC HEALTH AND SAFETY.  EMERGENCY MEDICAL CARE.  MEDICAL SHELTERING.  ADMINISTRATION AND DISTRIBUTION OF VACCINES. COMMUNITY ENGAGEMENT AND INFORMATION DISSEMINATION.",
           "source_url": null
         },
         {
@@ -3297,71 +3206,6 @@
           "source_url": null
         },
         {
-          "award_id": "4488DRNJP00000001",
-          "generated_internal_id": "ASST_NON_4488DRNJP00000001_070",
-          "recipient_name": "LAW & PUBLIC SAFETY, NEW JERSEY DEPARTMENT OF",
-          "amount": 3237156045.94,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4559DRLAP00000001",
-          "generated_internal_id": "ASST_NON_4559DRLAP00000001_070",
-          "recipient_name": "HOMELAND SECURITY & EMERGENCY",
-          "amount": 3209955430.85,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4332DRTXP00000001",
-          "generated_internal_id": "ASST_NON_4332DRTXP00000001_070",
-          "recipient_name": "TEXAS DEPARTMENT OF PUBLIC SAFETY",
-          "amount": 2987350749.6,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4481DRWAP00000001",
-          "generated_internal_id": "ASST_NON_4481DRWAP00000001_070",
-          "recipient_name": "MILITARY DEPARTMENT, WASHINGTON STATE",
-          "amount": 2981145933.17,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4673DRFLP00000001",
-          "generated_internal_id": "ASST_NON_4673DRFLP00000001_070",
-          "recipient_name": "STATE OF FLORIDA DIVISION OF EMERGENCY MANAGEMENT",
-          "amount": 2944650277.04,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "PROVIDE REIMBURSEMENT TO STATE, LOCAL, TRIBAL, AND TERRITORIAL GOVERNMENT ENTITIES AND CERTAIN PRIVATE NON-PROFIT ORGANIZATIONS FOR EMERGENCY PROTECTIVE MEASURES TAKEN DURING THE PANDEMIC. EMERGENCY PROTECTIVE MEASURES NECESSARY TO SAVE LIVES AND PROTECT PUBLIC HEALTH AND SAFETY. MANAGEMENT, CONTROL, AND REDUCTION OF IMMEDIATE THREATS TO PUBLIC HEALTH AND SAFETY.  EMERGENCY MEDICAL CARE.  MEDICAL SHELTERING.  ADMINISTRATION AND DISTRIBUTION OF VACCINES. COMMUNITY ENGAGEMENT AND INFORMATION DISSEMINATION.",
-          "source_url": null
-        },
-        {
           "award_id": "70B01C26F00000017",
           "generated_internal_id": "CONT_AWD_70B01C26F00000017_7014_70B01C26D00000012_7014",
           "recipient_name": "FISHER SAND & GRAVEL CO",
@@ -3385,97 +3229,6 @@
           "awarding_sub_agency": "U.S. Customs and Border Protection",
           "action_date": null,
           "description": "BORDER BARRIER DESIGN BUILD FOR BBT-5",
-          "source_url": null
-        },
-        {
-          "award_id": "4827DRNCP00000001",
-          "generated_internal_id": "ASST_NON_4827DRNCP00000001_070",
-          "recipient_name": "NORTH CAROLINA DEPARTMENT OF PUBLIC SAFETY",
-          "amount": 2496994905.44,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "PROVIDE REIMBURSEMENT TO STATE, LOCAL, TRIBAL, AND TERRITORIAL GOVERNMENT ENTITIES AND CERTAIN PRIVATE NON-PROFIT ORGANIZATIONS FOR EMERGENCY PROTECTIVE MEASURES TAKEN DURING THE PANDEMIC. EMERGENCY PROTECTIVE MEASURES NECESSARY TO SAVE LIVES AND PROTECT PUBLIC HEALTH AND SAFETY. MANAGEMENT, CONTROL, AND REDUCTION OF IMMEDIATE THREATS TO PUBLIC HEALTH AND SAFETY.  EMERGENCY MEDICAL CARE.  MEDICAL SHELTERING.  ADMINISTRATION AND DISTRIBUTION OF VACCINES. COMMUNITY ENGAGEMENT AND INFORMATION DISSEMINATION.",
-          "source_url": null
-        },
-        {
-          "award_id": "4337DRFLP00000001",
-          "generated_internal_id": "ASST_NON_4337DRFLP00000001_070",
-          "recipient_name": "STATE OF FLORIDA DIVISION OF EMERGENCY MANAGEMENT",
-          "amount": 2412688151.21,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "1603DRLAP0000001",
-          "generated_internal_id": "ASST_NON_1603DRLAP0000001_070",
-          "recipient_name": "HOMELAND SECURITY & EMERGENCY",
-          "amount": 2390215653.15,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4506DRPAP00000001",
-          "generated_internal_id": "ASST_NON_4506DRPAP00000001_070",
-          "recipient_name": "PENNSYLVANIA EMERGENCY MANAGEMENT AGENCY",
-          "amount": 2348912521.49,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4399DRFLP00000001",
-          "generated_internal_id": "ASST_NON_4399DRFLP00000001_070",
-          "recipient_name": "STATE OF FLORIDA DIVISION OF EMERGENCY MANAGEMENT",
-          "amount": 2348721912.3,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4086DRNJP0000001",
-          "generated_internal_id": "ASST_NON_4086DRNJP0000001_070",
-          "recipient_name": "LAW & PUBLIC SAFETY, NEW JERSEY DEPARTMENT OF",
-          "amount": 2301780417.58,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
-          "source_url": null
-        },
-        {
-          "award_id": "4484DRLAP00000001",
-          "generated_internal_id": "ASST_NON_4484DRLAP00000001_070",
-          "recipient_name": "HOMELAND SECURITY & EMERGENCY",
-          "amount": 2296882329.99,
-          "award_type": "grant",
-          "award_type_label": "PROJECT GRANT (B)",
-          "awarding_agency": "Department of Homeland Security",
-          "awarding_sub_agency": "Federal Emergency Management Agency",
-          "action_date": null,
-          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
           "source_url": null
         },
         {
@@ -3529,12 +3282,259 @@
           "action_date": null,
           "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
           "source_url": null
+        },
+        {
+          "award_id": "70B01C26C00000006",
+          "generated_internal_id": "CONT_AWD_70B01C26C00000006_7014_-NONE-_-NONE-",
+          "recipient_name": "AMI METALS, INC",
+          "amount": 2022176160.58,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Customs and Border Protection",
+          "action_date": null,
+          "description": "BULK STEEL FOR SOUTHWEST BORDER BARRIER CONSTRUCTION PROJECTS",
+          "source_url": null
+        },
+        {
+          "award_id": "4499DRORP00000001",
+          "generated_internal_id": "ASST_NON_4499DRORP00000001_070",
+          "recipient_name": "OREGON MILITARY DEPARTMENT",
+          "amount": 1980374214.55,
+          "award_type": "grant",
+          "award_type_label": "PROJECT GRANT (B)",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "Federal Emergency Management Agency",
+          "action_date": null,
+          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
+          "source_url": null
+        },
+        {
+          "award_id": "4498DRCOP00000001",
+          "generated_internal_id": "ASST_NON_4498DRCOP00000001_070",
+          "recipient_name": "STATE OF COLORADO",
+          "amount": 1830917277,
+          "award_type": "grant",
+          "award_type_label": "PROJECT GRANT (B)",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "Federal Emergency Management Agency",
+          "action_date": null,
+          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
+          "source_url": null
+        },
+        {
+          "award_id": "70B01C26F00000073",
+          "generated_internal_id": "CONT_AWD_70B01C26F00000073_7014_70B01C26D00000012_7014",
+          "recipient_name": "FISHER SAND & GRAVEL CO",
+          "amount": 1787500000,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Customs and Border Protection",
+          "action_date": null,
+          "description": "DESIGN AND CONSTRUCT NEW VERTICAL BARRIER AND POWER DISTRIBUTION, LIGHTING, CAMERAS, EQUIPMENT SHELTERS AND LINEAR GROUND DETECTION SYSTEM (LGDS) IN HILDAGO COUNTY, NM.",
+          "source_url": null
+        },
+        {
+          "award_id": "70B01C26F00000292",
+          "generated_internal_id": "CONT_AWD_70B01C26F00000292_7014_70B01C26D00000006_7014",
+          "recipient_name": "BARNARD CONSTRUCTION COMPANY, INCORPORATED",
+          "amount": 1770847986,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Customs and Border Protection",
+          "action_date": null,
+          "description": "BORDER WALL CONSTRUCTION FOR EL PASO SECTOR - EPT-5",
+          "source_url": null
+        },
+        {
+          "award_id": "70B01C26F00000345",
+          "generated_internal_id": "CONT_AWD_70B01C26F00000345_7014_70B01C26D00000007_7014",
+          "recipient_name": "SOUTHWEST VALLEY CONSTRUCTORS CO",
+          "amount": 1720040000,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Customs and Border Protection",
+          "action_date": null,
+          "description": "AWARD OF CONSTRUCTION TASK ORDER FOR BORDER WALL IN BIG BEND TEXAS, SEGMENT IDENTIFIED AS BBT-4.",
+          "source_url": null
+        },
+        {
+          "award_id": "4494DRMIP00000001",
+          "generated_internal_id": "ASST_NON_4494DRMIP00000001_070",
+          "recipient_name": "STATE OF MICHIGAN",
+          "amount": 1695539095.42,
+          "award_type": "grant",
+          "award_type_label": "PROJECT GRANT (B)",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "Federal Emergency Management Agency",
+          "action_date": null,
+          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
+          "source_url": null
+        },
+        {
+          "award_id": "HSCG2313CADB014",
+          "generated_internal_id": "CONT_AWD_HSCG2313CADB014_7008_-NONE-_-NONE-",
+          "recipient_name": "HUNTINGTON INGALLS INCORPORATED",
+          "amount": 1654352379,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Coast Guard",
+          "action_date": null,
+          "description": "PRODUCTION&DELIVERY OF NATIONAL SECURITY CUTTER (NSC) 6.",
+          "source_url": null
+        },
+        {
+          "award_id": "70B01C26F00000044",
+          "generated_internal_id": "CONT_AWD_70B01C26F00000044_7014_70B01C26D00000012_7014",
+          "recipient_name": "FISHER SAND & GRAVEL CO",
+          "amount": 1650754000,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Customs and Border Protection",
+          "action_date": null,
+          "description": "YUM-2 VERTICAL BORDER AND WATERBORNE BARRIER CONSTRUCTION",
+          "source_url": null
+        },
+        {
+          "award_id": "HSCG2314CAPC002",
+          "generated_internal_id": "CONT_AWD_HSCG2314CAPC002_7008_-NONE-_-NONE-",
+          "recipient_name": "EASTERN SHIPBUILDING GROUP, INC.",
+          "amount": 1578692803.24,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Coast Guard",
+          "action_date": null,
+          "description": "OPC P&CD CONTRACT 2 REFERENCE SOLICITATION NUMBER HSCG23-12-R-OPC0001",
+          "source_url": null
+        },
+        {
+          "award_id": "HSCG2308C2FR125",
+          "generated_internal_id": "CONT_AWD_HSCG2308C2FR125_7008_-NONE-_-NONE-",
+          "recipient_name": "BOLLINGER SHIPYARDS LOCKPORT, L.L.C.",
+          "amount": 1536934924.76,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Coast Guard",
+          "action_date": null,
+          "description": "USCG FAST RESPONSE CUTTER B CLASS (FRC-B)",
+          "source_url": null
+        },
+        {
+          "award_id": "HSCG2316CADB016",
+          "generated_internal_id": "CONT_AWD_HSCG2316CADB016_7008_-NONE-_-NONE-",
+          "recipient_name": "HUNTINGTON INGALLS INCORPORATED",
+          "amount": 1460701662.72,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Coast Guard",
+          "action_date": null,
+          "description": "LONG LEAD TIME MATERIAL (LLTM) FOR NATIONAL SECURITY CUTTER (NSC) 9",
+          "source_url": null
+        },
+        {
+          "award_id": "70Z02322C93220001",
+          "generated_internal_id": "CONT_AWD_70Z02322C93220001_7008_-NONE-_-NONE-",
+          "recipient_name": "AUSTAL USA, LLC",
+          "amount": 1434937513.97,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Coast Guard",
+          "action_date": null,
+          "description": "OFFSHORE PATROL CUTTER (OPC) STAGE 2 CONTRACT: DETAILED DESIGN AND PRODUCTION (DD&P) OF 11 OPCS.",
+          "source_url": null
+        },
+        {
+          "award_id": "70B01C26F00000385",
+          "generated_internal_id": "CONT_AWD_70B01C26F00000385_7014_70B01C26D00000003_7014",
+          "recipient_name": "SLS FEDERAL SERVICES LLC",
+          "amount": 1313227200,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Customs and Border Protection",
+          "action_date": null,
+          "description": "BORDER WALL CONSTRUCTION FOR TCA-5 TON.",
+          "source_url": null
+        },
+        {
+          "award_id": "70CDCR26FC0000001",
+          "generated_internal_id": "CONT_AWD_70CDCR26FC0000001_7012_70CDCR24A00000001_7012",
+          "recipient_name": "CSI AVIATION, INC",
+          "amount": 1290404814.91,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Immigration and Customs Enforcement",
+          "action_date": null,
+          "description": "THIS CALL ORDER OBTAINS DEDICATED AND ON-DEMAND CHARTERED FLIGHT SERVICES FOR ENFORCEMENT AND REMOVAL OPERATIONS UNDER THE ICE AIR PROGRAM. ICE AIR FACILITATES THE SAFE, SECURE, AND COST-EFFECTIVE TRANSPORTATION AND DEPORTATION OF ILLEGAL ALIENS.",
+          "source_url": null
+        },
+        {
+          "award_id": "70B01C23F00000067",
+          "generated_internal_id": "CONT_AWD_70B01C23F00000067_7014_70RDAD21A00000012_7001",
+          "recipient_name": "DEPLOYED RESOURCES LLC",
+          "amount": 1260570510.94,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Customs and Border Protection",
+          "action_date": null,
+          "description": "ERECT/FURNISH CPC FACILITY AT EL PASO, TX AND SAN DIEGO, CA.  OPTION FOR EL CENTRO, CA",
+          "source_url": null
+        },
+        {
+          "award_id": "70B01C25F00001112",
+          "generated_internal_id": "CONT_AWD_70B01C25F00001112_7014_70B01C23D00000010_7014",
+          "recipient_name": "FISHER SAND & GRAVEL CO",
+          "amount": 1225325000,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Customs and Border Protection",
+          "action_date": null,
+          "description": "CONSTRUCTION BORDER BARRIER EL CENTRO, CA",
+          "source_url": null
+        },
+        {
+          "award_id": "70B01C26F00000169",
+          "generated_internal_id": "CONT_AWD_70B01C26F00000169_7014_70B01C26D00000012_7014",
+          "recipient_name": "FISHER SAND & GRAVEL CO",
+          "amount": 1223124000,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "U.S. Customs and Border Protection",
+          "action_date": null,
+          "description": "BORDER WALL CONSTRUCTION - VERTICAL BARRIER, BIG BEND TEXAS SECTOR (BBT-2)",
+          "source_url": null
+        },
+        {
+          "award_id": "4490DRMOP00000001",
+          "generated_internal_id": "ASST_NON_4490DRMOP00000001_070",
+          "recipient_name": "PUBLIC SAFETY, MISSOURI DEPARTMENT OF",
+          "amount": 1207310246.09,
+          "award_type": "grant",
+          "award_type_label": "PROJECT GRANT (B)",
+          "awarding_agency": "Department of Homeland Security",
+          "awarding_sub_agency": "Federal Emergency Management Agency",
+          "action_date": null,
+          "description": "GRANT TO LOCAL GOVERNMENT FOR REPAIR OR REPLACEMENT OF DISASTER DAMAGED FACILITIES",
+          "source_url": null
         }
       ],
-      "contracts_obligated": 13169934231.78,
-      "grants_obligated": 176162769176.86,
-      "total_awards_obligated": 189332703408.63998,
-      "last_updated": "2026-10-19T17:00:53.411Z",
+      "contracts_obligated": 36099523187.9,
+      "grants_obligated": 39589385076.58,
+      "total_awards_obligated": 75688908264.48001,
+      "last_updated": "2026-10-26T16:49:21.013Z",
       "source": "usaspending.gov"
     },
     "environmental-protection-agency": {
@@ -4090,7 +4090,7 @@
       "contracts_obligated": 0,
       "grants_obligated": 27249585692,
       "total_awards_obligated": 27249585692,
-      "last_updated": "2026-10-19T17:00:54.228Z",
+      "last_updated": "2026-10-26T16:49:21.817Z",
       "source": "usaspending.gov"
     },
     "department-of-the-interior": {
@@ -4115,7 +4115,7 @@
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 8539132782.25,
+          "total_obligations": 8539314946.179999,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -40.24
@@ -4149,10 +4149,10 @@
         {
           "program_name": "Resource Management, United States Fish and Wildlife Service, Interior",
           "fiscal_year": 2026,
-          "current_amount": 127956287.48,
+          "current_amount": 128030187.48,
           "previous_amount": 638166382.27,
-          "change_amount": -510210094.78999996,
-          "change_pct": -79.95
+          "change_amount": -510136194.78999996,
+          "change_pct": -79.94
         },
         {
           "program_name": "Sport Fish Restoration Account, United States Fish and Wildlife Service",
@@ -4165,10 +4165,10 @@
         {
           "program_name": "Operation of the National Park System, National Park Service, Interior",
           "fiscal_year": 2026,
-          "current_amount": 377403348.36,
+          "current_amount": 377320477.52,
           "previous_amount": 775163484.21,
-          "change_amount": -397760135.85,
-          "change_pct": -51.31
+          "change_amount": -397843006.69000006,
+          "change_pct": -51.32
         },
         {
           "program_name": "Energy Community Revitalization Program,  Department-Wide Programs, Interior",
@@ -4261,10 +4261,10 @@
         {
           "program_name": "Operation of Indian Education Programs, Bureau of Indian Education, Interior",
           "fiscal_year": 2026,
-          "current_amount": 104071322.12,
+          "current_amount": 103940810.12,
           "previous_amount": 248030798.62,
-          "change_amount": -143959476.5,
-          "change_pct": -58.04
+          "change_amount": -144089988.5,
+          "change_pct": -58.09
         },
         {
           "program_name": "Southern Nevada Public Land Management, Bureau of Land Management",
@@ -4405,11 +4405,11 @@
           "award_id": "140R2025C0004",
           "generated_internal_id": "CONT_AWD_140R2025C0004_1425_-NONE-_-NONE-",
           "recipient_name": "NW CONSTRUCTION, INC",
-          "amount": 257398219.12,
+          "amount": 269083581.11,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of the Interior",
-          "awarding_sub_agency": "Bureau of Reclamation",
+          "awarding_sub_agency": "Departmental Offices",
           "action_date": null,
           "description": "THE WORK REQUIRED IS FOR PHASE II OF B.F. SISK DAM SOD MODIFICATIONS.",
           "source_url": null
@@ -4565,7 +4565,7 @@
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of the Interior",
-          "awarding_sub_agency": "National Park Service",
+          "awarding_sub_agency": "Departmental Offices",
           "action_date": null,
           "description": "YOSE 196416 REHABILITATE EL PORTAL WASTEWATER TREATMENT FACILITY AND ADMINISTRATIVE CAMP  THE WORK OF THIS CONTRACT IS FOR THE CONSTRUCTION OF: YOSE 196416 REHABILITATE EL PORTAL WASTEWATER TREATMENT FACILITY AND ADMINISTRATIVE CAMP IN YOSEMITE NAT",
           "source_url": null
@@ -4675,10 +4675,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 5670431089.599999,
+      "contracts_obligated": 5682116451.59,
       "grants_obligated": 2580531222.3,
-      "total_awards_obligated": 8250962311.9,
-      "last_updated": "2026-10-19T17:00:55.797Z",
+      "total_awards_obligated": 8262647673.89,
+      "last_updated": "2026-10-26T16:49:22.947Z",
       "source": "usaspending.gov"
     },
     "department-of-agriculture": {
@@ -4696,17 +4696,17 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 67644339054.98,
+          "total_obligations": 67644340418.89001,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -1.42
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 62078271394.35,
+          "total_obligations": 62110269556.979996,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -8.23
+          "yoy_change_pct": -8.18
         }
       ],
       "program_funding_changes": [
@@ -4737,10 +4737,10 @@
         {
           "program_name": "Wildland Fire Management, Forest Service, Agriculture",
           "fiscal_year": 2026,
-          "current_amount": 2042994029.96,
-          "previous_amount": 2737781920.4,
-          "change_amount": -694787890.44,
-          "change_pct": -25.38
+          "current_amount": 2044268573.46,
+          "previous_amount": 2737783284.31,
+          "change_amount": -693514710.8499999,
+          "change_pct": -25.33
         },
         {
           "program_name": "Processing, Research and Marketing, Office of the Secretary, Agriculture",
@@ -5266,7 +5266,7 @@
       "contracts_obligated": 0,
       "grants_obligated": 56657140041.8,
       "total_awards_obligated": 56657140041.8,
-      "last_updated": "2026-10-19T17:00:57.947Z",
+      "last_updated": "2026-10-26T16:49:24.683Z",
       "source": "usaspending.gov"
     },
     "department-of-commerce": {
@@ -5854,7 +5854,7 @@
       "contracts_obligated": 5130201872.21,
       "grants_obligated": 32527781266.68,
       "total_awards_obligated": 37657983138.89,
-      "last_updated": "2026-10-19T17:00:58.655Z",
+      "last_updated": "2026-10-26T16:49:25.567Z",
       "source": "usaspending.gov"
     },
     "department-of-labor": {
@@ -6377,7 +6377,7 @@
           "award_id": "1605JE21C0003",
           "generated_internal_id": "CONT_AWD_1605JE21C0003_1605_-NONE-_-NONE-",
           "recipient_name": "ADAMS AND ASSOCIATES INC",
-          "amount": 165929826.89,
+          "amount": 166237956.89,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Labor",
@@ -6439,10 +6439,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 488050178.61,
+      "contracts_obligated": 488358308.61,
       "grants_obligated": 7084596379.089999,
-      "total_awards_obligated": 7572646557.699999,
-      "last_updated": "2026-10-19T17:00:59.350Z",
+      "total_awards_obligated": 7572954687.699999,
+      "last_updated": "2026-10-26T16:49:26.293Z",
       "source": "usaspending.gov"
     },
     "department-of-transportation": {
@@ -6460,17 +6460,17 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 132903355544.14,
+          "total_obligations": 132902436358.64,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 12.62
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 129170565405.34,
+          "total_obligations": 129143784691.90001,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -2.81
+          "yoy_change_pct": -2.83
         }
       ],
       "program_funding_changes": [
@@ -6485,9 +6485,9 @@
         {
           "program_name": "Federal-Aid Highways, Liquidation of Contract Authorization, Federal Highway Administration, Transportation",
           "fiscal_year": 2026,
-          "current_amount": 50569358156.75,
-          "previous_amount": 57828823907.65,
-          "change_amount": -7259465750.900002,
+          "current_amount": 50569096098.75,
+          "previous_amount": 57827904722.15,
+          "change_amount": -7258808623.400002,
           "change_pct": -12.55
         },
         {
@@ -6597,9 +6597,9 @@
         {
           "program_name": "Operations, Federal Aviation Administration, Transportation",
           "fiscal_year": 2026,
-          "current_amount": 4387943414.97,
+          "current_amount": 4387981693.77,
           "previous_amount": 3725424550.62,
-          "change_amount": 662518864.3500004,
+          "change_amount": 662557143.1500006,
           "change_pct": 17.78
         },
         {
@@ -6613,10 +6613,10 @@
         {
           "program_name": "Highway Infrastructure Programs, Federal Highway Administration, Transportation",
           "fiscal_year": 2026,
-          "current_amount": 10102103071.46,
+          "current_amount": 10077084321.46,
           "previous_amount": 10656321113.56,
-          "change_amount": -554218042.1000004,
-          "change_pct": -5.2
+          "change_amount": -579236792.1000004,
+          "change_pct": -5.44
         },
         {
           "program_name": "Motor Carrier Safety Grants, Federal Motor Carrier Safety Administration, Transportation",
@@ -7030,7 +7030,7 @@
       "contracts_obligated": 8343854126.900002,
       "grants_obligated": 63533319872.58,
       "total_awards_obligated": 71877173999.48001,
-      "last_updated": "2026-10-19T17:01:00.826Z",
+      "last_updated": "2026-10-26T16:49:27.624Z",
       "source": "usaspending.gov"
     },
     "department-of-energy": {
@@ -7055,28 +7055,28 @@
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 57835415534.47,
+          "total_obligations": 57825098901.47,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -25.27
+          "yoy_change_pct": -25.29
         }
       ],
       "program_funding_changes": [
         {
           "program_name": "Energy Efficiency and Renewable Energy, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 39769879864.38,
+          "current_amount": 39750326924.38,
           "previous_amount": 49901310653.67,
-          "change_amount": -10131430789.29,
-          "change_pct": -20.3
+          "change_amount": -10150983729.29,
+          "change_pct": -20.34
         },
         {
           "program_name": "Clean Energy Demonstrations, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 29007815086.13,
+          "current_amount": 29014064514.13,
           "previous_amount": 35061380322.43,
-          "change_amount": -6053565236.299999,
-          "change_pct": -17.27
+          "change_amount": -6047315808.299999,
+          "change_pct": -17.25
         },
         {
           "program_name": "Nuclear Energy, Energy Programs, Energy",
@@ -7105,17 +7105,17 @@
         {
           "program_name": "Science, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 40211765794.57,
+          "current_amount": 40212008026.57,
           "previous_amount": 37185222898.23,
-          "change_amount": 3026542896.3399963,
+          "change_amount": 3026785128.3399963,
           "change_pct": 8.14
         },
         {
           "program_name": "Other Defense Activities, Environmental and Other Defense Activities, Energy",
           "fiscal_year": 2026,
-          "current_amount": 43855349441.96,
+          "current_amount": 43855591673.96,
           "previous_amount": 40853020669.94,
-          "change_amount": 3002328772.0199966,
+          "change_amount": 3002571004.0199966,
           "change_pct": 7.35
         },
         {
@@ -7161,10 +7161,10 @@
         {
           "program_name": "Electricity, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 31310776972.46,
+          "current_amount": 31315338917.46,
           "previous_amount": 33772614620.93,
-          "change_amount": -2461837648.470001,
-          "change_pct": -7.29
+          "change_amount": -2457275703.470001,
+          "change_pct": -7.28
         },
         {
           "program_name": "Nuclear Waste Disposal, Energy Programs, Energy",
@@ -7177,10 +7177,10 @@
         {
           "program_name": "Advanced Research Projects Agency-Energy, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 32953185010.71,
+          "current_amount": 32951367712.71,
           "previous_amount": 31171719858.54,
-          "change_amount": 1781465152.1699982,
-          "change_pct": 5.72
+          "change_amount": 1779647854.1699982,
+          "change_pct": 5.71
         },
         {
           "program_name": "Non-Defense Environmental Cleanup, Energy Programs, Energy",
@@ -7193,9 +7193,9 @@
         {
           "program_name": "Fossil Energy, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 36187281251.75,
+          "current_amount": 36187523483.75,
           "previous_amount": 34447216255.67,
-          "change_amount": 1740064996.0800018,
+          "change_amount": 1740307228.0800018,
           "change_pct": 5.05
         },
         {
@@ -7446,6 +7446,19 @@
           "source_url": null
         },
         {
+          "award_id": "89233018CNR000004",
+          "generated_internal_id": "CONT_AWD_89233018CNR000004_8900_-NONE-_-NONE-",
+          "recipient_name": "FLUOR MARINE PROPULSION, LLC",
+          "amount": 15126647249.13,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Energy",
+          "awarding_sub_agency": "Department of Energy",
+          "action_date": null,
+          "description": "MANAGEMENT AND OPERATION OF THE NAVAL NUCLEAR LABORATORY AND NAVAL NUCLEAR PROPULSION PROGRAM SUPPORT",
+          "source_url": null
+        },
+        {
           "award_id": "DEAC0276SF00515",
           "generated_internal_id": "CONT_AWD_DEAC0276SF00515_8900_-NONE-_-NONE-",
           "recipient_name": "THE LELAND STANFORD JUNIOR UNIVERSITY",
@@ -7459,23 +7472,10 @@
           "source_url": null
         },
         {
-          "award_id": "89233018CNR000004",
-          "generated_internal_id": "CONT_AWD_89233018CNR000004_8900_-NONE-_-NONE-",
-          "recipient_name": "FLUOR MARINE PROPULSION, LLC",
-          "amount": 14754114287.21,
-          "award_type": "contract",
-          "award_type_label": "Unknown",
-          "awarding_agency": "Department of Energy",
-          "awarding_sub_agency": "Department of Energy",
-          "action_date": null,
-          "description": "MANAGEMENT AND OPERATION OF THE NAVAL NUCLEAR LABORATORY AND NAVAL NUCLEAR PROPULSION PROGRAM SUPPORT",
-          "source_url": null
-        },
-        {
           "award_id": "DEAC3608GO28308",
           "generated_internal_id": "CONT_AWD_DEAC3608GO28308_8900_-NONE-_-NONE-",
           "recipient_name": "ALLIANCE FOR ENERGY INNOVATION, LLC",
-          "amount": 11309020851.91,
+          "amount": 11309022482.57,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Energy",
@@ -7615,10 +7615,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 620928935428.7697,
+      "contracts_obligated": 621301470021.3497,
       "grants_obligated": 0,
-      "total_awards_obligated": 620928935428.7697,
-      "last_updated": "2026-10-19T17:01:02.405Z",
+      "total_awards_obligated": 621301470021.3497,
+      "last_updated": "2026-10-26T16:49:28.336Z",
       "source": "usaspending.gov"
     },
     "department-of-education": {
@@ -8206,7 +8206,7 @@
       "contracts_obligated": 1505648979.22,
       "grants_obligated": 43794739080.51999,
       "total_awards_obligated": 45300388059.73999,
-      "last_updated": "2026-10-19T17:01:04.059Z",
+      "last_updated": "2026-10-26T16:49:29.584Z",
       "source": "usaspending.gov"
     },
     "department-of-veterans-affairs": {
@@ -8217,24 +8217,24 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2024,
-          "total_obligations": 69094147997.87,
+          "total_obligations": 69094906460.3,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 81444013887.83,
+          "total_obligations": 81444518975.04001,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 17.87
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 87113691276.95999,
+          "total_obligations": 87123777532.93999,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": 6.96
+          "yoy_change_pct": 6.97
         }
       ],
       "program_funding_changes": [
@@ -8617,7 +8617,7 @@
           "award_id": "36C10B21N10150056",
           "generated_internal_id": "CONT_AWD_36C10B21N10150056_3600_VA11816D1015_3600",
           "recipient_name": "BOOZ ALLEN HAMILTON INC",
-          "amount": 1139008033.13,
+          "amount": 1138891386.64,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Veterans Affairs",
@@ -8783,10 +8783,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 37619622371.09999,
+      "contracts_obligated": 37619505724.60999,
       "grants_obligated": 0,
-      "total_awards_obligated": 37619622371.09999,
-      "last_updated": "2026-10-19T17:01:05.466Z",
+      "total_awards_obligated": 37619505724.60999,
+      "last_updated": "2026-10-26T16:49:31.407Z",
       "source": "usaspending.gov"
     },
     "department-of-housing-and-urban-development": {
@@ -9374,7 +9374,7 @@
       "contracts_obligated": 1678819451.32,
       "grants_obligated": 17312049917.83,
       "total_awards_obligated": 18990869369.15,
-      "last_updated": "2026-10-19T17:01:06.708Z",
+      "last_updated": "2026-10-26T16:49:32.637Z",
       "source": "usaspending.gov"
     }
   },
