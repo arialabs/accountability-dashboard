@@ -1,8 +1,21 @@
 {
-  "total": 292,
+  "total": 293,
   "source": "Federal Register API",
-  "last_updated": "2026-10-27",
+  "last_updated": "2026-10-28",
   "orders": [
+    {
+      "document_number": "2026-22051",
+      "eo_number": "14438",
+      "title": "Decreasing Housing Costs for the American People",
+      "signing_date": "2026-10-22",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/10/28/2026-22051/decreasing-housing-costs-for-the-american-people",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-21666",
       "eo_number": "14437",
