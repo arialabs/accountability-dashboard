@@ -1056,6 +1056,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "J000293",
+    "name": "Ron Johnson",
+    "alignment_score": 97,
+    "votes_analyzed": 483,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "C001075",
     "name": "Bill Cassidy",
     "alignment_score": 97,
@@ -1192,14 +1200,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "J000293",
-    "name": "Ron Johnson",
-    "alignment_score": 96,
-    "votes_analyzed": 483,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "H001042",
     "name": "Mazie Hirono",
     "alignment_score": 96,
@@ -1212,14 +1212,6 @@
     "name": "Mike Crapo",
     "alignment_score": 96,
     "votes_analyzed": 533,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "M001208",
-    "name": "Lucy McBath",
-    "alignment_score": 96,
-    "votes_analyzed": 116,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1292,6 +1284,14 @@
     "name": "Michael Bennet",
     "alignment_score": 95,
     "votes_analyzed": 517,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "M001208",
+    "name": "Lucy McBath",
+    "alignment_score": 95,
+    "votes_analyzed": 116,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1584,14 +1584,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "M001233",
-    "name": "Mark Messmer",
-    "alignment_score": 88,
-    "votes_analyzed": 12,
-    "confidence": "medium",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "M001217",
     "name": "Jared Moskowitz",
     "alignment_score": 88,
@@ -1613,6 +1605,14 @@
     "alignment_score": 87,
     "votes_analyzed": 493,
     "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "M001233",
+    "name": "Mark Messmer",
+    "alignment_score": 87,
+    "votes_analyzed": 12,
+    "confidence": "medium",
     "methodology": "say-vs-do-v3"
   },
   {
@@ -1752,14 +1752,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "W000790",
-    "name": "Raphael Warnock",
-    "alignment_score": 81,
-    "votes_analyzed": 530,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "H001061",
     "name": "John Hoeven",
     "alignment_score": 81,
@@ -1772,6 +1764,14 @@
     "name": "John Fetterman",
     "alignment_score": 81,
     "votes_analyzed": 312,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "W000790",
+    "name": "Raphael Warnock",
+    "alignment_score": 80,
+    "votes_analyzed": 530,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1970,7 +1970,7 @@
   {
     "bioguide_id": "P000603",
     "name": "Rand Paul",
-    "alignment_score": 56,
+    "alignment_score": 57,
     "votes_analyzed": 526,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
