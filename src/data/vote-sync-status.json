@@ -1,6 +1,6 @@
 {
-  "last_attempt_at": "2026-11-03T17:50:58.660Z",
-  "last_success_at": "2026-11-03T17:51:07.459Z",
+  "last_attempt_at": "2026-11-04T17:58:59.734Z",
+  "last_success_at": "2026-11-04T17:59:07.412Z",
   "status": "partial",
   "lookback_days": 7,
   "total_roll_calls_fetched": 0,
@@ -9,7 +9,7 @@
   "deduped_member_votes": 0,
   "errors": [
     {
-      "at": "2026-11-03T17:51:07.452Z",
+      "at": "2026-11-04T17:59:07.407Z",
       "stage": "senate-list",
       "message": "senate.gov error: 403 Forbidden"
     }
