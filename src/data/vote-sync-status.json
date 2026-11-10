@@ -1,11 +1,11 @@
 {
-  "last_attempt_at": "2026-11-09T20:43:37.933Z",
-  "last_success_at": "2026-11-09T20:43:39.725Z",
+  "last_attempt_at": "2026-11-10T17:50:34.348Z",
+  "last_success_at": "2026-11-10T17:51:37.068Z",
   "status": "ok",
   "lookback_days": 7,
-  "total_roll_calls_fetched": 0,
-  "total_roll_calls_stored": 99,
-  "total_member_votes_stored": 12222,
+  "total_roll_calls_fetched": 1,
+  "total_roll_calls_stored": 100,
+  "total_member_votes_stored": 12322,
   "deduped_member_votes": 0,
   "errors": []
 }
