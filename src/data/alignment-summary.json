@@ -1632,6 +1632,14 @@
     "methodology": "say-vs-do-v3"
   },
   {
+    "bioguide_id": "G000581",
+    "name": "Vicente Gonzalez",
+    "alignment_score": 86,
+    "votes_analyzed": 180,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
     "bioguide_id": "T000478",
     "name": "Claudia Tenney",
     "alignment_score": 86,
@@ -1652,14 +1660,6 @@
     "name": "Angela Alsobrooks",
     "alignment_score": 85,
     "votes_analyzed": 414,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
-    "bioguide_id": "G000581",
-    "name": "Vicente Gonzalez",
-    "alignment_score": 85,
-    "votes_analyzed": 180,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
@@ -1744,14 +1744,6 @@
     "methodology": "say-vs-do-v3"
   },
   {
-    "bioguide_id": "S001200",
-    "name": "Darren Soto",
-    "alignment_score": 82,
-    "votes_analyzed": 144,
-    "confidence": "high",
-    "methodology": "say-vs-do-v3"
-  },
-  {
     "bioguide_id": "H001061",
     "name": "John Hoeven",
     "alignment_score": 81,
@@ -1764,6 +1756,14 @@
     "name": "John Fetterman",
     "alignment_score": 81,
     "votes_analyzed": 312,
+    "confidence": "high",
+    "methodology": "say-vs-do-v3"
+  },
+  {
+    "bioguide_id": "S001200",
+    "name": "Darren Soto",
+    "alignment_score": 81,
+    "votes_analyzed": 144,
     "confidence": "high",
     "methodology": "say-vs-do-v3"
   },
