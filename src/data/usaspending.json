@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-16T20:33:35.990Z",
+    "generated_at": "2026-11-23T22:05:16.663Z",
     "source": "usaspending.gov",
     "fiscal_year_start": 2024,
     "fiscal_year_end": 2026,
@@ -24,51 +24,51 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 11101880758.84,
+          "total_obligations": 11101878865.900002,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -25.58
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 18236568937.190002,
+          "total_obligations": 18267806485.59,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": 64.27
+          "yoy_change_pct": 64.55
         }
       ],
       "program_funding_changes": [
         {
-          "program_name": "International Disaster Assistance, Funds Appropriated to the President, US Agency for International Development",
-          "fiscal_year": 2026,
-          "current_amount": 1910764039.36,
-          "previous_amount": 11467853.68,
-          "change_amount": 1899296185.6799998,
-          "change_pct": 16561.92
-        },
-        {
           "program_name": "International Humanitarian Assistance, State",
           "fiscal_year": 2026,
-          "current_amount": 1880153648,
+          "current_amount": 2416897877,
           "previous_amount": 0,
-          "change_amount": 1880153648,
+          "change_amount": 2416897877,
           "change_pct": null
         },
         {
           "program_name": "Global Health Programs, State",
           "fiscal_year": 2026,
-          "current_amount": 908888378.46,
+          "current_amount": 2403604099.6,
           "previous_amount": 45434053.49,
-          "change_amount": 863454324.97,
-          "change_pct": 1900.46
+          "change_amount": 2358170046.11,
+          "change_pct": 5190.31
+        },
+        {
+          "program_name": "International Disaster Assistance, Funds Appropriated to the President, US Agency for International Development",
+          "fiscal_year": 2026,
+          "current_amount": 1926197913.84,
+          "previous_amount": 11467853.68,
+          "change_amount": 1914730060.1599998,
+          "change_pct": 16696.5
         },
         {
           "program_name": "Enduring Welcome Administration and Support, State",
           "fiscal_year": 2026,
-          "current_amount": 120919616.29,
-          "previous_amount": 893461591.75,
-          "change_amount": -772541975.46,
-          "change_pct": -86.47
+          "current_amount": 354712475.12,
+          "previous_amount": 1086211600.69,
+          "change_amount": -731499125.57,
+          "change_pct": -67.34
         },
         {
           "program_name": "Emergencies in the Diplomatic and Consular Service, State",
@@ -87,92 +87,84 @@
           "change_pct": -90.01
         },
         {
-          "program_name": "Diplomatic and Consular Programs, State",
-          "fiscal_year": 2026,
-          "current_amount": 3324965749.62,
-          "previous_amount": 3573272478.67,
-          "change_amount": -248306729.0500002,
-          "change_pct": -6.95
-        },
-        {
-          "program_name": "Embassy Security, Construction, and Maintenance, State",
-          "fiscal_year": 2026,
-          "current_amount": 1094456292.71,
-          "previous_amount": 1331277759.93,
-          "change_amount": -236821467.22000003,
-          "change_pct": -17.79
-        },
-        {
           "program_name": "Economic Support Fund, Funds Appropriated to the President",
           "fiscal_year": 2026,
-          "current_amount": 422022224.97,
-          "previous_amount": 193251098.63,
-          "change_amount": 228771126.34000003,
-          "change_pct": 118.38
-        },
-        {
-          "program_name": "Working Capital Fund, State",
-          "fiscal_year": 2026,
-          "current_amount": 2139624702.8,
-          "previous_amount": 2366954301.95,
-          "change_amount": -227329599.14999986,
-          "change_pct": -9.6
+          "current_amount": 495678049.82,
+          "previous_amount": 203063111.26,
+          "change_amount": 292614938.56,
+          "change_pct": 144.1
         },
         {
           "program_name": "Assistance for Europe, Eurasia, and Central Asia, Funds Appropriated to the President, US Agency for International Development",
           "fiscal_year": 2026,
-          "current_amount": 403062490.34,
+          "current_amount": 416094751.44,
           "previous_amount": 196993029.77,
-          "change_amount": 206069460.56999996,
-          "change_pct": 104.61
+          "change_amount": 219101721.67,
+          "change_pct": 111.22
         },
         {
           "program_name": "National Security Investment Programs, State",
           "fiscal_year": 2026,
-          "current_amount": 201000000,
-          "previous_amount": 6886044.1,
-          "change_amount": 194113955.9,
-          "change_pct": 2818.95
+          "current_amount": 227646694.5,
+          "previous_amount": 8612048.05,
+          "change_amount": 219034646.45,
+          "change_pct": 2543.35
         },
         {
-          "program_name": "Consular and Border Security Programs, Administration of Foreign Affairs, State",
+          "program_name": "Educational and Cultural Exchange Programs, State",
           "fiscal_year": 2026,
-          "current_amount": 1800317960.84,
-          "previous_amount": 1972922683.73,
-          "change_amount": -172604722.8900001,
-          "change_pct": -8.75
-        },
-        {
-          "program_name": "Office of the Inspector General, State",
-          "fiscal_year": 2026,
-          "current_amount": 418751796.94,
-          "previous_amount": 324902884.38,
-          "change_amount": 93848912.56,
-          "change_pct": 28.89
-        },
-        {
-          "program_name": "H-1B and L Fraud Prevention and Detection Account, State",
-          "fiscal_year": 2026,
-          "current_amount": 223020932.56,
-          "previous_amount": 310620040.55,
-          "change_amount": -87599107.99000001,
-          "change_pct": -28.2
+          "current_amount": 926450661.05,
+          "previous_amount": 738228532.84,
+          "change_amount": 188222128.20999992,
+          "change_pct": 25.5
         },
         {
           "program_name": "Development Assistance, Agency for International Development, Funds Appropriated to the President",
           "fiscal_year": 2026,
-          "current_amount": 100635348.27,
+          "current_amount": 184905748.27,
           "previous_amount": 17450266.77,
-          "change_amount": 83185081.5,
-          "change_pct": 476.7
+          "change_amount": 167455481.5,
+          "change_pct": 959.62
         },
         {
-          "program_name": "Capital Investment Fund, State",
+          "program_name": "Office of the Inspector General, State",
           "fiscal_year": 2026,
-          "current_amount": 947248388.54,
-          "previous_amount": 1025747055.46,
-          "change_amount": -78498666.92000008,
-          "change_pct": -7.65
+          "current_amount": 504370148.27,
+          "previous_amount": 363066515.71,
+          "change_amount": 141303632.56,
+          "change_pct": 38.92
+        },
+        {
+          "program_name": "International Narcotics Control and Law Enforcement, International Security Assistance, State",
+          "fiscal_year": 2026,
+          "current_amount": 798695929.9,
+          "previous_amount": 675702344.19,
+          "change_amount": 122993585.70999992,
+          "change_pct": 18.2
+        },
+        {
+          "program_name": "H-1B and L Fraud Prevention and Detection Account, State",
+          "fiscal_year": 2026,
+          "current_amount": 227463187.81,
+          "previous_amount": 350275950.31,
+          "change_amount": -122812762.5,
+          "change_pct": -35.06
+        },
+        {
+          "program_name": "Non-Proliferation, Anti-Terrorism, Demining and Related Programs, International Security Assistance, State",
+          "fiscal_year": 2026,
+          "current_amount": 842165617.12,
+          "previous_amount": 746557427.57,
+          "change_amount": 95608189.54999995,
+          "change_pct": 12.81
+        },
+        {
+          "program_name": "Diplomatic and Consular Programs, State",
+          "fiscal_year": 2026,
+          "current_amount": 3667569813.07,
+          "previous_amount": 3573985651.34,
+          "change_amount": 93584161.73000002,
+          "change_pct": 2.62
         },
         {
           "program_name": "Peacekeeping Operations, Funds Appropriated to the President",
@@ -183,20 +175,28 @@
           "change_pct": -111.2
         },
         {
-          "program_name": "Migration and Refugee Assistance, State",
+          "program_name": "International Litigation Fund, State",
           "fiscal_year": 2026,
-          "current_amount": 349597592.4,
-          "previous_amount": 415641766.84,
-          "change_amount": -66044174.44,
-          "change_pct": -15.89
+          "current_amount": 148750135.32,
+          "previous_amount": 119090742.1,
+          "change_amount": 29659393.22,
+          "change_pct": 24.9
         },
         {
-          "program_name": "Non-Proliferation, Anti-Terrorism, Demining and Related Programs, International Security Assistance, State",
+          "program_name": "Embassy Security, Construction, and Maintenance, State",
           "fiscal_year": 2026,
-          "current_amount": 660923978.4,
-          "previous_amount": 711691078.54,
-          "change_amount": -50767100.139999986,
-          "change_pct": -7.13
+          "current_amount": 1361752981.11,
+          "previous_amount": 1332175935.81,
+          "change_amount": 29577045.299999952,
+          "change_pct": 2.22
+        },
+        {
+          "program_name": "Working Capital Fund, State",
+          "fiscal_year": 2026,
+          "current_amount": 2340411119.05,
+          "previous_amount": 2368893735.37,
+          "change_amount": -28482616.319999695,
+          "change_pct": -1.2
         }
       ],
       "awards": [
@@ -217,7 +217,7 @@
           "award_id": "SAQMMA11F0233",
           "generated_internal_id": "CONT_AWD_SAQMMA11F0233_1900_GS00Q09BGD0048_4735",
           "recipient_name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
-          "amount": 2087211597.56,
+          "amount": 2086180990.09,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of State",
@@ -591,10 +591,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 22063980118.350002,
+      "contracts_obligated": 22062949510.88,
       "grants_obligated": 2198073000,
-      "total_awards_obligated": 24262053118.350002,
-      "last_updated": "2026-11-16T20:33:07.300Z",
+      "total_awards_obligated": 24261022510.88,
+      "last_updated": "2026-11-23T22:04:58.240Z",
       "source": "usaspending.gov"
     },
     "department-of-defense": {
@@ -605,33 +605,33 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2024,
-          "total_obligations": 491371938596.79,
+          "total_obligations": 491370826742.6,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 536365772930.36,
+          "total_obligations": 536364511926.43,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 9.16
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 449616360554.42,
+          "total_obligations": 449842506989.48,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -16.17
+          "yoy_change_pct": -16.13
         }
       ],
       "program_funding_changes": [
         {
           "program_name": "Operation and Maintenance, Navy",
           "fiscal_year": 2026,
-          "current_amount": 13150075917.83,
-          "previous_amount": 34832155084.41,
-          "change_amount": -21682079166.58,
+          "current_amount": 13149815323.16,
+          "previous_amount": 34832150354.91,
+          "change_amount": -21682335031.750004,
           "change_pct": -62.25
         },
         {
@@ -645,10 +645,10 @@
         {
           "program_name": "Operation and Maintenance, Army",
           "fiscal_year": 2026,
-          "current_amount": 24241588061.18,
+          "current_amount": 24248845786.34,
           "previous_amount": 30764984216.63,
-          "change_amount": -6523396155.450001,
-          "change_pct": -21.2
+          "change_amount": -6516138430.290001,
+          "change_pct": -21.18
         },
         {
           "program_name": "Golden Dome for America Fund, Defense",
@@ -661,33 +661,33 @@
         {
           "program_name": "Other Procurement, Army",
           "fiscal_year": 2026,
-          "current_amount": 10769576133.89,
+          "current_amount": 10769680971.84,
           "previous_amount": 15550652119.46,
-          "change_amount": -4781075985.57,
-          "change_pct": -30.75
+          "change_amount": -4780971147.619999,
+          "change_pct": -30.74
         },
         {
           "program_name": "Procurement of Ammunition, Army",
           "fiscal_year": 2026,
-          "current_amount": 4172640175.02,
+          "current_amount": 4173243248.24,
           "previous_amount": 8426606030.87,
-          "change_amount": -4253965855.85,
+          "change_amount": -4253362782.63,
           "change_pct": -50.48
         },
         {
           "program_name": "Missile Procurement, Army",
           "fiscal_year": 2026,
-          "current_amount": 15551206789.07,
+          "current_amount": 15515025895.49,
           "previous_amount": 11733838431.55,
-          "change_amount": 3817368357.5200005,
-          "change_pct": 32.53
+          "change_amount": 3781187463.9400005,
+          "change_pct": 32.22
         },
         {
           "program_name": "Defense Health Program, Defense",
           "fiscal_year": 2026,
-          "current_amount": 7742926978.85,
+          "current_amount": 7743363940.27,
           "previous_amount": 10936376349.35,
-          "change_amount": -3193449370.5,
+          "change_amount": -3193012409.08,
           "change_pct": -29.2
         },
         {
@@ -701,58 +701,58 @@
         {
           "program_name": "Aircraft Procurement, Army",
           "fiscal_year": 2026,
-          "current_amount": 5500006761.97,
+          "current_amount": 5513823449.54,
           "previous_amount": 8349888399.74,
-          "change_amount": -2849881637.7699995,
-          "change_pct": -34.13
+          "change_amount": -2836064950.2,
+          "change_pct": -33.97
         },
         {
           "program_name": "Research, Development, Test, and Evaluation, Navy",
           "fiscal_year": 2026,
-          "current_amount": 26661749227.56,
+          "current_amount": 26662506583.56,
           "previous_amount": 23925221958.85,
-          "change_amount": 2736527268.710003,
+          "change_amount": 2737284624.710003,
           "change_pct": 11.44
         },
         {
           "program_name": "Research, Development, Test, and Evaluation, Defense-Wide",
           "fiscal_year": 2026,
-          "current_amount": 45516976597.43,
+          "current_amount": 45529936845.48,
           "previous_amount": 48200981094.27,
-          "change_amount": -2684004496.8399963,
-          "change_pct": -5.57
+          "change_amount": -2671044248.7899933,
+          "change_pct": -5.54
         },
         {
           "program_name": "Operation and Maintenance, Defense-Wide, Defense",
           "fiscal_year": 2026,
-          "current_amount": 37021981812.43,
+          "current_amount": 37045516849.42,
           "previous_amount": 39666351685.08,
-          "change_amount": -2644369872.6500015,
-          "change_pct": -6.67
+          "change_amount": -2620834835.6600037,
+          "change_pct": -6.61
         },
         {
           "program_name": "Operation and Maintenance, Air Force",
           "fiscal_year": 2026,
-          "current_amount": 27024410218.8,
-          "previous_amount": 29528089398.1,
-          "change_amount": -2503679179.299999,
-          "change_pct": -8.48
+          "current_amount": 27056548839.43,
+          "previous_amount": 29527697017.94,
+          "change_amount": -2471148178.5099983,
+          "change_pct": -8.37
         },
         {
           "program_name": "Procurement of Weapons and Tracked Combat Vehicles, Army",
           "fiscal_year": 2026,
-          "current_amount": 7401496042.19,
+          "current_amount": 7408028114.67,
           "previous_amount": 9796795828.19,
-          "change_amount": -2395299786.000001,
-          "change_pct": -24.45
+          "change_amount": -2388767713.5200005,
+          "change_pct": -24.38
         },
         {
           "program_name": "Research, Development, Test and Evaluation, Army",
           "fiscal_year": 2026,
-          "current_amount": 29440870302.85,
+          "current_amount": 29457177882.96,
           "previous_amount": 31723891849.36,
-          "change_amount": -2283021546.510002,
-          "change_pct": -7.2
+          "change_amount": -2266713966.4000015,
+          "change_pct": -7.15
         },
         {
           "program_name": "Construction, Corps of Engineers - Civil",
@@ -1182,7 +1182,7 @@
       "contracts_obligated": 589998367673.7399,
       "grants_obligated": 0,
       "total_awards_obligated": 589998367673.7399,
-      "last_updated": "2026-11-16T20:33:10.539Z",
+      "last_updated": "2026-11-23T22:05:04.422Z",
       "source": "usaspending.gov"
     },
     "department-of-justice": {
@@ -1200,35 +1200,59 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 11220841029.08,
+          "total_obligations": 11221015820.18,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -20.65
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 11412024339.710001,
+          "total_obligations": 11421218202.16,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": 1.7
+          "yoy_change_pct": 1.78
         }
       ],
       "program_funding_changes": [
         {
           "program_name": "Crime Victims Fund, Justice",
           "fiscal_year": 2026,
-          "current_amount": 32219824.74,
+          "current_amount": 37426111.1,
           "previous_amount": 1523979412.02,
-          "change_amount": -1491759587.28,
-          "change_pct": -97.89
+          "change_amount": -1486553300.92,
+          "change_pct": -97.54
+        },
+        {
+          "program_name": "Buildings and Facilities, Federal Prison System, Justice",
+          "fiscal_year": 2026,
+          "current_amount": 570042540.85,
+          "previous_amount": 105431391.08,
+          "change_amount": 464611149.77000004,
+          "change_pct": 440.68
+        },
+        {
+          "program_name": "Assets Forfeiture Fund, Justice",
+          "fiscal_year": 2026,
+          "current_amount": 986060678.19,
+          "previous_amount": 540330481.56,
+          "change_amount": 445730196.6300001,
+          "change_pct": 82.49
         },
         {
           "program_name": "State and Local Law Enforcement Assistance, Office of Justice Programs, Justice",
           "fiscal_year": 2026,
-          "current_amount": 343873954.95,
+          "current_amount": 353584670.01,
           "previous_amount": 796504700.44,
-          "change_amount": -452630745.49000007,
-          "change_pct": -56.83
+          "change_amount": -442920030.43000007,
+          "change_pct": -55.61
+        },
+        {
+          "program_name": "Salaries and Expenses, Federal Bureau of Investigation, Justice",
+          "fiscal_year": 2026,
+          "current_amount": 2205945037.97,
+          "previous_amount": 1841696562.58,
+          "change_amount": 364248475.38999987,
+          "change_pct": 19.78
         },
         {
           "program_name": "Community Oriented Policing Services, Office of Justice Programs, Justice",
@@ -1239,6 +1263,22 @@
           "change_pct": 1894.1
         },
         {
+          "program_name": "Section 100054 Activities, One Big Beautiful Bill Act, General Legal Activities, Justice",
+          "fiscal_year": 2026,
+          "current_amount": 578903355.5,
+          "previous_amount": 244190990.82,
+          "change_amount": 334712364.68,
+          "change_pct": 137.07
+        },
+        {
+          "program_name": "Salaries and Expenses, Federal Prison System, Justice",
+          "fiscal_year": 2026,
+          "current_amount": 2248782352.21,
+          "previous_amount": 1920724219.94,
+          "change_amount": 328058132.27,
+          "change_pct": 17.08
+        },
+        {
           "program_name": "Violence Against Women Prevention and Prosecution Programs, Office of Justice Programs, Justice",
           "fiscal_year": 2026,
           "current_amount": 126284859.97,
@@ -1247,92 +1287,60 @@
           "change_pct": -71.69
         },
         {
-          "program_name": "Assets Forfeiture Fund, Justice",
+          "program_name": "Salaries and Expenses, United States Attorneys, Justice",
           "fiscal_year": 2026,
-          "current_amount": 788981042.23,
-          "previous_amount": 540230501.56,
-          "change_amount": 248750540.67000008,
-          "change_pct": 46.05
-        },
-        {
-          "program_name": "Section 100054 Activities, One Big Beautiful Bill Act, General Legal Activities, Justice",
-          "fiscal_year": 2026,
-          "current_amount": 446866192.31,
-          "previous_amount": 230555178.95,
-          "change_amount": 216311013.36,
-          "change_pct": 93.82
-        },
-        {
-          "program_name": "Buildings and Facilities, Federal Prison System, Justice",
-          "fiscal_year": 2026,
-          "current_amount": 233693664.45,
-          "previous_amount": 105168180.66,
-          "change_amount": 128525483.78999999,
-          "change_pct": 122.21
+          "current_amount": 325053879.24,
+          "previous_amount": 209078802.64,
+          "change_amount": 115975076.60000002,
+          "change_pct": 55.47
         },
         {
           "program_name": "Research, Evaluation, and Statistics, Office of Justice Programs, Justice",
           "fiscal_year": 2026,
-          "current_amount": 63361285.96,
+          "current_amount": 83879119.06,
           "previous_amount": 176127966.28,
-          "change_amount": -112766680.32,
-          "change_pct": -64.03
-        },
-        {
-          "program_name": "Salaries and Expenses, Federal Prison System, Justice",
-          "fiscal_year": 2026,
-          "current_amount": 2027983461.25,
-          "previous_amount": 1920612392.55,
-          "change_amount": 107371068.70000005,
-          "change_pct": 5.59
-        },
-        {
-          "program_name": "Construction, Federal Bureau of Investigation, Justice",
-          "fiscal_year": 2026,
-          "current_amount": 448194873.27,
-          "previous_amount": 546228151.07,
-          "change_amount": -98033277.80000007,
-          "change_pct": -17.95
-        },
-        {
-          "program_name": "Salaries and Expenses, Drug Enforcement Administration, Justice",
-          "fiscal_year": 2026,
-          "current_amount": 336087346.85,
-          "previous_amount": 422294852.42,
-          "change_amount": -86207505.57,
-          "change_pct": -20.41
-        },
-        {
-          "program_name": "Salaries and Expenses, Federal Bureau of Investigation, Justice",
-          "fiscal_year": 2026,
-          "current_amount": 1765961846.07,
-          "previous_amount": 1841696562.58,
-          "change_amount": -75734716.50999999,
-          "change_pct": -4.11
-        },
-        {
-          "program_name": "Diversion Control Fee Account, Justice",
-          "fiscal_year": 2026,
-          "current_amount": 383213215.72,
-          "previous_amount": 454795068.38,
-          "change_amount": -71581852.65999997,
-          "change_pct": -15.74
-        },
-        {
-          "program_name": "Salaries and Expenses, United States Attorneys, Justice",
-          "fiscal_year": 2026,
-          "current_amount": 266671252.92,
-          "previous_amount": 208193769.72,
-          "change_amount": 58477483.19999999,
-          "change_pct": 28.09
+          "change_amount": -92248847.22,
+          "change_pct": -52.38
         },
         {
           "program_name": "Salaries and Expenses, United States Marshals Service, Justice",
           "fiscal_year": 2026,
-          "current_amount": 326227676.73,
-          "previous_amount": 268320752.62,
-          "change_amount": 57906924.110000014,
-          "change_pct": 21.58
+          "current_amount": 360147520.31,
+          "previous_amount": 268530231.75,
+          "change_amount": 91617288.56,
+          "change_pct": 34.12
+        },
+        {
+          "program_name": "Salaries and Expenses, Bureau of Alcohol, Tobacco, Firearms and Explosives, Justice",
+          "fiscal_year": 2026,
+          "current_amount": 383282299.03,
+          "previous_amount": 303276646.16,
+          "change_amount": 80005652.86999995,
+          "change_pct": 26.38
+        },
+        {
+          "program_name": "Court Security, Court of Appeals, District Courts, and Other Judicial Services, The Judiciary",
+          "fiscal_year": 2026,
+          "current_amount": 765669275.69,
+          "previous_amount": 695151755.03,
+          "change_amount": 70517520.66000009,
+          "change_pct": 10.14
+        },
+        {
+          "program_name": "Justice Prisoner and Air Transportation System Fund, United States Marshals Service, Justice",
+          "fiscal_year": 2026,
+          "current_amount": 135685971.47,
+          "previous_amount": 67925136.97,
+          "change_amount": 67760834.5,
+          "change_pct": 99.76
+        },
+        {
+          "program_name": "Fees and Expenses of Witnesses, Justice",
+          "fiscal_year": 2026,
+          "current_amount": 207650707.78,
+          "previous_amount": 142265533.73,
+          "change_amount": 65385174.05000001,
+          "change_pct": 45.96
         },
         {
           "program_name": "Bridging Immigration-Related Deficits Experienced Nationwide Fund, Office of Justice Program, Justice",
@@ -1343,36 +1351,28 @@
           "change_pct": null
         },
         {
-          "program_name": "Fees and Expenses of Witnesses, Justice",
+          "program_name": "Diversion Control Fee Account, Justice",
           "fiscal_year": 2026,
-          "current_amount": 197100449.23,
-          "previous_amount": 141688870.1,
-          "change_amount": 55411579.129999995,
-          "change_pct": 39.11
-        },
-        {
-          "program_name": "Court Security, Court of Appeals, District Courts, and Other Judicial Services, The Judiciary",
-          "fiscal_year": 2026,
-          "current_amount": 747244827.94,
-          "previous_amount": 695151755.03,
-          "change_amount": 52093072.910000086,
-          "change_pct": 7.49
+          "current_amount": 410654861.16,
+          "previous_amount": 454819448.38,
+          "change_amount": -44164587.21999997,
+          "change_pct": -9.71
         },
         {
           "program_name": "Public Safety Officers Benefits, Office of Justice Programs, Justice",
           "fiscal_year": 2026,
-          "current_amount": 5673054.45,
+          "current_amount": 10618839.67,
           "previous_amount": 46436955.52,
-          "change_amount": -40763901.07,
-          "change_pct": -87.78
+          "change_amount": -35818115.85,
+          "change_pct": -77.13
         },
         {
-          "program_name": "Justice Prisoner and Air Transportation System Fund, United States Marshals Service, Justice",
+          "program_name": "Salaries and Expenses, General Legal Activities, Justice",
           "fiscal_year": 2026,
-          "current_amount": 36990962.37,
-          "previous_amount": 1814171.3,
-          "change_amount": 35176791.07,
-          "change_pct": 1939
+          "current_amount": 385926431.91,
+          "previous_amount": 350360235.38,
+          "change_amount": 35566196.53000003,
+          "change_pct": 10.15
         }
       ],
       "awards": [
@@ -1770,7 +1770,7 @@
       "contracts_obligated": 7824918849.37,
       "grants_obligated": 586183715,
       "total_awards_obligated": 8411102564.37,
-      "last_updated": "2026-11-16T20:33:12.272Z",
+      "last_updated": "2026-11-23T22:05:05.099Z",
       "source": "usaspending.gov"
     },
     "department-of-the-treasury": {
@@ -1795,7 +1795,7 @@
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 7137559381.04,
+          "total_obligations": 7137740778.59,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -22.48
@@ -1805,26 +1805,26 @@
         {
           "program_name": "Operations Support, Internal Revenue Service, Treasury",
           "fiscal_year": 2026,
-          "current_amount": 1585965903.1,
-          "previous_amount": 2511434856.03,
-          "change_amount": -925468952.9300003,
-          "change_pct": -36.85
+          "current_amount": 1813522675.58,
+          "previous_amount": 2517107860.88,
+          "change_amount": -703585185.3000002,
+          "change_pct": -27.95
         },
         {
           "program_name": "Business Systems Modernization, Internal Revenue Service, Treasury",
           "fiscal_year": 2026,
-          "current_amount": 597932214.72,
+          "current_amount": 638708801.64,
           "previous_amount": 1187991666.84,
-          "change_amount": -590059452.1199999,
-          "change_pct": -49.67
+          "change_amount": -549282865.1999999,
+          "change_pct": -46.24
         },
         {
           "program_name": "Treasury Franchise Fund, Treasury",
           "fiscal_year": 2026,
-          "current_amount": 689263228.67,
-          "previous_amount": 1255426880.58,
-          "change_amount": -566163651.91,
-          "change_pct": -45.1
+          "current_amount": 781367495.36,
+          "previous_amount": 1267764556.23,
+          "change_amount": -486397060.87,
+          "change_pct": -38.37
         },
         {
           "program_name": "Capital Magnet Fund, Community Development Financial Institutions, Departmental Offices, Treasury",
@@ -1833,30 +1833,6 @@
           "previous_amount": 249923538.01,
           "change_amount": -245035355.82999998,
           "change_pct": -98.04
-        },
-        {
-          "program_name": "United States Mint Public Enterprise Fund, Treasury",
-          "fiscal_year": 2026,
-          "current_amount": 2351015549.12,
-          "previous_amount": 2552834255.33,
-          "change_amount": -201818706.21000004,
-          "change_pct": -7.91
-        },
-        {
-          "program_name": "Enforcement, Internal Revenue Service",
-          "fiscal_year": 2026,
-          "current_amount": 511232977.99,
-          "previous_amount": 705837591.16,
-          "change_amount": -194604613.16999996,
-          "change_pct": -27.57
-        },
-        {
-          "program_name": "Bureau of Engraving and Printing Fund, Treasury",
-          "fiscal_year": 2026,
-          "current_amount": 476436637.26,
-          "previous_amount": 665405828.9,
-          "change_amount": -188969191.64,
-          "change_pct": -28.4
         },
         {
           "program_name": "Gulf Coast Restoration Trust Fund, Bureau of the Fiscal Service, Treasury",
@@ -1869,34 +1845,42 @@
         {
           "program_name": "Taxpayer Services, Internal Revenue Service, Treasury",
           "fiscal_year": 2026,
-          "current_amount": 133890104.19,
+          "current_amount": 151233211.93,
           "previous_amount": 278382954.13,
-          "change_amount": -144492849.94,
-          "change_pct": -51.9
+          "change_amount": -127149742.19999999,
+          "change_pct": -45.67
         },
         {
-          "program_name": "Salaries and Expenses, Office of Terrorism and Financial Intelligence, Departmental Offices, Treasury",
+          "program_name": "Bureau of Engraving and Printing Fund, Treasury",
           "fiscal_year": 2026,
-          "current_amount": 36106587.76,
-          "previous_amount": 129247423.46,
-          "change_amount": -93140835.69999999,
-          "change_pct": -72.06
+          "current_amount": 548980892.21,
+          "previous_amount": 665405828.9,
+          "change_amount": -116424936.68999994,
+          "change_pct": -17.5
+        },
+        {
+          "program_name": "Enforcement, Internal Revenue Service",
+          "fiscal_year": 2026,
+          "current_amount": 596286170.33,
+          "previous_amount": 708016147.3,
+          "change_amount": -111729976.96999991,
+          "change_pct": -15.78
         },
         {
           "program_name": "Community Development Financial Institutions Fund, Program Account, Treasury",
           "fiscal_year": 2026,
-          "current_amount": 7316115.7,
+          "current_amount": 8158405.97,
           "previous_amount": 86768861.56,
-          "change_amount": -79452745.86,
-          "change_pct": -91.57
+          "change_amount": -78610455.59,
+          "change_pct": -90.6
         },
         {
-          "program_name": "Assessment Funds, Office of the Comptroller of the Currency, Treasury",
+          "program_name": "United States Mint Public Enterprise Fund, Treasury",
           "fiscal_year": 2026,
-          "current_amount": 138215863.04,
-          "previous_amount": 207220700.01,
-          "change_amount": -69004836.97,
-          "change_pct": -33.3
+          "current_amount": 2621084180.81,
+          "previous_amount": 2552834255.33,
+          "change_amount": 68249925.48000002,
+          "change_pct": 2.67
         },
         {
           "program_name": "Special Compliance Personnel Program, Internal Revenue Service, Treasury",
@@ -1907,12 +1891,28 @@
           "change_pct": -34.87
         },
         {
+          "program_name": "Assessment Funds, Office of the Comptroller of the Currency, Treasury",
+          "fiscal_year": 2026,
+          "current_amount": 147792867.75,
+          "previous_amount": 207220700.01,
+          "change_amount": -59427832.25999999,
+          "change_pct": -28.68
+        },
+        {
           "program_name": "Debt Collection Fund, Bureau of the Fiscal Service, Treasury",
           "fiscal_year": 2026,
           "current_amount": 119190469.89,
           "previous_amount": 69995629.15,
           "change_amount": 49194840.739999995,
           "change_pct": 70.28
+        },
+        {
+          "program_name": "Salaries and Expenses, Departmental Offices, Treasury",
+          "fiscal_year": 2026,
+          "current_amount": 191323146.9,
+          "previous_amount": 146845370.35,
+          "change_amount": 44477776.55000001,
+          "change_pct": 30.29
         },
         {
           "program_name": "Social Impact Demonstration Projects, Departmental Offices, Treasury",
@@ -1923,28 +1923,12 @@
           "change_pct": -86.19
         },
         {
-          "program_name": "State Small Business Credit Initiative, Departmental Offices, Treasury",
+          "program_name": "Salaries and Expenses, Office of Terrorism and Financial Intelligence, Departmental Offices, Treasury",
           "fiscal_year": 2026,
-          "current_amount": 1518656.22,
-          "previous_amount": 34018380.76,
-          "change_amount": -32499724.54,
-          "change_pct": -95.54
-        },
-        {
-          "program_name": "Cybersecurity Enhancement Account, Departmental Offices, Treasury",
-          "fiscal_year": 2026,
-          "current_amount": 203312852.84,
-          "previous_amount": 234706359.14,
-          "change_amount": -31393506.299999982,
-          "change_pct": -13.38
-        },
-        {
-          "program_name": "Salaries and Expenses, Financial Crimes Enforcement Network",
-          "fiscal_year": 2026,
-          "current_amount": 54764265.72,
-          "previous_amount": 84966443.32,
-          "change_amount": -30202177.599999994,
-          "change_pct": -35.55
+          "current_amount": 165521291.66,
+          "previous_amount": 194209569.4,
+          "change_amount": -28688277.74000001,
+          "change_pct": -14.77
         },
         {
           "program_name": "Treasury Forfeiture Fund, Treasury",
@@ -1961,6 +1945,22 @@
           "previous_amount": 25362914.01,
           "change_amount": -25362914.01,
           "change_pct": -100
+        },
+        {
+          "program_name": "State Small Business Credit Initiative, Departmental Offices, Treasury",
+          "fiscal_year": 2026,
+          "current_amount": 9099169.17,
+          "previous_amount": 34018380.76,
+          "change_amount": -24919211.589999996,
+          "change_pct": -73.25
+        },
+        {
+          "program_name": "Private Collection Agent Program, Internal Revenue Service, Treasury",
+          "fiscal_year": 2026,
+          "current_amount": 127309704.12,
+          "previous_amount": 105493196.03,
+          "change_amount": 21816508.090000004,
+          "change_pct": 20.68
         }
       ],
       "awards": [
@@ -2001,6 +2001,19 @@
           "awarding_sub_agency": "Departmental Offices",
           "action_date": null,
           "description": "SALESFORCE SEWP CATALOG NNG15SD29B",
+          "source_url": null
+        },
+        {
+          "award_id": "2032H523F00058",
+          "generated_internal_id": "CONT_AWD_2032H523F00058_2050_47QTCA19D00CB_4732",
+          "recipient_name": "FCN, INC.",
+          "amount": 309972565.56,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of the Treasury",
+          "awarding_sub_agency": "Internal Revenue Service",
+          "action_date": null,
+          "description": "BROADCOM SOFTWARE LICENSE AND MAINT",
           "source_url": null
         },
         {
@@ -2053,19 +2066,6 @@
           "awarding_sub_agency": "Internal Revenue Service",
           "action_date": null,
           "description": "IBM SOFTWARE LICENSING, MAINTENANCE, SUPPORT AND SUBSCRIPTION FOR IRS",
-          "source_url": null
-        },
-        {
-          "award_id": "2032H523F00058",
-          "generated_internal_id": "CONT_AWD_2032H523F00058_2050_47QTCA19D00CB_4732",
-          "recipient_name": "FCN, INC.",
-          "amount": 242713808.56,
-          "award_type": "contract",
-          "award_type_label": "Unknown",
-          "awarding_agency": "Department of the Treasury",
-          "awarding_sub_agency": "Internal Revenue Service",
-          "action_date": null,
-          "description": "BROADCOM SOFTWARE LICENSE AND MAINT",
           "source_url": null
         },
         {
@@ -2173,19 +2173,6 @@
           "source_url": null
         },
         {
-          "award_id": "2032H525F00053",
-          "generated_internal_id": "CONT_AWD_2032H525F00053_2050_2032H523A00010_2050",
-          "recipient_name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
-          "amount": 187382939.26,
-          "award_type": "contract",
-          "award_type_label": "Unknown",
-          "awarding_agency": "Department of the Treasury",
-          "awarding_sub_agency": "Internal Revenue Service",
-          "action_date": null,
-          "description": "TCLOUD TASK ORDER 6: CLOUD APPLICATION ASSESSMENT, CLOUD IMPLEMENTATIONS, CLOUD OPS AND MAINTENANCE, CLOUD SERVICE PROVIDERS (CSPS), AND CSP TRAINING.",
-          "source_url": null
-        },
-        {
           "award_id": "2032H325F00025",
           "generated_internal_id": "CONT_AWD_2032H325F00025_2001_NNG15SC05B_8000",
           "recipient_name": "COUNTERTRADE PRODUCTS, INC.",
@@ -2196,6 +2183,19 @@
           "awarding_sub_agency": "Departmental Offices",
           "action_date": null,
           "description": "IT - SERVICENOW",
+          "source_url": null
+        },
+        {
+          "award_id": "2032H525F00053",
+          "generated_internal_id": "CONT_AWD_2032H525F00053_2050_2032H523A00010_2050",
+          "recipient_name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+          "amount": 174984466.18,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of the Treasury",
+          "awarding_sub_agency": "Internal Revenue Service",
+          "action_date": null,
+          "description": "TCLOUD TASK ORDER 6: CLOUD APPLICATION ASSESSMENT, CLOUD IMPLEMENTATIONS, CLOUD OPS AND MAINTENANCE, CLOUD SERVICE PROVIDERS (CSPS), AND CSP TRAINING.",
           "source_url": null
         },
         {
@@ -2267,7 +2267,7 @@
           "award_id": "205AE926F00106",
           "generated_internal_id": "CONT_AWD_205AE926F00106_2050_47QTCK18D0036_4732",
           "recipient_name": "ACCENTURE FEDERAL SERVICES LLC",
-          "amount": 142686525.52,
+          "amount": 142660787.74,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of the Treasury",
@@ -2355,10 +2355,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 6295237940.3,
+      "contracts_obligated": 6350072486.44,
       "grants_obligated": 0,
-      "total_awards_obligated": 6295237940.3,
-      "last_updated": "2026-11-16T20:33:15.082Z",
+      "total_awards_obligated": 6350072486.44,
+      "last_updated": "2026-11-23T22:05:05.748Z",
       "source": "usaspending.gov"
     },
     "department-of-health-and-human-services": {
@@ -2376,7 +2376,7 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 846833439510.86,
+          "total_obligations": 846833033046.77,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 4.75
@@ -2426,8 +2426,8 @@
           "program_name": "Children and Families Services Programs, Administration for Children and Families, Health and Human Services",
           "fiscal_year": 2026,
           "current_amount": 0,
-          "previous_amount": 14015422262.37,
-          "change_amount": -14015422262.37,
+          "previous_amount": 14015015798.28,
+          "change_amount": -14015015798.28,
           "change_pct": -100
         },
         {
@@ -2946,7 +2946,7 @@
       "contracts_obligated": 0,
       "grants_obligated": 804970626326,
       "total_awards_obligated": 804970626326,
-      "last_updated": "2026-11-16T20:33:16.233Z",
+      "last_updated": "2026-11-23T22:05:06.744Z",
       "source": "usaspending.gov"
     },
     "department-of-homeland-security": {
@@ -2957,21 +2957,21 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2024,
-          "total_obligations": 58667652355.6,
+          "total_obligations": 58669730041.42,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 61096085200.47,
+          "total_obligations": 61097400906.649994,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 4.14
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 103721612570.62,
+          "total_obligations": 103725432418.06,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 69.77
@@ -2981,58 +2981,82 @@
         {
           "program_name": "Procurement, Construction, and Improvements, U.S. Customs and Border Protection, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 34165461890.38,
-          "previous_amount": 7583241322.7,
-          "change_amount": 26582220567.68,
-          "change_pct": 350.54
+          "current_amount": 36571443655.13,
+          "previous_amount": 7587728462.24,
+          "change_amount": 28983715192.89,
+          "change_pct": 381.98
         },
         {
           "program_name": "Disaster Relief Fund, Federal Emergency Management Agency, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 21453992233.52,
+          "current_amount": 21549886487.25,
           "previous_amount": 31571278164.5,
-          "change_amount": -10117285930.98,
-          "change_pct": -32.05
+          "change_amount": -10021391677.25,
+          "change_pct": -31.74
         },
         {
           "program_name": "Procurement, Construction, and Improvements, Coast Guard, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 9636503640.61,
-          "previous_amount": 1133503807.12,
-          "change_amount": 8502999833.490001,
-          "change_pct": 750.15
+          "current_amount": 10126100728.45,
+          "previous_amount": 1134406044.57,
+          "change_amount": 8991694683.880001,
+          "change_pct": 792.63
+        },
+        {
+          "program_name": "State Border Security Reinforcement Fund, Federal Emergency Management Agency. Homeland Security.",
+          "fiscal_year": 2026,
+          "current_amount": 7500000000,
+          "previous_amount": 0,
+          "change_amount": 7500000000,
+          "change_pct": null
         },
         {
           "program_name": "Operations and Support, U.S. Immigration and Customs Enforcement, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 7993289740.65,
+          "current_amount": 8612322168.98,
           "previous_amount": 3937629023.6,
-          "change_amount": 4055660717.0499997,
-          "change_pct": 103
+          "change_amount": 4674693145.379999,
+          "change_pct": 118.72
         },
         {
-          "program_name": "Federal Assistance, Federal Emergency Management Agency, Homeland Security",
+          "program_name": "Operations and Support, U.S. Customs and Border Protection, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 1381139138.86,
-          "previous_amount": 2412271557.29,
-          "change_amount": -1031132418.4300001,
-          "change_pct": -42.75
+          "current_amount": 5818207626.21,
+          "previous_amount": 4677391465.75,
+          "change_amount": 1140816160.46,
+          "change_pct": 24.39
+        },
+        {
+          "program_name": "Operations and Support, Coast Guard, Homeland Security",
+          "fiscal_year": 2026,
+          "current_amount": 3016275879.56,
+          "previous_amount": 1881718073.01,
+          "change_amount": 1134557806.55,
+          "change_pct": 60.29
         },
         {
           "program_name": "Procurement, Construction, and Improvements, U.S. Immigration and Customs Enforcement, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 1233025076.24,
-          "previous_amount": 243170682.01,
-          "change_amount": 989854394.23,
-          "change_pct": 407.06
+          "current_amount": 1349481455.36,
+          "previous_amount": 254844446.96,
+          "change_amount": 1094637008.3999999,
+          "change_pct": 429.53
+        },
+        {
+          "program_name": "Federal Assistance, Federal Emergency Management Agency, Homeland Security",
+          "fiscal_year": 2026,
+          "current_amount": 1476820462.43,
+          "previous_amount": 2427888449.33,
+          "change_amount": -951067986.8999999,
+          "change_pct": -39.17
         },
         {
           "program_name": "Immigration User Fee Account, BICE, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 237153135.78,
-          "previous_amount": 1193550566.27,
-          "change_amount": -956397430.49,
-          "change_pct": -80.13
+          "current_amount": 385809819.49,
+          "previous_amount": 1241536652.06,
+          "change_amount": -855726832.5699999,
+          "change_pct": -68.92
         },
         {
           "program_name": "Air and Marine Operations, U.S. Customs and Border Protection, Homeland Security",
@@ -3043,28 +3067,52 @@
           "change_pct": 263.69
         },
         {
-          "program_name": "Operations and Support, Coast Guard, Homeland Security",
+          "program_name": "Operations and Support, Transportation Security Administration, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 2513662011.21,
-          "previous_amount": 1867324480.91,
-          "change_amount": 646337530.3,
-          "change_pct": 34.61
+          "current_amount": 2426196516.76,
+          "previous_amount": 1866609987.38,
+          "change_amount": 559586529.3800001,
+          "change_pct": 29.98
+        },
+        {
+          "program_name": "Operations and Support, Office of the Secretary and Executive Management, Departmental Management, Intelligence, Situational Awareness, and Oversight, Homeland Security",
+          "fiscal_year": 2026,
+          "current_amount": 991781380.69,
+          "previous_amount": 633923351.83,
+          "change_amount": 357858028.86,
+          "change_pct": 56.45
         },
         {
           "program_name": "Office of the Under Secretary for Management, Departmental Management and Operations, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 580346803.96,
+          "current_amount": 580593219.97,
           "previous_amount": 247715612.61,
-          "change_amount": 332631191.35,
-          "change_pct": 134.28
+          "change_amount": 332877607.36,
+          "change_pct": 134.38
+        },
+        {
+          "program_name": "Operations and Support, Cybersecurity and Infrastructure Security Agency, Homeland Security",
+          "fiscal_year": 2026,
+          "current_amount": 721832789.43,
+          "previous_amount": 401270698.53,
+          "change_amount": 320562090.9,
+          "change_pct": 79.89
+        },
+        {
+          "program_name": "Operations and Support, Management Directorate, Departmental Management, Intelligence, Situational Awareness, and Oversight, Homeland Security",
+          "fiscal_year": 2026,
+          "current_amount": 1186945136.45,
+          "previous_amount": 909600631.16,
+          "change_amount": 277344505.2900001,
+          "change_pct": 30.49
         },
         {
           "program_name": "Procurement, Construction, and Improvements, Transportation Security Administration, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 338976014.16,
+          "current_amount": 358547866.48,
           "previous_amount": 108216310.18,
-          "change_amount": 230759703.98000002,
-          "change_pct": 213.24
+          "change_amount": 250331556.3,
+          "change_pct": 231.33
         },
         {
           "program_name": "Breach Bond/Detention Fund, Border and Transportation Security, Homeland Security",
@@ -3075,68 +3123,20 @@
           "change_pct": 85.2
         },
         {
-          "program_name": "Operations and Support, Office of the Secretary and Executive Management, Departmental Management, Intelligence, Situational Awareness, and Oversight, Homeland Security",
-          "fiscal_year": 2026,
-          "current_amount": 817084126.17,
-          "previous_amount": 630524522.59,
-          "change_amount": 186559603.57999992,
-          "change_pct": 29.59
-        },
-        {
-          "program_name": "Immigration Examination Fees, Immigration Services, Homeland Security",
-          "fiscal_year": 2026,
-          "current_amount": 1213866896.56,
-          "previous_amount": 1388521773.09,
-          "change_amount": -174654876.52999997,
-          "change_pct": -12.58
-        },
-        {
-          "program_name": "H-1B and L Fraud Prevention and Detection Account, Citizenship and Immigration Services, Homeland Security",
-          "fiscal_year": 2026,
-          "current_amount": 0,
-          "previous_amount": 143590443.41,
-          "change_amount": -143590443.41,
-          "change_pct": -100
-        },
-        {
-          "program_name": "Operations and Support, Transportation Security Administration, Homeland Security",
-          "fiscal_year": 2026,
-          "current_amount": 2008021781.21,
-          "previous_amount": 1866609987.38,
-          "change_amount": 141411793.82999992,
-          "change_pct": 7.58
-        },
-        {
-          "program_name": "Electronic System for Travel Authorization, U.S. Customs and Border Protection, Homeland Security",
-          "fiscal_year": 2026,
-          "current_amount": 922139858.89,
-          "previous_amount": 1053507025.8,
-          "change_amount": -131367166.90999997,
-          "change_pct": -12.47
-        },
-        {
           "program_name": "Procurement, Construction, and Improvements, Federal Law Enforcement Training Centers, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 130248882.86,
+          "current_amount": 166132995.07,
           "previous_amount": 0,
-          "change_amount": 130248882.86,
+          "change_amount": 166132995.07,
           "change_pct": null
         },
         {
-          "program_name": "CBP Electronic Visa Update System Account, U.S. Customs and Border Protection, Homeland Security.",
+          "program_name": "Federal Protective Service, Management Directorate, Departmental Management, Intelligence, Situational Awareness, and Oversight, Homeland Security",
           "fiscal_year": 2026,
-          "current_amount": 270226827.97,
-          "previous_amount": 141657198.75,
-          "change_amount": 128569629.22000003,
-          "change_pct": 90.76
-        },
-        {
-          "program_name": "Oil Spill Recovery, USCG, Homeland Security",
-          "fiscal_year": 2026,
-          "current_amount": 117279572.43,
-          "previous_amount": 0,
-          "change_amount": 117279572.43,
-          "change_pct": null
+          "current_amount": 1786697310.06,
+          "previous_amount": 1639060510.01,
+          "change_amount": 147636800.04999995,
+          "change_pct": 9.01
         }
       ],
       "awards": [
@@ -3157,7 +3157,7 @@
           "award_id": "70Z02326C93210003",
           "generated_internal_id": "CONT_AWD_70Z02326C93210003_7008_-NONE-_-NONE-",
           "recipient_name": "DAVIE DEFENSE INC.",
-          "amount": 3500000000,
+          "amount": 3531500000,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Homeland Security",
@@ -3196,7 +3196,7 @@
           "award_id": "70Z02326C93210002",
           "generated_internal_id": "CONT_AWD_70Z02326C93210002_7008_-NONE-_-NONE-",
           "recipient_name": "BOLLINGER SHIPYARDS LOCKPORT, L.L.C.",
-          "amount": 2142956960,
+          "amount": 2168156960,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Homeland Security",
@@ -3531,10 +3531,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 43581163790.94,
+      "contracts_obligated": 43637863790.94,
       "grants_obligated": 10543836418.25,
-      "total_awards_obligated": 54125000209.19,
-      "last_updated": "2026-11-16T20:33:18.181Z",
+      "total_awards_obligated": 54181700209.19,
+      "last_updated": "2026-11-23T22:05:07.415Z",
       "source": "usaspending.gov"
     },
     "environmental-protection-agency": {
@@ -3559,7 +3559,7 @@
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 6866453145.16,
+          "total_obligations": 6866450563.84,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -74.81
@@ -3569,66 +3569,66 @@
         {
           "program_name": "State and Tribal Assistance Grants, Environmental Protection Agency",
           "fiscal_year": 2026,
-          "current_amount": 5470916579.17,
+          "current_amount": 5500962763.42,
           "previous_amount": 22656238843.92,
-          "change_amount": -17185322264.75,
-          "change_pct": -75.85
+          "change_amount": -17155276080.499998,
+          "change_pct": -75.72
         },
         {
           "program_name": "Environmental Programs and Management, Environmental Protection Agency",
           "fiscal_year": 2026,
-          "current_amount": 449720135.58,
-          "previous_amount": 3716461296.71,
-          "change_amount": -3266741161.13,
-          "change_pct": -87.9
-        },
-        {
-          "program_name": "Hazardous Substance Superfund, Environmental Protection Agency",
-          "fiscal_year": 2026,
-          "current_amount": 723922838.98,
-          "previous_amount": 904836356.73,
-          "change_amount": -180913517.75,
-          "change_pct": -19.99
+          "current_amount": 503120434.94,
+          "previous_amount": 3716661296.71,
+          "change_amount": -3213540861.77,
+          "change_pct": -86.46
         },
         {
           "program_name": "Leaking Underground Storage Tank Trust Fund, Environmental Protection Agency",
           "fiscal_year": 2026,
-          "current_amount": 55548164.09,
-          "previous_amount": 156937900.38,
-          "change_amount": -101389736.28999999,
-          "change_pct": -64.61
+          "current_amount": 55753349.72,
+          "previous_amount": 157163909.28,
+          "change_amount": -101410559.56,
+          "change_pct": -64.53
+        },
+        {
+          "program_name": "Hazardous Substance Superfund, Environmental Protection Agency",
+          "fiscal_year": 2026,
+          "current_amount": 838195667.57,
+          "previous_amount": 905762798.73,
+          "change_amount": -67567131.15999997,
+          "change_pct": -7.46
         },
         {
           "program_name": "Inland Oil Spill Programs, Environmental Protection Agency",
           "fiscal_year": 2026,
-          "current_amount": 45106143.72,
-          "previous_amount": 112728716.42,
-          "change_amount": -67622572.7,
-          "change_pct": -59.99
+          "current_amount": 51054579.23,
+          "previous_amount": 113657756.42,
+          "change_amount": -62603177.190000005,
+          "change_pct": -55.08
         },
         {
           "program_name": "Science and Technology, Environmental Protection Agency",
           "fiscal_year": 2026,
-          "current_amount": 206728989.15,
-          "previous_amount": 266686802.17,
-          "change_amount": -59957813.01999998,
-          "change_pct": -22.48
-        },
-        {
-          "program_name": "Working Capital Fund, Environmental Protection Agency",
-          "fiscal_year": 2026,
-          "current_amount": 109881619.15,
-          "previous_amount": 119829343.23,
-          "change_amount": -9947724.079999998,
-          "change_pct": -8.3
+          "current_amount": 234299323.08,
+          "previous_amount": 267454035.17,
+          "change_amount": -33154712.089999974,
+          "change_pct": -12.4
         },
         {
           "program_name": "Buildings and Facilities, Environmental Protection Agency",
           "fiscal_year": 2026,
-          "current_amount": 12127368.06,
+          "current_amount": 30746260.71,
           "previous_amount": 3448475.73,
-          "change_amount": 8678892.33,
-          "change_pct": 251.67
+          "change_amount": 27297784.98,
+          "change_pct": 791.59
+        },
+        {
+          "program_name": "Working Capital Fund, Environmental Protection Agency",
+          "fiscal_year": 2026,
+          "current_amount": 111464328.4,
+          "previous_amount": 119829343.23,
+          "change_amount": -8365014.829999998,
+          "change_pct": -6.98
         },
         {
           "program_name": "Hazardous Waste Electronic Manifest System Fund, Environmental Protection Agency",
@@ -3639,14 +3639,6 @@
           "change_pct": -36.28
         },
         {
-          "program_name": "Pesticide Registration Fund, Environmental Protection Agency",
-          "fiscal_year": 2026,
-          "current_amount": 10761486.29,
-          "previous_amount": 15260810.16,
-          "change_amount": -4499323.870000001,
-          "change_pct": -29.48
-        },
-        {
           "program_name": "Water Infrastructure Finance And Innovation Program Account, Environmental Protection Agency",
           "fiscal_year": 2026,
           "current_amount": 6922149.95,
@@ -3655,12 +3647,12 @@
           "change_pct": 120.17
         },
         {
-          "program_name": "Reregistration and Expedited Processing Revolving Fund, Environmental Protection Agency",
+          "program_name": "Pesticide Registration Fund, Environmental Protection Agency",
           "fiscal_year": 2026,
-          "current_amount": 14934033.13,
-          "previous_amount": 17574211.17,
-          "change_amount": -2640178.040000001,
-          "change_pct": -15.02
+          "current_amount": 12550328.87,
+          "previous_amount": 15260810.16,
+          "change_amount": -2710481.290000001,
+          "change_pct": -17.76
         },
         {
           "program_name": "Hazardous Substance Superfund - Recovery Act, Environmental Protection Agency",
@@ -3671,20 +3663,28 @@
           "change_pct": null
         },
         {
+          "program_name": "Office of Inspector General, Environmental Protection Agency",
+          "fiscal_year": 2026,
+          "current_amount": 10589687.32,
+          "previous_amount": 9647632.69,
+          "change_amount": 942054.6300000008,
+          "change_pct": 9.76
+        },
+        {
+          "program_name": "Reregistration and Expedited Processing Revolving Fund, Environmental Protection Agency",
+          "fiscal_year": 2026,
+          "current_amount": 16722875.71,
+          "previous_amount": 17574211.17,
+          "change_amount": -851335.4600000009,
+          "change_pct": -4.84
+        },
+        {
           "program_name": "Damage Assessment and Restoration Revolving Fund, Environmental Protection Agency",
           "fiscal_year": 2026,
           "current_amount": -239894.37,
           "previous_amount": 496508.54,
           "change_amount": -736402.9099999999,
           "change_pct": -148.32
-        },
-        {
-          "program_name": "Office of Inspector General, Environmental Protection Agency",
-          "fiscal_year": 2026,
-          "current_amount": 10240383.21,
-          "previous_amount": 9647632.69,
-          "change_amount": 592750.5200000014,
-          "change_pct": 6.14
         },
         {
           "program_name": "Acquisition Services Fund, General Services Administration",
@@ -4090,7 +4090,7 @@
       "contracts_obligated": 0,
       "grants_obligated": 27246581972,
       "total_awards_obligated": 27246581972,
-      "last_updated": "2026-11-16T20:33:20.621Z",
+      "last_updated": "2026-11-23T22:05:08.206Z",
       "source": "usaspending.gov"
     },
     "department-of-the-interior": {
@@ -4301,7 +4301,7 @@
           "award_id": "140D0423F0882",
           "generated_internal_id": "CONT_AWD_140D0423F0882_1406_HHSN316201200040W_7529",
           "recipient_name": "GUIDEHOUSE INC.",
-          "amount": 449635911.7,
+          "amount": 600306644.7,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of the Interior",
@@ -4675,10 +4675,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 5682182163.59,
+      "contracts_obligated": 5832852896.59,
       "grants_obligated": 2580531222.3,
-      "total_awards_obligated": 8262713385.89,
-      "last_updated": "2026-11-16T20:33:22.104Z",
+      "total_awards_obligated": 8413384118.89,
+      "last_updated": "2026-11-23T22:05:08.779Z",
       "source": "usaspending.gov"
     },
     "department-of-agriculture": {
@@ -4703,10 +4703,10 @@
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 62162089084.259995,
+          "total_obligations": 62192638128.03,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -8.09
+          "yoy_change_pct": -8.04
         }
       ],
       "program_funding_changes": [
@@ -4721,90 +4721,74 @@
         {
           "program_name": "State and Private Forestry, Forest Service, Agriculture",
           "fiscal_year": 2026,
-          "current_amount": 358032750.56,
+          "current_amount": 462639936.92,
           "previous_amount": 1377249902.96,
-          "change_amount": -1019217152.4000001,
-          "change_pct": -74
+          "change_amount": -914609966.04,
+          "change_pct": -66.41
         },
         {
           "program_name": "Special Supplemental Nutrition Program for Women, Infants and Children (WIC), Food and Nutrition Service",
           "fiscal_year": 2026,
-          "current_amount": 8359679386.78,
+          "current_amount": 8367748778.34,
           "previous_amount": 7580029146.62,
-          "change_amount": 779650240.1599998,
-          "change_pct": 10.29
-        },
-        {
-          "program_name": "Wildland Fire Management, Forest Service, Agriculture",
-          "fiscal_year": 2026,
-          "current_amount": 2044798514,
-          "previous_amount": 2737472636.2,
-          "change_amount": -692674122.1999998,
-          "change_pct": -25.3
+          "change_amount": 787719631.7200003,
+          "change_pct": 10.39
         },
         {
           "program_name": "Processing, Research and Marketing, Office of the Secretary, Agriculture",
           "fiscal_year": 2026,
-          "current_amount": 276558760.79,
+          "current_amount": 281246426.53,
           "previous_amount": 944374020.67,
-          "change_amount": -667815259.8799999,
-          "change_pct": -70.72
-        },
-        {
-          "program_name": "Child Nutrition Programs, Food and Nutrition Service",
-          "fiscal_year": 2026,
-          "current_amount": 32466987673.6,
-          "previous_amount": 33121588026.19,
-          "change_amount": -654600352.5900002,
-          "change_pct": -1.98
+          "change_amount": -663127594.14,
+          "change_pct": -70.22
         },
         {
           "program_name": "Food for Peace Title II Grants, Foreign Agricultural Service, Agriculture",
           "fiscal_year": 2026,
-          "current_amount": 653571879.57,
+          "current_amount": 654845279.59,
           "previous_amount": 0,
-          "change_amount": 653571879.57,
+          "change_amount": 654845279.59,
           "change_pct": null
         },
         {
           "program_name": "Emergency Watershed Protection Program, Natural Resources Conservation Programs, Agriculture",
           "fiscal_year": 2026,
-          "current_amount": 664523481.73,
+          "current_amount": 668441287.43,
           "previous_amount": 155044643.17,
-          "change_amount": 509478838.56000006,
-          "change_pct": 328.6
+          "change_amount": 513396644.26,
+          "change_pct": 331.13
         },
         {
-          "program_name": "Funds for Strengthening Markets, Income, and Supply (Section 32), Agriculture",
+          "program_name": "Child Nutrition Programs, Food and Nutrition Service",
           "fiscal_year": 2026,
-          "current_amount": 1153427920.16,
-          "previous_amount": 1556287716.67,
-          "change_amount": -402859796.51,
-          "change_pct": -25.89
+          "current_amount": 32728462460.71,
+          "previous_amount": 33121588026.19,
+          "change_amount": -393125565.47999954,
+          "change_pct": -1.19
         },
         {
           "program_name": "Rural Energy for America Program, Rural Business-Cooperative Service, Agriculture",
           "fiscal_year": 2026,
           "current_amount": 0,
-          "previous_amount": 375016163.15,
-          "change_amount": -375016163.15,
+          "previous_amount": 375076974.15,
+          "change_amount": -375076974.15,
           "change_pct": -100
-        },
-        {
-          "program_name": "Supplemental Nutrition Assistance Program, Food and Nutrition Service, Agriculture",
-          "fiscal_year": 2026,
-          "current_amount": 7491842924.45,
-          "previous_amount": 7861508975.04,
-          "change_amount": -369666050.59000015,
-          "change_pct": -4.7
         },
         {
           "program_name": "Watershed and Flood Prevention Operations, Natural Resources Conservation Service, Agriculture",
           "fiscal_year": 2026,
-          "current_amount": 274914996.49,
-          "previous_amount": 570149533.05,
-          "change_amount": -295234536.55999994,
-          "change_pct": -51.78
+          "current_amount": 280103553.51,
+          "previous_amount": 571804560.18,
+          "change_amount": -291701006.66999996,
+          "change_pct": -51.01
+        },
+        {
+          "program_name": "Supplemental Nutrition Assistance Program, Food and Nutrition Service, Agriculture",
+          "fiscal_year": 2026,
+          "current_amount": 7588282213.21,
+          "previous_amount": 7861508975.04,
+          "change_amount": -273226761.8299999,
+          "change_pct": -3.48
         },
         {
           "program_name": "Energy Assistance Payments, Rural Business - Cooperative Service, Agriculture",
@@ -4817,58 +4801,74 @@
         {
           "program_name": "McGovern-Dole International Food for Education and Child Nutrition Program, Foreign Agricultural Service, Agriculture",
           "fiscal_year": 2026,
-          "current_amount": 30690251.67,
+          "current_amount": 33508019.12,
           "previous_amount": 267995590.11,
-          "change_amount": -237305338.44,
-          "change_pct": -88.55
+          "change_amount": -234487570.99,
+          "change_pct": -87.5
         },
         {
           "program_name": "Conservation Operations, Natural Resources Conservation Service, Agriculture",
           "fiscal_year": 2026,
-          "current_amount": 278749793.82,
+          "current_amount": 282957769.19,
           "previous_amount": 494347569.82,
-          "change_amount": -215597776,
-          "change_pct": -43.61
+          "change_amount": -211389800.63,
+          "change_pct": -42.76
+        },
+        {
+          "program_name": "Working Capital Fund, Agriculture",
+          "fiscal_year": 2026,
+          "current_amount": 1207129402.76,
+          "previous_amount": 1013997133.76,
+          "change_amount": 193132269,
+          "change_pct": 19.05
         },
         {
           "program_name": "Rural Water and Waste Disposal Program Account, Rural Utilities Service, Agriculture",
           "fiscal_year": 2026,
           "current_amount": 258664181.53,
-          "previous_amount": 420523135.82,
-          "change_amount": -161858954.29,
-          "change_pct": -38.49
+          "previous_amount": 425464135.82,
+          "change_amount": -166799954.29,
+          "change_pct": -39.2
+        },
+        {
+          "program_name": "Research and Education Activities, National Institute of Food and Agriculture, Agriculture",
+          "fiscal_year": 2026,
+          "current_amount": 842536540.24,
+          "previous_amount": 686567680.82,
+          "change_amount": 155968859.41999996,
+          "change_pct": 22.72
+        },
+        {
+          "program_name": "Funds for Strengthening Markets, Income, and Supply (Section 32), Agriculture",
+          "fiscal_year": 2026,
+          "current_amount": 1431670962.61,
+          "previous_amount": 1556287716.67,
+          "change_amount": -124616754.06000018,
+          "change_pct": -8.01
+        },
+        {
+          "program_name": "Capital Improvement and Maintenance, Forest Service, Agriculture",
+          "fiscal_year": 2026,
+          "current_amount": 722230104.61,
+          "previous_amount": 603263865.82,
+          "change_amount": 118966238.78999996,
+          "change_pct": 19.72
         },
         {
           "program_name": "Extension Activities, National Institute of Food and Agriculture, Agriculture",
           "fiscal_year": 2026,
-          "current_amount": 477444414.41,
-          "previous_amount": 631189470.34,
-          "change_amount": -153745055.93,
-          "change_pct": -24.36
+          "current_amount": 514706643.36,
+          "previous_amount": 632869470.34,
+          "change_amount": -118162826.98000002,
+          "change_pct": -18.67
         },
         {
-          "program_name": "Working Capital Fund, Agriculture",
+          "program_name": "Marketing Services, Agricultural Marketing Service, Agriculture",
           "fiscal_year": 2026,
-          "current_amount": 1123802563.39,
-          "previous_amount": 1005548964.09,
-          "change_amount": 118253599.30000007,
-          "change_pct": 11.76
-        },
-        {
-          "program_name": "National Forest System, Forest Service, Agriculture",
-          "fiscal_year": 2026,
-          "current_amount": 634794722.39,
-          "previous_amount": 748268334.47,
-          "change_amount": -113473612.08000004,
-          "change_pct": -15.16
-        },
-        {
-          "program_name": "Salaries and Expenses, Agricultural Research Service, Agriculture",
-          "fiscal_year": 2026,
-          "current_amount": 392087968.88,
-          "previous_amount": 500018386.47,
-          "change_amount": -107930417.59000003,
-          "change_pct": -21.59
+          "current_amount": 102526884.67,
+          "previous_amount": 0,
+          "change_amount": 102526884.67,
+          "change_pct": null
         }
       ],
       "awards": [
@@ -5266,7 +5266,7 @@
       "contracts_obligated": 0,
       "grants_obligated": 55784031325.450005,
       "total_awards_obligated": 55784031325.450005,
-      "last_updated": "2026-11-16T20:33:23.488Z",
+      "last_updated": "2026-11-23T22:05:10.817Z",
       "source": "usaspending.gov"
     },
     "department-of-commerce": {
@@ -5284,14 +5284,14 @@
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 25199863562.899998,
+          "total_obligations": 25199298502.829998,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -27.48
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 7040270716.23,
+          "total_obligations": 7040750426.18,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -72.06
@@ -5309,10 +5309,10 @@
         {
           "program_name": "Salaries and Expenses, National Telecommunications and Information Administration, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 37854954.9,
+          "current_amount": 47448184.63,
           "previous_amount": 1368022307.84,
-          "change_amount": -1330167352.9399998,
-          "change_pct": -97.23
+          "change_amount": -1320574123.2099998,
+          "change_pct": -96.53
         },
         {
           "program_name": "Digital Equity, National Telecommunications and Information Administration, Commerce",
@@ -5321,14 +5321,6 @@
           "previous_amount": 789697157.15,
           "change_amount": -1231735979.8899999,
           "change_pct": -155.98
-        },
-        {
-          "program_name": "Operations, Research and Facilities, National Oceanic and Atmospheric Administration, Commerce",
-          "fiscal_year": 2026,
-          "current_amount": 2820300359.57,
-          "previous_amount": 3389024750.68,
-          "change_amount": -568724391.1099997,
-          "change_pct": -16.78
         },
         {
           "program_name": "Public Wireless Supply Chain Innovation Fund, National Telecommunications and Information Administration, Commerce",
@@ -5341,34 +5333,34 @@
         {
           "program_name": "Broadband Connectivity Fund, National Telecommunications and Information Administration, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 29046990.81,
+          "current_amount": 36515638.81,
           "previous_amount": 376572381.69,
-          "change_amount": -347525390.88,
-          "change_pct": -92.29
+          "change_amount": -340056742.88,
+          "change_pct": -90.3
         },
         {
           "program_name": "Economic Development Assistance Programs, Economic Development Administration, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 140027003.11,
-          "previous_amount": 355356076.97,
-          "change_amount": -215329073.86,
-          "change_pct": -60.6
+          "current_amount": 140754730.11,
+          "previous_amount": 355606076.97,
+          "change_amount": -214851346.86,
+          "change_pct": -60.42
         },
         {
           "program_name": "Salaries and Expenses, United States Patent and Trademark Office, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 1041271622.41,
+          "current_amount": 1053901216.16,
           "previous_amount": 858523014.58,
-          "change_amount": 182748607.82999992,
-          "change_pct": 21.29
+          "change_amount": 195378201.57999992,
+          "change_pct": 22.76
         },
         {
           "program_name": "Periodic Censuses and Programs, Bureau of the Census, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 412330181.31,
+          "current_amount": 446820728.92,
           "previous_amount": 262270654.09,
-          "change_amount": 150059527.22,
-          "change_pct": 57.22
+          "change_amount": 184550074.83,
+          "change_pct": 70.37
         },
         {
           "program_name": "Pacific Coastal Salmon Recovery, National Oceanic and Atmospheric, Commerce",
@@ -5379,84 +5371,92 @@
           "change_pct": -87.53
         },
         {
-          "program_name": "Procurement, Acquisition and Construction, National Oceanic and Atmospheric Administration, Commerce",
-          "fiscal_year": 2026,
-          "current_amount": 1417152353.59,
-          "previous_amount": 1509410507.33,
-          "change_amount": -92258153.74000001,
-          "change_pct": -6.11
-        },
-        {
-          "program_name": "Working Capital Fund, National Institute of Standards and Technology, Commerce",
-          "fiscal_year": 2026,
-          "current_amount": 142539842.91,
-          "previous_amount": 220106615.25,
-          "change_amount": -77566772.34,
-          "change_pct": -35.24
-        },
-        {
-          "program_name": "Construction of Research Facilities, National Institute of Standards and Technology, Commerce",
-          "fiscal_year": 2026,
-          "current_amount": -2108556.41,
-          "previous_amount": 73341184,
-          "change_amount": -75449740.41,
-          "change_pct": -102.87
-        },
-        {
-          "program_name": "Damage Assessment and Restoration Revolving Fund, National Oceanic and Atmospheric Administration, Commerce",
-          "fiscal_year": 2026,
-          "current_amount": 235341903.72,
-          "previous_amount": 299273120.68,
-          "change_amount": -63931216.96000001,
-          "change_pct": -21.36
-        },
-        {
           "program_name": "Census Working Capital Fund, Bureau of the Census, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 269470176.15,
-          "previous_amount": 207518210.5,
-          "change_amount": 61951965.649999976,
-          "change_pct": 29.85
+          "current_amount": 281738717.48,
+          "previous_amount": 206751569.83,
+          "change_amount": 74987147.65,
+          "change_pct": 36.27
         },
         {
-          "program_name": "Industrial Technology Services, National Institute of Standards and Technology, Commerce",
+          "program_name": "Operations, Research and Facilities, National Oceanic and Atmospheric Administration, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 90699910.91,
-          "previous_amount": 138098777.53,
-          "change_amount": -47398866.620000005,
-          "change_pct": -34.32
+          "current_amount": 3466105553.5,
+          "previous_amount": 3404900817.78,
+          "change_amount": 61204735.71999979,
+          "change_pct": 1.8
+        },
+        {
+          "program_name": "Procurement, Acquisition and Construction, National Oceanic and Atmospheric Administration, Commerce",
+          "fiscal_year": 2026,
+          "current_amount": 1570973762.96,
+          "previous_amount": 1517710289.87,
+          "change_amount": 53263473.09000015,
+          "change_pct": 3.51
         },
         {
           "program_name": "Current Surveys and Programs, Bureau of the Census, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 155255178.55,
+          "current_amount": 165298426.04,
           "previous_amount": 112370328.54,
-          "change_amount": 42884850.010000005,
-          "change_pct": 38.16
+          "change_amount": 52928097.499999985,
+          "change_pct": 47.1
         },
         {
-          "program_name": "Nonrecurring Expenses Fund, Departmental Management, Commerce",
+          "program_name": "Working Capital Fund, National Institute of Standards and Technology, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 74253343.92,
-          "previous_amount": 113694229.71,
-          "change_amount": -39440885.78999999,
-          "change_pct": -34.69
+          "current_amount": 170641490.77,
+          "previous_amount": 220203465.25,
+          "change_amount": -49561974.47999999,
+          "change_pct": -22.51
         },
         {
           "program_name": "Scientific and Technical Research and Services, National Institute of Standards and Technology, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 193286389.99,
-          "previous_amount": 230538616.27,
-          "change_amount": -37252226.28,
-          "change_pct": -16.16
+          "current_amount": 285922956.31,
+          "previous_amount": 243687217.47,
+          "change_amount": 42235738.84,
+          "change_pct": 17.33
+        },
+        {
+          "program_name": "Damage Assessment and Restoration Revolving Fund, National Oceanic and Atmospheric Administration, Commerce",
+          "fiscal_year": 2026,
+          "current_amount": 260970258.26,
+          "previous_amount": 303120482.31,
+          "change_amount": -42150224.05000001,
+          "change_pct": -13.91
+        },
+        {
+          "program_name": "Nonrecurring Expenses Fund, Departmental Management, Commerce",
+          "fiscal_year": 2026,
+          "current_amount": 76959784.73,
+          "previous_amount": 113694229.71,
+          "change_amount": -36734444.97999999,
+          "change_pct": -32.31
+        },
+        {
+          "program_name": "Construction of Research Facilities, National Institute of Standards and Technology, Commerce",
+          "fiscal_year": 2026,
+          "current_amount": 103736315.5,
+          "previous_amount": 73341184,
+          "change_amount": 30395131.5,
+          "change_pct": 41.44
         },
         {
           "program_name": "Fisheries Disaster Assistance, National Oceanic and Atmospheric Administration, Commerce",
           "fiscal_year": 2026,
-          "current_amount": 3312445.34,
+          "current_amount": 53572917.34,
           "previous_amount": 30051488.91,
-          "change_amount": -26739043.57,
-          "change_pct": -88.98
+          "change_amount": 23521428.430000003,
+          "change_pct": 78.27
+        },
+        {
+          "program_name": "Middle Mile Deployment, National Telecommunications and Information Administration, Commerce",
+          "fiscal_year": 2026,
+          "current_amount": -21143603.21,
+          "previous_amount": 1057594.65,
+          "change_amount": -22201197.86,
+          "change_pct": -2099.22
         }
       ],
       "awards": [
@@ -5854,7 +5854,7 @@
       "contracts_obligated": 5130201872.21,
       "grants_obligated": 32527781266.68,
       "total_awards_obligated": 37657983138.89,
-      "last_updated": "2026-11-16T20:33:27.967Z",
+      "last_updated": "2026-11-23T22:05:12.048Z",
       "source": "usaspending.gov"
     },
     "department-of-labor": {
@@ -5889,18 +5889,18 @@
         {
           "program_name": "Training and Employment Service, Employment and Training Administration, Labor",
           "fiscal_year": 2026,
-          "current_amount": 2445663296.09,
+          "current_amount": 2447444802.69,
           "previous_amount": 6854309872.93,
-          "change_amount": -4408646576.84,
-          "change_pct": -64.32
+          "change_amount": -4406865070.24,
+          "change_pct": -64.29
         },
         {
           "program_name": "State Unemployment Insurance and Employment Service Operations, Employment and Training Administration, Labor",
           "fiscal_year": 2026,
-          "current_amount": 871842589.35,
+          "current_amount": 873859649.93,
           "previous_amount": 4350313662.95,
-          "change_amount": -3478471073.6,
-          "change_pct": -79.96
+          "change_amount": -3476454013.02,
+          "change_pct": -79.91
         },
         {
           "program_name": "Federal Unemployment Compensation Program, Employment and Training Administration, Labor",
@@ -5913,10 +5913,10 @@
         {
           "program_name": "Office of Job Corps, Employment and Training Administration, Labor",
           "fiscal_year": 2026,
-          "current_amount": 1496588373.09,
+          "current_amount": 1507278512.92,
           "previous_amount": 1176808789.14,
-          "change_amount": 319779583.9499998,
-          "change_pct": 27.17
+          "change_amount": 330469723.78,
+          "change_pct": 28.08
         },
         {
           "program_name": "Community Service Employment for Older Americans, Employment and Training Administration, Labor",
@@ -5945,106 +5945,106 @@
         {
           "program_name": "Veterans Employment and Training, Departmental Management, Labor",
           "fiscal_year": 2026,
-          "current_amount": 176784033.29,
+          "current_amount": 180888562.47,
           "previous_amount": 308785508.47,
-          "change_amount": -132001475.18000004,
-          "change_pct": -42.75
+          "change_amount": -127896946.00000003,
+          "change_pct": -41.42
         },
         {
           "program_name": "Salaries and Expenses, Occupational Safety and Health Administration",
           "fiscal_year": 2026,
-          "current_amount": 130303532.92,
+          "current_amount": 136953176.69,
           "previous_amount": 241830074.24,
-          "change_amount": -111526541.32000001,
-          "change_pct": -46.12
+          "change_amount": -104876897.55000001,
+          "change_pct": -43.37
         },
         {
           "program_name": "Salaries and Expenses, Departmental Management, Labor",
           "fiscal_year": 2026,
-          "current_amount": 172675548.53,
+          "current_amount": 188551884.65,
           "previous_amount": 109240677.44,
-          "change_amount": 63434871.09,
-          "change_pct": 58.07
-        },
-        {
-          "program_name": "Salaries and Expenses, Office of Disability Employment Policy, Labor",
-          "fiscal_year": 2026,
-          "current_amount": 57661055.71,
-          "previous_amount": 79213173.11,
-          "change_amount": -21552117.4,
-          "change_pct": -27.21
+          "change_amount": 79311207.21000001,
+          "change_pct": 72.6
         },
         {
           "program_name": "Working Capital Fund, Labor",
           "fiscal_year": 2026,
-          "current_amount": 353324603.83,
+          "current_amount": 406384122.83,
           "previous_amount": 371830095.37,
-          "change_amount": -18505491.54000002,
-          "change_pct": -4.98
-        },
-        {
-          "program_name": "Salaries and Expenses, Bureau of Labor Statistics",
-          "fiscal_year": 2026,
-          "current_amount": 208966082.83,
-          "previous_amount": 226225207.39,
-          "change_amount": -17259124.559999973,
-          "change_pct": -7.63
-        },
-        {
-          "program_name": "Salaries and Expenses, Mine Safety and Health Administration",
-          "fiscal_year": 2026,
-          "current_amount": 85047700.97,
-          "previous_amount": 68320319.4,
-          "change_amount": 16727381.569999993,
-          "change_pct": 24.48
-        },
-        {
-          "program_name": "Salaries and Expenses, Office  of Workers' Compensation Programs, Labor",
-          "fiscal_year": 2026,
-          "current_amount": 87978953.28,
-          "previous_amount": 71594375.58,
-          "change_amount": 16384577.700000003,
-          "change_pct": 22.89
-        },
-        {
-          "program_name": "Administrative Expenses, Energy Employees Occupational Illness Compensation Fund, Office of Workers' Compensation Programs, Labor",
-          "fiscal_year": 2026,
-          "current_amount": 54503018.21,
-          "previous_amount": 42026147.86,
-          "change_amount": 12476870.350000001,
-          "change_pct": 29.69
-        },
-        {
-          "program_name": "Office of the Inspector General, Departmental Management, Labor",
-          "fiscal_year": 2026,
-          "current_amount": 74608484.45,
-          "previous_amount": 63497524.61,
-          "change_amount": 11110959.840000004,
-          "change_pct": 17.5
-        },
-        {
-          "program_name": "Program Administration, Employment and Training Administration, Labor",
-          "fiscal_year": 2026,
-          "current_amount": 60659477.87,
-          "previous_amount": 50999002.67,
-          "change_amount": 9660475.199999996,
-          "change_pct": 18.94
-        },
-        {
-          "program_name": "Salaries and Expenses, Wage and Hour Division, Labor",
-          "fiscal_year": 2026,
-          "current_amount": 62295853.17,
-          "previous_amount": 54988125.12,
-          "change_amount": 7307728.0500000045,
-          "change_pct": 13.29
+          "change_amount": 34554027.45999998,
+          "change_pct": 9.29
         },
         {
           "program_name": "IT Modernization, Departmental Management, Labor",
           "fiscal_year": 2026,
-          "current_amount": 128866752.76,
-          "previous_amount": 121738325.52,
-          "change_amount": 7128427.24000001,
-          "change_pct": 5.86
+          "current_amount": 148924478.15,
+          "previous_amount": 127359863.72,
+          "change_amount": 21564614.430000007,
+          "change_pct": 16.93
+        },
+        {
+          "program_name": "Salaries and Expenses, Office of Disability Employment Policy, Labor",
+          "fiscal_year": 2026,
+          "current_amount": 60876503.91,
+          "previous_amount": 80616236.11,
+          "change_amount": -19739732.200000003,
+          "change_pct": -24.49
+        },
+        {
+          "program_name": "Salaries and Expenses, Mine Safety and Health Administration",
+          "fiscal_year": 2026,
+          "current_amount": 86963490.78,
+          "previous_amount": 68320319.4,
+          "change_amount": 18643171.379999995,
+          "change_pct": 27.29
+        },
+        {
+          "program_name": "Program Administration, Employment and Training Administration, Labor",
+          "fiscal_year": 2026,
+          "current_amount": 68450096.96,
+          "previous_amount": 50999002.67,
+          "change_amount": 17451094.28999999,
+          "change_pct": 34.22
+        },
+        {
+          "program_name": "Salaries and Expenses, Office  of Workers' Compensation Programs, Labor",
+          "fiscal_year": 2026,
+          "current_amount": 88342512.97,
+          "previous_amount": 71594375.58,
+          "change_amount": 16748137.39,
+          "change_pct": 23.39
+        },
+        {
+          "program_name": "Office of the Inspector General, Departmental Management, Labor",
+          "fiscal_year": 2026,
+          "current_amount": 78062906.61,
+          "previous_amount": 63497524.61,
+          "change_amount": 14565382,
+          "change_pct": 22.94
+        },
+        {
+          "program_name": "Salaries and Expenses, Bureau of Labor Statistics",
+          "fiscal_year": 2026,
+          "current_amount": 212939716.61,
+          "previous_amount": 226225207.39,
+          "change_amount": -13285490.779999971,
+          "change_pct": -5.87
+        },
+        {
+          "program_name": "Administrative Expenses, Energy Employees Occupational Illness Compensation Fund, Office of Workers' Compensation Programs, Labor",
+          "fiscal_year": 2026,
+          "current_amount": 54532328.49,
+          "previous_amount": 42026147.86,
+          "change_amount": 12506180.630000003,
+          "change_pct": 29.76
+        },
+        {
+          "program_name": "Salaries and Expenses, Wage and Hour Division, Labor",
+          "fiscal_year": 2026,
+          "current_amount": 62784436.05,
+          "previous_amount": 54988125.12,
+          "change_amount": 7796310.93,
+          "change_pct": 14.18
         }
       ],
       "awards": [
@@ -6442,7 +6442,7 @@
       "contracts_obligated": 708466642.61,
       "grants_obligated": 6924625682.029999,
       "total_awards_obligated": 7633092324.639998,
-      "last_updated": "2026-11-16T20:33:29.176Z",
+      "last_updated": "2026-11-23T22:05:12.626Z",
       "source": "usaspending.gov"
     },
     "department-of-transportation": {
@@ -6453,24 +6453,24 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2024,
-          "total_obligations": 117976920549.77,
+          "total_obligations": 117796213161.77,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 132896049271.64,
+          "total_obligations": 132840322427.64,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": 12.65
+          "yoy_change_pct": 12.77
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 129137683736.31,
+          "total_obligations": 129102072437.69,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -2.83
+          "yoy_change_pct": -2.81
         }
       ],
       "program_funding_changes": [
@@ -6517,10 +6517,10 @@
         {
           "program_name": "Federal-Aid Highways, Liquidation of Contract Authorization, Federal Highway Administration, Transportation",
           "fiscal_year": 2026,
-          "current_amount": 59806513393.42,
+          "current_amount": 59790146338.95,
           "previous_amount": 57832169541.15,
-          "change_amount": 1974343852.2699966,
-          "change_pct": 3.41
+          "change_amount": 1957976797.7999954,
+          "change_pct": 3.39
         },
         {
           "program_name": "Emergency Relief Program, Federal Highway Administration, Transportation",
@@ -6533,26 +6533,26 @@
         {
           "program_name": "Transit Infrastructure Grants, Federal Transit Administration, Transportation",
           "fiscal_year": 2026,
-          "current_amount": 3035319065.75,
-          "previous_amount": 4652920186.97,
-          "change_amount": -1617601121.2200003,
-          "change_pct": -34.77
+          "current_amount": 3030381180.75,
+          "previous_amount": 4635144996.97,
+          "change_amount": -1604763816.2200003,
+          "change_pct": -34.62
         },
         {
           "program_name": "National Infrastructure Investments, Office of the Secretary, Transportation",
           "fiscal_year": 2026,
-          "current_amount": 2548322641.13,
+          "current_amount": 2533752003.74,
           "previous_amount": 1093374169.15,
-          "change_amount": 1454948471.98,
-          "change_pct": 133.07
+          "change_amount": 1440377834.5899997,
+          "change_pct": 131.74
         },
         {
           "program_name": "Formula and Bus Grants, Liquidation of Contract Authorization, Federal Transit Administration, Transportation",
           "fiscal_year": 2026,
-          "current_amount": 15610141200.69,
-          "previous_amount": 16796852524.23,
-          "change_amount": -1186711323.539999,
-          "change_pct": -7.07
+          "current_amount": 15595591920.69,
+          "previous_amount": 16747297953.23,
+          "change_amount": -1151706032.539999,
+          "change_pct": -6.88
         },
         {
           "program_name": "Neighborhood Access and Environmental Programs, Federal Highway Administration, Transportation",
@@ -6573,10 +6573,10 @@
         {
           "program_name": "Operations, Federal Aviation Administration, Transportation",
           "fiscal_year": 2026,
-          "current_amount": 4647068669.61,
+          "current_amount": 4647193592.45,
           "previous_amount": 3738451987.45,
-          "change_amount": 908616682.1599998,
-          "change_pct": 24.3
+          "change_amount": 908741605,
+          "change_pct": 24.31
         },
         {
           "program_name": "National Network Grants to the National Railroad Passenger Corporation, Transportation",
@@ -6613,10 +6613,10 @@
         {
           "program_name": "Safe Streets and Roads for All, Office of the Secretary, Transportation",
           "fiscal_year": 2026,
-          "current_amount": 712943802.24,
+          "current_amount": 712567802.24,
           "previous_amount": 231942663.86,
-          "change_amount": 481001138.38,
-          "change_pct": 207.38
+          "change_amount": 480625138.38,
+          "change_pct": 207.22
         },
         {
           "program_name": "Ferry Service for Rural Communities, Federal Transit Administration, Transportation",
@@ -6705,7 +6705,7 @@
           "award_id": "693KA821F00222",
           "generated_internal_id": "CONT_AWD_693KA821F00222_6920_DTFA0102D03006_6920",
           "recipient_name": "HARRIS CORPORATION",
-          "amount": 2310148567.57,
+          "amount": 2366708833.41,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Transportation",
@@ -6783,7 +6783,7 @@
           "award_id": "DTFA0102D03006CALL0001",
           "generated_internal_id": "CONT_AWD_DTFA0102D03006CALL0001_6920_DTFA0102D03006_6920",
           "recipient_name": "HARRIS CORPORATION",
-          "amount": 1590352857.43,
+          "amount": 1607600289.16,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Transportation",
@@ -7027,10 +7027,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 8343624565.59,
+      "contracts_obligated": 8417432263.16,
       "grants_obligated": 63533319872.58,
-      "total_awards_obligated": 71876944438.17,
-      "last_updated": "2026-11-16T20:33:30.201Z",
+      "total_awards_obligated": 71950752135.74,
+      "last_updated": "2026-11-23T22:05:13.537Z",
       "source": "usaspending.gov"
     },
     "department-of-energy": {
@@ -7055,7 +7055,7 @@
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 57825098901.47,
+          "total_obligations": 57825341659.07,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": -25.29
@@ -7065,90 +7065,90 @@
         {
           "program_name": "Energy Efficiency and Renewable Energy, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 39750326924.38,
-          "previous_amount": 49901310653.67,
-          "change_amount": -10150983729.29,
-          "change_pct": -20.34
+          "current_amount": 39852329059.97,
+          "previous_amount": 49905180806.95,
+          "change_amount": -10052851746.979996,
+          "change_pct": -20.14
         },
         {
           "program_name": "Clean Energy Demonstrations, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 29014064514.13,
-          "previous_amount": 35061380322.43,
-          "change_amount": -6047315808.299999,
+          "current_amount": 29014176389.76,
+          "previous_amount": 35061526573.55,
+          "change_amount": -6047350183.790005,
           "change_pct": -17.25
         },
         {
           "program_name": "Nuclear Energy, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 43872191170.19,
-          "previous_amount": 40153492582.53,
-          "change_amount": 3718698587.6600037,
-          "change_pct": 9.26
+          "current_amount": 43877462406.61,
+          "previous_amount": 40153677370.93,
+          "change_amount": 3723785035.6800003,
+          "change_pct": 9.27
         },
         {
           "program_name": "Expenses, Isotope Production and Distribution Program Fund, Energy",
           "fiscal_year": 2026,
-          "current_amount": 27130920480.86,
+          "current_amount": 27132110627.86,
           "previous_amount": 23768581378.84,
-          "change_amount": 3362339102.0200005,
+          "change_amount": 3363529249.0200005,
           "change_pct": 14.15
-        },
-        {
-          "program_name": "Departmental Administration, Energy Programs, Energy",
-          "fiscal_year": 2026,
-          "current_amount": 43532818282.5,
-          "previous_amount": 40483721888.06,
-          "change_amount": 3049096394.4400024,
-          "change_pct": 7.53
         },
         {
           "program_name": "Science, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 40212008026.57,
-          "previous_amount": 37185222898.23,
-          "change_amount": 3026785128.3399963,
-          "change_pct": 8.14
+          "current_amount": 40278936996.17,
+          "previous_amount": 37185340063.38,
+          "change_amount": 3093596932.790001,
+          "change_pct": 8.32
         },
         {
           "program_name": "Other Defense Activities, Environmental and Other Defense Activities, Energy",
           "fiscal_year": 2026,
-          "current_amount": 43855591673.96,
-          "previous_amount": 40853020669.94,
-          "change_amount": 3002571004.0199966,
-          "change_pct": 7.35
+          "current_amount": 43961955856.85,
+          "previous_amount": 40868393287.34,
+          "change_amount": 3093562569.510002,
+          "change_pct": 7.57
         },
         {
-          "program_name": "Federal Salaries and Expenses, National Nuclear Security Administration, Energy",
+          "program_name": "Departmental Administration, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 35902316894.39,
-          "previous_amount": 32950770277.3,
-          "change_amount": 2951546617.09,
-          "change_pct": 8.96
+          "current_amount": 43560658082.39,
+          "previous_amount": 40492635445.66,
+          "change_amount": 3068022636.7299957,
+          "change_pct": 7.58
         },
         {
           "program_name": "Defense Environmental Cleanup, Environmental and Other Defense Activities, Energy",
           "fiscal_year": 2026,
-          "current_amount": 47141616827.06,
-          "previous_amount": 44198881323.69,
-          "change_amount": 2942735503.369995,
-          "change_pct": 6.66
+          "current_amount": 47199563847.62,
+          "previous_amount": 44198908007.37,
+          "change_amount": 3000655840.25,
+          "change_pct": 6.79
+        },
+        {
+          "program_name": "Federal Salaries and Expenses, National Nuclear Security Administration, Energy",
+          "fiscal_year": 2026,
+          "current_amount": 35912518170.87,
+          "previous_amount": 32951789732.03,
+          "change_amount": 2960728438.840004,
+          "change_pct": 8.99
         },
         {
           "program_name": "Defense Nuclear Nonproliferation, National Nuclear Security Administration, Energy",
           "fiscal_year": 2026,
-          "current_amount": 41639974599.23,
+          "current_amount": 41641958097.16,
           "previous_amount": 38883716091.58,
-          "change_amount": 2756258507.6500015,
+          "change_amount": 2758242005.580002,
           "change_pct": 7.09
         },
         {
           "program_name": "Weapons Activities, National Nuclear Security Administration, Energy",
           "fiscal_year": 2026,
-          "current_amount": 44500430660.19,
-          "previous_amount": 41949877307.01,
-          "change_amount": 2550553353.1800003,
-          "change_pct": 6.08
+          "current_amount": 44585405349.04,
+          "previous_amount": 41955385507.01,
+          "change_amount": 2630019842.029999,
+          "change_pct": 6.27
         },
         {
           "program_name": "American Energy Independence Fund, Energy Programs, Energy",
@@ -7161,10 +7161,10 @@
         {
           "program_name": "Electricity, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 31315338917.46,
+          "current_amount": 31317264073.46,
           "previous_amount": 33772614620.93,
-          "change_amount": -2457275703.470001,
-          "change_pct": -7.28
+          "change_amount": -2455350547.470001,
+          "change_pct": -7.27
         },
         {
           "program_name": "Nuclear Waste Disposal, Energy Programs, Energy",
@@ -7175,52 +7175,52 @@
           "change_pct": 10.42
         },
         {
+          "program_name": "Fossil Energy, Energy Programs, Energy",
+          "fiscal_year": 2026,
+          "current_amount": 36559402293.26,
+          "previous_amount": 34447216255.67,
+          "change_amount": 2112186037.590004,
+          "change_pct": 6.13
+        },
+        {
           "program_name": "Advanced Research Projects Agency-Energy, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 32951367712.71,
+          "current_amount": 32963428234.75,
           "previous_amount": 31171719858.54,
-          "change_amount": 1779647854.1699982,
-          "change_pct": 5.71
+          "change_amount": 1791708376.209999,
+          "change_pct": 5.75
         },
         {
           "program_name": "Non-Defense Environmental Cleanup, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 34561294987.98,
-          "previous_amount": 32793712775.07,
-          "change_amount": 1767582212.9100037,
+          "current_amount": 34562066739.02,
+          "previous_amount": 32793748151.67,
+          "change_amount": 1768318587.3499985,
           "change_pct": 5.39
-        },
-        {
-          "program_name": "Fossil Energy, Energy Programs, Energy",
-          "fiscal_year": 2026,
-          "current_amount": 36187523483.75,
-          "previous_amount": 34447216255.67,
-          "change_amount": 1740307228.0800018,
-          "change_pct": 5.05
         },
         {
           "program_name": "Naval Reactors, National Nuclear Security Administration, Energy",
           "fiscal_year": 2026,
-          "current_amount": 19168852230.11,
-          "previous_amount": 17470565083.36,
-          "change_amount": 1698287146.75,
-          "change_pct": 9.72
+          "current_amount": 19170829217.9,
+          "previous_amount": 17470577017.96,
+          "change_amount": 1700252199.9400024,
+          "change_pct": 9.73
         },
         {
           "program_name": "Uranium Enrichment Decontamination and Decommissioning Fund, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 10571421245.4,
+          "current_amount": 10571435851,
           "previous_amount": 8928952485.15,
-          "change_amount": 1642468760.25,
-          "change_pct": 18.39
+          "change_amount": 1642483365.8500004,
+          "change_pct": 18.4
         },
         {
           "program_name": "Technology Transitions, Energy Programs, Energy",
           "fiscal_year": 2026,
-          "current_amount": 37155514164.41,
-          "previous_amount": 35598567309.89,
-          "change_amount": 1556946854.5200043,
-          "change_pct": 4.37
+          "current_amount": 37200857188.82,
+          "previous_amount": 35628403701.93,
+          "change_amount": 1572453486.8899994,
+          "change_pct": 4.41
         }
       ],
       "awards": [
@@ -7436,7 +7436,7 @@
           "award_id": "DEAC0206CH11357",
           "generated_internal_id": "CONT_AWD_DEAC0206CH11357_8900_-NONE-_-NONE-",
           "recipient_name": "UCHICAGO ARGONNE, LLC",
-          "amount": 17730321030.51,
+          "amount": 17738629471.77,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Energy",
@@ -7615,10 +7615,10 @@
           "source_url": null
         }
       ],
-      "contracts_obligated": 625864815402.0199,
+      "contracts_obligated": 625873123843.2799,
       "grants_obligated": 0,
-      "total_awards_obligated": 625864815402.0199,
-      "last_updated": "2026-11-16T20:33:31.598Z",
+      "total_awards_obligated": 625873123843.2799,
+      "last_updated": "2026-11-23T22:05:14.014Z",
       "source": "usaspending.gov"
     },
     "department-of-education": {
@@ -7653,18 +7653,18 @@
         {
           "program_name": "Higher Education, Department of Education",
           "fiscal_year": 2026,
-          "current_amount": 2253283994.3,
+          "current_amount": 2481194473.84,
           "previous_amount": 3287254908.64,
-          "change_amount": -1033970914.3399997,
-          "change_pct": -31.45
+          "change_amount": -806060434.7999997,
+          "change_pct": -24.52
         },
         {
           "program_name": "Federal Direct Student Loan Program, Education",
           "fiscal_year": 2026,
-          "current_amount": 1776971227.53,
-          "previous_amount": 1135629125.5,
-          "change_amount": 641342102.03,
-          "change_pct": 56.47
+          "current_amount": 1875086541.1,
+          "previous_amount": 1143231552.89,
+          "change_amount": 731854988.2099998,
+          "change_pct": 64.02
         },
         {
           "program_name": "Safe Schools and Citizenship Education,  Education",
@@ -7685,74 +7685,90 @@
         {
           "program_name": "Rehabilitation Services, Education",
           "fiscal_year": 2026,
-          "current_amount": 4331732953.96,
+          "current_amount": 4337242979.96,
           "previous_amount": 4069937629.98,
-          "change_amount": 261795323.98000002,
-          "change_pct": 6.43
+          "change_amount": 267305349.98000002,
+          "change_pct": 6.57
         },
         {
           "program_name": "Special Education, Education",
           "fiscal_year": 2026,
-          "current_amount": 15452453906.25,
+          "current_amount": 15471964895.25,
           "previous_amount": 15268062283.81,
-          "change_amount": 184391622.44000053,
-          "change_pct": 1.21
-        },
-        {
-          "program_name": "School Improvement Programs,  Education",
-          "fiscal_year": 2026,
-          "current_amount": 5749387041.36,
-          "previous_amount": 5839570920.15,
-          "change_amount": -90183878.78999996,
-          "change_pct": -1.54
-        },
-        {
-          "program_name": "Office for Civil Rights, Departmental Management, Education",
-          "fiscal_year": 2026,
-          "current_amount": 188475686,
-          "previous_amount": 115219026.59,
-          "change_amount": 73256659.41,
-          "change_pct": 63.58
-        },
-        {
-          "program_name": "Student and Administration, Education",
-          "fiscal_year": 2026,
-          "current_amount": 2159428370.29,
-          "previous_amount": 2228669827.95,
-          "change_amount": -69241457.65999985,
-          "change_pct": -3.11
+          "change_amount": 203902611.44000053,
+          "change_pct": 1.34
         },
         {
           "program_name": "Institute of Education Sciences, Department of Education",
           "fiscal_year": 2026,
-          "current_amount": 557278191.62,
-          "previous_amount": 490147605.56,
-          "change_amount": 67130586.06,
-          "change_pct": 13.7
+          "current_amount": 588528603.42,
+          "previous_amount": 491057172.72,
+          "change_amount": 97471430.69999993,
+          "change_pct": 19.85
         },
         {
-          "program_name": "Education for the Disadvantaged, Education",
+          "program_name": "School Improvement Programs,  Education",
           "fiscal_year": 2026,
-          "current_amount": 19194405523.36,
-          "previous_amount": 19135476322.27,
-          "change_amount": 58929201.09000015,
-          "change_pct": 0.31
+          "current_amount": 5754157361.05,
+          "previous_amount": 5839570920.15,
+          "change_amount": -85413559.09999943,
+          "change_pct": -1.46
+        },
+        {
+          "program_name": "Department of Education Nonrecurring Expenses Fund",
+          "fiscal_year": 2026,
+          "current_amount": 1996445008.23,
+          "previous_amount": 1914793024.98,
+          "change_amount": 81651983.25,
+          "change_pct": 4.26
+        },
+        {
+          "program_name": "Office for Civil Rights, Departmental Management, Education",
+          "fiscal_year": 2026,
+          "current_amount": 191144353.6,
+          "previous_amount": 116128593.75,
+          "change_amount": 75015759.85,
+          "change_pct": 64.6
         },
         {
           "program_name": "Innovation and Improvement, Education",
           "fiscal_year": 2026,
-          "current_amount": 924420887.87,
+          "current_amount": 937216836.17,
           "previous_amount": 866229835.16,
-          "change_amount": 58191052.71000004,
-          "change_pct": 6.72
+          "change_amount": 70987001.00999999,
+          "change_pct": 8.19
+        },
+        {
+          "program_name": "Student and Administration, Education",
+          "fiscal_year": 2026,
+          "current_amount": 2298839731.94,
+          "previous_amount": 2229579395.11,
+          "change_amount": 69260336.82999992,
+          "change_pct": 3.11
+        },
+        {
+          "program_name": "Education for the Disadvantaged, Education",
+          "fiscal_year": 2026,
+          "current_amount": 19195100803.52,
+          "previous_amount": 19135476322.27,
+          "change_amount": 59624481.25,
+          "change_pct": 0.31
         },
         {
           "program_name": "Office of the Inspector General, Departmental Management, Education",
           "fiscal_year": 2026,
-          "current_amount": 160091354.52,
-          "previous_amount": 120225730.95,
-          "change_amount": 39865623.57000001,
-          "change_pct": 33.16
+          "current_amount": 163907636.34,
+          "previous_amount": 121135298.11,
+          "change_amount": 42772338.230000004,
+          "change_pct": 35.31
+        },
+        {
+          "program_name": "Career, Technical, and Adult Education, Education",
+          "fiscal_year": 2026,
+          "current_amount": 136789789.56,
+          "previous_amount": 97074257.9,
+          "change_amount": 39715531.66,
+          "change_pct": 40.91
         },
         {
           "program_name": "College Housing and Academic Facilities Loans Program,  Education",
@@ -7771,14 +7787,6 @@
           "change_pct": 36.12
         },
         {
-          "program_name": "Indian Education, Office of Elementary and Secondary Education,  Education",
-          "fiscal_year": 2026,
-          "current_amount": 172493239.77,
-          "previous_amount": 201735288.32,
-          "change_amount": -29242048.549999982,
-          "change_pct": -14.5
-        },
-        {
           "program_name": "Guaranteed Student Loans, Liquidating Account, Education",
           "fiscal_year": 2026,
           "current_amount": 21974756.61,
@@ -7795,20 +7803,12 @@
           "change_pct": null
         },
         {
-          "program_name": "Career, Technical, and Adult Education, Education",
+          "program_name": "Indian Education, Office of Elementary and Secondary Education,  Education",
           "fiscal_year": 2026,
-          "current_amount": 116284614.98,
-          "previous_amount": 97074257.9,
-          "change_amount": 19210357.08,
-          "change_pct": 19.79
-        },
-        {
-          "program_name": "Department of Education Nonrecurring Expenses Fund",
-          "fiscal_year": 2026,
-          "current_amount": 1895736201.46,
-          "previous_amount": 1913543381.9,
-          "change_amount": -17807180.440000057,
-          "change_pct": -0.93
+          "current_amount": 175899444.11,
+          "previous_amount": 201735288.32,
+          "change_amount": -25835844.20999998,
+          "change_pct": -12.81
         }
       ],
       "awards": [
@@ -8206,7 +8206,7 @@
       "contracts_obligated": 1505648979.22,
       "grants_obligated": 43794739080.51999,
       "total_awards_obligated": 45300388059.73999,
-      "last_updated": "2026-11-16T20:33:33.078Z",
+      "last_updated": "2026-11-23T22:05:14.810Z",
       "source": "usaspending.gov"
     },
     "department-of-veterans-affairs": {
@@ -8217,24 +8217,24 @@
       "budget_totals_by_fiscal_year": [
         {
           "fiscal_year": 2024,
-          "total_obligations": 69095709500.56999,
+          "total_obligations": 69095812770.05,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": null
         },
         {
           "fiscal_year": 2025,
-          "total_obligations": 81445010813.33,
+          "total_obligations": 81441021214.62,
           "total_outlays": 0,
           "total_budget_authority": 0,
           "yoy_change_pct": 17.87
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 88612423096.18,
+          "total_obligations": 93470395864.43,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": 8.8
+          "yoy_change_pct": 14.77
         }
       ],
       "program_funding_changes": [
@@ -8249,10 +8249,10 @@
         {
           "program_name": "General Operating Expenses, Veterans Benefits Administration, Veterans Affairs",
           "fiscal_year": 2026,
-          "current_amount": 9114841481.38,
+          "current_amount": 9123916585.75,
           "previous_amount": 9649103530.01,
-          "change_amount": -534262048.63000107,
-          "change_pct": -5.54
+          "change_amount": -525186944.2600002,
+          "change_pct": -5.44
         },
         {
           "program_name": "Medical Services, Veterans Health Administration, Veterans Affairs",
@@ -8263,76 +8263,60 @@
           "change_pct": -48.79
         },
         {
-          "program_name": "Information Technology Systems, Departmental Administration, Veterans Affairs",
-          "fiscal_year": 2026,
-          "current_amount": 5240975758.49,
-          "previous_amount": 5588664404.73,
-          "change_amount": -347688646.2399998,
-          "change_pct": -6.22
-        },
-        {
           "program_name": "Supply Fund, Veterans Affairs",
           "fiscal_year": 2026,
-          "current_amount": 1881942170.81,
-          "previous_amount": 1550443603.56,
-          "change_amount": 331498567.25,
-          "change_pct": 21.38
-        },
-        {
-          "program_name": "Medical Support and Compliance, Veterans Health Administration, Veterans Affairs",
-          "fiscal_year": 2026,
-          "current_amount": 933079248.88,
-          "previous_amount": 757974133.05,
-          "change_amount": 175105115.83000004,
-          "change_pct": 23.1
+          "current_amount": 2023204826.03,
+          "previous_amount": 1550615997.16,
+          "change_amount": 472588828.8699999,
+          "change_pct": 30.48
         },
         {
           "program_name": "Franchise Fund, Veterans Affairs",
           "fiscal_year": 2026,
-          "current_amount": 2366660267.24,
+          "current_amount": 2454563365.36,
           "previous_amount": 2232664398.91,
-          "change_amount": 133995868.32999992,
-          "change_pct": 6
+          "change_amount": 221898966.4500003,
+          "change_pct": 9.94
         },
         {
-          "program_name": "General Administration, Departmental Administration, Veterans Affairs",
+          "program_name": "Medical Support and Compliance, Veterans Health Administration, Veterans Affairs",
           "fiscal_year": 2026,
-          "current_amount": 775441241.17,
-          "previous_amount": 857876591.93,
-          "change_amount": -82435350.75999999,
-          "change_pct": -9.61
-        },
-        {
-          "program_name": "Office of Inspector General, Departmental Administration, Veterans Affairs",
-          "fiscal_year": 2026,
-          "current_amount": 795077275.56,
-          "previous_amount": 875270183.01,
-          "change_amount": -80192907.45000005,
-          "change_pct": -9.16
-        },
-        {
-          "program_name": "Grants for Construction of State Veterans Cemeteries, Departmental Administration, Veterans Affairs",
-          "fiscal_year": 2026,
-          "current_amount": -3980792.35,
-          "previous_amount": 75313349.25,
-          "change_amount": -79294141.6,
-          "change_pct": -105.29
+          "current_amount": 977765143.4,
+          "previous_amount": 757973843.05,
+          "change_amount": 219791300.35000002,
+          "change_pct": 29
         },
         {
           "program_name": "Cost of War Toxic Exposures Fund, Departmental Administration, Veterans Affairs",
           "fiscal_year": 2026,
-          "current_amount": 3532159305.11,
-          "previous_amount": 3456067894.7,
-          "change_amount": 76091410.41000032,
-          "change_pct": 2.2
+          "current_amount": 3792247364.46,
+          "previous_amount": 3580941924.5,
+          "change_amount": 211305439.96000004,
+          "change_pct": 5.9
         },
         {
-          "program_name": "Construction, Major Projects, Departmental Administration, Veterans Affairs",
+          "program_name": "Office of Inspector General, Departmental Administration, Veterans Affairs",
           "fiscal_year": 2026,
-          "current_amount": 240977748.58,
-          "previous_amount": 315914067.4,
-          "change_amount": -74936318.81999996,
-          "change_pct": -23.72
+          "current_amount": 1150347945.01,
+          "previous_amount": 1279068934.49,
+          "change_amount": -128720989.48000002,
+          "change_pct": -10.06
+        },
+        {
+          "program_name": "Information Technology Systems, Departmental Administration, Veterans Affairs",
+          "fiscal_year": 2026,
+          "current_amount": 5529691163.93,
+          "previous_amount": 5601345145.61,
+          "change_amount": -71653981.67999935,
+          "change_pct": -1.28
+        },
+        {
+          "program_name": "Grants for Construction of State Veterans Cemeteries, Departmental Administration, Veterans Affairs",
+          "fiscal_year": 2026,
+          "current_amount": 13115902.65,
+          "previous_amount": 75313349.25,
+          "change_amount": -62197446.6,
+          "change_pct": -82.58
         },
         {
           "program_name": "Grants for Construction of State Extended Care Facilities, Departmental Administration, Veterans Affairs",
@@ -8351,28 +8335,44 @@
           "change_pct": 2.14
         },
         {
-          "program_name": "Recurring Expenses Transformational Fund, Departmental Administration, Veterans Affairs",
-          "fiscal_year": 2026,
-          "current_amount": 32740131.91,
-          "previous_amount": 6562634.36,
-          "change_amount": 26177497.55,
-          "change_pct": 398.89
-        },
-        {
           "program_name": "National Cemetery Administration, Veterans Health Administration, Veterans Affairs",
           "fiscal_year": 2026,
-          "current_amount": 408117341.79,
+          "current_amount": 425552870.16,
           "previous_amount": 387145838.79,
-          "change_amount": 20971503,
-          "change_pct": 5.42
+          "change_amount": 38407031.370000005,
+          "change_pct": 9.92
+        },
+        {
+          "program_name": "Recurring Expenses Transformational Fund, Departmental Administration, Veterans Affairs",
+          "fiscal_year": 2026,
+          "current_amount": 34969131.91,
+          "previous_amount": 6562634.36,
+          "change_amount": 28406497.549999997,
+          "change_pct": 432.85
         },
         {
           "program_name": "Board of Veterans Appeals, Departmental Administration, Veterans Affairs",
           "fiscal_year": 2026,
-          "current_amount": 163069924.2,
+          "current_amount": 163076614.2,
           "previous_amount": 157102373.91,
-          "change_amount": 5967550.289999992,
+          "change_amount": 5974240.289999992,
           "change_pct": 3.8
+        },
+        {
+          "program_name": "Construction, Major Projects, Departmental Administration, Veterans Affairs",
+          "fiscal_year": 2026,
+          "current_amount": 310336946.66,
+          "previous_amount": 315914067.4,
+          "change_amount": -5577120.73999995,
+          "change_pct": -1.77
+        },
+        {
+          "program_name": "General Administration, Departmental Administration, Veterans Affairs",
+          "fiscal_year": 2026,
+          "current_amount": 858919382.39,
+          "previous_amount": 857876591.93,
+          "change_amount": 1042790.4600000381,
+          "change_pct": 0.12
         },
         {
           "program_name": "Readjustment Benefits, Veterans Benefits Administration, Veterans Affairs",
@@ -8513,7 +8513,7 @@
           "award_id": "36C10B21N10070021",
           "generated_internal_id": "CONT_AWD_36C10B21N10070021_3600_VA11816D1007_3600",
           "recipient_name": "BOOZ ALLEN HAMILTON INC",
-          "amount": 1365285599.63,
+          "amount": 1364336312.22,
           "award_type": "contract",
           "award_type_label": "Unknown",
           "awarding_agency": "Department of Veterans Affairs",
@@ -8744,6 +8744,19 @@
           "source_url": null
         },
         {
+          "award_id": "36C10G26K0308",
+          "generated_internal_id": "CONT_AWD_36C10G26K0308_3600_36C79119D0006_3600",
+          "recipient_name": "OPTUM PUBLIC SECTOR SOLUTIONS, INC.",
+          "amount": 1071833671.57,
+          "award_type": "contract",
+          "award_type_label": "Unknown",
+          "awarding_agency": "Department of Veterans Affairs",
+          "awarding_sub_agency": "Department of Veterans Affairs",
+          "action_date": null,
+          "description": "EXPRESS REPORT: R3 FY26 4TH QTR AUG",
+          "source_url": null
+        },
+        {
           "award_id": "36C10G26K0213",
           "generated_internal_id": "CONT_AWD_36C10G26K0213_3600_36C10G19D0038_3600",
           "recipient_name": "TRIWEST HEALTHCARE ALLIANCE CORP",
@@ -8768,25 +8781,12 @@
           "action_date": null,
           "description": "EXPRESS REPORT: PHARMACEUTICAL PRIME VENDOR (PPV)FY2026 FEBRUARY",
           "source_url": null
-        },
-        {
-          "award_id": "36C24025K1001",
-          "generated_internal_id": "CONT_AWD_36C24025K1001_3600_36W79720D0001_3600",
-          "recipient_name": "MCKESSON CORPORATION",
-          "amount": 1047972071.68,
-          "award_type": "contract",
-          "award_type_label": "Unknown",
-          "awarding_agency": "Department of Veterans Affairs",
-          "awarding_sub_agency": "Department of Veterans Affairs",
-          "action_date": null,
-          "description": "EXPRESS REPORT: PHARMACEUTICAL PRIME VENDOR (PPV)FY2025 OCTOBER",
-          "source_url": null
         }
       ],
-      "contracts_obligated": 38137757211.95999,
+      "contracts_obligated": 38160669524.43999,
       "grants_obligated": 0,
-      "total_awards_obligated": 38137757211.95999,
-      "last_updated": "2026-11-16T20:33:34.160Z",
+      "total_awards_obligated": 38160669524.43999,
+      "last_updated": "2026-11-23T22:05:16.022Z",
       "source": "usaspending.gov"
     },
     "department-of-housing-and-urban-development": {
@@ -8811,52 +8811,52 @@
         },
         {
           "fiscal_year": 2026,
-          "total_obligations": 17318750402.5,
+          "total_obligations": 17294914210.5,
           "total_outlays": 0,
           "total_budget_authority": 0,
-          "yoy_change_pct": -35.84
+          "yoy_change_pct": -35.93
         }
       ],
       "program_funding_changes": [
         {
           "program_name": "Community Development Fund, Community Planning and Development, Housing and Urban Development",
           "fiscal_year": 2026,
-          "current_amount": 4661176997.36,
+          "current_amount": 4715105457.36,
           "previous_amount": 12025313861.27,
-          "change_amount": -7364136863.910001,
-          "change_pct": -61.24
+          "change_amount": -7310208403.910001,
+          "change_pct": -60.79
         },
         {
           "program_name": "Guarantees of Mortgage-Backed Securities Loan Guarantees, Program Account, Government National Mortgage Association, Housing and Urban Development",
           "fiscal_year": 2026,
-          "current_amount": 296775761.86,
+          "current_amount": 298328961.86,
           "previous_amount": -1820220450.18,
-          "change_amount": 2116996212.04,
+          "change_amount": 2118549412.04,
           "change_pct": null
         },
         {
           "program_name": "Homeless Assistance Grants, Community Planning and Development, Housing and Urban Development",
           "fiscal_year": 2026,
-          "current_amount": 2190121631.14,
+          "current_amount": 2229907201.14,
           "previous_amount": 3745921562.69,
-          "change_amount": -1555799931.5500002,
-          "change_pct": -41.53
+          "change_amount": -1516014361.5500002,
+          "change_pct": -40.47
         },
         {
           "program_name": "Public Housing Fund, Public and Indian Housing, Housing and Urban Development",
           "fiscal_year": 2026,
-          "current_amount": 7226565536.57,
+          "current_amount": 7238537189.57,
           "previous_amount": 8624740634.22,
-          "change_amount": -1398175097.6499996,
-          "change_pct": -16.21
+          "change_amount": -1386203444.6499996,
+          "change_pct": -16.07
         },
         {
           "program_name": "Home Investment Partnerships Program, Community and Planning Development, Housing and Urban Development",
           "fiscal_year": 2026,
-          "current_amount": 428083180.19,
+          "current_amount": 447933706.05,
           "previous_amount": 1060494614.35,
-          "change_amount": -632411434.1600001,
-          "change_pct": -59.63
+          "change_amount": -612560908.3,
+          "change_pct": -57.76
         },
         {
           "program_name": "Green and Resilient Retrofit Program for Multifamily Housing, Housing Programs, Housing and Urban Development",
@@ -8883,22 +8883,6 @@
           "change_pct": -64.71
         },
         {
-          "program_name": "Native American Programs, Public and Indian Housing, Housing and Urban Development",
-          "fiscal_year": 2026,
-          "current_amount": 1182579793.5,
-          "previous_amount": 1344714217.88,
-          "change_amount": -162134424.3800001,
-          "change_pct": -12.06
-        },
-        {
-          "program_name": "Housing Opportunities for Persons with AIDS, Community Planning and Development, Housing and Urban Development",
-          "fiscal_year": 2026,
-          "current_amount": 230633062.39,
-          "previous_amount": 353943559.11,
-          "change_amount": -123310496.72000003,
-          "change_pct": -34.84
-        },
-        {
           "program_name": "Housing Trust Fund, Community Planning and Development, Housing and Urban Development",
           "fiscal_year": 2026,
           "current_amount": 63574821.89,
@@ -8907,12 +8891,28 @@
           "change_pct": -64.64
         },
         {
+          "program_name": "Housing Opportunities for Persons with AIDS, Community Planning and Development, Housing and Urban Development",
+          "fiscal_year": 2026,
+          "current_amount": 246934243.39,
+          "previous_amount": 353943559.11,
+          "change_amount": -107009315.72000003,
+          "change_pct": -30.23
+        },
+        {
           "program_name": "FHA-General and Special Risk Insurance Fund Liquidating Account, Housing and Urban Development",
           "fiscal_year": 2026,
-          "current_amount": 17786770.47,
+          "current_amount": 17817569.79,
           "previous_amount": -83006200.2,
-          "change_amount": 100792970.67,
+          "change_amount": 100823769.99000001,
           "change_pct": null
+        },
+        {
+          "program_name": "Native American Programs, Public and Indian Housing, Housing and Urban Development",
+          "fiscal_year": 2026,
+          "current_amount": 1274529562.5,
+          "previous_amount": 1344714217.88,
+          "change_amount": -70184655.38000011,
+          "change_pct": -5.22
         },
         {
           "program_name": "Fair Housing Activities, Fair Housing and Equal Opportunity, Housing and Urban Development",
@@ -8931,52 +8931,52 @@
           "change_pct": null
         },
         {
-          "program_name": "Research and Technology, Policy Development and Research, Housing and Urban Development",
-          "fiscal_year": 2026,
-          "current_amount": 11563316.96,
-          "previous_amount": 71615466.9,
-          "change_amount": -60052149.940000005,
-          "change_pct": -83.85
-        },
-        {
-          "program_name": "Information Technology Fund, Management and Administration, Housing and Urban Development",
-          "fiscal_year": 2026,
-          "current_amount": 150150187.83,
-          "previous_amount": 203505183.81,
-          "change_amount": -53354995.97999999,
-          "change_pct": -26.22
-        },
-        {
           "program_name": "Housing for the Elderly, Housing Programs, Housing and Urban Development",
           "fiscal_year": 2026,
-          "current_amount": 107836421.68,
+          "current_amount": 107822824.78,
           "previous_amount": 156116966.62,
-          "change_amount": -48280544.94,
+          "change_amount": -48294141.84,
           "change_pct": -30.93
+        },
+        {
+          "program_name": "Research and Technology, Policy Development and Research, Housing and Urban Development",
+          "fiscal_year": 2026,
+          "current_amount": 26182376.51,
+          "previous_amount": 71615466.9,
+          "change_amount": -45433090.39,
+          "change_pct": -63.44
         },
         {
           "program_name": "Project-Based Rental Assistance, Housing Programs, Housing and Urban Development",
           "fiscal_year": 2026,
-          "current_amount": 38314226.33,
+          "current_amount": 39629556.92,
           "previous_amount": 78570021.32,
-          "change_amount": -40255794.989999995,
-          "change_pct": -51.24
+          "change_amount": -38940464.39999999,
+          "change_pct": -49.56
         },
         {
           "program_name": "Mutual Mortgage Insurance Program Account, Federal Housing Administration, Housing and Urban Development",
           "fiscal_year": 2026,
-          "current_amount": 193411571.16,
+          "current_amount": 195005388.31,
           "previous_amount": 159397518.35,
-          "change_amount": 34014052.81,
-          "change_pct": 21.34
+          "change_amount": 35607869.96000001,
+          "change_pct": 22.34
         },
         {
           "program_name": "Housing for Persons with Disabilities, Housing Programs, Housing and Urban Development",
           "fiscal_year": 2026,
-          "current_amount": 7495880.05,
+          "current_amount": 7467014.58,
           "previous_amount": 32670662.13,
-          "change_amount": -25174782.08,
-          "change_pct": -77.06
+          "change_amount": -25203647.549999997,
+          "change_pct": -77.14
+        },
+        {
+          "program_name": "Program Offices, Management and Administration, Housing and Urban Development",
+          "fiscal_year": 2026,
+          "current_amount": 32711106.56,
+          "previous_amount": 12069423.41,
+          "change_amount": 20641683.15,
+          "change_pct": 171.02
         }
       ],
       "awards": [
@@ -9374,7 +9374,7 @@
       "contracts_obligated": 1678819451.32,
       "grants_obligated": 17312049917.83,
       "total_awards_obligated": 18990869369.15,
-      "last_updated": "2026-11-16T20:33:35.990Z",
+      "last_updated": "2026-11-23T22:05:16.663Z",
       "source": "usaspending.gov"
     }
   },
