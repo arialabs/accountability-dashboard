@@ -1,8 +1,21 @@
 {
-  "total": 293,
+  "total": 294,
   "source": "Federal Register API",
-  "last_updated": "2026-11-24",
+  "last_updated": "2026-11-25",
   "orders": [
+    {
+      "document_number": "2026-24114",
+      "eo_number": "14439",
+      "title": "Protecting the Executive's Privileges and Enhancing Efficiencies in Federal Contracting",
+      "signing_date": "2026-11-20",
+      "abstract": "",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/25/2026-24114/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "topics": [],
+      "category": "Other"
+    },
     {
       "document_number": "2026-22051",
       "eo_number": "14438",
